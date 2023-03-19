@@ -87,16 +87,17 @@ namespace NobleTitles
                 if (string.IsNullOrWhiteSpace(entry.Count.Female)) entry.Count.Female = entry.Count.Male;
                 if (string.IsNullOrWhiteSpace(entry.Baron.Female)) entry.Baron.Female = entry.Baron.Male;
 
-                // Commonly, we want the full title prefix, i.e. including the trailing space, so we just use
-                // such strings natively instead of constantly doing string creation churn just to append a space:
-                entry.King.Male += " ";
-                entry.King.Female += " ";
-                entry.Duke.Male += " ";
-                entry.Duke.Female += " ";
-                entry.Count.Male += " ";
-                entry.Count.Female += " ";
-                entry.Baron.Male += " ";
-                entry.Baron.Female += " ";
+                entry.King.Male = entry.King.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.King.Female = entry.King.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.Duke.Male = entry.Duke.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.Duke.Female = entry.Duke.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.Count.Male = entry.Count.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.Count.Female = entry.Count.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.Baron.Male = entry.Baron.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.Baron.Female = entry.Baron.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.Noble.Male = entry.Noble.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.Noble.Female = entry.Noble.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                // TODO: exception
 
                 if (cul == "default")
                     noCulture = entry;

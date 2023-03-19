@@ -252,25 +252,23 @@ namespace NobleTitles
             titlePrefix = spouse.IsFemale ? title.Female : title.Male;
             AddTitleToHero(spouse, titlePrefix);
         }
-
-        private void AddTitleToHero(Hero hero, string titlePrefix, bool overrideTitle = false, bool registerTitle = true)
+        private void AddTitleToHero(Hero hero, string titleFormat, bool overrideTitle = false, bool registerTitle = true)
         {
             if (assignedTitles.TryGetValue(hero, out string oldTitlePrefix))
             {
-                if (overrideTitle && !titlePrefix.Equals(oldTitlePrefix))
+                if (overrideTitle && !titleFormat.Equals(oldTitlePrefix))
                     RemoveTitleFromHero(hero);
                 else if (!overrideTitle)
                 {
-                    Util.Log.Print($">> WARNING: Tried to add title \"{titlePrefix}\" to hero \"{hero.Name}\" with pre-assigned title \"{oldTitlePrefix}\"");
+                    Util.Log.Print($">> WARNING: Tried to add title \"{titleFormat}\" to hero \"{hero.Name}\" with pre-assigned title \"{oldTitlePrefix}\"");
                     return;
                 }
             }
 
             if (registerTitle)
-                assignedTitles[hero] = titlePrefix;
-
+                assignedTitles[hero] = titleFormat;
             TextObject name = hero.Name;
-            hero.SetName(new TextObject(titlePrefix + name), name);
+            hero.SetName(new TextObject(string.Format(titleFormat, name)), name);
         }
 
         private void RemoveTitlesFromLivingHeroes(bool unregisterTitles = true)
