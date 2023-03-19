@@ -10,25 +10,22 @@ namespace NobleTitles
     class TitleDb
     {
         internal Entry GetKingTitle(CultureObject culture) =>
-            culture is null || !cultureMap.TryGetValue(culture.StringId, out var culEntry) ? noCulture.King : culEntry.King;
-
+            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.King : culEntry.King;
         internal Entry GetDukeTitle(CultureObject culture) =>
-            culture is null || !cultureMap.TryGetValue(culture.StringId, out var culEntry) ? noCulture.Duke : culEntry.Duke;
-
+            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Duke : culEntry.Duke;
         internal Entry GetCountTitle(CultureObject culture) =>
-            culture is null || !cultureMap.TryGetValue(culture.StringId, out var culEntry) ? noCulture.Count : culEntry.Count;
-
+            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Count : culEntry.Count;
         internal Entry GetBaronTitle(CultureObject culture) =>
-            culture is null || !cultureMap.TryGetValue(culture.StringId, out var culEntry) ? noCulture.Baron : culEntry.Baron;
-
+            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Baron : culEntry.Baron;
+        internal Entry GetNobleTitle(CultureObject culture) =>
+            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Noble : culEntry.Noble;
         internal string StripTitlePrefixes(Hero hero)
         {
-            var prevName = hero.Name.ToString();
-            var newName = prevName;
-
+            string prevName = hero.Name.ToString();
+            string newName = prevName;
             while (true)
             {
-                foreach (var ce in cultureMap.Values)
+                foreach (CultureEntry ce in cultureMap.Values)
                 {
                     if (hero.IsFemale)
                     {
@@ -73,9 +70,9 @@ namespace NobleTitles
             if (!cultureMap.ContainsKey("default"))
                 throw new BadTitleDatabaseException("Title database must contain a fallback culture entry keyed by \"default\"!");
 
-            foreach (var i in cultureMap)
+            foreach (KeyValuePair<string, CultureEntry> i in cultureMap)
             {
-                var (cul, entry) = (i.Key, i.Value);
+                (string cul, CultureEntry entry) = (i.Key, i.Value);
 
                 if (entry.King is null || entry.Duke is null || entry.Count is null || entry.Baron is null)
                     throw new BadTitleDatabaseException($"All title types must be defined for culture '{cul}'!");
@@ -109,7 +106,7 @@ namespace NobleTitles
         internal void Serialize()
         {
             // Undo our baked-in trailing space
-            foreach (var e in cultureMap.Values)
+            foreach (CultureEntry e in cultureMap.Values)
             {
                 e.King.Male = RmEndChar(e.King.Male);
                 e.King.Female = RmEndChar(e.King.Female);
@@ -134,13 +131,15 @@ namespace NobleTitles
             public readonly Entry Duke;
             public readonly Entry Count;
             public readonly Entry Baron;
+            public readonly Entry Noble;
 
-            public CultureEntry(Entry king, Entry duke, Entry count, Entry baron)
+            public CultureEntry(Entry king, Entry duke, Entry count, Entry baron, Entry noble)
             {
                 King = king;
                 Duke = duke;
                 Count = count;
                 Baron = baron;
+                Noble = noble;
             }
         }
 
@@ -170,6 +169,12 @@ namespace NobleTitles
         // culture StringId => CultureEntry (contains bulk of title information, only further split by gender)
         protected Dictionary<string, CultureEntry> cultureMap;
 
-        protected CultureEntry noCulture = new(new("King", "Queen"), new("Duke", "Duchess"), new("Count", "Countess"), new("Baron", "Baroness"));
+        protected CultureEntry noCulture = new(
+            new("King", "Queen"),
+            new("Duke", "Duchess"),
+            new("Count", "Countess"),
+            new("Baron", "Baroness"),
+            new("Noble", "Lady")
+            );
     }
 }

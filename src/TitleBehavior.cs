@@ -5,9 +5,10 @@ using System.Linq;
 using Newtonsoft.Json;
 
 using TaleWorlds.CampaignSystem;
-using TaleWorlds.CampaignSystem.Conversation.Tags;
+// using TaleWorlds.CampaignSystem.Conversation.Tags;
+// using TaleWorlds.Library;
 using TaleWorlds.Localization;
-using TaleWorlds.ObjectSystem;
+// using TaleWorlds.ObjectSystem;
 
 namespace NobleTitles
 {
@@ -35,7 +36,7 @@ namespace NobleTitles
                 // Serializing dead heroes' titles:
                 savedDeadTitles = new();
 
-                foreach (var at in assignedTitles.Where(item => item.Key.IsDead))
+                foreach (KeyValuePair<Hero, string> at in assignedTitles.Where(item => item.Key.IsDead))
                     savedDeadTitles[at.Key.StringId] = at.Value;
 
                 string serialized = JsonConvert.SerializeObject(savedDeadTitles);
@@ -72,7 +73,7 @@ namespace NobleTitles
             if (savedDeadTitles is null)
                 return;
 
-            foreach (var item in savedDeadTitles)
+            foreach (KeyValuePair<string, string> item in savedDeadTitles)
             {
                 if (Campaign.Current.CampaignObjectManager.Find<Hero>(item.Key) is not Hero hero)
                 {
@@ -100,7 +101,7 @@ namespace NobleTitles
         {
             Util.Log.Print($"{nameof(OnBeforeSave)}: Temporarily removing title prefixes from all heroes...");
 
-            foreach (var at in assignedTitles)
+            foreach (KeyValuePair<Hero, string> at in assignedTitles)
                 RemoveTitleFromHero(at.Key, unregisterTitle: false);
         }
 
@@ -109,7 +110,7 @@ namespace NobleTitles
             Util.Log.Print($"{nameof(OnAfterSave)}: Restoring title prefixes to all heroes...");
 
             // Restore all title prefixes to all heroes using the still-existing assignment records.
-            foreach (var at in assignedTitles)
+            foreach (KeyValuePair<Hero, string> at in assignedTitles)
                 AddTitleToHero(at.Key, at.Value, overrideTitle: true, registerTitle: false);
         }
 
@@ -118,13 +119,27 @@ namespace NobleTitles
             // All living, titled heroes are associated with kingdoms for now, so go straight to the source
             Util.Log.Print("Adding kingdom-based noble titles...");
 
-            foreach (var k in Kingdom.All.Where(x => !x.IsEliminated))
+            foreach (Kingdom k in Kingdom.All.Where(x => !x.IsEliminated))
+            {
                 AddTitlesToKingdomHeroes(k);
+            }
         }
 
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
-            var tr = new List<string> { $"Adding noble titles to {kingdom.Name}..." };
+            List<string> tr = new List<string> { $"Adding noble titles to {kingdom.Name}..." };
+
+            // Common Nobles, not a Clan Leader
+            List<Hero> commonNobles = kingdom.Clans
+                .Where(c =>
+                    !c.IsClanTypeMercenary &&
+                    !c.IsUnderMercenaryService &&
+                    c.Leader != null &&
+                    c.Leader.IsAlive &&
+                    c.Leader.IsLord)
+                .SelectMany(c => c.Lords.Where(h => h != c.Leader))
+                .ToList();
+            foreach (Hero h in commonNobles) AssignNobleTitle(h, titleDb.GetNobleTitle(kingdom.Culture));
 
             /* The vassals first...
              *
@@ -133,7 +148,7 @@ namespace NobleTitles
              * Finally, we select the ordered list of their leaders.
              */
 
-            var vassals = kingdom.Clans
+            List<Hero> vassals = kingdom.Clans
                 .Where(c =>
                     c != kingdom.RulingClan &&
                     !c.IsClanTypeMercenary &&
@@ -149,13 +164,13 @@ namespace NobleTitles
             int nBarons = 0;
 
             // First, pass over all barons.
-            foreach (var h in vassals)
+            foreach (Hero? h in vassals)
             {
                 // Are they a baron?
                 if (GetFiefScore(h.Clan) < 3)
                 {
                     ++nBarons;
-                    AssignRulerTitle(h, titleDb.GetBaronTitle(kingdom.Culture));
+                    AssignNobleTitle(h, titleDb.GetBaronTitle(kingdom.Culture));
                     tr.Add(GetHeroTrace(h, "BARON"));
                 }
                 else // They must be a count or duke. We're done here.
@@ -173,14 +188,14 @@ namespace NobleTitles
             // Counts:
             for (int i = maxCountIdx; i > maxBaronIdx; --i)
             {
-                AssignRulerTitle(vassals[i], titleDb.GetCountTitle(kingdom.Culture));
+                AssignNobleTitle(vassals[i], titleDb.GetCountTitle(kingdom.Culture));
                 tr.Add(GetHeroTrace(vassals[i], "COUNT"));
             }
 
             // Dukes:
             for (int i = maxDukeIdx; i > maxCountIdx; --i)
             {
-                AssignRulerTitle(vassals[i], titleDb.GetDukeTitle(kingdom.Culture));
+                AssignNobleTitle(vassals[i], titleDb.GetDukeTitle(kingdom.Culture));
                 tr.Add(GetHeroTrace(vassals[i], "DUKE"));
             }
 
@@ -188,21 +203,35 @@ namespace NobleTitles
             if (kingdom.Leader != null &&
                 !Kingdom.All.Where(k => k != kingdom).SelectMany(k => k.Lords).Where(h => h == kingdom.Leader).Any()) // fix for stale ruler status in defunct kingdoms
             {
-                AssignRulerTitle(kingdom.Leader, titleDb.GetKingTitle(kingdom.Culture));
+                AssignNobleTitle(kingdom.Leader, titleDb.GetKingTitle(kingdom.Culture));
                 tr.Add(GetHeroTrace(kingdom.Leader, "KING"));
             }
 
             Util.Log.Print(tr);
         }
-
+        private void AddTitlesToCommonHeros(Kingdom kingdom)
+        {
+            List<Hero> vassals = kingdom.Clans
+                .Where(c =>
+                    c != kingdom.RulingClan &&
+                    !c.IsClanTypeMercenary &&
+                    !c.IsUnderMercenaryService &&
+                    c.Leader != null &&
+                    c.Leader.IsAlive &&
+                    c.Leader.IsLord)
+                .OrderBy(c => GetFiefScore(c))
+                .ThenBy(c => c.Renown)
+                .Select(c => c.Leader)
+                .ToList();
+        }
         private string GetHeroTrace(Hero h, string rank) =>
             $" -> {rank}: {h.Name} [Fief Score: {GetFiefScore(h.Clan)} / Renown: {h.Clan.Renown:F0}]";
 
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);
 
-        private void AssignRulerTitle(Hero hero, TitleDb.Entry title)
+        private void AssignNobleTitle(Hero hero, TitleDb.Entry title)
         {
-            var titlePrefix = hero.IsFemale ? title.Female : title.Male;
+            string titlePrefix = hero.IsFemale ? title.Female : title.Male;
             AddTitleToHero(hero, titlePrefix);
 
             // Should their spouse also get the same title (after gender adjustment)?
@@ -210,7 +239,7 @@ namespace NobleTitles
             //     it'd also be a different clan) and that clan belongs to any kingdom, no.
             // Else, yes.
 
-            var spouse = hero.Spouse;
+            Hero spouse = hero.Spouse;
 
             if (spouse == null ||
                 spouse.IsDead ||
@@ -240,20 +269,20 @@ namespace NobleTitles
             if (registerTitle)
                 assignedTitles[hero] = titlePrefix;
 
-            var name = hero.Name.ToString();
-            hero.SetName(new TextObject(titlePrefix + name), new TextObject(name));
+            TextObject name = hero.Name;
+            hero.SetName(new TextObject(titlePrefix + name), name);
         }
 
         private void RemoveTitlesFromLivingHeroes(bool unregisterTitles = true)
         {
-            foreach (var h in assignedTitles.Keys.Where(h => h.IsAlive).ToList())
+            foreach (Hero? h in assignedTitles.Keys.Where(h => h.IsAlive).ToList())
                 RemoveTitleFromHero(h, unregisterTitles);
         }
 
         private void RemoveTitleFromHero(Hero hero, bool unregisterTitle = true)
         {
-            var name = hero.Name.ToString();
-            var title = assignedTitles[hero];
+            string name = hero.Name.ToString();
+            string title = assignedTitles[hero];
 
             if (!name.StartsWith(title))
             {
