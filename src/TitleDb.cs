@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using Newtonsoft.Json;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.Extensions;
 using TaleWorlds.CampaignSystem.SceneInformationPopupTypes;
 using TaleWorlds.Library;
 
@@ -22,10 +24,10 @@ namespace NobleTitles
             culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Noble : culEntry.Noble;
         internal TitleDb()
         {
-            Path = BasePath.Name + $"Modules/{SubModule.Name}/titles.json";
+            PathTitles = BasePath.Name + $"Modules/{SubModule.Name}/titles.json";
 
             cultureMap = JsonConvert.DeserializeObject<Dictionary<string, CultureEntry>>(
-                File.ReadAllText(Path),
+                File.ReadAllText(PathTitles),
                 new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace })
                 ?? throw new BadTitleDatabaseException("Failed to deserialize title database!");
 
@@ -46,7 +48,6 @@ namespace NobleTitles
                 if (string.IsNullOrWhiteSpace(entry.King.Male) || string.IsNullOrWhiteSpace(entry.Duke.Male) ||
                     string.IsNullOrWhiteSpace(entry.Count.Male) || string.IsNullOrWhiteSpace(entry.Baron.Male))
                     throw new BadTitleDatabaseException($"Missing at least one male variant of a title type for culture '{cul}'");
-
                 entry.King.Male = this.NormalizeInputTitle(entry.King.Male);
                 entry.King.Female = this.NormalizeInputTitle(entry.King.Female);
                 entry.Duke.Male = this.NormalizeInputTitle(entry.Duke.Male);
@@ -70,7 +71,21 @@ namespace NobleTitles
         }
         internal string NormalizeInputTitle(string str)
         {
-            return str.Replace("{", "{{").Replace("}", "}}").Replace("{{NAME}}", "{0}").Replace("{{name}}", "{0}");
+            string normalized = str.Replace("{", "{{").Replace("}", "}}").Replace("{{NAME}}", "{0}").Replace("{{name}}", "{0}");
+            try
+            {
+                string.Format(normalized, "TEST NAME");
+            }
+            catch(Exception)
+            {
+                Util.Log.Print($">> WARNING: Title format {str} is invalid. It's a incorrect format!");
+                normalized = "{0}";
+            }
+            if (!normalized.Contains("{0}"))
+            {
+                Util.Log.Print($">> WARNING: Title format {str} doesn't contain the name variable!");
+            }
+            return normalized;
         }
         internal void Serialize()
         {
@@ -87,7 +102,7 @@ namespace NobleTitles
                 e.Baron.Female = RmEndChar(e.Baron.Female);
             }
 
-            File.WriteAllText(Path, JsonConvert.SerializeObject(cultureMap, Formatting.Indented));
+            File.WriteAllText(PathTitles, JsonConvert.SerializeObject(cultureMap, Formatting.Indented));
         }
 
         private string RmEndChar(string s) => s.Substring(0, s.Length - 1);
@@ -111,7 +126,6 @@ namespace NobleTitles
                 Noble = noble;
             }
         }
-
         public class Entry
         {
             public string Male;
@@ -123,21 +137,16 @@ namespace NobleTitles
                 Female = female;
             }
         }
-
         public class BadTitleDatabaseException : Exception
         {
             public BadTitleDatabaseException(string message) : base(message) { }
-
             public BadTitleDatabaseException() { }
-
             public BadTitleDatabaseException(string message, Exception innerException) : base(message, innerException) { }
         }
-
-        protected string Path { get; set; }
-
+        protected string PathTitles { get; set; }
+        protected string PathSettings { get; set; }
         // culture StringId => CultureEntry (contains bulk of title information, only further split by gender)
         protected Dictionary<string, CultureEntry> cultureMap;
-
         protected CultureEntry noCulture = new(
             new("King", "Queen"),
             new("Duke", "Duchess"),

@@ -128,7 +128,6 @@ namespace NobleTitles
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
             List<string> tr = new List<string> { $"Adding noble titles to {kingdom.Name}..." };
-
             // Common Nobles, not a Clan Leader
             List<Hero> commonNobles = kingdom.Clans
                 .Where(c =>
@@ -160,9 +159,7 @@ namespace NobleTitles
                 .ThenBy(c => c.Renown)
                 .Select(c => c.Leader)
                 .ToList();
-
             int nBarons = 0;
-
             // First, pass over all barons.
             foreach (Hero? h in vassals)
             {
@@ -176,7 +173,6 @@ namespace NobleTitles
                 else // They must be a count or duke. We're done here.
                     break;
             }
-
             // The allowed number of dukes is a third of the total non-baron noble vassals.
             int nBigVassals = vassals.Count - nBarons;
             int nDukes = nBigVassals / 3; // Round down
@@ -184,21 +180,18 @@ namespace NobleTitles
             int maxDukeIdx = vassals.Count - 1;
             int maxCountIdx = maxDukeIdx - nDukes;
             int maxBaronIdx = maxCountIdx - nCounts;
-
             // Counts:
             for (int i = maxCountIdx; i > maxBaronIdx; --i)
             {
                 AssignNobleTitle(vassals[i], titleDb.GetCountTitle(kingdom.Culture));
                 tr.Add(GetHeroTrace(vassals[i], "COUNT"));
             }
-
             // Dukes:
             for (int i = maxDukeIdx; i > maxCountIdx; --i)
             {
                 AssignNobleTitle(vassals[i], titleDb.GetDukeTitle(kingdom.Culture));
                 tr.Add(GetHeroTrace(vassals[i], "DUKE"));
             }
-
             // Finally, the most obvious, the ruler (King) title:
             if (kingdom.Leader != null &&
                 !Kingdom.All.Where(k => k != kingdom).SelectMany(k => k.Lords).Where(h => h == kingdom.Leader).Any()) // fix for stale ruler status in defunct kingdoms
@@ -206,7 +199,6 @@ namespace NobleTitles
                 AssignNobleTitle(kingdom.Leader, titleDb.GetKingTitle(kingdom.Culture));
                 tr.Add(GetHeroTrace(kingdom.Leader, "KING"));
             }
-
             Util.Log.Print(tr);
         }
         private void AddTitlesToCommonHeros(Kingdom kingdom)
