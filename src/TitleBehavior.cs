@@ -136,7 +136,7 @@ namespace NobleTitles
                     c.Leader != null &&
                     c.Leader.IsAlive &&
                     c.Leader.IsLord)
-                .SelectMany(c => c.Lords.Where(h => h != c.Leader))
+                .SelectMany(c => c.Lords.Where(h => h != c.Leader && (h.IsKnownToPlayer || !this.titleDb.FogOfWar)  ))
                 .ToList();
             foreach (Hero h in commonNobles) AssignNobleTitle(h, titleDb.GetLesserNobleTitle(kingdom.Culture));
 
@@ -158,6 +158,7 @@ namespace NobleTitles
                 .OrderBy(c => GetFiefScore(c))
                 .ThenBy(c => c.Renown)
                 .Select(c => c.Leader)
+                .Where(h => h.IsKnownToPlayer || !this.titleDb.FogOfWar)
                 .ToList();
             int nBarons = 0;
             // First, pass over all barons.

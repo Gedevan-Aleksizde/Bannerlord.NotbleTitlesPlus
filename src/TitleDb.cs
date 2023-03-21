@@ -1,12 +1,16 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using Newtonsoft.Json;
+using StoryMode.GauntletUI.Tutorial;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Extensions;
 using TaleWorlds.CampaignSystem.SceneInformationPopupTypes;
+using TaleWorlds.GauntletUI;
 using TaleWorlds.Library;
+using static TaleWorlds.CampaignSystem.CharacterDevelopment.DefaultPerks;
 
 namespace NobleTitles
 {
@@ -24,8 +28,18 @@ namespace NobleTitles
             culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Noble : culEntry.Noble;
         internal TitleDb()
         {
+            string pathSettings = BasePath.Name + $"Modules/{SubModule.Name}/settings.json";
+            Dictionary<string, Dictionary<string, bool>> settings = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, bool>>>(
+                File.ReadAllText(pathSettings),
+                new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace }) ?? new Dictionary<string, Dictionary<string, bool>>();
+            if (settings.ContainsKey("general"))
+            {
+                if (settings["general"].ContainsKey("FogOfWar"))
+                {
+                    this.FogOfWar = settings["general"]["FogOfWar"];
+                }
+            }
             PathTitles = BasePath.Name + $"Modules/{SubModule.Name}/titles.json";
-
             cultureMap = JsonConvert.DeserializeObject<Dictionary<string, CultureEntry>>(
                 File.ReadAllText(PathTitles),
                 new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace })
@@ -144,7 +158,7 @@ namespace NobleTitles
             public BadTitleDatabaseException(string message, Exception innerException) : base(message, innerException) { }
         }
         protected string PathTitles { get; set; }
-        protected string PathSettings { get; set; }
+        public bool FogOfWar { get; private set; } = true;
         // culture StringId => CultureEntry (contains bulk of title information, only further split by gender)
         protected Dictionary<string, CultureEntry> cultureMap;
         protected CultureEntry noCulture = new(
