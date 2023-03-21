@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.SceneInformationPopupTypes;
 using TaleWorlds.Library;
 
 namespace NobleTitles
@@ -17,43 +18,8 @@ namespace NobleTitles
             culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Count : culEntry.Count;
         internal Entry GetBaronTitle(CultureObject culture) =>
             culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Baron : culEntry.Baron;
-        internal Entry GetNobleTitle(CultureObject culture) =>
+        internal Entry GetLesserNobleTitle(CultureObject culture) =>
             culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Noble : culEntry.Noble;
-        internal string StripTitlePrefixes(Hero hero)
-        {
-            string prevName = hero.Name.ToString();
-            string newName = prevName;
-            while (true)
-            {
-                foreach (CultureEntry ce in cultureMap.Values)
-                {
-                    if (hero.IsFemale)
-                    {
-                        newName = StripTitlePrefix(newName, ce.King.Female);
-                        newName = StripTitlePrefix(newName, ce.Duke.Female);
-                        newName = StripTitlePrefix(newName, ce.Count.Female);
-                        newName = StripTitlePrefix(newName, ce.Baron.Female);
-                    }
-                    else
-                    {
-                        newName = StripTitlePrefix(newName, ce.King.Male);
-                        newName = StripTitlePrefix(newName, ce.Duke.Male);
-                        newName = StripTitlePrefix(newName, ce.Count.Male);
-                        newName = StripTitlePrefix(newName, ce.Baron.Male);
-                    }
-                }
-
-                // For compatibility with savegame version 0, pre-1.1.0, as these titles left the default config:
-                newName = StripTitlePrefix(newName, "Great Khan ");
-                newName = StripTitlePrefix(newName, "Great Khanum ");
-
-                if (prevName.Equals(newName)) // Made no progress, so we're done
-                    return newName;
-                else
-                    prevName = newName;
-            }
-        }
-
         internal TitleDb()
         {
             Path = BasePath.Name + $"Modules/{SubModule.Name}/titles.json";
@@ -81,29 +47,31 @@ namespace NobleTitles
                     string.IsNullOrWhiteSpace(entry.Count.Male) || string.IsNullOrWhiteSpace(entry.Baron.Male))
                     throw new BadTitleDatabaseException($"Missing at least one male variant of a title type for culture '{cul}'");
 
-                // Missing feminine titles default to equivalent masculine/neutral titles:
-                if (string.IsNullOrWhiteSpace(entry.King.Female)) entry.King.Female = entry.King.Male;
-                if (string.IsNullOrWhiteSpace(entry.Duke.Female)) entry.Duke.Female = entry.Duke.Male;
-                if (string.IsNullOrWhiteSpace(entry.Count.Female)) entry.Count.Female = entry.Count.Male;
-                if (string.IsNullOrWhiteSpace(entry.Baron.Female)) entry.Baron.Female = entry.Baron.Male;
-
-                entry.King.Male = entry.King.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
-                entry.King.Female = entry.King.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
-                entry.Duke.Male = entry.Duke.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
-                entry.Duke.Female = entry.Duke.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
-                entry.Count.Male = entry.Count.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
-                entry.Count.Female = entry.Count.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
-                entry.Baron.Male = entry.Baron.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
-                entry.Baron.Female = entry.Baron.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
-                entry.Noble.Male = entry.Noble.Male.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
-                entry.Noble.Female = entry.Noble.Female.Replace("{NAME}", "{0}").Replace("{name}", "{0}");
+                entry.King.Male = this.NormalizeInputTitle(entry.King.Male);
+                entry.King.Female = this.NormalizeInputTitle(entry.King.Female);
+                entry.Duke.Male = this.NormalizeInputTitle(entry.Duke.Male);
+                entry.Duke.Female = this.NormalizeInputTitle(entry.Duke.Female);
+                entry.Count.Male = this.NormalizeInputTitle(entry.Count.Male);
+                entry.Count.Female = this.NormalizeInputTitle(entry.Count.Female);
+                entry.Baron.Male = this.NormalizeInputTitle(entry.Baron.Male);
+                entry.Baron.Female = this.NormalizeInputTitle(entry.Baron.Female);
+                entry.Noble.Male = this.NormalizeInputTitle(entry.Noble.Male);
+                entry.Noble.Female = this.NormalizeInputTitle(entry.Noble.Female);
                 // TODO: exception
+                // Missing feminine titles default to equivalent masculine/neutral titles:
+                // if (string.IsNullOrWhiteSpace(entry.King.Female)) entry.King.Female = entry.King.Male;
+                // if (string.IsNullOrWhiteSpace(entry.Duke.Female)) entry.Duke.Female = entry.Duke.Male;
+                // if (string.IsNullOrWhiteSpace(entry.Count.Female)) entry.Count.Female = entry.Count.Male;
+                // if (string.IsNullOrWhiteSpace(entry.Baron.Female)) entry.Baron.Female = entry.Baron.Male;
 
                 if (cul == "default")
                     noCulture = entry;
             }
         }
-
+        internal string NormalizeInputTitle(string str)
+        {
+            return str.Replace("{", "{{").Replace("}", "}}").Replace("{{NAME}}", "{0}").Replace("{{name}}", "{0}");
+        }
         internal void Serialize()
         {
             // Undo our baked-in trailing space
@@ -124,7 +92,7 @@ namespace NobleTitles
 
         private string RmEndChar(string s) => s.Substring(0, s.Length - 1);
 
-        private string StripTitlePrefix(string s, string prefix) => s.StartsWith(prefix) ? s.Remove(0, prefix.Length) : s;
+        // private string StripTitlePrefix(string s, string prefix) => s.StartsWith(prefix) ? s.Remove(0, prefix.Length) : s;
 
         public class CultureEntry
         {

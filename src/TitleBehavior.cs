@@ -139,7 +139,7 @@ namespace NobleTitles
                     c.Leader.IsLord)
                 .SelectMany(c => c.Lords.Where(h => h != c.Leader))
                 .ToList();
-            foreach (Hero h in commonNobles) AssignNobleTitle(h, titleDb.GetNobleTitle(kingdom.Culture));
+            foreach (Hero h in commonNobles) AssignNobleTitle(h, titleDb.GetLesserNobleTitle(kingdom.Culture));
 
             /* The vassals first...
              *
@@ -264,25 +264,21 @@ namespace NobleTitles
                     return;
                 }
             }
-
             if (registerTitle)
                 assignedTitles[hero] = titleFormat;
             TextObject name = hero.Name;
             hero.SetName(new TextObject(string.Format(titleFormat, name)), name);
         }
-
         private void RemoveTitlesFromLivingHeroes(bool unregisterTitles = true)
         {
             foreach (Hero? h in assignedTitles.Keys.Where(h => h.IsAlive).ToList())
                 RemoveTitleFromHero(h, unregisterTitles);
         }
-
         private void RemoveTitleFromHero(Hero hero, bool unregisterTitle = true)
         {
             string name = hero.Name.ToString();
-            string title = assignedTitles[hero];
-
-            if (!name.StartsWith(title))
+            string title = string.Format(assignedTitles[hero], hero.FirstName);
+            if (name != title)
             {
                 Util.Log.Print($">> WARNING: Expected title prefix not found in hero name when removing title! Title prefix: \"{title}\" | Name: \"{name}\"");
                 return;
