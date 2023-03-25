@@ -1,9 +1,8 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
-
 using Newtonsoft.Json;
-
 using TaleWorlds.CampaignSystem;
 // using TaleWorlds.CampaignSystem.Conversation.Tags;
 // using TaleWorlds.Library;
@@ -279,10 +278,10 @@ namespace NobleTitlesPlus
                 return;
             }
 
+            string fullName = Regex.Replace(name, assignedTitles[hero].Replace("{0}", "(.+?)"), @"$1");
             if (unregisterTitle)
                 assignedTitles.Remove(hero);
-
-            hero.SetName(new TextObject(name.Remove(0, title.Length)), new TextObject(hero.FirstName.ToString()));
+            hero.SetName(new TextObject(fullName), hero.FirstName);
         }
 
         private readonly Dictionary<Hero, string> assignedTitles = new Dictionary<Hero, string>();

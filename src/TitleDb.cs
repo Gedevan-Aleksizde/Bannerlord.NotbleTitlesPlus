@@ -86,8 +86,6 @@ namespace NobleTitlesPlus
                 entry.Baron.Female = NormalizeInputTitle(entry.Baron.Female);
                 entry.Noble.Male = NormalizeInputTitle(entry.Noble.Male);
                 entry.Noble.Female = NormalizeInputTitle(entry.Noble.Female);
-                // TODO: exception
-
                 if (cul == "default")
                     noCulture = entry;
             }
