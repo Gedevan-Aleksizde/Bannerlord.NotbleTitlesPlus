@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.SaveSystem;
 
-namespace NobleTitles.Patches
+namespace NobleTitlesPlus.Patches
 {
     internal sealed class SaveManagerPatch
     {
