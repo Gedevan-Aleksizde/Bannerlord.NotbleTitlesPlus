@@ -52,6 +52,7 @@ namespace NobleTitlesPlus
             culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Noble : culEntry.Noble;
         internal TitleDb()
         {
+            // TODO: avoid abuse of execption. every title need to have default value.
             string pathSettings = BasePath.Name + $"Modules/{SubModule.modFolderName}/settings.json";
             settings = JsonConvert.DeserializeObject<TitleGlobalSettings>(
                 File.ReadAllText(pathSettings),
@@ -61,21 +62,17 @@ namespace NobleTitlesPlus
                 File.ReadAllText(PathTitles),
                 new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace })
                 ?? throw new BadTitleDatabaseException("Failed to deserialize title database!");
-
             if (cultureMap.Count == 0)
                 throw new BadTitleDatabaseException("Title database is empty!");
-
             // Must have a fallback culture entry.
             if (!cultureMap.ContainsKey("default"))
                 throw new BadTitleDatabaseException("Title database must contain a fallback culture entry keyed by \"default\"!");
-
             foreach (KeyValuePair<string, CultureEntry> i in cultureMap)
             {
                 (string cul, CultureEntry entry) = (i.Key, i.Value);
 
-                if (entry.King is null || entry.Duke is null || entry.Count is null || entry.Baron is null)
+                if (entry.King is null || entry.Duke is null || entry.Count is null || entry.Baron is null || entry.Noble is null)
                     throw new BadTitleDatabaseException($"All title types must be defined for culture '{cul}'!");
-
                 if (string.IsNullOrWhiteSpace(entry.King.Male) || string.IsNullOrWhiteSpace(entry.Duke.Male) ||
                     string.IsNullOrWhiteSpace(entry.Count.Male) || string.IsNullOrWhiteSpace(entry.Baron.Male))
                     throw new BadTitleDatabaseException($"Missing at least one male variant of a title type for culture '{cul}'");
@@ -90,11 +87,6 @@ namespace NobleTitlesPlus
                 entry.Noble.Male = NormalizeInputTitle(entry.Noble.Male);
                 entry.Noble.Female = NormalizeInputTitle(entry.Noble.Female);
                 // TODO: exception
-                // Missing feminine titles default to equivalent masculine/neutral titles:
-                // if (string.IsNullOrWhiteSpace(entry.King.Female)) entry.King.Female = entry.King.Male;
-                // if (string.IsNullOrWhiteSpace(entry.Duke.Female)) entry.Duke.Female = entry.Duke.Male;
-                // if (string.IsNullOrWhiteSpace(entry.Count.Female)) entry.Count.Female = entry.Count.Male;
-                // if (string.IsNullOrWhiteSpace(entry.Baron.Female)) entry.Baron.Female = entry.Baron.Male;
 
                 if (cul == "default")
                     noCulture = entry;
@@ -109,12 +101,13 @@ namespace NobleTitlesPlus
             }
             catch (Exception)
             {
-                Util.Log.Print($">> WARNING: Title format {str} is invalid. It's a incorrect format!");
+                Util.Log.Print($">> WARNING: Title format {str} is invalid. It's a incorrect format! This format is inavailable.");
                 normalized = "{0}";
             }
             if (!normalized.Contains("{0}"))
             {
-                Util.Log.Print($">> WARNING: Title format {str} doesn't contain the name variable!");
+                Util.Log.Print($">> WARNING: Title format {str} doesn't contain the name variable! This format is inavailable.");
+                normalized = "{0}";
             }
             return normalized;
         }
@@ -179,11 +172,11 @@ namespace NobleTitlesPlus
         // culture StringId => CultureEntry (contains bulk of title information, only further split by gender)
         protected Dictionary<string, CultureEntry> cultureMap;
         protected CultureEntry noCulture = new(
-            new("King", "Queen"),
-            new("Duke", "Duchess"),
-            new("Count", "Countess"),
-            new("Baron", "Baroness"),
-            new("Noble", "Lady")
+            new("King {NAME}", "Queen {NAME}"),
+            new("Duke {NAME}", "Duchess {NAME}"),
+            new("Count {NAME}", "Countess {NAME}"),
+            new("Baron {NAME}", "Baroness {NAME}"),
+            new("{NAME}", "{NAME}")
             );
     }
 }
