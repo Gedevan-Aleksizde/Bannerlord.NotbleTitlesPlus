@@ -10,7 +10,7 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.Localization;
 // using TaleWorlds.ObjectSystem;
 
-namespace NobleTitles
+namespace NobleTitlesPlus
 {
     internal sealed class TitleBehavior : CampaignBehaviorBase
     {
@@ -127,7 +127,7 @@ namespace NobleTitles
 
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
-            List<string> tr = new List<string> { $"Adding noble titles to {kingdom.Name}..." };
+            List<string> tr = new() { $"Adding noble titles to {kingdom.Name}..." };
             // Common Nobles, not a Clan Leader
             List<Hero> commonNobles = kingdom.Clans
                 .Where(c =>
@@ -136,7 +136,7 @@ namespace NobleTitles
                     c.Leader != null &&
                     c.Leader.IsAlive &&
                     c.Leader.IsLord)
-                .SelectMany(c => c.Lords.Where(h => h != c.Leader && (h.IsKnownToPlayer || !this.titleDb.FogOfWar)  ))
+                .SelectMany(c => c.Lords.Where(h => h != c.Leader && (h.IsKnownToPlayer || !titleDb.settings.General.FogOfWar)))
                 .ToList();
             foreach (Hero h in commonNobles) AssignNobleTitle(h, titleDb.GetLesserNobleTitle(kingdom.Culture));
 
@@ -158,7 +158,7 @@ namespace NobleTitles
                 .OrderBy(c => GetFiefScore(c))
                 .ThenBy(c => c.Renown)
                 .Select(c => c.Leader)
-                .Where(h => h.IsKnownToPlayer || !this.titleDb.FogOfWar)
+                .Where(h => h.IsKnownToPlayer || !titleDb.settings.General.FogOfWar)
                 .ToList();
             int nBarons = 0;
             // First, pass over all barons.
@@ -236,7 +236,7 @@ namespace NobleTitles
 
             if (spouse == null ||
                 spouse.IsDead ||
-                (spouse.Clan?.Leader == spouse && spouse.Clan.Kingdom != null))
+                spouse.Clan?.Leader == spouse && spouse.Clan.Kingdom != null)
                 return;
 
             // Sure. Give the spouse the ruler consort title, which is currently and probably always will
@@ -260,7 +260,9 @@ namespace NobleTitles
             if (registerTitle)
                 assignedTitles[hero] = titleFormat;
             TextObject name = hero.Name;
-            hero.SetName(new TextObject(string.Format(titleFormat, name)), name);
+            List<string> fiefNames = hero.Clan.Fiefs.Select(f => f.Name.ToString()).ToList();
+            string stringFiefs = string.Join<string>(",", fiefNames.Take(Math.Min(fiefNames.Count, 3)));
+            hero.SetName(new TextObject(string.Format(titleFormat, new string[] { name.ToString(), stringFiefs })), name);
         }
         private void RemoveTitlesFromLivingHeroes(bool unregisterTitles = true)
         {

@@ -12,10 +12,34 @@ using TaleWorlds.GauntletUI;
 using TaleWorlds.Library;
 using static TaleWorlds.CampaignSystem.CharacterDevelopment.DefaultPerks;
 
-namespace NobleTitles
+namespace NobleTitlesPlus
 {
     class TitleDb
     {
+        [JsonObject("Settings")]
+        public class TitleGlobalSettings
+        {
+            [JsonProperty("General")]
+            public GeneralSettings General { get; private set; } = new GeneralSettings();
+            [JsonProperty("Format")]
+            public FormatSettings Format { get; private set; } = new FormatSettings();
+            public class GeneralSettings
+            {
+                [JsonProperty("FogOfWar")]
+                public bool FogOfWar { get; private set; }
+            }
+            public class FormatSettings
+            {
+                [JsonProperty("FiefNameSeparator")]
+                public string FiefNameSepratorComma { get; private set; } = ",";
+                [JsonProperty("FiefNameSeparatorLast")]
+                public string FiefNameSeparatorAnd { get; private set; } = "and";
+                [JsonProperty("Tagging")]
+                public bool Tagging { get; private set; } = true;
+                [JsonProperty("MaxFiefNames")]
+                public int MaxFiefNames { get; private set; } = 3;
+            }
+        }
         internal Entry GetKingTitle(CultureObject culture) =>
             culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.King : culEntry.King;
         internal Entry GetDukeTitle(CultureObject culture) =>
@@ -28,18 +52,11 @@ namespace NobleTitles
             culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Noble : culEntry.Noble;
         internal TitleDb()
         {
-            string pathSettings = BasePath.Name + $"Modules/{SubModule.Name}/settings.json";
-            Dictionary<string, Dictionary<string, bool>> settings = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, bool>>>(
+            string pathSettings = BasePath.Name + $"Modules/{SubModule.modFolderName}/settings.json";
+            settings = JsonConvert.DeserializeObject<TitleGlobalSettings>(
                 File.ReadAllText(pathSettings),
-                new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace }) ?? new Dictionary<string, Dictionary<string, bool>>();
-            if (settings.ContainsKey("general"))
-            {
-                if (settings["general"].ContainsKey("FogOfWar"))
-                {
-                    this.FogOfWar = settings["general"]["FogOfWar"];
-                }
-            }
-            PathTitles = BasePath.Name + $"Modules/{SubModule.Name}/titles.json";
+                new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace }) ?? new TitleGlobalSettings();
+            PathTitles = BasePath.Name + $"Modules/{SubModule.modFolderName}/titles.json";
             cultureMap = JsonConvert.DeserializeObject<Dictionary<string, CultureEntry>>(
                 File.ReadAllText(PathTitles),
                 new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace })
@@ -62,16 +79,16 @@ namespace NobleTitles
                 if (string.IsNullOrWhiteSpace(entry.King.Male) || string.IsNullOrWhiteSpace(entry.Duke.Male) ||
                     string.IsNullOrWhiteSpace(entry.Count.Male) || string.IsNullOrWhiteSpace(entry.Baron.Male))
                     throw new BadTitleDatabaseException($"Missing at least one male variant of a title type for culture '{cul}'");
-                entry.King.Male = this.NormalizeInputTitle(entry.King.Male);
-                entry.King.Female = this.NormalizeInputTitle(entry.King.Female);
-                entry.Duke.Male = this.NormalizeInputTitle(entry.Duke.Male);
-                entry.Duke.Female = this.NormalizeInputTitle(entry.Duke.Female);
-                entry.Count.Male = this.NormalizeInputTitle(entry.Count.Male);
-                entry.Count.Female = this.NormalizeInputTitle(entry.Count.Female);
-                entry.Baron.Male = this.NormalizeInputTitle(entry.Baron.Male);
-                entry.Baron.Female = this.NormalizeInputTitle(entry.Baron.Female);
-                entry.Noble.Male = this.NormalizeInputTitle(entry.Noble.Male);
-                entry.Noble.Female = this.NormalizeInputTitle(entry.Noble.Female);
+                entry.King.Male = NormalizeInputTitle(entry.King.Male);
+                entry.King.Female = NormalizeInputTitle(entry.King.Female);
+                entry.Duke.Male = NormalizeInputTitle(entry.Duke.Male);
+                entry.Duke.Female = NormalizeInputTitle(entry.Duke.Female);
+                entry.Count.Male = NormalizeInputTitle(entry.Count.Male);
+                entry.Count.Female = NormalizeInputTitle(entry.Count.Female);
+                entry.Baron.Male = NormalizeInputTitle(entry.Baron.Male);
+                entry.Baron.Female = NormalizeInputTitle(entry.Baron.Female);
+                entry.Noble.Male = NormalizeInputTitle(entry.Noble.Male);
+                entry.Noble.Female = NormalizeInputTitle(entry.Noble.Female);
                 // TODO: exception
                 // Missing feminine titles default to equivalent masculine/neutral titles:
                 // if (string.IsNullOrWhiteSpace(entry.King.Female)) entry.King.Female = entry.King.Male;
@@ -90,7 +107,7 @@ namespace NobleTitles
             {
                 string.Format(normalized, "TEST NAME");
             }
-            catch(Exception)
+            catch (Exception)
             {
                 Util.Log.Print($">> WARNING: Title format {str} is invalid. It's a incorrect format!");
                 normalized = "{0}";
@@ -158,7 +175,7 @@ namespace NobleTitles
             public BadTitleDatabaseException(string message, Exception innerException) : base(message, innerException) { }
         }
         protected string PathTitles { get; set; }
-        public bool FogOfWar { get; private set; } = true;
+        public TitleGlobalSettings settings;
         // culture StringId => CultureEntry (contains bulk of title information, only further split by gender)
         protected Dictionary<string, CultureEntry> cultureMap;
         protected CultureEntry noCulture = new(
