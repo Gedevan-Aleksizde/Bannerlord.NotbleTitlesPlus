@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using TaleWorlds.CampaignSystem;
 
-namespace NobleTitles
+namespace NobleTitlesPlus
 {
     class Util
     {
