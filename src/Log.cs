@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace NobleTitles
+namespace NobleTitlesPlus
 {
     internal class Log : LogBase
     {
-        private const string BeginMultiLine      = @"=======================================================================================================================\";
-        private const string EndMultiLine        = @"=======================================================================================================================/";
+        private const string BeginMultiLine = @"=======================================================================================================================\";
+        private const string EndMultiLine = @"=======================================================================================================================/";
 
         public readonly string Module;
         public readonly string LogDir;
@@ -66,7 +66,7 @@ namespace NobleTitles
             try
             {
                 // Give it a 64KiB buffer so that it will essentially never block on interim WriteLine calls:
-                Writer = TextWriter.Synchronized( new StreamWriter(LogPath, !truncate, Encoding.UTF8, 1 << 16) );
+                Writer = TextWriter.Synchronized(new StreamWriter(LogPath, !truncate, Encoding.UTF8, 1 << 16));
             }
             catch (Exception e)
             {

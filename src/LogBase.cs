@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NobleTitles
+namespace NobleTitlesPlus
 {
     internal class LogBase
     {

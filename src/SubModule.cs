@@ -1,13 +1,17 @@
-﻿using NobleTitles.Patches;
-
-using HarmonyLib;
+﻿using HarmonyLib;
 
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
+using System.Runtime.CompilerServices;
+using System.Reflection;
+using System.IO;
+using NobleTitlesPlus;
+using NobleTitlesPlus.Patches;
+using TaleWorlds.Localization;
 
-namespace NobleTitles
+namespace NobleTitlesPlus
 {
     public class SubModule : MBSubModuleBase
     {
@@ -16,12 +20,13 @@ namespace NobleTitles
         public const int SemVerMinor = 2;
         public const int SemVerPatch = 0;
         public static readonly string? SemVerSpecial = null;
-        private static readonly string SemVerEnd = (SemVerSpecial is not null) ? "-" + SemVerSpecial : string.Empty;
+        private static readonly string SemVerEnd = SemVerSpecial is not null ? "-" + SemVerSpecial : string.Empty;
         public static readonly string Version = $"{SemVerMajor}.{SemVerMinor}.{SemVerPatch}{SemVerEnd}";
 
-        public static readonly string Name = typeof(SubModule).Namespace;
-        public static readonly string DisplayName = "Noble Titles"; // to be shown to humans in-game
-        public static readonly string HarmonyDomain = "com.zijistark.bannerlord." + Name.ToLower();
+        public static readonly string Name = typeof(SubModule).Namespace; // why we need write again?
+        public static readonly string modFolderName = Directory.GetParent(Assembly.GetExecutingAssembly().Location).Parent.Parent.Name;
+        public static readonly string DisplayName = "Noble Titles Plus"; // why we need write again?
+        public static readonly string HarmonyDomain = "com.skatagiri.bannerlord" + Name.ToLower();
 
         internal static readonly Color ImportantTextColor = Color.FromUint(0x00F16D26); // orange
 
@@ -44,12 +49,12 @@ namespace NobleTitles
 
             if (!hasLoaded && !canceled)
             {
-                InformationManager.DisplayMessage(new InformationMessage($"Loaded {DisplayName}", ImportantTextColor));
+                InformationManager.DisplayMessage(new InformationMessage(new TextObject($"{{=NobleTitlesPlus001}}Loaded {DisplayName}").ToString(), ImportantTextColor));
                 hasLoaded = true;
             }
 
             if (canceled)
-                InformationManager.DisplayMessage(new InformationMessage($"Error loading {DisplayName}: Disabled!", ImportantTextColor));
+                InformationManager.DisplayMessage(new InformationMessage(new TextObject($"{{=NobleTitlesPlus002}}Error loading {DisplayName}: Disabled!").ToString(), ImportantTextColor));
         }
 
         protected override void OnGameStart(Game game, IGameStarter starterObject)
