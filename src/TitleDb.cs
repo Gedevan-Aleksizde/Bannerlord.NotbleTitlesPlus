@@ -10,6 +10,7 @@ using TaleWorlds.CampaignSystem.Extensions;
 using TaleWorlds.CampaignSystem.SceneInformationPopupTypes;
 using TaleWorlds.GauntletUI;
 using TaleWorlds.Library;
+using TaleWorlds.Localization;
 using static TaleWorlds.CampaignSystem.CharacterDevelopment.DefaultPerks;
 
 namespace NobleTitlesPlus
@@ -41,33 +42,32 @@ namespace NobleTitlesPlus
             }
         }
         internal Entry GetKingTitle(CultureObject culture) =>
-            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.King : culEntry.King;
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? this.noCulture.King : culEntry.King;
         internal Entry GetDukeTitle(CultureObject culture) =>
-            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Duke : culEntry.Duke;
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? this.noCulture.Duke : culEntry.Duke;
         internal Entry GetCountTitle(CultureObject culture) =>
-            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Count : culEntry.Count;
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? this.noCulture.Count : culEntry.Count;
         internal Entry GetBaronTitle(CultureObject culture) =>
-            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Baron : culEntry.Baron;
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? this.noCulture.Baron : culEntry.Baron;
         internal Entry GetLesserNobleTitle(CultureObject culture) =>
-            culture is null || !cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? noCulture.Noble : culEntry.Noble;
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntry? culEntry) ? this.noCulture.Noble : culEntry.Noble;
         internal TitleDb()
         {
             // TODO: avoid abuse of execption. every title need to have default value.
-            string pathSettings = BasePath.Name + $"Modules/{SubModule.modFolderName}/settings.json";
-            settings = JsonConvert.DeserializeObject<TitleGlobalSettings>(
-                File.ReadAllText(pathSettings),
+            this.settings = JsonConvert.DeserializeObject<TitleGlobalSettings>(
+                File.ReadAllText($"{BasePath.Name}/Modules/{SubModule.modFolderName}/settings.json"),
                 new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace }) ?? new TitleGlobalSettings();
-            PathTitles = BasePath.Name + $"Modules/{SubModule.modFolderName}/titles.json";
-            cultureMap = JsonConvert.DeserializeObject<Dictionary<string, CultureEntry>>(
-                File.ReadAllText(PathTitles),
+            this.PathTitles = $"{BasePath.Name}/Modules/{SubModule.modFolderName}/titles.json";
+            this.cultureMap = JsonConvert.DeserializeObject<Dictionary<string, CultureEntry>>(
+                File.ReadAllText(this.PathTitles),
                 new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace })
                 ?? throw new BadTitleDatabaseException("Failed to deserialize title database!");
-            if (cultureMap.Count == 0)
+            if (this.cultureMap.Count == 0)
                 throw new BadTitleDatabaseException("Title database is empty!");
             // Must have a fallback culture entry.
-            if (!cultureMap.ContainsKey("default"))
+            if (!this.cultureMap.ContainsKey("default"))
                 throw new BadTitleDatabaseException("Title database must contain a fallback culture entry keyed by \"default\"!");
-            foreach (KeyValuePair<string, CultureEntry> i in cultureMap)
+            foreach (KeyValuePair<string, CultureEntry> i in this.cultureMap)
             {
                 (string cul, CultureEntry entry) = (i.Key, i.Value);
 
@@ -87,32 +87,32 @@ namespace NobleTitlesPlus
                 entry.Noble.Male = NormalizeInputTitle(entry.Noble.Male);
                 entry.Noble.Female = NormalizeInputTitle(entry.Noble.Female);
                 if (cul == "default")
-                    noCulture = entry;
+                    this.noCulture = entry;
             }
         }
         internal string NormalizeInputTitle(string str)
         {
-            string normalized = str.Replace("{", "{{").Replace("}", "}}").Replace("{{NAME}}", "{0}").Replace("{{name}}", "{0}");
+            string normalized = str.Replace("{name}", "{NAME}");
             try
             {
-                string.Format(normalized, "TEST NAME");
+                new TextObject(normalized, new Dictionary<string, object>() { ["NAME"] = "TEST NAME"}).ToString();
             }
             catch (Exception)
             {
                 Util.Log.Print($">> WARNING: Title format {str} is invalid. It's a incorrect format! This format is inavailable.");
-                normalized = "{0}";
+                normalized = "{NAME}";
             }
-            if (!normalized.Contains("{0}"))
+            if (!normalized.Contains("{NAME}"))
             {
                 Util.Log.Print($">> WARNING: Title format {str} doesn't contain the name variable! This format is inavailable.");
-                normalized = "{0}";
+                normalized = "{NAME}";
             }
             return normalized;
         }
         internal void Serialize()
         {
             // Undo our baked-in trailing space
-            foreach (CultureEntry e in cultureMap.Values)
+            foreach (CultureEntry e in this.cultureMap.Values)
             {
                 e.King.Male = RmEndChar(e.King.Male);
                 e.King.Female = RmEndChar(e.King.Female);
@@ -124,7 +124,7 @@ namespace NobleTitlesPlus
                 e.Baron.Female = RmEndChar(e.Baron.Female);
             }
 
-            File.WriteAllText(PathTitles, JsonConvert.SerializeObject(cultureMap, Formatting.Indented));
+            File.WriteAllText(this.PathTitles, JsonConvert.SerializeObject(this.cultureMap, Formatting.Indented));
         }
 
         private string RmEndChar(string s) => s.Substring(0, s.Length - 1);
@@ -141,11 +141,11 @@ namespace NobleTitlesPlus
 
             public CultureEntry(Entry king, Entry duke, Entry count, Entry baron, Entry noble)
             {
-                King = king;
-                Duke = duke;
-                Count = count;
-                Baron = baron;
-                Noble = noble;
+                this.King = king;
+                this.Duke = duke;
+                this.Count = count;
+                this.Baron = baron;
+                this.Noble = noble;
             }
         }
         public class Entry
@@ -155,8 +155,8 @@ namespace NobleTitlesPlus
 
             public Entry(string male, string female)
             {
-                Male = male;
-                Female = female;
+                this.Male = male;
+                this.Female = female;
             }
         }
         public class BadTitleDatabaseException : Exception
@@ -170,11 +170,11 @@ namespace NobleTitlesPlus
         // culture StringId => CultureEntry (contains bulk of title information, only further split by gender)
         protected Dictionary<string, CultureEntry> cultureMap;
         protected CultureEntry noCulture = new(
-            new("King {NAME}", "Queen {NAME}"),
-            new("Duke {NAME}", "Duchess {NAME}"),
-            new("Count {NAME}", "Countess {NAME}"),
-            new("Baron {NAME}", "Baroness {NAME}"),
-            new("{NAME}", "{NAME}")
+            new("{=NobleTitlePlus.King}King {NAME}", "{=NobleTitlePlus.Queen}Queen {NAME}"),
+            new("{=NobleTitlePlus.Duke}Duke {NAME}", "{=NobleTitlePlus.Duchess}Duchess {NAME}"),
+            new("{=NobleTitlePlus.Count}Count {NAME}", "{=NobleTitlePlus.Countess}Countess {NAME}"),
+            new("{=NobleTitlePlus.Baron}Baron {NAME}", "{=NobleTitlePlus.Baroness}Baroness {NAME}"),
+            new("{=NobleTitlePlus.Sir}{NAME}", "{=NobleTitlePlus.Dame}{NAME}")
             );
     }
 }
