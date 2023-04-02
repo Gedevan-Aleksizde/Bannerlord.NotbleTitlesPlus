@@ -12,15 +12,17 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void AppendTitle(Hero __instance, ref TextObject __result)
         {
-            if(TitleBehavior.nomenclatura.NameTitle.TryGetValue(__instance, out string title) && __instance.IsAlive)
+            /*if(TitleBehavior.nomenclatura.NameTitle.TryGetValue(__instance, out TextObject titleFormat) && __instance.IsAlive)
             {
-                __result = new TextObject(title).SetTextVariable("NAME", __instance.FirstName);
+                __result = titleFormat.SetTextVariable("NAME", __instance.FirstName);
+            }*/
+            if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive) 
+            {
+                __result = TitleBehavior.nomenclatura.GetTitle(__instance.IsFemale, __instance.Culture.StringId, rank).SetTextVariable("NAME", __instance.FirstName);
             }
         }
         // TODO: 軍隊の名前はどうなってるの?
         // TODO: 会話ダイアログの表示名で本来の称号が付け足される
-        // TODO: パフォーマンス改善
-        //   * TitleDBの時点で TextObject にしたほうがよくないか?
         // TODO: 使用可能マクロを増やす
     }
 }

@@ -4,8 +4,6 @@ using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using System.Reflection;
 using System.IO;
-using NobleTitlesPlus;
-using NobleTitlesPlus.Patches;
 using TaleWorlds.Localization;
 
 namespace NobleTitlesPlus
