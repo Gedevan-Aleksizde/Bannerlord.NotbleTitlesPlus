@@ -65,6 +65,17 @@ namespace NobleTitlesPlus
             {
                 this.AddTitlesToKingdomHeroes(k);
             }
+            this.RemoveTitleFromDead();
+        }
+        private void RemoveTitleFromDead()
+        {
+            foreach(Hero h in this.NameTitle.Keys.ToArray())
+            {
+                if (h.IsDead)
+                {
+                    this.NameTitle.Remove(h);
+                }
+            }
         }
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
