@@ -205,7 +205,7 @@ namespace NobleTitlesPlus
                     Util.Log.Print($">> WARNING: Title format is missing!");
                     titleFormat = "{name}";
                 }
-                string normalized = titleFormat.Replace("{name}", "{NAME}");
+                string normalized = titleFormat.Replace("{name}", "{NAME}").Replace("{clan}", "{CLAN}");
                 try
                 {
                     new TextObject(normalized, new Dictionary<string, object>() { ["NAME"] = "TEST NAME" }).ToString();

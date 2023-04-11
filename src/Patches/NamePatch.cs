@@ -1,7 +1,10 @@
 ﻿using HarmonyLib;
 using System;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.Conversation;
+using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using TaleWorlds.Localization;
 
 namespace NobleTitlesPlus.Patches
@@ -18,11 +21,26 @@ namespace NobleTitlesPlus.Patches
             }*/
             if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive) 
             {
-                __result = TitleBehavior.nomenclatura.GetTitle(__instance.IsFemale, __instance.Culture.StringId, rank).SetTextVariable("NAME", __instance.FirstName);
+                __result = TitleBehavior.nomenclatura.GetTitle(__instance.IsFemale, __instance.Culture.StringId, rank).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
             }
         }
-        // TODO: 軍隊の名前はどうなってるの?
-        // TODO: 会話ダイアログの表示名で本来の称号が付け足される
-        // TODO: 使用可能マクロを増やす
+        // TODO: Army Name
+        // TODO: More macros
     }
+    [HarmonyPatch(typeof(MissionConversationVM), nameof(MissionConversationVM.Refresh))]
+    internal class MissionConversationVMModifyOverNetstedTextFormat
+    {
+        private static TextObject namePre = new();
+        [HarmonyPrefix]
+        private static void PrevesrveInitialAgentName(MissionConversationVM __instance, ref ConversationManager ____conversationManager)
+        {
+            namePre = ____conversationManager.SpeakerAgent.Character.Name;
+        }
+        [HarmonyPostfix]
+        private static void EditOverNestedTitleFormatInConverastion(MissionConversationVM __instance)
+        {
+            __instance.CurrentCharacterNameLbl = namePre.ToString();
+        }
+    }
+    // TODO: Is Patching GameTexts more clever? 
 }

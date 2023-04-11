@@ -28,8 +28,8 @@ namespace NobleTitlesPlus
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
-            Util.EnableLog = true; // enable various debug logging
-            Util.EnableTracer = true; // enable code event tracing (requires enabled logging)
+            Util.EnableLog = false; // enable various debug logging
+            Util.EnableTracer = false; // enable code event tracing (requires enabled logging)
 
             /*if (!SaveManagerPatch.Apply(new(HarmonyDomain)))
             {
