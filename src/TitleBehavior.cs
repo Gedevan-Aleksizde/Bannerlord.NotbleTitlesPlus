@@ -14,7 +14,6 @@ namespace NobleTitlesPlus
         public override void RegisterEvents()
         {
             // TODO: remove unused event
-            CampaignEvents.OnBeforeSaveEvent.AddNonSerializedListener(this, () =>UpdateArmyNames());
             CampaignEvents.DailyTickEvent.AddNonSerializedListener(this, OnDailyTick);
             CampaignEvents.OnSaveOverEvent.AddNonSerializedListener(this, (a, b) => this.UpdateArmyNames());
             CampaignEvents.OnGameLoadFinishedEvent.AddNonSerializedListener(this, () => UpdateArmyNames());          
@@ -112,7 +111,6 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[h] = TitleRank.Noble;
                 tr.Add(this.GetHeroTrace(h, TitleRank.Noble));
-                // this.NameTitle[h] = h.IsFemale ? this.titleDb.GetLesserNobleTitle(kingdom.Culture).FemaleFormat : this.titleDb.GetLesserNobleTitle(kingdom.Culture).MaleFormat;
             }
             /* The vassals first...
              *
@@ -144,8 +142,6 @@ namespace NobleTitlesPlus
                     ++nBarons;
                     this.HeroRank[h] = TitleRank.Baron;
                     tr.Add(this.GetHeroTrace(h, TitleRank.Baron));
-                    // this.NameTitle[h] = h.IsFemale ? this.titleDb.GetBaronTitle(kingdom.Culture).FemaleFormat: this.titleDb.GetBaronTitle(kingdom.Culture).MaleFormat;
-                    // tr.Add(GetHeroTrace(h, "BARON"));
                 }
                 else // They must be a count or duke. We're done here.
                     break;
@@ -162,16 +158,12 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[vassals[i]] = TitleRank.Count;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Count));
-                // this.NameTitle[vassals[i]] = vassals[i].IsFemale ? this.titleDb.GetCountTitle(kingdom.Culture).Female : this.titleDb.GetCountTitle(kingdom.Culture).Male;
-                // tr.Add(this.GetHeroTrace(vassals[i], "COUNT"));
             }
             // Dukes:
             for (int i = maxDukeIdx; i > maxCountIdx; --i)
             {
                 this.HeroRank[vassals[i]] = TitleRank.Duke;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Duke));
-                // this.NameTitle[vassals[i]] = vassals[i].IsFemale ? this.titleDb.GetDukeTitle(kingdom.Culture).Female : this.titleDb.GetDukeTitle(kingdom.Culture).Male;
-                // tr.Add(this.GetHeroTrace(vassals[i], "DUKE"));
             }
             // Finally, the most obvious, the ruler (King) title:
             if (kingdom.Leader != null &&
@@ -179,8 +171,6 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[kingdom.Leader] = TitleRank.King;
                 tr.Add(this.GetHeroTrace(kingdom.Leader, TitleRank.King));
-                // this.NameTitle[kingdom.Leader] = kingdom.Leader.IsFemale? this.titleDb.GetKingTitle(kingdom.Culture).Female: this.titleDb.GetKingTitle(kingdom.Culture).Male;
-                // tr.Add(this.GetHeroTrace(kingdom.Leader, "KING"));
             }
             Util.Log.Print(tr);
         }

@@ -2,6 +2,7 @@
 // using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 // using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using Newtonsoft.Json;
 // using StoryMode.GauntletUI.Tutorial;
@@ -34,7 +35,7 @@ namespace NobleTitlesPlus
                 return rank switch
                 {
                     TitleRank.King => isFemale ? cul.King.FemaleFormat : cul.King.MaleFormat,
-                    TitleRank.Duke => isFemale ? cul.Duke.FemaleFormat : cul.King.MaleFormat,
+                    TitleRank.Duke => isFemale ? cul.Duke.FemaleFormat : cul.Duke.MaleFormat,
                     TitleRank.Count => isFemale ? cul.Count.FemaleFormat : cul.Count.MaleFormat,
                     TitleRank.Baron => isFemale ? cul.Baron.FemaleFormat : cul.Baron.MaleFormat,
                     TitleRank.Noble => isFemale ? cul.Noble.FemaleFormat : cul.Noble.MaleFormat,
@@ -205,7 +206,7 @@ namespace NobleTitlesPlus
                     Util.Log.Print($">> WARNING: Title format is missing!");
                     titleFormat = "{name}";
                 }
-                string normalized = titleFormat.Replace("{name}", "{NAME}").Replace("{clan}", "{CLAN}");
+                string normalized = Regex.Replace(titleFormat, @"\{[a-zA-Z]+\}", t => t.ToString().ToUpper());
                 try
                 {
                     new TextObject(normalized, new Dictionary<string, object>() { ["NAME"] = "TEST NAME" }).ToString();
