@@ -10,7 +10,7 @@ namespace NobleTitlesPlus.Patches
     internal class HeroNamePatch
     {
         [HarmonyPostfix]
-        private static void AppendTitle(Hero __instance, ref TextObject __result)
+        private static void AppendTitles(Hero __instance, ref TextObject __result)
         {
             /*if(TitleBehavior.nomenclatura.NameTitle.TryGetValue(__instance, out TextObject titleFormat) && __instance.IsAlive)
             {
@@ -18,11 +18,10 @@ namespace NobleTitlesPlus.Patches
             }*/
             if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive) 
             {
+                // TODO: More macros
                 __result = TitleBehavior.nomenclatura.GetTitle(__instance.IsFemale, __instance.Culture.StringId, rank).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
             }
         }
-        // TODO: Army Name
-        // TODO: More macros
     }
     [HarmonyPatch(typeof(MissionConversationVM), nameof(MissionConversationVM.Refresh))]
     internal class MissionConversationVMModifyOverNetstedTextFormat
