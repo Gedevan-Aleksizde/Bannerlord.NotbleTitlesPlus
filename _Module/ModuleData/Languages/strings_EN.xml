@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base>
+ <tags>
+  <tag language="English"/>
+ </tags>
+ <strings>
+  <string id="NobleTitlesPlus.Sys001" text="Loaded Noble Titles Plus"/>
+  <string id="NobleTitlesPlus.Sys002" text="Error loading Noble Titles Plus: Disabled!"/>
+  <string id="NobleTitlesPlus.defaultKing" text="King {NAME}"/>
+  <string id="NobleTitlesPlus.defaultQueen" text="Queen {NAME}"/>
+  <string id="NobleTitlesPlus.defaultDuke" text="Duke {NAME}"/>
+  <string id="NobleTitlesPlus.defaultDuchess" text="Duchess {NAME}"/>
+  <string id="NobleTitlesPlus.defaultCount" text="Count {NAME}"/>
+  <string id="NobleTitlesPlus.defaultCountess" text="Countess {NAME}"/>
+  <string id="NobleTitlesPlus.defaultBaron" text="Baron {NAME}"/>
+  <string id="NobleTitlesPlus.defaultBaroness" text="Baroness {NAME}"/>
+  <string id="NobleTitlesPlus.defaultSir" text="{NAME}"/>
+  <string id="NobleTitlesPlus.defaultDame" text="{NAME}"/>
+ </strings>
+</base>

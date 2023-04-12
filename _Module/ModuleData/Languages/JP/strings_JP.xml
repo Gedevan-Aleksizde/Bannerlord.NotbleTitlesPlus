@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base>
+  <tags>
+    <tag language="Japanese"/>
+  </tags>
+  <strings>
+    <string id="NobleTitlesPlus.Sys001" text="Noble Tile Plus が読み込まれました"/>
+    <string id="NobleTitlesPlus.Sys002" text="Noble Title Plus の読み込み中にエラーが発生しました! modは無効です!"/>
+    <string id="NobleTitlesPlus.defaultKing" text="国王{NAME}"/>
+    <string id="NobleTitlesPlus.defaultQueen" text="女王{NAME}"/>
+    <string id="NobleTitlesPlus.defaultDuke" text="{NAME}公爵"/>
+    <string id="NobleTitlesPlus.defaultDuchess" text="{NAME}女公爵"/>
+    <string id="NobleTitlesPlus.defaultCount" text="{NAME}伯爵"/>
+    <string id="NobleTitlesPlus.defaultCountess" text="{NAME}女伯爵"/>
+    <string id="NobleTitlesPlus.defaultBaron" text="{NAME}男爵"/>
+    <string id="NobleTitlesPlus.defaultBaroness" text="{NAME}女男爵"/>
+    <string id="NobleTitlesPlus.defaultSir" text="{NAME}"/>
+    <string id="NobleTitlesPlus.defaultDame" text="{NAME}"/>
+   </strings>
+</base>

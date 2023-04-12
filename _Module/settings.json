@@ -1,0 +1,13 @@
+{
+    "General": {
+        //true: hide title if you have never seen the hero
+        "FogOfWar": true
+    },
+    "Format": {
+        // not working now
+        "Tagging": true,
+        "FiefNameSeparator": ",",
+        "FiefNameSeparatorLast": "and",
+        "MaxFiefNames": 3
+    }
+}

@@ -1,0 +1,189 @@
+{
+  "default": {
+    "King": {
+      "Male": "{NAME}王",
+      "Female": "{NAME}女王"
+    },
+    "Duke": {
+      "Male": "{NAME}公爵",
+      "Female": "{NAME}女公爵"
+    },
+    "Count": {
+      "Male": "{NAME}伯爵",
+      "Female": "{NAME}女伯爵"
+    },
+    "Baron": {
+      "Male": "{NAME}男爵",
+      "Female": "{NAME}女男爵"
+    },
+    "Noble": {
+      "Male": "{NAME}卿",
+      "Female": "{NAME}夫人"
+    }
+  },
+  // England
+  "vlandia": {
+    "King": {
+      "Male": "ヴランディア王{NAME}",
+      "Female": "ヴランディア女王{NAME}"
+    },
+    "Duke": {
+      "Male": "{NAME}公爵",
+      "Female": "{NAME}女公爵"
+    },
+    "Count": {
+      "Male": "{NAME}伯爵",
+      "Female": "{NAME}女伯爵"
+    },
+    "Baron": {
+      "Male": "{NAME}男爵",
+      "Female": "{NAME}女男爵"
+    },
+    "Noble": {
+      "Male": "{NAME}卿",
+      "Female": "{NAME}夫人"
+    }
+  },
+  // inspired from Komneno-Palailogian period
+  "empire": {
+    "King": {
+      "Male": "バシレイオス゠{NAME}",
+      "Female": "バシレイア゠{NAME}"
+    },
+    "Duke": {
+      "Male": "メガスアルホン゠{NAME}",
+      "Female": "メガスアルホンティッサ゠{NAME}" // 造語
+    },
+    "Count": {
+      "Male": "エクサルホス゠{NAME}",
+      "Female": "エクサルホンティッサ゠{NAME}" // 造語
+    },
+    "Baron": {
+      "Male": "アルホン゠{NAME}",
+      "Female": "アルホンティッサ゠{NAME}"
+    },
+    "Noble": {
+      "Male": "パトリキオス゠{NAME}",
+      "Female": "パトリキア゠{NAME}"
+    }
+  },
+  // mixture of Slavic and Skandinavian titles, looks weird
+  "sturgia": {
+    "King": {
+      "Male": "大クニャージ゠{NAME}",
+      "Female": "女大クニャージ゠{NAME}"
+    },
+    "Duke": {
+      "Male": "ヘルトゥク゠{NAME}",
+      "Female": "ヘルトゥギンデ゠{NAME}"
+    },
+    "Count": {
+      "Male": "ヤール゠{NAME}",
+      "Female": "ヤーリンデ゠{NAME}" //造語
+    },
+    "Baron": {
+      "Male": "クニャージ゠{NAME}",
+      "Female": "クニャジーニャ゠{NAME}"
+    },
+    "Noble": {
+      "Male": "ボヤーリン゠{NAME}",
+      "Female": "ボヤーリナ゠{NAME}"
+    }
+  },
+  // Based on Irish titles
+  // Mormaer is Scottish Title
+  "battania": {
+    "King": {
+      "Male": "バッタニア上王{NAME}",
+      "Female": "バッタニア上女王{NAME}"
+    },
+    "Duke": {
+      "Male": "藩王{NAME}", // Rí buiden, Overking
+      "Female": "藩女王{NAME}" // Rígain buiden Overqueen
+    },
+    "Count": {
+      "Male": "部族王{NAME}", // Rí tuath, King of Clans
+      "Female": "部族女王{NAME}" // Rígain tuath, Queen of Clans
+    },
+    "Baron": {
+      "Male": "モーマ―゠{NAME}",
+      "Female": "バンティアルナ゠{NAME}"
+    },
+    "Noble": {
+      "Male": "ドゥワニワサル゠{NAME}", // Duniwassal
+      "Female": "ベヌワサル゠{NAME}"
+    }
+  },
+  // mixture of the Middle Turkish dynasties, not Mongolian
+  // mainly Gokturk
+  // useful article: 10.26650/TUDED424587
+  // https://tr.wikipedia.org/wiki/G%C3%B6kt%C3%BCrk_Ka%C4%9Fanl%C4%B1%C4%9F%C4%B1#Devlet_te%C5%9Fkilat%C4%B1
+  "khuzait": {
+    "King": {
+      "Male": "{NAME}゠ハン", // TODO
+      "Female": "{NAME}゠ハヌム"
+    },
+    "Duke": {
+      "Male": "{NAME}゠アタベグ", // Yabghu のほうがいい?
+      "Female": "{NAME}゠アネベグム" //造語
+    },
+    "Count": {
+      "Male": "{NAME}゠シャダピットベグ", // TODO
+      "Female": "{NAME}゠シャダピットベグム" //造語
+    },
+    "Baron": {
+      "Male": "{NAME}゠ベグ",
+      "Female": "{NAME}゠ベグム"
+    },
+    "Noble": {
+      "Male": "{NAME}゠バハトゥル",
+      "Female": "{NAME}゠ベヒ" // TODO
+    }
+  },
+  // Arabic
+  "aserai": {
+    "King": {
+      "Male": "スルタン゠{NAME}",
+      "Female": "スルタナ゠{NAME}"
+    },
+    "Duke": {
+      "Male": "アミールアルウマラ゠{NAME}",
+      "Female": "アミーラアルウマラ゠{NAME}"
+    },
+    "Count": {
+      "Male": "アミールカビール゠{NAME}",
+      "Female": "アミーラカビール゠{NAME}"
+    },
+    "Baron": {
+      "Male": "アミール゠{NAME}",
+      "Female": "アミーラ゠{NAME}"
+    },
+    "Noble": {
+      "Male": "ライス゠{NAME}",
+      "Female": "ナビラ゠{NAME}"
+    }
+  },
+  "huaxia":
+  {
+      "King": {
+          "Male": "皇帝{CLAN}{NAME}",
+          "Female": "女皇{CLAN}{NAME}"
+        },
+        "Duke": { 
+          "Male": "{CLAN}郡王{NAME}",
+          "Female": "{CLAN}女郡王{NAME}"
+        },
+        "Count": {
+          "Male": "{CLAN}國公{NAME}",
+          "Female": "{CLAN}女國公{NAME}"
+        },
+        "Baron": {
+          "Male": "{CLAN}郡公{NAME}",
+          "Female": "女郡公{CLAN}{NAME}"
+        },
+        "Noble": {
+          "Male": "{CLAN}爵士{NAME}",
+          "Female": "{CLAN}夫人{NAME}"
+        }
+  }
+}
