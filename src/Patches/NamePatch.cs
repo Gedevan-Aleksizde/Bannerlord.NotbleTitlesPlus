@@ -1,10 +1,7 @@
 ﻿using HarmonyLib;
-using System;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Conversation;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
-using TaleWorlds.Core;
-using TaleWorlds.Library;
 using TaleWorlds.Localization;
 
 namespace NobleTitlesPlus.Patches
@@ -43,4 +40,14 @@ namespace NobleTitlesPlus.Patches
         }
     }
     // TODO: Is Patching GameTexts more clever? 
+    [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.EncyclopediaRulerTitle), MethodType.Getter)]
+    internal class KingdomRulerTitlePatchNotUniformized
+    {
+        [HarmonyPostfix]
+        private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
+        {
+            __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture).MaleFormat;
+        }
+    }
+    
 }

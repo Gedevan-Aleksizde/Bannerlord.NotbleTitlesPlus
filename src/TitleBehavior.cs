@@ -25,7 +25,7 @@ namespace NobleTitlesPlus
             CampaignEvents.OnBeforeSaveEvent.AddNonSerializedListener(this, () =>UpdateArmyNames());
             CampaignEvents.DailyTickEvent.AddNonSerializedListener(this, OnDailyTick);
             CampaignEvents.OnSaveOverEvent.AddNonSerializedListener(this, (a, b) => this.UpdateArmyNames());
-            CampaignEvents.OnGameLoadFinishedEvent.AddNonSerializedListener(this, () => UpdateArmyNames());            
+            CampaignEvents.OnGameLoadFinishedEvent.AddNonSerializedListener(this, () => UpdateArmyNames());          
             CampaignEvents.OnNewGameCreatedEvent.AddNonSerializedListener(this, new Action<CampaignGameStarter>(OnNewGameCreated));
             CampaignEvents.OnGameLoadedEvent.AddNonSerializedListener(this, new Action<CampaignGameStarter>(OnGameLoaded));
             CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, new Action<CampaignGameStarter>(OnSessionLaunched));
@@ -67,7 +67,7 @@ namespace NobleTitlesPlus
     }
     class Nomenclatura
     {
-        private readonly TitleDb titleDb = new();
+        public readonly TitleDb titleDb = new();
         // public Dictionary<Hero, TextObject> NameTitle { get; private set; } = new();
         public Dictionary<Hero, TitleRank> HeroRank { get; private set; } = new();
         public Nomenclatura(bool update = false)
