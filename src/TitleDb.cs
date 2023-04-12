@@ -1,18 +1,11 @@
 ﻿using System;
-// using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
-// using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using Newtonsoft.Json;
-// using StoryMode.GauntletUI.Tutorial;
 using TaleWorlds.CampaignSystem;
-// using TaleWorlds.CampaignSystem.Extensions;
-// using TaleWorlds.CampaignSystem.SceneInformationPopupTypes;
-// using TaleWorlds.GauntletUI;
 using TaleWorlds.Library;
 using TaleWorlds.Localization;
-// using static TaleWorlds.CampaignSystem.CharacterDevelopment.DefaultPerks;
 
 namespace NobleTitlesPlus
 {
@@ -47,7 +40,7 @@ namespace NobleTitlesPlus
                 return rank switch
                 {
                     TitleRank.King => isFemale ? noCulture.King.FemaleFormat : noCulture.King.MaleFormat,
-                    TitleRank.Duke => isFemale ? noCulture.Duke.FemaleFormat : noCulture.King.MaleFormat,
+                    TitleRank.Duke => isFemale ? noCulture.Duke.FemaleFormat : noCulture.Duke.MaleFormat,
                     TitleRank.Count => isFemale ? noCulture.Count.FemaleFormat : noCulture.Count.MaleFormat,
                     TitleRank.Baron => isFemale ? noCulture.Baron.FemaleFormat : noCulture.Baron.MaleFormat,
                     TitleRank.Noble => isFemale ? noCulture.Noble.FemaleFormat : noCulture.Noble.MaleFormat,
@@ -86,39 +79,12 @@ namespace NobleTitlesPlus
             foreach (KeyValuePair<string, CultureEntryJson> i in this.cultureMap)
             {
                 (string cul, CultureEntryJson entry) = (i.Key, i.Value);
-
-                /*if (entry.King is null || entry.Duke is null || entry.Count is null || entry.Baron is null || entry.Noble is null)
-                    throw new BadTitleDatabaseException($"All title types must be defined for culture '{cul}'!");*/
-                /*if (string.IsNullOrWhiteSpace(entry.King.Male) || string.IsNullOrWhiteSpace(entry.Duke.Male) ||
-                    string.IsNullOrWhiteSpace(entry.Count.Male) || string.IsNullOrWhiteSpace(entry.Baron.Male))
-                    throw new BadTitleDatabaseException($"Missing at least one male variant of a title type for culture '{cul}'");*/
                 if (cul == "default")
                 {
                     noCulture = entry;
                 }
             }
         }
-        /*internal void Serialize()
-        {
-            // Undo our baked-in trailing space
-            foreach (CultureEntry e in this.cultureMap.Values)
-            {
-                e.King.Male = RmEndChar(e.King.Male);
-                e.King.Female = RmEndChar(e.King.Female);
-                e.Duke.Male = RmEndChar(e.Duke.Male);
-                e.Duke.Female = RmEndChar(e.Duke.Female);
-                e.Count.Male = RmEndChar(e.Count.Male);
-                e.Count.Female = RmEndChar(e.Count.Female);
-                e.Baron.Male = RmEndChar(e.Baron.Male);
-                e.Baron.Female = RmEndChar(e.Baron.Female);
-            }
-
-            File.WriteAllText(this.PathTitles, JsonConvert.SerializeObject(this.cultureMap, Formatting.Indented));
-        }*/
-        // REFACTORING NEEDED!!!
-
-        // private string StripTitlePrefix(string s, string prefix) => s.StartsWith(prefix) ? s.Remove(0, prefix.Length) : s;
-        
         public class BadTitleDatabaseException : Exception
         {
             public BadTitleDatabaseException(string message) : base(message) { }
