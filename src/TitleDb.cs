@@ -11,19 +11,19 @@ namespace NobleTitlesPlus
 {
     class TitleDb
     {
-        internal EntryJson GetKingTitle(CultureObject culture) =>
-            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? noCulture.King : culEntry.King;
-        internal EntryJson GetDukeTitle(CultureObject culture) =>
-            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? noCulture.Duke : culEntry.Duke;
-        internal EntryJson GetCountTitle(CultureObject culture) =>
-            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? noCulture.Count : culEntry.Count;
-        internal EntryJson GetBaronTitle(CultureObject culture) =>
-            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? noCulture.Baron : culEntry.Baron;
-        internal EntryJson GetLesserNobleTitle(CultureObject culture) =>
-            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? noCulture.Noble : culEntry.Noble;
-        internal TextObject GetTitle(bool isFemale, string cultureId, TitleRank rank)
+        internal EntryJson GetKingTitle(CultureObject culture, Category category) =>
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? (category == Category.Default? defaultCulture: defaultMinorFaction).King : culEntry.King;
+        internal EntryJson GetDukeTitle(CultureObject culture, Category category) =>
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? (category == Category.Default ? defaultCulture : defaultMinorFaction).Duke : culEntry.Duke;
+        internal EntryJson GetCountTitle(CultureObject culture, Category category) =>
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? (category == Category.Default ? defaultCulture : defaultMinorFaction).Count : culEntry.Count;
+        internal EntryJson GetBaronTitle(CultureObject culture, Category category) =>
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? (category == Category.Default ? defaultCulture : defaultMinorFaction).Baron : culEntry.Baron;
+        internal EntryJson GetLesserNobleTitle(CultureObject culture, Category category) =>
+            culture is null || !this.cultureMap.TryGetValue(culture.StringId, out CultureEntryJson? culEntry) ? (category == Category.Default ? defaultCulture : defaultMinorFaction).Noble : culEntry.Noble;
+        internal TextObject GetTitle(bool isFemale, string titleSetId, TitleRank rank, Category category)
         {
-            if (this.cultureMap.TryGetValue(cultureId, out CultureEntryJson cul))
+            if (this.cultureMap.TryGetValue(titleSetId, out CultureEntryJson cul))
             {
                 return rank switch
                 {
@@ -35,15 +35,27 @@ namespace NobleTitlesPlus
                     _ => new TextObject("{NAME}"),
                 };
             }
+            else if(category == Category.MinorFaction)
+            {
+                return rank switch
+                {
+                    TitleRank.King => isFemale ? defaultMinorFaction.King.FemaleFormat : defaultMinorFaction.King.MaleFormat,
+                    TitleRank.Duke => isFemale ? defaultMinorFaction.Duke.FemaleFormat : defaultMinorFaction.Duke.MaleFormat,
+                    TitleRank.Count => isFemale ? defaultMinorFaction.Count.FemaleFormat : defaultMinorFaction.Count.MaleFormat,
+                    TitleRank.Baron => isFemale ? defaultMinorFaction.Baron.FemaleFormat : defaultMinorFaction.Baron.MaleFormat,
+                    TitleRank.Noble => isFemale ? defaultMinorFaction.Noble.FemaleFormat : defaultMinorFaction.Noble.MaleFormat,
+                    _ => new TextObject("{NAME}"),
+                };
+            }
             else
             {
                 return rank switch
                 {
-                    TitleRank.King => isFemale ? noCulture.King.FemaleFormat : noCulture.King.MaleFormat,
-                    TitleRank.Duke => isFemale ? noCulture.Duke.FemaleFormat : noCulture.Duke.MaleFormat,
-                    TitleRank.Count => isFemale ? noCulture.Count.FemaleFormat : noCulture.Count.MaleFormat,
-                    TitleRank.Baron => isFemale ? noCulture.Baron.FemaleFormat : noCulture.Baron.MaleFormat,
-                    TitleRank.Noble => isFemale ? noCulture.Noble.FemaleFormat : noCulture.Noble.MaleFormat,
+                    TitleRank.King => isFemale ? defaultCulture.King.FemaleFormat : defaultCulture.King.MaleFormat,
+                    TitleRank.Duke => isFemale ? defaultCulture.Duke.FemaleFormat : defaultCulture.Duke.MaleFormat,
+                    TitleRank.Count => isFemale ? defaultCulture.Count.FemaleFormat : defaultCulture.Count.MaleFormat,
+                    TitleRank.Baron => isFemale ? defaultCulture.Baron.FemaleFormat : defaultCulture.Baron.MaleFormat,
+                    TitleRank.Noble => isFemale ? defaultCulture.Noble.FemaleFormat : defaultCulture.Noble.MaleFormat,
                     _ => new TextObject("{NAME}"),
                 };
             }
@@ -66,14 +78,14 @@ namespace NobleTitlesPlus
             if (cultureMap.Count == 0)
             {
                 Util.Log.Print($">> WARNING: Title database is empty. The built-in default setting will be applied.");
-                this.cultureMap["default"] = noCulture;
+                this.cultureMap["default"] = defaultCulture;
                 // throw new BadTitleDatabaseException("Title database is empty!");
             }
             // Must have a fallback culture entry.
             if (!this.cultureMap.ContainsKey("default"))
             {
                 Util.Log.Print($">> WARNING: Title database doesn't contain a fallback culture entry keyed by \"default\". The built-in default setting will be applied.");
-                this.cultureMap["default"] = noCulture;
+                this.cultureMap["default"] = defaultCulture;
                 // throw new BadTitleDatabaseException("Title database must contain a fallback culture entry keyed by \"default\"!");
             }
             foreach (KeyValuePair<string, CultureEntryJson> i in this.cultureMap)
@@ -81,7 +93,11 @@ namespace NobleTitlesPlus
                 (string cul, CultureEntryJson entry) = (i.Key, i.Value);
                 if (cul == "default")
                 {
-                    noCulture = entry;
+                    defaultCulture = entry;
+                }
+                if (cul == "default_minor")
+                {
+                    defaultMinorFaction = entry;
                 }
             }
         }
@@ -119,12 +135,19 @@ namespace NobleTitlesPlus
                 public int MaxFiefNames { get; private set; } = 3;
             }
         }
-        private static CultureEntryJson noCulture = new(
+        private static CultureEntryJson defaultCulture = new(
                 new("{=NobleTitlePlus.defaultKing}King {NAME}", "{=NobleTitlePlus.defaultQueen}Queen {NAME}"),
                 new("{=NobleTitlePlus.defaultDuke}Duke {NAME}", "{=NobleTitlePlus.defaultDuchess}Duchess {NAME}"),
                 new("{=NobleTitlePlus.defaultCount}Count {NAME}", "{=NobleTitlePlus.defaultCountess}Countess {NAME}"),
                 new("{=NobleTitlePlus.defaultBaron}Baron {NAME}", "{=NobleTitlePlus.defaultBaroness}Baroness {NAME}"),
                 new("{=NobleTitlePlus.defaultSir}{NAME}", "{=NobleTitlePlus.defaultDame}{NAME}")
+            );
+        private static CultureEntryJson defaultMinorFaction= new(
+                new("{=NobleTitlePlus.defaultMinorLeader}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorLeader.Female}{NAME} of {CLAN}"),
+                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}"),
+                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}"),
+                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}"),
+                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}")
             );
         [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
         public class CultureEntryJson
@@ -200,5 +223,11 @@ namespace NobleTitlesPlus
         Count,
         Baron,
         Noble
+    }
+    public enum Category
+    {
+        Default,
+        MinorFaction,
+        Citizen
     }
 }

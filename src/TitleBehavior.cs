@@ -70,9 +70,9 @@ namespace NobleTitlesPlus
         {
             if(update) this.UpdateAll();
         }
-        public TextObject GetTitle(bool isFemale, string cultureId, TitleRank rank)
+        public TextObject GetTitle(bool isFemale, string titleSetId, TitleRank rank, Category category = Category.Default)
         {
-            return this.titleDb.GetTitle(isFemale, cultureId, rank);
+            return this.titleDb.GetTitle(isFemale, titleSetId, rank, category);
         }
         public void UpdateAll()
         {
@@ -80,17 +80,11 @@ namespace NobleTitlesPlus
             {
                 this.AddTitlesToKingdomHeroes(k);
             }
+            this.AddTitlesToMinorFaction();
             this.RemoveTitleFromDead();
         }
         private void RemoveTitleFromDead()
         {
-            /*foreach(Hero h in this.NameTitle.Keys.ToArray())
-            {
-                if (h.IsDead)
-                {
-                    this.NameTitle.Remove(h);
-                }
-            }*/
             foreach(Hero h in this.HeroRank.Keys.ToArray())
             {
                 if (h.IsDead)
@@ -178,6 +172,27 @@ namespace NobleTitlesPlus
                 tr.Add(this.GetHeroTrace(kingdom.Leader, TitleRank.King));
             }
             Util.Log.Print(tr);
+        }
+        private void AddTitlesToMinorFaction()
+        {
+            foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsClanTypeMercenary && c.IsMinorFaction))
+            {
+                List<string> tr = new() { $"Adding minor faction titles to {c.Name}..." };
+                foreach (Hero h in c.Heroes)
+                {
+                    if (h.IsFactionLeader)
+                    {
+                        this.HeroRank[h] = TitleRank.King;
+                        tr.Add(this.GetHeroTrace(h, TitleRank.King));
+                    }
+                    else
+                    {
+                        this.HeroRank[h] = TitleRank.Noble;
+                        tr.Add(this.GetHeroTrace(h, TitleRank.Noble));
+                    }
+                }
+                Util.Log.Print(tr);
+            }
         }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);
         private string GetHeroTrace(Hero h, TitleRank rank) =>

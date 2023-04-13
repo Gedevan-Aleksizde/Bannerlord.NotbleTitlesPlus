@@ -12,14 +12,15 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void AppendTitles(Hero __instance, ref TextObject __result)
         {
-            /*if(TitleBehavior.nomenclatura.NameTitle.TryGetValue(__instance, out TextObject titleFormat) && __instance.IsAlive)
-            {
-                __result = titleFormat.SetTextVariable("NAME", __instance.FirstName);
-            }*/
             if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive) 
             {
                 // TODO: More macros
-                __result = TitleBehavior.nomenclatura.GetTitle(__instance.IsFemale, __instance.Culture.StringId, rank).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
+                __result = TitleBehavior.nomenclatura.GetTitle(
+                    __instance.IsFemale,
+                    __instance.IsMinorFactionHero ? __instance.Clan.StringId: __instance.Culture.StringId,
+                    rank,
+                    __instance.IsMinorFactionHero ? Category.MinorFaction: Category.Default
+                    ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
             }
         }
     }
@@ -45,7 +46,7 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
         {
-            __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture).MaleFormat;
+            __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
     
