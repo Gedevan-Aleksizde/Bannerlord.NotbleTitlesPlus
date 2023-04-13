@@ -95,7 +95,7 @@ namespace NobleTitlesPlus
         }
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
-            List<string> tr = new() { $"Adding noble titles to {kingdom.Name}..." };
+            List<string> tr = new() { $"Adding noble titles to {kingdom.Name} ({kingdom.Culture.StringId})..." };
             // Common Nobles, not a Clan Leader
             List<Hero> commonNobles = kingdom.Clans
                 .Where(c =>
@@ -177,7 +177,7 @@ namespace NobleTitlesPlus
         {
             foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsClanTypeMercenary && c.IsMinorFaction))
             {
-                List<string> tr = new() { $"Adding minor faction titles to {c.Name}..." };
+                List<string> tr = new() { $"Adding minor faction titles to {c.Name} ({c.StringId})..." };
                 foreach (Hero h in c.Heroes)
                 {
                     if (h.IsFactionLeader)
