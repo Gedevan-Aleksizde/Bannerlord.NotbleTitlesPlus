@@ -1,20 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <base>
-  <tags>
-    <tag language="Japanese"/>
-  </tags>
-  <strings>
-    <string id="NobleTitlesPlus.Sys001" text="Noble Tile Plus が読み込まれました"/>
-    <string id="NobleTitlesPlus.Sys002" text="Noble Title Plus の読み込み中にエラーが発生しました! modは無効です!"/>
-    <string id="NobleTitlesPlus.defaultKing" text="国王{NAME}"/>
-    <string id="NobleTitlesPlus.defaultQueen" text="女王{NAME}"/>
-    <string id="NobleTitlesPlus.defaultDuke" text="{NAME}公爵"/>
-    <string id="NobleTitlesPlus.defaultDuchess" text="{NAME}女公爵"/>
-    <string id="NobleTitlesPlus.defaultCount" text="{NAME}伯爵"/>
-    <string id="NobleTitlesPlus.defaultCountess" text="{NAME}女伯爵"/>
-    <string id="NobleTitlesPlus.defaultBaron" text="{NAME}男爵"/>
-    <string id="NobleTitlesPlus.defaultBaroness" text="{NAME}女男爵"/>
-    <string id="NobleTitlesPlus.defaultSir" text="{NAME}"/>
-    <string id="NobleTitlesPlus.defaultDame" text="{NAME}"/>
-   </strings>
+ <tags>
+  <tag language="Japanese"/>
+ </tags>
+ <strings>
+  <string id="NTP.Sys001" text="Noble Titles Plus"/>
+  <string id="NTP.Sys002" text="{DisplayName}が読み込まれました"/>
+  <string id="NTP.Sys003" text="{DisplayName}の読み込み中にエラーが発生しました。Modは無効です!"/>
+  <string id="NTP.OptH000" text="全般"/>
+  <string id="NTP.OptH001" text="領地表示のフォーマット"/>
+  <string id="NTP.OptH00D" text="デフォルトの称号"/>
+  <string id="NTP.OptH00A" text="Aserai Titles"/>
+  <string id="NTP.OptH00B" text="Battanian Titles"/>
+  <string id="NTP.OptH00E" text="Imperial Titles"/>
+  <string id="NTP.OptH00K" text="Khuzait Titles"/>
+  <string id="NTP.OptH00S" text="Sturgian Titles"/>
+  <string id="NTP.OptH00V" text="Vlandian Titles"/>
+  <string id="NTP.Opt000" text="戦場の霧"/>
+  <string id="NTP.Opt000Desc" text="称号にも「戦場の霧」を適用します。まだ会っていないヒーローの称号が表示されません。"/>
+  <string id="NTP.Opt001" text="単語区切り"/>
+  <string id="NTP.Opt001Desc" text="領地名表示に単語区切り(タギング)をします。基本的にヨーロッパ言語を想定しているので日本語では不要です。"/>
+  <string id="NTP.Opt002" text="領地名の区切り文字"/>
+  <string id="NTP.Opt002Desc" text="Separator for Fief Names."/>
+  <string id="NTP.Opt003" text="領地名の最後の区切り文字"/>
+  <string id="NTP.Opt003Desc" text="Separator for the Last Fief Name."/>
+  <string id="NTP.Opt004" text="領地名の最大表示数"/>
+  <string id="NTP.Opt004Desc" text="Separator for the Last Fief Name."/>
+  <string id="NTP.OptTitleKing" text="王の称号"/>
+  <string id="NTP.OptTitleQueen" text="女王の称号"/>
+  <string id="NTP.OptTitleDuke" text="公爵の称号"/>
+  <string id="NTP.OptTitleDuchess" text="女公爵の称号"/>
+  <string id="NTP.OptTitleCount" text="伯爵の称号"/>
+  <string id="NTP.OptTitleCountess" text="女伯爵の称号"/>
+  <string id="NTP.OptTitleBaron" text="男爵の称号"/>
+  <string id="NTP.OptTitleBaroness" text="女男爵の称号"/>
+  <string id="NTP.OptTitleNobleman" text="男性貴族の称号"/>
+  <string id="NTP.OptTitleNoblewoman" text="女性貴族の称号"/>
+  <string id="NTP.OptTitleMinorLeaderM" text="小規模勢力の男性リーダーの称号"/>
+  <string id="NTP.OptTitleMinorLeaderF" text="小規模勢力の女性リーダーの称号"/>
+  <string id="NTP.OptTitleMinorMemberM" text="小規模勢力の男性メンバーの称号"/>
+  <string id="NTP.OptTitleMinorMemberF" text="小規模勢力の女性メンバーの称号"/>
+  <string id="NobleTitlesPlus.defaultKing" text="King {NAME}"/>
+  <string id="NobleTitlesPlus.defaultQueen" text="Queen {NAME}"/>  
+  <string id="NobleTitlesPlus.defaultDuke" text="Duke {NAME}"/>
+  <string id="NobleTitlesPlus.defaultDuchess" text="Duchess {NAME}"/>
+  <string id="NobleTitlesPlus.defaultCount" text="Count {NAME}"/>
+  <string id="NobleTitlesPlus.defaultCountess" text="Countess {NAME}"/>
+  <string id="NobleTitlesPlus.defaultBaron" text="Baron {NAME}"/>
+  <string id="NobleTitlesPlus.defaultBaroness" text="Baroness {NAME}"/>
+  <string id="NobleTitlesPlus.defaultSir" text="{NAME}"/>
+  <string id="NobleTitlesPlus.defaultDame" text="{NAME}"/>
+ </strings>
 </base>
