@@ -4,8 +4,42 @@
   <tag language="English"/>
  </tags>
  <strings>
-  <string id="NobleTitlesPlus.Sys001" text="Loaded Noble Titles Plus"/>
-  <string id="NobleTitlesPlus.Sys002" text="Error loading Noble Titles Plus: Disabled!"/>
+  <string id="NTP.Sys001" text="Noble Titles Plus"/>
+  <string id="NTP.Sys002" text="{DisplayName} Loaded"/>
+  <string id="NTP.Sys003" text="Error loading {DisplayName}: Disabled!"/>
+  <string id="NTP.OptH000" text="General"/>
+  <string id="NTP.OptH001" text="Fief Name Format"/>
+  <string id="NTP.OptH00D" text="Default Titles"/>
+  <string id="NTP.OptH00A" text="Aserai Titles"/>
+  <string id="NTP.OptH00B" text="Battanian Titles"/>
+  <string id="NTP.OptH00E" text="Imperial Titles"/>
+  <string id="NTP.OptH00K" text="Khuzait Titles"/>
+  <string id="NTP.OptH00S" text="Sturgian Titles"/>
+  <string id="NTP.OptH00V" text="Vlandian Titles"/>
+  <string id="NTP.Opt000" text="Fog of War"/>
+  <string id="NTP.Opt000Desc" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
+  <string id="NTP.Opt001" text="Tagging"/>
+  <string id="NTP.Opt001Desc" text="Tagging fief names. Basically True is recommended if you are European langauge user."/>
+  <string id="NTP.Opt002" text="Fief Name Separator"/>
+  <string id="NTP.Opt002Desc" text="Separator for Fief Names."/>
+  <string id="NTP.Opt003" text="Fief Name Separator Last"/>
+  <string id="NTP.Opt003Desc" text="Separator for the Last Fief Name."/>
+  <string id="NTP.Opt004" text="Max Number of Fief Names"/>
+  <string id="NTP.Opt004Desc" text="Separator for the Last Fief Name."/>
+  <string id="NTP.OptTitleKing" text="King Title"/>
+  <string id="NTP.OptTitleQueen" text="Queen Title"/>
+  <string id="NTP.OptTitleDuke" text="Duke Title"/>
+  <string id="NTP.OptTitleDuchess" text="Duchess Title"/>
+  <string id="NTP.OptTitleCount" text="Count Title"/>
+  <string id="NTP.OptTitleCountess" text="Countess Title"/>
+  <string id="NTP.OptTitleBaron" text="Baron Title"/>
+  <string id="NTP.OptTitleBaroness" text="Baroness Title"/>
+  <string id="NTP.OptTitleNobleman" text="Nobleman Title"/>
+  <string id="NTP.OptTitleNoblewoman" text="Noblewoman Title"/>
+  <string id="NTP.OptTitleMinorLeaderM" text="Minor Faction Male Leader Title"/>
+  <string id="NTP.OptTitleMinorLeaderF" text="Minor Faction Female Leader Title"/>
+  <string id="NTP.OptTitleMinorMemberM" text="Minor Faction Male Member Title"/>
+  <string id="NTP.OptTitleMinorMemberF" text="Minor Faction Female Member Title"/>
   <string id="NobleTitlesPlus.defaultKing" text="King {NAME}"/>
   <string id="NobleTitlesPlus.defaultQueen" text="Queen {NAME}"/>
   <string id="NobleTitlesPlus.defaultDuke" text="Duke {NAME}"/>
