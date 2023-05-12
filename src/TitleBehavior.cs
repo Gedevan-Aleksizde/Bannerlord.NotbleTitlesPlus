@@ -141,6 +141,11 @@ namespace NobleTitlesPlus
                     ++nBarons;
                     this.HeroRank[h] = TitleRank.Baron;
                     tr.Add(this.GetHeroTrace(h, TitleRank.Baron));
+                    if (this.titleDb.settings.General.SpouseTitle && h.Spouse != null && h.Spouse.IsAlive)
+                    {
+                        this.HeroRank[h.Spouse] = TitleRank.Baron;
+                        tr.Add(this.GetHeroTrace(h.Spouse, TitleRank.Baron));
+                    }
                 }
                 else // They must be a count or duke. We're done here.
                     break;
@@ -157,12 +162,22 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[vassals[i]] = TitleRank.Count;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Count));
+                if (this.titleDb.settings.General.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
+                {
+                    this.HeroRank[vassals[i].Spouse] = TitleRank.Count;
+                    tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Count));
+                }
             }
             // Dukes:
             for (int i = maxDukeIdx; i > maxCountIdx; --i)
             {
                 this.HeroRank[vassals[i]] = TitleRank.Duke;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Duke));
+                if (this.titleDb.settings.General.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
+                {
+                    this.HeroRank[vassals[i].Spouse] = TitleRank.Duke;
+                    tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Duke));
+                }
             }
             // Finally, the most obvious, the ruler (King) title:
             if (kingdom.Leader != null &&
@@ -170,6 +185,11 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[kingdom.Leader] = TitleRank.King;
                 tr.Add(this.GetHeroTrace(kingdom.Leader, TitleRank.King));
+                if (kingdom.Leader.Spouse != null && kingdom.Leader.Spouse.IsAlive)
+                {
+                    this.HeroRank[kingdom.Leader.Spouse] = TitleRank.King;
+                    tr.Add(this.GetHeroTrace(kingdom.Leader.Spouse, TitleRank.King));
+                }
             }
             Util.Log.Print(tr);
         }
