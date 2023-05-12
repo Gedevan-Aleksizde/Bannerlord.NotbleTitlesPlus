@@ -15,12 +15,12 @@ namespace NobleTitlesPlus.Patches
             if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive) 
             {
                 // TODO: More macros
-                __result = TitleBehavior.nomenclatura.GetTitle(
+                __result = new TextObject(TitleBehavior.nomenclatura.GetTitle(
                     __instance.IsFemale,
                     __instance.IsMinorFactionHero ? __instance.Clan.StringId: __instance.Clan.Kingdom.Culture.StringId,
                     rank,
                     __instance.IsMinorFactionHero ? Category.MinorFaction: Category.Default
-                    ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
+                    ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name).ToString());
             }
         }
     }
