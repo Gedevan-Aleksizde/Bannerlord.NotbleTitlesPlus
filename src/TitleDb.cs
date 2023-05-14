@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
+// using NobleTitlesPlus.Settings;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Library;
 using TaleWorlds.Localization;
@@ -62,6 +63,7 @@ namespace NobleTitlesPlus
         }
         internal TitleDb()
         {
+            // Util.Log.Print($"MCM test = {NTPSettings.Instance.DefaultNoblewoman}");
             // TODO: avoid abuse of execption. every title need to have default value.
             this.settings = JsonConvert.DeserializeObject<TitleGlobalSettingsJson>(
                 File.ReadAllText($"{BasePath.Name}/Modules/{SubModule.modFolderName}/settings.json"),
@@ -111,30 +113,7 @@ namespace NobleTitlesPlus
         public TitleGlobalSettingsJson settings;
         // culture StringId => CultureEntry (contains bulk of title information, only further split by gender)
         protected Dictionary<string, CultureEntryJson> cultureMap;
-        [JsonObject("Settings")]
-        public class TitleGlobalSettingsJson
-        {
-            [JsonProperty("General")]
-            public GeneralSettings General { get; private set; } = new GeneralSettings();
-            [JsonProperty("Format")]
-            public FormatSettings Format { get; private set; } = new FormatSettings();
-            public class GeneralSettings
-            {
-                [JsonProperty("FogOfWar")]
-                public bool FogOfWar { get; private set; }
-            }
-            public class FormatSettings
-            {
-                [JsonProperty("FiefNameSeparator")]
-                public string FiefNameSepratorComma { get; private set; } = ",";
-                [JsonProperty("FiefNameSeparatorLast")]
-                public string FiefNameSeparatorAnd { get; private set; } = "and";
-                [JsonProperty("Tagging")]
-                public bool Tagging { get; private set; } = true;
-                [JsonProperty("MaxFiefNames")]
-                public int MaxFiefNames { get; private set; } = 3;
-            }
-        }
+        
         private static CultureEntryJson defaultCulture = new(
                 new("{=NobleTitlePlus.defaultKing}King {NAME}", "{=NobleTitlePlus.defaultQueen}Queen {NAME}"),
                 new("{=NobleTitlePlus.defaultDuke}Duke {NAME}", "{=NobleTitlePlus.defaultDuchess}Duchess {NAME}"),
