@@ -6,6 +6,8 @@ using HarmonyLib;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.Party;
+using TaleWorlds.CampaignSystem.Settlements;
+using TaleWorlds.CampaignSystem.ViewModelCollection.Encyclopedia.Pages;
 using TaleWorlds.Localization;
 
 namespace NobleTitlesPlus
@@ -66,6 +68,7 @@ namespace NobleTitlesPlus
         public readonly TitleDb titleDb = new();
         // public Dictionary<Hero, TextObject> NameTitle { get; private set; } = new();
         public Dictionary<Hero, TitleRank> HeroRank { get; private set; } = new();
+        public Dictionary<Clan, TextObject> FiefLists { get; private set; } = new();
         public Nomenclatura(bool update = false)
         {
             if(update) this.UpdateAll();
@@ -80,6 +83,10 @@ namespace NobleTitlesPlus
             {
                 this.AddTitlesToKingdomHeroes(k);
             }
+            foreach(Clan c in Clan.All)
+            {
+                this.UpdateFiefList(c);
+            }
             this.AddTitlesToMinorFaction();
             this.RemoveTitleFromDead();
         }
@@ -92,6 +99,14 @@ namespace NobleTitlesPlus
                     this.HeroRank.Remove(h);
                 }
             }
+        }
+        public void UpdateFiefList(Clan clan)
+        {
+            List<string> fiefList = clan.Fiefs.Take(this.titleDb.settings.Format.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
+            this.FiefLists[clan] = new TextObject(fiefList.Count() > 1 ? string.Join(
+                this.titleDb.settings.Format.FiefNameSepratorComma + " ", fiefList.Take(fiefList.Count() - 1),
+                string.Join(" ", new string[] { this.titleDb.settings.Format.FiefNameSeparatorAnd, fiefList.Last() })
+                ) : fiefList.FirstOrDefault());
         }
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {

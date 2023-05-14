@@ -3,6 +3,7 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Conversation;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
 using TaleWorlds.Localization;
+using TaleWorlds.CampaignSystem.ViewModelCollection.Encyclopedia.List;
 
 namespace NobleTitlesPlus.Patches
 {
@@ -14,13 +15,17 @@ namespace NobleTitlesPlus.Patches
         {
             if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive) 
             {
-                // TODO: More macros
-                __result = new TextObject(TitleBehavior.nomenclatura.GetTitle(
+                TextObject title = TitleBehavior.nomenclatura.GetTitle(
                     __instance.IsFemale,
-                    __instance.IsMinorFactionHero ? __instance.Clan.StringId: __instance.Clan.Kingdom.Culture.StringId,
+                    __instance.IsMinorFactionHero ? __instance.Clan.StringId : __instance.Clan.Kingdom.Culture.StringId,
                     rank,
-                    __instance.IsMinorFactionHero ? Category.MinorFaction: Category.Default
-                    ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name).ToString());
+                    __instance.IsMinorFactionHero ? Category.MinorFaction : Category.Default
+                    ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
+                if (TitleBehavior.nomenclatura.FiefLists.TryGetValue(__instance.Clan, out TextObject fiefNames))
+                {
+                    title = title.SetTextVariable("FIEFS", fiefNames);
+                }
+                __result = new TextObject(title.ToString());
             }
         }
     }
@@ -49,5 +54,13 @@ namespace NobleTitlesPlus.Patches
             __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
-    
+    /*[HarmonyPatch(typeof(EncyclopediaListItemVM), nameof(EncyclopediaListItemVM.Name), MethodType.Getter)]
+    internal class EncyclopediaName
+    {
+        [HarmonyPostfix]
+        private static void Rename(string __instance, ref string __result)
+        {
+            Util.Log.Print($"Ency-VM.Name={__result}");
+        }
+    }*/
 }
