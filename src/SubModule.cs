@@ -22,15 +22,12 @@ namespace NobleTitlesPlus
         public static readonly string modFolderName = Directory.GetParent(Assembly.GetExecutingAssembly().Location).Parent.Parent.Name;
         public static readonly string DisplayName = "Noble Titles Plus"; // why we need write again?
         public static readonly string HarmonyDomain = "com.skatagiri.bannerlord" + Name.ToLower();
-
         internal static readonly Color ImportantTextColor = Color.FromUint(0x00F16D26); // orange
-
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
             Util.EnableLog = true; // enable various debug logging
             Util.EnableTracer = false; // enable code event tracing (requires enabled logging)
-
             /*if (!SaveManagerPatch.Apply(new(HarmonyDomain)))
             {
                 Util.Log.Print($"Patch was required! Canceling {DisplayName}...");
