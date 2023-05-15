@@ -152,5 +152,14 @@
       "Male": "{NAME}",
       "Female": "{NAME}"
     }
-  }
+  },
+  "default_minor": {
+    "King": {
+      "Male": "{NAME} of {CLAN}",
+      "Female": "{NAME} of {CLAN}"
+    },
+    "Noble": {
+      "Male": "{NAME} of {CLAN}",
+      "Female": "{NAME} of {CLAN}"
+    }
 }
