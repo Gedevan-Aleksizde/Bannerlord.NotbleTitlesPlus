@@ -150,7 +150,7 @@
       },
       "Count": {
         "Male": "Emir Kabir {Name}", // Greater Emir 
-        "Female": "Emira Kabir {Name}"
+        "Female": "Emira Kabira {Name}"
       },
       "Baron": {
         "Male": "Emir {Name}",
@@ -159,6 +159,26 @@
       "Noble": {
         "Male": "Sharif {NAME}",
         "Female": "Nabila {NAME}"
+      }
+    },
+    "default_minor": {
+      "King": {
+        "Male": "{NAME} of {CLAN}",
+        "Female": "{NAME} of {CLAN}"
+      },
+      "Noble": {
+        "Male": "{NAME} of {CLAN}",
+        "Female": "{NAME} of {CLAN}"
+      }
+    },
+    "legion_of_the_betrayed": {
+      "King": {
+        "Male": "Regate {NAME}",
+        "Female": "Regate {NAME}"
+      },
+      "Noble": {
+        "Male": "Centurion {NAME}",
+        "Female": "Centurion {NAME}"
       }
     }
   }
