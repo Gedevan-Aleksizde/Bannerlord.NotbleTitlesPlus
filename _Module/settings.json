@@ -1,13 +1,12 @@
 {
     "General": {
-        //true: hide title if you have never seen the hero
-        "FogOfWar": true
+        "FogOfWar": true,
+        "Encyclopedia": false // now working now
     },
     "Format": {
-        // not working now
         "Tagging": true,
         "FiefNameSeparator": ",",
         "FiefNameSeparatorLast": "and",
-        "MaxFiefNames": 3
+        "MaxFiefNames": 1
     }
 }
