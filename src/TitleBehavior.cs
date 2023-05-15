@@ -7,7 +7,7 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.CampaignSystem.Settlements;
-using TaleWorlds.CampaignSystem.ViewModelCollection.Encyclopedia.Pages;
+using TaleWorlds.Library;
 using TaleWorlds.Localization;
 
 namespace NobleTitlesPlus
@@ -103,10 +103,18 @@ namespace NobleTitlesPlus
         public void UpdateFiefList(Clan clan)
         {
             List<string> fiefList = clan.Fiefs.Take(this.titleDb.settings.Format.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
-            this.FiefLists[clan] = new TextObject(fiefList.Count() > 1 ? string.Join(
-                this.titleDb.settings.Format.FiefNameSepratorComma + " ", fiefList.Take(fiefList.Count() - 1),
-                string.Join(" ", new string[] { this.titleDb.settings.Format.FiefNameSeparatorAnd, fiefList.Last() })
-                ) : fiefList.FirstOrDefault());
+            
+            if (fiefList.Count() > 1)
+            {
+                string sep = this.titleDb.settings.Format.FiefNameSepratorComma + " ";
+                string fiefs = string.Join(sep, fiefList.Take(fiefList.Count() - 1).ToArray<string>());
+                string lastElement = string.Join(" ", new string[] { this.titleDb.settings.Format.FiefNameSeparatorAnd, fiefList.Last() });
+                this.FiefLists[clan] = new TextObject(string.Join(" ", new string[] { fiefs, lastElement }));
+            }
+            else
+            {
+                this.FiefLists[clan] = new TextObject(fiefList.FirstOrDefault());
+            }
         }
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
