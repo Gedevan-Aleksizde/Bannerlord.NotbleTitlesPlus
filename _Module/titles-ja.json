@@ -120,15 +120,15 @@
   // https://tr.wikipedia.org/wiki/G%C3%B6kt%C3%BCrk_Ka%C4%9Fanl%C4%B1%C4%9F%C4%B1#Devlet_te%C5%9Fkilat%C4%B1
   "khuzait": {
     "King": {
-      "Male": "{NAME}゠ハン", // TODO
+      "Male": "{NAME}゠ハン",
       "Female": "{NAME}゠ハヌム"
     },
     "Duke": {
-      "Male": "{NAME}゠アタベグ", // Yabghu のほうがいい?
+      "Male": "{NAME}゠アタベグ",
       "Female": "{NAME}゠アネベグム" //造語
     },
     "Count": {
-      "Male": "{NAME}゠シャダピットベグ", // TODO
+      "Male": "{NAME}゠シャダピットベグ",
       "Female": "{NAME}゠シャダピットベグム" //造語
     },
     "Baron": {
@@ -137,7 +137,7 @@
     },
     "Noble": {
       "Male": "{NAME}゠バハトゥル",
-      "Female": "{NAME}゠ベヒ" // TODO
+      "Female": "{NAME}゠ベヒ"
     }
   },
   // Arabic
@@ -152,7 +152,7 @@
     },
     "Count": {
       "Male": "アミールカビール゠{NAME}",
-      "Female": "アミーラカビール゠{NAME}"
+      "Female": "アミーラカビーラ゠{NAME}"
     },
     "Baron": {
       "Male": "アミール゠{NAME}",
@@ -170,20 +170,63 @@
           "Female": "女皇{CLAN}{NAME}"
         },
         "Duke": { 
-          "Male": "{CLAN}郡王{NAME}",
-          "Female": "{CLAN}女郡王{NAME}"
+          "Male": "{FIEFS}郡王{CLAN}{NAME}",
+          "Female": "{FIEFS}女郡王{CLAN}{NAME}"
         },
         "Count": {
-          "Male": "{CLAN}國公{NAME}",
-          "Female": "{CLAN}女國公{NAME}"
+          "Male": "{FIEFS}國公{CLAN}{NAME}",
+          "Female": "{FIEFS}女國公{CLAN}{NAME}"
         },
         "Baron": {
-          "Male": "{CLAN}郡公{NAME}",
-          "Female": "女郡公{CLAN}{NAME}"
+          "Male": "{FIEFS}郡公{CLAN}{NAME}",
+          "Female": "{FIEFS}女郡公{CLAN}{NAME}"
         },
         "Noble": {
-          "Male": "{CLAN}爵士{NAME}",
-          "Female": "{CLAN}夫人{NAME}"
+          "Male": "爵士{CLAN}{NAME}",
+          "Female": "夫人{CLAN}{NAME}"
         }
+  },
+  "tetsojin":
+  {
+      "King": {
+          "Male": "{NAME}゠テンノー",
+          "Female": "{NAME}゠ジョテイ"
+        },
+        "Duke": { 
+          "Male": "総理大臣{CLAN}{NAME}公",
+          "Female": "総理大臣{CLAN}{NAME}公"
+        },
+        "Count": {
+          "Male": "ダイミョ゠{CLAN}{NAME}卿",
+          "Female": "ダイミョ゠{CLAN}{NAME}卿"
+        },
+        "Baron": {
+          "Male": "明主{CLAN}{NAME}卿",
+          "Female": "明主{CLAN}{NAME}卿"
+        },
+        "Noble": {
+          "Male": "{CLAN}{NAME}朝臣",
+          "Female": "{CLAN}{NAME}朝臣"
+        }
+  },
+  "default_minor": {
+    "King": {
+      "Male": "{CLAN}の{NAME}",
+      "Female": "{CLAN}の{NAME}"
+    },
+    "Noble": {
+      "Male": "{CLAN}の{NAME}",
+      "Female": "{CLAN}の{NAME}"
+    }
+  },
+  "legion_of_the_betrayed": {
+    "King": {
+      "Male": "レガートゥス゠{NAME}",
+      "Female": "レガートゥス゠{NAME}"
+    },
+    "Noble": {
+      "Male": "{NAME}百人隊長",
+      "Female": "{NAME}百人隊長"
+    }
   }
 }
