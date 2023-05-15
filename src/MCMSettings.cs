@@ -1,11 +1,11 @@
-﻿using MCM.Abstractions.Base.Global;
+﻿// using MCM.Abstractions.Base.Global;
 using TaleWorlds.Localization;
-using MCM.Abstractions.Attributes.v2;
-using MCM.Abstractions.Attributes;
+// using MCM.Abstractions.Attributes.v2;
+// using MCM.Abstractions.Attributes;
 
 namespace NobleTitlesPlus.Settings
 {
-    public class NTPSettings : AttributeGlobalSettings<NTPSettings>
+    /*public class NTPSettings : AttributeGlobalSettings<NTPSettings>
     {
         public override string Id => "NobleTitlesPlus";
         public override string DisplayName => $"{new TextObject(SubModule.DisplayName)} {typeof(NTPSettings).Assembly.GetName().Version.ToString(3)}";
@@ -81,5 +81,5 @@ namespace NobleTitlesPlus.Settings
         [SettingPropertyText("{=NTP.OptTitleMinorMemberF}Minor Faction Female Member Title", Order = 11, RequireRestart = false)]
         [SettingPropertyGroup(HeadingTitlesDefault)]
         public string DefaultMinorMemberF { get; set; } = "{NAME}";
-    }
+    }*/
 }
