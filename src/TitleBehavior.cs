@@ -104,16 +104,16 @@ namespace NobleTitlesPlus
         {
             List<string> fiefList = clan.Fiefs.Take(this.titleDb.settings.Format.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
             
-            if (fiefList.Count() > 1)
+            if( fiefList.Count() <= 1 || this.titleDb.settings.Format.MaxFiefNames <= 1)
             {
-                string sep = this.titleDb.settings.Format.FiefNameSepratorComma + " ";
-                string fiefs = string.Join(sep, fiefList.Take(fiefList.Count() - 1).ToArray<string>());
-                string lastElement = string.Join(" ", new string[] { this.titleDb.settings.Format.FiefNameSeparatorAnd, fiefList.Last() });
-                this.FiefLists[clan] = new TextObject(string.Join(" ", new string[] { fiefs, lastElement }));
+                this.FiefLists[clan] = new TextObject(fiefList.FirstOrDefault());
             }
             else
             {
-                this.FiefLists[clan] = new TextObject(fiefList.FirstOrDefault());
+                string sep = this.titleDb.settings.Format.FiefNameSepratorComma + " ";
+                string fiefs = string.Join(sep, fiefList.Take(Math.Min(fiefList.Count() - 1, this.titleDb.settings.Format.MaxFiefNames)).ToArray<string>());
+                string lastElement = string.Join(" ", new string[] { this.titleDb.settings.Format.FiefNameSeparatorAnd, fiefList.Last() });
+                this.FiefLists[clan] = new TextObject(string.Join(" ", new string[] { fiefs, lastElement }));
             }
         }
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
