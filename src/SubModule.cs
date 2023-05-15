@@ -5,6 +5,12 @@ using TaleWorlds.MountAndBlade;
 using System.Reflection;
 using System.IO;
 using TaleWorlds.Localization;
+using MCM.Internal.Extensions;
+using MCM.Implementation;
+using MCM.Abstractions;
+using System.Collections.Generic;
+using MCM.Abstractions.Base;
+using MCM.Abstractions.GameFeatures;
 
 namespace NobleTitlesPlus
 {
@@ -20,7 +26,7 @@ namespace NobleTitlesPlus
         // public static readonly string Version = $"{SemVerMajor}.{SemVerMinor}.{SemVerPatch}{SemVerEnd}";
         public static readonly string Name = typeof(SubModule).Namespace; // why we need write again?
         public static readonly string modFolderName = Directory.GetParent(Assembly.GetExecutingAssembly().Location).Parent.Parent.Name;
-        public static readonly string DisplayName = "Noble Titles Plus"; // why we need write again?
+        public static readonly string DisplayName = "{=NTP.Sys001}Noble Titles Plus"; // why we need write again?
         public static readonly string HarmonyDomain = "com.skatagiri.bannerlord" + Name.ToLower();
         internal static readonly Color ImportantTextColor = Color.FromUint(0x00F16D26); // orange
         protected override void OnSubModuleLoad()
@@ -40,12 +46,16 @@ namespace NobleTitlesPlus
 
             if (!hasLoaded && !canceled)
             {
-                InformationManager.DisplayMessage(new InformationMessage(new TextObject($"{{=NobleTitlesPlus.Sys001}}Loaded {DisplayName}").ToString(), ImportantTextColor));
+                InformationManager.DisplayMessage(new InformationMessage(
+                    $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))}", ImportantTextColor));
                 hasLoaded = true;
             }
 
             if (canceled)
-                InformationManager.DisplayMessage(new InformationMessage(new TextObject($"{{=NobleTitlesPlus.Sys002}}Error loading {DisplayName}: Disabled!").ToString(), ImportantTextColor));
+                InformationManager.DisplayMessage(
+                    new InformationMessage(
+                        $"{new TextObject("{=NTP.Sys003}Error loading {DisplayName}: Disabled!").SetTextVariable("DisplayName", new TextObject(DisplayName))}"
+                        ));
         }
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
@@ -54,7 +64,6 @@ namespace NobleTitlesPlus
             if (!canceled && game.GameType is Campaign)
                 ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior());
         }
-
         private bool hasLoaded;
         private bool canceled;
     }
