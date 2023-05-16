@@ -53,7 +53,7 @@ namespace NobleTitlesPlus
 
         public Log(bool truncate = false, string? logName = null)
         {
-            var userDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Mount and Blade II Bannerlord");
+            string userDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Mount and Blade II Bannerlord");
 
             Module = GetType().FullName;
             LogDir = Path.Combine(userDir, "Logs");
@@ -61,7 +61,7 @@ namespace NobleTitlesPlus
             LogPath = Path.Combine(LogDir, LogFile);
 
             Directory.CreateDirectory(LogDir);
-            var existed = File.Exists(LogPath);
+            bool existed = File.Exists(LogPath);
 
             try
             {

@@ -23,11 +23,11 @@ namespace NobleTitlesPlus
 
         internal static bool EnableTracer { get; set; } = false;
 
-        internal static LogBase Log = new LogBase(); // LogBase, parent of Log, implements do-nothing virtual output methods
+        internal static LogBase Log = new(); // LogBase, parent of Log, implements do-nothing virtual output methods
 
         internal static class EventTracer
         {
-            private static readonly ConcurrentDictionary<string, bool> _stackTraceMap = new ConcurrentDictionary<string, bool>();
+            private static readonly ConcurrentDictionary<string, bool> _stackTraceMap = new();
 
             [MethodImpl(MethodImplOptions.NoInlining)]
             internal static void Trace(string extraInfo, int framesToSkip = 1) => Trace(new List<string> { extraInfo }, framesToSkip + 1);

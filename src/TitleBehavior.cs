@@ -7,6 +7,7 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.CampaignSystem.Settlements;
+using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.Localization;
 
@@ -33,17 +34,17 @@ namespace NobleTitlesPlus
         {
             Util.Log.Print("Starting new campaign");
             nomenclatura.UpdateAll();
-            // Util.Log.Print($"Starting new campaign on {SubModule.Name} v{SubModule.Version} with savegame version of {CurrentSaveVersion}...");
+            Util.Log.Print($"Starting new campaign on {SubModule.Name}");
         }
         private void OnGameLoaded(CampaignGameStarter starter)
         {
             Util.Log.Print("Loading campaign");
             nomenclatura.UpdateAll();
-            // Util.Log.Print($"Loading campaign on {SubModule.Name} v{SubModule.Version} with savegame version of {this.saveVersion}...");
+            Util.Log.Print($"Loading campaign on {SubModule.Name}");
         }
         private void OnSessionLaunched(CampaignGameStarter starter)
         {
-            Harmony.DEBUG = true;
+            // Harmony.DEBUG = true;
             Harmony harmony = new(SubModule.HarmonyDomain);
             harmony.PatchAll();
         }
