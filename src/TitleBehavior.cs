@@ -67,7 +67,6 @@ namespace NobleTitlesPlus
     class Nomenclatura
     {
         public readonly TitleDb titleDb = new();
-        // public Dictionary<Hero, TextObject> NameTitle { get; private set; } = new();
         public Dictionary<Hero, TitleRank> HeroRank { get; private set; } = new();
         public Dictionary<Clan, TextObject> FiefLists { get; private set; } = new();
         public Nomenclatura(bool update = false)
