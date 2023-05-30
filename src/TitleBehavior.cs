@@ -127,7 +127,7 @@ namespace NobleTitlesPlus
                     c.Leader != null &&
                     c.Leader.IsAlive &&
                     c.Leader.IsLord)
-                .SelectMany(c => c.Lords.Where(h => h != c.Leader && (h.IsKnownToPlayer || !this.titleDb.settings.General.FogOfWar)))
+                .SelectMany(c => c.Lords.Where(h => h != c.Leader && h.IsAlive))
                 .ToList();
             foreach (Hero h in commonNobles)
             {
@@ -152,7 +152,6 @@ namespace NobleTitlesPlus
                 .OrderBy(c => this.GetFiefScore(c))
                 .ThenBy(c => c.Renown)
                 .Select(c => c.Leader)
-                .Where(h => h.IsKnownToPlayer || !this.titleDb.settings.General.FogOfWar)
                 .ToList();
             int nBarons = 0;
             // First, pass over all barons.
@@ -218,20 +217,23 @@ namespace NobleTitlesPlus
         }
         private void AddTitlesToMinorFaction()
         {
-            foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsClanTypeMercenary && c.IsMinorFaction))
+            foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction))
             {
                 List<string> tr = new() { $"Adding minor faction titles to {c.Name} ({c.StringId})..." };
                 foreach (Hero h in c.Heroes)
                 {
-                    if (h.IsFactionLeader)
+                    if (h.IsAlive)
                     {
-                        this.HeroRank[h] = TitleRank.King;
-                        tr.Add(this.GetHeroTrace(h, TitleRank.King));
-                    }
-                    else
-                    {
-                        this.HeroRank[h] = TitleRank.Noble;
-                        tr.Add(this.GetHeroTrace(h, TitleRank.Noble));
+                        if (h.IsFactionLeader)
+                        {
+                            this.HeroRank[h] = TitleRank.King;
+                            tr.Add(this.GetHeroTrace(h, TitleRank.King));
+                        }
+                        else
+                        {
+                            this.HeroRank[h] = TitleRank.Noble;
+                            tr.Add(this.GetHeroTrace(h, TitleRank.Noble));
+                        }
                     }
                 }
                 Util.Log.Print(tr);

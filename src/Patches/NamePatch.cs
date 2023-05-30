@@ -13,24 +13,41 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void AppendTitles(Hero __instance, ref TextObject __result)
         {
-            if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive) 
+            // TODO: Party/Army name
+            if (__instance.IsLord && __instance.IsAlive && (__instance.IsKnownToPlayer || !TitleBehavior.nomenclatura.titleDb.settings.General.FogOfWar || __instance == __instance?.Clan?.Kingdom?.Leader) )
             {
-                TextObject title = TitleBehavior.nomenclatura.GetTitle(
-                    __instance.IsFemale,
-                    __instance.IsMinorFactionHero ? __instance.Clan.StringId : __instance.Clan.Kingdom.Culture.StringId,
-                    rank,
-                    __instance.IsMinorFactionHero ? Category.MinorFaction : Category.Default
-                    ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
-                if (TitleBehavior.nomenclatura.FiefLists.TryGetValue(__instance.Clan, out TextObject fiefNames))
+                if (__instance?.Clan?.StringId == null)
                 {
-                    title = title.SetTextVariable("FIEFS", fiefNames);
+                    Util.Log.Print($"[WARNING] Clan is null: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
                 }
-                __result = new TextObject(title.ToString());
+                if (__instance?.IsMinorFactionHero == null)
+                {
+                    Util.Log.Print($"[WARNING] isMinorFactionHero is null: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
+                }
+                if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive)
+                {
+                    bool isMinorFaction = __instance?.IsMinorFactionHero ?? true;
+                    TextObject title = TitleBehavior.nomenclatura.GetTitle(
+                        __instance?.IsFemale ?? false,
+                        isMinorFaction ? (__instance?.Clan?.StringId ?? "default_minor") : (__instance?.Clan?.Kingdom?.Culture?.StringId ?? ""),
+                        rank,
+                        isMinorFaction ? Category.MinorFaction : Category.Default
+                        ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
+                    if (TitleBehavior.nomenclatura.FiefLists.TryGetValue(__instance.Clan, out TextObject fiefNames))
+                    {
+                        title = title.SetTextVariable("FIEFS", fiefNames);
+                    }
+                    __result = new TextObject(title.ToString());
+                }
+                else
+                {
+                    if(!__instance.IsHumanPlayerCharacter) Util.Log.Print($"[WARNIG] title not found: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
+                }
             }
         }
     }
     [HarmonyPatch(typeof(MissionConversationVM), nameof(MissionConversationVM.Refresh))]
-    internal class MissionConversationVMModifyOverNetstedTextFormat
+    internal class MissionConversationVMModifyOverNestedTextFormat
     {
         private static TextObject namePre = new();
         [HarmonyPrefix]

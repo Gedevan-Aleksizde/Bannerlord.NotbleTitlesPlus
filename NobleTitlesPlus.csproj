@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.1.2</Version>
+    <Version>1.1.4</Version>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>x64</Platforms>
     <LangVersion>10.0</LangVersion>
@@ -68,5 +68,9 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="mkdir Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\submodule.xml Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\settings.json Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\titles.json Releases\NobleTitlesPlus&#xD;&#xA;mkdir Releases\NobleTitlesPlus\ModuleData&#xD;&#xA;xcopy /y /s _module\ModuleData\ Releases\NobleTitlesPlus\ModuleData&#xD;&#xA;mkdir Releases\NobleTitlesPlus\bin\Win64_Shipping_Client&#xD;&#xA;copy bin\x64\Debug\netstandard2.0\NobleTitlesPlus.dll Releases\NobleTitlesPlus\bin\Win64_Shipping_Client" />
+  </Target>
 
 </Project>
