@@ -26,13 +26,15 @@ namespace NobleTitlesPlus.Patches
                 }
                 if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive)
                 {
-                    bool isMinorFaction = __instance?.IsMinorFactionHero ?? true;
-                    TextObject title = TitleBehavior.nomenclatura.GetTitle(
-                        __instance?.IsFemale ?? false,
-                        isMinorFaction ? (__instance?.Clan?.StringId ?? "default_minor") : (__instance?.Clan?.Kingdom?.Culture?.StringId ?? ""),
+                    /*bool isMinorFaction = __instance?.IsMinorFactionHero ?? true;
+                    TextObject title = TitleBehavior.nomenclatura.titleDb.GetTitle(
+                        __instance.IsFemale,
+                        isMinorFaction ? (__instance?.Clan?.StringId ?? "default_minor"): (__instance?.Clan?.Kingdom?.Culture?.StringId ?? ""),
+                        __instance?.Clan?.Kingdom?.Name.ToString() ?? "",
                         rank,
                         isMinorFaction ? Category.MinorFaction : Category.Default
-                        ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
+                        ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);*/
+                    TextObject title = TitleBehavior.nomenclatura.titleDb.GetTitle(__instance, rank).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
                     if (TitleBehavior.nomenclatura.FiefLists.TryGetValue(__instance.Clan, out TextObject fiefNames))
                     {
                         title = title.SetTextVariable("FIEFS", fiefNames);
@@ -61,14 +63,15 @@ namespace NobleTitlesPlus.Patches
             __instance.CurrentCharacterNameLbl = namePre.ToString();
         }
     }
-    // TODO: Is Patching GameTexts more clever? 
+    // TODO: Can patching GameTexts more clever? 
     [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.EncyclopediaRulerTitle), MethodType.Getter)]
     internal class KingdomRulerTitlePatchNotUniformized
     {
         [HarmonyPostfix]
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
         {
-            __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
+            __result = TitleBehavior.nomenclatura.titleDb.GetTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
+            // __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
     /*[HarmonyPatch(typeof(EncyclopediaListItemVM), nameof(EncyclopediaListItemVM.Name), MethodType.Getter)]

@@ -73,10 +73,10 @@ namespace NobleTitlesPlus
         {
             if(update) this.UpdateAll();
         }
-        public TextObject GetTitle(bool isFemale, string titleSetId, TitleRank rank, Category category = Category.Default)
+        /*public TextObject GetTitle(bool isFemale, string titleSetId, TitleRank rank, Category category = Category.Default)
         {
             return this.titleDb.GetTitle(isFemale, titleSetId, rank, category);
-        }
+        }*/
         public void UpdateAll()
         {
             foreach (Kingdom k in Kingdom.All.Where(x => !x.IsEliminated))
@@ -118,7 +118,7 @@ namespace NobleTitlesPlus
         }
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
-            List<string> tr = new() { $"Adding noble titles to {kingdom.Name} ({kingdom.Culture.StringId})..." };
+            List<string> tr = new() { $"Adding noble titles to \"{kingdom.Name}\" (ID={kingdom.StringId}) (culture={kingdom.Culture.StringId})..." };
             // Common Nobles, not a Clan Leader
             List<Hero> commonNobles = kingdom.Clans
                 .Where(c =>
