@@ -11,6 +11,10 @@ using MCM.Abstractions;
 using System.Collections.Generic;
 using MCM.Abstractions.Base;
 using MCM.Abstractions.GameFeatures;
+using MCM.Abstractions.Base.PerSave;
+using NobleTitlesPlus.Settings;
+using System;
+using System.Runtime.CompilerServices;
 
 namespace NobleTitlesPlus
 {
@@ -21,14 +25,18 @@ namespace NobleTitlesPlus
         // public const int SemVerMajor = 1;
         // public const int SemVerMinor = 2;
         // public const int SemVerPatch = 0;
-        public static readonly string? SemVerSpecial = null;
-        private static readonly string SemVerEnd = SemVerSpecial is not null ? "-" + SemVerSpecial : string.Empty;
+        // public static readonly string? SemVerSpecial = null;
+        // private static readonly string SemVerEnd = SemVerSpecial is not null ? "-" + SemVerSpecial : string.Empty;
         // public static readonly string Version = $"{SemVerMajor}.{SemVerMinor}.{SemVerPatch}{SemVerEnd}";
-        public static readonly string Name = typeof(SubModule).Namespace; // why we need write again?
+        public static readonly Version assemblyVersion = typeof(RuntimeSettings).Assembly.GetName().Version;
+        public static string ModVersion = "";
+        public const string Name = "NobleTitlePlus";
+        public const string DisplayName = "Noble Titles Plus";
         public static readonly string modFolderName = Directory.GetParent(Assembly.GetExecutingAssembly().Location).Parent.Parent.Name;
-        public static readonly string DisplayName = "{=NTP.Sys001}Noble Titles Plus"; // why we need write again?
         public static readonly string HarmonyDomain = "com.skatagiri.bannerlord" + Name.ToLower();
         internal static readonly Color ImportantTextColor = Color.FromUint(0x00F16D26); // orange
+        private FluentPerSaveSettings? settings;
+        private Options Options { get; set; }
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
@@ -47,23 +55,54 @@ namespace NobleTitlesPlus
             if (!hasLoaded && !canceled)
             {
                 InformationManager.DisplayMessage(new InformationMessage(
-                    $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))}", ImportantTextColor));
+                    $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{assemblyVersion})", ImportantTextColor));
                 hasLoaded = true;
             }
 
             if (canceled)
                 InformationManager.DisplayMessage(
                     new InformationMessage(
-                        $"{new TextObject("{=NTP.Sys003}Error loading {DisplayName}: Disabled!").SetTextVariable("DisplayName", new TextObject(DisplayName))}"
+                        $"003 {new TextObject("{=NTP.Sys003}Error loading {DisplayName} : Disabled!").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{assemblyVersion})"
                         ));
+        }
+        public override void OnAfterGameInitializationFinished(Game game, object starterObject)
+        {
+            if (game.GameType is not Campaign campaign)
+            {
+                return;
+            }
+            System.Diagnostics.Debug.Assert(settings is null);
+            var builder = RuntimeSettings.AddSettings(Options!, campaign.UniqueGameId);
+            settings = builder.BuildAsPerSave();
+            settings?.Register();
+            base.OnAfterGameInitializationFinished(game, starterObject);
         }
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
             base.OnGameStart(game, starterObject);
 
             if (!canceled && game.GameType is Campaign)
+            {
+                Options ??= new();
                 ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior());
+            }
+            if (starterObject is not CampaignGameStarter campaignGameStarter)
+            {
+                return;
+            }
+            
+            //  campaignGameStarter.AddBehavior(eqUpBehavior = new AutoEquipBehavior(Options));
         }
+        public override void OnGameEnd(Game game)
+        {
+            var oldSettings = settings;
+            oldSettings?.Unregister();
+            settings = null;
+
+            Options = null;
+            base.OnGameEnd(game);
+        }
+
         private bool hasLoaded;
         private bool canceled;
     }

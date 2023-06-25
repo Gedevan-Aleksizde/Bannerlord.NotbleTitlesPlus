@@ -10,6 +10,7 @@ using TaleWorlds.CampaignSystem.Settlements;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.Localization;
+using NobleTitlesPlus.DB;
 
 namespace NobleTitlesPlus
 {

@@ -4,6 +4,7 @@ using TaleWorlds.CampaignSystem.Conversation;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
 using TaleWorlds.Localization;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Encyclopedia.List;
+using NobleTitlesPlus.DB;
 
 namespace NobleTitlesPlus.Patches
 {
