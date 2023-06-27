@@ -1,54 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <base>
  <tags>
-  <tag language="Japanese"/>
+  <tag language="日本語"/>
  </tags>
  <strings>
-  <string id="NTP.Sys001" text="Noble Titles Plus"/>
+  <!--<string id="NTP.Sys001" text="Noble Titles Plus"/>-->
   <string id="NTP.Sys002" text="{DisplayName}が読み込まれました"/>
-  <string id="NTP.Sys003" text="{DisplayName}の読み込み中にエラーが発生しました。Modは無効です!"/>
-  <string id="NTP.OptH000" text="全般"/>
-  <string id="NTP.OptH001" text="領地表示のフォーマット"/>
-  <string id="NTP.OptH00D" text="デフォルトの称号"/>
-  <string id="NTP.OptH00A" text="Aserai Titles"/>
-  <string id="NTP.OptH00B" text="Battanian Titles"/>
-  <string id="NTP.OptH00E" text="Imperial Titles"/>
-  <string id="NTP.OptH00K" text="Khuzait Titles"/>
-  <string id="NTP.OptH00S" text="Sturgian Titles"/>
-  <string id="NTP.OptH00V" text="Vlandian Titles"/>
-  <string id="NTP.Opt000" text="戦場の霧"/>
-  <string id="NTP.Opt000Desc" text="称号にも「戦場の霧」を適用します。まだ会っていないヒーローの称号が表示されません。"/>
-  <string id="NTP.Opt001" text="単語区切り"/>
-  <string id="NTP.Opt001Desc" text="領地名表示に単語区切り(タギング)をします。基本的にヨーロッパ言語を想定しているので日本語では不要です。"/>
-  <string id="NTP.Opt002" text="領地名の区切り文字"/>
-  <string id="NTP.Opt002Desc" text="Separator for Fief Names."/>
-  <string id="NTP.Opt003" text="領地名の最後の区切り文字"/>
-  <string id="NTP.Opt003Desc" text="Separator for the Last Fief Name."/>
-  <string id="NTP.Opt004" text="領地名の最大表示数"/>
-  <string id="NTP.Opt004Desc" text="Separator for the Last Fief Name."/>
-  <string id="NTP.OptTitleKing" text="王の称号"/>
-  <string id="NTP.OptTitleQueen" text="女王の称号"/>
-  <string id="NTP.OptTitleDuke" text="公爵の称号"/>
-  <string id="NTP.OptTitleDuchess" text="女公爵の称号"/>
-  <string id="NTP.OptTitleCount" text="伯爵の称号"/>
-  <string id="NTP.OptTitleCountess" text="女伯爵の称号"/>
-  <string id="NTP.OptTitleBaron" text="男爵の称号"/>
-  <string id="NTP.OptTitleBaroness" text="女男爵の称号"/>
-  <string id="NTP.OptTitleNobleman" text="男性貴族の称号"/>
-  <string id="NTP.OptTitleNoblewoman" text="女性貴族の称号"/>
-  <string id="NTP.OptTitleMinorLeaderM" text="小規模勢力の男性リーダーの称号"/>
-  <string id="NTP.OptTitleMinorLeaderF" text="小規模勢力の女性リーダーの称号"/>
-  <string id="NTP.OptTitleMinorMemberM" text="小規模勢力の男性メンバーの称号"/>
-  <string id="NTP.OptTitleMinorMemberF" text="小規模勢力の女性メンバーの称号"/>
-  <string id="NobleTitlesPlus.defaultKing" text="King {NAME}"/>
-  <string id="NobleTitlesPlus.defaultQueen" text="Queen {NAME}"/>  
-  <string id="NobleTitlesPlus.defaultDuke" text="Duke {NAME}"/>
-  <string id="NobleTitlesPlus.defaultDuchess" text="Duchess {NAME}"/>
-  <string id="NobleTitlesPlus.defaultCount" text="Count {NAME}"/>
-  <string id="NobleTitlesPlus.defaultCountess" text="Countess {NAME}"/>
-  <string id="NobleTitlesPlus.defaultBaron" text="Baron {NAME}"/>
-  <string id="NobleTitlesPlus.defaultBaroness" text="Baroness {NAME}"/>
-  <string id="NobleTitlesPlus.defaultSir" text="{NAME}"/>
-  <string id="NobleTitlesPlus.defaultDame" text="{NAME}"/>
+  <string id="NTP.Sys003" text="{DisplayName}のロード中にエラーが発生しました: 無効です!"/>
+  <string id="NTP.MCMGGEN" text="全般"/>
+  <string id="NTP.MCMGFOR" text="領地表示のフォーマット"/>
+  <string id="NTP.MCMGDEF" text="デフォルトの称号"/>
+  <string id="NTP.MCMGMinor" text="小規模勢力のデフォルトの称号"/>
+  <string id="NPT.MCMFOWHint" text="称号に戦場の霧要素を適用します。会ったことのないヒーローの称号は表示されません。"/>
+  <string id="NTP.MCMencyclopediaHint" text="現在使用不可"/>
+  <string id="NTP.MCMTag" text="タギング"/>
+  <string id="NTP.MCMTagHint" text="領地名の単語のタギングです。主に欧文ユーザーを想定した機能です。"/>
+  <string id="NTP.MCMSep" text="領地名の区切り文字"/>
+  <string id="NTP.MCMSepHint" text="領地名の区切り文字・記号です。"/>
+  <string id="NTP.MCMSepLast" text="最後の領地名の区切り文字"/>
+  <string id="NTP.MCMSepLastHint" text="最後の区切り文字・記号です (日本語なら変える必要はないはずです)"/>
+  <string id="NTP.MCMSize" text="領地の最大表示数"/>
+  <string id="NTP.MCMSizeHint" text="表示する領地名の最大数です。"/>
+  <string id="NTP.MCMKing" text="王 (第1位)"/>
+  <string id="NTP.MCMKingHint" text="男性君主の称号形式です。"/>
+  <string id="NTP.MCMQueen" text="女王 (第1位)"/>
+  <string id="NTP.MCMQueenHint" text="女性君主の称号形式です。"/>
+  <string id="NTP.MCMRank2M" text="公爵 (第2位)"/>
+  <string id="NTP.MCMRank2MHint" text="第2位の序列の男性領主の称号形式です。"/>
+  <string id="NTP.MCMRank2F" text="女公爵 (第2位)"/>
+  <string id="NTP.MCMRank2FHint" text="第2位の序列の女性領主の称号形式です。"/>
+  <string id="NTP.MCMRank3M" text="伯爵 (第3位)"/>
+  <string id="NTP.MCMRank3MHint" text="第3位の序列の男性領主の称号形式です。"/>
+  <string id="NTP.MCMRank3F" text="女伯爵 (第3位)"/>
+  <string id="NTP.MCMRank3FHint" text="第3位の序列の女性領主の称号形式です。"/>
+  <string id="NTP.MCMRank4M" text="男爵 (第4位)"/>
+  <string id="NTP.MCMRank4MHint" text="第4位の序列の男性領主の称号形式です。"/>
+  <string id="NTP.MCMRank4F" text="女男爵 (第4位)"/>
+  <string id="NTP.MCMRank4FHint" text="第4位女性領主の称号形式です。"/>
+  <string id="NTP.MCMRank5M" text="貴族 (第5位)"/>
+  <string id="NTP.MCMRank5MHint" text="一般男性クランメンバーの称号形式です。"/>
+  <string id="NTP.MCMRank5F" text="女貴族 (第5位)"/>
+  <string id="NTP.MCMRank5FHint" text="一般女性クランメンバーの称号形式です。"/>
+  <string id="NTP.MCMCrownM" text="王太子"/>
+  <string id="NTP.MCMCrownMHint" text="男性法定推定王位相続人の称号形式です。"/>
+  <string id="NTP.MCMCrownF" text="王太女"/>
+  <string id="NTP.MCMCrownFHint" text="女性法定推定王位相続人の称号形式です。"/>
+  <string id="NTP.MCMMinorLM" text="男性リーダー"/>
+  <string id="NTP.MCMMinorLMHint" text="男性リーダーの称号形式です。"/>
+  <string id="NTP.MCMMinorLF" text="女性リーダー"/>
+  <string id="NTP.MCMMinorLFHint" text="女性リーダーの称号形式です。"/>
+  <string id="NTP.MCMMinorMM" text="男性メンバー"/>
+  <string id="NTP.MCMMinorMMHint" text="一般男性メンバーの称号形式です。"/>
+  <string id="NTP.MCMMinorMF" text="女性メンバー"/>
+  <string id="NTP.MCMMinorMFHint" text="一般女性メンバーの称号形式です。"/>
  </strings>
 </base>

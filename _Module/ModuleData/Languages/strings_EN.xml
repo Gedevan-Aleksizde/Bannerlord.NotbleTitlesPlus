@@ -4,51 +4,54 @@
   <tag language="English"/>
  </tags>
  <strings>
-  <string id="NTP.Sys001" text="Noble Titles Plus"/>
+  <!--<string id="NTP.Sys001" text="Noble Titles Plus"/>-->
   <string id="NTP.Sys002" text="{DisplayName} Loaded"/>
   <string id="NTP.Sys003" text="Error loading {DisplayName}: Disabled!"/>
-  <string id="NTP.OptH000" text="General"/>
-  <string id="NTP.OptH001" text="Fief Name Format"/>
-  <string id="NTP.OptH00D" text="Default Titles"/>
-  <string id="NTP.OptH00A" text="Aserai Titles"/>
-  <string id="NTP.OptH00B" text="Battanian Titles"/>
-  <string id="NTP.OptH00E" text="Imperial Titles"/>
-  <string id="NTP.OptH00K" text="Khuzait Titles"/>
-  <string id="NTP.OptH00S" text="Sturgian Titles"/>
-  <string id="NTP.OptH00V" text="Vlandian Titles"/>
-  <string id="NTP.Opt000" text="Fog of War"/>
-  <string id="NTP.Opt000Desc" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
-  <string id="NTP.Opt001" text="Tagging"/>
-  <string id="NTP.Opt001Desc" text="Tagging fief names. Basically True is recommended if you are European langauge user."/>
-  <string id="NTP.Opt002" text="Fief Name Separator"/>
-  <string id="NTP.Opt002Desc" text="Separator for Fief Names."/>
-  <string id="NTP.Opt003" text="Fief Name Separator Last"/>
-  <string id="NTP.Opt003Desc" text="Separator for the Last Fief Name."/>
-  <string id="NTP.Opt004" text="Max Number of Fief Names"/>
-  <string id="NTP.Opt004Desc" text="Separator for the Last Fief Name."/>
-  <string id="NTP.OptTitleKing" text="King Title"/>
-  <string id="NTP.OptTitleQueen" text="Queen Title"/>
-  <string id="NTP.OptTitleDuke" text="Duke Title"/>
-  <string id="NTP.OptTitleDuchess" text="Duchess Title"/>
-  <string id="NTP.OptTitleCount" text="Count Title"/>
-  <string id="NTP.OptTitleCountess" text="Countess Title"/>
-  <string id="NTP.OptTitleBaron" text="Baron Title"/>
-  <string id="NTP.OptTitleBaroness" text="Baroness Title"/>
-  <string id="NTP.OptTitleNobleman" text="Nobleman Title"/>
-  <string id="NTP.OptTitleNoblewoman" text="Noblewoman Title"/>
-  <string id="NTP.OptTitleMinorLeaderM" text="Minor Faction Male Leader Title"/>
-  <string id="NTP.OptTitleMinorLeaderF" text="Minor Faction Female Leader Title"/>
-  <string id="NTP.OptTitleMinorMemberM" text="Minor Faction Male Member Title"/>
-  <string id="NTP.OptTitleMinorMemberF" text="Minor Faction Female Member Title"/>
-  <string id="NobleTitlesPlus.defaultKing" text="King {NAME}"/>
-  <string id="NobleTitlesPlus.defaultQueen" text="Queen {NAME}"/>
-  <string id="NobleTitlesPlus.defaultDuke" text="Duke {NAME}"/>
-  <string id="NobleTitlesPlus.defaultDuchess" text="Duchess {NAME}"/>
-  <string id="NobleTitlesPlus.defaultCount" text="Count {NAME}"/>
-  <string id="NobleTitlesPlus.defaultCountess" text="Countess {NAME}"/>
-  <string id="NobleTitlesPlus.defaultBaron" text="Baron {NAME}"/>
-  <string id="NobleTitlesPlus.defaultBaroness" text="Baroness {NAME}"/>
-  <string id="NobleTitlesPlus.defaultSir" text="{NAME}"/>
-  <string id="NobleTitlesPlus.defaultDame" text="{NAME}"/>
+  <string id="NTP.MCMGGEN" text="General"/>
+  <string id="NTP.MCMGFOR" text="Fief Display Format"/>
+  <string id="NTP.MCMGDEF" text="Default Titles"/>
+  <string id="NTP.MCMGMinor" text="Minor Faction Default Titles"/>
+  <string id="NPT.MCMFOWHint" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
+  <string id="NTP.MCMencyclopediaHint" text="Current Inavailable"/>
+  <string id="NTP.MCMTag" text="Tagging"/>
+  <string id="NTP.MCMTagHint" text="Tagging fief names. Basically enabling recommended if you are European langauge user."/>
+  <string id="NTP.MCMSep" text="Fief Name Separator"/>
+  <string id="NTP.MCMSepHint" text="Separator for Fief Names."/>
+  <string id="NTP.MCMSepLast" text="Fief Name Separator Last"/>
+  <string id="NTP.MCMSepLastHint" text="Separator for the Fief Names."/>
+  <string id="NTP.MCMSize" text="Max Number of Fief Names"/>
+  <string id="NTP.MCMSizeHint" text=""/>
+  <string id="NTP.MCMKing" text="King (Rank 1)"/>
+  <string id="NTP.MCMKingHint" text="Title format of the male monorch"/>
+  <string id="NTP.MCMQueen" text="Queen (Rank 1)"/>
+  <string id="NTP.MCMQueenHint" text="Title format of the female monorch"/>
+  <string id="NTP.MCMRank2M" text="Duke (Rank 2)"/>
+  <string id="NTP.MCMRank2MHint" text="Title format of a rank 2 male vassal"/>
+  <string id="NTP.MCMRank2F" text="Duchess (Rank 2)"/>
+  <string id="NTP.MCMRank2FHint" text="Title format of a rank 2 female vassal"/>
+  <string id="NTP.MCMRank3M" text="Count (Rank 3)"/>
+  <string id="NTP.MCMRank3MHint" text="Title format of a rank 3 male vassal"/>
+  <string id="NTP.MCMRank3F" text="Countess (Rank 3)"/>
+  <string id="NTP.MCMRank3FHint" text="Title format of a rank 3 female vassal"/>
+  <string id="NTP.MCMRank4M" text="Baron (Rank 4)"/>
+  <string id="NTP.MCMRank4Hint" text="Title format of a rank 4 male vassal"/>
+  <string id="NTP.MCMRank4F" text="Baroness (Rank 4)"/>
+  <string id="NTP.MCMRank4FHint" text="Title format of a rank 4 female vassal"/>
+  <string id="NTP.MCMRank5M" text="Nobleman (Rank 5)"/>
+  <string id="NTP.MCMRank5MHint" text="A male clan member's title format"/>
+  <string id="NTP.MCMRank5F" text="Noblewoman (Rank 5)"/>
+  <string id="NTP.MCMRank5FHint" text="A female clan member's title format"/>
+  <string id="NTP.MCMCrownM" text="Crown Prince"/>
+  <string id="NTP.MCMCrownMHint" text="The male succession's title format"/>
+  <string id="NTP.MCMCrownF" text="Crown Princess"/>
+  <string id="NTP.MCMCrownFHint" text="The female succession's title format"/>
+  <string id="NTP.MCMMinorLM" text="Male Leader"/>
+  <string id="NTP.MCMMinorLMHint" text="Title format of the male leader"/>
+  <string id="NTP.MCMMinorLF" text="Female Leader"/>
+  <string id="NTP.MCMMinorLFHint" text="Title format of the female leader"/>
+  <string id="NTP.MCMMinorMM" text="Male Member"/>
+  <string id="NTP.MCMMinorMMHint" text="A male menber's title format"/>
+  <string id="NTP.MCMMinorMF" text="Female Member"/>
+  <string id="NTP.MCMMinorMFHint" text="A female member's title format"/>
  </strings>
 </base>

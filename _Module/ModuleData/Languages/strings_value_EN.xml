@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base>
+ <tags>
+  <tag language="English" />
+ </tags>
+ <strings>
+  <!-- Language-specific default values. They will be overriden by JSON file. -->
+  <string id="NTP.DEFSep" text="," />
+  <string id="NTP.DEFLast" text="and" />
+  <string id="NTP.DEFKing" text="King {NAME}" />
+  <string id="NTP.DEFQueen" text="Queen {NAME}" />
+  <string id="NTP.DEFCrownM" text="Crown Prince {NAME}" />
+  <string id="NTP.DEFCrownF" text="Crown Princess {NAME}" />
+  <string id="NTP.DEF2M" text="Duke {NAME}" />
+  <string id="NTP.DEF2F" text="Duchess {NAME}" />
+  <string id="NTP.DEF2M" text="Count {NAME}" />
+  <string id="NTP.DEF2F" text="Countess {NAME}" />
+  <string id="NTP.DEF3M" text="Baron {NAME}" />
+  <string id="NTP.DEF3F" text="Baroness {NAME}" />
+  <string id="NTP.DEFSir" text="{NAME}" />
+  <string id="NTP.DEFDame" text="{NAME}" />
+  <string id="NTP.DEFMinorLM" text="{NAME} of {CLAN}" />
+  <string id="NTP.DEFMinorLF" text="{NAME} of {CLAN}"/>
+  <string id="NTP.DEFMinorMM" text="{NAME} of {CLAN}" />
+  <string id="NTP.DEFMinorMF" text="{NAME} of {CLAN}"/>
+ </strings>
+</base>

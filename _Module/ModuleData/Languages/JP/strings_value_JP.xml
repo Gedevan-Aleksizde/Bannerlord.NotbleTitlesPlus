@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base>
+ <tags>
+  <tag language="日本語"/>
+ </tags>
+ <strings>
+<!-- デフォルトの称号プリセット. JSONを上書きしてしまえば使われない -->
+  <string id="NTP.DEFSep" text="・"/>
+  <string id="NTP.DEFSepLast" text="・"/>
+  <string id="NTP.DEFKing" text="国王{NAME}"/>
+  <string id="NTP.DEFQueen" text="女王{NAME}"/>
+  <string id="NTP.DEFCrownM" text="王太子{NAME}" />
+  <string id="NTP.DEFCrownF" text="王太女{NAME}" />
+  <string id="NTP.DEF2M" text="{NAME}公爵"/>
+  <string id="NTP.DEF2F" text="{NAME}女公爵"/>
+  <string id="NTP.DEF3M" text="{NAME}伯爵"/>
+  <string id="NTP.DEF3F" text="{NAME}女伯爵"/>
+  <string id="NTP.DEF4M" text="{NAME}男爵"/>
+  <string id="NTP.DEF4F" text="{NAME}女男爵"/>
+  <string id="NTP.DEFSir" text="{NAME}卿"/>
+  <string id="NTP.DEFDame" text="{NAME}婦人"/>
+  <string id="NTP.DEFMinorLM" text="{CLAN}の{NAME}" />
+  <string id="NTP.DEFMinorLF" text="{CLAN}の{NAME}"/>
+  <string id="NTP.DEFMinorMM" text="{CLAN}の{NAME}" />
+  <string id="NTP.DEFMinorMF" text="{CLAN}の{NAME}"/>
+ </strings>
+</base>
