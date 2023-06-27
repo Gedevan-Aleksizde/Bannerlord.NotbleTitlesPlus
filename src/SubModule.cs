@@ -15,21 +15,32 @@ using MCM.Abstractions.Base.PerSave;
 using NobleTitlesPlus.Settings;
 using System;
 using System.Runtime.CompilerServices;
+using TaleWorlds.ModuleManager;
+using TaleWorlds.Engine;
 
 namespace NobleTitlesPlus
 {
     public class SubModule : MBSubModuleBase
     {
-        /* Semantic Versioning (https://semver.org): */
-        // TODO: Why we can't extract it from assembly info or submodule.xml?
-        // public const int SemVerMajor = 1;
-        // public const int SemVerMinor = 2;
-        // public const int SemVerPatch = 0;
-        // public static readonly string? SemVerSpecial = null;
-        // private static readonly string SemVerEnd = SemVerSpecial is not null ? "-" + SemVerSpecial : string.Empty;
-        // public static readonly string Version = $"{SemVerMajor}.{SemVerMinor}.{SemVerPatch}{SemVerEnd}";
+        public static string ModVersion
+        {
+            get
+            {
+                ModuleInfo info = new ModuleInfo();
+                string ver;
+                try
+                {
+                    info.LoadWithFullPath(Utilities.GetFullModulePath("NobleTitlePlus"));
+                    ver = info.Version.ToString();
+                }
+                catch
+                {
+                    ver = "";
+                }
+                return ver;
+            }
+        }
         public static readonly Version assemblyVersion = typeof(RuntimeSettings).Assembly.GetName().Version;
-        public static string ModVersion = "";
         public const string Name = "NobleTitlePlus";
         public const string DisplayName = "Noble Titles Plus";
         public static readonly string modFolderName = Directory.GetParent(Assembly.GetExecutingAssembly().Location).Parent.Parent.Name;
@@ -39,6 +50,7 @@ namespace NobleTitlesPlus
         private Options Options { get; set; }
         protected override void OnSubModuleLoad()
         {
+            TaleWorlds.MountAndBlade.Module a = TaleWorlds.MountAndBlade.Module.CurrentModule;
             base.OnSubModuleLoad();
             Util.EnableLog = true; // enable various debug logging
             Util.EnableTracer = false; // enable code event tracing (requires enabled logging)
