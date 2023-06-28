@@ -6,34 +6,34 @@
  <strings>
   <!-- Language-specific VARault values. (My variant) They will be overriden by JSON file. -->
   <string id="NTP.MCMVariant" text="Variant"/>
-  <string id="NTP.VARKing" text="King {NAME}" />
-  <string id="NTP.VARQueen" text="Queen {NAME}" />
-  <string id="NTP.VARCrownM" text="Crown Prince {NAME}" />
-  <string id="NTP.VARCrownF" text="Crown Princess {NAME}" />
-  <string id="NTP.VAR2M" text="Duke {NAME}" />
-  <string id="NTP.VAR2F" text="Duchess {NAME}" />
-  <string id="NTP.VAR3M" text="Count {NAME}" />
-  <string id="NTP.VAR3F" text="Countess {NAME}" />
-  <string id="NTP.VAR4M" text="Baron {NAME}" />
-  <string id="NTP.VAR4F" text="Baroness {NAME}" />
-  <string id="NTP.VARSir" text="Sir {NAME}" />
-  <string id="NTP.VARDame" text="Lady {NAME}" />
+  <string id="NTP.VAR1M_default" text="King {NAME}" />
+  <string id="NTP.VAR1F_default" text="Queen {NAME}" />
+  <string id="NTP.VARCrownM_default" text="Crown Prince {NAME}" />
+  <string id="NTP.VARCrownF_default" text="Crown Princess {NAME}" />
+  <string id="NTP.VAR2M_default" text="Duke {NAME}" />
+  <string id="NTP.VAR2F_default" text="Duchess {NAME}" />
+  <string id="NTP.VAR3M_default" text="Count {NAME}" />
+  <string id="NTP.VAR3F_default" text="Countess {NAME}" />
+  <string id="NTP.VAR4M_default" text="Baron {NAME}" />
+  <string id="NTP.VAR4F_default" text="Baroness {NAME}" />
+  <string id="NTP.VAR5M_default" text="Sir {NAME}" />
+  <string id="NTP.VAR5F_default" text="Lady {NAME}" />
 
-  <string id="NTP.VARKing_empire" text="Basileus {NAME}" />
-  <string id="NTP.VARQueen_empire" text="Basileia {NAME}" />
-  <string id="NTP.VARCrownM_empire" text="Sebastos {NAME}" />
-  <string id="NTP.VARCrownF_empire" text="Sebaste {NAME}" />
+  <string id="NTP.VAR1M_empire" text="Basileus {NAME}" />
+  <string id="NTP.VAR1F_empire" text="Basileia {NAME}" />
+  <string id="NTP.VARCrownM_empire" text="Porphyrogennos {NAME}" />
+  <string id="NTP.VARCrownF_empire" text="Porphyrogennete {NAME}" />
   <string id="NTP.VAR2M_empire" text="Megas Archon {NAME}" />
   <string id="NTP.VAR2F_empire" text="Megas Archontissa {NAME}" />
   <string id="NTP.VAR3M_empire" text="Exarch {NAME}" />
   <string id="NTP.VAR3F_empire" text="Exarchontissa {NAME}" />
   <string id="NTP.VAR4M_empire" text="Archon {NAME}" />
   <string id="NTP.VAR4F_empire" text="Archontisssa {NAME}" />
-  <string id="NTP.VARSir_empire" text="Patrikios {NAME}" />
-  <string id="NTP.VARDame_empire" text="Patrikia {NAME}" />
+  <string id="NTP.VAR5M_empire" text="Patrikios {NAME}" />
+  <string id="NTP.VAR5F_empire" text="Patrikia {NAME}" />
 
-  <string id="NTP.VARKing_aserai" text="Sultan {NAME}" />
-  <string id="NTP.VARQueen_aserai" text="Sultana {NAME}" />
+  <string id="NTP.VAR1M_aserai" text="Sultan {NAME}" />
+  <string id="NTP.VAR1F_aserai" text="Sultana {NAME}" />
   <string id="NTP.VARCrownM_aserai" text="{NAME}" />
   <string id="NTP.VARCrownF_aserai" text="{NAME}" />
   <string id="NTP.VAR2M_aserai" text="Emir al-Umara {NAME}" />
@@ -42,37 +42,37 @@
   <string id="NTP.VAR3F_aserai" text="Emira Kabira {NAME}" />
   <string id="NTP.VAR4M_aserai" text="Emir {NAME}" />
   <string id="NTP.VAR4F_aserai" text="Emira {NAME}" />
-  <string id="NTP.VARSir_aserai" text="Sharif {NAME}" />
-  <string id="NTP.VARDame_aserai" text="Nabila {NAME}" />
+  <string id="NTP.VAR5M_aserai" text="Sharif {NAME}" />
+  <string id="NTP.VAR5F_aserai" text="Nabila {NAME}" />
 
-  <string id="NTP.VARKing_battania" text="High King {NAME}" />
-  <string id="NTP.VARQueen_battania" text="High Queen {NAME}" />
-  <string id="NTP.VARCrownM_battania" text="{NAME}" />
-  <string id="NTP.VARCrownF_battania" text="{NAME}" />
+  <string id="NTP.VAR1M_battania" text="High King {NAME}" />
+  <string id="NTP.VAR1F_battania" text="High Queen {NAME}" />
+  <string id="NTP.VARCrownM_battania" text="High Crown Prince {NAME}" />
+  <string id="NTP.VARCrownF_battania" text="High Crown Princess {NAME}" />
   <string id="NTP.VAR2M_battania" text="Overking {NAME}" />
   <string id="NTP.VAR2F_battania" text="Overqueen {NAME}" />
   <string id="NTP.VAR3M_battania" text="Clan King {NAME}" />
   <string id="NTP.VAR3F_battania" text="Clan Queen {NAME}" />
   <string id="NTP.VAR4M_battania" text="Mormaer {NAME}" />
   <string id="NTP.VAR4F_battania" text="Banmormaer {NAME}" />
-  <string id="NTP.VARSir_battania" text="Duniwassal {NAME}" />
-  <string id="NTP.VARDame_battania" text="Beanuassal {NAME}" />
+  <string id="NTP.VAR5M_battania" text="Duniwassal {NAME}" />
+  <string id="NTP.VAR5F_battania" text="Beanuassal {NAME}" />
 
-  <string id="NTP.VARKing_khuzait" text="{NAME} Khan" />
-  <string id="NTP.VARQueen_khuzait" text="{NAME} Khatun" />
-  <string id="NTP.VARCrownM_khuzait" text="{NAME}" />
-  <string id="NTP.VARCrownF_khuzait" text="{NAME}" />
+  <string id="NTP.VAR1M_khuzait" text="{NAME} Khan" />
+  <string id="NTP.VAR1F_khuzait" text="{NAME} Khatun" />
+  <string id="NTP.VARCrownM_khuzait" text="{NAME} Qaghan" />
+  <string id="NTP.VARCrownF_khuzait" text="{NAME} Qatun" />
   <string id="NTP.VAR2M_khuzait" text="{NAME} Atabeg" />
   <string id="NTP.VAR2F_khuzait" text="{NAME} Annebegum" />
   <string id="NTP.VAR3M_khuzait" text="{NAME} Sadapid-Beg" />
   <string id="NTP.VAR3F_khuzait" text="{NAME} Sadapid-Begum" />
   <string id="NTP.VAR4M_khuzait" text="{NAME} Beg" />
   <string id="NTP.VAR4F_khuzait" text="{NAME} Begum" />
-  <string id="NTP.VARSir_khuzait" text="{NAME} Baghatur" />
-  <string id="NTP.VARDame_khuzait" text="{NAME} Bekhi" />
+  <string id="NTP.VAR5M_khuzait" text="{NAME} Baghatur" />
+  <string id="NTP.VAR5F_khuzait" text="{NAME} Bekhi" />
 
-  <string id="NTP.VARKing_sturgia" text="Veliky Knyaz {NAME}" />
-  <string id="NTP.VARQueen_sturgia" text="Velikaya Knyazinya {NAME}" />
+  <string id="NTP.VAR1M_sturgia" text="Veliky Knyaz {NAME}" />
+  <string id="NTP.VAR1F_sturgia" text="Velikaya Knyazinya {NAME}" />
   <string id="NTP.VARCrownM_sturgia" text="{NAME} Knyazevich" />
   <string id="NTP.VARCrownF_sturgia" text="{NAME} Knyazevna" />
   <string id="NTP.VAR2M_sturgia" text="Hertug {NAME}" />
@@ -81,11 +81,11 @@
   <string id="NTP.VAR3F_sturgia" text="Jarlinde {NAME}" />
   <string id="NTP.VAR4M_sturgia" text="Knyaz {NAME}" />
   <string id="NTP.VAR4F_sturgia" text="Knyazinya {NAME}" />
-  <string id="NTP.VARSir_sturgia" text="Boyar {NAME}" />
-  <string id="NTP.VARDame_sturgia" text="Boyarina {NAME}" />
+  <string id="NTP.VAR5M_sturgia" text="Boyar {NAME}" />
+  <string id="NTP.VAR5F_sturgia" text="Boyarina {NAME}" />
 
-  <string id="NTP.VARKing_vlandia" text="Rex Vlandiae {NAME}" />
-  <string id="NTP.VARQueen_vlandia" text="Regna Vlandiae {NAME}" />
+  <string id="NTP.VAR1M_vlandia" text="Rex Vlandiae {NAME}" />
+  <string id="NTP.VAR1F_vlandia" text="Regna Vlandiae {NAME}" />
   <string id="NTP.VARCrownM_vlandia" text="{NAME}, Prince of Rhodok" />
   <string id="NTP.VARCrownF_vlandia" text="{NAME}, Princess of Rhodok" />
   <string id="NTP.VAR2M_vlandia" text="Duc {NAME}" />
@@ -94,11 +94,11 @@
   <string id="NTP.VAR3F_vlandia" text="Countess {NAME}" />
   <string id="NTP.VAR4M_vlandia" text="Baron {NAME}" />
   <string id="NTP.VAR4F_vlandia" text="Baroness {NAME}" />
-  <string id="NTP.VARSir_vlandia" text="Sieur {NAME}" />
-  <string id="NTP.VARDame_vlandia" text="Dame {NAME}" />
+  <string id="NTP.VAR5M_vlandia" text="Sieur {NAME}" />
+  <string id="NTP.VAR5F_vlandia" text="Dame {NAME}" />
 
-  <string id="NTP.VARKing_tetsojin" text="{NAME} Tenno" />
-  <string id="NTP.VARQueen_tetsojin" text="{NAME} Jotei" />
+  <string id="NTP.VAR1M_tetsojin" text="Mikado {NAME}" />
+  <string id="NTP.VAR1F_tetsojin" text="Jotei {NAME}" />
   <string id="NTP.VARCrownM_tetsojin" text="{NAME} Oji" />
   <string id="NTP.VARCrownF_tetsojin" text="{NAME} Ojo" />
   <string id="NTP.VAR2M_tetsojin" text="Shogun {CLAN}{NAME}-San" />
@@ -107,17 +107,17 @@
   <string id="NTP.VAR3F_tetsojin" text="Daimyo {CLAN}{NAME}-San" />
   <string id="NTP.VAR4M_tetsojin" text="Myosyu {CLAN}{NAME}-San" />
   <string id="NTP.VAR4F_tetsojin" text="Myosyu {CLAN}{NAME}-San" />
-  <string id="NTP.VARSir_tetsojin" text="Ason {CLAN}{NAME}-San" />
-  <string id="NTP.VARDame_tetsojin" text="Ason {CLAN}{NAME}-San" />
+  <string id="NTP.VAR5M_tetsojin" text="Ason {CLAN}{NAME}-San" />
+  <string id="NTP.VAR5F_tetsojin" text="Ason {CLAN}{NAME}-San" />
 
-  <string id="NTP.VARMinorLM" text="{NAME} of {CLAN}" />
-  <string id="NTP.VARMinorLF" text="{NAME} of {CLAN}"/>
-  <string id="NTP.VARMinorMM" text="{NAME} of {CLAN}" />
-  <string id="NTP.VARMinorMF" text="{NAME} of {CLAN}"/>
+  <string id="NTP.VARMinorLM_default" text="{NAME} of {CLAN}" />
+  <string id="NTP.VARMinorLF_default" text="{NAME} of {CLAN}"/>
+  <string id="NTP.VARMinorMM_default" text="{NAME} of {CLAN}" />
+  <string id="NTP.VARMinorMF_default" text="{NAME} of {CLAN}"/>
 
   <string id="NTP.VARMinorLM_legion_of_the_betrayed" text="Legatus {NAME}" />
   <string id="NTP.VARMinorLF_legion_of_the_betrayed" text="Legatus {NAME}"/>
-  <string id="NTP.VARMinorMM_legion_of_the_betrayed" text="Centurio {NAME}" />
-  <string id="NTP.VARMinorMF_legion_of_the_betrayed" text="Centurio {NAME}"/>
+  <string id="NTP.VARMinorMM_legion_of_the_betrayed" text="Tribunus {NAME}" />
+  <string id="NTP.VARMinorMF_legion_of_the_betrayed" text="Tribunus {NAME}"/>
  </strings>
 </base>

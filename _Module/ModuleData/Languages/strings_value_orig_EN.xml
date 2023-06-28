@@ -6,21 +6,21 @@
  <strings>
   <!-- Language-specific ORIault values. (Noble Title Origin) They will be overriden by JSON file. -->
   <string id="NTP.MCMOriginal" text="Zijistark's Original"/>
-  <string id="NTP.ORIKing" text="King {NAME}" />
-  <string id="NTP.ORIQueen" text="Queen {NAME}" />
-  <string id="NTP.ORICrownM" text="{NAME}" />
-  <string id="NTP.ORICrownF" text="{NAME}" />
-  <string id="NTP.ORI2M" text="Duke {NAME}" />
-  <string id="NTP.ORI2F" text="Duchess {NAME}" />
-  <string id="NTP.ORI3M" text="Count {NAME}" />
-  <string id="NTP.ORI3F" text="Countess {NAME}" />
-  <string id="NTP.ORI4M" text="Baron {NAME}" />
-  <string id="NTP.ORI4F" text="Baroness {NAME}" />
-  <string id="NTP.ORISir" text="{NAME}" />
-  <string id="NTP.ORIDame" text="{NAME}" />
+  <string id="NTP.ORI1M_default" text="King {NAME}" />
+  <string id="NTP.ORI1F_default" text="Queen {NAME}" />
+  <string id="NTP.ORICrownM_default" text="{NAME}" />
+  <string id="NTP.ORICrownF_default" text="{NAME}" />
+  <string id="NTP.ORI2M_default" text="Duke {NAME}" />
+  <string id="NTP.ORI2F_default" text="Duchess {NAME}" />
+  <string id="NTP.ORI3M_default" text="Count {NAME}" />
+  <string id="NTP.ORI3F_default" text="Countess {NAME}" />
+  <string id="NTP.ORI4M_default" text="Baron {NAME}" />
+  <string id="NTP.ORI4F_default" text="Baroness {NAME}" />
+  <string id="NTP.ORI5M_default" text="{NAME}" />
+  <string id="NTP.ORI5F_default" text="{NAME}" />
 
-  <string id="NTP.ORIKing_empire" text="Emperor {NAME}" />
-  <string id="NTP.ORIQueen_empire" text="Empress {NAME}" />
+  <string id="NTP.ORI1M_empire" text="Emperor {NAME}" />
+  <string id="NTP.ORI1F_empire" text="Empress {NAME}" />
   <string id="NTP.ORICrownM_empire" text="{NAME}" />
   <string id="NTP.ORICrownF_empire" text="{NAME}" />
   <string id="NTP.ORI2M_empire" text="Duke {NAME}" />
@@ -29,11 +29,11 @@
   <string id="NTP.ORI3F_empire" text="Kyria {NAME}" />
   <string id="NTP.ORI4M_empire" text="Strategos {NAME}" />
   <string id="NTP.ORI4F_empire" text="Kyria {NAME}" />
-  <string id="NTP.ORISir_empire" text="{NAME}" />
-  <string id="NTP.ORIDame_empire" text="{NAME}" />
+  <string id="NTP.ORI5M_empire" text="{NAME}" />
+  <string id="NTP.ORI5F_empire" text="{NAME}" />
 
-  <string id="NTP.ORIKing_aserai" text="Sultan {NAME}" />
-  <string id="NTP.ORIQueen_aserai" text="Sultana {NAME}" />
+  <string id="NTP.ORI1M_aserai" text="Sultan {NAME}" />
+  <string id="NTP.ORI1F_aserai" text="Sultana {NAME}" />
   <string id="NTP.ORICrownM_aserai" text="{NAME}" />
   <string id="NTP.ORICrownF_aserai" text="{NAME}" />
   <string id="NTP.ORI2M_aserai" text="Prince {NAME}" />
@@ -42,24 +42,24 @@
   <string id="NTP.ORI3F_aserai" text="Emira {NAME}" />
   <string id="NTP.ORI4M_aserai" text="Shekih {NAME}" />
   <string id="NTP.ORI4F_aserai" text="Sheikha {NAME}" />
-  <string id="NTP.ORISir_aserai" text="{NAME}" />
-  <string id="NTP.ORIDame_aserai" text="{NAME}" />
+  <string id="NTP.ORI5M_aserai" text="{NAME}" />
+  <string id="NTP.ORI5F_aserai" text="{NAME}" />
 
-  <string id="NTP.ORIKing_battania" text="High King {NAME}" />
-  <string id="NTP.ORIQueen_battania" text="High Queen {NAME}" />
+  <string id="NTP.ORI1M_battania" text="High King {NAME}" />
+  <string id="NTP.ORI1F_battania" text="High Queen {NAME}" />
   <string id="NTP.ORICrownM_battania" text="{NAME}" />
   <string id="NTP.ORICrownF_battania" text="{NAME}" />
-  <string id="NTP.ORI2M_battania" text="Moramaer {NAME}" />
+  <string id="NTP.ORI2M_battania" text="Mormaer {NAME}" />
   <string id="NTP.ORI2F_battania" text="Bantiarna {NAME}" />
   <string id="NTP.ORI3M_battania" text="High Chief {NAME}" />
   <string id="NTP.ORI3F_battania" text="High Chieftess {NAME}" />
   <string id="NTP.ORI4M_battania" text="Chief {NAME}" />
   <string id="NTP.ORI4F_battania" text="Chieftess {NAME}" />
-  <string id="NTP.ORISir_battania" text="{NAME}" />
-  <string id="NTP.ORIDame_battania" text="{NAME}" />
+  <string id="NTP.ORI5M_battania" text="{NAME}" />
+  <string id="NTP.ORI5F_battania" text="{NAME}" />
 
-  <string id="NTP.ORIKing_khuzait" text="Khagan {NAME}" />
-  <string id="NTP.ORIQueen_khuzait" text="Khanum {NAME}" />
+  <string id="NTP.ORI1M_khuzait" text="Khagan {NAME}" />
+  <string id="NTP.ORI1F_khuzait" text="Khanum {NAME}" />
   <string id="NTP.ORICrownM_khuzait" text="{NAME}" />
   <string id="NTP.ORICrownF_khuzait" text="{NAME}" />
   <string id="NTP.ORI2M_khuzait" text="Baghatur {NAME}" />
@@ -68,11 +68,11 @@
   <string id="NTP.ORI3F_khuzait" text="Khanum {NAME}" />
   <string id="NTP.ORI4M_khuzait" text="Bey {NAME}" />
   <string id="NTP.ORI4F_khuzait" text="Begum {NAME}" />
-  <string id="NTP.ORISir_khuzait" text="{NAME}" />
-  <string id="NTP.ORIDame_khuzait" text="{NAME}" />
+  <string id="NTP.ORI5M_khuzait" text="{NAME}" />
+  <string id="NTP.ORI5F_khuzait" text="{NAME}" />
 
-  <string id="NTP.ORIKing_sturgia" text="Grand Prince {NAME}" />
-  <string id="NTP.ORIQueen_sturgia" text="Grand Princess {NAME}" />
+  <string id="NTP.ORI1M_sturgia" text="Grand Prince {NAME}" />
+  <string id="NTP.ORI1F_sturgia" text="Grand Princess {NAME}" />
   <string id="NTP.ORICrownM_sturgia" text="{NAME}" />
   <string id="NTP.ORICrownF_sturgia" text="{NAME}" />
   <string id="NTP.ORI2M_sturgia" text="Prince {NAME}" />
@@ -81,11 +81,11 @@
   <string id="NTP.ORI3F_sturgia" text="Jarl {NAME}" />
   <string id="NTP.ORI4M_sturgia" text="Boyar {NAME}" />
   <string id="NTP.ORI4F_sturgia" text="Boyarina {NAME}" />
-  <string id="NTP.ORISir_sturgia" text="{NAME}" />
-  <string id="NTP.ORIDame_sturgia" text="{NAME}" />
+  <string id="NTP.ORI5M_sturgia" text="{NAME}" />
+  <string id="NTP.ORI5F_sturgia" text="{NAME}" />
 
-  <string id="NTP.ORIKing_vlandia" text="King {NAME}" />
-  <string id="NTP.ORIQueen_vlandia" text="Queen {NAME}" />
+  <string id="NTP.ORI1M_vlandia" text="King {NAME}" />
+  <string id="NTP.ORI1F_vlandia" text="Queen {NAME}" />
   <string id="NTP.ORICrownM_vlandia" text="{NAME}" />
   <string id="NTP.ORICrownF_vlandia" text="{NAME}" />
   <string id="NTP.ORI2M_vlandia" text="Duke {NAME}" />
@@ -94,12 +94,12 @@
   <string id="NTP.ORI3F_vlandia" text="Countess {NAME}" />
   <string id="NTP.ORI4M_vlandia" text="Baron {NAME}" />
   <string id="NTP.ORI4F_vlandia" text="Baroness {NAME}" />
-  <string id="NTP.ORISir_vlandia" text="{NAME}" />
-  <string id="NTP.ORIDame_vlandia" text="{NAME}" />
+  <string id="NTP.ORI5M_vlandia" text="{NAME}" />
+  <string id="NTP.ORI5F_vlandia" text="{NAME}" />
 
-  <string id="NTP.ORIMinorLM" text="{NAME} of {CLAN}" />
-  <string id="NTP.ORIMinorLF" text="{NAME} of {CLAN}"/>
-  <string id="NTP.ORIMinorMM" text="{NAME} of {CLAN}" />
-  <string id="NTP.ORIMinorMF" text="{NAME} of {CLAN}"/>
+  <string id="NTP.ORIMinorLM_default" text="{NAME} of {CLAN}" />
+  <string id="NTP.ORIMinorLF_default" text="{NAME} of {CLAN}"/>
+  <string id="NTP.ORIMinorMM_default" text="{NAME} of {CLAN}" />
+  <string id="NTP.ORIMinorMF_default" text="{NAME} of {CLAN}"/>
  </strings>
 </base>

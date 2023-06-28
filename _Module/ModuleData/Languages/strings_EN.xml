@@ -21,10 +21,10 @@
   <string id="NTP.MCMSepLastHint" text="Separator for the Fief Names."/>
   <string id="NTP.MCMSize" text="Max Number of Fief Names"/>
   <string id="NTP.MCMSizeHint" text=""/>
-  <string id="NTP.MCMKing" text="King (Rank 1)"/>
-  <string id="NTP.MCMKingHint" text="Title format of the male monorch"/>
-  <string id="NTP.MCMQueen" text="Queen (Rank 1)"/>
-  <string id="NTP.MCMQueenHint" text="Title format of the female monorch"/>
+  <string id="NTP.MCMRank1M" text="King (Rank 1)"/>
+  <string id="NTP.MCMRank1MHint" text="Title format of the male monorch"/>
+  <string id="NTP.MCMRank1F" text="Queen (Rank 1)"/>
+  <string id="NTP.MCMRank1FHint" text="Title format of the female monorch"/>
   <string id="NTP.MCMRank2M" text="Duke (Rank 2)"/>
   <string id="NTP.MCMRank2MHint" text="Title format of a rank 2 male vassal"/>
   <string id="NTP.MCMRank2F" text="Duchess (Rank 2)"/>

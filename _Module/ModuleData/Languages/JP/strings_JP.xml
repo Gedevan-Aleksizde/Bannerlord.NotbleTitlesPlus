@@ -21,10 +21,10 @@
   <string id="NTP.MCMSepLastHint" text="最後の区切り文字・記号です (日本語なら変える必要はないはずです)"/>
   <string id="NTP.MCMSize" text="領地の最大表示数"/>
   <string id="NTP.MCMSizeHint" text="表示する領地名の最大数です。"/>
-  <string id="NTP.MCMKing" text="王 (第1位)"/>
-  <string id="NTP.MCMKingHint" text="男性君主の称号形式です。"/>
-  <string id="NTP.MCMQueen" text="女王 (第1位)"/>
-  <string id="NTP.MCMQueenHint" text="女性君主の称号形式です。"/>
+  <string id="NTP.MCMRank1M" text="王 (第1位)"/>
+  <string id="NTP.MCMRank1MHint" text="男性君主の称号形式です。"/>
+  <string id="NTP.MCMRank1F" text="女王 (第1位)"/>
+  <string id="NTP.MCMRank1FHint" text="女性君主の称号形式です。"/>
   <string id="NTP.MCMRank2M" text="公爵 (第2位)"/>
   <string id="NTP.MCMRank2MHint" text="第2位の序列の男性領主の称号形式です。"/>
   <string id="NTP.MCMRank2F" text="女公爵 (第2位)"/>
@@ -36,15 +36,15 @@
   <string id="NTP.MCMRank4M" text="男爵 (第4位)"/>
   <string id="NTP.MCMRank4MHint" text="第4位の序列の男性領主の称号形式です。"/>
   <string id="NTP.MCMRank4F" text="女男爵 (第4位)"/>
-  <string id="NTP.MCMRank4FHint" text="第4位女性領主の称号形式です。"/>
+  <string id="NTP.MCMRank4FHint" text="第4位の序列の女性領主の称号形式です。"/>
   <string id="NTP.MCMRank5M" text="貴族 (第5位)"/>
   <string id="NTP.MCMRank5MHint" text="一般男性クランメンバーの称号形式です。"/>
   <string id="NTP.MCMRank5F" text="女貴族 (第5位)"/>
   <string id="NTP.MCMRank5FHint" text="一般女性クランメンバーの称号形式です。"/>
   <string id="NTP.MCMCrownM" text="王太子"/>
-  <string id="NTP.MCMCrownMHint" text="男性法定推定王位相続人の称号形式です。"/>
+  <string id="NTP.MCMCrownMHint" text="君主の男性後継者の称号形式です。"/>
   <string id="NTP.MCMCrownF" text="王太女"/>
-  <string id="NTP.MCMCrownFHint" text="女性法定推定王位相続人の称号形式です。"/>
+  <string id="NTP.MCMCrownFHint" text="君主の女性後継者の称号形式です。"/>
   <string id="NTP.MCMMinorLM" text="男性リーダー"/>
   <string id="NTP.MCMMinorLMHint" text="男性リーダーの称号形式です。"/>
   <string id="NTP.MCMMinorLF" text="女性リーダー"/>
