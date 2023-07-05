@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
-// using NobleTitlesPlus.Settings;
-using TaleWorlds.CampaignSystem;
-using TaleWorlds.CampaignSystem.Conversation.Tags;
 using TaleWorlds.Core;
+using TaleWorlds.CampaignSystem;
 using TaleWorlds.Library;
 using TaleWorlds.Localization;
-using TaleWorlds.MountAndBlade;
+using System.Linq;
 using TaleWorlds.MountAndBlade.Diamond.Ranked;
-using TaleWorlds.MountAndBlade.ViewModelCollection.Multiplayer.ClassLoadout;
-using TaleWorlds.SaveSystem;
+using TaleWorlds.MountAndBlade;
 
 namespace NobleTitlesPlus.DB
 {
@@ -78,14 +75,8 @@ namespace NobleTitlesPlus.DB
         // culture StringId => CultureEntry (contains bulk of title information, only further split by gender)
         protected TitleSet titleSet;
 
-        public static TitleSet.FactionTitleSet defaultCulture = TitleSet.defaultCultureValue;
-        public static TitleSet.FactionTitleSet defaultMinorFaction = new(
-                new("{=NobleTitlePlus.defaultMinorLeader}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorLeader.Female}{NAME} of {CLAN}"),
-                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}"),
-                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}"),
-                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}"),
-                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}")
-            );
+        public static TitleSet.FactionTitleSet defaultCulture = TitleSet.DefaultCultureValue;
+        public static TitleSet.FactionTitleSet defaultMinorFaction = TitleSet.DefaultMinorFactionValue;
         internal TextObject GetTitle(Hero hero, TitleRank rank)
         {
             bool isMinorFaction = hero.IsMinorFactionHero;
@@ -131,25 +122,114 @@ namespace NobleTitlesPlus.DB
     public class TitleSet
     {
         [JsonProperty("CULTURES")]
-        public Dictionary<string, FactionTitleSet> cultures = new() { { "default", defaultCultureValue } };
+        public Dictionary<string, FactionTitleSet> cultures = new() { { "default", DefaultCultureValue } };
         [JsonProperty("MINORS")]
-        public Dictionary<string, FactionTitleSet> minorFactions = new() { { "default", defaultMinorFactionValue } };
+        public Dictionary<string, FactionTitleSet> minorFactions = new() { { "default", DefaultMinorFactionValue } };
         [JsonProperty("KINGDOMS")]
-        public Dictionary<string, FactionTitleSet> kingdoms = new() { { "default", defaultCultureValue } };
-        public static readonly FactionTitleSet defaultCultureValue = new(
-                new("{=NobleTitlePlus.defaultKing}King {NAME}", "{=NobleTitlePlus.defaultQueen}Queen {NAME}"),
-                new("{=NobleTitlePlus.defaultDuke}Duke {NAME}", "{=NobleTitlePlus.defaultDuchess}Duchess {NAME}"),
-                new("{=NobleTitlePlus.defaultCount}Count {NAME}", "{=NobleTitlePlus.defaultCountess}Countess {NAME}"),
-                new("{=NobleTitlePlus.defaultBaron}Baron {NAME}", "{=NobleTitlePlus.defaultBaroness}Baroness {NAME}"),
-                new("{=NobleTitlePlus.defaultSir}{NAME}", "{=NobleTitlePlus.defaultDame}{NAME}")
+        public Dictionary<string, FactionTitleSet> kingdoms = new() { { "default", DefaultCultureValue } };
+        public static FactionTitleSet DefaultCultureValue => new(
+                new(
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank1M_default}King {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRanl1F_default}Queen {NAME}"))
+                    ),
+                new(
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank2M_default}Duke {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank2F_default}Duchess {NAME}"))
+                    ),
+                new(
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank3M_default}Count {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank3F_default}Countess {NAME}"))
+                    ),
+                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank4M_default}Baron {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank4F_default}Baroness {NAME}"))
+                    ),
+                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank5M_default}{NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank5F_default}{NAME}"))
+                    )
             );
-        public static readonly FactionTitleSet defaultMinorFactionValue = new(
-                new("{=NobleTitlePlus.defaultMinorLeader}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorLeader.Female}{NAME} of {CLAN}"),
-                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}"),
-                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}"),
-                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}"),
-                new("{=NobleTitlePlus.defaultMinorMember}{NAME} of {CLAN}", "{=NobleTitlePlus.defaultMinorMember.Famale}{NAME} of {CLAN}")
+        public static FactionTitleSet DefaultMinorFactionValue = new(
+            new(
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank1M_default}King {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRanl1F_default}Queen {NAME}"))
+                    ),
+                new(
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank2M_default}Duke {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank2F_default}Duchess {NAME}"))
+                    ),
+                new(
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank3M_default}Count {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank3F_default}Countess {NAME}"))
+                    ),
+                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank4M_default}Baron {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank4F_default}Baroness {NAME}"))
+                    ),
+                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank5M_default}{NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank5F_default}{NAME}"))
+                    )
             );
+        public TitleSet()
+        {
+            this.AddDefaultCutlureTitles();
+            this.AddAllMinorFactionTitles();
+            this.TmpDebug();
+        }
+        public void AddDefaultCutlureTitles()
+        {
+            foreach(string cultureId in new string[] { "aserai", "battania", "empire", "khuzait", "sturgia", "vlandia" })
+            {
+                if (!this.cultures.ContainsKey(cultureId))
+                {
+                    TextObject ruler = GameTexts.FindText("str_faction_ruler_name_with_title", cultureId);
+                    TextObject noble = GameTexts.FindText("str_faction_noble_name_with_title", cultureId);
+                    TextObject whyneedM = new TextObject("", new Dictionary<string, object>() { { "GENDER", 0}, { "NAME", "______MOCKPLACEHOLDER_____" } });
+                    TextObject whyneedF = new TextObject("", new Dictionary<string, object>() { { "GENDER", 1 }, { "NAME", "______MOCKPLACEHOLDER_____" } });
+                    this.cultures.Add(
+                        cultureId,
+                        new FactionTitleSet(
+                            new(Util.QuoteVarBitEasiler(ruler.SetTextVariable("RULER", whyneedM)), Util.QuoteVarBitEasiler(ruler.SetTextVariable("RULER", whyneedF))),
+                            new(Util.QuoteVarBitEasiler(noble.SetTextVariable("RULER", whyneedM)), Util.QuoteVarBitEasiler(noble.SetTextVariable("RULER", whyneedF))),
+                            new(Util.QuoteVarBitEasiler(noble.SetTextVariable("RULER", whyneedM)), Util.QuoteVarBitEasiler(noble.SetTextVariable("RULER", whyneedF))),
+                            new(Util.QuoteVarBitEasiler(noble.SetTextVariable("RULER", whyneedM)), Util.QuoteVarBitEasiler(noble.SetTextVariable("RULER", whyneedF))),
+                            new("{NAME}", "{NAME}") // ugly code...
+                            )
+                        );
+                }
+            }
+        }
+        public void AddAllMinorFactionTitles()
+        {
+            foreach(Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
+            {
+                this.minorFactions.Add(c.StringId, DefaultMinorFactionValue);
+                Util.Log.Print($"Intialized title set  for minor faction {c.StringId}");
+            }
+        }
+        public void TmpDebug()
+        {
+            foreach(string keys in this.cultures.Keys)
+            {
+                Util.Log.Print($"Calture key: {keys}");
+                for(int i = 1; i <= 5; i++)
+                {
+                    Util.Log.Print($"King = ({this.cultures[keys].GetTitleRaw(true, (TitleRank)i )}, {this.cultures[keys].GetTitleRaw(false, (TitleRank)i)})");
+                }
+            }
+            foreach (string keys in this.kingdoms.Keys)
+            {
+                Util.Log.Print($"Kingdom key: {keys}");
+                for (int i = 1; i <= 5; i++)
+                {
+                    Util.Log.Print($"King = ({this.kingdoms[keys].GetTitleRaw(true, (TitleRank)i)}, {this.kingdoms[keys].GetTitleRaw(false, (TitleRank)i)})");
+                }
+            }
+            foreach (string keys in this.minorFactions.Keys)
+            {
+                Util.Log.Print($"Minor Factions key: {keys}");
+                Util.Log.Print($"Leader = ({this.minorFactions[keys].GetTitleRaw(true, TitleRank.King)}, {this.minorFactions[keys].GetTitleRaw(false, TitleRank.King)})");
+                Util.Log.Print($"Member = ({this.minorFactions[keys].GetTitleRaw(true, TitleRank.Noble)}, {this.minorFactions[keys].GetTitleRaw(false, TitleRank.Noble)})");
+
+            }
+        }
         internal TextObject GetTitle(Hero hero, TitleRank rank)
         {
             bool isMinorFaction = hero.IsMinorFactionHero;
@@ -157,11 +237,124 @@ namespace NobleTitlesPlus.DB
             string kingdomId = hero?.Clan?.Kingdom?.Name.ToString() ?? "";
             return this.GetTitle(hero.IsFemale, factionId, kingdomId, rank, isMinorFaction ? Category.MinorFaction : Category.Default);
         }
-        internal TextObject GetTitle(bool isFemale, string factionId, string kingdomId, TitleRank rank, Category category)
+        internal void SetKingdomTitle(string newTitle, string id, bool isFemale, TitleRank rank, bool append = false)
+        {
+            if (this.kingdoms.ContainsKey(id))
+            {
+                this.kingdoms[id].SetTitle(isFemale, rank, newTitle);
+            }
+            else if (append)
+            {
+                Util.Log.Print($"WARNING: Kingdom ID {id} not found! Now new culture entry added.");
+                this.kingdoms.Add(id, DefaultCultureValue);
+                this.kingdoms[id].SetTitle(isFemale, rank, newTitle);
+            }
+            else
+            {
+                Util.Log.Print($"WARNING: Renaming the format failed! No kingdom entries asscociated with {id}!");
+            }
+        }
+        internal void SetCultureTitle(string newTitle, string id, bool isFemale, TitleRank rank, bool append = false)
+        {
+            if (this.cultures.ContainsKey(id))
+            {
+                this.cultures[id].SetTitle(isFemale, rank, newTitle);
+            }
+            else if (append)
+            {
+                Util.Log.Print($"WARNING: Culture ID {id} not found! Now new culture entry added.");
+                this.cultures.Add(id, DefaultCultureValue);
+                this.cultures[id].SetTitle(isFemale, rank, newTitle);
+            }
+            else
+            {
+                Util.Log.Print($"WARNING: Renaming the format failed! No culture entries asscociated with {id}!");
+            }
+        }
+        internal void SetMinorFactionTitle(string clanId, bool isFemale, TitleRank rank, string newTitle, bool append = false)
+        {
+            if (rank == TitleRank.King || rank == TitleRank.Noble)
+            {
+                if (this.minorFactions.ContainsKey(clanId))
+                {
+                    this.minorFactions[clanId].SetTitle(isFemale, rank, newTitle);
+                }
+                else if (append)
+                {
+                    this.minorFactions.Add(clanId, DefaultMinorFactionValue);
+                    this.minorFactions[clanId].SetTitle(isFemale, rank, newTitle);
+                }
+                else
+                {
+                    Util.Log.Print($"TitleSet.SetMinorFactionTitle called: isFemale={isFemale}, id={clanId}, rank={rank}, append={append} ->  ID {clanId} found.");
+                    Util.Log.Print($"WARNING: No mionor faction entries asscociated with {clanId}!");
+                }
+            }
+            else
+            {
+                Util.Log.Print($"WARNING: irregular minor faction rank requested! ({rank})");
+            }
+        }
+        internal string GetMinorTitleRaw(string clanId, bool isFemale, TitleRank rank, string defaultFormat = "{NAME}")
+        {
+            if (rank == TitleRank.King || rank == TitleRank.Noble)
+            {
+                if (this.minorFactions.TryGetValue(clanId, out FactionTitleSet titleSet))
+                {
+                    return titleSet.GetTitleRaw(isFemale, rank);
+                }
+                else
+                {
+                    this.minorFactions.Add(clanId, DefaultMinorFactionValue);
+                    this.SetMinorFactionTitle(clanId, isFemale, rank, defaultFormat);
+                    return this.minorFactions[clanId].GetTitleRaw(isFemale, rank);
+                }
+            }
+            else
+            {
+                Util.Log.Print($"WARNING: irregular minor faction rank requested! ({rank})");
+                return defaultFormat;
+            }
+        }
+        internal string GetTitleRaw(bool isFemale, string factionId, string? kingdomId, TitleRank rank, Category category)
         {
             if (category == Category.Default)
             {
-                if (this.kingdoms.TryGetValue(kingdomId, out FactionTitleSet kingdomTitles))
+                if (this.kingdoms.TryGetValue(kingdomId ?? "", out FactionTitleSet kingdomTitles))
+                {
+                    return kingdomTitles.GetTitleRaw(isFemale, rank);
+                }
+                else if (this.cultures.TryGetValue(factionId, out FactionTitleSet cultureTitles))
+                {
+                    return cultureTitles.GetTitleRaw(isFemale, rank);
+                }
+                else
+                {
+                    return DefaultCultureValue.GetTitleRaw(isFemale, rank);
+                }
+            }
+            else if (category == Category.MinorFaction)
+            {
+                if (this.minorFactions.TryGetValue(factionId, out FactionTitleSet minorFactionTitles))
+                {
+                    return minorFactionTitles.GetTitleRaw(isFemale, rank);
+                }
+                else
+                {
+                    return DefaultMinorFactionValue.GetTitleRaw(isFemale, rank);
+                }
+            }
+            else
+            {
+                Util.Log.Print($"WARNING: WRONG CATEGORY: {category}");
+                return "{NAME}";
+            }
+        }
+        internal TextObject GetTitle(bool isFemale, string factionId, string? kingdomId, TitleRank rank, Category category)
+        {
+            if (category == Category.Default)
+            {
+                if (this.kingdoms.TryGetValue(kingdomId ?? "", out FactionTitleSet kingdomTitles))
                 {
                     return kingdomTitles.GetTitle(isFemale, rank);
                 }
@@ -171,7 +364,7 @@ namespace NobleTitlesPlus.DB
                 }
                 else
                 {
-                    return defaultCultureValue.GetTitle(isFemale, rank);
+                    return DefaultCultureValue.GetTitle(isFemale, rank);
                 }
             }
             else if (category == Category.MinorFaction)
@@ -182,13 +375,51 @@ namespace NobleTitlesPlus.DB
                 }
                 else
                 {
-                    return defaultMinorFactionValue.GetTitle(isFemale, rank);
+                    return DefaultMinorFactionValue.GetTitle(isFemale, rank);
                 }
             }
             else
             {
                 return new TextObject("{NAME}");
             }
+        }
+        internal string GetTitleId(bool isFemale, string cultureId, string kingdomId, TitleRank rank, Category category)
+        {
+            string titleSetId;
+            string group = category == Category.Default ? "Kingdom" : "Minor";
+            FactionTitleSet v = DefaultCultureValue;
+            if (category == Category.Default)
+            {
+                if (this.kingdoms.TryGetValue(kingdomId ?? "", out v))
+                {
+                    titleSetId = kingdomId;
+                }
+                else if (this.cultures.TryGetValue(cultureId, out v))
+                {
+                    titleSetId = cultureId;
+                }
+                else
+                {
+                    titleSetId = "default";
+                }
+            }
+            else if (category == Category.MinorFaction)
+            {
+                if (this.minorFactions.TryGetValue(cultureId, out v))
+                {
+                    titleSetId = cultureId;
+                }
+                else
+                {
+                    titleSetId = "default";
+                }
+            }
+            else
+            {
+                titleSetId = "default";
+            }
+            if (v.GetTitleRaw(isFemale, rank) == "") titleSetId = "default";
+            return titleSetId;
         }
         [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
         public class FactionTitleSet
@@ -204,13 +435,21 @@ namespace NobleTitlesPlus.DB
             [JsonProperty]
             private GenderTitlePair noble;
 
-            public FactionTitleSet(GenderTitlePair king, GenderTitlePair duke, GenderTitlePair count, GenderTitlePair baron, GenderTitlePair noble)
+            public FactionTitleSet(GenderTitlePair king, GenderTitlePair duke, GenderTitlePair count, GenderTitlePair baron, GenderTitlePair? noble)
             {
                 this.king = king;
                 this.duke = duke;
                 this.count = count;
                 this.baron = baron;
-                this.noble = noble;
+                this.noble = noble ?? new GenderTitlePair("{NAME}", "{NAME}");
+            }
+            public FactionTitleSet(FactionTitleSet factionTitleSet)
+            {
+                this.king = new(factionTitleSet.king);
+                this.duke= new(factionTitleSet.duke);
+                this.count= new(factionTitleSet.count);
+                this.baron= new(factionTitleSet.baron);
+                this.noble= new(factionTitleSet.noble);
             }
             public TextObject GetTitle(bool isFemale, TitleRank rank, bool returnBlankfMisssing = false)
             {
@@ -224,7 +463,19 @@ namespace NobleTitlesPlus.DB
                     _ => returnBlankfMisssing ? new TextObject("") : new TextObject("{NAME}"),
                 };
             }
-            public void SetTitle(bool isFemale, TitleRank rank, TextObject titleFormat)
+            public string GetTitleRaw(bool isFemale, TitleRank rank, bool returnBlankfMisssing = false, string defaultName = "{NAME}")
+            {
+                return rank switch
+                {
+                    TitleRank.King => this.king.GetTitleRaw(isFemale),
+                    TitleRank.Duke => this.duke.GetTitleRaw(isFemale),
+                    TitleRank.Count => this.count.GetTitleRaw(isFemale),
+                    TitleRank.Baron => this.baron.GetTitleRaw(isFemale),
+                    TitleRank.Noble => this.noble.GetTitleRaw(isFemale),
+                    _ => returnBlankfMisssing ? "" : defaultName
+                };
+            }
+            public void SetTitle(bool isFemale, TitleRank rank, string titleFormat)
             {
                 switch (rank)
                 {
@@ -256,12 +507,24 @@ namespace NobleTitlesPlus.DB
                 private TextObject femaleFormat;
                 public TextObject GetTitle(bool isFemale)
                 {
-                    return isFemale ? femaleFormat : maleFormat;
+                    return isFemale ? this.femaleFormat : this.maleFormat;
                 }
-                public void SetTitle(bool isFemale, TextObject titleFormat)
+                public string GetTitleRaw(bool isFemale)
                 {
-                    if (isFemale) this.maleFormat = titleFormat;
-                    else this.femaleFormat = titleFormat;
+                    return isFemale ? this.female : this.male;
+                }
+                public void SetTitle(bool isFemale, string titleFormat)
+                {
+                    if (isFemale)
+                    {
+                        this.female = titleFormat;
+                        this.femaleFormat = new TextObject(this.female);
+                    }
+                    else
+                    {
+                        this.male = titleFormat;
+                        this.maleFormat = new TextObject(this.male);
+                    }
                 }
                 public GenderTitlePair(string? male = null, string? female = null)
                 {
@@ -269,6 +532,13 @@ namespace NobleTitlesPlus.DB
                     this.female = female ?? this.female;
                     this.maleFormat = new TextObject(this.NormalizeInputTitle(this.male));
                     this.femaleFormat = new TextObject(this.NormalizeInputTitle(this.female));
+                }
+                public GenderTitlePair(GenderTitlePair genderTitlePair)
+                {
+                    this.male = genderTitlePair.male;
+                    this.maleFormat = new TextObject(this.male);
+                    this.female= genderTitlePair.female;
+                    this.femaleFormat = new TextObject(genderTitlePair.female);
                 }
                 private string NormalizeInputTitle(string titleFormat)
                 {
@@ -304,12 +574,18 @@ namespace NobleTitlesPlus.DB
         Duke,
         Count,
         Baron,
-        Noble
+        Noble,
+        Prince
     }
     public enum Category
     {
         Default,
         MinorFaction,
         Citizen
+    }
+    public enum Gender
+    {
+        F,
+        M
     }
 }
