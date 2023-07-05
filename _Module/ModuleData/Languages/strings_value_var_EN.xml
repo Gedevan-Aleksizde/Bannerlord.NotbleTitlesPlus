@@ -21,7 +21,7 @@
 
   <string id="NTP.VAR1M_empire" text="Basileus {NAME}" />
   <string id="NTP.VAR1F_empire" text="Basileia {NAME}" />
-  <string id="NTP.VARCrownM_empire" text="Porphyrogennos {NAME}" />
+  <string id="NTP.VARCrownM_empire" text="Porphyrogennetos {NAME}" />
   <string id="NTP.VARCrownF_empire" text="Porphyrogennete {NAME}" />
   <string id="NTP.VAR2M_empire" text="Megas Archon {NAME}" />
   <string id="NTP.VAR2F_empire" text="Megas Archontissa {NAME}" />
@@ -34,8 +34,8 @@
 
   <string id="NTP.VAR1M_aserai" text="Sultan {NAME}" />
   <string id="NTP.VAR1F_aserai" text="Sultana {NAME}" />
-  <string id="NTP.VARCrownM_aserai" text="{NAME}" />
-  <string id="NTP.VARCrownF_aserai" text="{NAME}" />
+  <string id="NTP.VARCrownM_aserai" text="Sehzade {NAME}" />
+  <string id="NTP.VARCrownF_aserai" text="Sehzada {NAME}" />
   <string id="NTP.VAR2M_aserai" text="Emir al-Umara {NAME}" />
   <string id="NTP.VAR2F_aserai" text="Emira al-Umara {NAME}" />
   <string id="NTP.VAR3M_aserai" text="Emir Kabir {NAME}" />
@@ -102,13 +102,13 @@
   <string id="NTP.VARCrownM_tetsojin" text="{NAME} Oji" />
   <string id="NTP.VARCrownF_tetsojin" text="{NAME} Ojo" />
   <string id="NTP.VAR2M_tetsojin" text="Shogun {CLAN}{NAME}-San" />
-  <string id="NTP.VAR2F_tetsojin" text="Shogun {CLAN}{NAME}-San" />
+  <string id="NTP.VAR2F_tetsojin" text="Joro-Otoshiyori {CLAN}{NAME}-San" />
   <string id="NTP.VAR3M_tetsojin" text="Daimyo {CLAN}{NAME}-San" />
-  <string id="NTP.VAR3F_tetsojin" text="Daimyo {CLAN}{NAME}-San" />
+  <string id="NTP.VAR3F_tetsojin" text="Otosiyori {CLAN}{NAME}-San" />
   <string id="NTP.VAR4M_tetsojin" text="Myosyu {CLAN}{NAME}-San" />
-  <string id="NTP.VAR4F_tetsojin" text="Myosyu {CLAN}{NAME}-San" />
+  <string id="NTP.VAR4F_tetsojin" text="Myobu {CLAN}{NAME}-San" />
   <string id="NTP.VAR5M_tetsojin" text="Ason {CLAN}{NAME}-San" />
-  <string id="NTP.VAR5F_tetsojin" text="Ason {CLAN}{NAME}-San" />
+  <string id="NTP.VAR5F_tetsojin" text="Gozen {CLAN}{NAME}-San" />
 
   <string id="NTP.VARMinorLM_default" text="{NAME} of {CLAN}" />
   <string id="NTP.VARMinorLF_default" text="{NAME} of {CLAN}"/>

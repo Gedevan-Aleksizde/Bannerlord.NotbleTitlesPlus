@@ -11,7 +11,7 @@
   <string id="NTP.MCMGFOR" text="Fief Display Format"/>
   <string id="NTP.MCMGDEF" text="Default Titles"/>
   <string id="NTP.MCMGMinor" text="Minor Faction Default Titles"/>
-  <string id="NPT.MCMFOWHint" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
+  <string id="NTP.MCMFOWHint" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
   <string id="NTP.MCMencyclopediaHint" text="Current Inavailable"/>
   <string id="NTP.MCMTag" text="Tagging"/>
   <string id="NTP.MCMTagHint" text="Tagging fief names. Basically enabling recommended if you are European langauge user."/>

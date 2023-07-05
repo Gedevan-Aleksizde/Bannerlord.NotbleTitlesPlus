@@ -51,11 +51,11 @@
   <string id="NTP.DEFCrownM_battania" text="{NAME}" />
   <string id="NTP.DEFCrownF_battania" text="{NAME}" />
   <string id="NTP.DEF2M_battania" text="モーマー゠{NAME}" />
-  <string id="NTP.DEF2F_battania" text="バンティアルナ゠{NAME}" />
+  <string id="NTP.DEF2F_battania" text="バンモーマー゠{NAME}" />
   <string id="NTP.DEF3M_battania" text="モーマー゠{NAME}" />
   <string id="NTP.DEF3F_battania" text="バンティアルナ゠{NAME}" />
   <string id="NTP.DEF4M_battania" text="モーマー゠{NAME}" />
-  <string id="NTP.DEF4F_battania" text="バンティアルナ゠{NAME}" />
+  <string id="NTP.DEF4F_battania" text="バンモーマー゠{NAME}" />
   <string id="NTP.DEF5M_battania" text="{NAME}" />
   <string id="NTP.DEF5F_battania" text="{NAME}" />
 
@@ -98,9 +98,8 @@
   <string id="NTP.DEF5M_vlandia" text="{NAME}" />
   <string id="NTP.DEF5F_vlandia" text="{NAME}" />
 
-
-  <string id="NTP.DEFMinorLM_defult" text="{CLAN}の{NAME}" />
-  <string id="NTP.DEFMinorLF_default" text="{CLAN}の{NAME}"/>
+  <string id="NTP.DEFMinorLM_default" text="{CLAN}の{NAME}" />
+  <string id="NTP.DEFMinorLF_default" text="{CLAN}の{NAME}" />
   <string id="NTP.DEFMinorMM_default" text="{CLAN}の{NAME}" />
   <string id="NTP.DEFMinorMF_default" text="{CLAN}の{NAME}"/>
  </strings>

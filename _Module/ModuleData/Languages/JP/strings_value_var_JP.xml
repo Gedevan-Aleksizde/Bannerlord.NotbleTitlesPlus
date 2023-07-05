@@ -21,7 +21,7 @@
 
   <string id="NTP.VAR1M_empire" text="バシレイオス゠{NAME}" />
   <string id="NTP.VAR1F_empire" text="バシリッサ゠{NAME}" />
-  <string id="NTP.VARCrownM_empire" text="ポルフォロゲノス゠{NAME}" />
+  <string id="NTP.VARCrownM_empire" text="ポルフィロゲネトス゠{NAME}" />
   <string id="NTP.VARCrownF_empire" text="ポルフィロゲネテ゠{NAME}" />
   <string id="NTP.VAR2M_empire" text="メガスアルホン゠{NAME}" />
   <string id="NTP.VAR2F_empire" text="メガスアルホンティッサ゠{NAME}" />
@@ -34,8 +34,8 @@
 
   <string id="NTP.VAR1M_aserai" text="スルタン゠{NAME}" />
   <string id="NTP.VAR1F_aserai" text="スルタナ゠{NAME}" />
-  <string id="NTP.VARCrownM_aserai" text="{NAME}" />
-  <string id="NTP.VARCrownF_aserai" text="{NAME}" />
+  <string id="NTP.VARCrownM_aserai" text="シェフザデ゠{NAME}" />
+  <string id="NTP.VARCrownF_aserai" text="シェフザダ゠{NAME}" />
   <string id="NTP.VAR2M_aserai" text="アミールアルウマラ゠{NAME}" />
   <string id="NTP.VAR2F_aserai" text="アミーラアルウマラ゠{NAME}" />
   <string id="NTP.VAR3M_aserai" text="アミールカビル゠{NAME}" />
@@ -115,13 +115,13 @@
   <string id="NTP.VARCrownM_tetsojin" text="{NAME}皇子" />
   <string id="NTP.VARCrownF_tetsojin" text="{NAME}皇女" />
   <string id="NTP.VAR2M_tetsojin" text="将軍{CLAN}{NAME}" />
-  <string id="NTP.VAR2F_tetsojin" text="将軍{CLAN}{NAME}" />
+  <string id="NTP.VAR2F_tetsojin" text="上臈御年寄{CLAN}{NAME}" />
   <string id="NTP.VAR3M_tetsojin" text="大名゠{CLAN}{NAME}卿" />
-  <string id="NTP.VAR3F_tetsojin" text="大名゠{CLAN}{NAME}卿" />
+  <string id="NTP.VAR3F_tetsojin" text="御年寄゠{CLAN}{NAME}" />
   <string id="NTP.VAR4M_tetsojin" text="名主{CLAN}{NAME}卿" />
-  <string id="NTP.VAR4F_tetsojin" text="名主{CLAN}{NAME}卿" />
+  <string id="NTP.VAR4F_tetsojin" text="命婦{CLAN}{NAME}" />
   <string id="NTP.VAR5M_tetsojin" text="{CLAN}{NAME}朝臣" />
-  <string id="NTP.VAR5F_tetsojin" text="{CLAN}{NAME}朝臣" />
+  <string id="NTP.VAR5F_tetsojin" text="{CLAN}{NAME}御前" />
 
   <string id="NTP.VARMinorLM_default" text="{CLAN}の{NAME}" />
   <string id="NTP.VARMinorLF_default" text="{CLAN}の{NAME}"/>
@@ -130,7 +130,7 @@
 
   <string id="NTP.VARMinorLM_legion_of_the_betrayed" text="レガートゥス゠{NAME}" />
   <string id="NTP.VARMinorLF_legion_of_the_betrayed" text="レガートゥス゠{NAME}"/>
-  <string id="NTP.VARMinorMM_legion_of_the_betrayed" text="トリブヌス゠{NAME}" />
-  <string id="NTP.VARMinorMF_legion_of_the_betrayed" text="トリブヌス゠{NAME}"/>
+  <string id="NTP.VARMinorMM_legion_of_the_betrayed" text="トリブーヌス゠{NAME}" />
+  <string id="NTP.VARMinorMF_legion_of_the_betrayed" text="トリブーヌス゠{NAME}"/>
  </strings>
 </base>
