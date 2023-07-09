@@ -128,7 +128,7 @@ namespace NobleTitlesPlus.DB
         [JsonProperty("MINORS")]
         public Dictionary<string, FactionTitleSet> minorFactions = new() { { "default", DefaultMinorFactionValue } };
         [JsonProperty("FACTIONS")]
-        public Dictionary<string, FactionTitleSet> factions = new() { { "default", BlankTitleSet} };
+        public Dictionary<string, FactionTitleSet> factions = new();
         public static FactionTitleSet DefaultCultureValue => new(
                 new(
                     Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank1M_default}King {NAME}")),
@@ -174,19 +174,20 @@ namespace NobleTitlesPlus.DB
         public static FactionTitleSet BlankTitleSet => new(new("", ""), new("", ""), new("", ""), new("", ""), new("", ""));
         public TitleSet()
         {
-            this.InitCultureTitles(true);
-            this.InitFactionTitles(false);
-            this.InitMinorFactionTitles();
+            this.InitCultureTitles(AssignMode.Assign);
+            this.InitFactionTitles(AssignMode.Blank);
+            this.InitMinorFactionTitles(AssignMode.Assign);
             // this.TmpDebug();
         }
-        public void InitCultureTitles(bool assign)
+        public void InitCultureTitles(AssignMode mode)
         {
             List<string> cultureIds = Kingdom.All.Select(k => k.Culture.StringId).Distinct().ToList();
             foreach (string cultureId in cultureIds)
             {
                 if(!this.cultures.ContainsKey(cultureId)) this.cultures.Add(cultureId, BlankTitleSet);
             }
-            if (assign)
+            if (mode == AssignMode.None) return;
+            else if (mode == AssignMode.Assign)
             {
                 foreach(string cultureId in cultureIds)
                 {
@@ -199,8 +200,23 @@ namespace NobleTitlesPlus.DB
                     }
                 }
             }
+            else if(mode == AssignMode.Blank)
+            {
+                foreach (string cultureId in cultureIds)
+                {
+                    this.cultures.TryGetValue(cultureId, out FactionTitleSet fts);
+                    foreach (bool isFemale in new bool[] { false, true })
+                    {
+
+                        foreach (TitleRank rank in Enum.GetValues(typeof(TitleRank)))
+                        {
+                            fts.SetTitle(isFemale, rank, "");
+                        }
+                    }
+                }
+            }
         }
-        public void InitFactionTitles(bool assign)
+        public void InitFactionTitles(AssignMode mode)
         {
             List<string> cultureIds = Kingdom.All.Select(k => k.Culture.StringId).Distinct().ToList();
             List<Kingdom> kingdoms = Kingdom.All.Where(k => !cultureIds.Contains(k.StringId)).ToList();
@@ -208,7 +224,8 @@ namespace NobleTitlesPlus.DB
             {
                 if(!this.factions.ContainsKey(k.StringId)) this.factions.Add(k.StringId, BlankTitleSet);
             }
-            if (assign)
+            if (mode == AssignMode.None) return;
+            else if (mode == AssignMode.Assign)
             {
                 foreach (Kingdom k in kingdoms)
                 {
@@ -221,12 +238,37 @@ namespace NobleTitlesPlus.DB
                     }
                 }
             }
-        }
-        public void InitMinorFactionTitles()
-        {
-            foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
+            else if(mode == AssignMode.Blank)
             {
-                this.minorFactions.Add(c.StringId, DefaultMinorFactionValue);
+                foreach (Kingdom k in kingdoms)
+                {
+                    this.factions.TryGetValue(k.StringId, out FactionTitleSet fts);
+                    foreach (bool isFemale in new bool[] { false, true })
+                    {
+                        foreach (TitleRank rank in Enum.GetValues(typeof(TitleRank)))
+                        {
+                            fts.SetTitle(isFemale, rank, "");
+                        }
+                    }
+                }
+            }
+        }
+        public void InitMinorFactionTitles(AssignMode mode)
+        {
+            if(mode == AssignMode.None || mode == AssignMode.Assign)
+            {
+                foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
+                {
+                    this.minorFactions.Add(c.StringId, DefaultMinorFactionValue);
+                }
+            }
+            else if(mode == AssignMode.Blank)
+            {
+                // perhaps never used
+                foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
+                {
+                    this.minorFactions.Add(c.StringId, BlankTitleSet);
+                }
             }
         }
         public void AddDefaultCutlureTitles()
@@ -695,5 +737,11 @@ namespace NobleTitlesPlus.DB
     {
         F,
         M
+    }
+    public enum AssignMode
+    {
+        None,
+        Assign,
+        Blank
     }
 }

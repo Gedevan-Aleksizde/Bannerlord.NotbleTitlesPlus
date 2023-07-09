@@ -15,6 +15,7 @@ using TaleWorlds.Core;
 using MCM.Common;
 using MCM.Abstractions.Base;
 using System.Linq;
+using TaleWorlds.MountAndBlade.Diamond.Ranked;
 
 namespace NobleTitlesPlus.Settings
 {
@@ -47,7 +48,7 @@ namespace NobleTitlesPlus.Settings
                 ;
 
             int j = 0;
-            foreach(string cultureId in options.TitleSet.cultures.Keys)
+            foreach(string cultureId in options.TitleSet.cultures.Keys.Where(x => x != "default"))
             {
                 string name = GameTexts.FindText("str_faction_formal_name_for_culture", cultureId).ToString();
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(cultureId, 4 + j)); ;
@@ -172,7 +173,7 @@ namespace NobleTitlesPlus.Settings
                                 () => options.TitleSet.GetMinorTitleRaw(clanStringId, isFemale, TitleRank.King),
                                 value => options.TitleSet.SetMinorFactionTitle(clanStringId, isFemale, TitleRank.King, value)
                             ),
-                            propBuilder => propBuilder.SetRequireRestart(false).SetHintText($"{{=NTP.MCMMinorL{g}Hint}}Title format of the {genderLong} leader").SetOrder(o)
+                            propBuilder => propBuilder.SetRequireRestart(false).SetHintText($"{{=NTP.MCMMinorL{g}Hint}}Title format of the {genderLong} leader").SetOrder(o + (g == "F" ? 0 : 2))
                         );
                         o++;
                         Util.Log.Print($"AddText = MinorMem{g}_{clanStringId}");
@@ -181,9 +182,8 @@ namespace NobleTitlesPlus.Settings
                                 () => options.TitleSet.GetMinorTitleRaw(clanStringId, isFemale, TitleRank.Noble),
                                 value => options.TitleSet.SetMinorFactionTitle(clanStringId, isFemale, TitleRank.Noble, value)
                             ),
-                            propBuilder => propBuilder.SetRequireRestart(false).SetHintText($"{{=NTP.MCMMinorM{g}Hint}}A {genderLong} member's title format").SetOrder(o)
+                            propBuilder => propBuilder.SetRequireRestart(false).SetHintText($"{{=NTP.MCMMinorM{g}Hint}}A {genderLong} member's title format").SetOrder(o + (g == "F" ? 0 : 2))
                         );
-                        o++;
                     }
                     builder.SetGroupOrder(order);
                 }
@@ -191,7 +191,6 @@ namespace NobleTitlesPlus.Settings
             }
             void BuildPreset(ISettingsPresetBuilder builder, Options option, string preset)
             {
-                // No escape from boilerplating...
                 builder
                     .SetPropertyValue("fogOfWar", true)
                     .SetPropertyValue("encyclopedia", false) // TODO
@@ -209,53 +208,45 @@ namespace NobleTitlesPlus.Settings
                 {
                     FillMinorFactionPropertyValues(preset, factionId);
                 }
+                // TODO
                 List<string> defaultKingdoms = new() { "aserai", "battania", "khuzait", "empire", "sturgia", "vlandia" };
                 foreach (Kingdom k in Kingdom.All.Where(x => !defaultKingdoms.Contains(x.StringId)).OrderBy(x => x.Name.ToString()))
                 {
                     FillFactionPropertyValues(preset, k.Culture.StringId, k.StringId);
                 }
-                void FillFactionPropertyValues(string preset, string cultureId, string? kingdomId, string fallbackCultureId = "default")
+                void FillFactionPropertyValues(string preset, string cultureId, string? kingdomId)
                 {
-                    string id;
-                    if(preset == "DEF")
+                    // tried to get value from kingdoms, then get it from cultures when failed that
+                    foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
-                        options.TitleSet.InitCultureTitles(true);
-                    }
-                    else
-                    {
-                        foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
+                        foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
                         {
-                            // TODO
-                            foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
+                            if (options.TitleSet.FactionTitleExists(kingdomId ?? "", s == "F", (TitleRank)rank))
                             {
-                                if (options.TitleSet.FactionTitleExists(kingdomId, s == "F", (TitleRank)rank))
-                                {
-                                    builder.SetPropertyValue($"KingdomRank{rank}{s}_{kingdomId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}{rank}{s}_{kingdomId}}}")));
-                                }
-                                else if (options.TitleSet.CultureTitleExists(cultureId, s == "F", (TitleRank)rank))
-                                {
-                                    builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}{rank}{s}_{cultureId}}}")));
-                                }
-                                else
-                                {
-                                    builder.SetPropertyValue($"KingdomRank{rank}{s}_default", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}{rank}{s}_default}}")));
-                                }
+                                builder.SetPropertyValue($"KingdomRank{rank}{s}_{kingdomId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}{rank}{s}_{kingdomId}}}")));
                             }
-                            id = options.TitleSet.GetTitleRaw(s == "F", cultureId, kingdomId, TitleRank.Prince, Category.Default);
-                            Util.Log.Print($"loaded: NTP.{preset}Crown{s}_{id}={new TextObject($"{{=NTP.{preset}Crown{s}_{id}}}")}");
-                            builder.SetPropertyValue($"KingdomCrown{s}_{id}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}Crown{s}_{id}}}")));
+                            else if (options.TitleSet.CultureTitleExists(cultureId, s == "F", (TitleRank)rank))
+                            {
+                                builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}{rank}{s}_{cultureId}}}")));
+                            }
+                        }
+                        if (options.TitleSet.FactionTitleExists(kingdomId ?? "", s == "F", TitleRank.Prince))
+                        {
+                            options.TitleSet.GetTitleRaw(s == "F", cultureId, kingdomId, TitleRank.Prince, Category.Default);
+                            builder.SetPropertyValue($"KingdomCrown{s}_{kingdomId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}Crown{s}_{kingdomId}}}")));
+                        }
+                        else
+                        {
+                            builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}Crown{s}_{cultureId}}}")));
                         }
                     }
                 }
-                void FillMinorFactionPropertyValues(string preset, string id)
+                void FillMinorFactionPropertyValues(string preset, string factionId)
                 {
                     foreach (string s in (string[]) Enum.GetNames(typeof(DB.Gender)))
                     {
-                        string tmp1= Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}MinorL{s}_{id}}}"));
-                        string tmp2= Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}MinorM{s}_{id}}}"));
-                        Util.Log.Print($"Loaded: NTP.{preset}Minor(L/M){s}_{id} = {tmp1}, {tmp2}");
-                        builder.SetPropertyValue($"MinorLead{s}_{id}", tmp1);
-                        builder.SetPropertyValue($"MinorMem{s}_{id}", tmp2);
+                        builder.SetPropertyValue($"MinorLead{s}_{factionId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}MinorL{s}_{factionId}}}")));
+                        builder.SetPropertyValue($"MinorMem{s}_{factionId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}MinorM{s}_{factionId}}}")));
                     }
                 }
             }
