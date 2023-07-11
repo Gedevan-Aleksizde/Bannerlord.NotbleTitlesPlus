@@ -15,27 +15,22 @@ namespace NobleTitlesPlus.Patches
         private static void AppendTitles(Hero __instance, ref TextObject __result)
         {
             // TODO: Party/Army name
-            if (__instance.IsLord && __instance.IsAlive && (__instance.IsKnownToPlayer || !TitleBehavior.nomenclatura.titleDb.settings.General.FogOfWar || __instance == __instance?.Clan?.Kingdom?.Leader) )
+            if (__instance.IsLord && __instance.IsAlive && !__instance.IsRebel && (__instance.IsKnownToPlayer || !SubModule.Options.FogOfWar || __instance
+                .IsFactionLeader))
             {
                 if (__instance?.Clan?.StringId == null)
                 {
-                    Util.Log.Print($"[WARNING] Clan is null: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
+                    Util.Log.Print($">> [WARNING] Clan is null: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
                 }
                 if (__instance?.IsMinorFactionHero == null)
                 {
-                    Util.Log.Print($"[WARNING] isMinorFactionHero is null: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
+                    Util.Log.Print($">> [WARNING] isMinorFactionHero is null: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
                 }
                 if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive)
                 {
-                    /*bool isMinorFaction = __instance?.IsMinorFactionHero ?? true;
-                    TextObject title = TitleBehavior.nomenclatura.titleDb.GetTitle(
-                        __instance.IsFemale,
-                        isMinorFaction ? (__instance?.Clan?.StringId ?? "default_minor"): (__instance?.Clan?.Kingdom?.Culture?.StringId ?? ""),
-                        __instance?.Clan?.Kingdom?.Name.ToString() ?? "",
-                        rank,
-                        isMinorFaction ? Category.MinorFaction : Category.Default
-                        ).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);*/
-                    TextObject title = TitleBehavior.nomenclatura.titleDb.GetTitle(__instance, rank).SetTextVariable("NAME", __instance.FirstName).SetTextVariable("CLAN", __instance.Clan.Name);
+                    TextObject title = SubModule.Options.TitleSet.GetTitle(__instance, rank).SetTextVariable("NAME", __instance.FirstName)
+                        .SetTextVariable("CLAN", __instance.Clan.Name)
+                        .SetTextVariable("CLAN_SHORT", __instance.Clan.InformalName);
                     if (TitleBehavior.nomenclatura.FiefLists.TryGetValue(__instance.Clan, out TextObject fiefNames))
                     {
                         title = title.SetTextVariable("FIEFS", fiefNames);
@@ -44,7 +39,7 @@ namespace NobleTitlesPlus.Patches
                 }
                 else
                 {
-                    if(!__instance.IsHumanPlayerCharacter) Util.Log.Print($"[WARNIG] title not found: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
+                    if (!__instance.IsHumanPlayerCharacter) Util.Log.Print($"[WARNIG] title not found when {__instance.FirstName} (clan={__instance?.Clan?.Name}/{__instance?.Clan?.Name}) called");
                 }
             }
         }
@@ -71,7 +66,7 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
         {
-            __result = TitleBehavior.nomenclatura.titleDb.GetTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
+            __result = SubModule.Options.TitleSet.GetTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
             // __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
