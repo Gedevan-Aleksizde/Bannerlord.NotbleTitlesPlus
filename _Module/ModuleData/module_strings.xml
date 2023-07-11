@@ -15,13 +15,13 @@
         <string id="str_ntp_mcm.tagging" text="{=NTP.MCMTag}Tagging"/>
         <string id="str_ntp_mcm.tagging_hint" text="{=NTP.MCMTagHint}Tagging fief names. Basically enabling recommended if you are European langauge user."/>
         <string id="str_ntp_mcm.separator" text="{=NTP.MCMSep}Fief Name Separator"/>
-        <string id="str_ntp_mcm.separetor_hint" text="{=NTP.MCMSepHint}Separator for Fief Names."/>
+        <string id="str_ntp_mcm.separator_hint" text="{=NTP.MCMSepHint}Separator for Fief Names."/>
         <string id="str_ntp_mcm.separator_value" text="{=NTP.DEFSep}," />
-        <string id="str_ntp.mcm.separator_last" text="{=NTP.MCMSepLast}Fief Name Separator Last"/>
-        <string id="str_ntp.mcm.separator_last_hint" text="{=NTP.MCMSepLastHint}Separator for the Fief Names."/>
+        <string id="str_ntp_mcm.separator_last" text="{=NTP.MCMSepLast}Fief Name Separator Last"/>
+        <string id="str_ntp_mcm.separator_last_hint" text="{=NTP.MCMSepLastHint}Separator for the Fief Names."/>
         <string id="str_ntp_mcm.separator_last_value" text="{=NTP.DEFSepLast}and" />
-        <string id="str_ntp.mcm.size" text="{=NTP.MCMSize}Max Number of Fief Names"/>
-        <string id="str_ntp.mcm.size_hint" text="{=NTP.MCMSizeHint}"/>
+        <string id="str_ntp_mcm.size" text="{=NTP.MCMSize}Max Number of Fief Names"/>
+        <string id="str_ntp_mcm.size_hint" text="{=NTP.MCMSizeHint}"/>
 
         <string id="str_ntp_mcm.title_1M" text="{=NTP.MCMRank1M}King (Rank 1)" />
         <string id="str_ntp_mcm.title_1F" text="{=NTP.MCMRank1F}Queen (Rank 1)" />
