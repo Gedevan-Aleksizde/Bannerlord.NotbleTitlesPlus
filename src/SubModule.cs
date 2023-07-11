@@ -26,16 +26,16 @@ namespace NobleTitlesPlus
         {
             get
             {
-                ModuleInfo info = new ModuleInfo();
+                ModuleInfo info = new();
                 string ver;
                 try
                 {
-                    info.LoadWithFullPath(Utilities.GetFullModulePath("NobleTitlePlus"));
+                    info.LoadWithFullPath(Utilities.GetFullModulePath("NobleTitlesPlus"));
                     ver = info.Version.ToString();
                 }
                 catch
                 {
-                    ver = "";
+                    ver = "(ERROR)";
                 }
                 return ver;
             }
@@ -47,10 +47,9 @@ namespace NobleTitlesPlus
         public static readonly string HarmonyDomain = "com.skatagiri.bannerlord" + Name.ToLower();
         internal static readonly Color ImportantTextColor = Color.FromUint(0x00F16D26); // orange
         private FluentPerSaveSettings? settings;
-        private Options Options { get; set; }
+        public static Options? Options { get; private set; }
         protected override void OnSubModuleLoad()
         {
-            TaleWorlds.MountAndBlade.Module a = TaleWorlds.MountAndBlade.Module.CurrentModule;
             base.OnSubModuleLoad();
             Util.EnableLog = true; // enable various debug logging
             Util.EnableTracer = false; // enable code event tracing (requires enabled logging)
@@ -103,7 +102,7 @@ namespace NobleTitlesPlus
                 return;
             }
             
-            //  campaignGameStarter.AddBehavior(eqUpBehavior = new AutoEquipBehavior(Options));
+            // campaignGameStarter.AddBehavior(eqUpBehavior = new AutoEquipBehavior(Options));
         }
         public override void OnGameEnd(Game game)
         {
