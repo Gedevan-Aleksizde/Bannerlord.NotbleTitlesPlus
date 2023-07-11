@@ -97,9 +97,9 @@
   <string id="NTP.ORI5M_vlandia" text="{NAME}" />
   <string id="NTP.ORI5F_vlandia" text="{NAME}" />
 
-  <string id="NTP.ORIMinorLM_default" text="{NAME} of {CLAN}" />
-  <string id="NTP.ORIMinorLF_default" text="{NAME} of {CLAN}"/>
-  <string id="NTP.ORIMinorMM_default" text="{NAME} of {CLAN}" />
-  <string id="NTP.ORIMinorMF_default" text="{NAME} of {CLAN}"/>
+  <string id="NTP.ORIMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
+  <string id="NTP.ORIMinorLF_default" text="{NAME} of {CLAN_SHORT}"/>
+  <string id="NTP.ORIMinorMM_default" text="{NAME} of {CLAN_SHORT}" />
+  <string id="NTP.ORIMinorMF_default" text="{NAME} of {CLAN_SHORT}"/>
  </strings>
 </base>

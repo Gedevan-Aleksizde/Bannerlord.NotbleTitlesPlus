@@ -110,10 +110,10 @@
   <string id="NTP.VAR5M_tetsojin" text="Ason {CLAN}{NAME}-San" />
   <string id="NTP.VAR5F_tetsojin" text="Gozen {CLAN}{NAME}-San" />
 
-  <string id="NTP.VARMinorLM_default" text="{NAME} of {CLAN}" />
-  <string id="NTP.VARMinorLF_default" text="{NAME} of {CLAN}"/>
-  <string id="NTP.VARMinorMM_default" text="{NAME} of {CLAN}" />
-  <string id="NTP.VARMinorMF_default" text="{NAME} of {CLAN}"/>
+  <string id="NTP.VARMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
+  <string id="NTP.VARMinorLF_default" text="{NAME} of {CLAN_SHORT}"/>
+  <string id="NTP.VARMinorMM_default" text="{NAME} of {CLAN_SHORT}" />
+  <string id="NTP.VARMinorMF_default" text="{NAME} of {CLAN_SHORT}"/>
 
   <string id="NTP.VARMinorLM_legion_of_the_betrayed" text="Legatus {NAME}" />
   <string id="NTP.VARMinorLF_legion_of_the_betrayed" text="Legatus {NAME}"/>

@@ -98,9 +98,9 @@
   <string id="NTP.DEF5M_vlandia" text="{NAME}" />
   <string id="NTP.DEF5F_vlandia" text="{NAME}" />
 
-  <string id="NTP.DEFMinorLM_default" text="{NAME} of {CLAN}" />
-  <string id="NTP.DEFMinorLF_default" text="{NAME} of {CLAN}"/>
-  <string id="NTP.DEFMinorMM_default" text="{NAME} of {CLAN}" />
-  <string id="NTP.DEFMinorMF_default" text="{NAME} of {CLAN}"/>
+  <string id="NTP.DEFMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
+  <string id="NTP.DEFMinorLF_default" text="{NAME} of {CLAN_SHORT}"/>
+  <string id="NTP.DEFMinorMM_default" text="{NAME} of {CLAN_SHORT}" />
+  <string id="NTP.DEFMinorMF_default" text="{NAME} of {CLAN_SHORT}"/>
  </strings>
 </base>
