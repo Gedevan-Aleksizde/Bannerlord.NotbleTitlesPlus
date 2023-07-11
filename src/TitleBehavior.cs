@@ -11,6 +11,7 @@ using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using NobleTitlesPlus.DB;
+using NobleTitlesPlus.Settings;
 
 namespace NobleTitlesPlus
 {
@@ -33,15 +34,15 @@ namespace NobleTitlesPlus
         }
         private void OnNewGameCreated(CampaignGameStarter starter)
         {
-            Util.Log.Print("Starting new campaign");
+            Util.Log.Print(">> [INFO] Starting new campaign");
             nomenclatura.UpdateAll();
-            Util.Log.Print($"Starting new campaign on {SubModule.Name}");
+            Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
         }
         private void OnGameLoaded(CampaignGameStarter starter)
         {
-            Util.Log.Print("Loading campaign");
+            Util.Log.Print(">> [INFO] Loading campaign");
             nomenclatura.UpdateAll();
-            Util.Log.Print($"Loading campaign on {SubModule.Name}");
+            Util.Log.Print($">> [INFO] Loading campaign on {SubModule.Name}");
         }
         private void OnSessionLaunched(CampaignGameStarter starter)
         {
@@ -67,17 +68,12 @@ namespace NobleTitlesPlus
     }
     class Nomenclatura
     {
-        public readonly TitleDb titleDb = new();
         public Dictionary<Hero, TitleRank> HeroRank { get; private set; } = new();
         public Dictionary<Clan, TextObject> FiefLists { get; private set; } = new();
         public Nomenclatura(bool update = false)
         {
             if(update) this.UpdateAll();
         }
-        /*public TextObject GetTitle(bool isFemale, string titleSetId, TitleRank rank, Category category = Category.Default)
-        {
-            return this.titleDb.GetTitle(isFemale, titleSetId, rank, category);
-        }*/
         public void UpdateAll()
         {
             foreach (Kingdom k in Kingdom.All.Where(x => !x.IsEliminated))
@@ -103,23 +99,23 @@ namespace NobleTitlesPlus
         }
         public void UpdateFiefList(Clan clan)
         {
-            List<string> fiefList = clan.Fiefs.Take(this.titleDb.settings.Format.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
+            List<string> fiefList = clan.Fiefs.Take(SubModule.Options.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
             
-            if( fiefList.Count() <= 1 || this.titleDb.settings.Format.MaxFiefNames <= 1)
+            if( fiefList.Count() <= 1 || SubModule.Options.MaxFiefNames <= 1)
             {
                 this.FiefLists[clan] = new TextObject(fiefList.FirstOrDefault());
             }
             else
             {
-                string sep = this.titleDb.settings.Format.FiefNameSepratorComma + " ";
-                string fiefs = string.Join(sep, fiefList.Take(Math.Min(fiefList.Count() - 1, this.titleDb.settings.Format.MaxFiefNames)).ToArray<string>());
-                string lastElement = string.Join(" ", new string[] { this.titleDb.settings.Format.FiefNameSeparatorAnd, fiefList.Last() });
+                string sep = SubModule.Options.FiefNameSeparator + " ";
+                string fiefs = string.Join(sep, fiefList.Take(Math.Min(fiefList.Count() - 1, SubModule.Options.MaxFiefNames)).ToArray<string>());
+                string lastElement = string.Join(" ", new string[] { SubModule.Options.FiefNameSeparatorLast, fiefList.Last() });
                 this.FiefLists[clan] = new TextObject(string.Join(" ", new string[] { fiefs, lastElement }));
             }
         }
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
-            List<string> tr = new() { $"Adding noble titles to \"{kingdom.Name}\" (ID={kingdom.StringId}) (culture={kingdom.Culture.StringId})..." };
+            List<string> tr = new() { $">> [INFO] Adding noble titles to \"{kingdom.Name}\" (ID={kingdom.StringId}) (culture={kingdom.Culture.StringId})..." };
             // Common Nobles, not a Clan Leader
             List<Hero> commonNobles = kingdom.Clans
                 .Where(c =>
@@ -164,7 +160,7 @@ namespace NobleTitlesPlus
                     ++nBarons;
                     this.HeroRank[h] = TitleRank.Baron;
                     tr.Add(this.GetHeroTrace(h, TitleRank.Baron));
-                    if (this.titleDb.settings.General.SpouseTitle && h.Spouse != null && h.Spouse.IsAlive)
+                    if (SubModule.Options.SpouseTitle && h.Spouse != null && h.Spouse.IsAlive)
                     {
                         this.HeroRank[h.Spouse] = TitleRank.Baron;
                         tr.Add(this.GetHeroTrace(h.Spouse, TitleRank.Baron));
@@ -185,7 +181,7 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[vassals[i]] = TitleRank.Count;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Count));
-                if (this.titleDb.settings.General.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
+                if (SubModule.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
                 {
                     this.HeroRank[vassals[i].Spouse] = TitleRank.Count;
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Count));
@@ -196,7 +192,7 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[vassals[i]] = TitleRank.Duke;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Duke));
-                if (this.titleDb.settings.General.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
+                if (SubModule.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
                 {
                     this.HeroRank[vassals[i].Spouse] = TitleRank.Duke;
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Duke));
@@ -218,14 +214,14 @@ namespace NobleTitlesPlus
         }
         private void AddTitlesToMinorFaction()
         {
-            foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction))
+            foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
             {
-                List<string> tr = new() { $"Adding minor faction titles to {c.Name} ({c.StringId})..." };
+                List<string> tr = new() { $">> [INFO] Adding minor faction titles to {c.Name} ({c.StringId})..." };
                 foreach (Hero h in c.Heroes)
                 {
                     if (h.IsAlive)
                     {
-                        if (h.IsFactionLeader)
+                        if (h == h.Clan.Leader)
                         {
                             this.HeroRank[h] = TitleRank.King;
                             tr.Add(this.GetHeroTrace(h, TitleRank.King));
