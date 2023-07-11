@@ -15,111 +15,6 @@ using TaleWorlds.CampaignSystem.ViewModelCollection.KingdomManagement.Settlement
 
 namespace NobleTitlesPlus.DB
 {
-    class TitleDb
-    {
-        internal TitleDb()
-        {
-            // Util.Log.Print($"MCM test = {NTPSettings.Instance.DefaultNoblewoman}");
-            // TODO: avoid abuse of execption. every title need to have default value.
-            this.settings = JsonConvert.DeserializeObject<TitleGlobalSettingsJson>(
-                File.ReadAllText($"{BasePath.Name}/Modules/{SubModule.modFolderName}/settings.json"),
-                new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace }) ?? new TitleGlobalSettingsJson();
-            this.PathTitles = $"{BasePath.Name}/Modules/{SubModule.modFolderName}/titles.json";
-            this.titleSet = JsonConvert.DeserializeObject<TitleSet>(
-                File.ReadAllText(this.PathTitles),
-                new JsonSerializerSettings
-                {
-                    ObjectCreationHandling = ObjectCreationHandling.Replace,
-                    DefaultValueHandling = DefaultValueHandling.Ignore
-                }) ?? new TitleSet();
-            Util.Log.Print($"{this.titleSet.cultures.Count} set of titles for culutures");
-            Util.Log.Print($"{this.titleSet.factions.Count} set of titles for kingdoms");
-            Util.Log.Print($"{this.titleSet.minorFactions.Count} set of titles for minor factions");
-
-            if (this.titleSet.cultures.Count == 0)
-            {
-                Util.Log.Print($">> WARNING: Title database is empty. The built-in default setting will be applied.");
-                // this.titleSet.cultures = defaultCulture;
-                // throw new BadTitleDatabaseException("Title database is empty!");
-            }
-            // Must have a fallback culture entry.
-            if (!this.titleSet.cultures.ContainsKey("default"))
-            {
-                Util.Log.Print($">> WARNING: Title database doesn't contain a fallback culture entry keyed by \"default\". The built-in default setting will be applied.");
-                // this.cultureMap["default"] = defaultCulture;
-                // throw new BadTitleDatabaseException("Title database must contain a fallback culture entry keyed by \"default\"!");
-            }
-            foreach (KeyValuePair<string, TitleSet.FactionTitleSet> i in this.titleSet.cultures)
-            {
-                (string cul, TitleSet.FactionTitleSet entry) = (i.Key, i.Value);
-                if (cul == "default")
-                {
-                    defaultCulture = entry;
-                }
-            }
-            foreach (KeyValuePair<string, TitleSet.FactionTitleSet> i in this.titleSet.minorFactions)
-            {
-                (string cul, TitleSet.FactionTitleSet entry) = (i.Key, i.Value);
-                if (cul == "default_minor")
-                {
-                    defaultMinorFaction = entry;
-                }
-            }
-        }
-        public class BadTitleDatabaseException : Exception
-        {
-            public BadTitleDatabaseException(string message) : base(message) { }
-            public BadTitleDatabaseException() { }
-            public BadTitleDatabaseException(string message, Exception innerException) : base(message, innerException) { }
-        }
-        protected string PathTitles { get; set; }
-        public TitleGlobalSettingsJson settings;
-        // culture StringId => CultureEntry (contains bulk of title information, only further split by gender)
-        protected TitleSet titleSet;
-
-        public static TitleSet.FactionTitleSet defaultCulture = TitleSet.DefaultCultureValue;
-        public static TitleSet.FactionTitleSet defaultMinorFaction = TitleSet.DefaultMinorFactionValue;
-        internal TextObject GetTitle(Hero hero, TitleRank rank)
-        {
-            bool isMinorFaction = hero.IsMinorFactionHero;
-            string factionId = isMinorFaction ? (hero?.Clan?.StringId ?? "default_minor") : (hero?.Clan?.Kingdom?.Culture?.StringId ?? "");
-            string kingdomId = hero?.Clan?.Kingdom?.Name.ToString() ?? "";
-            return this.GetTitle(hero.IsFemale, factionId, kingdomId, rank, isMinorFaction ? Category.MinorFaction : Category.Default);
-        }
-        internal TextObject GetTitle(bool isFemale, string factionId, string kingdomId, TitleRank rank, Category category)
-        {
-            if (category == Category.Default)
-            {
-                if(this.titleSet.factions.TryGetValue(kingdomId, out TitleSet.FactionTitleSet kingdomTitles))
-                {
-                    return kingdomTitles.GetTitle(isFemale, rank);
-                }
-                else if (this.titleSet.cultures.TryGetValue(factionId, out TitleSet.FactionTitleSet cultureTitles))
-                {
-                    return cultureTitles.GetTitle(isFemale, rank);
-                }
-                else
-                {
-                    return defaultCulture.GetTitle(isFemale, rank);
-                }
-            }
-            else if (category == Category.MinorFaction)
-            {
-                if(this.titleSet.minorFactions.TryGetValue(factionId, out TitleSet.FactionTitleSet minorFactionTitles))
-                {
-                    return minorFactionTitles.GetTitle(isFemale, rank);
-                }
-                else
-                {
-                    return defaultMinorFaction.GetTitle(isFemale, rank);
-                }
-            }
-            else
-            {
-                return new TextObject("{NAME}");
-            }
-        }
-    }
     [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     public class TitleSet
     {
@@ -333,13 +228,7 @@ namespace NobleTitlesPlus.DB
                 Util.Log.Print($"Member = ({this.minorFactions[keys].GetTitleRaw(true, TitleRank.Noble)}, {this.minorFactions[keys].GetTitleRaw(false, TitleRank.Noble)})");
             }
         }
-        internal TextObject GetTitle(Hero hero, TitleRank rank)
-        {
-            bool isMinorFaction = hero.IsMinorFactionHero;
-            string cultureId = isMinorFaction ? (hero?.Clan?.StringId ?? "default") : (hero?.Clan?.Kingdom?.Culture?.StringId ?? "");
-            string factionId = hero?.Clan?.Kingdom?.Name.ToString() ?? "";
-            return this.GetTitle(hero.IsFemale, cultureId, factionId, rank, isMinorFaction ? Category.MinorFaction : Category.Default);
-        }
+        
         internal void SetFactionTitle(string newTitle, string id, bool isFemale, TitleRank rank, bool append = false)
         {
             if (this.factions.ContainsKey(id))
@@ -348,13 +237,13 @@ namespace NobleTitlesPlus.DB
             }
             else if (append)
             {
-                Util.Log.Print($"WARNING: Faction ID {id} not found! Now new culture entry added.");
+                Util.Log.Print($"[WARNING] Faction ID {id} not found! Now new culture entry added.");
                 this.factions.Add(id, BlankTitleSet);
                 this.factions[id].SetTitle(isFemale, rank, newTitle);
             }
             else
             {
-                Util.Log.Print($"WARNING: Renaming the format failed! No faction entries asscociated with {id}!");
+                Util.Log.Print($"[WARNING] Renaming the format failed! No faction entries asscociated with {id}!");
             }
         }
         internal string GetMinorTitleRaw(string clanId, bool isFemale, TitleRank rank, string defaultFormat = "")
@@ -408,19 +297,26 @@ namespace NobleTitlesPlus.DB
             }
             else
             {
-                Util.Log.Print($"WARNING: WRONG CATEGORY: {category}");
+                Util.Log.Print($">> [WARNING] WRONG CATEGORY: {category}");
                 return "";
             }
+        }
+        internal TextObject GetTitle(Hero hero, TitleRank rank)
+        {
+            bool isMinorFaction = hero.IsMinorFactionHero && hero.Clan.StringId != "player_faction";
+            string cultureId = isMinorFaction ? (hero?.Clan?.StringId ?? "default") : (hero?.Clan?.Kingdom?.Culture?.StringId ?? "");
+            string factionId = hero?.Clan?.Kingdom?.StringId ?? "";
+            return this.GetTitle(hero.IsFemale, cultureId, factionId, rank, isMinorFaction ? Category.MinorFaction : Category.Default);
         }
         internal TextObject GetTitle(bool isFemale, string cultureId, string? factionId, TitleRank rank, Category category)
         {
             if (category == Category.Default)
             {
-                if (this.factions.TryGetValue(factionId ?? "", out FactionTitleSet factionTitles))
+                if (this.factions.TryGetValue(factionId ?? "", out FactionTitleSet factionTitles) && factionTitles.GetTitleRaw(isFemale, rank) != "")
                 {
                     return factionTitles.GetTitle(isFemale, rank);
                 }
-                else if (this.cultures.TryGetValue(cultureId, out FactionTitleSet cultureTitles))
+                else if (this.cultures.TryGetValue(cultureId, out FactionTitleSet cultureTitles) && cultureTitles.GetTitleRaw(isFemale, rank) != "")
                 {
                     return cultureTitles.GetTitle(isFemale, rank);
                 }
@@ -431,7 +327,7 @@ namespace NobleTitlesPlus.DB
             }
             else if (category == Category.MinorFaction)
             {
-                if (this.minorFactions.TryGetValue(cultureId, out FactionTitleSet minorFactionTitles))
+                if (this.minorFactions.TryGetValue(cultureId, out FactionTitleSet minorFactionTitles) && minorFactionTitles.GetTitleRaw(isFemale, rank) != "")
                 {
                     return minorFactionTitles.GetTitle(isFemale, rank);
                 }
@@ -442,7 +338,7 @@ namespace NobleTitlesPlus.DB
             }
             else
             {
-                return new TextObject("");
+                return new TextObject("{NAME}");
             }
         }
         internal string GetTitleId(bool isFemale, string cultureId, string factionId, TitleRank rank, Category category)
@@ -538,13 +434,13 @@ namespace NobleTitlesPlus.DB
             }
             else if (append)
             {
-                Util.Log.Print($"WARNING: Culture ID {id} not found! Now new culture entry added.");
+                Util.Log.Print($"[WARNING] Culture ID {id} not found! Now new culture entry added.");
                 this.cultures.Add(id, DefaultCultureValue);
                 this.cultures[id].SetTitle(isFemale, rank, newTitle);
             }
             else
             {
-                Util.Log.Print($"WARNING: Renaming the format failed! No culture entries asscociated with {id}!");
+                Util.Log.Print($"[WARNING] Renaming the format failed! No culture entries asscociated with {id}!");
             }
         }
         internal void SetMinorFactionTitle(string clanId, bool isFemale, TitleRank rank, string newTitle, bool append = false)
@@ -562,13 +458,12 @@ namespace NobleTitlesPlus.DB
                 }
                 else
                 {
-                    Util.Log.Print($"TitleSet.SetMinorFactionTitle called: isFemale={isFemale}, id={clanId}, rank={rank}, append={append} ->  ID {clanId} found.");
-                    Util.Log.Print($"WARNING: No mionor faction entries asscociated with {clanId}!");
+                    Util.Log.Print($">> [WARNING] No minor faction entries asscociated with {clanId}!");
                 }
             }
             else
             {
-                Util.Log.Print($"WARNING: irregular minor faction rank requested! ({rank})");
+                Util.Log.Print($">> [WARNING] Irregular minor faction rank requested! ({rank})");
             }
         }
         [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
@@ -692,25 +587,29 @@ namespace NobleTitlesPlus.DB
                 }
                 private string NormalizeInputTitle(string titleFormat)
                 {
+                    string normalized;
                     if (string.IsNullOrWhiteSpace(titleFormat))
                     {
-                        Util.Log.Print($">> WARNING: Title format is missing!");
-                        titleFormat = "{name}";
+                        Util.Log.Print($">> [INFO] Title format is blank");
+                        normalized = "";
                     }
-                    string normalized = Regex.Replace(titleFormat, @"\{[a-zA-Z]+\}", t => t.ToString().ToUpper());
-                    try
+                    else
                     {
-                        new TextObject(normalized, new Dictionary<string, object>() { ["NAME"] = "TEST NAME" }).ToString();
-                    }
-                    catch (Exception)
-                    {
-                        Util.Log.Print($">> WARNING: Title format {titleFormat} is invalid. It's a incorrect format! This format is inavailable.");
-                        normalized = "{NAME}";
-                    }
-                    if (!normalized.Contains("{NAME}"))
-                    {
-                        Util.Log.Print($">> WARNING: Title format {titleFormat} doesn't contain the name variable! This format is inavailable.");
-                        normalized = "{NAME}";
+                        normalized = Regex.Replace(titleFormat, @"\{[a-zA-Z]+\}", t => t.ToString().ToUpper());
+                        try
+                        {
+                            new TextObject(normalized, new Dictionary<string, object>() { ["NAME"] = "TEST NAME" }).ToString();
+                        }
+                        catch (Exception)
+                        {
+                            Util.Log.Print($">> [WARNING] Title format {titleFormat} is invalid. It's a incorrect format! This format is inavailable.");
+                            normalized = "{NAME}";
+                        }
+                        if (!normalized.Contains("{NAME}"))
+                        {
+                            Util.Log.Print($">> [WARNING] Title format {titleFormat} doesn't contain the name variable! This format is inavailable.");
+                            normalized = "{NAME}";
+                        }
                     }
                     return normalized;
                 }
