@@ -17,8 +17,8 @@
   <string id="NTP.DEF3F_default" text="{NAME}女伯爵"/>
   <string id="NTP.DEF4M_default" text="{NAME}男爵"/>
   <string id="NTP.DEF4F_default" text="{NAME}女男爵"/>
-  <string id="NTP.DEF4M_default" text="{NAME}卿"/>
-  <string id="NTP.DEF5F_default" text="{NAME}女卿"/>
+  <string id="NTP.DEF4M_default" text="{NAME}"/>
+  <string id="NTP.DEF5F_default" text="{NAME}"/>
 
   <string id="NTP.DEF1M_empire" text="皇帝{NAME}" />
   <string id="NTP.DEF1F_empire" text="女帝{NAME}" />

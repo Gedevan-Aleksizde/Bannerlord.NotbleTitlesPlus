@@ -8,11 +8,14 @@
   <string id="NTP.Sys002" text="{DisplayName} Loaded"/>
   <string id="NTP.Sys003" text="Error loading {DisplayName}: Disabled!"/>
   <string id="NTP.MCMGGEN" text="General"/>
+  <string id="NTP.MCMyour" text="Your Kingdom" />
   <string id="NTP.MCMGFOR" text="Fief Display Format"/>
   <string id="NTP.MCMGDEF" text="Default Titles"/>
   <string id="NTP.MCMGMinor" text="Minor Faction Default Titles"/>
   <string id="NTP.MCMFOWHint" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
   <string id="NTP.MCMencyclopediaHint" text="Current Inavailable"/>
+  <string id="NTP.MCMVerbose" text="Verbose Log"/>
+  <string id="NTP.MCMVerboseHint" text="(For debugging) Output extra information to the log file"/>
   <string id="NTP.MCMTag" text="Tagging"/>
   <string id="NTP.MCMTagHint" text="Tagging fief names. Basically enabling recommended if you are European langauge user."/>
   <string id="NTP.MCMSep" text="Fief Name Separator"/>

@@ -34,8 +34,8 @@
 
   <string id="NTP.VAR1M_aserai" text="Sultan {NAME}" />
   <string id="NTP.VAR1F_aserai" text="Sultana {NAME}" />
-  <string id="NTP.VARCrownM_aserai" text="Sehzade {NAME}" />
-  <string id="NTP.VARCrownF_aserai" text="Sehzada {NAME}" />
+  <string id="NTP.VARCrownM_aserai" text="{NAME} Sehzade" />
+  <string id="NTP.VARCrownF_aserai" text="NAME} Sehzada" />
   <string id="NTP.VAR2M_aserai" text="Emir al-Umara {NAME}" />
   <string id="NTP.VAR2F_aserai" text="Emira al-Umara {NAME}" />
   <string id="NTP.VAR3M_aserai" text="Emir Kabir {NAME}" />
@@ -86,8 +86,8 @@
 
   <string id="NTP.VAR1M_vlandia" text="Rex Vlandiae {NAME}" />
   <string id="NTP.VAR1F_vlandia" text="Regna Vlandiae {NAME}" />
-  <string id="NTP.VARCrownM_vlandia" text="{NAME}, Prince of Rhodok" />
-  <string id="NTP.VARCrownF_vlandia" text="{NAME}, Princess of Rhodok" />
+  <string id="NTP.VARCrownM_vlandia" text="{NAME} the Prince of Rhodok" />
+  <string id="NTP.VARCrownF_vlandia" text="{NAME} the Princess of Rhodok" />
   <string id="NTP.VAR2M_vlandia" text="Duc {NAME}" />
   <string id="NTP.VAR2F_vlandia" text="Duchess {NAME}" />
   <string id="NTP.VAR3M_vlandia" text="Count {NAME}" />

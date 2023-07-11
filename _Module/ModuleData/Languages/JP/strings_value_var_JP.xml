@@ -114,12 +114,12 @@
   <string id="NTP.VAR1F_tetsojin" text="ジョテイ゠{NAME}" />
   <string id="NTP.VARCrownM_tetsojin" text="{NAME}皇子" />
   <string id="NTP.VARCrownF_tetsojin" text="{NAME}皇女" />
-  <string id="NTP.VAR2M_tetsojin" text="将軍{CLAN}{NAME}" />
-  <string id="NTP.VAR2F_tetsojin" text="上臈御年寄{CLAN}{NAME}" />
+  <string id="NTP.VAR2M_tetsojin" text="将軍゠{CLAN}{NAME}" />
+  <string id="NTP.VAR2F_tetsojin" text="上臈御年寄゠{CLAN}{NAME}" />
   <string id="NTP.VAR3M_tetsojin" text="大名゠{CLAN}{NAME}卿" />
   <string id="NTP.VAR3F_tetsojin" text="御年寄゠{CLAN}{NAME}" />
-  <string id="NTP.VAR4M_tetsojin" text="名主{CLAN}{NAME}卿" />
-  <string id="NTP.VAR4F_tetsojin" text="命婦{CLAN}{NAME}" />
+  <string id="NTP.VAR4M_tetsojin" text="名主゠{CLAN}{NAME}卿" />
+  <string id="NTP.VAR4F_tetsojin" text="命婦゠{CLAN}{NAME}" />
   <string id="NTP.VAR5M_tetsojin" text="{CLAN}{NAME}朝臣" />
   <string id="NTP.VAR5F_tetsojin" text="{CLAN}{NAME}御前" />
 

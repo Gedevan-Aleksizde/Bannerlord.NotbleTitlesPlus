@@ -8,11 +8,14 @@
   <string id="NTP.Sys002" text="{DisplayName}が読み込まれました"/>
   <string id="NTP.Sys003" text="{DisplayName}のロード中にエラーが発生しました: 無効です!"/>
   <string id="NTP.MCMGGEN" text="全般"/>
+  <string id="NTP.MCMyour" text="あなたの国" />
   <string id="NTP.MCMGFOR" text="領地表示のフォーマット"/>
   <string id="NTP.MCMGDEF" text="デフォルトの称号"/>
   <string id="NTP.MCMGMinor" text="小規模勢力のデフォルトの称号"/>
   <string id="NTP.MCMFOWHint" text="称号に戦場の霧要素を適用します。会ったことのないヒーローの称号は表示されません。"/>
   <string id="NTP.MCMencyclopediaHint" text="現在使用不可"/>
+  <string id="NTP.MCMVerbose" text="冗長なログ"/>
+  <string id="NTP.MCMVerboseHint" text="(デバッグ用) ログファイルにより多くの情報を出力します。"/>
   <string id="NTP.MCMTag" text="タギング"/>
   <string id="NTP.MCMTagHint" text="領地名の単語のタギングです。主に欧文ユーザーを想定した機能です。"/>
   <string id="NTP.MCMSep" text="領地名の区切り文字"/>
