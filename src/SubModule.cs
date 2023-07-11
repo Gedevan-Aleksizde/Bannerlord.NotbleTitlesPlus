@@ -5,16 +5,9 @@ using TaleWorlds.MountAndBlade;
 using System.Reflection;
 using System.IO;
 using TaleWorlds.Localization;
-using MCM.Internal.Extensions;
-using MCM.Implementation;
-using MCM.Abstractions;
-using System.Collections.Generic;
-using MCM.Abstractions.Base;
-using MCM.Abstractions.GameFeatures;
 using MCM.Abstractions.Base.PerSave;
 using NobleTitlesPlus.Settings;
 using System;
-using System.Runtime.CompilerServices;
 using TaleWorlds.ModuleManager;
 using TaleWorlds.Engine;
 
@@ -31,13 +24,20 @@ namespace NobleTitlesPlus
                 try
                 {
                     info.LoadWithFullPath(Utilities.GetFullModulePath("NobleTitlesPlus"));
-                    ver = info.Version.ToString();
+                    ver = $"{info.Version.Major}.{info.Version.Minor}.{info.Version.Revision}" ;
                 }
                 catch
                 {
                     ver = "(ERROR)";
                 }
                 return ver;
+            }
+        }
+        public static string AssemblyVersion
+        {
+            get
+            {
+                return $"{SubModule.assemblyVersion.Major}.{SubModule.assemblyVersion.Minor}.{SubModule.assemblyVersion.Build}";
             }
         }
         public static readonly Version assemblyVersion = typeof(RuntimeSettings).Assembly.GetName().Version;
@@ -66,14 +66,14 @@ namespace NobleTitlesPlus
             if (!hasLoaded && !canceled)
             {
                 InformationManager.DisplayMessage(new InformationMessage(
-                    $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{assemblyVersion})", ImportantTextColor));
+                    $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})", ImportantTextColor));
                 hasLoaded = true;
             }
 
             if (canceled)
                 InformationManager.DisplayMessage(
                     new InformationMessage(
-                        $"003 {new TextObject("{=NTP.Sys003}Error loading {DisplayName} : Disabled!").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{assemblyVersion})"
+                        $"003 {new TextObject("{=NTP.Sys003}Error loading {DisplayName} : Disabled!").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})"
                         ));
         }
         public override void OnAfterGameInitializationFinished(Game game, object starterObject)
@@ -101,8 +101,6 @@ namespace NobleTitlesPlus
             {
                 return;
             }
-            
-            // campaignGameStarter.AddBehavior(eqUpBehavior = new AutoEquipBehavior(Options));
         }
         public override void OnGameEnd(Game game)
         {

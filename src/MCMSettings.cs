@@ -29,12 +29,8 @@ namespace NobleTitlesPlus.Settings
     }
     internal static class RuntimeSettings
     {
-        private static string FindTextShortMCM(string variantId)
-        {
-            return GameTexts.FindText("str_ntp_mcm", variantId).ToString();
-        }
         private const string settingsId = SubModule.Name;
-        private static string SettingsName => $"{SubModule.DisplayName} {SubModule.ModVersion} (assembly: v{SubModule.assemblyVersion})";
+        private static string SettingsName => $"{SubModule.DisplayName} v{SubModule.ModVersion} (assembly: v{SubModule.AssemblyVersion})";
 
         internal static ISettingsBuilder AddSettings(Options options, string saveid)
         {
@@ -135,7 +131,7 @@ namespace NobleTitlesPlus.Settings
                     {
                         bool isFemale = s == "F";
                         string genderLong = s == "F" ? "Female" : "Male";
-                        // for(int  i = 1; i < 6; i++) // TODO
+                        // for(int  rank = 1; rank < 6; rank++) // WHY???
                         foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
                         {
                             builder
@@ -172,8 +168,6 @@ namespace NobleTitlesPlus.Settings
                 void BuildMinorFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
                 {
                     Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
-                    int o = 0;
-                    // foreach (int s in new int[] { 0, 1 })
                     foreach (string g in (string[]) Enum.GetNames(typeof(DB.Gender)))
                     {
                         bool isFemale = g == "F";
@@ -183,15 +177,16 @@ namespace NobleTitlesPlus.Settings
                                 () => options.TitleSet.GetMinorTitleRaw(clanStringId, isFemale, TitleRank.King),
                                 value => options.TitleSet.SetMinorFactionTitle(clanStringId, isFemale, TitleRank.King, value)
                             ),
-                            propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"minorL{g}_hint")).SetOrder(o + (g == "F" ? 0 : 1))
+                            propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"minorL{g}_hint"))
+                            .SetOrder(0 + (g == "F" ? 0 : 1))
                         );
-                        o++;
-                        builder.AddText($"MinorM{g}_{clanStringId}", FindTextShortMCM($"title_minorL{g}"),
+                        builder.AddText($"MinorM{g}_{clanStringId}", FindTextShortMCM($"title_minorM{g}"),
                             new ProxyRef<string>(
                                 () => options.TitleSet.GetMinorTitleRaw(clanStringId, isFemale, TitleRank.Noble),
                                 value => options.TitleSet.SetMinorFactionTitle(clanStringId, isFemale, TitleRank.Noble, value)
                             ),
-                            propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"minorL{g}_hint")).SetOrder(o + (g == "F" ? 0 : 1))
+                            propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"minorM{g}_hint"))
+                            .SetOrder(2 + (g == "F" ? 0 : 1))
                         );
                     }
                     builder.SetGroupOrder(order);
@@ -229,6 +224,7 @@ namespace NobleTitlesPlus.Settings
                     foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
                         foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
+                        // for (int rank = 1; rank < 6; rank++)
                         {
                             if (preset == "DEF")
                             {
@@ -301,5 +297,9 @@ namespace NobleTitlesPlus.Settings
             }
         }
         public const string moduleStrTitles = "str_ntp_title_set";
+        private static string FindTextShortMCM(string variantId)
+        {
+            return GameTexts.FindText("str_ntp_mcm", variantId).ToString();
+        }
     }
 }
