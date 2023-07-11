@@ -4,11 +4,29 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
+using TaleWorlds.Localization;
+using TaleWorlds.MountAndBlade;
 
 namespace NobleTitlesPlus
 {
     class Util
     {
+        public static string QuoteVarBitEasiler(TextObject to, string variableName = "NAME", string newPlaceholder = "{NAME}")
+        {
+            // why do i need such thing?????
+            return to.SetTextVariable(variableName, "______MOCKPLACEHOLDER_____").ToString().Replace("______MOCKPLACEHOLDER_____", newPlaceholder);
+        }
+        public static string QuoteMultVarBitEasiler(TextObject to)
+        {
+            return to.SetTextVariable("NAME", "______MOCKPLACEHOLDER1_____")
+                .SetTextVariable("CLAN", "______MOCKPLACEHOLDER2_____")
+                .SetTextVariable("FIEFS", "______MOCKPLACEHOLDER3_____")
+                .ToString()
+                .Replace("______MOCKPLACEHOLDER1_____", "{NAME}")
+                .Replace("______MOCKPLACEHOLDER2_____", "{CLAN}")
+                .Replace("______MOCKPLACEHOLDER3_____", "{FIEF}");
+        }
         internal static bool EnableLog
         {
             get => Log is Log; // Log, derived from LogBase, provides thread-safe logging
@@ -18,6 +36,17 @@ namespace NobleTitlesPlus
                     Log = new LogBase();
                 else if (!(Log is Log) && value)
                     Log = new Log(truncate: true, logName: "debug");
+            }
+        }
+        public static TextObject FindTextWithDefaultVariation(string id, string variation, string? fallback = null)
+        {
+            if(GameTexts.TryGetText(id, out TextObject to, variation))
+            {
+                return to;
+            }
+            else
+            {
+                return GameTexts.FindText(id, fallback);
             }
         }
 
