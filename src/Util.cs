@@ -22,10 +22,12 @@ namespace NobleTitlesPlus
             return to.SetTextVariable("NAME", "______MOCKPLACEHOLDER1_____")
                 .SetTextVariable("CLAN", "______MOCKPLACEHOLDER2_____")
                 .SetTextVariable("FIEFS", "______MOCKPLACEHOLDER3_____")
+                .SetTextVariable("CLAN_SHORT", "______MOCKPLACEHOLDER4_____")
                 .ToString()
                 .Replace("______MOCKPLACEHOLDER1_____", "{NAME}")
                 .Replace("______MOCKPLACEHOLDER2_____", "{CLAN}")
-                .Replace("______MOCKPLACEHOLDER3_____", "{FIEF}");
+                .Replace("______MOCKPLACEHOLDER3_____", "{FIEF}")
+                .Replace("______MOCKPLACEHOLDER4_____", "{CLAN_SHORT}");
         }
         internal static bool EnableLog
         {
