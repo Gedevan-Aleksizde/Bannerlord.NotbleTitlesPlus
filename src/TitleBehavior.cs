@@ -105,12 +105,16 @@ namespace NobleTitlesPlus
             {
                 this.FiefLists[clan] = new TextObject(fiefList.FirstOrDefault());
             }
-            else
+            else if (fiefList.Count > 1)
             {
                 string sep = SubModule.Options.FiefNameSeparator + " ";
                 string fiefs = string.Join(sep, fiefList.Take(Math.Min(fiefList.Count() - 1, SubModule.Options.MaxFiefNames)).ToArray<string>());
                 string lastElement = string.Join(" ", new string[] { SubModule.Options.FiefNameSeparatorLast, fiefList.Last() });
                 this.FiefLists[clan] = new TextObject(string.Join(" ", new string[] { fiefs, lastElement }));
+            }
+            else
+            {
+                this.FiefLists[clan] = GameTexts.FindText("str_ntp_landless");
             }
         }
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
@@ -124,12 +128,31 @@ namespace NobleTitlesPlus
                     c.Leader != null &&
                     c.Leader.IsAlive &&
                     c.Leader.IsLord)
-                .SelectMany(c => c.Lords.Where(h => h != c.Leader && h.IsAlive))
+                .SelectMany(c => c.Lords.Where(h => h != c.Leader && h.IsAlive && !h.IsChild))
                 .ToList();
             foreach (Hero h in commonNobles)
             {
                 this.HeroRank[h] = TitleRank.Noble;
                 tr.Add(this.GetHeroTrace(h, TitleRank.Noble));
+            }
+            // Crown Prince/Princess
+            IEnumerable<Hero> heirs = kingdom.RulingClan.Heroes.Where(h => !h.IsFactionLeader && h != h.Clan.Leader.Spouse);
+            switch (SubModule.Options.Inheritance)
+            {
+                case Inheritance.Issue:
+                    heirs = heirs.Where(h => h.Father == kingdom.Leader || h.Mother == kingdom.Leader).OrderBy(h => -h.Age);
+                    break;
+                case Inheritance.Adult:
+                    heirs = heirs.Where(h => (h.Father == kingdom.Leader || h.Mother == kingdom.Leader) && !h.IsChild).OrderBy(h => -h.Age);
+                    break;
+                case Inheritance.Elder:
+                    heirs = heirs.OrderBy(h => -h.Age);
+                    break;
+            }
+            if(heirs.ToList().Count > 0)
+            {
+                this.HeroRank[heirs.First()] = TitleRank.Prince;
+                tr.Add(this.GetHeroTrace(heirs.First(), TitleRank.Prince));
             }
             /* The vassals first...
              *
@@ -176,7 +199,6 @@ namespace NobleTitlesPlus
             int maxDukeIdx = vassals.Count - 1;
             int maxCountIdx = maxDukeIdx - nDukes;
             int maxBaronIdx = maxCountIdx - nCounts;
-            // Counts:
             for (int i = maxCountIdx; i > maxBaronIdx; --i)
             {
                 this.HeroRank[vassals[i]] = TitleRank.Count;
@@ -187,7 +209,6 @@ namespace NobleTitlesPlus
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Count));
                 }
             }
-            // Dukes:
             for (int i = maxDukeIdx; i > maxCountIdx; --i)
             {
                 this.HeroRank[vassals[i]] = TitleRank.Duke;
@@ -198,7 +219,6 @@ namespace NobleTitlesPlus
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Duke));
                 }
             }
-            // Finally, the most obvious, the ruler (King) title:
             if (kingdom.Leader != null &&
                 !Kingdom.All.Where(k => k != kingdom).SelectMany(k => k.Lords).Where(h => h == kingdom.Leader).Any()) // fix for stale ruler status in defunct kingdoms
             {
@@ -238,6 +258,6 @@ namespace NobleTitlesPlus
         }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);
         private string GetHeroTrace(Hero h, TitleRank rank) =>
-            $" -> {rank}: {h.Name} [Fief Score: {this.GetFiefScore(h.Clan)} / Renown: {h.Clan.Renown:F0}]";
+            $" -> {rank}: {h.Name} [Fief Score: {(rank == TitleRank.King || rank == TitleRank.Duke || rank == TitleRank.Count || rank == TitleRank.Baron? this.GetFiefScore(h.Clan): 0)} / Renown: {h.Clan.Renown:F0}]";
     }
 }

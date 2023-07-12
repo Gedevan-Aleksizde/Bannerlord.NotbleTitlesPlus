@@ -11,7 +11,6 @@ using TaleWorlds.Core;
 using MCM.Common;
 using MCM.Abstractions.Base;
 using System.Linq;
-using System.Runtime.InteropServices;
 
 namespace NobleTitlesPlus.Settings
 {
@@ -25,6 +24,7 @@ namespace NobleTitlesPlus.Settings
         public string FiefNameSeparator { get; set; } = ",";
         public string FiefNameSeparatorLast { get; set; } = "and";
         public int MaxFiefNames { get; set; } = 1;
+        public Inheritance Inheritance { get; set; } = Inheritance.Issue;
         public TitleSet TitleSet { get; set; } = new();
     }
     internal static class RuntimeSettings
@@ -122,6 +122,13 @@ namespace NobleTitlesPlus.Settings
                         value => options.MaxFiefNames = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("size_hint")).SetOrder(3)
                     )
+                .AddDropdown("heir", FindTextShortMCM("heir"), 3,
+                    new ProxyRef<Inheritance>(
+                        () => options.Inheritance,
+                        value => options.Inheritance = value
+                    ),
+                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(4)
+                )
                 .SetGroupOrder(1);
             Action<ISettingsPropertyGroupBuilder> GenerateKingdomGroupPropertiesBuilder(string id, int order, bool isCulture = true)
             {
@@ -144,7 +151,8 @@ namespace NobleTitlesPlus.Settings
                                             else options.TitleSet.SetFactionTitle(value, id, isFemale, (TitleRank)rank);
                                         }
                                     ),
-                                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"{rank}{s}_hint")).SetOrder(2 + 2 * rank + (isFemale ? 0 : 1))
+                                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"{rank}{s}_hint"))
+                                    .SetOrder(2 + 2 * rank + (isFemale ? 0 : 1))
                                     );
                         }
                         builder
@@ -157,6 +165,7 @@ namespace NobleTitlesPlus.Settings
                                     else options.TitleSet.SetFactionTitle(value, id, isFemale, TitleRank.Prince);
                                 }),
                             propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"Crown{s}_hint"))
+                            .SetOrder(14 + (isFemale ? 0 : 1))
                         );
                     }
                     builder.SetGroupOrder(order);
@@ -167,7 +176,7 @@ namespace NobleTitlesPlus.Settings
             {
                 void BuildMinorFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
                 {
-                    Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
+                    if(SubModule.Options.VerboseLog) Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
                     foreach (string g in (string[]) Enum.GetNames(typeof(DB.Gender)))
                     {
                         bool isFemale = g == "F";
@@ -269,11 +278,11 @@ namespace NobleTitlesPlus.Settings
                         if (options.TitleSet.FactionTitleExists(kingdomId ?? "", s == "F", TitleRank.Prince))
                         {
                             options.TitleSet.GetTitleRaw(s == "F", cultureId, kingdomId, TitleRank.Prince, Category.Default);
-                            builder.SetPropertyValue($"KingdomCrown{s}_{kingdomId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}Crown{s}_{kingdomId}}}")));
+                            builder.SetPropertyValue($"KingdomCrown{s}_{kingdomId}", Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_crown{s}_{kingdomId}")));
                         }
                         else
                         {
-                            builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", Util.QuoteMultVarBitEasiler(new TextObject($"{{=NTP.{preset}Crown{s}_{cultureId}}}")));
+                            builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_crown{s}_{cultureId}")));
                         }
                     }
                 }
