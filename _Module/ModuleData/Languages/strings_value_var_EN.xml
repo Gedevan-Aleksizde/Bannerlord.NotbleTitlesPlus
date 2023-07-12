@@ -61,7 +61,7 @@
   <string id="NTP.VAR1M_khuzait" text="{NAME} Khan" />
   <string id="NTP.VAR1F_khuzait" text="{NAME} Khatun" />
   <string id="NTP.VARCrownM_khuzait" text="{NAME} Qaghan" />
-  <string id="NTP.VARCrownF_khuzait" text="{NAME} Qatun" />
+  <string id="NTP.VARCrownF_khuzait" text="{NAME} Qaghatun" />
   <string id="NTP.VAR2M_khuzait" text="{NAME} Atabeg" />
   <string id="NTP.VAR2F_khuzait" text="{NAME} Annebegum" />
   <string id="NTP.VAR3M_khuzait" text="{NAME} Sadapid-Beg" />

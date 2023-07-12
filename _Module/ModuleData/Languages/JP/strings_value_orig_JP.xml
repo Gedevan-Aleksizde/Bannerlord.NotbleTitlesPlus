@@ -50,8 +50,8 @@
   <string id="NTP.ORICrownF_battania" text="{NAME}" />
   <string id="NTP.ORI2M_battania" text="モーマー゠{NAME}" />
   <string id="NTP.ORI2F_battania" text="バンティアルナ゠{NAME}" />
-  <string id="NTP.ORI3M_battania" text="上級族長゠{NAME}" />
-  <string id="NTP.ORI3F_battania" text="女上級族長゠{NAME}" />
+  <string id="NTP.ORI3M_battania" text="大族長゠{NAME}" />
+  <string id="NTP.ORI3F_battania" text="女大族長゠{NAME}" />
   <string id="NTP.ORI4M_battania" text="族長{NAME}" />
   <string id="NTP.ORI4F_battania" text="女族長{NAME}" />
   <string id="NTP.ORI5M_battania" text="{NAME}" />

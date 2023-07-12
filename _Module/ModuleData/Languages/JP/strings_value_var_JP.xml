@@ -61,7 +61,7 @@
   <string id="NTP.VAR1M_khuzait" text="{NAME}゠ハン" />
   <string id="NTP.VAR1F_khuzait" text="{NAME}゠ハトゥン" />
   <string id="NTP.VARCrownM_khuzait" text="{NAME}゠カガン" />
-  <string id="NTP.VARCrownF_khuzait" text="{NAME}゠カトゥン" />
+  <string id="NTP.VARCrownF_khuzait" text="{NAME}゠カガトゥン" />
   <string id="NTP.VAR2M_khuzait" text="{NAME}゠アタベグ" />
   <string id="NTP.VAR2F_khuzait" text="{NAME}゠アネベグム" />
   <string id="NTP.VAR3M_khuzait" text="{NAME}゠シャダピッドベグ" />
