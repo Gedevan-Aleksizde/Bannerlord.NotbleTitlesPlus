@@ -22,7 +22,7 @@
   <string id="NTP.VAR1M_empire" text="バシレイオス゠{NAME}" />
   <string id="NTP.VAR1F_empire" text="バシリッサ゠{NAME}" />
   <string id="NTP.VARCrownM_empire" text="ポルフィロゲネトス゠{NAME}" />
-  <string id="NTP.VARCrownF_empire" text="ポルフィロゲネテ゠{NAME}" />
+  <string id="NTP.VARCrownF_empire" text="ポルフィロゲネテー゠{NAME}" />
   <string id="NTP.VAR2M_empire" text="メガスアルホン゠{NAME}" />
   <string id="NTP.VAR2F_empire" text="メガスアルホンティッサ゠{NAME}" />
   <string id="NTP.VAR3M_empire" text="エクサルホス゠{NAME}" />

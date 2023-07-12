@@ -22,6 +22,9 @@
         <string id="str_ntp_mcm.separator_last_value" text="{=NTP.DEFSepLast}and" />
         <string id="str_ntp_mcm.size" text="{=NTP.MCMSize}Max Number of Fief Names"/>
         <string id="str_ntp_mcm.size_hint" text="{=NTP.MCMSizeHint}"/>
+        <string id="str_ntp_mcm.heir" text="{=NTP.MCMHeir}Heir Apprant"/>
+        <string id="str_ntp_mcm.heir_hint" text="{=NTP.MCMHeirHint}Rule of heir to the throne. Issue: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule."/>
+        <string id="str_ntp.landless" text="{NTP.landless}Landless" />
 
         <string id="str_ntp_mcm.title_1M" text="{=NTP.MCMRank1M}King (Rank 1)" />
         <string id="str_ntp_mcm.title_1F" text="{=NTP.MCMRank1F}Queen (Rank 1)" />
