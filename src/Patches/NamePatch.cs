@@ -39,7 +39,7 @@ namespace NobleTitlesPlus.Patches
                 }
                 else
                 {
-                    if (!__instance.IsHumanPlayerCharacter) Util.Log.Print($"[WARNIG] title not found when {__instance.FirstName} (clan={__instance?.Clan?.Name}/{__instance?.Clan?.Name}) called");
+                    if (!__instance.IsHumanPlayerCharacter) Util.Log.Print($"[WARNIG] title not found when {__instance.FirstName} (clan={__instance?.Clan?.Name}/{__instance?.Clan?.StringId}) called");
                 }
             }
         }
