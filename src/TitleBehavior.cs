@@ -11,7 +11,6 @@ using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using NobleTitlesPlus.DB;
-using NobleTitlesPlus.Settings;
 
 namespace NobleTitlesPlus
 {
@@ -34,15 +33,15 @@ namespace NobleTitlesPlus
         }
         private void OnNewGameCreated(CampaignGameStarter starter)
         {
-            Util.Log.Print(">> [INFO] Starting new campaign");
+            if (SubModule.Options.VerboseLog) Util.Log.Print(">> [INFO] Starting new campaign");
             nomenclatura.UpdateAll();
-            Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
+            if (SubModule.Options.VerboseLog) Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
         }
         private void OnGameLoaded(CampaignGameStarter starter)
         {
-            Util.Log.Print(">> [INFO] Loading campaign");
+            if (SubModule.Options.VerboseLog) Util.Log.Print(">> [INFO] Loading campaign");
             nomenclatura.UpdateAll();
-            Util.Log.Print($">> [INFO] Loading campaign on {SubModule.Name}");
+            if (SubModule.Options.VerboseLog) Util.Log.Print($">> [INFO] Loading campaign on {SubModule.Name}");
         }
         private void OnSessionLaunched(CampaignGameStarter starter)
         {
@@ -230,7 +229,7 @@ namespace NobleTitlesPlus
                     tr.Add(this.GetHeroTrace(kingdom.Leader.Spouse, TitleRank.King));
                 }
             }
-            Util.Log.Print(tr);
+            if (SubModule.Options.VerboseLog) Util.Log.Print(tr);
         }
         private void AddTitlesToMinorFaction()
         {
@@ -253,7 +252,7 @@ namespace NobleTitlesPlus
                         }
                     }
                 }
-                Util.Log.Print(tr);
+                if (SubModule.Options.VerboseLog) Util.Log.Print(tr);
             }
         }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);
