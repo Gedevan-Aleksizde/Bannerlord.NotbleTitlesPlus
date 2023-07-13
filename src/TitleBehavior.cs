@@ -235,7 +235,7 @@ namespace NobleTitlesPlus
         }
         private void AddTitlesToMinorFaction()
         {
-            foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
+            foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction && (!c.Leader?.IsHumanPlayerCharacter ?? true)))
             {
                 List<string> tr = new() { $">> [INFO] Adding minor faction titles to {c.Name} ({c.StringId})..." };
                 foreach (Hero h in c.Heroes)
