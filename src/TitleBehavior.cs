@@ -136,7 +136,7 @@ namespace NobleTitlesPlus
             }
             // Crown Prince/Princess
             IEnumerable<Hero> heirs = kingdom.RulingClan.Heroes.Where(h => !h.IsFactionLeader && h != h.Clan.Leader.Spouse);
-            switch (SubModule.Options.Inheritance)
+            switch (SubModule.Options.Inheritance.SelectedValue)
             {
                 case Inheritance.Issue:
                     heirs = heirs.Where(h => h.Father == kingdom.Leader || h.Mother == kingdom.Leader).OrderBy(h => -h.Age);
@@ -146,6 +146,8 @@ namespace NobleTitlesPlus
                     break;
                 case Inheritance.Elder:
                     heirs = heirs.OrderBy(h => -h.Age);
+                    break;
+                default:
                     break;
             }
             if(heirs.ToList().Count > 0)

@@ -24,14 +24,13 @@ namespace NobleTitlesPlus.Settings
         public string FiefNameSeparator { get; set; } = ",";
         public string FiefNameSeparatorLast { get; set; } = "and";
         public int MaxFiefNames { get; set; } = 1;
-        public Inheritance Inheritance { get; set; } = Inheritance.Issue;
+        public Dropdown<Inheritance> Inheritance { get; set; } = new(new List<DB.Inheritance>((Inheritance[])Enum.GetValues(typeof(DB.Inheritance))), 1);
         public TitleSet TitleSet { get; set; } = new();
     }
     internal static class RuntimeSettings
     {
         private const string settingsId = SubModule.Name;
         private static string SettingsName => $"{SubModule.DisplayName} v{SubModule.ModVersion} (assembly: v{SubModule.AssemblyVersion})";
-
         internal static ISettingsBuilder AddSettings(Options options, string saveid)
         {
             var builder = BaseSettingsBuilder.Create(settingsId, SettingsName)
@@ -42,10 +41,10 @@ namespace NobleTitlesPlus.Settings
                 .CreateGroup(FindTextShortMCM("fief_category"), BuildFormattingGroupProperties)
                 .CreateGroup(FindTextShortMCM("culture_default"), GenerateKingdomGroupPropertiesBuilder("default", 2))
                 .CreateGroup(FindTextShortMCM("minor_default"), GenerateMinorFactionGroupProperties("default", 3));
-                ;
+            ;
 
             int j = 0;
-            foreach(string cultureId in options.TitleSet.cultures.Keys.Where(x => x != "default"))
+            foreach (string cultureId in options.TitleSet.cultures.Keys.Where(x => x != "default"))
             {
                 string name = GameTexts.FindText("str_faction_formal_name_for_culture", cultureId).ToString();
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(cultureId, 4 + j)); ;
@@ -57,7 +56,7 @@ namespace NobleTitlesPlus.Settings
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder("new_kingdom", 4 + j, false)); ;
                 j++;
             }
-            foreach(string kingdomId in options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
+            foreach (string kingdomId in options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
             {
                 string name = GameTexts.FindText("str_adjective_for_faction", kingdomId).ToString();
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(kingdomId, 4 + j, false)); ;
@@ -93,7 +92,14 @@ namespace NobleTitlesPlus.Settings
                     () => options.VerboseLog,
                     value => options.VerboseLog = value),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(2)
-                ).SetGroupOrder(0);
+                )
+                .AddDropdown("heir", FindTextShortMCM("heir"), 1,
+                    new ProxyRef<Dropdown<Inheritance>>(
+                        () => options.Inheritance,
+                        value => options.Inheritance = value),
+                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(4)
+                )
+                .SetGroupOrder(0);
             void BuildFormattingGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddBool(
                     "tagging", FindTextShortMCM("tagging"),
@@ -122,13 +128,6 @@ namespace NobleTitlesPlus.Settings
                         value => options.MaxFiefNames = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("size_hint")).SetOrder(3)
                     )
-                .AddDropdown("heir", FindTextShortMCM("heir"), 3,
-                    new ProxyRef<Inheritance>(
-                        () => options.Inheritance,
-                        value => options.Inheritance = value
-                    ),
-                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(4)
-                )
                 .SetGroupOrder(1);
             Action<ISettingsPropertyGroupBuilder> GenerateKingdomGroupPropertiesBuilder(string id, int order, bool isCulture = true)
             {
@@ -138,7 +137,7 @@ namespace NobleTitlesPlus.Settings
                     {
                         bool isFemale = s == "F";
                         string genderLong = s == "F" ? "Female" : "Male";
-                        // for(int  rank = 1; rank < 6; rank++) // WHY???
+                        // for(int  rank = 1; rank < 6; rank++) // TODO: Why not working??
                         foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
                         {
                             builder
@@ -221,7 +220,7 @@ namespace NobleTitlesPlus.Settings
                 {
                     FillMinorFactionPropertyValues(preset, factionId);
                 }
-                // TODO
+                // FIXME
                 List<string> defaultKingdoms = new() { "aserai", "battania", "khuzait", "empire", "sturgia", "vlandia" };
                 foreach (Kingdom k in Kingdom.All.Where(x => !defaultKingdoms.Contains(x.StringId)).OrderBy(x => x.Name.ToString()))
                 {
@@ -233,7 +232,7 @@ namespace NobleTitlesPlus.Settings
                     foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
                         foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
-                        // for (int rank = 1; rank < 6; rank++)
+                        // for (int rank = 1; rank < 6; rank++)  // TODO: why not working??
                         {
                             if (preset == "DEF")
                             {

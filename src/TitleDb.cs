@@ -603,7 +603,7 @@ namespace NobleTitlesPlus.DB
                     string normalized;
                     if (string.IsNullOrWhiteSpace(titleFormat))
                     {
-                        if (SubModule.Options.VerboseLog) Util.Log.Print($">> [INFO] Title format is blank");
+                        if (SubModule.Options?.VerboseLog ?? true) Util.Log.Print($">> [INFO] Title format is blank");
                         normalized = "";
                     }
                     else
@@ -658,7 +658,7 @@ namespace NobleTitlesPlus.DB
     }
     public enum Inheritance
     {
-        None,
+        Disabled,
         Issue,
         Adult,
         Elder
