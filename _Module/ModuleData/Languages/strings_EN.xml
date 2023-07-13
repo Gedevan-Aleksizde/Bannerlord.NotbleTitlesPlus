@@ -25,7 +25,7 @@
   <string id="NTP.MCMSize" text="Max Number of Fief Names"/>
   <string id="NTP.MCMSizeHint" text=""/>
   <string id="NTP.MCMHeir" text="Heir Apparant"/>
-  <string id="NTP.MCMHeirHint" text="Rule of heir to the throne. Issue: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule."/>
+  <string id="NTP.MCMHeirHint" text="Law of heir to the throne. Issue: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule."/>
   <string id="NTP.landless" text="Landless" />
   <string id="NTP.MCMRank1M" text="King (Rank 1)"/>
   <string id="NTP.MCMRank1MHint" text="Title format of the male monorch"/>
