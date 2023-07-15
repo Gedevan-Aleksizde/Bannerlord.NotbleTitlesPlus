@@ -282,11 +282,12 @@ namespace NobleTitlesPlus.Settings
                         if (options.TitleSet.FactionTitleExists(kingdomId ?? "", s == "F", TitleRank.Prince))
                         {
                             options.TitleSet.GetTitleRaw(s == "F", cultureId, kingdomId, TitleRank.Prince, Category.Default);
-                            builder.SetPropertyValue($"KingdomCrown{s}_{kingdomId}", Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_crown{s}_{kingdomId}")));
+                            builder.SetPropertyValue($"KingdomCrown{s}_{kingdomId}", preset == "DEF"? "{NAME}" :
+                            Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_crown{s}_{kingdomId}")));
                         }
                         else
                         {
-                            builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_crown{s}_{cultureId}")));
+                            builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", preset == "DEF" ? "{NAME}" : Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_crown{s}_{cultureId}")));
                         }
                     }
                 }
