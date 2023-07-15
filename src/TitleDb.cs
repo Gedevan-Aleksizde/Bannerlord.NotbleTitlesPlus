@@ -18,64 +18,21 @@ namespace NobleTitlesPlus.DB
     [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     public class TitleSet
     {
-        [JsonProperty("CULTURES")]
-        public Dictionary<string, FactionTitleSet> cultures = new() { { "default", DefaultCultureValue } };
-        [JsonProperty("MINORS")]
-        public Dictionary<string, FactionTitleSet> minorFactions = new() { { "default", DefaultMinorFactionValue } };
-        [JsonProperty("FACTIONS")]
-        public Dictionary<string, FactionTitleSet> factions = new();
-        public static FactionTitleSet DefaultCultureValue => new(
-                new(
-                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank1M_default}King {NAME}")),
-                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRanl1F_default}Queen {NAME}"))
-                    ),
-                new(
-                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank2M_default}Duke {NAME}")),
-                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank2F_default}Duchess {NAME}"))
-                    ),
-                new(
-                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank3M_default}Count {NAME}")),
-                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank3F_default}Countess {NAME}"))
-                    ),
-                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank4M_default}Baron {NAME}")),
-                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank4F_default}Baroness {NAME}"))
-                    ),
-                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank5M_default}{NAME}")),
-                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank5F_default}{NAME}"))
-                    ),
-                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFCrownM_default}{NAME}")),
-                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFCrownF_default}{NAME}"))
-                    )
-            );
-        public static FactionTitleSet DefaultMinorFactionValue => new(
-            new(
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorLM_default}{NAME} of {CLAN}")),
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorLF_default}{NAME} of {CLAN}"))
-            ),
-            new(
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMM_default}{NAME} of {CLAN}")),
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMF_default}{NAME} of {CLAN}"))
-            ),
-            new(
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMM_default}{NAME} of {CLAN}")),
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMF_default}{NAME} of {CLAN}"))
-            ),
-            new(
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMM_default}{NAME} of {CLAN}")),
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMF_default}{NAME} of {CLAN}"))
-            ),
-            new(
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMM_default}{NAME} of {CLAN}")),
-                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMF_default}{NAME} of {CLAN}"))
-            )
-        );
-        public static FactionTitleSet BlankTitleSet => new(new("", ""), new("", ""), new("", ""), new("", ""));
         public TitleSet()
         {
+            this.Initialize();
+        }
+        public void Initialize()
+        {
+            Util.Log.Print(">> [DEBUG] TitleDB initialized");
+            this.cultures = new() { { "default", DefaultCultureValue } };
+            this.factions = factions = new();
+            this.minorFactions = new() { { "default", DefaultMinorFactionValue } };
             this.InitCultureTitles(AssignMode.Assign);
             this.InitFactionTitles(AssignMode.Blank);
             this.InitMinorFactionTitles(AssignMode.Assign);
             // this.TmpDebug();
+            Util.Log.Print($"title set initialized, Kingdoms={Kingdom.All.Count}, CulturesDict={this.cultures.Count}");
         }
         public void InitCultureTitles(AssignMode mode)
         {
@@ -155,7 +112,7 @@ namespace NobleTitlesPlus.DB
         {
             if(mode == AssignMode.None || mode == AssignMode.Assign)
             {
-                foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
+                foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !(c.Leader?.IsHumanPlayerCharacter ?? false)))
                 {
                     this.minorFactions.Add(c.StringId, DefaultMinorFactionValue);
                 }
@@ -163,7 +120,7 @@ namespace NobleTitlesPlus.DB
             else if(mode == AssignMode.Blank)
             {
                 // perhaps never used
-                foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
+                foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !(c.Leader?.IsHumanPlayerCharacter ?? false))) // ていうかなんでnull返すの?
                 {
                     this.minorFactions.Add(c.StringId, BlankTitleSet);
                 }
@@ -204,7 +161,7 @@ namespace NobleTitlesPlus.DB
             foreach(Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
             {
                 this.minorFactions.Add(c.StringId, DefaultMinorFactionValue);
-                if (SubModule.Options.VerboseLog)  Util.Log.Print($">> [INFO] Intialized title set  for minor faction {c.StringId}");
+                if (TitleBehavior.options.VerboseLog)  Util.Log.Print($">> [DEBUG] Intialized title set  for minor faction {c.StringId}");
             }
         }
         public void TmpDebug()
@@ -470,6 +427,58 @@ namespace NobleTitlesPlus.DB
                 Util.Log.Print($">> [WARNING] Irregular minor faction rank requested! ({rank})");
             }
         }
+        [JsonProperty("CULTURES")]
+        public Dictionary<string, FactionTitleSet> cultures = new() { { "default", DefaultCultureValue } };
+        [JsonProperty("MINORS")]
+        public Dictionary<string, FactionTitleSet> minorFactions = new() { { "default", DefaultMinorFactionValue } };
+        [JsonProperty("FACTIONS")]
+        public Dictionary<string, FactionTitleSet> factions = new();
+        public static FactionTitleSet DefaultCultureValue => new(
+                new(
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank1M_default}King {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRanl1F_default}Queen {NAME}"))
+                    ),
+                new(
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank2M_default}Duke {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank2F_default}Duchess {NAME}"))
+                    ),
+                new(
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank3M_default}Count {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank3F_default}Countess {NAME}"))
+                    ),
+                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank4M_default}Baron {NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank4F_default}Baroness {NAME}"))
+                    ),
+                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank5M_default}{NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFRank5F_default}{NAME}"))
+                    ),
+                new(Util.QuoteMultVarBitEasiler(new("{=NTP.DEFCrownM_default}{NAME}")),
+                    Util.QuoteMultVarBitEasiler(new("{=NTP.DEFCrownF_default}{NAME}"))
+                    )
+            );
+        public static FactionTitleSet DefaultMinorFactionValue => new(
+            new(
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorLM_default}{NAME} of {CLAN}")),
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorLF_default}{NAME} of {CLAN}"))
+            ),
+            new(
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMM_default}{NAME} of {CLAN}")),
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMF_default}{NAME} of {CLAN}"))
+            ),
+            new(
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMM_default}{NAME} of {CLAN}")),
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMF_default}{NAME} of {CLAN}"))
+            ),
+            new(
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMM_default}{NAME} of {CLAN}")),
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMF_default}{NAME} of {CLAN}"))
+            ),
+            new(
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMM_default}{NAME} of {CLAN}")),
+                Util.QuoteMultVarBitEasiler(new("{=NTP.DEFMinorMF_default}{NAME} of {CLAN}"))
+            )
+        );
+        public static FactionTitleSet BlankTitleSet => new(new("", ""), new("", ""), new("", ""), new("", ""));
         [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
         public class FactionTitleSet
         {
@@ -603,7 +612,7 @@ namespace NobleTitlesPlus.DB
                     string normalized;
                     if (string.IsNullOrWhiteSpace(titleFormat))
                     {
-                        if (SubModule.Options?.VerboseLog ?? true) Util.Log.Print($">> [INFO] Title format is blank");
+                        if (TitleBehavior.options?.VerboseLog ?? true) Util.Log.Print($">> [DEBUG] Title format is blank");
                         normalized = "";
                     }
                     else

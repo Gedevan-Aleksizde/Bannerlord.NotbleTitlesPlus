@@ -33,6 +33,7 @@ namespace NobleTitlesPlus.Settings
         private static string SettingsName => $"{SubModule.DisplayName} v{SubModule.ModVersion} (assembly: v{SubModule.AssemblyVersion})";
         internal static ISettingsBuilder AddSettings(Options options, string saveid)
         {
+            Util.Log.Print($">> [INFO] AddSettings Called. kindoms={Kingdom.All.Count}");
             var builder = BaseSettingsBuilder.Create(settingsId, SettingsName)
                 .SetFormat("json2")
                 .SetFolderName(settingsId)
@@ -48,18 +49,21 @@ namespace NobleTitlesPlus.Settings
             {
                 string name = GameTexts.FindText("str_faction_formal_name_for_culture", cultureId).ToString();
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(cultureId, 4 + j)); ;
+                Util.Log.Print($">> [INFO] Category {name}({cultureId}, culture) added to MCM options");
                 j++;
             }
             if (options.TitleSet.factions.ContainsKey("new_kingdom"))
             {
                 string name = Kingdom.All.Where(k => k.StringId == "new_kingdom")?.First()?.Name?.ToString() ?? FindTextShortMCM("fallback_player");
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder("new_kingdom", 4 + j, false)); ;
+                Util.Log.Print($">> [INFO] Category {name}(new_kingdom, faction) added to MCM options");
                 j++;
             }
             foreach (string kingdomId in options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
             {
                 string name = GameTexts.FindText("str_adjective_for_faction", kingdomId).ToString();
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(kingdomId, 4 + j, false)); ;
+                Util.Log.Print($">> [INFO] Category {name}({kingdomId}, faction) added to MCM options");
                 j++;
             }
             List<Clan> clans = Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter).ToList();
@@ -67,6 +71,7 @@ namespace NobleTitlesPlus.Settings
             {
                 string name = clans.Where(c => c.StringId == clanId).First().Name.ToString(); // TODO
                 builder.CreateGroup(name, GenerateMinorFactionGroupProperties(clanId, 4 + j));
+                Util.Log.Print($">> [INFO] Category {name}({clanId}, minor faction) added to MCM options");
                 j++;
             }
             builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, new(), "DEF"));
@@ -175,7 +180,7 @@ namespace NobleTitlesPlus.Settings
             {
                 void BuildMinorFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
                 {
-                    if(SubModule.Options.VerboseLog) Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
+                    if(TitleBehavior.options.VerboseLog) Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
                     foreach (string g in (string[]) Enum.GetNames(typeof(DB.Gender)))
                     {
                         bool isFemale = g == "F";

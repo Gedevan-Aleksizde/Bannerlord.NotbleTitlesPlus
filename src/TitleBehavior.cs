@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using HarmonyLib;
 using TaleWorlds.CampaignSystem;
-using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.Party;
-using TaleWorlds.CampaignSystem.Settlements;
 using TaleWorlds.Core;
-using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using NobleTitlesPlus.DB;
+using NobleTitlesPlus.Settings;
 
 namespace NobleTitlesPlus
 {
     internal sealed class TitleBehavior : CampaignBehaviorBase
     {
+        public static Options options { get; set; }
         public static Nomenclatura nomenclatura = new();
+        // private Harmony harmony;
         public override void RegisterEvents()
         {
             // TODO: remove unused event
@@ -27,27 +25,31 @@ namespace NobleTitlesPlus
             CampaignEvents.OnGameLoadedEvent.AddNonSerializedListener(this, new Action<CampaignGameStarter>(OnGameLoaded));
             CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, new Action<CampaignGameStarter>(OnSessionLaunched));
         }
+        public TitleBehavior(Options opt)
+        {
+            options = opt;
+            Util.Log.Print($">> [DEBUG] CampaignBehavior constructor called: kingdom={Kingdom.All.Count}");
+        }
         public override void SyncData(IDataStore dataStore)
         {
-            // No need to save data.
         }
         private void OnNewGameCreated(CampaignGameStarter starter)
         {
-            if (SubModule.Options.VerboseLog) Util.Log.Print(">> [INFO] Starting new campaign");
+            Util.Log.Print($"OnNewGameCreated: kingdom={Kingdom.All.Count}");
+            options.TitleSet.Initialize();
             nomenclatura.UpdateAll();
-            if (SubModule.Options.VerboseLog) Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
+            if (options.VerboseLog) Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
         }
         private void OnGameLoaded(CampaignGameStarter starter)
         {
-            if (SubModule.Options.VerboseLog) Util.Log.Print(">> [INFO] Loading campaign");
+            Util.Log.Print($"OnGameLoaded: kingdom={Kingdom.All.Count}");
+            if (options.VerboseLog) Util.Log.Print(">> [INFO] Loading campaign");
             nomenclatura.UpdateAll();
-            if (SubModule.Options.VerboseLog) Util.Log.Print($">> [INFO] Loading campaign on {SubModule.Name}");
+            if (options.VerboseLog) Util.Log.Print($">> [INFO] Loading campaign on {SubModule.Name}");
         }
         private void OnSessionLaunched(CampaignGameStarter starter)
         {
-            // Harmony.DEBUG = true;
-            Harmony harmony = new(SubModule.HarmonyDomain);
-            harmony.PatchAll();
+            Util.Log.Print($"OnSessionLaunched: kingdom={Kingdom.All.Count}");
         }
         private void OnDailyTick()
         {
@@ -98,17 +100,17 @@ namespace NobleTitlesPlus
         }
         public void UpdateFiefList(Clan clan)
         {
-            List<string> fiefList = clan.Fiefs.Take(SubModule.Options.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
+            List<string> fiefList = clan.Fiefs.Take(TitleBehavior.options.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
             
-            if( fiefList.Count() <= 1 || SubModule.Options.MaxFiefNames <= 1)
+            if( fiefList.Count() <= 1 || TitleBehavior.options.MaxFiefNames <= 1)
             {
                 this.FiefLists[clan] = new TextObject(fiefList.FirstOrDefault());
             }
             else if (fiefList.Count > 1)
             {
-                string sep = SubModule.Options.FiefNameSeparator + " ";
-                string fiefs = string.Join(sep, fiefList.Take(Math.Min(fiefList.Count() - 1, SubModule.Options.MaxFiefNames)).ToArray<string>());
-                string lastElement = string.Join(" ", new string[] { SubModule.Options.FiefNameSeparatorLast, fiefList.Last() });
+                string sep = TitleBehavior.options.FiefNameSeparator + " ";
+                string fiefs = string.Join(sep, fiefList.Take(Math.Min(fiefList.Count() - 1, TitleBehavior.options.MaxFiefNames)).ToArray<string>());
+                string lastElement = string.Join(" ", new string[] { TitleBehavior.options.FiefNameSeparatorLast, fiefList.Last() });
                 this.FiefLists[clan] = new TextObject(string.Join(" ", new string[] { fiefs, lastElement }));
             }
             else
@@ -136,7 +138,7 @@ namespace NobleTitlesPlus
             }
             // Crown Prince/Princess
             IEnumerable<Hero> heirs = kingdom.RulingClan.Heroes.Where(h => !h.IsFactionLeader && h != h.Clan.Leader.Spouse);
-            switch (SubModule.Options.Inheritance.SelectedValue)
+            switch (TitleBehavior.options.Inheritance.SelectedValue)
             {
                 case Inheritance.Issue:
                     heirs = heirs.Where(h => h.Father == kingdom.Leader || h.Mother == kingdom.Leader).OrderBy(h => -h.Age);
@@ -184,7 +186,7 @@ namespace NobleTitlesPlus
                     ++nBarons;
                     this.HeroRank[h] = TitleRank.Baron;
                     tr.Add(this.GetHeroTrace(h, TitleRank.Baron));
-                    if (SubModule.Options.SpouseTitle && h.Spouse != null && h.Spouse.IsAlive)
+                    if (TitleBehavior.options.SpouseTitle && h.Spouse != null && h.Spouse.IsAlive)
                     {
                         this.HeroRank[h.Spouse] = TitleRank.Baron;
                         tr.Add(this.GetHeroTrace(h.Spouse, TitleRank.Baron));
@@ -204,7 +206,7 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[vassals[i]] = TitleRank.Count;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Count));
-                if (SubModule.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
+                if (TitleBehavior.options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
                 {
                     this.HeroRank[vassals[i].Spouse] = TitleRank.Count;
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Count));
@@ -214,7 +216,7 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[vassals[i]] = TitleRank.Duke;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Duke));
-                if (SubModule.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
+                if (TitleBehavior.options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
                 {
                     this.HeroRank[vassals[i].Spouse] = TitleRank.Duke;
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Duke));
@@ -231,7 +233,7 @@ namespace NobleTitlesPlus
                     tr.Add(this.GetHeroTrace(kingdom.Leader.Spouse, TitleRank.King));
                 }
             }
-            if (SubModule.Options.VerboseLog) Util.Log.Print(tr);
+            if (TitleBehavior.options.VerboseLog) Util.Log.Print(tr);
         }
         private void AddTitlesToMinorFaction()
         {
@@ -254,7 +256,7 @@ namespace NobleTitlesPlus
                         }
                     }
                 }
-                if (SubModule.Options.VerboseLog) Util.Log.Print(tr);
+                if (TitleBehavior.options.VerboseLog) Util.Log.Print(tr);
             }
         }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);

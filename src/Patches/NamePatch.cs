@@ -3,7 +3,6 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Conversation;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
 using TaleWorlds.Localization;
-using TaleWorlds.CampaignSystem.ViewModelCollection.Encyclopedia.List;
 using NobleTitlesPlus.DB;
 
 namespace NobleTitlesPlus.Patches
@@ -15,7 +14,7 @@ namespace NobleTitlesPlus.Patches
         private static void AppendTitles(Hero __instance, ref TextObject __result)
         {
             // TODO: Party/Army name
-            if (__instance.IsLord && __instance.IsAlive && !__instance.IsRebel && (__instance.IsKnownToPlayer || !SubModule.Options.FogOfWar || __instance
+            if (__instance.IsLord && __instance.IsAlive && !__instance.IsRebel && (__instance.IsKnownToPlayer || !TitleBehavior.options.FogOfWar || __instance
                 .IsFactionLeader))
             {
                 if (__instance?.Clan?.StringId == null)
@@ -28,7 +27,7 @@ namespace NobleTitlesPlus.Patches
                 }
                 if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive)
                 {
-                    TextObject title = SubModule.Options.TitleSet.GetTitle(__instance, rank).SetTextVariable("NAME", __instance.FirstName)
+                    TextObject title = TitleBehavior.options.TitleSet.GetTitle(__instance, rank).SetTextVariable("NAME", __instance.FirstName)
                         .SetTextVariable("CLAN", __instance.Clan.Name)
                         .SetTextVariable("CLAN_SHORT", __instance.Clan.InformalName);
                     if (TitleBehavior.nomenclatura.FiefLists.TryGetValue(__instance.Clan, out TextObject fiefNames))
@@ -66,7 +65,7 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
         {
-            __result = SubModule.Options.TitleSet.GetTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
+            __result = TitleBehavior.options.TitleSet.GetTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
             // __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
