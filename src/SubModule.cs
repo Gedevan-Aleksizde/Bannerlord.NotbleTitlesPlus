@@ -26,16 +26,17 @@ namespace NobleTitlesPlus
         }
         protected override void OnBeforeInitialModuleScreenSetAsRoot()
         {
+            // Util.Log.Print($">> OnBeforeInitialModuleScreenSetAsRoot called");
             base.OnBeforeInitialModuleScreenSetAsRoot();
 
-            if (!hasLoaded && !canceled)
+            if (!this.hasLoaded && !this.canceled)
             {
                 InformationManager.DisplayMessage(new InformationMessage(
                     $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})", ImportantTextColor));
-                hasLoaded = true;
+                this.hasLoaded = true;
             }
 
-            if (canceled)
+            if (this.canceled)
                 InformationManager.DisplayMessage(
                     new InformationMessage(
                         $"003 {new TextObject("{=NTP.Sys003}Error loading {DisplayName} : Disabled!").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})"
@@ -43,6 +44,7 @@ namespace NobleTitlesPlus
         }
         public override void OnAfterGameInitializationFinished(Game game, object starterObject)
         {
+            Util.Log.Print($">> [DEBUG] OnAfterGameInitializationFinished: kingdom={Kingdom.All.Count}");
             if (game.GameType is not Campaign campaign)
             {
                 return;
@@ -51,15 +53,15 @@ namespace NobleTitlesPlus
             var builder = RuntimeSettings.AddSettings(Options!, campaign.UniqueGameId);
             settings = builder.BuildAsPerSave();
             settings?.Register();
-            this.harmony?.PatchAll();
-            Util.Log.Print($"OnAfterGameInitializationFinished: kingdom={Kingdom.All.Count}");
+            this.harmony?.PatchAll();            
             base.OnAfterGameInitializationFinished(game, starterObject);
         }
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
+            Util.Log.Print($">> [DEBUG] OnGameStart: kingdom={Kingdom.All.Count}");
             base.OnGameStart(game, starterObject);
 
-            if (!canceled && game.GameType is Campaign)
+            if (!this.canceled && game.GameType is Campaign)
             {
                 Options ??= new();
                 ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior(Options));
@@ -68,16 +70,15 @@ namespace NobleTitlesPlus
             {
                 return;
             }
-            Util.Log.Print($"OnGameStart: kingdom={Kingdom.All.Count}");
         }
         public override void OnGameEnd(Game game)
         {
+            Util.Log.Print($">> [DEBUG] OnGameEnd: kingdom={Kingdom.All.Count}");
             var oldSettings = settings;
             oldSettings?.Unregister();
             settings = null;
-            Options = null;
+            Options = new();
             this.harmony?.UnpatchAll();
-            Util.Log.Print($"OnGameEnd: kingdom={Kingdom.All.Count}");
             base.OnGameEnd(game);
         }
 

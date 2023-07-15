@@ -211,7 +211,7 @@ namespace NobleTitlesPlus.Settings
                 builder
                     .SetPropertyValue("fogOfWar", true)
                     .SetPropertyValue("encyclopedia", false) // TODO
-                    .SetPropertyValue("tagging", MBTextManager.ActiveTextLanguage != "日本語") // TODO: how to get current language?
+                    .SetPropertyValue("tagging", MBTextManager.ActiveTextLanguage != "日本語")
                     .SetPropertyValue("fiefNameSeparator", FindTextShortMCM("separator_value"))
                     .SetPropertyValue("fiefNameSeparatorLast", FindTextShortMCM("separator_last_value"))
                     .SetPropertyValue("maxFiefName", 1);

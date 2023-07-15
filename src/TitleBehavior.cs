@@ -27,22 +27,22 @@ namespace NobleTitlesPlus
         }
         public TitleBehavior(Options opt)
         {
-            options = opt;
             Util.Log.Print($">> [DEBUG] CampaignBehavior constructor called: kingdom={Kingdom.All.Count}");
+            options = opt;
         }
         public override void SyncData(IDataStore dataStore)
         {
         }
         private void OnNewGameCreated(CampaignGameStarter starter)
         {
-            Util.Log.Print($"OnNewGameCreated: kingdom={Kingdom.All.Count}");
+            Util.Log.Print($">> [DEBUG] OnNewGameCreated: kingdom={Kingdom.All.Count}");
             options.TitleSet.Initialize();
             nomenclatura.UpdateAll();
             if (options.VerboseLog) Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
         }
         private void OnGameLoaded(CampaignGameStarter starter)
         {
-            Util.Log.Print($"OnGameLoaded: kingdom={Kingdom.All.Count}");
+            Util.Log.Print($">> [DEBUG] OnGameLoaded: kingdom={Kingdom.All.Count}");
             if (options.VerboseLog) Util.Log.Print(">> [INFO] Loading campaign");
             nomenclatura.UpdateAll();
             if (options.VerboseLog) Util.Log.Print($">> [INFO] Loading campaign on {SubModule.Name}");

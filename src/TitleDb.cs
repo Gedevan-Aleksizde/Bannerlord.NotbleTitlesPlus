@@ -1,17 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using TaleWorlds.Core;
 using TaleWorlds.CampaignSystem;
-using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using System.Linq;
-using TaleWorlds.MountAndBlade.Diamond.Ranked;
-using TaleWorlds.MountAndBlade;
-using TaleWorlds.CampaignSystem.Conversation.Tags;
-using TaleWorlds.CampaignSystem.ViewModelCollection.KingdomManagement.Settlements;
 
 namespace NobleTitlesPlus.DB
 {
@@ -24,7 +18,6 @@ namespace NobleTitlesPlus.DB
         }
         public void Initialize()
         {
-            Util.Log.Print(">> [DEBUG] TitleDB initialized");
             this.cultures = new() { { "default", DefaultCultureValue } };
             this.factions = factions = new();
             this.minorFactions = new() { { "default", DefaultMinorFactionValue } };
@@ -32,7 +25,6 @@ namespace NobleTitlesPlus.DB
             this.InitFactionTitles(AssignMode.Blank);
             this.InitMinorFactionTitles(AssignMode.Assign);
             // this.TmpDebug();
-            Util.Log.Print($"title set initialized, Kingdoms={Kingdom.All.Count}, CulturesDict={this.cultures.Count}");
         }
         public void InitCultureTitles(AssignMode mode)
         {
