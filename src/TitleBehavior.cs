@@ -137,25 +137,23 @@ namespace NobleTitlesPlus
                 tr.Add(this.GetHeroTrace(h, TitleRank.Noble));
             }
             // Crown Prince/Princess
-            IEnumerable<Hero> heirs = kingdom.RulingClan.Heroes.Where(h => !h.IsFactionLeader && h != h.Clan.Leader.Spouse);
-            switch (TitleBehavior.options.Inheritance.SelectedValue)
+            List<Hero> royals = kingdom.RulingClan.Heroes.Where(h => !h.IsFactionLeader && h != h.Clan.Leader.Spouse).ToList();
+            List<Hero> heirs = TitleBehavior.options.Inheritance.SelectedValue switch
             {
-                case Inheritance.Issue:
-                    heirs = heirs.Where(h => h.Father == kingdom.Leader || h.Mother == kingdom.Leader).OrderBy(h => -h.Age);
-                    break;
-                case Inheritance.Adult:
-                    heirs = heirs.Where(h => (h.Father == kingdom.Leader || h.Mother == kingdom.Leader) && !h.IsChild).OrderBy(h => -h.Age);
-                    break;
-                case Inheritance.Elder:
-                    heirs = heirs.OrderBy(h => -h.Age);
-                    break;
-                default:
-                    break;
-            }
-            if(heirs.ToList().Count > 0)
+                Inheritance.Issue => royals.Where(h => h.Father == kingdom.Leader || h.Mother == kingdom.Leader).OrderBy(h => -h.Age).ToList(),
+                Inheritance.Adult => royals.Where(h => (h.Father == kingdom.Leader || h.Mother == kingdom.Leader) && !h.IsChild).OrderBy(h => -h.Age).ToList(),
+                Inheritance.Elder => royals.OrderBy(h => -h.Age).ToList(),
+                _ => new(),
+            };
+            if (heirs.Count > 0)
             {
                 this.HeroRank[heirs.First()] = TitleRank.Prince;
                 tr.Add(this.GetHeroTrace(heirs.First(), TitleRank.Prince));
+                royals = royals.Where(h => h != heirs.First()).ToList();
+            }
+            foreach (Hero h in royals)
+            {
+                this.HeroRank[h] = TitleRank.Royal;
             }
             /* The vassals first...
              *

@@ -486,8 +486,10 @@ namespace NobleTitlesPlus.DB
             private GenderTitlePair noble;
             [JsonProperty]
             private GenderTitlePair prince;
+            [JsonProperty]
+            private GenderTitlePair royal;
 
-            public FactionTitleSet(GenderTitlePair king, GenderTitlePair duke, GenderTitlePair count, GenderTitlePair baron, GenderTitlePair? noble = null, GenderTitlePair? prince = null)
+            public FactionTitleSet(GenderTitlePair king, GenderTitlePair duke, GenderTitlePair count, GenderTitlePair baron, GenderTitlePair? noble = null, GenderTitlePair? prince = null, GenderTitlePair? royal = null)
             {
                 this.king = king;
                 this.duke = duke;
@@ -495,6 +497,7 @@ namespace NobleTitlesPlus.DB
                 this.baron = baron;
                 this.prince = prince?? new("{NAME}", "{NAME}");
                 this.noble = noble ?? new("{NAME}", "{NAME}");
+                this.royal = royal ?? new("{NAME}", "{NAME}");
             }
             public FactionTitleSet(FactionTitleSet factionTitleSet)
             {
@@ -504,6 +507,7 @@ namespace NobleTitlesPlus.DB
                 this.baron = new(factionTitleSet.baron);
                 this.noble = new(factionTitleSet.noble);
                 this.prince = new(factionTitleSet.prince);
+                this.royal = new(factionTitleSet.royal);
             }
             public TextObject GetTitle(bool isFemale, TitleRank rank)
             {
@@ -515,6 +519,7 @@ namespace NobleTitlesPlus.DB
                     TitleRank.Baron => this.baron.GetTitle(isFemale),
                     TitleRank.Noble => this.noble.GetTitle(isFemale),
                     TitleRank.Prince => this.prince.GetTitle(isFemale),
+                    TitleRank.Royal => this.royal.GetTitle(isFemale),
                     _ => new("")
                 };
             }
@@ -528,6 +533,7 @@ namespace NobleTitlesPlus.DB
                     TitleRank.Baron => this.baron.GetTitleRaw(isFemale),
                     TitleRank.Noble => this.noble.GetTitleRaw(isFemale),
                     TitleRank.Prince => this.prince.GetTitleRaw(isFemale),
+                    TitleRank.Royal => this.royal.GetTitleRaw(isFemale),
                     _ => ""
                 };
             }
@@ -552,6 +558,9 @@ namespace NobleTitlesPlus.DB
                         break;
                     case TitleRank.Prince:
                         this.prince.SetTitle(isFemale, titleFormat);
+                        break;
+                    case TitleRank.Royal:
+                        this.royal.SetTitle(isFemale, titleFormat);
                         break;
                 }
             }
@@ -638,7 +647,8 @@ namespace NobleTitlesPlus.DB
         Count,
         Baron,
         Noble,
-        Prince
+        Prince,
+        Royal
     }
     public enum Category
     {

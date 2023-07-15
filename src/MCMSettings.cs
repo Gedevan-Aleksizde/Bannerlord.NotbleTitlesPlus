@@ -11,6 +11,7 @@ using TaleWorlds.Core;
 using MCM.Common;
 using MCM.Abstractions.Base;
 using System.Linq;
+using TaleWorlds.MountAndBlade.Diamond.Ranked;
 
 namespace NobleTitlesPlus.Settings
 {
@@ -160,6 +161,18 @@ namespace NobleTitlesPlus.Settings
                                     );
                         }
                         builder
+                        .AddText($"KingdomRoyal{s}_{id}", FindTextShortMCM($"title_Royal{s}"),
+                            new ProxyRef<string>(
+                                () => options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, TitleRank.Royal, Category.Default),
+                                value =>
+                                {
+                                    if (isCulture) options.TitleSet.SetCultureTitle(value, id, isFemale, TitleRank.Royal);
+                                    else options.TitleSet.SetFactionTitle(value, id, isFemale, TitleRank.Royal);
+                                }),
+                            propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"Royal{s}_hint"))
+                            .SetOrder(14 + (isFemale ? 0 : 1))
+                        );
+                        builder
                         .AddText($"KingdomCrown{s}_{id}", FindTextShortMCM($"title_Crown{s}"),
                             new ProxyRef<string>(
                                 () => options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, TitleRank.Prince, Category.Default),
@@ -169,7 +182,7 @@ namespace NobleTitlesPlus.Settings
                                     else options.TitleSet.SetFactionTitle(value, id, isFemale, TitleRank.Prince);
                                 }),
                             propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"Crown{s}_hint"))
-                            .SetOrder(14 + (isFemale ? 0 : 1))
+                            .SetOrder(16 + (isFemale ? 0 : 1))
                         );
                     }
                     builder.SetGroupOrder(order);
@@ -256,7 +269,7 @@ namespace NobleTitlesPlus.Settings
                                     builder.SetPropertyValue($"KingdomRank{rank}{s}_{kingdomId}", Util.QuoteMultVarBitEasiler(TO));
                                 }
                             }
-                            else if(kingdomId != null)
+                            else if(kingdomId != null) // TODO: is really needed?
                             {
                                 if (GameTexts.TryGetText(moduleStrTitles, out TextObject TOKingdom, $"{preset}_{rank}{s}_{kingdomId ?? ""}"))
                                 {
@@ -269,26 +282,11 @@ namespace NobleTitlesPlus.Settings
                             }
                             else
                             {
-                                if (GameTexts.TryGetText(moduleStrTitles, out TextObject TOCulture, $"{preset}_{rank}{s}_{cultureId}"))
-                                {
-                                    builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", Util.QuoteMultVarBitEasiler(TOCulture));
-                                }
-                                else
-                                {
-                                    builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_{rank}{s}_default")));
-                                }
+                                builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", FinTitleTextString(preset, rank.ToString(), s, cultureId));
                             }   
                         }
-                        if (options.TitleSet.FactionTitleExists(kingdomId ?? "", s == "F", TitleRank.Prince))
-                        {
-                            options.TitleSet.GetTitleRaw(s == "F", cultureId, kingdomId, TitleRank.Prince, Category.Default);
-                            builder.SetPropertyValue($"KingdomCrown{s}_{kingdomId}", preset == "DEF"? "{NAME}" :
-                            Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_crown{s}_{kingdomId}")));
-                        }
-                        else
-                        {
-                            builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", preset == "DEF" ? "{NAME}" : Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_crown{s}_{cultureId}")));
-                        }
+                        builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", FinTitleTextString(preset, "crown", s, cultureId));
+                        builder.SetPropertyValue($"KingdomRoyal{s}_{cultureId}", FinTitleTextString(preset, "royal", s, cultureId));
                     }
                 }
                 void FillMinorFactionPropertyValues(string preset, string factionId)
@@ -297,14 +295,7 @@ namespace NobleTitlesPlus.Settings
                     {
                         foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                         {
-                            if(GameTexts.TryGetText(moduleStrTitles, out TextObject to, $"{preset}_Minor{lm}{s}_{factionId}"))
-                            {
-                                builder.SetPropertyValue($"Minor{lm}{s}_{factionId}", Util.QuoteMultVarBitEasiler(to));
-                            }
-                            else
-                            {
-                                builder.SetPropertyValue($"Minor{lm}{s}_{factionId}", Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_Minor{lm}{s}_default")));
-                            }
+                            builder.SetPropertyValue($"Minor{lm}{s}_{factionId}", FinTitleTextString(preset, $"Minor{lm}", s, factionId));
                         }
                     }
                 }
@@ -315,5 +306,22 @@ namespace NobleTitlesPlus.Settings
         {
             return GameTexts.FindText("str_ntp_mcm", variantId).ToString();
         }
+        private static string FinTitleTextString(string preset, string rank, string gender, string group)
+        {
+            if(GameTexts.TryGetText(moduleStrTitles, out TextObject to, $"{preset}_{rank}{gender}_{group}"))
+            {
+                return Util.QuoteMultVarBitEasiler(to);
+            }
+            else
+            {
+                return Util.QuoteMultVarBitEasiler(GameTexts.FindText(moduleStrTitles, $"{preset}_{rank}{gender}_default"));
+            }
+        }
+    }
+    public enum FallbackType
+    {
+        Default,
+        Vanilla,
+        Localization
     }
 }
