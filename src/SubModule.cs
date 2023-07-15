@@ -51,7 +51,7 @@ namespace NobleTitlesPlus
             var builder = RuntimeSettings.AddSettings(Options!, campaign.UniqueGameId);
             settings = builder.BuildAsPerSave();
             settings?.Register();
-            this.harmony.PatchAll();
+            this.harmony?.PatchAll();
             Util.Log.Print($"OnAfterGameInitializationFinished: kingdom={Kingdom.All.Count}");
             base.OnAfterGameInitializationFinished(game, starterObject);
         }
@@ -76,14 +76,14 @@ namespace NobleTitlesPlus
             oldSettings?.Unregister();
             settings = null;
             Options = null;
-            this.harmony.UnpatchAll();
+            this.harmony?.UnpatchAll();
             Util.Log.Print($"OnGameEnd: kingdom={Kingdom.All.Count}");
             base.OnGameEnd(game);
         }
 
         private bool hasLoaded;
         private bool canceled;
-        private Harmony harmony;
+        private Harmony? harmony;
         public static string ModVersion
         {
             get
