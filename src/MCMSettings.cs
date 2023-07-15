@@ -62,7 +62,7 @@ namespace NobleTitlesPlus.Settings
             }
             foreach (string kingdomId in options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
             {
-                string name = GameTexts.FindText("str_adjective_for_faction", kingdomId).ToString();
+                string name = GameTexts.FindText("str_short_term_for_faction", kingdomId).ToString();
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(kingdomId, 4 + j, false)); ;
                 Util.Log.Print($">> [INFO] Category {name}({kingdomId}, faction) added to MCM options");
                 j++;
