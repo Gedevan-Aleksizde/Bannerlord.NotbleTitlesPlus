@@ -51,6 +51,10 @@
   <string id="NTP.MCMCrownMHint" text="The male succession's title format"/>
   <string id="NTP.MCMCrownF" text="Crown Princess"/>
   <string id="NTP.MCMCrownFHint" text="The female succession's title format"/>
+  <string id="NTP.MCMRoyalM" text="Royal Male" />
+  <string id="NTP.MCMRoyalMHint" text="A male ruler clan menber's title"/>
+  <string id="NTP.MCMRoyalF" text="Royal Female" />
+  <string id="NTP.MCMRoyalFHint" text="A female ruler clan member's title"/>
   <string id="NTP.MCMMinorLM" text="Male Leader"/>
   <string id="NTP.MCMMinorLMHint" text="Title format of the male leader"/>
   <string id="NTP.MCMMinorLF" text="Female Leader"/>

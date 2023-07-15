@@ -10,6 +10,8 @@
   <string id="NTP.ORI1F_default" text="Queen {NAME}" />
   <string id="NTP.ORICrownM_default" text="{NAME}" />
   <string id="NTP.ORICrownF_default" text="{NAME}" />
+  <string id="NTP.ORIRoyalM_default" text="{NAME}" />
+  <string id="NTP.ORIRoyalF_default" text="{NAME}" />
   <string id="NTP.ORI2M_default" text="Duke {NAME}" />
   <string id="NTP.ORI2F_default" text="Duchess {NAME}" />
   <string id="NTP.ORI3M_default" text="Count {NAME}" />

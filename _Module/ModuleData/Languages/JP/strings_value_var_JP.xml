@@ -10,6 +10,8 @@
   <string id="NTP.VAR1F_default" text="女王{NAME}" />
   <string id="NTP.VARCrownM_default" text="王太子{NAME}" />
   <string id="NTP.VARCrownF_default" text="王太女{NAME}" />
+  <string id="NTP.VARRoyalF_default" text="{NAME}親王" />
+  <string id="NTP.VARRoyalM_default" text="{NAME}親王女" />
   <string id="NTP.VAR2M_default" text="{NAME}公爵" />
   <string id="NTP.VAR2F_default" text="{NAME}女公爵" />
   <string id="NTP.VAR3M_default" text="{NAME}伯爵" />
@@ -23,6 +25,8 @@
   <string id="NTP.VAR1F_empire" text="バシリッサ゠{NAME}" />
   <string id="NTP.VARCrownM_empire" text="ポルフィロゲネトス゠{NAME}" />
   <string id="NTP.VARCrownF_empire" text="ポルフィロゲネテー゠{NAME}" />
+  <string id="NTP.VARRoyalM_empire" text="セバストス゠{NAME}" />
+  <string id="NTP.VARRoyalF_empire" text="セバステー゠{NAME}" />
   <string id="NTP.VAR2M_empire" text="メガスアルホン゠{NAME}" />
   <string id="NTP.VAR2F_empire" text="メガスアルホンティッサ゠{NAME}" />
   <string id="NTP.VAR3M_empire" text="エクサルホス゠{NAME}" />
@@ -34,8 +38,10 @@
 
   <string id="NTP.VAR1M_aserai" text="スルタン゠{NAME}" />
   <string id="NTP.VAR1F_aserai" text="スルタナ゠{NAME}" />
-  <string id="NTP.VARCrownM_aserai" text="シェフザデ゠{NAME}" />
-  <string id="NTP.VARCrownF_aserai" text="シェフザダ゠{NAME}" />
+  <string id="NTP.VARCrownM_aserai" text="{NAME}゠ワリー" />
+  <string id="NTP.VARCrownF_aserai" text="{NAME}゠ワリー" />
+  <string id="NTP.VARRoyalM_aserai" text="シェフザデ゠{NAME}" />
+  <string id="NTP.VARRoyalF_aserai" text="シェフザダ゠{NAME}" />
   <string id="NTP.VAR2M_aserai" text="アミールアルウマラ゠{NAME}" />
   <string id="NTP.VAR2F_aserai" text="アミーラアルウマラ゠{NAME}" />
   <string id="NTP.VAR3M_aserai" text="アミールカビル゠{NAME}" />
@@ -49,6 +55,8 @@
   <string id="NTP.VAR1F_battania" text="バッタニア女上王{NAME}" />
   <string id="NTP.VARCrownM_battania" text="上王太子{NAME}" />
   <string id="NTP.VARCrownF_battania" text="上王太女{NAME}" />
+  <string id="NTP.VARRoyalM_battania" text="フライス゠{NAME}" />
+  <string id="NTP.VARRoyalF_battania" text="バンフライス゠{NAME}" />
   <string id="NTP.VAR2M_battania" text="藩王{NAME}" />
   <string id="NTP.VAR2F_battania" text="藩女王{NAME}" />
   <string id="NTP.VAR3M_battania" text="部族王{NAME}" />
@@ -62,6 +70,8 @@
   <string id="NTP.VAR1F_khuzait" text="{NAME}゠ハトゥン" />
   <string id="NTP.VARCrownM_khuzait" text="{NAME}゠カガン" />
   <string id="NTP.VARCrownF_khuzait" text="{NAME}゠カガトゥン" />
+  <string id="NTP.VARRoyalM_khuzait" text="{NAME}゠シャド" />
+  <string id="NTP.VARRoyalF_khuzait" text="{NAME}゠シャドゥム" />
   <string id="NTP.VAR2M_khuzait" text="{NAME}゠アタベグ" />
   <string id="NTP.VAR2F_khuzait" text="{NAME}゠アネベグム" />
   <string id="NTP.VAR3M_khuzait" text="{NAME}゠シャダピッドベグ" />
@@ -75,6 +85,8 @@
   <string id="NTP.VAR1F_sturgia" text="大クニャジーニャ゠{NAME}" />
   <string id="NTP.VARCrownM_sturgia" text="{NAME}゠クニャゼヴィチ" />
   <string id="NTP.VARCrownF_sturgia" text="{NAME}゠クニャゼヴナ" />
+  <string id="NTP.VARRoyalM_sturgia" text="プリンス゠{NAME}" />
+  <string id="NTP.VARRoyalF_sturgia" text="プリンセッサ゠{NAME}" />
   <string id="NTP.VAR2M_sturgia" text="ヘルトゥク゠{NAME}" />
   <string id="NTP.VAR2F_sturgia" text="ヘルトゥギンデ゠{NAME}" />
   <string id="NTP.VAR3M_sturgia" text="ヤール゠{NAME}" />
@@ -88,6 +100,8 @@
   <string id="NTP.VAR1F_vlandia" text="ヴランディア女王{NAME}" />
   <string id="NTP.VARCrownM_vlandia" text="ロドック大公{NAME}" />
   <string id="NTP.VARCrownF_vlandia" text="ロドック女大公{NAME}" />
+  <string id="NTP.VARRoyalM_vlandia" text="{NAME}王子" />
+  <string id="NTP.VARRoyalF_vlandia" text="{NAME}王女" />
   <string id="NTP.VAR2M_vlandia" text="{NAME}公爵" />
   <string id="NTP.VAR2F_vlandia" text="{NAME}女公爵" />
   <string id="NTP.VAR3M_vlandia" text="{NAME}伯爵" />
@@ -101,6 +115,8 @@
   <string id="NTP.VAR1F_huaxia" text="女皇{CLAN}{NAME}" />
   <string id="NTP.VARCrownM_huaxia" text="皇太子{NAME}" />
   <string id="NTP.VARCrownF_huaxia" text="皇太女{NAME}" />
+  <string id="NTP.VARRoyalM_huaxia" text="{NAME}公子" />
+  <string id="NTP.VARRoyalF_huaxia" text="{NAME}公主" />
   <string id="NTP.VAR2M_huaxia" text="{FIEF}郡王{CLAN}{NAME}" />
   <string id="NTP.VAR2F_huaxia" text="{FIEF}女郡王{CLAN}{NAME}" />
   <string id="NTP.VAR3M_huaxia" text="{FIEF}國公{CLAN}{NAME}" />

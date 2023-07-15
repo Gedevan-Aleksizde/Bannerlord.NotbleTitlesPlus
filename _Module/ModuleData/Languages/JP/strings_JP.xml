@@ -51,6 +51,10 @@
   <string id="NTP.MCMCrownMHint" text="君主の男性後継者の称号形式です。"/>
   <string id="NTP.MCMCrownF" text="王太女"/>
   <string id="NTP.MCMCrownFHint" text="君主の女性後継者の称号形式です。"/>
+  <string id="NTP.MCMRoyalM" text="王族男子" />
+  <string id="NTP.MCMRoyalMHint" text="君主のクランの男性の称号形式です。"/>
+  <string id="NTP.MCMRoyalF" text="王族女子" />
+  <string id="NTP.MCMRoyalFHint" text="君主のクランの女性の称号形式です。"/>
   <string id="NTP.MCMMinorLM" text="男性リーダー"/>
   <string id="NTP.MCMMinorLMHint" text="男性リーダーの称号形式です。"/>
   <string id="NTP.MCMMinorLF" text="女性リーダー"/>

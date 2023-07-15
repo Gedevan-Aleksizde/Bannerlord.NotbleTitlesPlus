@@ -42,6 +42,8 @@
         <string id="str_ntp_mcm.title_minorMF" text="{=NTP.MCMMinorMF}Female Member" />
         <string id="str_ntp_mcm.title_CrownM" text="{=NTP.MCMCrownM}Crown Prince" />
         <string id="str_ntp_mcm.title_CrownF" text="{=NTP.MCMCrownF}Crown Princess" />
+        <string id="str_ntp_mcm.title_RoyalM" text="{=NTP.MCMRoyalM}Royal Male" />
+        <string id="str_ntp_mcm.title_RoyalF" text="{=NTP.MCMRoyalF}Royal Female" />
         <string id="str_ntp_mcm.1M_hint" text="{=NTP.MCMRank1MHint}Title format of the male monorch" />
         <string id="str_ntp_mcm.1F_hint" text="{=NTP.MCMRank1FHint}Title format of the female monorch" />
         <string id="str_ntp_mcm.2M_hint" text="{=NTP.MCMRank2MHint}Title format of a rank 2 male vassal" />
@@ -58,6 +60,8 @@
         <string id="str_ntp_mcm.minorMF_hint" text="{=NTP.MCMMinorMFHint}A female menber's title format" />
         <string id="str_ntp_mcm.CrownM_hint" text="{=NTP.MCMCrownMHint}The male succession's title format" />
         <string id="str_ntp_mcm.CrownF_hint" text="{=NTP.MCMCrownFHint}The female succession's title format" />
+        <string id="str_ntp_mcm.RoyalM_hint" text="{=NTP.MCMRoyalMHint}A male ruler clan menber's title" />
+        <string id="str_ntp_mcm.RoyalF_hint" text="{=NTP.MCMRoyalFHint}A female ruler clan menber's title" />
         
         <!-- default preset -->
         <string id="str_ntp_title_set.DEF_1M_default" text="{=NTP.DEF1M_default}King {NAME}" />
@@ -72,6 +76,8 @@
         <string id="str_ntp_title_set.DEF_5F_default" text="{=NTP.DEF5F_default}{NAME}" />
         <string id="str_ntp_title_set.DEF_crownM_default" text="{=NTP.DEFCrownM_default}{NAME}" />
         <string id="str_ntp_title_set.DEF_crownF_default" text="{=NTP.DEFCrownF_default}{NAME}" />
+        <string id="str_ntp_title_set.DEF_royalM_default" text="{=NTP.DEFRoyalM_default}{NAME}" />
+        <string id="str_ntp_title_set.DEF_royalF_default" text="{=NTP.DEFRoyalF_default}{NAME}" />
 
         <string id="str_ntp_title_set.DEF_MinorLM_default" text="{=NTP.DEFMinorLM_default}{NAME} of {CLAN}" />
         <string id="str_ntp_title_set.DEF_MinorLF_default" text="{=NTP.DEFMinorLF_default}{NAME} of {CLAN}" />
@@ -90,6 +96,8 @@
         <string id="str_ntp_title_set.ORI_5F_default" text="{=NTP.ORI5F_default}{NAME}" />
         <string id="str_ntp_title_set.ORI_crownM_default" text="{=NTP.ORICrownM_default}{NAME}" />
         <string id="str_ntp_title_set.ORI_crownF_default" text="{=NTP.ORICrownF_default}{NAME}" />
+        <string id="str_ntp_title_set.ORI_royalM_default" text="{=NTP.ORIRoyalM_default}{NAME}" />
+        <string id="str_ntp_title_set.ORI_royalF_default" text="{=NTP.ORIRoyalF_default}{NAME}" />
 
         <string id="str_ntp_title_set.ORI_1M_aserai" text="{=NTP.ORI1M_aserai}Sultan {NAME}" />
         <string id="str_ntp_title_set.ORI_1F_aserai" text="{=NTP.ORI1F_aserai}Sultana {NAME}" />
@@ -187,6 +195,8 @@
         <string id="str_ntp_title_set.VAR_5F_default" text="{=NTP.VAR5F_default}Lady {NAME}" />
         <string id="str_ntp_title_set.VAR_crownM_default" text="{=NTP.VARCrownM_default}Crown Prince {NAME}" />
         <string id="str_ntp_title_set.VAR_crownF_default" text="{=NTP.VARCrownF_default}Crown Princess {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalM_default" text="{=NTP.VARRoyalM_default}Prince {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalF_default" text="{=NTP.VARRoyalF_default}Princess {NAME}" />
 
         <string id="str_ntp_title_set.VAR_1M_aserai" text="{=NTP.VAR1M_aserai}Sultan {NAME}" />
         <string id="str_ntp_title_set.VAR_1F_aserai" text="{=NTP.VAR1F_aserai}Sultana {NAME}" />
@@ -198,14 +208,16 @@
         <string id="str_ntp_title_set.VAR_4F_aserai" text="{=NTP.VAR4F_aserai}Emira {NAME}" />
         <string id="str_ntp_title_set.VAR_5M_aserai" text="{=NTP.VAR5M_aserai}Sharif {NAME}" />
         <string id="str_ntp_title_set.VAR_5F_aserai" text="{=NTP.VAR5F_aserai}Nabila {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownM_aserai" text="{=NTP.VARCrownM_aserai}{NAME} Shezade" />
-        <string id="str_ntp_title_set.VAR_crownF_aserai" text="{=NTP.VARCrownF_aserai}{NAME} Shezada" />
+        <string id="str_ntp_title_set.VAR_crownM_aserai" text="{=NTP.VARCrownM_aserai}{NAME} Wali" />
+        <string id="str_ntp_title_set.VAR_crownF_aserai" text="{=NTP.VARCrownF_aserai}{NAME} Wali" />
+        <string id="str_ntp_title_set.VAR_royalM_aserai" text="{=NTP.VARRoyalM_aserai}{NAME} Sehzade" />
+        <string id="str_ntp_title_set.VAR_royalF_aserai" text="{=NTP.VARRoyalF_aserai}{NAME} Sehzada" />
 
-        <string id="str_ntp_title_set.VAR_1M_battania" text="{=NTP.VAR1M_battania}High King {NAME}" />
+        <string id="str_ntp_title_set.VAR_1M_battania" text="{=NTP.VAR1M_battania}High King {NAME}" /> <!-- Ard Rí -->
         <string id="str_ntp_title_set.VAR_1F_battania" text="{=NTP.VAR1F_battania}High Queen {NAME}" />
-        <string id="str_ntp_title_set.VAR_2M_battania" text="{=NTP.VAR2M_battania}Overking {NAME}" />
+        <string id="str_ntp_title_set.VAR_2M_battania" text="{=NTP.VAR2M_battania}Overking {NAME}" /> <!--Rí ruirech -->
         <string id="str_ntp_title_set.VAR_2F_battania" text="{=NTP.VAR2F_battania}Overqueen {NAME}" />
-        <string id="str_ntp_title_set.VAR_3M_battania" text="{=NTP.VAR3M_battania}Clan King {NAME}" />
+        <string id="str_ntp_title_set.VAR_3M_battania" text="{=NTP.VAR3M_battania}Clan King {NAME}" /> <!--Rí buiden -->
         <string id="str_ntp_title_set.VAR_3F_battania" text="{=NTP.VAR3F_battania}Clan Queen {NAME}" />
         <string id="str_ntp_title_set.VAR_4M_battania" text="{=NTP.VAR4M_battania}Mormaer {NAME}" />
         <string id="str_ntp_title_set.VAR_4F_battania" text="{=NTP.VAR4F_battania}Banmormaer {NAME}" />
@@ -213,6 +225,8 @@
         <string id="str_ntp_title_set.VAR_5F_battania" text="{=NTP.VAR5F_battania}Beanuassal {NAME}" />
         <string id="str_ntp_title_set.VAR_crownM_battania" text="{=NTP.VARCrownM_battania}High Crown Prince {NAME}" />
         <string id="str_ntp_title_set.VAR_crownF_battania" text="{=NTP.VARCrownF_battania}High Crown Princess {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalM_battania" text="{=NTP.VARRoyalM_battania}Flaith {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalF_battania" text="{=NTP.VARRoyalF_battania}Banflaith {NAME}" />
 
         <string id="str_ntp_title_set.VAR_1M_empire" text="{=NTP.VAR1M_empire}Basileus {NAME}" />
         <string id="str_ntp_title_set.VAR_1F_empire" text="{=NTP.VAR1F_empire}Basilissa {NAME}" />
@@ -226,6 +240,8 @@
         <string id="str_ntp_title_set.VAR_5F_empire" text="{=NTP.VAR5F_empire}Patrikia {NAME}" />
         <string id="str_ntp_title_set.VAR_crownM_empire" text="{=NTP.VARCrownM_empire}Porphyrogennetos {NAME}" />
         <string id="str_ntp_title_set.VAR_crownF_empire" text="{=NTP.VARCrownF_empire}Porphyrogennete {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalM_empire" text="{=NTP.VARRoyalM_empire}Sebastos {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalF_empire" text="{=NTP.VARRoyalF_empire}Sebaste {NAME}" />
 
         <string id="str_ntp_title_set.VAR_1M_khuzait" text="{=NTP.VAR1M_khuzait}{NAME} Khan" />
         <string id="str_ntp_title_set.VAR_1F_khuzait" text="{=NTP.VAR1F_khuzait}{NAME} Khatum" />
@@ -237,8 +253,11 @@
         <string id="str_ntp_title_set.VAR_4F_khuzait" text="{=NTP.VAR4F_khuzait}{NAME} Begum" />
         <string id="str_ntp_title_set.VAR_5M_khuzait" text="{=NTP.VAR5M_khuzait}{NAME} Baghatur" />
         <string id="str_ntp_title_set.VAR_5F_khuzait" text="{=NTP.VAR5F_khuzait}{NAME} Bekhi" />
-        <string id="str_ntp_title_set.VAR_crownM_khuzait" text="{=NTP.VARCrownM_khuzait}Qhagan  {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownF_khuzait" text="{=NTP.VARCrownF_khuzait}Qhanum {NAME}" />
+        <string id="str_ntp_title_set.VAR_crownM_khuzait" text="{=NTP.VARCrownM_khuzait}{NAME} Qhagan " />
+        <string id="str_ntp_title_set.VAR_crownF_khuzait" text="{=NTP.VARCrownF_khuzait}{NAME} Qhagatun" />
+        <string id="str_ntp_title_set.VAR_royalM_khuzait" text="{=NTP.VARRoyalM_khuzait}{NAME} Shad" />
+        <string id="str_ntp_title_set.VAR_royalF_khuzait" text="{=NTP.VARRoyalF_khuzait}{NAME} Shadum" />
+
 
         <string id="str_ntp_title_set.VAR_1M_sturgia" text="{=NTP.VAR1M_sturgia}Veliky Knyaz {NAME}" />
         <string id="str_ntp_title_set.VAR_1F_sturgia" text="{=NTP.VAR1F_sturgia}Velikaya Knyazinya {NAME}" />
@@ -252,6 +271,8 @@
         <string id="str_ntp_title_set.VAR_5F_sturgia" text="{=NTP.VAR5F_sturgia}Boyarina {NAME}" />
         <string id="str_ntp_title_set.VAR_crownM_sturgia" text="{=NTP.VARCrownM_sturgia}{NAME} Knyazevich" />
         <string id="str_ntp_title_set.VAR_crownF_sturgia" text="{=NTP.VARCrownF_sturgia}{NAME} Knyazevna" />
+        <string id="str_ntp_title_set.VAR_royalM_sturgia" text="{=NTP.VARRoyalM_sturgia}Prins {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalF_sturgia" text="{=NTP.VARRoyalF_sturgia}Prinsessa {NAME}" />
 
         <string id="str_ntp_title_set.VAR_1M_vlandia" text="{=NTP.VAR1M_vlandia}Rex Vlandiae {NAME}" />
         <string id="str_ntp_title_set.VAR_1F_vlandia" text="{=NTP.VAR1F_vlandia}Regna Vlandiae {NAME}" />
@@ -265,6 +286,8 @@
         <string id="str_ntp_title_set.VAR_5F_vlandia" text="{=NTP.VAR5F_vlandia}Dame {NAME}" />
         <string id="str_ntp_title_set.VAR_crownM_vlandia" text="{=NTP.VARCrownM_vlandia}{NAME} the Prince of Rhodok" />
         <string id="str_ntp_title_set.VAR_crownF_vlandia" text="{=NTP.VARCrownF_vlandia}{NAME} the Princess of Rhodok" />
+        <string id="str_ntp_title_set.VAR_royalM_vlandia" text="{=NTP.VARRoyalM_vlandia}Prince {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalF_vlandia" text="{=NTP.VARRoyalF_vlandia}Princess {NAME}" />
 
         <string id="str_ntp_title_set.VAR_1M_testuojin" text="{=NTP.VAR1M_testuojin}Mikado {NAME}" />
         <string id="str_ntp_title_set.VAR_1F_testuojin" text="{=NTP.VAR1F_testuojin}Jotei {NAME}" />
@@ -278,6 +301,23 @@
         <string id="str_ntp_title_set.VAR_5F_testuojin" text="{=NTP.VAR5F_testuojin}Gozen {CLAN}{NAME}-San" />
         <string id="str_ntp_title_set.VAR_crownM_testuojin" text="{=NTP.VARCrownM_testuojin}{NAME} Oji" />
         <string id="str_ntp_title_set.VAR_crownF_testuojin" text="{=NTP.VARCrownF_testuojin}{NAME} Ojo" />
+        <string id="str_ntp_title_set.VAR_royalM_testuojin" text="{=NTP.VARRoyalM_testuojin}{NAME} Miya" />
+        <string id="str_ntp_title_set.VAR_royalF_testuojin" text="{=NTP.VARRoyalF_testuojin}{NAME} Miya" />
+
+        <string id="str_ntp_title_set.VAR_1M_huaxia" text="{=NTP.VAR1M_huaxia}Huangdi {NAME}" />
+        <string id="str_ntp_title_set.VAR_1F_huaxia" text="{=NTP.VAR1F_huaxia}Huangdi {NAME}" />
+        <string id="str_ntp_title_set.VAR_2M_huaxia" text="{=NTP.VAR2M_huaxia}Junwang {CLAN}{NAME}" />
+        <string id="str_ntp_title_set.VAR_2F_huaxia" text="{=NTP.VAR2F_huaxia}Junwang {CLAN}{NAME}" />
+        <string id="str_ntp_title_set.VAR_3M_huaxia" text="{=NTP.VAR3M_huaxia}Junwang {CLAN}{NAME}" />
+        <string id="str_ntp_title_set.VAR_3F_huaxia" text="{=NTP.VAR3F_huaxia}Junwang {CLAN} {NAME}" />
+        <string id="str_ntp_title_set.VAR_4M_huaxia" text="{=NTP.VAR4M_huaxia}Junwang {CLAN} {NAME}" />
+        <string id="str_ntp_title_set.VAR_4F_huaxia" text="{=NTP.VAR4F_huaxia}Junwang {CLAN} {NAME}" />
+        <string id="str_ntp_title_set.VAR_5M_huaxia" text="{=NTP.VAR5M_huaxia}{CLAN} {NAME}" />
+        <string id="str_ntp_title_set.VAR_5F_huaxia" text="{=NTP.VAR5F_huaxia}{CLAN} {NAME}" />
+        <string id="str_ntp_title_set.VAR_crownM_huaxia" text="{=NTP.VARCrownM_huaxia}{CLAN} {NAME}" />
+        <string id="str_ntp_title_set.VAR_crownF_huaxia" text="{=NTP.VARCrownF_huaxia}{CLAN} {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalM_huaxia" text="{=NTP.VARRoyalM_huaxia}{CLAN} {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalF_huaxia" text="{=NTP.VARRoyalF_huaxia}{CLAN} {NAME}" />
 
         <string id="str_ntp_title_set.VAR_MinorLM_default" text="{=NTP.VARMinorLM_default}{NAME} of {CLAN_SHORT}" />
         <string id="str_ntp_title_set.VAR_MinorLF_default" text="{=NTP.VARMinorLF_default}{NAME} of {CLAN_SHORT}" />
