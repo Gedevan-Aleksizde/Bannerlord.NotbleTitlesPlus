@@ -50,7 +50,10 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPrefix]
         private static void PrevesrveInitialAgentName(MissionConversationVM __instance, ref ConversationManager ____conversationManager)
         {
-            namePre = ____conversationManager.SpeakerAgent.Character.Name;
+            if (____conversationManager.SpeakerAgent.Character.IsHero)
+            {
+                namePre = ____conversationManager.OneToOneConversationHero.Name;
+            }
         }
         [HarmonyPostfix]
         private static void EditOverNestedTitleFormatInConverastion(MissionConversationVM __instance)
