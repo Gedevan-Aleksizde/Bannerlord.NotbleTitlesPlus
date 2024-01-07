@@ -16,7 +16,7 @@ namespace NobleTitlesPlus
 {
     public class SubModule : MBSubModuleBase
     {
-        
+
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
@@ -45,40 +45,45 @@ namespace NobleTitlesPlus
         public override void OnAfterGameInitializationFinished(Game game, object starterObject)
         {
             Util.Log.Print($">> [DEBUG] OnAfterGameInitializationFinished: kingdom={Kingdom.All.Count}");
-            if (game.GameType is not Campaign campaign)
+            if (game.GameType is Campaign c)
             {
-                return;
+                System.Diagnostics.Debug.Assert(settings is null);
+                var builder = RuntimeSettings.AddSettings(Options!, c.UniqueGameId);
+                settings = builder.BuildAsPerSave();
+                settings?.Register();
+                this.harmony?.PatchAll();
             }
-            System.Diagnostics.Debug.Assert(settings is null);
-            var builder = RuntimeSettings.AddSettings(Options!, campaign.UniqueGameId);
-            settings = builder.BuildAsPerSave();
-            settings?.Register();
-            this.harmony?.PatchAll();            
             base.OnAfterGameInitializationFinished(game, starterObject);
         }
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
-            Util.Log.Print($">> [DEBUG] OnGameStart: kingdom={Kingdom.All.Count}");
-            base.OnGameStart(game, starterObject);
-
             if (!this.canceled && game.GameType is Campaign)
             {
                 Options ??= new();
                 ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior(Options));
+                Util.Log.Print($">> [DEBUG] OnGameStart: kingdom={Kingdom.All.Count}");
             }
-            if (starterObject is not CampaignGameStarter campaignGameStarter)
+            else
             {
-                return;
+                Util.Log.Print($">> [DEBUG] OnGameStart: not Campaign");
             }
+            base.OnGameStart(game, starterObject);
         }
         public override void OnGameEnd(Game game)
         {
-            Util.Log.Print($">> [DEBUG] OnGameEnd: kingdom={Kingdom.All.Count}");
-            var oldSettings = settings;
-            oldSettings?.Unregister();
-            settings = null;
-            Options = new();
-            this.harmony?.UnpatchAll();
+            if (game.GameType is Campaign)
+            {
+                Util.Log.Print($">> [DEBUG] OnGameEnd: kingdom={Kingdom.All.Count}");
+                var oldSettings = settings;
+                oldSettings?.Unregister();
+                settings = null;
+                Options = new();
+                this.harmony?.UnpatchAll();
+            }
+            else
+            {
+                Util.Log.Print($">> [DEBUG] OnGameEnd: not Campaign");
+            }
             base.OnGameEnd(game);
         }
 
