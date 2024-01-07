@@ -670,7 +670,7 @@ namespace NobleTitlesPlus.DB
     public enum Inheritance
     {
         Disabled,
-        Issue,
+        Primogeniture,
         Adult,
         Elder
     }

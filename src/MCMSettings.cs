@@ -12,6 +12,7 @@ using MCM.Common;
 using MCM.Abstractions.Base;
 using System.Linq;
 using TaleWorlds.MountAndBlade.Diamond.Ranked;
+using Newtonsoft.Json.Linq;
 
 namespace NobleTitlesPlus.Settings
 {
@@ -21,12 +22,12 @@ namespace NobleTitlesPlus.Settings
         public bool FogOfWar { get; set; } = true;
         public bool Encyclopedia { get; set; } = false;
         public bool SpouseTitle { get; private set; } = true;
-        public bool Tagging { get; set;} = false;
+        public bool Tagging { get; set; } = false;
         public string FiefNameSeparator { get; set; } = ",";
         public string FiefNameSeparatorLast { get; set; } = "and";
         public int MaxFiefNames { get; set; } = 1;
-        public Dropdown<Inheritance> Inheritance { get; set; } = new(new List<DB.Inheritance>((Inheritance[])Enum.GetValues(typeof(DB.Inheritance))), 1);
-        public TitleSet TitleSet { get; set; } = new();
+        public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(DB.Inheritance)).OfType<DB.Inheritance>().ToList().Select(x => GameTexts.FindText("str_ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
+    public TitleSet TitleSet { get; set; } = new();
     }
     internal static class RuntimeSettings
     {
@@ -100,7 +101,7 @@ namespace NobleTitlesPlus.Settings
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(2)
                 )
                 .AddDropdown("heir", FindTextShortMCM("heir"), 1,
-                    new ProxyRef<Dropdown<Inheritance>>(
+                    new ProxyRef<Dropdown<TextObject>>(
                         () => options.Inheritance,
                         value => options.Inheritance = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(4)

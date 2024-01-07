@@ -22,11 +22,17 @@
   <string id="NTP.MCMSep" text="領地名の区切り文字"/>
   <string id="NTP.MCMSepHint" text="領地名の区切り文字・記号です。"/>
   <string id="NTP.MCMSepLast" text="最後の領地名の区切り文字"/>
-  <string id="NTP.MCMSepLastHint" text="最後の区切り文字・記号です (日本語なら変える必要はないはずです)"/>
+  <string id="NTP.MCMSepLastHint" text="最後の区切り文字・記号です(日本語なら変える必要はないはずです)"/>
   <string id="NTP.MCMSize" text="領地の最大表示数"/>
   <string id="NTP.MCMSizeHint" text="表示する領地名の最大数です。"/>
   <string id="NTP.MCMHeir" text="王位継承者"/>
-  <string id="NTP.MCMHeirHint" text="王位継承のルールです。 Issue は君主の子息の最年長者を選びます。 Adult は Issue のうち、成人のみを選びます。 Elder は君主のクランの中で最年長者を選びます。注: バナーロードのルール上、王位継承者が必ず王位を相続するとは限りません。"/>
+  <string id="NTP.MCMHeirDisabled" text="無効"/>
+  <string id="NTP.MCMHeirPrimo" text="長子相続"/>
+  <string id="NTP.MCMHeirPrimoM" text="男系長子相続"/>
+  <string id="NTP.MCMHeirPrimoF" text="女系長子相続"/>
+  <string id="NTP.MCMHeirElder" text="最年長"/>
+  <string id="NTP.MCMHeirAdult" text="成人"/>
+  <string id="NTP.MCMHeirHint" text="(WIP) 王位継承のルールです。 「長子相続」は君主の子息の最年長者を選びます。「成人」は後継者のうち、成人のみを選びます。「最年長」は君主のクランの中で最年長者を選びます。注: バナーロードのルール上、王位継承者が必ず王位を相続するとは限りません。 他のmodとのシナジーを想定した機能です。"/>
   <string id="NTP.MCMRank1M" text="王 (第1位)"/>
   <string id="NTP.MCMRank1MHint" text="男性君主の称号形式です。"/>
   <string id="NTP.MCMRank1F" text="女王 (第1位)"/>

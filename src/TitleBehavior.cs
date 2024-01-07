@@ -138,9 +138,12 @@ namespace NobleTitlesPlus
             }
             // Crown Prince/Princess
             List<Hero> royals = kingdom.RulingClan.Heroes.Where(h => !h.IsFactionLeader && h != h.Clan.Leader.Spouse).ToList();
-            List<Hero> heirs = TitleBehavior.options.Inheritance.SelectedValue switch
+            switch (TitleBehavior.options.Inheritance.SelectedValue)
             {
-                Inheritance.Issue => royals.Where(h => h.Father == kingdom.Leader || h.Mother == kingdom.Leader).OrderBy(h => -h.Age).ToList(),
+            }
+            List<Hero> heirs = (DB.Inheritance)TitleBehavior.options.Inheritance.SelectedIndex switch
+            {
+                Inheritance.Primogeniture => royals.Where(h => h.Father == kingdom.Leader || h.Mother == kingdom.Leader).OrderBy(h => -h.Age).ToList(),
                 Inheritance.Adult => royals.Where(h => (h.Father == kingdom.Leader || h.Mother == kingdom.Leader) && !h.IsChild).OrderBy(h => -h.Age).ToList(),
                 Inheritance.Elder => royals.OrderBy(h => -h.Age).ToList(),
                 _ => new(),
