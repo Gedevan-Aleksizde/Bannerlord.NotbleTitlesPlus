@@ -4,6 +4,7 @@ using TaleWorlds.CampaignSystem.Conversation;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
 using TaleWorlds.Localization;
 using NobleTitlesPlus.DB;
+using SandBox.ViewModelCollection.Nameplate;
 
 namespace NobleTitlesPlus.Patches
 {
@@ -13,7 +14,6 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void AppendTitles(Hero __instance, ref TextObject __result)
         {
-            // TODO: Party/Army name
             if (__instance.IsLord && __instance.IsAlive && !__instance.IsRebel && (__instance.IsKnownToPlayer || !TitleBehavior.options.FogOfWar || __instance
                 .IsFactionLeader))
             {
@@ -43,6 +43,7 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
+    // Show on conversation
     [HarmonyPatch(typeof(MissionConversationVM), nameof(MissionConversationVM.Refresh))]
     internal class MissionConversationVMModifyOverNestedTextFormat
     {
@@ -59,6 +60,28 @@ namespace NobleTitlesPlus.Patches
         private static void EditOverNestedTitleFormatInConverastion(MissionConversationVM __instance)
         {
             __instance.CurrentCharacterNameLbl = namePre.ToString();
+        }
+    }
+    [HarmonyPatch(typeof(PartyNameplateVM), nameof(PartyNameplateVM.RefreshDynamicProperties))]
+    internal class OverrideNameTitleOnParty
+    {
+        [HarmonyPostfix]
+        private static void FormatTitle(PartyNameplateVM __instance)
+        {
+            /*
+            // __instance.FullName
+            if(!(__instance.Party.IsCaravan || __instance.IsBehind) && __instance.IsVisibleOnMap)
+            {
+                if (__instance.IsArmy)
+                {
+
+                }
+                else
+                {
+                    // __instance.FullName = "aho";
+                }
+                // Util.Log.Print($"[TEST]party fullname={__instance.FullName}");
+            }*/
         }
     }
     // TODO: Can patching GameTexts more clever? 
