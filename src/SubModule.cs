@@ -77,7 +77,7 @@ namespace NobleTitlesPlus
                 var oldSettings = settings;
                 oldSettings?.Unregister();
                 settings = null;
-                Options = new();
+                Options = null;
                 this.harmony?.UnpatchAll();
             }
             else
