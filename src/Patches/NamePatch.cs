@@ -5,6 +5,7 @@ using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
 using TaleWorlds.Localization;
 using NobleTitlesPlus.DB;
 using SandBox.ViewModelCollection.Nameplate;
+using System.Diagnostics;
 
 namespace NobleTitlesPlus.Patches
 {
@@ -51,15 +52,18 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPrefix]
         private static void PrevesrveInitialAgentName(MissionConversationVM __instance, ref ConversationManager ____conversationManager)
         {
-            if (____conversationManager.SpeakerAgent.Character.IsHero)
+            if (____conversationManager.OneToOneConversationCharacter?.IsHero ?? false)
             {
                 namePre = ____conversationManager.OneToOneConversationHero.Name;
             }
         }
         [HarmonyPostfix]
-        private static void EditOverNestedTitleFormatInConverastion(MissionConversationVM __instance)
+        private static void EditOverNestedTitleFormatInConverastion(MissionConversationVM __instance, ref ConversationManager ____conversationManager)
         {
-            __instance.CurrentCharacterNameLbl = namePre.ToString();
+            if (____conversationManager.OneToOneConversationCharacter?.IsHero ?? false)
+            {
+                __instance.CurrentCharacterNameLbl = namePre.ToString();
+            }
         }
     }
     [HarmonyPatch(typeof(PartyNameplateVM), nameof(PartyNameplateVM.RefreshDynamicProperties))]
