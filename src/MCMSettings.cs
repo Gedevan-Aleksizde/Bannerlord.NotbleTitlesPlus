@@ -56,6 +56,7 @@ namespace NobleTitlesPlus.Settings
             }
             if (options.TitleSet.factions.ContainsKey("new_kingdom"))
             {
+                // TODO: how to identify player kingdom
                 string name = Kingdom.All.Where(k => k.StringId == "new_kingdom")?.First()?.Name?.ToString() ?? FindTextShortMCM("fallback_player");
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder("new_kingdom", 4 + j, false)); ;
                 Util.Log.Print($">> [INFO] Category {name}(new_kingdom, faction) added to MCM options");
