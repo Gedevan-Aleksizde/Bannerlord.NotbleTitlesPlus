@@ -3,16 +3,14 @@
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
   <Id value="NobleTitlesPlus" />
   <Name value="Noble Titles Plus" />
-  <Version value="v2.3.0" />
+  <Version value="v2.3.1" />
   <DefaultModule value="false" />
   <ModuleCategory value="Singleplayer"/>
   <ModuleType value="Community" />
   <Url value="https://www.nexusmods.com/mountandblade2bannerlord/mods/5348" />
-  <DependedModules>
-    <DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.3.0" />
-  </DependedModules>
   <DependedModuleMetadatas>
     <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.3.*" />
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="5.9.*" optional="true" />
     <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v1.2.*" />
     <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v1.2.*" />
     <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v1.2.*" />

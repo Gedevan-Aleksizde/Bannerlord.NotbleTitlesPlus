@@ -15,7 +15,7 @@
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Win64_Shipping_Client')">Win64_Shipping_Client</GameBinariesFolder>
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Gaming.Desktop.x64_Shipping_Client')">Gaming.Desktop.x64_Shipping_Client</GameBinariesFolder>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <AssemblyVersion></AssemblyVersion>
+    <AssemblyVersion>2.3.1</AssemblyVersion>
     <FileVersion></FileVersion>
     <Company></Company>
     <Copyright>Skatagiri</Copyright>
