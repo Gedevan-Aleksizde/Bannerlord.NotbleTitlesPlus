@@ -44,7 +44,7 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
-    // Show on conversation
+    // fix the nameplate on the conversation UI
     [HarmonyPatch(typeof(MissionConversationVM), nameof(MissionConversationVM.Refresh))]
     internal class MissionConversationVMModifyOverNestedTextFormat
     {
@@ -66,6 +66,7 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
+    /* nameplate hover on the parties in the campaign map*/
     [HarmonyPatch(typeof(PartyNameplateVM), nameof(PartyNameplateVM.RefreshDynamicProperties))]
     internal class OverrideNameTitleOnParty
     {
@@ -95,6 +96,7 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
         {
+            Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Name}");
             __result = TitleBehavior.options.TitleSet.GetTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
             // __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }

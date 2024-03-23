@@ -73,7 +73,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="mkdir Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\submodule.xml Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\settings.json Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\titles.json Releases\NobleTitlesPlus&#xD;&#xA;mkdir Releases\NobleTitlesPlus\ModuleData&#xD;&#xA;xcopy /y /s _module\ModuleData\ Releases\NobleTitlesPlus\ModuleData&#xD;&#xA;mkdir Releases\NobleTitlesPlus\bin\Win64_Shipping_Client&#xD;&#xA;copy bin\x64\Debug\netstandard2.0\NobleTitlesPlus.dll Releases\NobleTitlesPlus\bin\Win64_Shipping_Client&#xD;&#xA;call copy.bat" />
+    <Exec Command="mkdir Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\submodule.xml Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\settings.json Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\titles.json Releases\NobleTitlesPlus&#xD;&#xA;mkdir Releases\NobleTitlesPlus\ModuleData&#xD;&#xA;xcopy /y /s _module\ModuleData\ Releases\NobleTitlesPlus\ModuleData&#xD;&#xA;mkdir Releases\NobleTitlesPlus\bin\Win64_Shipping_Client&#xD;&#xA;copy bin\x64\Debug\netstandard2.0\NobleTitlesPlus.dll Releases\NobleTitlesPlus\bin\Win64_Shipping_Client&#xD;&#xA;" />
   </Target>
 
 </Project>
