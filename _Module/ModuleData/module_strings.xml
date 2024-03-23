@@ -214,10 +214,10 @@
         <string id="str_ntp_title_set.VAR_4F_aserai" text="{=NTP.VAR4F_aserai}Emira {NAME}" />
         <string id="str_ntp_title_set.VAR_5M_aserai" text="{=NTP.VAR5M_aserai}Sharif {NAME}" />
         <string id="str_ntp_title_set.VAR_5F_aserai" text="{=NTP.VAR5F_aserai}Nabila {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownM_aserai" text="{=NTP.VARCrownM_aserai}{NAME} Wali" />
-        <string id="str_ntp_title_set.VAR_crownF_aserai" text="{=NTP.VARCrownF_aserai}{NAME} Wali" />
-        <string id="str_ntp_title_set.VAR_royalM_aserai" text="{=NTP.VARRoyalM_aserai}{NAME} Sehzade" />
-        <string id="str_ntp_title_set.VAR_royalF_aserai" text="{=NTP.VARRoyalF_aserai}{NAME} Sehzada" />
+        <string id="str_ntp_title_set.VAR_crownM_aserai" text="{=NTP.VARCrownM_aserai}Wali {NAME}" />
+        <string id="str_ntp_title_set.VAR_crownF_aserai" text="{=NTP.VARCrownF_aserai}Wali {NAME}" />
+        <string id="str_ntp_title_set.VAR_royalM_aserai" text="{=NTP.VARRoyalM_aserai}Sehzade {NAME} " />
+        <string id="str_ntp_title_set.VAR_royalF_aserai" text="{=NTP.VARRoyalF_aserai}Sehzada {NAME}" />
 
         <string id="str_ntp_title_set.VAR_1M_battania" text="{=NTP.VAR1M_battania}High King {NAME}" /> <!-- Ard Rí -->
         <string id="str_ntp_title_set.VAR_1F_battania" text="{=NTP.VAR1F_battania}High Queen {NAME}" />
@@ -290,8 +290,8 @@
         <string id="str_ntp_title_set.VAR_4F_vlandia" text="{=NTP.VAR4F_vlandia}Baroness {NAME}" />
         <string id="str_ntp_title_set.VAR_5M_vlandia" text="{=NTP.VAR5M_vlandia}Sieur {NAME}" />
         <string id="str_ntp_title_set.VAR_5F_vlandia" text="{=NTP.VAR5F_vlandia}Dame {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownM_vlandia" text="{=NTP.VARCrownM_vlandia}{NAME} the Prince of Rhodok" />
-        <string id="str_ntp_title_set.VAR_crownF_vlandia" text="{=NTP.VARCrownF_vlandia}{NAME} the Princess of Rhodok" />
+        <string id="str_ntp_title_set.VAR_crownM_vlandia" text="{=NTP.VARCrownM_vlandia}{NAME}, Prince of Rhodok" />
+        <string id="str_ntp_title_set.VAR_crownF_vlandia" text="{=NTP.VARCrownF_vlandia}{NAME}, Princess of Rhodok" />
         <string id="str_ntp_title_set.VAR_royalM_vlandia" text="{=NTP.VARRoyalM_vlandia}Prince {NAME}" />
         <string id="str_ntp_title_set.VAR_royalF_vlandia" text="{=NTP.VARRoyalF_vlandia}Princess {NAME}" />
 

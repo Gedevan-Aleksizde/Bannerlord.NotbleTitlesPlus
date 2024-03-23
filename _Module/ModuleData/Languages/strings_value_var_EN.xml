@@ -32,16 +32,16 @@
   <string id="NTP.VAR3M_empire" text="Exarch {NAME}" />
   <string id="NTP.VAR3F_empire" text="Exarchontissa {NAME}" />
   <string id="NTP.VAR4M_empire" text="Archon {NAME}" />
-  <string id="NTP.VAR4F_empire" text="Archontisssa {NAME}" />
+  <string id="NTP.VAR4F_empire" text="Archontissa {NAME}" />
   <string id="NTP.VAR5M_empire" text="Patrikios {NAME}" />
   <string id="NTP.VAR5F_empire" text="Patrikia {NAME}" />
 
   <string id="NTP.VAR1M_aserai" text="Sultan {NAME}" />
   <string id="NTP.VAR1F_aserai" text="Sultana {NAME}" />
-  <string id="NTP.VARCrownM_aserai" text="{NAME} Wali" />
-  <string id="NTP.VARCrownF_aserai" text="NAME} Wali" />
-  <string id="NTP.VARRoyalM_aserai" text="{NAME} Sehzade" />
-  <string id="NTP.VARRoyalF_aserai" text="{NAME} Sehzada" />
+  <string id="NTP.VARCrownM_aserai" text="Wali {NAME}" />
+  <string id="NTP.VARCrownF_aserai" text="Wali NAME}" />
+  <string id="NTP.VARRoyalM_aserai" text="Sehzade {NAME}" />
+  <string id="NTP.VARRoyalF_aserai" text="Sehzada {NAME}" />
   <string id="NTP.VAR2M_aserai" text="Emir al-Umara {NAME}" />
   <string id="NTP.VAR2F_aserai" text="Emira al-Umara {NAME}" />
   <string id="NTP.VAR3M_aserai" text="Emir Kabir {NAME}" />
@@ -98,8 +98,8 @@
 
   <string id="NTP.VAR1M_vlandia" text="Rex Vlandiae {NAME}" />
   <string id="NTP.VAR1F_vlandia" text="Regna Vlandiae {NAME}" />
-  <string id="NTP.VARCrownM_vlandia" text="{NAME} the Prince of Rhodok" />
-  <string id="NTP.VARCrownF_vlandia" text="{NAME} the Princess of Rhodok" />
+  <string id="NTP.VARCrownM_vlandia" text="{NAME}, Prince of Rhodok" />
+  <string id="NTP.VARCrownF_vlandia" text="{NAME}, Princess of Rhodok" />
   <string id="NTP.VARRoyalM_vlandia" text="Prince {NAME}" />
   <string id="NTP.VARRoyalF_vlandia" text="Princess {NAME}" />
   <string id="NTP.VAR2M_vlandia" text="Duc {NAME}" />
@@ -111,35 +111,35 @@
   <string id="NTP.VAR5M_vlandia" text="Sieur {NAME}" />
   <string id="NTP.VAR5F_vlandia" text="Dame {NAME}" />
 
-  <string id="NTP.VAR1M_tetsojin" text="Mikado {NAME}" />
-  <string id="NTP.VAR1F_tetsojin" text="Jotei {NAME}" />
-  <string id="NTP.VARCrownM_tetsojin" text="{NAME} Oji" />
-  <string id="NTP.VARCrownF_tetsojin" text="{NAME} Ojo" />
-  <string id="NTP.VARRoyalM_tetsojin" text="{NAME} Miya" />
-  <string id="NTP.VARRoyalF_tetsojin" text="{NAME} Miya" />
-  <string id="NTP.VAR2M_tetsojin" text="Shogun {CLAN}{NAME}-San" />
-  <string id="NTP.VAR2F_tetsojin" text="Joro-Otoshiyori {CLAN}{NAME}-San" />
-  <string id="NTP.VAR3M_tetsojin" text="Daimyo {CLAN}{NAME}-San" />
-  <string id="NTP.VAR3F_tetsojin" text="Otosiyori {CLAN}{NAME}-San" />
-  <string id="NTP.VAR4M_tetsojin" text="Myosyu {CLAN}{NAME}-San" />
-  <string id="NTP.VAR4F_tetsojin" text="Myobu {CLAN}{NAME}-San" />
-  <string id="NTP.VAR5M_tetsojin" text="Ason {CLAN}{NAME}-San" />
-  <string id="NTP.VAR5F_tetsojin" text="Gozen {CLAN}{NAME}-San" />
+  <string id="NTP.VAR1M_tetsojin" text="Mikado {NAME}" /> <!-- JP: ミカド -->
+  <string id="NTP.VAR1F_tetsojin" text="Jotei {NAME}" /> <!-- JP: ジョテイ -->
+  <string id="NTP.VARCrownM_tetsojin" text="{NAME} Oji" /> <!-- JP: 王子 -->
+  <string id="NTP.VARCrownF_tetsojin" text="{NAME} Ojo" /> <!-- JP: 王女 -->
+  <string id="NTP.VARRoyalM_tetsojin" text="{NAME} Miya" /> <!-- JP: 宮 -->
+  <string id="NTP.VARRoyalF_tetsojin" text="{NAME} Miya" /> <!-- JP: 宮 -->
+  <string id="NTP.VAR2M_tetsojin" text="Shogun {CLAN}{NAME}-San" /> <!-- JP: 将軍 -->
+  <string id="NTP.VAR2F_tetsojin" text="Joro-Otoshiyori {CLAN}{NAME}-San" /> <!-- JP: 上臈御年寄 -->
+  <string id="NTP.VAR3M_tetsojin" text="Daimyo {CLAN}{NAME}-San" /> <!-- JP: 大名 -->
+  <string id="NTP.VAR3F_tetsojin" text="Otosiyori {CLAN}{NAME}-San" /> <!-- JP: 御年寄 -->
+  <string id="NTP.VAR4M_tetsojin" text="Myosyu {CLAN}{NAME}-San" /> <!-- JP: 明主 -->
+  <string id="NTP.VAR4F_tetsojin" text="Myobu {CLAN}{NAME}-San" /> <!-- JP: 命婦 -->
+  <string id="NTP.VAR5M_tetsojin" text="Ason {CLAN}{NAME}-San" /> <!-- JP: 朝臣 -->
+  <string id="NTP.VAR5F_tetsojin" text="Gozen {CLAN}{NAME}-San" /> <!-- JP: 御前 -->
 
-  <string id="NTP.VAR1M_huaxia" text="Huangdi {NAME}" />
-  <string id="NTP.VAR1F_huaxia" text="Huangdi {NAME}" />
-  <string id="NTP.VAR2M_huaxia" text="Junwang {CLAN}{NAME}" />
-  <string id="NTP.VAR2F_huaxia" text="Junwang {CLAN}{NAME}" />
-  <string id="NTP.VAR3M_huaxia" text="Junwang {CLAN}{NAME}" />
-  <string id="NTP.VAR3F_huaxia" text="Junwang {CLAN} {NAME}" />
-  <string id="NTP.VAR4M_huaxia" text="Junwang {CLAN} {NAME}" />
-  <string id="NTP.VAR4F_huaxia" text="Junwang {CLAN} {NAME}" />
-  <string id="NTP.VAR5M_huaxia" text="{CLAN} {NAME}" />
-  <string id="NTP.VAR5F_huaxia" text="{CLAN} {NAME}" />
-  <string id="NTP.VARCrownM_huaxia" text="{CLAN} {NAME}" />
-  <string id="NTP.VARCrownF_huaxia" text="{CLAN} {NAME}" />
-  <string id="NTP.VARRoyalM_huaxia" text="{CLAN} {NAME}" />
-  <string id="NTP.VARRoyalF_huaxia" text="{CLAN} {NAME}" />
+  <string id="NTP.VAR1M_huaxia" text="Huangdi {NAME}" /> <!-- CN: 皇帝 -->
+  <string id="NTP.VAR1F_huaxia" text="Huangdi {NAME}" /> <!-- CN: 皇帝 -->
+  <string id="NTP.VAR2M_huaxia" text="Junwang {CLAN}{NAME}" /> <!-- CN: 郡王 -->
+  <string id="NTP.VAR2F_huaxia" text="Junwang {CLAN}{NAME}" /> <!-- CN: 女郡王 -->
+  <string id="NTP.VAR3M_huaxia" text="Guogong {CLAN}{NAME}" /> <!-- CN: 国公 -->
+  <string id="NTP.VAR3F_huaxia" text="Nuguogong {CLAN} {NAME}" /> <!-- CN: 女国公 -->
+  <string id="NTP.VAR4M_huaxia" text="Zhuyin {CLAN} {NAME}" /> <!-- CN: 郡公 -->
+  <string id="NTP.VAR4F_huaxia" text="Nuzhuyin {CLAN} {NAME}" /> <!-- CN: 女郡公 -->
+  <string id="NTP.VAR5M_huaxia" text="Qing {CLAN} {NAME}" /> <!-- CN: 卿 -->
+  <string id="NTP.VAR5F_huaxia" text="Nuqing {CLAN} {NAME}" /> <!-- CN: 女卿 -->
+  <string id="NTP.VARCrownM_huaxia" text="Huangtaiji {NAME}" /> <!-- CN: 皇太子 -->
+  <string id="NTP.VARCrownF_huaxia" text="Huangtainu {NAME}" /> <!-- CN: 皇太女 -->
+  <string id="NTP.VARRoyalM_huaxia" text="Gongzi {NAME}" /> <!-- CN: 公子 -->
+  <string id="NTP.VARRoyalF_huaxia" text="Gongzhu {NAME}" /> <!-- CN: 公主 -->
 
   <string id="NTP.VARMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
   <string id="NTP.VARMinorLF_default" text="{NAME} of {CLAN_SHORT}"/>
