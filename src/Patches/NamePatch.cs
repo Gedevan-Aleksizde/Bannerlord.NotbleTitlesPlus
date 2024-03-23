@@ -66,7 +66,8 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
-    /* nameplate hover on the parties in the campaign map*/
+    // nameplate hover on the parties in the campaign map
+    // FIXME: This patch does nothing, but the titles disappear from alternative party nameplate on the campaign map if erased. WHY???
     [HarmonyPatch(typeof(PartyNameplateVM), nameof(PartyNameplateVM.RefreshDynamicProperties))]
     internal class OverrideNameTitleOnParty
     {
@@ -83,10 +84,11 @@ namespace NobleTitlesPlus.Patches
                 }
                 else
                 {
-                    // __instance.FullName = "aho";
+                    // __instance.FullName = "TEST";
                 }
                 // Util.Log.Print($"[TEST]party fullname={__instance.FullName}");
-            }*/
+            }
+            */
         }
     }
     // TODO: Can patching GameTexts more clever? 
