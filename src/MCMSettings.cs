@@ -79,8 +79,9 @@ namespace NobleTitlesPlus.Settings
                 j++;
             }
             builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, new(), "DEF"));
-            builder.CreatePreset("Original", FindTextShortMCM("preset_original"), builder => BuildPreset(builder, new(), "ORI"));
-            builder.CreatePreset("Variant", FindTextShortMCM("preset_variant"), builder => BuildPreset(builder, new(), "VAR"));
+            foreach((string id, string name) presetName in new List<(string, string)>(){ ("ORI", "Original"), ("VAR", "Variant")}){
+                builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, new(), presetName.id));
+            }
             return builder;
 
             void BuildGeneralGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
@@ -242,8 +243,8 @@ namespace NobleTitlesPlus.Settings
                     FillMinorFactionPropertyValues(preset, factionId);
                 }
                 // FIXME
-                List<string> defaultKingdoms = new() { "aserai", "battania", "khuzait", "empire", "sturgia", "vlandia" };
-                foreach (Kingdom k in Kingdom.All.Where(x => !defaultKingdoms.Contains(x.StringId)).OrderBy(x => x.Name.ToString()))
+                List<string> defaultKingdomIds = new() { "aserai", "battania", "khuzait", "empire", "empire_s", "empire_w", "sturgia", "vlandia" };
+                foreach (Kingdom k in Kingdom.All.Where(x => !defaultKingdomIds.Contains(x.StringId)).OrderBy(x => x.Name.ToString()))
                 {
                     FillFactionPropertyValues(preset, k.Culture.StringId, k.StringId);
                 }
