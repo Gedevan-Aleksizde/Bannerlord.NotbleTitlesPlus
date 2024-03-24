@@ -13,6 +13,7 @@ using MCM.Abstractions.Base;
 using System.Linq;
 using TaleWorlds.MountAndBlade.Diamond.Ranked;
 using Newtonsoft.Json.Linq;
+using System.Runtime.CompilerServices;
 
 namespace NobleTitlesPlus.Settings
 {
@@ -284,11 +285,11 @@ namespace NobleTitlesPlus.Settings
                             }
                             else
                             {
-                                builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", FinTitleTextString(preset, rank.ToString(), s, cultureId));
+                                builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", FindTitleTextString(preset, rank.ToString(), s, cultureId));
                             }   
                         }
-                        builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", FinTitleTextString(preset, "crown", s, cultureId));
-                        builder.SetPropertyValue($"KingdomRoyal{s}_{cultureId}", FinTitleTextString(preset, "royal", s, cultureId));
+                        builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", FindTitleTextString(preset, "crown", s, cultureId));
+                        builder.SetPropertyValue($"KingdomRoyal{s}_{cultureId}", FindTitleTextString(preset, "royal", s, cultureId));
                     }
                 }
                 void FillMinorFactionPropertyValues(string preset, string factionId)
@@ -297,18 +298,20 @@ namespace NobleTitlesPlus.Settings
                     {
                         foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                         {
-                            builder.SetPropertyValue($"Minor{lm}{s}_{factionId}", FinTitleTextString(preset, $"Minor{lm}", s, factionId));
+                            builder.SetPropertyValue($"Minor{lm}{s}_{factionId}", FindTitleTextString(preset, $"Minor{lm}", s, factionId));
                         }
                     }
                 }
             }
         }
         public const string moduleStrTitles = "str_ntp_title_set";
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static string FindTextShortMCM(string variantId)
         {
             return GameTexts.FindText("str_ntp_mcm", variantId).ToString();
         }
-        private static string FinTitleTextString(string preset, string rank, string gender, string group)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static string FindTitleTextString(string preset, string rank, string gender, string group)
         {
             if(GameTexts.TryGetText(moduleStrTitles, out TextObject to, $"{preset}_{rank}{gender}_{group}"))
             {
