@@ -117,6 +117,40 @@
         <string id="str_ntp_title_set.BK_royalM_vlandia" text="{=NTP.BKRoyalM_vlandia}Sire {NAME}" />
         <string id="str_ntp_title_set.BK_royalF_vlandia" text="{=NTP.BKRoyalF_vlandia}Siresse {NAME}" />
 
+
+        <!-- Siri Culture -->
+        <string id="str_ntp_title_set.BK_1M_siri" text="{=NTP.BK1M_siri}Uru {NAME}" />
+        <string id="str_ntp_title_set.BK_1F_siri" text="{=NTP.BK1F_siri}Ngonnen {NAME}" />
+        <string id="str_ntp_title_set.BK_2M_siri" text="{=NTP.BK2M_siri}Mek {NAME}" />
+        <string id="str_ntp_title_set.BK_2F_siri" text="{=NTP.BK2F_siri}Mek-Itt {NAME}" />
+        <string id="str_ntp_title_set.BK_3M_siri" text="{=NTP.BK3M_siri}Samet {NAME}" />
+        <string id="str_ntp_title_set.BK_3F_siri" text="{=NTP.BK3F_siri}Samet-Itt {NAME}" />
+        <string id="str_ntp_title_set.BK_4M_siri" text="{=NTP.BK4M_siri}Dawkkatt {NAME}" />
+        <string id="str_ntp_title_set.BK_4F_siri" text="{=NTP.BK4F_siri}Dawkkatt-Itt {NAME}" />
+        <string id="str_ntp_title_set.BK_5M_siri" text="{=NTP.BK5M_siri}Ngod {NAME}" />
+        <string id="str_ntp_title_set.BK_5F_siri" text="{=NTP.BK5F_siri}Ngod-Itt {NAME}" />
+        <string id="str_ntp_title_set.BK_crownM_siri" text="{=NTP.BKCrownM_siri}Pour {NAME}" />
+        <string id="str_ntp_title_set.BK_crownF_siri" text="{=NTP.BKCrownF_siri}Ngonnas {NAME}" />
+        <string id="str_ntp_title_set.BK_royalM_siri" text="{=NTP.BKRoyalM_siri}Ngod {NAME}" />
+        <string id="str_ntp_title_set.BK_royalF_siri" text="{=NTP.BKRoyalF_siri}Ngod-Itt{NAME}" />
+
+
+        <!-- Massa culture -->
+        <string id="str_ntp_title_set.BK_1M_massa" text="{=NTP.BK1M_massa}Thiudans {NAME}" />
+        <string id="str_ntp_title_set.BK_1F_massa" text="{=NTP.BK1F_massa}Thiudana {NAME}" />
+        <string id="str_ntp_title_set.BK_2M_massa" text="{=NTP.BK2M_massa}Ufarreiks {NAME}" />
+        <string id="str_ntp_title_set.BK_2F_massa" text="{=NTP.BK2F_massa}Ufaraqino {NAME}" />
+        <string id="str_ntp_title_set.BK_3M_massa" text="{=NTP.BK3M_massa}Reiks {NAME}" />
+        <string id="str_ntp_title_set.BK_3F_massa" text="{=NTP.BK3F_massa}Qino {NAME}" />
+        <string id="str_ntp_title_set.BK_4M_massa" text="{=NTP.BK4M_massa}Harjatuga {NAME}" />
+        <string id="str_ntp_title_set.BK_4F_massa" text="{=NTP.BK4F_massa}Harjatugo {NAME}" />
+        <string id="str_ntp_title_set.BK_5M_massa" text="{=NTP.BK5M_massa}Frauja {NAME}" />
+        <string id="str_ntp_title_set.BK_5F_massa" text="{=NTP.BK5F_massa}Frauja {NAME}" />
+        <string id="str_ntp_title_set.BK_crownM_massa" text="{=NTP.BKCrownM_massa}Nithjis {NAME}" />
+        <string id="str_ntp_title_set.BK_crownF_massa" text="{=NTP.BKCrownF_massa}Nithjo {NAME}" />
+        <string id="str_ntp_title_set.BK_royalM_massa" text="{=NTP.BKRoyalM_massa}Frauja {NAME}" />
+        <string id="str_ntp_title_set.BK_royalF_massa" text="{=NTP.BKRoyalF_massa}Frauja {NAME}" />
+
         <string id="str_ntp_title_set.BK_MinorLM_legion_of_the_betrayed" text="{=NTP.BKMinorLM_legion_of_the_betrayed}Legatus {NAME}" />
         <string id="str_ntp_title_set.BK_MinorLF_legion_of_the_betrayed" text="{=NTP.BKMinorLF_legion_of_the_betrayed}Legatus {NAME}" />
         <string id="str_ntp_title_set.BK_MinorMM_legion_of_the_betrayed" text="{=NTP.BKMinorMM_legion_of_the_betrayed}Tribunus {NAME}" />

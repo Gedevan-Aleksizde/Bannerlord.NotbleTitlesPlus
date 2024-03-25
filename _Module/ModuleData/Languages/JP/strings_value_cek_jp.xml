@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base>
+    <tags>
+        <tag language="日本語"/>
+    </tags>
+    <strings>
+        <!-- CEK Style -->
+        <string id="NTP.MCMCEK" text="Calradia Expanded: Kingdoms" />
+        <string id="NTP.CEK1M_default" text="国王{NAME}" />
+        <string id="NTP.CEK1F_default" text="女王{NAME}" />
+        <string id="NTP.CEK2M_default" text="公爵{NAME}" />
+        <string id="NTP.CEK2F_default" text="女公爵{NAME}" />
+        <string id="NTP.CEK3M_default" text="伯爵{NAME}" />
+        <string id="NTP.CEK3F_default" text="女伯爵{NAME}" />
+        <string id="NTP.CEK4M_default" text="男爵{NAME}" />
+        <string id="NTP.CEK4F_default" text="女男爵{NAME}" />
+        <string id="NTP.CEK5M_default" text="卿{NAME}" />
+        <string id="NTP.CEK5F_default" text="女卿{NAME}" />
+        <string id="NTP.CEKCrownM_default" text="皇太子{NAME}" />
+        <string id="NTP.CEKCrownF_default" text="皇太女{NAME}" />
+        <string id="NTP.CEKRoyalM_default" text="親王{NAME}" />
+        <string id="NTP.CEKRoyalF_default" text="親王女{NAME}" />
+        
+        <string id="NTP.CEKMinorLM_default" text="{CLAN_SHORT}の{NAME}" />
+        <string id="NTP.CEKMinorLF_default" text="{CLAN_SHORT}の{NAME}" />
+        <string id="NTP.CEKMinorMM_default" text="{CLAN_SHORT}の{NAME}" />
+        <string id="NTP.CEKMinorMF_default" text="{CLAN_SHORT}の{NAME}" />
+
+        <string id="NTP.CEK1M_empire" text="バシレウス゠{NAME}" />
+        <string id="NTP.CEK1F_empire" text="バシリッサ゠{NAME}" />
+        <string id="NTP.CEKCrownM_empire" text="ポルフィロゲネトス゠{NAME}" />
+        <string id="NTP.CEKCrownF_empire" text="ポルフィロゲネテー゠{NAME}" />
+        <string id="NTP.CEKRoyalM_empire" text="セバストス゠{NAME}" />
+        <string id="NTP.CEKRoyalF_empire" text="セバステー゠{NAME}" />
+        <string id="NTP.CEK2M_empire" text="メガスアルホーン゠{NAME}" />
+        <string id="NTP.CEK2F_empire" text="メガスアルホンティッサ゠{NAME}" />
+        <string id="NTP.CEK3M_empire" text="エクサルホス゠{NAME}" />
+        <string id="NTP.CEK3F_empire" text="エクサルホンティッサ゠{NAME}" />
+        <string id="NTP.CEK4M_empire" text="アルホーン{NAME}" />
+        <string id="NTP.CEK4F_empire" text="アルホンティッサ゠{NAME}" />
+        <string id="NTP.CEK5M_empire" text="パトリキオス゠{NAME}" />
+        <string id="NTP.CEK5F_empire" text="パトリキア゠{NAME}" />
+
+        <string id="NTP.CEK1M_aserai" text="スルタン{NAME}" />
+        <string id="NTP.CEK1F_aserai" text="スルタナ{NAME}" />
+        <string id="NTP.CEKCrownM_aserai" text="ワリー゠{NAME}" />
+        <string id="NTP.CEKCrownF_aserai" text="ワリー゠{NAME}" />
+        <string id="NTP.CEKRoyalM_aserai" text="シェフザデ゠{NAME}" />
+        <string id="NTP.CEKRoyalF_aserai" text="シェフザダ゠{NAME}" />
+        <string id="NTP.CEK2M_aserai" text="アミールアルウマラ゠{NAME}" />
+        <string id="NTP.CEK2F_aserai" text="アミーラアルウマラ゠{NAME}" />
+        <string id="NTP.CEK3M_aserai" text="アミールカビール゠{NAME}" />
+        <string id="NTP.CEK3F_aserai" text="アミーラカビーラ゠{NAME}" />
+        <string id="NTP.CEK4M_aserai" text="アミール゠{NAME}" />
+        <string id="NTP.CEK4F_aserai" text="アミーラ゠{NAME}" />
+        <string id="NTP.CEK5M_aserai" text="シャリフ゠{NAME}" />
+        <string id="NTP.CEK5F_aserai" text="ナビラ゠{NAME}" />
+
+        <string id="NTP.CEK1M_battania" text="アード゠リー゠{NAME}" />
+        <string id="NTP.CEK1F_battania" text="アード゠バンリーオン゠{NAME}" />
+        <string id="NTP.CEKCrownM_battania" text="High Crown Prince {NAME}" />
+        <string id="NTP.CEKCrownF_battania" text="High Crown Princess {NAME}" />
+        <string id="NTP.CEKRoyalM_battania" text="フライス゠{NAME}" />
+        <string id="NTP.CEKRoyalF_battania" text="バンフライス゠{NAME}" />
+        <string id="NTP.CEK2M_battania" text="リー゠リレフ゠{NAME}" />
+        <string id="NTP.CEK2F_battania" text="バンリーオン゠リレフ゠{NAME}" />
+        <string id="NTP.CEK3M_battania" text="リー゠ビデン゠{NAME}" />
+        <string id="NTP.CEK3F_battania" text="バンリーオン゠ビデン゠{NAME}" />
+        <string id="NTP.CEK4M_battania" text="モーマー゠{NAME}" />
+        <string id="NTP.CEK4F_battania" text="バンモーマー゠{NAME}" />
+        <string id="NTP.CEK5M_battania" text="ドゥニワサル゠{NAME}" />
+        <string id="NTP.CEK5F_battania" text="バーヌアサル゠{NAME}" />
+
+        <string id="NTP.CEK1M_khuzait" text="{NAME}゠ハン" />
+        <string id="NTP.CEK1F_khuzait" text="{NAME}゠ハトゥン" />
+        <string id="NTP.CEKCrownM_khuzait" text="{NAME}゠カガン" />
+        <string id="NTP.CEKCrownF_khuzait" text="{NAME}゠カガトゥン" />
+        <string id="NTP.CEKRoyalM_khuzait" text="{NAME}゠シャド" />
+        <string id="NTP.CEKRoyalF_khuzait" text="{NAME}゠シャドゥム" />
+        <string id="NTP.CEK2M_khuzait" text="{NAME}゠アタベグ" />
+        <string id="NTP.CEK2F_khuzait" text="{NAME}゠アネベグム" />
+        <string id="NTP.CEK3M_khuzait" text="{NAME}゠シャダピッドベグ" />
+        <string id="NTP.CEK3F_khuzait" text="{NAME}゠シャダピッドベグム" />
+        <string id="NTP.CEK4M_khuzait" text="{NAME}゠ベグ" />
+        <string id="NTP.CEK4F_khuzait" text="{NAME}゠ベグム" />
+        <string id="NTP.CEK5M_khuzait" text="{NAME}゠バハトゥル" />
+        <string id="NTP.CEK5F_khuzait" text="{NAME}゠ベヒ" />
+
+        <string id="NTP.CEK1M_sturgia" text="ヴェリキクニャーシ゠{NAME}" />
+        <string id="NTP.CEK1F_sturgia" text="ヴェリカクニャジーニャ゠{NAME}" />
+        <string id="NTP.CEKCrownM_sturgia" text="{NAME}゠クニャゼヴィチ" />
+        <string id="NTP.CEKCrownF_sturgia" text="{NAME}゠クニャゼヴナ" />
+        <string id="NTP.CEKRoyalM_sturgia" text="プリンス゠{NAME}" />
+        <string id="NTP.CEKRoyalF_sturgia" text="プリンセッサ゠{NAME}" />
+        <string id="NTP.CEK2M_sturgia" text="ヘルトゥク゠{NAME}" />
+        <string id="NTP.CEK2F_sturgia" text="ヘルトゥギンデ゠{NAME}" />
+        <string id="NTP.CEK3M_sturgia" text="ヤール゠{NAME}" />
+        <string id="NTP.CEK3F_sturgia" text="ヤーリンデ゠{NAME}" />
+        <string id="NTP.CEK4M_sturgia" text="クニャーシ{NAME}" />
+        <string id="NTP.CEK4F_sturgia" text="クニャジーニャ゠{NAME}" />
+        <string id="NTP.CEK5M_sturgia" text="ボヤール゠{NAME}" />
+        <string id="NTP.CEK5F_sturgia" text="ボヤーリナ゠{NAME}" />
+
+        <string id="NTP.CEK1M_vlandia" text="レクス゠{NAME}" />
+        <string id="NTP.CEK1F_vlandia" text="レグナ゠{NAME}" />
+        <string id="NTP.CEKCrownM_vlandia" text="王太子{NAME}" />
+        <string id="NTP.CEKCrownF_vlandia" text="王太女{NAME}" />
+        <string id="NTP.CEKRoyalM_vlandia" text="プリンス゠{NAME}" />
+        <string id="NTP.CEKRoyalF_vlandia" text="プリンセス゠{NAME}" />
+        <string id="NTP.CEK2M_vlandia" text="デューク゠{NAME}" />
+        <string id="NTP.CEK2F_vlandia" text="デューケス゠{NAME}" />
+        <string id="NTP.CEK3M_vlandia" text="カウント゠{NAME}" />
+        <string id="NTP.CEK3F_vlandia" text="カウンテス゠{NAME}" />
+        <string id="NTP.CEK4M_vlandia" text="バロン゠{NAME}" />
+        <string id="NTP.CEK4F_vlandia" text="バロネス゠{NAME}" />
+        <string id="NTP.CEK5M_vlandia" text="セオール゠{NAME}" />
+        <string id="NTP.CEK5F_vlandia" text="レディ゠{NAME}" />
+        <!-- Nordling -->
+        <string id="NTP.CEK1M_nordling" text="コヌングル゠{NAME}" />
+        <string id="NTP.CEK1F_nordling" text="ドロットニグ゠{NAME}" />
+        <string id="NTP.CEK2M_nordling" text="ヤール゠{NAME}" />
+        <string id="NTP.CEK2F_nordling" text="ヤーリンデ゠{NAME}" />
+        <string id="NTP.CEK3M_nordling" text="ヤール゠{NAME}" />
+        <string id="NTP.CEK3F_nordling" text="ヤーリンデ゠{NAME}" />
+        <string id="NTP.CEK4M_nordling" text="ヤール゠{NAME}" />
+        <string id="NTP.CEK4F_nordling" text="ヤーリンデ゠{NAME}" />
+        <string id="NTP.CEK5M_nordling" text="ヘル゠{NAME}" />
+        <string id="NTP.CEK5F_nordling" text="ダーメ゠{NAME}" />
+        <string id="NTP.CEKCrownM_nordling" text="プリンス゠{NAME}" />
+        <string id="NTP.CEKCrownF_nordling" text="プリンセッサ゠{NAME}" />
+        <string id="NTP.CEKRoyalM_nordling" text="ヘル゠{NAME}" />
+        <string id="NTP.CEKRoyalF_nordling" text="ダーメ゠{NAME}" />
+
+        <!-- Vagir -->
+        <string id="NTP.CEK1M_nordling" text="コロル゠{NAME}" />
+        <string id="NTP.CEK1F_nordling" text="コロリナ゠{NAME}" />
+        <string id="NTP.CEK2M_nordling" text="ヴォイヴォダ゠{NAME}" />
+        <string id="NTP.CEK2F_nordling" text="ヴォイヴォダ゠{NAME}" />
+        <string id="NTP.CEK3M_nordling" text="ヴォイヴォダ゠{NAME}" />
+        <string id="NTP.CEK3F_nordling" text="ヴォイヴォダ゠{NAME}" />
+        <string id="NTP.CEK4M_nordling" text="ヴォイヴォダ゠{NAME}" />
+        <string id="NTP.CEK4F_nordling" text="ヴォイヴォダ゠{NAME}" />
+        <string id="NTP.CEK5M_nordling" text="ゴスポディン゠{NAME}" />
+        <string id="NTP.CEK5F_nordling" text="ゴスポディナ゠{NAME}" />
+        <string id="NTP.CEKCrownM_nordling" text="コロレヴィチ゠{NAME}" />
+        <string id="NTP.CEKCrownF_nordling" text="コロレヴナ゠{NAME}" />
+        <string id="NTP.CEKRoyalM_nordling" text="ゴスポディン゠{NAME}" />
+        <string id="NTP.CEKRoyalF_nordling" text="ゴスポディナ゠{NAME}" />
+
+        <!-- Rhodok -->
+        <string id="NTP.CEK1M_rodhok" text="ロア゠{NAME}" />
+        <string id="NTP.CEK1F_rodhok" text="レグナ゠{NAME}" />
+        <string id="NTP.CEK2M_rodhok" text="ドゥク゠{NAME}" />
+        <string id="NTP.CEK2F_rodhok" text="ドゥケッセ゠{NAME}" />
+        <string id="NTP.CEK3M_rodhok" text="コンテ゠{NAME}" />
+        <string id="NTP.CEK3F_rodhok" text="コンテッセ゠{NAME}" />
+        <string id="NTP.CEK4M_rodhok" text="バロン゠{NAME}" />
+        <string id="NTP.CEK4F_rodhok" text="バロンネ゠{NAME}" />
+        <string id="NTP.CEK5M_rodhok" text="セニョー゠{NAME}" />
+        <string id="NTP.CEK5F_rodhok" text="セニョス゠{NAME}" />
+        <string id="NTP.CEKCrownM_rodhok" text="セニョー゠{NAME}" />
+        <string id="NTP.CEKCrownF_rodhok" text="セニョス゠{NAME}" />
+        <string id="NTP.CEKRoyalM_rodhok" text="セニョー゠{NAME}" />
+        <string id="NTP.CEKRoyalF_rodhok" text="セニョス゠{NAME}" />
+
+
+        <!-- Apolssalian culture -->
+        <string id="NTP.CEK1M_apolssalian" text="ポシス゠{NAME}" />
+        <string id="NTP.CEK1F_apolssalian" text="ポシス゠{NAME}" />
+        <string id="NTP.CEK2M_apolssalian" text="アルホーン゠{NAME}" />
+        <string id="NTP.CEK2F_apolssalian" text="アルホンティッサ゠{NAME}" />
+        <string id="NTP.CEK3M_apolssalian" text="アルホーン゠{NAME}" />
+        <string id="NTP.CEK3F_apolssalian" text="アルホンティッサ゠{NAME}" />
+        <string id="NTP.CEK4M_apolssalian" text="アルホーン゠{NAME}" />
+        <string id="NTP.CEK4F_apolssalian" text="アルホンティッサ゠{NAME}" />
+        <string id="NTP.CEK5M_apolssalian" text="パトリキオス゠{NAME}" />
+        <string id="NTP.CEK5F_apolssalian" text="パトリキア゠{NAME}" />
+        <string id="NTP.CEKCrownM_apolssalian" text="パトリキオス゠{NAME}" />
+        <string id="NTP.CEKCrownF_apolssalian" text="パトリキア゠{NAME}" />
+        <string id="NTP.CEKRoyalM_apolssalian" text="パトリキオス゠{NAME}" />
+        <string id="NTP.CEKRoyalF_apolssalian" text="パトリキア゠{NAME}" />
+
+
+        <!-- Lyrion culture -->
+        <string id="NTP.CEK1M_lyrion" text="国王{NAME}" />
+        <string id="NTP.CEK1F_lyrion" text="女王{NAME}" />
+        <string id="NTP.CEK2M_lyrion" text="公爵{NAME}" />
+        <string id="NTP.CEK2F_lyrion" text="女公爵{NAME}" />
+        <string id="NTP.CEK3M_lyrion" text="伯爵{NAME}" />
+        <string id="NTP.CEK3F_lyrion" text="女伯爵{NAME}" />
+        <string id="NTP.CEK4M_lyrion" text="男爵{NAME}" />
+        <string id="NTP.CEK4F_lyrion" text="女男爵{NAME}" />
+        <string id="NTP.CEK5M_lyrion" text="卿{NAME}" />
+        <string id="NTP.CEK5F_lyrion" text="女卿{NAME}" />
+        <string id="NTP.CEKCrownM_lyrion" text="卿{NAME}" />
+        <string id="NTP.CEKCrownF_lyrion" text="女卿{NAME}" />
+        <string id="NTP.CEKRoyalM_lyrion" text="卿{NAME}" />
+        <string id="NTP.CEKRoyalF_lyrion" text="女卿{NAME}" />
+
+
+        <!-- Khergit culture -->
+        <string id="NTP.CEK1M_rebkhu" text="{NAME}゠ハン" />
+        <string id="NTP.CEK1F_rebkhu" text="{NAME}゠ハトゥン" />
+        <string id="NTP.CEK2M_rebkhu" text="{NAME}゠ウルスベイ" />
+        <string id="NTP.CEK2F_rebkhu" text="{NAME}゠ウルスベイグム" />
+        <string id="NTP.CEK3M_rebkhu" text="{NAME}゠ベイレルベイ" />
+        <string id="NTP.CEK3F_rebkhu" text="{NAME}゠ベイレルベグム" />
+        <string id="NTP.CEK4M_rebkhu" text="{NAME}゠ベイ" />
+        <string id="NTP.CEK4F_rebkhu" text="{NAME}゠ベイグム" />
+        <string id="NTP.CEK5M_rebkhu" text="{NAME}゠ノヤン" />
+        <string id="NTP.CEK5F_rebkhu" text="{NAME}゠ノヤン" />
+        <string id="NTP.CEKCrownM_rebkhu" text="{NAME}゠ノヤン" />
+        <string id="NTP.CEKCrownF_rebkhu" text="{NAME}゠ノヤン" />
+        <string id="NTP.CEKRoyalM_rebkhu" text="{NAME}゠ノヤン" />
+        <string id="NTP.CEKRoyalF_rebkhu" text="{NAME}゠ノヤン" />
+
+
+        <!-- Paleician culture -->
+        <string id="NTP.CEK1M_paleician" text="{NAME}" />
+        <string id="NTP.CEK1F_paleician" text="{NAME}" />
+        <string id="NTP.CEK2M_paleician" text="{NAME}" />
+        <string id="NTP.CEK2F_paleician" text="{NAME}" />
+        <string id="NTP.CEK3M_paleician" text="{NAME}" />
+        <string id="NTP.CEK3F_paleician" text="{NAME}" />
+        <string id="NTP.CEK4M_paleician" text="{NAME}" />
+        <string id="NTP.CEK4F_paleician" text="{NAME}" />
+        <string id="NTP.CEK5M_paleician" text="{NAME}" />
+        <string id="NTP.CEK5F_paleician" text="{NAME}" />
+        <string id="NTP.CEKCrownM_paleician" text="{NAME}" />
+        <string id="NTP.CEKCrownF_paleician" text="{NAME}" />
+        <string id="NTP.CEKRoyalM_paleician" text="{NAME}" />
+        <string id="NTP.CEKRoyalF_paleician" text="{NAME}" />
+
+
+        <!-- Republic culture -->
+        <string id="NTP.CEK1M_republic" text="ディクタートル゠{NAME}" />
+        <string id="NTP.CEK1F_republic" text="ディクタートル゠{NAME}" />
+        <string id="NTP.CEK2M_republic" text="プロコンスル゠{NAME}" />
+        <string id="NTP.CEK2F_republic" text="プロコンスル゠{NAME}" />
+        <string id="NTP.CEK3M_republic" text="プロプラエトル゠{NAME}" />
+        <string id="NTP.CEK3F_republic" text="プロプラエトル゠{NAME}" />
+        <string id="NTP.CEK4M_republic" text="プロクアエストル゠{NAME}" />
+        <string id="NTP.CEK4F_republic" text="プロクアエストル゠{NAME}" />
+        <string id="NTP.CEK5M_republic" text="ノービリス゠{NAME}" />
+        <string id="NTP.CEK5F_republic" text="ノービレ゠{NAME}" />
+        <string id="NTP.CEKCrownM_republic" text="ノービリス゠{NAME}" />
+        <string id="NTP.CEKCrownF_republic" text="ノービレ゠{NAME}" />
+        <string id="NTP.CEKRoyalM_republic" text="ノービリス゠{NAME}" />
+        <string id="NTP.CEKRoyalF_republic" text="ノービレ゠{NAME}" />
+
+
+        <!-- Aroiorum culture -->
+        <string id="NTP.CEK1M_ariorum" text="デスポテース゠{NAME}" />
+        <string id="NTP.CEK1F_ariorum" text="デスポテッサ゠{NAME}" />
+        <string id="NTP.CEK2M_ariorum" text="アルホーン゠{NAME}" />
+        <string id="NTP.CEK2F_ariorum" text="アルホンティッサ゠{NAME}" />
+        <string id="NTP.CEK3M_ariorum" text="アルホーン゠{NAME}" />
+        <string id="NTP.CEK3F_ariorum" text="アルホンティッサ゠{NAME}" />
+        <string id="NTP.CEK4M_ariorum" text="アルホーン゠{NAME}" />
+        <string id="NTP.CEK4F_ariorum" text="アルホンティッサ゠{NAME}" />
+        <string id="NTP.CEK5M_ariorum" text="パトリキオス゠{NAME}" />
+        <string id="NTP.CEK5F_ariorum" text="パトリキア゠{NAME}" />
+        <string id="NTP.CEKCrownM_ariorum" text="パトリキオス゠{NAME}" />
+        <string id="NTP.CEKCrownF_ariorum" text="パトリキア゠{NAME}" />
+        <string id="NTP.CEKRoyalM_ariorum" text="パトリキオス゠{NAME}" />
+        <string id="NTP.CEKRoyalF_ariorum" text="パトリキア゠{NAME}" />
+
+
+        <string id="NTP.CEKMinorLM_legion_of_the_betrayed" text="レガートゥス゠{NAME}" />
+        <string id="NTP.CEKMinorLF_legion_of_the_betrayed" text="レガートゥス゠{NAME}" />
+        <string id="NTP.CEKMinorMM_legion_of_the_betrayed" text="トリブーヌス゠{NAME}" />
+        <string id="NTP.CEKMinorMF_legion_of_the_betrayed" text="トリブーヌス゠{NAME}" />
+	</strings>
+</base>

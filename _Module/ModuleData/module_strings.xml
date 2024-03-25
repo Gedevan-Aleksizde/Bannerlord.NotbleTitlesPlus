@@ -8,6 +8,9 @@
         <string id="str_ntp_mcm.fallback_player" text="{=NTP.MCMyour}Your Kingdom" />
         <string id="str_ntp_mcm.preset_original" text="{=NTP.MCMOriginal}Zijistark's Original" />
         <string id="str_ntp_mcm.preset_variant" text="{=NTP.MCMVariant}Variant" />
+        <string id="str_ntp_mcm.preset_banner_kings" text="{=NTP.MCMBK}Banner Kings fashioned" />
+        <string id="str_ntp_mcm.preset_europe_1100" text="{=NTP.MCMEU1100}Europe 1100" />
+        <string id="str_ntp_mcm.preset_calradia_expanded_kingdoms" text="{=NTP.MCMCEK}Calradia Expanded: Kingdoms" />
         <string id="str_ntp_mcm.fow_hint" text="{=NTP.MCMFOWHint}Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
         <string id="str_ntp_mcm.encyclo_hint" text="{=NTP.MCMencyclopediaHint}Current Inavailable"/>
         <string id="str_ntp_mcm.verbose" text="{=NTP.MCMVerbose}Verbose Log"/>
