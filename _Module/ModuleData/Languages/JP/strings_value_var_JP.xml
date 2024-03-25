@@ -64,7 +64,7 @@
   <string id="NTP.VAR4M_battania" text="モーマー゠{NAME}" />
   <string id="NTP.VAR4F_battania" text="バンティアルナ゠{NAME}" />
   <string id="NTP.VAR5M_battania" text="ドゥワニワサル゠{NAME}" />
-  <string id="NTP.VAR5F_battania" text="ベヌワサル゠{NAME}" />
+  <string id="NTP.VAR5F_battania" text="バーヌワサル゠{NAME}" />
 
   <string id="NTP.VAR1M_khuzait" text="{NAME}゠ハン" />
   <string id="NTP.VAR1F_khuzait" text="{NAME}゠ハトゥン" />

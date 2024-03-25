@@ -132,8 +132,8 @@
   <string id="NTP.VAR2F_huaxia" text="Junwang {CLAN}{NAME}" /> <!-- CN: 女郡王 -->
   <string id="NTP.VAR3M_huaxia" text="Guogong {CLAN}{NAME}" /> <!-- CN: 国公 -->
   <string id="NTP.VAR3F_huaxia" text="Nuguogong {CLAN} {NAME}" /> <!-- CN: 女国公 -->
-  <string id="NTP.VAR4M_huaxia" text="Zhuyin {CLAN} {NAME}" /> <!-- CN: 郡公 -->
-  <string id="NTP.VAR4F_huaxia" text="Nuzhuyin {CLAN} {NAME}" /> <!-- CN: 女郡公 -->
+  <string id="NTP.VAR4M_huaxia" text="Jungong {CLAN} {NAME}" /> <!-- CN: 郡公 -->
+  <string id="NTP.VAR4F_huaxia" text="Nujungong {CLAN} {NAME}" /> <!-- CN: 女郡公 -->
   <string id="NTP.VAR5M_huaxia" text="Qing {CLAN} {NAME}" /> <!-- CN: 卿 -->
   <string id="NTP.VAR5F_huaxia" text="Nuqing {CLAN} {NAME}" /> <!-- CN: 女卿 -->
   <string id="NTP.VARCrownM_huaxia" text="Huangtaiji {NAME}" /> <!-- CN: 皇太子 -->
