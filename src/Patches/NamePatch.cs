@@ -6,14 +6,17 @@ using TaleWorlds.Localization;
 using NobleTitlesPlus.DB;
 using SandBox.ViewModelCollection.Nameplate;
 using System.Diagnostics;
+using TaleWorlds.CampaignSystem.ViewModelCollection.Party;
+using TaleWorlds.CampaignSystem.ViewModelCollection.GameMenu.Overlay;
+using TaleWorlds.Library;
 
 namespace NobleTitlesPlus.Patches
 {
     [HarmonyPatch(typeof(Hero), nameof(Hero.Name), MethodType.Getter)]
-    internal class HeroNamePatch
+    internal class ModifyTitleOnHeroName
     {
         [HarmonyPostfix]
-        private static void AppendTitles(Hero __instance, ref TextObject __result)
+        private static void ChangeTitles(Hero __instance, ref TextObject __result)
         {
             if (__instance.IsLord && __instance.IsAlive && !__instance.IsRebel && (__instance.IsKnownToPlayer || !TitleBehavior.options.FogOfWar || __instance
                 .IsFactionLeader))
@@ -46,7 +49,7 @@ namespace NobleTitlesPlus.Patches
     }
     // fix the nameplate on the conversation UI
     [HarmonyPatch(typeof(MissionConversationVM), nameof(MissionConversationVM.Refresh))]
-    internal class MissionConversationVMModifyOverNestedTextFormat
+    internal class ModifyTitleOnMissionConversationVM
     {
         private static TextObject namePre = new();
         [HarmonyPrefix]
@@ -69,11 +72,12 @@ namespace NobleTitlesPlus.Patches
     // nameplate hover on the parties in the campaign map
     // FIXME: This patch does nothing, but the titles disappear from alternative party nameplate on the campaign map if erased. WHY???
     [HarmonyPatch(typeof(PartyNameplateVM), nameof(PartyNameplateVM.RefreshDynamicProperties))]
-    internal class OverrideNameTitleOnParty
+    internal class ModifyTitleOnPartyNamePlateVM
     {
         [HarmonyPostfix]
-        private static void FormatTitle(PartyNameplateVM __instance)
+        private static void ChangeTitle(PartyNameplateVM __instance)
         {
+            __instance.FullName = "TEST";
             /*
             // __instance.FullName
             if(!(__instance.Party.IsCaravan || __instance.IsBehind) && __instance.IsVisibleOnMap)
@@ -93,7 +97,7 @@ namespace NobleTitlesPlus.Patches
     }
     // TODO: Can patching GameTexts more clever? 
     [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.EncyclopediaRulerTitle), MethodType.Getter)]
-    internal class KingdomRulerTitlePatchNotUniformized
+    internal class ModifyTitleOnKingdomEncyclopediaRuler
     {
         [HarmonyPostfix]
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
@@ -103,6 +107,27 @@ namespace NobleTitlesPlus.Patches
             // __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
+    /* used by SettlementMenuOverlayVM.CharacterList and so on*/
+    [HarmonyPatch(typeof(GameMenuPartyItemVM), nameof(GameMenuPartyItemVM.RefreshProperties))]
+    internal class ModifyTitleOnPartyItemVMName
+    {
+        [HarmonyPostfix]
+        private static void FormatTitle(GameMenuPartyItemVM __instance)
+        {
+            if(__instance?.Party != null)
+            {
+            }
+            else if(__instance?.Character != null)
+            {
+                if (__instance.Character.IsHero)
+                {
+                    string name = __instance.Character.HeroObject.Name.ToString();
+                    __instance.NameText = name;
+                }
+            }
+        }
+    }
+
     /*[HarmonyPatch(typeof(EncyclopediaListItemVM), nameof(EncyclopediaListItemVM.Name), MethodType.Getter)]
     internal class EncyclopediaName
     {
