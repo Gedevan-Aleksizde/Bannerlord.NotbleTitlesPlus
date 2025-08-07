@@ -6,4 +6,5 @@
 	<LanguageFile xml_path="JP/strings_value_var_JP.xml" />
 	<LanguageFile xml_path="JP/strings_value_bk_JP.xml" />
 	<LanguageFile xml_path="JP/strings_value_sho_JP.xml" />
+	<LanguageFile xml_path="JP/strings_value_shoM_JP.xml" />
 </LanguageData>

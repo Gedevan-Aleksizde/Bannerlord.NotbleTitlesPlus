@@ -5,141 +5,22 @@
  	</tags>
 	<strings>
 		<!-- #region Shokuho -->
-		<string id="NTP.MCMSho" text="Shokuhō"/>
-		<string id="NTP.SHO1M_ou" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{CLAN}{NAME}" />
-		<string id="NTP.SHO1F_ou" text="大名夫人{CLAN} {NAME}" />
-		<string id="NTP.SHO2M_ou" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO2F_ou" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO3M_ou" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO3F_ou" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO4M_ou" text="城主{CLAN}{NAME}" />
-		<string id="NTP.SHO4F_ou" text="城主夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO5M_ou" text="御家人{CLAN}{NAME}" />
-		<string id="NTP.SHO5F_ou" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHOCrownM_ou" text="嗣子{CLAN}{NAME}" />
-		<string id="NTP.SHOCrownF_ou" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHORoyalM_ou" text="直参{CLAN}{NAME}" />
-		<string id="NTP.SHORoyalF_ou" text="{CLAN}{NAME}姫" />
+		<string id="NTP.MCMShokuho" text="Shokuhō"/>
 		
-		<string id="NTP.SHO1M_kanto" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{CLAN}{NAME}" />
-		<string id="NTP.SHO1F_kanto" text="大名夫人{CLAN} {NAME}" />
-		<string id="NTP.SHO2M_kanto" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO2F_kanto" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO3M_kanto" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO3F_kanto" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO4M_kanto" text="城主{CLAN}{NAME}" />
-		<string id="NTP.SHO4F_kanto" text="城主夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO5M_kanto" text="御家人{CLAN}{NAME}" />
-		<string id="NTP.SHO5F_kanto" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHOCrownM_kanto" text="嗣子{CLAN}{NAME}" />
-		<string id="NTP.SHOCrownF_kanto" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHORoyalM_kanto" text="直参{CLAN}{NAME}" />
-		<string id="NTP.SHORoyalF_kanto" text="{CLAN}{NAME}姫" />
-		
-		<string id="NTP.SHO1M_hokuriku" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{CLAN}{NAME}" />
-		<string id="NTP.SHO1F_hokuriku" text="大名夫人{CLAN} {NAME}" />
-		<string id="NTP.SHO2M_hokuriku" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO2F_hokuriku" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO3M_hokuriku" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO3F_hokuriku" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO4M_hokuriku" text="城主{CLAN}{NAME}" />
-		<string id="NTP.SHO4F_hokuriku" text="城主夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO5M_hokuriku" text="御家人{CLAN}{NAME}" />
-		<string id="NTP.SHO5F_hokuriku" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHOCrownM_hokuriku" text="嗣子{CLAN}{NAME}" />
-		<string id="NTP.SHOCrownF_hokuriku" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHORoyalM_hokuriku" text="直参{CLAN}{NAME}" />
-		<string id="NTP.SHORoyalF_hokuriku" text="{CLAN}{NAME}姫" />
-		
-		<string id="NTP.SHO1M_tosan" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{CLAN}{NAME}" />
-		<string id="NTP.SHO1F_tosan" text="大名夫人{CLAN} {NAME}" />
-		<string id="NTP.SHO2M_tosan" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO2F_tosan" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO3M_tosan" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO3F_tosan" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO4M_tosan" text="城主{CLAN}{NAME}" />
-		<string id="NTP.SHO4F_tosan" text="城主夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO5M_tosan" text="御家人{CLAN}{NAME}" />
-		<string id="NTP.SHO5F_tosan" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHOCrownM_tosan" text="嗣子{CLAN}{NAME}" />
-		<string id="NTP.SHOCrownF_tosan" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHORoyalM_tosan" text="直参{CLAN}{NAME}" />
-		<string id="NTP.SHORoyalF_tosan" text="{CLAN}{NAME}姫" />
-		
-		<string id="NTP.SHO1M_tokai" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{CLAN}{NAME}" />
-		<string id="NTP.SHO1F_tokai" text="大名夫人{CLAN} {NAME}" />
-		<string id="NTP.SHO2M_tokai" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO2F_tokai" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO3M_tokai" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO3F_tokai" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO4M_tokai" text="城主{CLAN}{NAME}" />
-		<string id="NTP.SHO4F_tokai" text="城主夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO5M_tokai" text="御家人{CLAN}{NAME}" />
-		<string id="NTP.SHO5F_tokai" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHOCrownM_tokai" text="嗣子{CLAN}{NAME}" />
-		<string id="NTP.SHOCrownF_tokai" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHORoyalM_tokai" text="直参{CLAN}{NAME}" />
-		<string id="NTP.SHORoyalF_tokai" text="{CLAN}{NAME}姫" />
-		
-		<string id="NTP.SHO1M_kinai" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{CLAN}{NAME}" />
-		<string id="NTP.SHO1F_kinai" text="大名夫人{CLAN} {NAME}" />
-		<string id="NTP.SHO2M_kinai" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO2F_kinai" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO3M_kinai" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO3F_kinai" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO4M_kinai" text="城主{CLAN}{NAME}" />
-		<string id="NTP.SHO4F_kinai" text="城主夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO5M_kinai" text="御家人{CLAN}{NAME}" />
-		<string id="NTP.SHO5F_kinai" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHOCrownM_kinai" text="嗣子{CLAN}{NAME}" />
-		<string id="NTP.SHOCrownF_kinai" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHORoyalM_kinai" text="直参{CLAN}{NAME}" />
-		<string id="NTP.SHORoyalF_kinai" text="{CLAN}{NAME}姫" />
-		
-		<string id="NTP.SHO1M_sanyo" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{CLAN}{NAME}" />
-		<string id="NTP.SHO1F_sanyo" text="大名夫人{CLAN} {NAME}" />
-		<string id="NTP.SHO2M_sanyo" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO2F_sanyo" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO3M_sanyo" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO3F_sanyo" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO4M_sanyo" text="城主{CLAN}{NAME}" />
-		<string id="NTP.SHO4F_sanyo" text="城主夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO5M_sanyo" text="御家人{CLAN}{NAME}" />
-		<string id="NTP.SHO5F_sanyo" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHOCrownM_sanyo" text="嗣子{CLAN}{NAME}" />
-		<string id="NTP.SHOCrownF_sanyo" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHORoyalM_sanyo" text="直参{CLAN}{NAME}" />
-		<string id="NTP.SHORoyalF_sanyo" text="{CLAN}{NAME}姫" />
-		
-		<string id="NTP.SHO1M_nankai" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{CLAN}{NAME}" />
-		<string id="NTP.SHO1F_nankai" text="大名夫人{CLAN} {NAME}" />
-		<string id="NTP.SHO2M_nankai" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO2F_nankai" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO3M_nankai" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO3F_nankai" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO4M_nankai" text="城主{CLAN}{NAME}" />
-		<string id="NTP.SHO4F_nankai" text="城主夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO5M_nankai" text="御家人{CLAN}{NAME}" />
-		<string id="NTP.SHO5F_nankai" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHOCrownM_nankai" text="嗣子{CLAN}{NAME}" />
-		<string id="NTP.SHOCrownF_nankai" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHORoyalM_nankai" text="直参{CLAN}{NAME}" />
-		<string id="NTP.SHORoyalF_nankai" text="{CLAN}{NAME}姫" />
-		
-		<string id="NTP.SHO1M_saikai" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{CLAN}{NAME}" />
-		<string id="NTP.SHO1F_saikai" text="大名夫人{CLAN} {NAME}" />
-		<string id="NTP.SHO2M_saikai" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO2F_saikai" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO3M_saikai" text="家老{CLAN}{NAME}" />
-		<string id="NTP.SHO3F_saikai" text="家老夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO4M_saikai" text="城主{CLAN}{NAME}" />
-		<string id="NTP.SHO4F_saikai" text="城主夫人{CLAN}{NAME}" />
-		<string id="NTP.SHO5M_saikai" text="御家人{CLAN}{NAME}" />
-		<string id="NTP.SHO5F_saikai" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHOCrownM_saikai" text="嗣子{CLAN}{NAME}" />
-		<string id="NTP.SHOCrownF_saikai" text="{CLAN}{NAME}姫" />
-		<string id="NTP.SHORoyalM_saikai" text="直参{CLAN}{NAME}" />
-		<string id="NTP.SHORoyalF_saikai" text="{CLAN}{NAME}姫" />
+		<string id="NTP.SHO1M_default" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{NAME}" />
+		<string id="NTP.SHO1F_default" text="大名夫人{NAME}" />
+		<string id="NTP.SHO2M_default" text="家老{NAME}" />
+		<string id="NTP.SHO2F_default" text="家老夫人{NAME}" />
+		<string id="NTP.SHO3M_default" text="家老{NAME}" />
+		<string id="NTP.SHO3F_default" text="家老夫人{NAME}" />
+		<string id="NTP.SHO4M_default" text="城主{NAME}" />
+		<string id="NTP.SHO4F_default" text="城主夫人{NAME}" />
+		<string id="NTP.SHO5M_default" text="御家人{NAME}" />
+		<string id="NTP.SHO5F_default" text="{NAME}姫" />
+		<string id="NTP.SHOCrownM_default" text="嗣子{NAME}" />
+		<string id="NTP.SHOCrownF_default" text="{NAME}姫" />
+		<string id="NTP.SHORoyalM_default" text="直参{NAME}" />
+		<string id="NTP.SHORoyalF_default" text="{NAME}姫" />
 		
 		<string id="NTP.SHOMinorLM_default" text="{CLAN_SHORT}の{NAME}" />
 		<string id="NTP.SHOMinorLF_default" text="{CLAN_SHORT}の{NAME}" />
