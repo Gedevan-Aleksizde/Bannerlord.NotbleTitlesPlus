@@ -1,12 +1,12 @@
-﻿using System;
+﻿using NobleTitlesPlus.DB;
+using NobleTitlesPlus.MCMSettings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
-using NobleTitlesPlus.DB;
-using NobleTitlesPlus.Settings;
 
 namespace NobleTitlesPlus
 {
@@ -58,7 +58,7 @@ namespace NobleTitlesPlus
         public void UpdateArmyNames()
         {
             // TODO
-            if(Campaign.Current != null)
+            if (Campaign.Current != null)
             {
                 foreach (MobileParty mp in MobileParty.All)
                 {
@@ -73,7 +73,7 @@ namespace NobleTitlesPlus
         public Dictionary<Clan, TextObject> FiefLists { get; private set; } = new();
         public Nomenclatura(bool update = false)
         {
-            if(update) this.UpdateAll();
+            if (update) this.UpdateAll();
         }
         public void UpdateAll()
         {
@@ -81,7 +81,7 @@ namespace NobleTitlesPlus
             {
                 this.AddTitlesToKingdomHeroes(k);
             }
-            foreach(Clan c in Clan.All)
+            foreach (Clan c in Clan.All)
             {
                 this.UpdateFiefList(c);
             }
@@ -90,7 +90,7 @@ namespace NobleTitlesPlus
         }
         private void RemoveTitleFromDead()
         {
-            foreach(Hero h in this.HeroRank.Keys.ToArray())
+            foreach (Hero h in this.HeroRank.Keys.ToArray())
             {
                 if (h.IsDead)
                 {
@@ -98,11 +98,15 @@ namespace NobleTitlesPlus
                 }
             }
         }
+        /// <summary>
+        /// updates the list of fiefs that a clan have
+        /// </summary>
+        /// <param name="clan"></param>
         public void UpdateFiefList(Clan clan)
         {
             List<string> fiefList = clan.Fiefs.Take(TitleBehavior.options.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
-            
-            if( fiefList.Count() <= 1 || TitleBehavior.options.MaxFiefNames <= 1)
+
+            if (fiefList.Count() <= 1 || TitleBehavior.options.MaxFiefNames <= 1)
             {
                 this.FiefLists[clan] = new TextObject(fiefList.FirstOrDefault());
             }
@@ -118,6 +122,10 @@ namespace NobleTitlesPlus
                 this.FiefLists[clan] = GameTexts.FindText("str_ntp_landless");
             }
         }
+        /// <summary>
+        /// Adds titles to all heroes in a kingdom
+        /// </summary>
+        /// <param name="kingdom"></param>
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
             List<string> tr = new() { $">> [INFO] Adding noble titles to \"{kingdom.Name}\" (ID={kingdom.StringId}) (culture={kingdom.Culture.StringId})..." };
@@ -236,6 +244,10 @@ namespace NobleTitlesPlus
             }
             if (TitleBehavior.options.VerboseLog) Util.Log.Print(tr);
         }
+
+        /// <summary>
+        /// Adds all minor faction menbers titles 
+        /// </summary>
         private void AddTitlesToMinorFaction()
         {
             foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction && (!c.Leader?.IsHumanPlayerCharacter ?? true)))
@@ -262,6 +274,6 @@ namespace NobleTitlesPlus
         }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);
         private string GetHeroTrace(Hero h, TitleRank rank) =>
-            $" -> {rank}: {h.Name} [Fief Score: {(rank == TitleRank.King || rank == TitleRank.Duke || rank == TitleRank.Count || rank == TitleRank.Baron? this.GetFiefScore(h.Clan): 0)} / Renown: {h.Clan.Renown:F0}]";
+            $" -> {rank}: {h.Name} [Fief Score: {(rank == TitleRank.King || rank == TitleRank.Duke || rank == TitleRank.Count || rank == TitleRank.Baron ? this.GetFiefScore(h.Clan) : 0)} / Renown: {h.Clan.Renown:F0}]";
     }
 }

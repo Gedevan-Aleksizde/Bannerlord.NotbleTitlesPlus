@@ -1,16 +1,16 @@
-﻿using TaleWorlds.CampaignSystem;
-using TaleWorlds.Core;
-using TaleWorlds.Library;
-using TaleWorlds.MountAndBlade;
-using System.Reflection;
-using System.IO;
-using TaleWorlds.Localization;
+﻿using HarmonyLib;
 using MCM.Abstractions.Base.PerSave;
-using NobleTitlesPlus.Settings;
+using NobleTitlesPlus.MCMSettings;
 using System;
-using TaleWorlds.ModuleManager;
+using System.IO;
+using System.Reflection;
+using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
 using TaleWorlds.Engine;
-using HarmonyLib;
+using TaleWorlds.Library;
+using TaleWorlds.Localization;
+using TaleWorlds.ModuleManager;
+using TaleWorlds.MountAndBlade;
 
 namespace NobleTitlesPlus
 {

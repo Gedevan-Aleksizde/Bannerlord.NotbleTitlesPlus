@@ -1,15 +1,12 @@
 ﻿using HarmonyLib;
+using NobleTitlesPlus.DB;
+using SandBox.ViewModelCollection.Missions.NameMarker;
+using SandBox.ViewModelCollection.Nameplate;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Conversation;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
-using TaleWorlds.Localization;
-using NobleTitlesPlus.DB;
-using SandBox.ViewModelCollection.Nameplate;
-using System.Diagnostics;
-using TaleWorlds.CampaignSystem.ViewModelCollection.Party;
 using TaleWorlds.CampaignSystem.ViewModelCollection.GameMenu.Overlay;
-using TaleWorlds.Library;
-using SandBox.ViewModelCollection.Missions.NameMarker;
+using TaleWorlds.Localization;
 
 namespace NobleTitlesPlus.Patches
 {
@@ -70,8 +67,10 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
-    // nameplate hover on the parties in the campaign map
-    // FIXME: This patch does nothing, but the titles disappear from alternative party nameplate on the campaign map if erased. WHY???
+    /// <summary>
+    /// nameplate hover on the parties in the campaign map
+    /// FIXME: This patch does nothing, but the titles disappear from alternative party nameplate on the campaign map if erased this method. WHY???
+    /// </summary>
     [HarmonyPatch(typeof(PartyNameplateVM), nameof(PartyNameplateVM.RefreshDynamicProperties))]
     internal class ModifyTitleOnPartyNamePlateVM
     {
@@ -96,7 +95,9 @@ namespace NobleTitlesPlus.Patches
             */
         }
     }
-    // TODO: Can patching GameTexts more clever? 
+    /// <summary>
+    /// TODO: is it possible to do patching GameTexts more clever?  
+    /// </summary>
     [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.EncyclopediaRulerTitle), MethodType.Getter)]
     internal class ModifyTitleOnKingdomEncyclopediaRuler
     {
@@ -105,21 +106,24 @@ namespace NobleTitlesPlus.Patches
         {
             Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Name}");
             __result = TitleBehavior.options.TitleSet.GetTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
-            // __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
+            __result = TitleBehavior.nomenclatura.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
 
     /* used by SettlementMenuOverlayVM.CharacterList and so on*/
+    /// <summary>
+    /// Shows titles on the nameplates at the top of the settlement panel
+    /// </summary>
     [HarmonyPatch(typeof(GameMenuPartyItemVM), nameof(GameMenuPartyItemVM.RefreshProperties))]
     internal class ModifyTitleOnPartyItemVMName
     {
         [HarmonyPostfix]
         private static void FormatTitle(GameMenuPartyItemVM __instance)
         {
-            if(__instance?.Party != null)
+            if (__instance?.Party != null)
             {
             }
-            else if(__instance?.Character != null)
+            else if (__instance?.Character != null)
             {
                 if (__instance.Character.IsHero)
                 {
@@ -135,7 +139,7 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void Test(MissionNameMarkerVM __instance)
         {
-            Util.Log.Print($"MissionNameMarkerVM.AddAgentTarget = {__instance.Name}");
+            // Util.Log.Print($"MissionNameMarkerVM.AddAgentTarget = {__instance}");
         }
     }
 

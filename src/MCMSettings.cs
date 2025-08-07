@@ -1,21 +1,16 @@
-﻿using MCM.Abstractions.Attributes.v2;
-using MCM.Abstractions.Attributes;
-using MCM.Abstractions.Base.Global;
-using System.Collections.Generic;
-using TaleWorlds.Localization;
-using System;
-using TaleWorlds.CampaignSystem;
-using NobleTitlesPlus.DB;
+﻿using MCM.Abstractions.Base;
 using MCM.Abstractions.FluentBuilder;
-using TaleWorlds.Core;
 using MCM.Common;
-using MCM.Abstractions.Base;
+using NobleTitlesPlus.DB;
+using System;
+using System.Collections.Generic;
 using System.Linq;
-using TaleWorlds.MountAndBlade.Diamond.Ranked;
-using Newtonsoft.Json.Linq;
 using System.Runtime.CompilerServices;
+using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
+using TaleWorlds.Localization;
 
-namespace NobleTitlesPlus.Settings
+namespace NobleTitlesPlus.MCMSettings
 {
     public record Options()
     {
@@ -28,7 +23,7 @@ namespace NobleTitlesPlus.Settings
         public string FiefNameSeparatorLast { get; set; } = "and";
         public int MaxFiefNames { get; set; } = 1;
         public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(DB.Inheritance)).OfType<DB.Inheritance>().ToList().Select(x => GameTexts.FindText("str_ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
-    public TitleSet TitleSet { get; set; } = new();
+        public TitleSet TitleSet { get; set; } = new();
     }
     internal static class RuntimeSettings
     {
@@ -79,7 +74,8 @@ namespace NobleTitlesPlus.Settings
                 j++;
             }
             builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, new(), "DEF"));
-            foreach((string id, string name) presetName in new List<(string, string)>(){ ("ORI", "Original"), ("VAR", "Variant")}){
+            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant") })
+            {
                 builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, new(), presetName.id));
             }
             return builder;
@@ -143,7 +139,7 @@ namespace NobleTitlesPlus.Settings
             {
                 void BuildFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
                 {
-                    foreach (string s in (string[]) Enum.GetNames(typeof(DB.Gender)))
+                    foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
                         bool isFemale = s == "F";
                         string genderLong = s == "F" ? "Female" : "Male";
@@ -155,8 +151,9 @@ namespace NobleTitlesPlus.Settings
                                     $"KingdomRank{rank}{s}_{id}", FindTextShortMCM($"title_{rank}{s}"),
                                     new ProxyRef<string>(
                                         () => options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, (TitleRank)rank, Category.Default),
-                                        value => {
-                                            if(isCulture) options.TitleSet.SetCultureTitle(value, id, isFemale, (TitleRank)rank);
+                                        value =>
+                                        {
+                                            if (isCulture) options.TitleSet.SetCultureTitle(value, id, isFemale, (TitleRank)rank);
                                             else options.TitleSet.SetFactionTitle(value, id, isFemale, (TitleRank)rank);
                                         }
                                     ),
@@ -197,8 +194,8 @@ namespace NobleTitlesPlus.Settings
             {
                 void BuildMinorFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
                 {
-                    if(TitleBehavior.options.VerboseLog) Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
-                    foreach (string g in (string[]) Enum.GetNames(typeof(DB.Gender)))
+                    if (TitleBehavior.options.VerboseLog) Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
+                    foreach (string g in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
                         bool isFemale = g == "F";
                         builder.AddText(
@@ -254,11 +251,10 @@ namespace NobleTitlesPlus.Settings
                     foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
                         foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
-                        // for (int rank = 1; rank < 6; rank++)  // TODO: why not working??
                         {
                             if (preset == "DEF")
                             {
-                                if(rank == 5)
+                                if (rank == 5)
                                 {
                                     builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", "{NAME}");
                                 }
@@ -273,7 +269,7 @@ namespace NobleTitlesPlus.Settings
                                     builder.SetPropertyValue($"KingdomRank{rank}{s}_{kingdomId}", Util.QuoteMultVarBitEasiler(TO));
                                 }
                             }
-                            else if(kingdomId != null) // TODO: is really needed?
+                            else if (kingdomId != null) // TODO: is really needed?
                             {
                                 if (GameTexts.TryGetText(moduleStrTitles, out TextObject TOKingdom, $"{preset}_{rank}{s}_{kingdomId ?? ""}"))
                                 {
@@ -287,7 +283,7 @@ namespace NobleTitlesPlus.Settings
                             else
                             {
                                 builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", FindTitleTextString(preset, rank.ToString(), s, cultureId));
-                            }   
+                            }
                         }
                         builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", FindTitleTextString(preset, "crown", s, cultureId));
                         builder.SetPropertyValue($"KingdomRoyal{s}_{cultureId}", FindTitleTextString(preset, "royal", s, cultureId));
@@ -295,7 +291,7 @@ namespace NobleTitlesPlus.Settings
                 }
                 void FillMinorFactionPropertyValues(string preset, string factionId)
                 {
-                    foreach(string lm in new string[] { "L", "M" })
+                    foreach (string lm in new string[] { "L", "M" })
                     {
                         foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                         {
@@ -314,7 +310,7 @@ namespace NobleTitlesPlus.Settings
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static string FindTitleTextString(string preset, string rank, string gender, string group)
         {
-            if(GameTexts.TryGetText(moduleStrTitles, out TextObject to, $"{preset}_{rank}{gender}_{group}"))
+            if (GameTexts.TryGetText(moduleStrTitles, out TextObject to, $"{preset}_{rank}{gender}_{group}"))
             {
                 return Util.QuoteMultVarBitEasiler(to);
             }
