@@ -106,7 +106,7 @@ namespace NobleTitlesPlus.Patches
         {
             Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Name}");
             __result = TitleBehavior.options.TitleSet.GetTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
-            __result = TitleBehavior.nomenclatura.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
+            // __result = TitleBehavior.nomenclatura.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
 
