@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <strings>
+	<string id="str_ntp_mcm.preset_europe_1100" text="{=NTP.MCMEU1100}Europe 1100" />
 	<string id="str_ntp_title_set.EU1100_1M_default" text="{=NTP.EU11001M_default}Rex {NAME}" />
 	<string id="str_ntp_title_set.EU1100_1F_default" text="{=NTP.EU11001F_default}Regna {NAME}" />
 	<string id="str_ntp_title_set.EU1100_2M_default" text="{=NTP.EU11002M_default}Dux {NAME}" />

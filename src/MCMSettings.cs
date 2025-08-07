@@ -74,7 +74,7 @@ namespace NobleTitlesPlus.MCMSettings
                 j++;
             }
             builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, new(), "DEF"));
-            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant"), ("SHO", "Shokuho") })
+            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant"), ("SHO", "Shokuho"), ("SHOM", "ShokuhoModified") })
             {
                 builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, new(), presetName.id));
             }
