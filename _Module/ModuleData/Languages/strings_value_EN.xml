@@ -21,6 +21,11 @@
 		<string id="NTP.DEF5M_default" text="{NAME}" />
 		<string id="NTP.DEFRoyalM_default" text="{NAME}" />
 		<string id="NTP.DEFRoyalF_default" text="{NAME}" />
+		
+		<string id="NTP.DEFMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
+		<string id="NTP.DEFMinorLF_default" text="{NAME} of {CLAN_SHORT}"/>
+		<string id="NTP.DEFMinorMM_default" text="{NAME} of {CLAN_SHORT}" />
+		<string id="NTP.DEFMinorMF_default" text="{NAME} of {CLAN_SHORT}"/>
 
 		<string id="NTP.DEF1M_empire" text="Emperor {NAME}" />
 		<string id="NTP.DEF1F_empire" text="Empress {NAME}" />
@@ -91,18 +96,13 @@
 		<string id="NTP.DEF1F_vlandia" text="Queen {NAME}" />
 		<string id="NTP.DEFCrownM_vlandia" text="{NAME}" />
 		<string id="NTP.DEFCrownF_vlandia" text="{NAME}" />
-		<string id="NTP.DEF2M_vlandia" text="Duke {NAME}" />
-		<string id="NTP.DEF2F_vlandia" text="Duchess {NAME}" />
-		<string id="NTP.DEF3M_vlandia" text="Count {NAME}" />
-		<string id="NTP.DEF3F_vlandia" text="Countess {NAME}" />
+		<string id="NTP.DEF2M_vlandia" text="Baron {NAME}" />
+		<string id="NTP.DEF2F_vlandia" text="Baroness {NAME}" />
+		<string id="NTP.DEF3M_vlandia" text="Baron {NAME}" />
+		<string id="NTP.DEF3F_vlandia" text="Baroness {NAME}" />
 		<string id="NTP.DEF4M_vlandia" text="Baron {NAME}" />
 		<string id="NTP.DEF4F_vlandia" text="Baroness {NAME}" />
 		<string id="NTP.DEF5M_vlandia" text="{NAME}" />
 		<string id="NTP.DEF5F_vlandia" text="{NAME}" />
-
-		<string id="NTP.DEFMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
-		<string id="NTP.DEFMinorLF_default" text="{NAME} of {CLAN_SHORT}"/>
-		<string id="NTP.DEFMinorMM_default" text="{NAME} of {CLAN_SHORT}" />
-		<string id="NTP.DEFMinorMF_default" text="{NAME} of {CLAN_SHORT}"/>
 	</strings>
 </base>

@@ -9,18 +9,23 @@
     <string id="NTP.DEFSepLast" text="・"/>
     <string id="NTP.DEF1M_default" text="国王{NAME}"/>
     <string id="NTP.DEF1F_default" text="女王{NAME}"/>
-    <string id="NTP.DEFCrownM_default" text="王太子{NAME}" />
-    <string id="NTP.DEFCrownF_default" text="王太女{NAME}" />
-    <string id="NTP.DEF2M_default" text="{NAME}公爵"/>
-    <string id="NTP.DEF2F_default" text="{NAME}女公爵"/>
-    <string id="NTP.DEF3M_default" text="{NAME}伯爵"/>
-    <string id="NTP.DEF3F_default" text="{NAME}女伯爵"/>
+    <string id="NTP.DEFCrownM_default" text="{NAME}" />
+    <string id="NTP.DEFCrownF_default" text="{NAME}" />
+    <string id="NTP.DEF2M_default" text="{NAME}男爵"/>
+    <string id="NTP.DEF2F_default" text="{NAME}女男爵"/>
+    <string id="NTP.DEF3M_default" text="{NAME}男爵"/>
+    <string id="NTP.DEF3F_default" text="{NAME}女男爵"/>
     <string id="NTP.DEF4M_default" text="{NAME}男爵"/>
     <string id="NTP.DEF4F_default" text="{NAME}女男爵"/>
     <string id="NTP.DEF4M_default" text="{NAME}"/>
     <string id="NTP.DEF5F_default" text="{NAME}"/>
     <string id="NTP.DEFRoyalM_default" text="{NAME}" />
     <string id="NTP.DEFRoyalF_default" text="{NAME}" />
+    
+    <string id="NTP.DEFMinorLM_default" text="{CLAN_SHORT}の{NAME}" />
+    <string id="NTP.DEFMinorLF_default" text="{CLAN_SHORT}の{NAME}" />
+    <string id="NTP.DEFMinorMM_default" text="{CLAN_SHORT}の{NAME}" />
+    <string id="NTP.DEFMinorMF_default" text="{CLAN_SHORT}の{NAME}"/>
 
     <string id="NTP.DEF1M_empire" text="皇帝{NAME}" />
     <string id="NTP.DEF1F_empire" text="女帝{NAME}" />
@@ -99,10 +104,5 @@
     <string id="NTP.DEF4F_vlandia" text="{NAME}女男爵" />
     <string id="NTP.DEF5M_vlandia" text="{NAME}" />
     <string id="NTP.DEF5F_vlandia" text="{NAME}" />
-
-    <string id="NTP.DEFMinorLM_default" text="{CLAN_SHORT}の{NAME}" />
-    <string id="NTP.DEFMinorLF_default" text="{CLAN_SHORT}の{NAME}" />
-    <string id="NTP.DEFMinorMM_default" text="{CLAN_SHORT}の{NAME}" />
-    <string id="NTP.DEFMinorMF_default" text="{CLAN_SHORT}の{NAME}"/>
   </strings>
 </base>
