@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base>
+	<tags>
+		<tag language="English" />
+	</tags>
+ 	<strings>
+		<string id="NTP.MCMShokuho" text="Shokuho" />
+		
+		<string id="NTP.SHO1M_ou" text="{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+		<string id="NTP.SHO1F_ou" text="Daimyou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO2M_ou" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO2F_ou" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO3M_ou" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO3F_ou" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO4M_ou" text="Lord Castellan {CLAN} {NAME}" />
+		<string id="NTP.SHO4F_ou" text="Lord Châtelaine {CLAN} {NAME}" />
+		<string id="NTP.SHO5M_ou" text="Gokenin {CLAN} {NAME}" />
+		<string id="NTP.SHO5F_ou" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownM_ou" text="Shishi {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownF_ou" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalM_ou" text="Jikisan {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalF_ou" text="Hime {CLAN} {NAME}" />
+		
+		<string id="NTP.SHO1M_kanto" text="{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+		<string id="NTP.SHO1F_kanto" text="Daimyou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO2M_kanto" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO2F_kanto" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO3M_kanto" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO3F_kanto" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO4M_kanto" text="Lord Castellan {CLAN} {NAME}" />
+		<string id="NTP.SHO4F_kanto" text="Lord Châtelaine {CLAN} {NAME}" />
+		<string id="NTP.SHO5M_kanto" text="Gokenin {CLAN} {NAME}" />
+		<string id="NTP.SHO5F_kanto" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownM_kanto" text="Shishi {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownF_kanto" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalM_kanto" text="Jikisan {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalF_kanto" text="Hime {CLAN} {NAME}" />
+		
+		<string id="NTP.SHO1M_hokuriku" text="{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+		<string id="NTP.SHO1F_hokuriku" text="Daimyou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO2M_hokuriku" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO2F_hokuriku" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO3M_hokuriku" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO3F_hokuriku" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO4M_hokuriku" text="Lord Castellan {CLAN} {NAME}" />
+		<string id="NTP.SHO4F_hokuriku" text="Lord Châtelaine {CLAN} {NAME}" />
+		<string id="NTP.SHO5M_hokuriku" text="Gokenin {CLAN} {NAME}" />
+		<string id="NTP.SHO5F_hokuriku" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownM_hokuriku" text="Shishi {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownF_hokuriku" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalM_hokuriku" text="Jikisan {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalF_hokuriku" text="Hime {CLAN} {NAME}" />
+		
+		<string id="NTP.SHO1M_tosan" text="{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+		<string id="NTP.SHO1F_tosan" text="Daimyou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO2M_tosan" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO2F_tosan" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO3M_tosan" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO3F_tosan" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO4M_tosan" text="Lord Castellan {CLAN} {NAME}" />
+		<string id="NTP.SHO4F_tosan" text="Lord Châtelaine {CLAN} {NAME}" />
+		<string id="NTP.SHO5M_tosan" text="Gokenin {CLAN} {NAME}" />
+		<string id="NTP.SHO5F_tosan" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownM_tosan" text="Shishi {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownF_tosan" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalM_tosan" text="Jikisan {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalF_tosan" text="Hime {CLAN} {NAME}" />
+		
+		<string id="NTP.SHO1M_tokai" text="{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+		<string id="NTP.SHO1F_tokai" text="Daimyou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO2M_tokai" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO2F_tokai" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO3M_tokai" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO3F_tokai" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO4M_tokai" text="Lord Castellan {CLAN} {NAME}" />
+		<string id="NTP.SHO4F_tokai" text="Lord Châtelaine {CLAN} {NAME}" />
+		<string id="NTP.SHO5M_tokai" text="Gokenin {CLAN} {NAME}" />
+		<string id="NTP.SHO5F_tokai" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownM_tokai" text="Shishi {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownF_tokai" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalM_tokai" text="Jikisan {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalF_tokai" text="Hime {CLAN} {NAME}" />
+		
+		<string id="NTP.SHO1M_kinai" text="{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+		<string id="NTP.SHO1F_kinai" text="Daimyou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO2M_kinai" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO2F_kinai" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO3M_kinai" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO3F_kinai" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO4M_kinai" text="Lord Castellan {CLAN} {NAME}" />
+		<string id="NTP.SHO4F_kinai" text="Lord Châtelaine {CLAN} {NAME}" />
+		<string id="NTP.SHO5M_kinai" text="Gokenin {CLAN} {NAME}" />
+		<string id="NTP.SHO5F_kinai" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownM_kinai" text="Shishi {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownF_kinai" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalM_kinai" text="Jikisan {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalF_kinai" text="Hime {CLAN} {NAME}" />
+		
+		<string id="NTP.SHO1M_sanyo" text="{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+		<string id="NTP.SHO1F_sanyo" text="Daimyou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO2M_sanyo" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO2F_sanyo" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO3M_sanyo" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO3F_sanyo" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO4M_sanyo" text="Lord Castellan {CLAN} {NAME}" />
+		<string id="NTP.SHO4F_sanyo" text="Lord Châtelaine {CLAN} {NAME}" />
+		<string id="NTP.SHO5M_sanyo" text="Gokenin {CLAN} {NAME}" />
+		<string id="NTP.SHO5F_sanyo" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownM_sanyo" text="Shishi {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownF_sanyo" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalM_sanyo" text="Jikisan {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalF_sanyo" text="Hime {CLAN} {NAME}" />
+		
+		<string id="NTP.SHO1M_nankai" text="{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+		<string id="NTP.SHO1F_nankai" text="Daimyou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO2M_nankai" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO2F_nankai" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO3M_nankai" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO3F_nankai" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO4M_nankai" text="Lord Castellan {CLAN} {NAME}" />
+		<string id="NTP.SHO4F_nankai" text="Lord Châtelaine {CLAN} {NAME}" />
+		<string id="NTP.SHO5M_nankai" text="Gokenin {CLAN} {NAME}" />
+		<string id="NTP.SHO5F_nankai" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownM_nankai" text="Shishi {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownF_nankai" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalM_nankai" text="Jikisan {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalF_nankai" text="Hime {CLAN} {NAME}" />
+		
+		<string id="NTP.SHO1M_saikai" text="{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+		<string id="NTP.SHO1F_saikai" text="Daimyou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO2M_saikai" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO2F_saikai" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO3M_saikai" text="Karou {CLAN} {NAME}" />
+		<string id="NTP.SHO3F_saikai" text="Karou-fujin {CLAN} {NAME}" />
+		<string id="NTP.SHO4M_saikai" text="Lord Castellan {CLAN} {NAME}" />
+		<string id="NTP.SHO4F_saikai" text="Lord Châtelaine {CLAN} {NAME}" />
+		<string id="NTP.SHO5M_saikai" text="Gokenin {CLAN} {NAME}" />
+		<string id="NTP.SHO5F_saikai" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownM_saikai" text="Shishi {CLAN} {NAME}" />
+		<string id="NTP.SHOCrownF_saikai" text="Hime {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalM_saikai" text="Jikisan {CLAN} {NAME}" />
+		<string id="NTP.SHORoyalF_saikai" text="Hime {CLAN} {NAME}" />
+		
+		<string id="NTP.SHOMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
+		<string id="NTP.SHOMinorLF_default" text="{NAME} of {CLAN_SHORT}" />
+		<string id="NTP.SHOMinorMM_default" text="{NAME} of {CLAN_SHORT}" />
+		<string id="NTP.SHOMinorMF_default" text="{NAME} of {CLAN_SHORT}" />
+	</strings>
+</base>

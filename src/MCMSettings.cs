@@ -60,7 +60,7 @@ namespace NobleTitlesPlus.MCMSettings
             }
             foreach (string kingdomId in options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
             {
-                string name = Kingdom.All.Where(k => k.StringId == kingdomId)?.First()?.InformalName.ToString() ?? GameTexts.FindText();
+                string name = Kingdom.All.Where(k => k.StringId == kingdomId)?.First()?.InformalName.ToString() ?? FindTextShortMCM("error_kingdom");
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(kingdomId, 4 + j, false)); ;
                 Util.Log.Print($">> [INFO] Category {name}({kingdomId}, faction) added to MCM options");
                 j++;
@@ -74,7 +74,7 @@ namespace NobleTitlesPlus.MCMSettings
                 j++;
             }
             builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, new(), "DEF"));
-            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant") })
+            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant"), ("SHO", "Shokuho") })
             {
                 builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, new(), presetName.id));
             }

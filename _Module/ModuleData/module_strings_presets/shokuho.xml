@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<!-- Shokuho modified preset -->
+	<string id="str_ntp_mcm.preset_shokuho" text="{=NTP.MCMShokuho}Shokuho" />
+	
+    <string id="str_ntp_title_set.SHO_1M_ou" text="{=NTP.SHO1M_ou}{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+    <string id="str_ntp_title_set.SHO_1F_ou" text="{=NTP.SHO1F_ou}Daimyou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2M_ou" text="{=NTP.SHO2M_ou}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2F_ou" text="{=NTP.SHO2F_ou}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3M_ou" text="{=NTP.SHO3M_ou}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3F_ou" text="{=NTP.SHO3F_ou}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4M_ou" text="{=NTP.SHO4M_ou}Lord Castellan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4F_ou" text="{=NTP.SHO4F_ou}Lord Châtelaine {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5M_ou" text="{=NTP.SHO5M_ou}Gokenin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5F_ou" text="{=NTP.SHO5F_ou}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownM_ou" text="{=NTP.SHOCrownM_ou}Shishi {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownF_ou" text="{=NTP.SHOCrownF_ou}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalM_ou" text="{=NTP.SHORoyalM_ou}Jikisan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalF_ou" text="{=NTP.SHORoyalF_ou}Hime {CLAN} {NAME}" />
+    
+    <string id="str_ntp_title_set.SHO_1M_kanto" text="{=NTP.SHO1M_kanto}{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+    <string id="str_ntp_title_set.SHO_1F_kanto" text="{=NTP.SHO1F_kanto}Daimyou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2M_kanto" text="{=NTP.SHO2M_kanto}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2F_kanto" text="{=NTP.SHO2F_kanto}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3M_kanto" text="{=NTP.SHO3M_kanto}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3F_kanto" text="{=NTP.SHO3F_kanto}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4M_kanto" text="{=NTP.SHO4M_kanto}Lord Castellan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4F_kanto" text="{=NTP.SHO4F_kanto}Lord Châtelaine {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5M_kanto" text="{=NTP.SHO5M_kanto}Gokenin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5F_kanto" text="{=NTP.SHO5F_kanto}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownM_kanto" text="{=NTP.SHOCrownM_kanto}Shishi {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownF_kanto" text="{=NTP.SHOCrownF_kanto}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalM_kanto" text="{=NTP.SHORoyalM_kanto}Jikisan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalF_kanto" text="{=NTP.SHORoyalF_kanto}Hime {CLAN} {NAME}" />
+    
+    <string id="str_ntp_title_set.SHO_1M_hokuriku" text="{=NTP.SHO1M_hokuriku}{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+    <string id="str_ntp_title_set.SHO_1F_hokuriku" text="{=NTP.SHO1F_hokuriku}Daimyou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2M_hokuriku" text="{=NTP.SHO2M_hokuriku}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2F_hokuriku" text="{=NTP.SHO2F_hokuriku}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3M_hokuriku" text="{=NTP.SHO3M_hokuriku}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3F_hokuriku" text="{=NTP.SHO3F_hokuriku}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4M_hokuriku" text="{=NTP.SHO4M_hokuriku}Lord Castellan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4F_hokuriku" text="{=NTP.SHO4F_hokuriku}Lord Châtelaine {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5M_hokuriku" text="{=NTP.SHO5M_hokuriku}Gokenin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5F_hokuriku" text="{=NTP.SHO5F_hokuriku}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownM_hokuriku" text="{=NTP.SHOCrownM_hokuriku}Shishi {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownF_hokuriku" text="{=NTP.SHOCrownF_hokuriku}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalM_hokuriku" text="{=NTP.SHORoyalM_hokuriku}Jikisan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalF_hokuriku" text="{=NTP.SHORoyalF_hokuriku}Hime {CLAN} {NAME}" />
+    
+    <string id="str_ntp_title_set.SHO_1M_tosan" text="{=NTP.SHO1M_tosan}{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+    <string id="str_ntp_title_set.SHO_1F_tosan" text="{=NTP.SHO1F_tosan}Daimyou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2M_tosan" text="{=NTP.SHO2M_tosan}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2F_tosan" text="{=NTP.SHO2F_tosan}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3M_tosan" text="{=NTP.SHO3M_tosan}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3F_tosan" text="{=NTP.SHO3F_tosan}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4M_tosan" text="{=NTP.SHO4M_tosan}Lord Castellan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4F_tosan" text="{=NTP.SHO4F_tosan}Lord Châtelaine {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5M_tosan" text="{=NTP.SHO5M_tosan}Gokenin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5F_tosan" text="{=NTP.SHO5F_tosan}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownM_tosan" text="{=NTP.SHOCrownM_tosan}Shishi {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownF_tosan" text="{=NTP.SHOCrownF_tosan}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalM_tosan" text="{=NTP.SHORoyalM_tosan}Jikisan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalF_tosan" text="{=NTP.SHORoyalF_tosan}Hime {CLAN} {NAME}" />
+    
+    <string id="str_ntp_title_set.SHO_1M_tokai" text="{=NTP.SHO1M_tokai}{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+    <string id="str_ntp_title_set.SHO_1F_tokai" text="{=NTP.SHO1F_tokai}Daimyou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2M_tokai" text="{=NTP.SHO2M_tokai}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2F_tokai" text="{=NTP.SHO2F_tokai}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3M_tokai" text="{=NTP.SHO3M_tokai}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3F_tokai" text="{=NTP.SHO3F_tokai}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4M_tokai" text="{=NTP.SHO4M_tokai}Lord Castellan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4F_tokai" text="{=NTP.SHO4F_tokai}Lord Châtelaine {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5M_tokai" text="{=NTP.SHO5M_tokai}Gokenin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5F_tokai" text="{=NTP.SHO5F_tokai}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownM_tokai" text="{=NTP.SHOCrownM_tokai}Shishi {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownF_tokai" text="{=NTP.SHOCrownF_tokai}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalM_tokai" text="{=NTP.SHORoyalM_tokai}Jikisan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalF_tokai" text="{=NTP.SHORoyalF_tokai}Hime {CLAN} {NAME}" />
+    
+    <string id="str_ntp_title_set.SHO_1M_kinai" text="{=NTP.SHO1M_kinai}{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+    <string id="str_ntp_title_set.SHO_1F_kinai" text="{=NTP.SHO1F_kinai}Daimyou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2M_kinai" text="{=NTP.SHO2M_kinai}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2F_kinai" text="{=NTP.SHO2F_kinai}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3M_kinai" text="{=NTP.SHO3M_kinai}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3F_kinai" text="{=NTP.SHO3F_kinai}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4M_kinai" text="{=NTP.SHO4M_kinai}Lord Castellan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4F_kinai" text="{=NTP.SHO4F_kinai}Lord Châtelaine {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5M_kinai" text="{=NTP.SHO5M_kinai}Gokenin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5F_kinai" text="{=NTP.SHO5F_kinai}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownM_kinai" text="{=NTP.SHOCrownM_kinai}Shishi {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownF_kinai" text="{=NTP.SHOCrownF_kinai}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalM_kinai" text="{=NTP.SHORoyalM_kinai}Jikisan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalF_kinai" text="{=NTP.SHORoyalF_kinai}Hime {CLAN} {NAME}" />
+    
+    <string id="str_ntp_title_set.SHO_1M_sanyo" text="{=NTP.SHO1M_sanyo}{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+    <string id="str_ntp_title_set.SHO_1F_sanyo" text="{=NTP.SHO1F_sanyo}Daimyou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2M_sanyo" text="{=NTP.SHO2M_sanyo}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2F_sanyo" text="{=NTP.SHO2F_sanyo}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3M_sanyo" text="{=NTP.SHO3M_sanyo}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3F_sanyo" text="{=NTP.SHO3F_sanyo}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4M_sanyo" text="{=NTP.SHO4M_sanyo}Lord Castellan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4F_sanyo" text="{=NTP.SHO4F_sanyo}Lord Châtelaine {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5M_sanyo" text="{=NTP.SHO5M_sanyo}Gokenin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5F_sanyo" text="{=NTP.SHO5F_sanyo}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownM_sanyo" text="{=NTP.SHOCrownM_sanyo}Shishi {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownF_sanyo" text="{=NTP.SHOCrownF_sanyo}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalM_sanyo" text="{=NTP.SHORoyalM_sanyo}Jikisan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalF_sanyo" text="{=NTP.SHORoyalF_sanyo}Hime {CLAN} {NAME}" />
+    
+    <string id="str_ntp_title_set.SHO_1M_nankai" text="{=NTP.SHO1M_nankai}{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+    <string id="str_ntp_title_set.SHO_1F_nankai" text="{=NTP.SHO1F_nankai}Daimyou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2M_nankai" text="{=NTP.SHO2M_nankai}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2F_nankai" text="{=NTP.SHO2F_nankai}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3M_nankai" text="{=NTP.SHO3M_nankai}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3F_nankai" text="{=NTP.SHO3F_nankai}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4M_nankai" text="{=NTP.SHO4M_nankai}Lord Castellan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4F_nankai" text="{=NTP.SHO4F_nankai}Lord Châtelaine {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5M_nankai" text="{=NTP.SHO5M_nankai}Gokenin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5F_nankai" text="{=NTP.SHO5F_nankai}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownM_nankai" text="{=NTP.SHOCrownM_nankai}Shishi {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownF_nankai" text="{=NTP.SHOCrownF_nankai}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalM_nankai" text="{=NTP.SHORoyalM_nankai}Jikisan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalF_nankai" text="{=NTP.SHORoyalF_nankai}Hime {CLAN} {NAME}" />
+    
+    <string id="str_ntp_title_set.SHO_1M_saikai" text="{=NTP.SHO1M_saikai}{?IS_UNLAND}Daimyou{?}{\?} {CLAN} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+    <string id="str_ntp_title_set.SHO_1F_saikai" text="{=NTP.SHO1F_saikai}Daimyou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2M_saikai" text="{=NTP.SHO2M_saikai}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_2F_saikai" text="{=NTP.SHO2F_saikai}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3M_saikai" text="{=NTP.SHO3M_saikai}Karou {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_3F_saikai" text="{=NTP.SHO3F_saikai}Karou-fujin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4M_saikai" text="{=NTP.SHO4M_saikai}Lord Castellan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_4F_saikai" text="{=NTP.SHO4F_saikai}Lord Châtelaine {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5M_saikai" text="{=NTP.SHO5M_saikai}Gokenin {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_5F_saikai" text="{=NTP.SHO5F_saikai}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownM_saikai" text="{=NTP.SHOCrownM_saikai}Shishi {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_crownF_saikai" text="{=NTP.SHOCrownF_saikai}Hime {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalM_saikai" text="{=NTP.SHORoyalM_saikai}Jikisan {CLAN} {NAME}" />
+    <string id="str_ntp_title_set.SHO_royalF_saikai" text="{=NTP.SHORoyalF_saikai}Hime {CLAN} {NAME}" />
+    
+    <string id="str_ntp_title_set.SHO_MinorLM_default" text="{=NTP.SHOMinorLM_default}{NAME} of {CLAN_SHORT}" />
+    <string id="str_ntp_title_set.SHO_MinorLF_default" text="{=NTP.SHOMinorLF_default}{NAME} of {CLAN_SHORT}" />
+    <string id="str_ntp_title_set.SHO_MinorMM_default" text="{=NTP.SHOMinorMM_default}{NAME} of {CLAN_SHORT}" />
+    <string id="str_ntp_title_set.SHO_MinorMF_default" text="{=NTP.SHOMinorMF_default}{NAME} of {CLAN_SHORT}" />
+</strings>
