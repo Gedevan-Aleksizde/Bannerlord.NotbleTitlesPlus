@@ -9,6 +9,7 @@ using System.Diagnostics;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Party;
 using TaleWorlds.CampaignSystem.ViewModelCollection.GameMenu.Overlay;
 using TaleWorlds.Library;
+using SandBox.ViewModelCollection.Missions.NameMarker;
 
 namespace NobleTitlesPlus.Patches
 {
@@ -107,6 +108,7 @@ namespace NobleTitlesPlus.Patches
             // __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
+
     /* used by SettlementMenuOverlayVM.CharacterList and so on*/
     [HarmonyPatch(typeof(GameMenuPartyItemVM), nameof(GameMenuPartyItemVM.RefreshProperties))]
     internal class ModifyTitleOnPartyItemVMName
@@ -125,6 +127,15 @@ namespace NobleTitlesPlus.Patches
                     __instance.NameText = name;
                 }
             }
+        }
+    }
+    [HarmonyPatch(typeof(MissionNameMarkerVM), nameof(MissionNameMarkerVM.AddAgentTarget))]
+    internal class ModifyMissionNameMarkerVM
+    {
+        [HarmonyPostfix]
+        private static void Test(MissionNameMarkerVM __instance)
+        {
+            Util.Log.Print($"MissionNameMarkerVM.AddAgentTarget = {__instance.Name}");
         }
     }
 
