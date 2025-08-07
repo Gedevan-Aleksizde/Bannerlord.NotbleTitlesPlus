@@ -47,6 +47,7 @@
       <IncludedGameTypes>
         <GameType value = "Campaign"/>
         <GameType value = "CampaignStoryMode"/>
+        <GameType value = "ShokuhoCampaign"/>
       </IncludedGameTypes>
     </XmlNode>
     <XmlNode>
@@ -54,6 +55,7 @@
       <IncludedGameTypes>
         <GameType value = "Campaign"/>
         <GameType value = "CampaignStoryMode"/>
+        <GameType value = "ShokuhoCampaign"/>
       </IncludedGameTypes>
     </XmlNode>
 	</Xmls>
