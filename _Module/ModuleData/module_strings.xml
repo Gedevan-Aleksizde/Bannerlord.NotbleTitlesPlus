@@ -72,25 +72,4 @@
 	<string id="str_ntp_mcm.CrownF_hint" text="{=NTP.MCMCrownFHint}The female succession's title format" />
 	<string id="str_ntp_mcm.RoyalM_hint" text="{=NTP.MCMRoyalMHint}A male ruler clan menber's title" />
 	<string id="str_ntp_mcm.RoyalF_hint" text="{=NTP.MCMRoyalFHint}A female ruler clan menber's title" />
-
-	<!-- default preset -->
-	<string id="str_ntp_title_set.DEF_1M_default" text="{=NTP.DEF1M_default}King {NAME}" />
-	<string id="str_ntp_title_set.DEF_1F_default" text="{=NTP.DEF1F_default}Queen {NAME}" />
-	<string id="str_ntp_title_set.DEF_2M_default" text="{=NTP.DEF2M_default}Baron {NAME}" />
-	<string id="str_ntp_title_set.DEF_2F_default" text="{=NTP.DEF2F_default}Baroness {NAME}" />
-	<string id="str_ntp_title_set.DEF_3M_default" text="{=NTP.DEF3M_default}Baron {NAME}" />
-	<string id="str_ntp_title_set.DEF_3F_default" text="{=NTP.DEF3F_default}Baroness {NAME}" />
-	<string id="str_ntp_title_set.DEF_4M_default" text="{=NTP.DEF4M_default}Baron {NAME}" />
-	<string id="str_ntp_title_set.DEF_4F_default" text="{=NTP.DEF4F_default}Baroness {NAME}" />
-	<string id="str_ntp_title_set.DEF_5M_default" text="{=NTP.DEF5M_default}{NAME}" />
-	<string id="str_ntp_title_set.DEF_5F_default" text="{=NTP.DEF5F_default}{NAME}" />
-	<string id="str_ntp_title_set.DEF_crownM_default" text="{=NTP.DEFCrownM_default}{NAME}" />
-	<string id="str_ntp_title_set.DEF_crownF_default" text="{=NTP.DEFCrownF_default}{NAME}" />
-	<string id="str_ntp_title_set.DEF_royalM_default" text="{=NTP.DEFRoyalM_default}{NAME}" />
-	<string id="str_ntp_title_set.DEF_royalF_default" text="{=NTP.DEFRoyalF_default}{NAME}" />
-
-	<string id="str_ntp_title_set.DEF_MinorLM_default" text="{=NTP.DEFMinorLM_default}{NAME} of {CLAN}" />
-	<string id="str_ntp_title_set.DEF_MinorLF_default" text="{=NTP.DEFMinorLF_default}{NAME} of {CLAN}" />
-	<string id="str_ntp_title_set.DEF_MinorMM_default" text="{=NTP.DEFMinorMM_default}{NAME} of {CLAN}" />
-	<string id="str_ntp_title_set.DEF_MinorMF_default" text="{=NTP.DEFMinorMF_default}{NAME} of {CLAN}" />
 </strings>

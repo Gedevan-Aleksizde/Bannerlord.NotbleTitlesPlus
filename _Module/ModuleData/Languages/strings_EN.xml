@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <base>
- <tags>
-  <tag language="English"/>
- </tags>
- <strings>
-  <!--<string id="NTP.Sys001" text="Noble Titles Plus"/>-->
-  <string id="NTP.Sys002" text="{DisplayName} Loaded"/>
-  <string id="NTP.Sys003" text="Error loading {DisplayName}: Disabled!"/>
-  <string id="NTP.MCMGGEN" text="General"/>
-  <string id="NTP.MCMyour" text="Your Kingdom" />
-  <string id="NTP.MCMGFOR" text="Fief Display Format"/>
-  <string id="NTP.MCMGDEF" text="Default Titles"/>
-  <string id="NTP.MCMGMinor" text="Minor Faction Default Titles"/>
-  <string id="NTP.MCMFOWHint" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
-  <string id="NTP.MCMencyclopediaHint" text="Current Inavailable"/>
-  <string id="NTP.MCMVerbose" text="Verbose Log"/>
-  <string id="NTP.MCMVerboseHint" text="(For debugging) Output extra information to the log file"/>
-  <string id="NTP.MCMTag" text="Tagging"/>
-  <string id="NTP.MCMTagHint" text="Tagging fief names. Basically enabling recommended if you are European langauge user."/>
-  <string id="NTP.MCMSep" text="Fief Name Separator"/>
-  <string id="NTP.MCMSepHint" text="Separator for Fief Names."/>
-  <string id="NTP.MCMSepLast" text="Fief Name Separator Last"/>
-  <string id="NTP.MCMSepLastHint" text="Separator for the Fief Names."/>
-  <string id="NTP.MCMSize" text="Max Number of Fief Names"/>
-  <string id="NTP.MCMSizeHint" text=""/>
-  <string id="NTP.MCMHeir" text="Heir Apparant"/>
-  <string id="NTP.MCMHeirDisabled" text="Disabled"/>
-  <string id="NTP.MCMHeirPrimo" text="Primogemiture"/>
-  <string id="NTP.MCMHeirPrimoM" text="Male Primogemiture"/>
-  <string id="NTP.MCMHeirPrimoF" text="Female Primogemiture"/>
-  <string id="NTP.MCMHeirAdult" text="Adult"/>
-  <string id="NTP.MCMHeirElder" text="Elder"/>
-  <string id="NTP.MCMHeirHint" text="(WIP) Law of heir to the throne. Primogeniture: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule."/>
-  <string id="NTP.landless" text="Landless" />
-  <string id="NTP.MCMRank1M" text="King (Rank 1)"/>
-  <string id="NTP.MCMRank1MHint" text="Title format of the male monorch"/>
-  <string id="NTP.MCMRank1F" text="Queen (Rank 1)"/>
-  <string id="NTP.MCMRank1FHint" text="Title format of the female monorch"/>
-  <string id="NTP.MCMRank2M" text="Duke (Rank 2)"/>
-  <string id="NTP.MCMRank2MHint" text="Title format of a rank 2 male vassal"/>
-  <string id="NTP.MCMRank2F" text="Duchess (Rank 2)"/>
-  <string id="NTP.MCMRank2FHint" text="Title format of a rank 2 female vassal"/>
-  <string id="NTP.MCMRank3M" text="Count (Rank 3)"/>
-  <string id="NTP.MCMRank3MHint" text="Title format of a rank 3 male vassal"/>
-  <string id="NTP.MCMRank3F" text="Countess (Rank 3)"/>
-  <string id="NTP.MCMRank3FHint" text="Title format of a rank 3 female vassal"/>
-  <string id="NTP.MCMRank4M" text="Baron (Rank 4)"/>
-  <string id="NTP.MCMRank4Hint" text="Title format of a rank 4 male vassal"/>
-  <string id="NTP.MCMRank4F" text="Baroness (Rank 4)"/>
-  <string id="NTP.MCMRank4FHint" text="Title format of a rank 4 female vassal"/>
-  <string id="NTP.MCMRank5M" text="Nobleman (Rank 5)"/>
-  <string id="NTP.MCMRank5MHint" text="A male clan member's title format"/>
-  <string id="NTP.MCMRank5F" text="Noblewoman (Rank 5)"/>
-  <string id="NTP.MCMRank5FHint" text="A female clan member's title format"/>
-  <string id="NTP.MCMCrownM" text="Crown Prince"/>
-  <string id="NTP.MCMCrownMHint" text="The male succession's title format"/>
-  <string id="NTP.MCMCrownF" text="Crown Princess"/>
-  <string id="NTP.MCMCrownFHint" text="The female succession's title format"/>
-  <string id="NTP.MCMRoyalM" text="Royal Male" />
-  <string id="NTP.MCMRoyalMHint" text="A male ruler clan menber's title"/>
-  <string id="NTP.MCMRoyalF" text="Royal Female" />
-  <string id="NTP.MCMRoyalFHint" text="A female ruler clan member's title"/>
-  <string id="NTP.MCMMinorLM" text="Male Leader"/>
-  <string id="NTP.MCMMinorLMHint" text="Title format of the male leader"/>
-  <string id="NTP.MCMMinorLF" text="Female Leader"/>
-  <string id="NTP.MCMMinorLFHint" text="Title format of the female leader"/>
-  <string id="NTP.MCMMinorMM" text="Male Member"/>
-  <string id="NTP.MCMMinorMMHint" text="A male menber's title format"/>
-  <string id="NTP.MCMMinorMF" text="Female Member"/>
-  <string id="NTP.MCMMinorMFHint" text="A female member's title format"/>
-  <string id="bWMiFgw5ac" text="Error 001: Kingdom Name Not Found"/>
- </strings>
+	<tags>
+		<tag language="English"/>
+	</tags>
+	<strings>	
+		<!--<string id="NTP.Sys001" text="Noble Titles Plus"/>-->
+		<string id="NTP.Sys002" text="{DisplayName} Loaded"/>
+		<string id="NTP.Sys003" text="Error loading {DisplayName}: Disabled!"/>
+		<string id="NTP.MCMGGEN" text="General"/>
+		<string id="NTP.MCMyour" text="Your Kingdom" />
+		<string id="NTP.MCMGFOR" text="Fief Display Format"/>
+		<string id="NTP.MCMGDEF" text="Default Titles"/>
+		<string id="NTP.MCMGMinor" text="Minor Faction Default Titles"/>
+		<string id="NTP.MCMFOWHint" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
+		<string id="NTP.MCMencyclopediaHint" text="Current Inavailable"/>
+		<string id="NTP.MCMVerbose" text="Verbose Log"/>
+		<string id="NTP.MCMVerboseHint" text="(For debugging) Output extra information to the log file"/>
+		<string id="NTP.MCMTag" text="Tagging"/>
+		<string id="NTP.MCMTagHint" text="Tagging fief names. Basically enabling recommended if you are European langauge user."/>
+		<string id="NTP.MCMSep" text="Fief Name Separator"/>
+		<string id="NTP.MCMSepHint" text="Separator for Fief Names."/>
+		<string id="NTP.MCMSepLast" text="Fief Name Separator Last"/>
+		<string id="NTP.MCMSepLastHint" text="Separator for the Fief Names."/>
+		<string id="NTP.MCMSize" text="Max Number of Fief Names"/>
+		<string id="NTP.MCMSizeHint" text=""/>
+		<string id="NTP.MCMHeir" text="Heir Apparant"/>
+		<string id="NTP.MCMHeirDisabled" text="Disabled"/>
+		<string id="NTP.MCMHeirPrimo" text="Primogemiture"/>
+		<string id="NTP.MCMHeirPrimoM" text="Male Primogemiture"/>
+		<string id="NTP.MCMHeirPrimoF" text="Female Primogemiture"/>
+		<string id="NTP.MCMHeirAdult" text="Adult"/>
+		<string id="NTP.MCMHeirElder" text="Elder"/>
+		<string id="NTP.MCMHeirHint" text="(WIP) Law of heir to the throne. Primogeniture: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule."/>
+		<string id="NTP.landless" text="Landless" />
+		<string id="NTP.MCMRank1M" text="King (Rank 1)"/>
+		<string id="NTP.MCMRank1MHint" text="Title format of the male monorch"/>
+		<string id="NTP.MCMRank1F" text="Queen (Rank 1)"/>
+		<string id="NTP.MCMRank1FHint" text="Title format of the female monorch"/>
+		<string id="NTP.MCMRank2M" text="Duke (Rank 2)"/>
+		<string id="NTP.MCMRank2MHint" text="Title format of a rank 2 male vassal"/>
+		<string id="NTP.MCMRank2F" text="Duchess (Rank 2)"/>
+		<string id="NTP.MCMRank2FHint" text="Title format of a rank 2 female vassal"/>
+		<string id="NTP.MCMRank3M" text="Count (Rank 3)"/>
+		<string id="NTP.MCMRank3MHint" text="Title format of a rank 3 male vassal"/>
+		<string id="NTP.MCMRank3F" text="Countess (Rank 3)"/>
+		<string id="NTP.MCMRank3FHint" text="Title format of a rank 3 female vassal"/>
+		<string id="NTP.MCMRank4M" text="Baron (Rank 4)"/>
+		<string id="NTP.MCMRank4Hint" text="Title format of a rank 4 male vassal"/>
+		<string id="NTP.MCMRank4F" text="Baroness (Rank 4)"/>
+		<string id="NTP.MCMRank4FHint" text="Title format of a rank 4 female vassal"/>
+		<string id="NTP.MCMRank5M" text="Nobleman (Rank 5)"/>
+		<string id="NTP.MCMRank5MHint" text="A male clan member's title format"/>
+		<string id="NTP.MCMRank5F" text="Noblewoman (Rank 5)"/>
+		<string id="NTP.MCMRank5FHint" text="A female clan member's title format"/>
+		<string id="NTP.MCMCrownM" text="Crown Prince"/>
+		<string id="NTP.MCMCrownMHint" text="The male succession's title format"/>
+		<string id="NTP.MCMCrownF" text="Crown Princess"/>
+		<string id="NTP.MCMCrownFHint" text="The female succession's title format"/>
+		<string id="NTP.MCMRoyalM" text="Royal Male" />
+		<string id="NTP.MCMRoyalMHint" text="A male ruler clan menber's title"/>
+		<string id="NTP.MCMRoyalF" text="Royal Female" />
+		<string id="NTP.MCMRoyalFHint" text="A female ruler clan member's title"/>
+		<string id="NTP.MCMMinorLM" text="Male Leader"/>
+		<string id="NTP.MCMMinorLMHint" text="Title format of the male leader"/>
+		<string id="NTP.MCMMinorLF" text="Female Leader"/>
+		<string id="NTP.MCMMinorLFHint" text="Title format of the female leader"/>
+		<string id="NTP.MCMMinorMM" text="Male Member"/>
+		<string id="NTP.MCMMinorMMHint" text="A male menber's title format"/>
+		<string id="NTP.MCMMinorMF" text="Female Member"/>
+		<string id="NTP.MCMMinorMFHint" text="A female member's title format"/>
+		<string id="bWMiFgw5ac" text="Error 001: Kingdom Name Not Found"/>
+ 	</strings>
 </base>
