@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <base>
-    <tags>
-        <tag language="日本語" />
-    </tags>
-<strings>
+	<tags>
+		<tag language="日本語" />
+	</tags>
+	<strings>
     <!-- like Banner Kings -->
     <string id="NTP.MCMBK" text="Banner Kings風"/>
     <!-- Banner Kings Style -->
@@ -127,5 +127,5 @@
     <string id="=NTP.BKMinorLF_legion_of_the_betrayed" text="レガートゥス゠{NAME}" />
     <string id="=NTP.BKMinorMM_legion_of_the_betrayed" text="トリブーヌス゠{NAME}" />
     <string id="=NTP.BKMinorMF_legion_of_the_betrayed" text="トリブーヌス゠{NAME}" />
- </strings>
+	</strings>
 </base>

@@ -1,95 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <strings>
-        <string id="str_ntp_mcm.general_category" text="{=NTP.MCMGGEN}General" />
-        <string id="str_ntp_mcm.fief_category" text="{=NTP.MCMGFOR}Fief Display Format" />
-        <string id="str_ntp_mcm.culture_default" text="{=NTP.MCMGDEF}Default Titles" />
-        <string id="str_ntp_mcm.minor_default" text="{=NTP.MCMGMinor}Minor Faction Default Titles" />
-        <string id="str_ntp_mcm.general" text="{=NTP.MCMGGEN}General" />
-        <string id="str_ntp_mcm.fallback_player" text="{=NTP.MCMyour}Your Kingdom" />
-        <string id="str_ntp_mcm.preset_original" text="{=NTP.MCMOriginal}Zijistark's Original" />
-        <string id="str_ntp_mcm.preset_variant" text="{=NTP.MCMVariant}Variant" />
-        <string id="str_ntp_mcm.preset_banner_kings" text="{=NTP.MCMBK}Banner Kings fashioned" />
-        <string id="str_ntp_mcm.preset_europe_1100" text="{=NTP.MCMEU1100}Europe 1100" />
-        <string id="str_ntp_mcm.preset_calradia_expanded_kingdoms" text="{=NTP.MCMCEK}Calradia Expanded: Kingdoms" />
-        <string id="str_ntp_mcm.fow_hint" text="{=NTP.MCMFOWHint}Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
-        <string id="str_ntp_mcm.encyclo_hint" text="{=NTP.MCMencyclopediaHint}Current Inavailable"/>
-        <string id="str_ntp_mcm.verbose" text="{=NTP.MCMVerbose}Verbose Log"/>
-        <string id="str_ntp_mcm.verbose_hint" text="{=NTP.MCMVerboseHint}(For debugging) Output extra information to the log file"/>
-        <string id="str_ntp_mcm.tagging" text="{=NTP.MCMTag}Tagging"/>
-        <string id="str_ntp_mcm.tagging_hint" text="{=NTP.MCMTagHint}Tagging fief names. Basically enabling recommended if you are European langauge user."/>
-        <string id="str_ntp_mcm.separator" text="{=NTP.MCMSep}Fief Name Separator"/>
-        <string id="str_ntp_mcm.separator_hint" text="{=NTP.MCMSepHint}Separator for Fief Names."/>
-        <string id="str_ntp_mcm.separator_value" text="{=NTP.DEFSep}," />
-        <string id="str_ntp_mcm.separator_last" text="{=NTP.MCMSepLast}Fief Name Separator Last"/>
-        <string id="str_ntp_mcm.separator_last_hint" text="{=NTP.MCMSepLastHint}Separator for the Fief Names."/>
-        <string id="str_ntp_mcm.separator_last_value" text="{=NTP.DEFSepLast}and" />
-        <string id="str_ntp_mcm.size" text="{=NTP.MCMSize}Max Number of Fief Names"/>
-        <string id="str_ntp_mcm.size_hint" text="{=NTP.MCMSizeHint}"/>
-        <string id="str_ntp_mcm.heir" text="{=NTP.MCMHeir}Heir Apprant"/>
-        <string id="str_ntp_mcm.heir_disabled" text="{=NTP.MCMHeirDisabled}Disabled"/>
-        <string id="str_ntp_mcm.heir_primogeniture" text="{=NTP.MCMHeirPrimo}Primogemiture"/>
-        <string id="str_ntp_mcm.heir_primogeniture_male" text="{=NTP.MCMHeirPrimoM}Male Primogemiture"/>
-        <string id="str_ntp_mcm.heir_primogeniture_female" text="{=NTP.MCMHeirPrimoF}Female Primogemiture"/>
-        <string id="str_ntp_mcm.heir_adult" text="{=NTP.MCMHeirAdult}Adult"/>
-        <string id="str_ntp_mcm.heir_elder" text="{=NTP.MCMHeirElder}Elder"/>
-        <string id="str_ntp_mcm.heir_hint" text="{=NTP.MCMHeirHint}(WIP) Law of heir to the throne. Primogeniture: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule. This option should be used with the other mods which change succession laws."/>
-        
-        <string id="str_ntp.landless" text="{NTP.landless}Landless" />
-        <string id="str_ntp_mcm.title_1M" text="{=NTP.MCMRank1M}King (Rank 1)" />
-        <string id="str_ntp_mcm.title_1F" text="{=NTP.MCMRank1F}Queen (Rank 1)" />
-        <string id="str_ntp_mcm.title_2M" text="{=NTP.MCMRank2M}Duke (Rank 2)" />
-        <string id="str_ntp_mcm.title_2F" text="{=NTP.MCMRank2F}Duchess (Rank 2)" />
-        <string id="str_ntp_mcm.title_3M" text="{=NTP.MCMRank3M}Count (Rank 3)" />
-        <string id="str_ntp_mcm.title_3F" text="{=NTP.MCMRank3F}Countess (Rank 3)" />
-        <string id="str_ntp_mcm.title_4M" text="{=NTP.MCMRank4M}Baron (Rank 4)" />
-        <string id="str_ntp_mcm.title_4F" text="{=NTP.MCMRank4F}Baroness (Rank 4)" />
-        <string id="str_ntp_mcm.title_5M" text="{=NTP.MCMRank5M}Nobleman (Rank 5)" />
-        <string id="str_ntp_mcm.title_5F" text="{=NTP.MCMRank5F}Noblewoman (Rank 5)" />
-        <string id="str_ntp_mcm.title_minorLM" text="{=NTP.MCMMinorLM}Male Leader" />
-        <string id="str_ntp_mcm.title_minorLF" text="{=NTP.MCMMinorLF}Female Leader" />
-        <string id="str_ntp_mcm.title_minorMM" text="{=NTP.MCMMinorMM}Male Member" />
-        <string id="str_ntp_mcm.title_minorMF" text="{=NTP.MCMMinorMF}Female Member" />
-        <string id="str_ntp_mcm.title_CrownM" text="{=NTP.MCMCrownM}Crown Prince" />
-        <string id="str_ntp_mcm.title_CrownF" text="{=NTP.MCMCrownF}Crown Princess" />
-        <string id="str_ntp_mcm.title_RoyalM" text="{=NTP.MCMRoyalM}Royal Male" />
-        <string id="str_ntp_mcm.title_RoyalF" text="{=NTP.MCMRoyalF}Royal Female" />
-        <string id="str_ntp_mcm.1M_hint" text="{=NTP.MCMRank1MHint}Title format of the male monorch" />
-        <string id="str_ntp_mcm.1F_hint" text="{=NTP.MCMRank1FHint}Title format of the female monorch" />
-        <string id="str_ntp_mcm.2M_hint" text="{=NTP.MCMRank2MHint}Title format of a rank 2 male vassal" />
-        <string id="str_ntp_mcm.2F_hint" text="{=NTP.MCMRank2FHint}Title format of a rank 2 female vassal" />
-        <string id="str_ntp_mcm.3M_hint" text="{=NTP.MCMRank3MHint}Title format of a rank 3 male vassal" />
-        <string id="str_ntp_mcm.3F_hint" text="{=NTP.MCMRank3FHint}Title format of a rank 3 female vassal" />
-        <string id="str_ntp_mcm.4M_hint" text="{=NTP.MCMRank4MHint}Title format of a rank 4 male vassal" />
-        <string id="str_ntp_mcm.4F_hint" text="{=NTP.MCMRank4FHint}Title format of a rank 4 female vassal" />
-        <string id="str_ntp_mcm.5M_hint" text="{=NTP.MCMRank5MHint}A male clan member's title format" />
-        <string id="str_ntp_mcm.5F_hint" text="{=NTP.MCMRank5FHint}A female clan member's title format" />
-        <string id="str_ntp_mcm.minorLM_hint" text="{=NTP.MCMMinorLMHint}Title format of the male leader" />
-        <string id="str_ntp_mcm.minorLF_hint" text="{=NTP.MCMMinorLFHint}Title format of the female leader" />
-        <string id="str_ntp_mcm.minorMM_hint" text="{=NTP.MCMMinorMMHint}A male menber's title format" />
-        <string id="str_ntp_mcm.minorMF_hint" text="{=NTP.MCMMinorMFHint}A female menber's title format" />
-        <string id="str_ntp_mcm.CrownM_hint" text="{=NTP.MCMCrownMHint}The male succession's title format" />
-        <string id="str_ntp_mcm.CrownF_hint" text="{=NTP.MCMCrownFHint}The female succession's title format" />
-        <string id="str_ntp_mcm.RoyalM_hint" text="{=NTP.MCMRoyalMHint}A male ruler clan menber's title" />
-        <string id="str_ntp_mcm.RoyalF_hint" text="{=NTP.MCMRoyalFHint}A female ruler clan menber's title" />
+<strings>
+	<string id="str_ntp_mcm.general_category" text="{=NTP.MCMGGEN}General" />
+	<string id="str_ntp_mcm.fief_category" text="{=NTP.MCMGFOR}Fief Display Format" />
+	<string id="str_ntp_mcm.culture_default" text="{=NTP.MCMGDEF}Default Titles" />
+	<string id="str_ntp_mcm.minor_default" text="{=NTP.MCMGMinor}Minor Faction Default Titles" />
+	<string id="str_ntp_mcm.general" text="{=NTP.MCMGGEN}General" />
+	<string id="str_ntp_mcm.fallback_player" text="{=NTP.MCMyour}Your Kingdom" />
+	<string id="str_ntp_mcm.preset_original" text="{=NTP.MCMOriginal}Zijistark's Original" />
+	<string id="str_ntp_mcm.preset_variant" text="{=NTP.MCMVariant}Variant" />
+	<string id="str_ntp_mcm.preset_banner_kings" text="{=NTP.MCMBK}Banner Kings fashioned" />
+	<string id="str_ntp_mcm.preset_europe_1100" text="{=NTP.MCMEU1100}Europe 1100" />
+	<string id="str_ntp_mcm.preset_calradia_expanded_kingdoms" text="{=NTP.MCMCEK}Calradia Expanded: Kingdoms" />
+	<string id="str_ntp_mcm.fow_hint" text="{=NTP.MCMFOWHint}Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
+	<string id="str_ntp_mcm.encyclo_hint" text="{=NTP.MCMencyclopediaHint}Current Inavailable"/>
+	<string id="str_ntp_mcm.verbose" text="{=NTP.MCMVerbose}Verbose Log"/>
+	<string id="str_ntp_mcm.verbose_hint" text="{=NTP.MCMVerboseHint}(For debugging) Output extra information to the log file"/>
+	<string id="str_ntp_mcm.tagging" text="{=NTP.MCMTag}Tagging"/>
+	<string id="str_ntp_mcm.tagging_hint" text="{=NTP.MCMTagHint}Tagging fief names. Basically enabling recommended if you are European langauge user."/>
+	<string id="str_ntp_mcm.separator" text="{=NTP.MCMSep}Fief Name Separator"/>
+	<string id="str_ntp_mcm.separator_hint" text="{=NTP.MCMSepHint}Separator for Fief Names."/>
+	<string id="str_ntp_mcm.separator_value" text="{=NTP.DEFSep}," />
+	<string id="str_ntp_mcm.separator_last" text="{=NTP.MCMSepLast}Fief Name Separator Last"/>
+	<string id="str_ntp_mcm.separator_last_hint" text="{=NTP.MCMSepLastHint}Separator for the Fief Names."/>
+	<string id="str_ntp_mcm.separator_last_value" text="{=NTP.DEFSepLast}and" />
+	<string id="str_ntp_mcm.size" text="{=NTP.MCMSize}Max Number of Fief Names"/>
+	<string id="str_ntp_mcm.size_hint" text="{=NTP.MCMSizeHint}"/>
+	<string id="str_ntp_mcm.heir" text="{=NTP.MCMHeir}Heir Apprant"/>
+	<string id="str_ntp_mcm.heir_disabled" text="{=NTP.MCMHeirDisabled}Disabled"/>
+	<string id="str_ntp_mcm.heir_primogeniture" text="{=NTP.MCMHeirPrimo}Primogemiture"/>
+	<string id="str_ntp_mcm.heir_primogeniture_male" text="{=NTP.MCMHeirPrimoM}Male Primogemiture"/>
+	<string id="str_ntp_mcm.heir_primogeniture_female" text="{=NTP.MCMHeirPrimoF}Female Primogemiture"/>
+	<string id="str_ntp_mcm.heir_adult" text="{=NTP.MCMHeirAdult}Adult"/>
+	<string id="str_ntp_mcm.heir_elder" text="{=NTP.MCMHeirElder}Elder"/>
+	<string id="str_ntp_mcm.heir_hint" text="{=NTP.MCMHeirHint}(WIP) Law of heir to the throne. Primogeniture: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule. This option should be used with the other mods which change succession laws."/>
+	<string id="str_ntp_mcm.error_kingdom" text="{=bWMiFgw5ac}Error 001: Kingdom Name Not Found"/>
+	
+	<string id="str_ntp.landless" text="{NTP.landless}Landless" />
+	<string id="str_ntp_mcm.title_1M" text="{=NTP.MCMRank1M}King (Rank 1)" />
+	<string id="str_ntp_mcm.title_1F" text="{=NTP.MCMRank1F}Queen (Rank 1)" />
+	<string id="str_ntp_mcm.title_2M" text="{=NTP.MCMRank2M}Duke (Rank 2)" />
+	<string id="str_ntp_mcm.title_2F" text="{=NTP.MCMRank2F}Duchess (Rank 2)" />
+	<string id="str_ntp_mcm.title_3M" text="{=NTP.MCMRank3M}Count (Rank 3)" />
+	<string id="str_ntp_mcm.title_3F" text="{=NTP.MCMRank3F}Countess (Rank 3)" />
+	<string id="str_ntp_mcm.title_4M" text="{=NTP.MCMRank4M}Baron (Rank 4)" />
+	<string id="str_ntp_mcm.title_4F" text="{=NTP.MCMRank4F}Baroness (Rank 4)" />
+	<string id="str_ntp_mcm.title_5M" text="{=NTP.MCMRank5M}Nobleman (Rank 5)" />
+	<string id="str_ntp_mcm.title_5F" text="{=NTP.MCMRank5F}Noblewoman (Rank 5)" />
+	<string id="str_ntp_mcm.title_minorLM" text="{=NTP.MCMMinorLM}Male Leader" />
+	<string id="str_ntp_mcm.title_minorLF" text="{=NTP.MCMMinorLF}Female Leader" />
+	<string id="str_ntp_mcm.title_minorMM" text="{=NTP.MCMMinorMM}Male Member" />
+	<string id="str_ntp_mcm.title_minorMF" text="{=NTP.MCMMinorMF}Female Member" />
+	<string id="str_ntp_mcm.title_CrownM" text="{=NTP.MCMCrownM}Crown Prince" />
+	<string id="str_ntp_mcm.title_CrownF" text="{=NTP.MCMCrownF}Crown Princess" />
+	<string id="str_ntp_mcm.title_RoyalM" text="{=NTP.MCMRoyalM}Royal Male" />
+	<string id="str_ntp_mcm.title_RoyalF" text="{=NTP.MCMRoyalF}Royal Female" />
+	<string id="str_ntp_mcm.1M_hint" text="{=NTP.MCMRank1MHint}Title format of the male monorch" />
+	<string id="str_ntp_mcm.1F_hint" text="{=NTP.MCMRank1FHint}Title format of the female monorch" />
+	<string id="str_ntp_mcm.2M_hint" text="{=NTP.MCMRank2MHint}Title format of a rank 2 male vassal" />
+	<string id="str_ntp_mcm.2F_hint" text="{=NTP.MCMRank2FHint}Title format of a rank 2 female vassal" />
+	<string id="str_ntp_mcm.3M_hint" text="{=NTP.MCMRank3MHint}Title format of a rank 3 male vassal" />
+	<string id="str_ntp_mcm.3F_hint" text="{=NTP.MCMRank3FHint}Title format of a rank 3 female vassal" />
+	<string id="str_ntp_mcm.4M_hint" text="{=NTP.MCMRank4MHint}Title format of a rank 4 male vassal" />
+	<string id="str_ntp_mcm.4F_hint" text="{=NTP.MCMRank4FHint}Title format of a rank 4 female vassal" />
+	<string id="str_ntp_mcm.5M_hint" text="{=NTP.MCMRank5MHint}A male clan member's title format" />
+	<string id="str_ntp_mcm.5F_hint" text="{=NTP.MCMRank5FHint}A female clan member's title format" />
+	<string id="str_ntp_mcm.minorLM_hint" text="{=NTP.MCMMinorLMHint}Title format of the male leader" />
+	<string id="str_ntp_mcm.minorLF_hint" text="{=NTP.MCMMinorLFHint}Title format of the female leader" />
+	<string id="str_ntp_mcm.minorMM_hint" text="{=NTP.MCMMinorMMHint}A male menber's title format" />
+	<string id="str_ntp_mcm.minorMF_hint" text="{=NTP.MCMMinorMFHint}A female menber's title format" />
+	<string id="str_ntp_mcm.CrownM_hint" text="{=NTP.MCMCrownMHint}The male succession's title format" />
+	<string id="str_ntp_mcm.CrownF_hint" text="{=NTP.MCMCrownFHint}The female succession's title format" />
+	<string id="str_ntp_mcm.RoyalM_hint" text="{=NTP.MCMRoyalMHint}A male ruler clan menber's title" />
+	<string id="str_ntp_mcm.RoyalF_hint" text="{=NTP.MCMRoyalFHint}A female ruler clan menber's title" />
 
-        <!-- default preset -->
-        <string id="str_ntp_title_set.DEF_1M_default" text="{=NTP.DEF1M_default}King {NAME}" />
-        <string id="str_ntp_title_set.DEF_1F_default" text="{=NTP.DEF1F_default}Queen {NAME}" />
-        <string id="str_ntp_title_set.DEF_2M_default" text="{=NTP.DEF2M_default}Baron {NAME}" />
-        <string id="str_ntp_title_set.DEF_2F_default" text="{=NTP.DEF2F_default}Baroness {NAME}" />
-        <string id="str_ntp_title_set.DEF_3M_default" text="{=NTP.DEF3M_default}Baron {NAME}" />
-        <string id="str_ntp_title_set.DEF_3F_default" text="{=NTP.DEF3F_default}Baroness {NAME}" />
-        <string id="str_ntp_title_set.DEF_4M_default" text="{=NTP.DEF4M_default}Baron {NAME}" />
-        <string id="str_ntp_title_set.DEF_4F_default" text="{=NTP.DEF4F_default}Baroness {NAME}" />
-        <string id="str_ntp_title_set.DEF_5M_default" text="{=NTP.DEF5M_default}{NAME}" />
-        <string id="str_ntp_title_set.DEF_5F_default" text="{=NTP.DEF5F_default}{NAME}" />
-        <string id="str_ntp_title_set.DEF_crownM_default" text="{=NTP.DEFCrownM_default}{NAME}" />
-        <string id="str_ntp_title_set.DEF_crownF_default" text="{=NTP.DEFCrownF_default}{NAME}" />
-        <string id="str_ntp_title_set.DEF_royalM_default" text="{=NTP.DEFRoyalM_default}{NAME}" />
-        <string id="str_ntp_title_set.DEF_royalF_default" text="{=NTP.DEFRoyalF_default}{NAME}" />
+	<!-- default preset -->
+	<string id="str_ntp_title_set.DEF_1M_default" text="{=NTP.DEF1M_default}King {NAME}" />
+	<string id="str_ntp_title_set.DEF_1F_default" text="{=NTP.DEF1F_default}Queen {NAME}" />
+	<string id="str_ntp_title_set.DEF_2M_default" text="{=NTP.DEF2M_default}Baron {NAME}" />
+	<string id="str_ntp_title_set.DEF_2F_default" text="{=NTP.DEF2F_default}Baroness {NAME}" />
+	<string id="str_ntp_title_set.DEF_3M_default" text="{=NTP.DEF3M_default}Baron {NAME}" />
+	<string id="str_ntp_title_set.DEF_3F_default" text="{=NTP.DEF3F_default}Baroness {NAME}" />
+	<string id="str_ntp_title_set.DEF_4M_default" text="{=NTP.DEF4M_default}Baron {NAME}" />
+	<string id="str_ntp_title_set.DEF_4F_default" text="{=NTP.DEF4F_default}Baroness {NAME}" />
+	<string id="str_ntp_title_set.DEF_5M_default" text="{=NTP.DEF5M_default}{NAME}" />
+	<string id="str_ntp_title_set.DEF_5F_default" text="{=NTP.DEF5F_default}{NAME}" />
+	<string id="str_ntp_title_set.DEF_crownM_default" text="{=NTP.DEFCrownM_default}{NAME}" />
+	<string id="str_ntp_title_set.DEF_crownF_default" text="{=NTP.DEFCrownF_default}{NAME}" />
+	<string id="str_ntp_title_set.DEF_royalM_default" text="{=NTP.DEFRoyalM_default}{NAME}" />
+	<string id="str_ntp_title_set.DEF_royalF_default" text="{=NTP.DEFRoyalF_default}{NAME}" />
 
-        <string id="str_ntp_title_set.DEF_MinorLM_default" text="{=NTP.DEFMinorLM_default}{NAME} of {CLAN}" />
-        <string id="str_ntp_title_set.DEF_MinorLF_default" text="{=NTP.DEFMinorLF_default}{NAME} of {CLAN}" />
-        <string id="str_ntp_title_set.DEF_MinorMM_default" text="{=NTP.DEFMinorMM_default}{NAME} of {CLAN}" />
-        <string id="str_ntp_title_set.DEF_MinorMF_default" text="{=NTP.DEFMinorMF_default}{NAME} of {CLAN}" />
-    </strings>
+	<string id="str_ntp_title_set.DEF_MinorLM_default" text="{=NTP.DEFMinorLM_default}{NAME} of {CLAN}" />
+	<string id="str_ntp_title_set.DEF_MinorLF_default" text="{=NTP.DEFMinorLF_default}{NAME} of {CLAN}" />
+	<string id="str_ntp_title_set.DEF_MinorMM_default" text="{=NTP.DEFMinorMM_default}{NAME} of {CLAN}" />
+	<string id="str_ntp_title_set.DEF_MinorMF_default" text="{=NTP.DEFMinorMF_default}{NAME} of {CLAN}" />
+</strings>

@@ -69,5 +69,6 @@
   <string id="NTP.MCMMinorMMHint" text="A male menber's title format"/>
   <string id="NTP.MCMMinorMF" text="Female Member"/>
   <string id="NTP.MCMMinorMFHint" text="A female member's title format"/>
+  <string id="bWMiFgw5ac" text="Error 001: Kingdom Name Not Found"/>
  </strings>
 </base>

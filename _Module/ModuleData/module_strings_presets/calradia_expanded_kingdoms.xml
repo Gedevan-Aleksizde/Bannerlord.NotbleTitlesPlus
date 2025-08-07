@@ -1,268 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <strings>
-        <!-- CEK Style -->
-        <string id="str_ntp_title_set.CEK_1M_default" text="{=NTP.CEK1M_default}King {NAME}" />
-        <string id="str_ntp_title_set.CEK_1F_default" text="{=NTP.CEK1F_default}Queen {NAME}" />
-        <string id="str_ntp_title_set.CEK_2M_default" text="{=NTP.CEK2M_default}Duke {NAME}" />
-        <string id="str_ntp_title_set.CEK_2F_default" text="{=NTP.CEK2F_default}Duchess {NAME}" />
-        <string id="str_ntp_title_set.CEK_3M_default" text="{=NTP.CEK3M_default}Count {NAME}" />
-        <string id="str_ntp_title_set.CEK_3F_default" text="{=NTP.CEK3F_default}Countess {NAME}" />
-        <string id="str_ntp_title_set.CEK_4M_default" text="{=NTP.CEK4M_default}Baron {NAME}" />
-        <string id="str_ntp_title_set.CEK_4F_default" text="{=NTP.CEK4F_default}Baroness {NAME}" />
-        <string id="str_ntp_title_set.CEK_5M_default" text="{=NTP.CEK5M_default}Sir {NAME}" />
-        <string id="str_ntp_title_set.CEK_5F_default" text="{=NTP.CEK5F_default}Lady {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownM_default" text="{=NTP.CEKCrownM_default}Crown Prince {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownF_default" text="{=NTP.CEKCrownF_default}Crown Princess {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalM_default" text="{=NTP.CEKRoyalM_default}Prince {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalF_default" text="{=NTP.CEKRoyalF_default}Princess {NAME}" />
-        
-        <string id="str_ntp_title_set.CEK_MinorLM_default" text="{=NTP.CEKMinorLM_default}{NAME} of {CLAN_SHORT}" />
-        <string id="str_ntp_title_set.CEK_MinorLF_default" text="{=NTP.CEKMinorLF_default}{NAME} of {CLAN_SHORT}" />
-        <string id="str_ntp_title_set.CEK_MinorMM_default" text="{=NTP.CEKMinorMM_default}{NAME} of {CLAN_SHORT}" />
-        <string id="str_ntp_title_set.CEK_MinorMF_default" text="{=NTP.CEKMinorMF_default}{NAME} of {CLAN_SHORT}" />
-        <string id="str_ntp_title_set.VAR_1M_aserai" text="{=NTP.VAR1M_aserai}Sultan {NAME}" />
-        <string id="str_ntp_title_set.VAR_1F_aserai" text="{=NTP.VAR1F_aserai}Sultana {NAME}" />
-        <string id="str_ntp_title_set.VAR_2M_aserai" text="{=NTP.VAR2M_aserai}Emir al-Umara {NAME}" />
-        <string id="str_ntp_title_set.VAR_2F_aserai" text="{=NTP.VAR2F_aserai}Emira al-Umara {NAME}" />
-        <string id="str_ntp_title_set.VAR_3M_aserai" text="{=NTP.VAR3M_aserai}Emir Kabir {NAME}" />
-        <string id="str_ntp_title_set.VAR_3F_aserai" text="{=NTP.VAR3F_aserai}Emira Kabira {NAME}" />
-        <string id="str_ntp_title_set.VAR_4M_aserai" text="{=NTP.VAR4M_aserai}Emir {NAME}" />
-        <string id="str_ntp_title_set.VAR_4F_aserai" text="{=NTP.VAR4F_aserai}Emira {NAME}" />
-        <string id="str_ntp_title_set.VAR_5M_aserai" text="{=NTP.VAR5M_aserai}Sharif {NAME}" />
-        <string id="str_ntp_title_set.VAR_5F_aserai" text="{=NTP.VAR5F_aserai}Nabila {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownM_aserai" text="{=NTP.VARCrownM_aserai}{NAME} Wali" />
-        <string id="str_ntp_title_set.VAR_crownF_aserai" text="{=NTP.VARCrownF_aserai}{NAME} Wali" />
-        <string id="str_ntp_title_set.VAR_royalM_aserai" text="{=NTP.VARRoyalM_aserai}{NAME} Sehzade" />
-        <string id="str_ntp_title_set.VAR_royalF_aserai" text="{=NTP.VARRoyalF_aserai}{NAME} Sehzada" />
+<strings>
+	<!-- CEK Style -->
+	<string id="str_ntp_title_set.CEK_1M_default" text="{=NTP.CEK1M_default}King {NAME}" />
+	<string id="str_ntp_title_set.CEK_1F_default" text="{=NTP.CEK1F_default}Queen {NAME}" />
+	<string id="str_ntp_title_set.CEK_2M_default" text="{=NTP.CEK2M_default}Duke {NAME}" />
+	<string id="str_ntp_title_set.CEK_2F_default" text="{=NTP.CEK2F_default}Duchess {NAME}" />
+	<string id="str_ntp_title_set.CEK_3M_default" text="{=NTP.CEK3M_default}Count {NAME}" />
+	<string id="str_ntp_title_set.CEK_3F_default" text="{=NTP.CEK3F_default}Countess {NAME}" />
+	<string id="str_ntp_title_set.CEK_4M_default" text="{=NTP.CEK4M_default}Baron {NAME}" />
+	<string id="str_ntp_title_set.CEK_4F_default" text="{=NTP.CEK4F_default}Baroness {NAME}" />
+	<string id="str_ntp_title_set.CEK_5M_default" text="{=NTP.CEK5M_default}Sir {NAME}" />
+	<string id="str_ntp_title_set.CEK_5F_default" text="{=NTP.CEK5F_default}Lady {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownM_default" text="{=NTP.CEKCrownM_default}Crown Prince {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownF_default" text="{=NTP.CEKCrownF_default}Crown Princess {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalM_default" text="{=NTP.CEKRoyalM_default}Prince {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalF_default" text="{=NTP.CEKRoyalF_default}Princess {NAME}" />
+	
+	<string id="str_ntp_title_set.CEK_MinorLM_default" text="{=NTP.CEKMinorLM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.CEK_MinorLF_default" text="{=NTP.CEKMinorLF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.CEK_MinorMM_default" text="{=NTP.CEKMinorMM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.CEK_MinorMF_default" text="{=NTP.CEKMinorMF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.VAR_1M_aserai" text="{=NTP.VAR1M_aserai}Sultan {NAME}" />
+	<string id="str_ntp_title_set.VAR_1F_aserai" text="{=NTP.VAR1F_aserai}Sultana {NAME}" />
+	<string id="str_ntp_title_set.VAR_2M_aserai" text="{=NTP.VAR2M_aserai}Emir al-Umara {NAME}" />
+	<string id="str_ntp_title_set.VAR_2F_aserai" text="{=NTP.VAR2F_aserai}Emira al-Umara {NAME}" />
+	<string id="str_ntp_title_set.VAR_3M_aserai" text="{=NTP.VAR3M_aserai}Emir Kabir {NAME}" />
+	<string id="str_ntp_title_set.VAR_3F_aserai" text="{=NTP.VAR3F_aserai}Emira Kabira {NAME}" />
+	<string id="str_ntp_title_set.VAR_4M_aserai" text="{=NTP.VAR4M_aserai}Emir {NAME}" />
+	<string id="str_ntp_title_set.VAR_4F_aserai" text="{=NTP.VAR4F_aserai}Emira {NAME}" />
+	<string id="str_ntp_title_set.VAR_5M_aserai" text="{=NTP.VAR5M_aserai}Sharif {NAME}" />
+	<string id="str_ntp_title_set.VAR_5F_aserai" text="{=NTP.VAR5F_aserai}Nabila {NAME}" />
+	<string id="str_ntp_title_set.VAR_crownM_aserai" text="{=NTP.VARCrownM_aserai}{NAME} Wali" />
+	<string id="str_ntp_title_set.VAR_crownF_aserai" text="{=NTP.VARCrownF_aserai}{NAME} Wali" />
+	<string id="str_ntp_title_set.VAR_royalM_aserai" text="{=NTP.VARRoyalM_aserai}{NAME} Sehzade" />
+	<string id="str_ntp_title_set.VAR_royalF_aserai" text="{=NTP.VARRoyalF_aserai}{NAME} Sehzada" />
 
-        <string id="str_ntp_title_set.VAR_1M_battania" text="{=NTP.VAR1M_battania}High King {NAME}" /> <!-- Ard Rí -->
-        <string id="str_ntp_title_set.VAR_1F_battania" text="{=NTP.VAR1F_battania}High Queen {NAME}" />
-        <string id="str_ntp_title_set.VAR_2M_battania" text="{=NTP.VAR2M_battania}Overking {NAME}" /> <!--Rí ruirech -->
-        <string id="str_ntp_title_set.VAR_2F_battania" text="{=NTP.VAR2F_battania}Overqueen {NAME}" />
-        <string id="str_ntp_title_set.VAR_3M_battania" text="{=NTP.VAR3M_battania}Clan King {NAME}" /> <!--Rí buiden -->
-        <string id="str_ntp_title_set.VAR_3F_battania" text="{=NTP.VAR3F_battania}Clan Queen {NAME}" />
-        <string id="str_ntp_title_set.VAR_4M_battania" text="{=NTP.VAR4M_battania}Mormaer {NAME}" />
-        <string id="str_ntp_title_set.VAR_4F_battania" text="{=NTP.VAR4F_battania}Banmormaer {NAME}" />
-        <string id="str_ntp_title_set.VAR_5M_battania" text="{=NTP.VAR5M_battania}Duniwassal {NAME}" />
-        <string id="str_ntp_title_set.VAR_5F_battania" text="{=NTP.VAR5F_battania}Beanuassal {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownM_battania" text="{=NTP.VARCrownM_battania}High Crown Prince {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownF_battania" text="{=NTP.VARCrownF_battania}High Crown Princess {NAME}" />
-        <string id="str_ntp_title_set.VAR_royalM_battania" text="{=NTP.VARRoyalM_battania}Flaith {NAME}" />
-        <string id="str_ntp_title_set.VAR_royalF_battania" text="{=NTP.VARRoyalF_battania}Banflaith {NAME}" />
+	<string id="str_ntp_title_set.VAR_1M_battania" text="{=NTP.VAR1M_battania}High King {NAME}" /> <!-- Ard Rí -->
+	<string id="str_ntp_title_set.VAR_1F_battania" text="{=NTP.VAR1F_battania}High Queen {NAME}" />
+	<string id="str_ntp_title_set.VAR_2M_battania" text="{=NTP.VAR2M_battania}Overking {NAME}" /> <!--Rí ruirech -->
+	<string id="str_ntp_title_set.VAR_2F_battania" text="{=NTP.VAR2F_battania}Overqueen {NAME}" />
+	<string id="str_ntp_title_set.VAR_3M_battania" text="{=NTP.VAR3M_battania}Clan King {NAME}" /> <!--Rí buiden -->
+	<string id="str_ntp_title_set.VAR_3F_battania" text="{=NTP.VAR3F_battania}Clan Queen {NAME}" />
+	<string id="str_ntp_title_set.VAR_4M_battania" text="{=NTP.VAR4M_battania}Mormaer {NAME}" />
+	<string id="str_ntp_title_set.VAR_4F_battania" text="{=NTP.VAR4F_battania}Banmormaer {NAME}" />
+	<string id="str_ntp_title_set.VAR_5M_battania" text="{=NTP.VAR5M_battania}Duniwassal {NAME}" />
+	<string id="str_ntp_title_set.VAR_5F_battania" text="{=NTP.VAR5F_battania}Beanuassal {NAME}" />
+	<string id="str_ntp_title_set.VAR_crownM_battania" text="{=NTP.VARCrownM_battania}High Crown Prince {NAME}" />
+	<string id="str_ntp_title_set.VAR_crownF_battania" text="{=NTP.VARCrownF_battania}High Crown Princess {NAME}" />
+	<string id="str_ntp_title_set.VAR_royalM_battania" text="{=NTP.VARRoyalM_battania}Flaith {NAME}" />
+	<string id="str_ntp_title_set.VAR_royalF_battania" text="{=NTP.VARRoyalF_battania}Banflaith {NAME}" />
 
-        <string id="str_ntp_title_set.VAR_1M_empire" text="{=NTP.VAR1M_empire}Basileus {NAME}" />
-        <string id="str_ntp_title_set.VAR_1F_empire" text="{=NTP.VAR1F_empire}Basilissa {NAME}" />
-        <string id="str_ntp_title_set.VAR_2M_empire" text="{=NTP.VAR2M_empire}Megas Archon {NAME}" />
-        <string id="str_ntp_title_set.VAR_2F_empire" text="{=NTP.VAR2F_empire}Megas Archontissa {NAME}" />
-        <string id="str_ntp_title_set.VAR_3M_empire" text="{=NTP.VAR3M_empire}Exarch {NAME}" />
-        <string id="str_ntp_title_set.VAR_3F_empire" text="{=NTP.VAR3F_empire}Exarchontissa {NAME}" />
-        <string id="str_ntp_title_set.VAR_4M_empire" text="{=NTP.VAR4M_empire}Archon {NAME}" />
-        <string id="str_ntp_title_set.VAR_4F_empire" text="{=NTP.VAR4F_empire}Archontissa {NAME}" />
-        <string id="str_ntp_title_set.VAR_5M_empire" text="{=NTP.VAR5M_empire}Patrikios {NAME}" />
-        <string id="str_ntp_title_set.VAR_5F_empire" text="{=NTP.VAR5F_empire}Patrikia {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownM_empire" text="{=NTP.VARCrownM_empire}Porphyrogennetos {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownF_empire" text="{=NTP.VARCrownF_empire}Porphyrogennete {NAME}" />
-        <string id="str_ntp_title_set.VAR_royalM_empire" text="{=NTP.VARRoyalM_empire}Sebastos {NAME}" />
-        <string id="str_ntp_title_set.VAR_royalF_empire" text="{=NTP.VARRoyalF_empire}Sebaste {NAME}" />
+	<string id="str_ntp_title_set.VAR_1M_empire" text="{=NTP.VAR1M_empire}Basileus {NAME}" />
+	<string id="str_ntp_title_set.VAR_1F_empire" text="{=NTP.VAR1F_empire}Basilissa {NAME}" />
+	<string id="str_ntp_title_set.VAR_2M_empire" text="{=NTP.VAR2M_empire}Megas Archon {NAME}" />
+	<string id="str_ntp_title_set.VAR_2F_empire" text="{=NTP.VAR2F_empire}Megas Archontissa {NAME}" />
+	<string id="str_ntp_title_set.VAR_3M_empire" text="{=NTP.VAR3M_empire}Exarch {NAME}" />
+	<string id="str_ntp_title_set.VAR_3F_empire" text="{=NTP.VAR3F_empire}Exarchontissa {NAME}" />
+	<string id="str_ntp_title_set.VAR_4M_empire" text="{=NTP.VAR4M_empire}Archon {NAME}" />
+	<string id="str_ntp_title_set.VAR_4F_empire" text="{=NTP.VAR4F_empire}Archontissa {NAME}" />
+	<string id="str_ntp_title_set.VAR_5M_empire" text="{=NTP.VAR5M_empire}Patrikios {NAME}" />
+	<string id="str_ntp_title_set.VAR_5F_empire" text="{=NTP.VAR5F_empire}Patrikia {NAME}" />
+	<string id="str_ntp_title_set.VAR_crownM_empire" text="{=NTP.VARCrownM_empire}Porphyrogennetos {NAME}" />
+	<string id="str_ntp_title_set.VAR_crownF_empire" text="{=NTP.VARCrownF_empire}Porphyrogennete {NAME}" />
+	<string id="str_ntp_title_set.VAR_royalM_empire" text="{=NTP.VARRoyalM_empire}Sebastos {NAME}" />
+	<string id="str_ntp_title_set.VAR_royalF_empire" text="{=NTP.VARRoyalF_empire}Sebaste {NAME}" />
 
-        <string id="str_ntp_title_set.VAR_1M_khuzait" text="{=NTP.VAR1M_khuzait}{NAME} Khan" />
-        <string id="str_ntp_title_set.VAR_1F_khuzait" text="{=NTP.VAR1F_khuzait}{NAME} Khatum" />
-        <string id="str_ntp_title_set.VAR_2M_khuzait" text="{=NTP.VAR2M_khuzait}{NAME} Atabeg" />
-        <string id="str_ntp_title_set.VAR_2F_khuzait" text="{=NTP.VAR2F_khuzait}{NAME} Annegegum" />
-        <string id="str_ntp_title_set.VAR_3M_khuzait" text="{=NTP.VAR3M_khuzait}{NAME} Sadapid-Beg" />
-        <string id="str_ntp_title_set.VAR_3F_khuzait" text="{=NTP.VAR3F_khuzait}{NAME} Sadapid-Begum" />
-        <string id="str_ntp_title_set.VAR_4M_khuzait" text="{=NTP.VAR4M_khuzait}{NAME} Beg" />
-        <string id="str_ntp_title_set.VAR_4F_khuzait" text="{=NTP.VAR4F_khuzait}{NAME} Begum" />
-        <string id="str_ntp_title_set.VAR_5M_khuzait" text="{=NTP.VAR5M_khuzait}{NAME} Baghatur" />
-        <string id="str_ntp_title_set.VAR_5F_khuzait" text="{=NTP.VAR5F_khuzait}{NAME} Bekhi" />
-        <string id="str_ntp_title_set.VAR_crownM_khuzait" text="{=NTP.VARCrownM_khuzait}{NAME} Qhagan " />
-        <string id="str_ntp_title_set.VAR_crownF_khuzait" text="{=NTP.VARCrownF_khuzait}{NAME} Qhagatun" />
-        <string id="str_ntp_title_set.VAR_royalM_khuzait" text="{=NTP.VARRoyalM_khuzait}{NAME} Shad" />
-        <string id="str_ntp_title_set.VAR_royalF_khuzait" text="{=NTP.VARRoyalF_khuzait}{NAME} Shadum" />
-
-
-        <string id="str_ntp_title_set.VAR_1M_sturgia" text="{=NTP.VAR1M_sturgia}Veliky Knyaz {NAME}" />
-        <string id="str_ntp_title_set.VAR_1F_sturgia" text="{=NTP.VAR1F_sturgia}Velikaya Knyazinya {NAME}" />
-        <string id="str_ntp_title_set.VAR_2M_sturgia" text="{=NTP.VAR2M_sturgia}Hertug {NAME}" />
-        <string id="str_ntp_title_set.VAR_2F_sturgia" text="{=NTP.VAR2F_sturgia}Hertuginde {NAME}" />
-        <string id="str_ntp_title_set.VAR_3M_sturgia" text="{=NTP.VAR3M_sturgia}Jarl {NAME}" />
-        <string id="str_ntp_title_set.VAR_3F_sturgia" text="{=NTP.VAR3F_sturgia}Jarlinde {NAME}" />
-        <string id="str_ntp_title_set.VAR_4M_sturgia" text="{=NTP.VAR4M_sturgia}Knyaz {NAME}" />
-        <string id="str_ntp_title_set.VAR_4F_sturgia" text="{=NTP.VAR4F_sturgia}Knyazinya {NAME}" />
-        <string id="str_ntp_title_set.VAR_5M_sturgia" text="{=NTP.VAR5M_sturgia}Boyar {NAME}" />
-        <string id="str_ntp_title_set.VAR_5F_sturgia" text="{=NTP.VAR5F_sturgia}Boyarina {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownM_sturgia" text="{=NTP.VARCrownM_sturgia}{NAME} Knyazevich" />
-        <string id="str_ntp_title_set.VAR_crownF_sturgia" text="{=NTP.VARCrownF_sturgia}{NAME} Knyazevna" />
-        <string id="str_ntp_title_set.VAR_royalM_sturgia" text="{=NTP.VARRoyalM_sturgia}Prins {NAME}" />
-        <string id="str_ntp_title_set.VAR_royalF_sturgia" text="{=NTP.VARRoyalF_sturgia}Prinsessa {NAME}" />
-
-        <string id="str_ntp_title_set.VAR_1M_vlandia" text="{=NTP.VAR1M_vlandia}Rex {NAME}" />
-        <string id="str_ntp_title_set.VAR_1F_vlandia" text="{=NTP.VAR1F_vlandia}Regna {NAME}" />
-        <string id="str_ntp_title_set.VAR_2M_vlandia" text="{=NTP.VAR2M_vlandia}Duke {NAME}" />
-        <string id="str_ntp_title_set.VAR_2F_vlandia" text="{=NTP.VAR2F_vlandia}Duchess {NAME}" />
-        <string id="str_ntp_title_set.VAR_3M_vlandia" text="{=NTP.VAR3M_vlandia}Count {NAME}" />
-        <string id="str_ntp_title_set.VAR_3F_vlandia" text="{=NTP.VAR3F_vlandia}Countess {NAME}" />
-        <string id="str_ntp_title_set.VAR_4M_vlandia" text="{=NTP.VAR4M_vlandia}Baron {NAME}" />
-        <string id="str_ntp_title_set.VAR_4F_vlandia" text="{=NTP.VAR4F_vlandia}Baroness {NAME}" />
-        <string id="str_ntp_title_set.VAR_5M_vlandia" text="{=NTP.VAR5M_vlandia}Sieur {NAME}" />
-        <string id="str_ntp_title_set.VAR_5F_vlandia" text="{=NTP.VAR5F_vlandia}Lady {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownM_vlandia" text="{=NTP.VARCrownM_vlandia}Prince {NAME}" />
-        <string id="str_ntp_title_set.VAR_crownF_vlandia" text="{=NTP.VARCrownF_vlandia}Princess {NAME}" />
-        <string id="str_ntp_title_set.VAR_royalM_vlandia" text="{=NTP.VARRoyalM_vlandia}Prince {NAME}" />
-        <string id="str_ntp_title_set.VAR_royalF_vlandia" text="{=NTP.VARRoyalF_vlandia}Princess {NAME}" />
-        <!-- Nordling -->
-        <string id="str_ntp_title_set.CEK_1M_nordling" text="{=NTP.CEK1M_nordling}Konungr {NAME}" />
-        <string id="str_ntp_title_set.CEK_1F_nordling" text="{=NTP.CEK1F_nordling}Drottning {NAME}" />
-        <string id="str_ntp_title_set.CEK_2M_nordling" text="{=NTP.CEK2M_nordling}Jarl {NAME}" />
-        <string id="str_ntp_title_set.CEK_2F_nordling" text="{=NTP.CEK2F_nordling}Jarlinde {NAME}" />
-        <string id="str_ntp_title_set.CEK_3M_nordling" text="{=NTP.CEK3M_nordling}Jarl {NAME}" />
-        <string id="str_ntp_title_set.CEK_3F_nordling" text="{=NTP.CEK3F_nordling}Jarlinde {NAME}" />
-        <string id="str_ntp_title_set.CEK_4M_nordling" text="{=NTP.CEK4M_nordling}Jarl {NAME}" />
-        <string id="str_ntp_title_set.CEK_4F_nordling" text="{=NTP.CEK4F_nordling}Jarlinde {NAME}" />
-        <string id="str_ntp_title_set.CEK_5M_nordling" text="{=NTP.CEK5M_nordling}Herr {NAME}" />
-        <string id="str_ntp_title_set.CEK_5F_nordling" text="{=NTP.CEK5F_nordling}Dame {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownM_nordling" text="{=NTP.CEKCrownM_nordling}Prins {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownF_nordling" text="{=NTP.CEKCrownF_nordling}Prinsessa {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalM_nordling" text="{=NTP.CEKRoyalM_nordling}Herr {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalF_nordling" text="{=NTP.CEKRoyalF_nordling}Dame {NAME}" />
-
-        <!-- Vagir -->
-        <string id="str_ntp_title_set.CEK_1M_nordling" text="{=NTP.CEK1M_nordling}Korol {NAME}" />
-        <string id="str_ntp_title_set.CEK_1F_nordling" text="{=NTP.CEK1F_nordling}Korolina {NAME}" />
-        <string id="str_ntp_title_set.CEK_2M_nordling" text="{=NTP.CEK2M_nordling}Voivoda {NAME}" />
-        <string id="str_ntp_title_set.CEK_2F_nordling" text="{=NTP.CEK2F_nordling}Voivoda {NAME}" />
-        <string id="str_ntp_title_set.CEK_3M_nordling" text="{=NTP.CEK3M_nordling}Voivoda {NAME}" />
-        <string id="str_ntp_title_set.CEK_3F_nordling" text="{=NTP.CEK3F_nordling}Voivoda {NAME}" />
-        <string id="str_ntp_title_set.CEK_4M_nordling" text="{=NTP.CEK4M_nordling}Voivoda {NAME}" />
-        <string id="str_ntp_title_set.CEK_4F_nordling" text="{=NTP.CEK4F_nordling}Voivoda {NAME}" />
-        <string id="str_ntp_title_set.CEK_5M_nordling" text="{=NTP.CEK5M_nordling}Gospodin {NAME}" />
-        <string id="str_ntp_title_set.CEK_5F_nordling" text="{=NTP.CEK5F_nordling}Gospodina {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownM_nordling" text="{=NTP.CEKCrownM_nordling}Korolevich {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownF_nordling" text="{=NTP.CEKCrownF_nordling}Korolevna {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalM_nordling" text="{=NTP.CEKRoyalM_nordling}Gospodin {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalF_nordling" text="{=NTP.CEKRoyalF_nordling}Gospodina {NAME}" />
-
-        <!-- Rhodok -->
-        <string id="str_ntp_title_set.CEK_1M_rodhok" text="{=NTP.CEK1M_rodhok}Rois {NAME}" />
-        <string id="str_ntp_title_set.CEK_1F_rodhok" text="{=NTP.CEK1F_rodhok}Regna {NAME}" />
-        <string id="str_ntp_title_set.CEK_2M_rodhok" text="{=NTP.CEK2M_rodhok}Duc {NAME}" />
-        <string id="str_ntp_title_set.CEK_2F_rodhok" text="{=NTP.CEK2F_rodhok}Duquesse {NAME}" />
-        <string id="str_ntp_title_set.CEK_3M_rodhok" text="{=NTP.CEK3M_rodhok}Comte {NAME}" />
-        <string id="str_ntp_title_set.CEK_3F_rodhok" text="{=NTP.CEK3F_rodhok}Comtesse {NAME}" />
-        <string id="str_ntp_title_set.CEK_4M_rodhok" text="{=NTP.CEK4M_rodhok}Baron {NAME}" />
-        <string id="str_ntp_title_set.CEK_4F_rodhok" text="{=NTP.CEK4F_rodhok}Baronne {NAME}" />
-        <string id="str_ntp_title_set.CEK_5M_rodhok" text="{=NTP.CEK5M_rodhok}Seigneur {NAME}" />
-        <string id="str_ntp_title_set.CEK_5F_rodhok" text="{=NTP.CEK5F_rodhok}Seigneuse {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownM_rodhok" text="{=NTP.CEKCrownM_rodhok}Seigneur {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownF_rodhok" text="{=NTP.CEKCrownF_rodhok}Seigneuse {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalM_rodhok" text="{=NTP.CEKRoyalM_rodhok}Seigneur {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalF_rodhok" text="{=NTP.CEKRoyalF_rodhok}Seigneuse {NAME}" />
+	<string id="str_ntp_title_set.VAR_1M_khuzait" text="{=NTP.VAR1M_khuzait}{NAME} Khan" />
+	<string id="str_ntp_title_set.VAR_1F_khuzait" text="{=NTP.VAR1F_khuzait}{NAME} Khatum" />
+	<string id="str_ntp_title_set.VAR_2M_khuzait" text="{=NTP.VAR2M_khuzait}{NAME} Atabeg" />
+	<string id="str_ntp_title_set.VAR_2F_khuzait" text="{=NTP.VAR2F_khuzait}{NAME} Annegegum" />
+	<string id="str_ntp_title_set.VAR_3M_khuzait" text="{=NTP.VAR3M_khuzait}{NAME} Sadapid-Beg" />
+	<string id="str_ntp_title_set.VAR_3F_khuzait" text="{=NTP.VAR3F_khuzait}{NAME} Sadapid-Begum" />
+	<string id="str_ntp_title_set.VAR_4M_khuzait" text="{=NTP.VAR4M_khuzait}{NAME} Beg" />
+	<string id="str_ntp_title_set.VAR_4F_khuzait" text="{=NTP.VAR4F_khuzait}{NAME} Begum" />
+	<string id="str_ntp_title_set.VAR_5M_khuzait" text="{=NTP.VAR5M_khuzait}{NAME} Baghatur" />
+	<string id="str_ntp_title_set.VAR_5F_khuzait" text="{=NTP.VAR5F_khuzait}{NAME} Bekhi" />
+	<string id="str_ntp_title_set.VAR_crownM_khuzait" text="{=NTP.VARCrownM_khuzait}{NAME} Qhagan " />
+	<string id="str_ntp_title_set.VAR_crownF_khuzait" text="{=NTP.VARCrownF_khuzait}{NAME} Qhagatun" />
+	<string id="str_ntp_title_set.VAR_royalM_khuzait" text="{=NTP.VARRoyalM_khuzait}{NAME} Shad" />
+	<string id="str_ntp_title_set.VAR_royalF_khuzait" text="{=NTP.VARRoyalF_khuzait}{NAME} Shadum" />
 
 
-        <!-- Apolssalian culture -->
-        <string id="str_ntp_title_set.CEK_1M_apolssalian" text="{=NTP.CEK1M_apolssalian}Posis {NAME}" />
-        <string id="str_ntp_title_set.CEK_1F_apolssalian" text="{=NTP.CEK1F_apolssalian}Posis {NAME}" />
-        <string id="str_ntp_title_set.CEK_2M_apolssalian" text="{=NTP.CEK2M_apolssalian}Archon {NAME}" />
-        <string id="str_ntp_title_set.CEK_2F_apolssalian" text="{=NTP.CEK2F_apolssalian}Archontissa {NAME}" />
-        <string id="str_ntp_title_set.CEK_3M_apolssalian" text="{=NTP.CEK3M_apolssalian}Archon {NAME}" />
-        <string id="str_ntp_title_set.CEK_3F_apolssalian" text="{=NTP.CEK3F_apolssalian}Archontissa {NAME}" />
-        <string id="str_ntp_title_set.CEK_4M_apolssalian" text="{=NTP.CEK4M_apolssalian}Archon {NAME}" />
-        <string id="str_ntp_title_set.CEK_4F_apolssalian" text="{=NTP.CEK4F_apolssalian}Archontissa {NAME}" />
-        <string id="str_ntp_title_set.CEK_5M_apolssalian" text="{=NTP.CEK5M_apolssalian}Patrikios {NAME}" />
-        <string id="str_ntp_title_set.CEK_5F_apolssalian" text="{=NTP.CEK5F_apolssalian}Patrikia {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownM_apolssalian" text="{=NTP.CEKCrownM_apolssalian}Patrikios {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownF_apolssalian" text="{=NTP.CEKCrownF_apolssalian}Patrikia {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalM_apolssalian" text="{=NTP.CEKRoyalM_apolssalian}Patrikios {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalF_apolssalian" text="{=NTP.CEKRoyalF_apolssalian}Patrikia {NAME}" />
+	<string id="str_ntp_title_set.VAR_1M_sturgia" text="{=NTP.VAR1M_sturgia}Veliky Knyaz {NAME}" />
+	<string id="str_ntp_title_set.VAR_1F_sturgia" text="{=NTP.VAR1F_sturgia}Velikaya Knyazinya {NAME}" />
+	<string id="str_ntp_title_set.VAR_2M_sturgia" text="{=NTP.VAR2M_sturgia}Hertug {NAME}" />
+	<string id="str_ntp_title_set.VAR_2F_sturgia" text="{=NTP.VAR2F_sturgia}Hertuginde {NAME}" />
+	<string id="str_ntp_title_set.VAR_3M_sturgia" text="{=NTP.VAR3M_sturgia}Jarl {NAME}" />
+	<string id="str_ntp_title_set.VAR_3F_sturgia" text="{=NTP.VAR3F_sturgia}Jarlinde {NAME}" />
+	<string id="str_ntp_title_set.VAR_4M_sturgia" text="{=NTP.VAR4M_sturgia}Knyaz {NAME}" />
+	<string id="str_ntp_title_set.VAR_4F_sturgia" text="{=NTP.VAR4F_sturgia}Knyazinya {NAME}" />
+	<string id="str_ntp_title_set.VAR_5M_sturgia" text="{=NTP.VAR5M_sturgia}Boyar {NAME}" />
+	<string id="str_ntp_title_set.VAR_5F_sturgia" text="{=NTP.VAR5F_sturgia}Boyarina {NAME}" />
+	<string id="str_ntp_title_set.VAR_crownM_sturgia" text="{=NTP.VARCrownM_sturgia}{NAME} Knyazevich" />
+	<string id="str_ntp_title_set.VAR_crownF_sturgia" text="{=NTP.VARCrownF_sturgia}{NAME} Knyazevna" />
+	<string id="str_ntp_title_set.VAR_royalM_sturgia" text="{=NTP.VARRoyalM_sturgia}Prins {NAME}" />
+	<string id="str_ntp_title_set.VAR_royalF_sturgia" text="{=NTP.VARRoyalF_sturgia}Prinsessa {NAME}" />
+
+	<string id="str_ntp_title_set.VAR_1M_vlandia" text="{=NTP.VAR1M_vlandia}Rex {NAME}" />
+	<string id="str_ntp_title_set.VAR_1F_vlandia" text="{=NTP.VAR1F_vlandia}Regna {NAME}" />
+	<string id="str_ntp_title_set.VAR_2M_vlandia" text="{=NTP.VAR2M_vlandia}Duke {NAME}" />
+	<string id="str_ntp_title_set.VAR_2F_vlandia" text="{=NTP.VAR2F_vlandia}Duchess {NAME}" />
+	<string id="str_ntp_title_set.VAR_3M_vlandia" text="{=NTP.VAR3M_vlandia}Count {NAME}" />
+	<string id="str_ntp_title_set.VAR_3F_vlandia" text="{=NTP.VAR3F_vlandia}Countess {NAME}" />
+	<string id="str_ntp_title_set.VAR_4M_vlandia" text="{=NTP.VAR4M_vlandia}Baron {NAME}" />
+	<string id="str_ntp_title_set.VAR_4F_vlandia" text="{=NTP.VAR4F_vlandia}Baroness {NAME}" />
+	<string id="str_ntp_title_set.VAR_5M_vlandia" text="{=NTP.VAR5M_vlandia}Sieur {NAME}" />
+	<string id="str_ntp_title_set.VAR_5F_vlandia" text="{=NTP.VAR5F_vlandia}Lady {NAME}" />
+	<string id="str_ntp_title_set.VAR_crownM_vlandia" text="{=NTP.VARCrownM_vlandia}Prince {NAME}" />
+	<string id="str_ntp_title_set.VAR_crownF_vlandia" text="{=NTP.VARCrownF_vlandia}Princess {NAME}" />
+	<string id="str_ntp_title_set.VAR_royalM_vlandia" text="{=NTP.VARRoyalM_vlandia}Prince {NAME}" />
+	<string id="str_ntp_title_set.VAR_royalF_vlandia" text="{=NTP.VARRoyalF_vlandia}Princess {NAME}" />
+	<!-- Nordling -->
+	<string id="str_ntp_title_set.CEK_1M_nordling" text="{=NTP.CEK1M_nordling}Konungr {NAME}" />
+	<string id="str_ntp_title_set.CEK_1F_nordling" text="{=NTP.CEK1F_nordling}Drottning {NAME}" />
+	<string id="str_ntp_title_set.CEK_2M_nordling" text="{=NTP.CEK2M_nordling}Jarl {NAME}" />
+	<string id="str_ntp_title_set.CEK_2F_nordling" text="{=NTP.CEK2F_nordling}Jarlinde {NAME}" />
+	<string id="str_ntp_title_set.CEK_3M_nordling" text="{=NTP.CEK3M_nordling}Jarl {NAME}" />
+	<string id="str_ntp_title_set.CEK_3F_nordling" text="{=NTP.CEK3F_nordling}Jarlinde {NAME}" />
+	<string id="str_ntp_title_set.CEK_4M_nordling" text="{=NTP.CEK4M_nordling}Jarl {NAME}" />
+	<string id="str_ntp_title_set.CEK_4F_nordling" text="{=NTP.CEK4F_nordling}Jarlinde {NAME}" />
+	<string id="str_ntp_title_set.CEK_5M_nordling" text="{=NTP.CEK5M_nordling}Herr {NAME}" />
+	<string id="str_ntp_title_set.CEK_5F_nordling" text="{=NTP.CEK5F_nordling}Dame {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownM_nordling" text="{=NTP.CEKCrownM_nordling}Prins {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownF_nordling" text="{=NTP.CEKCrownF_nordling}Prinsessa {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalM_nordling" text="{=NTP.CEKRoyalM_nordling}Herr {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalF_nordling" text="{=NTP.CEKRoyalF_nordling}Dame {NAME}" />
+
+	<!-- Vagir -->
+	<string id="str_ntp_title_set.CEK_1M_nordling" text="{=NTP.CEK1M_nordling}Korol {NAME}" />
+	<string id="str_ntp_title_set.CEK_1F_nordling" text="{=NTP.CEK1F_nordling}Korolina {NAME}" />
+	<string id="str_ntp_title_set.CEK_2M_nordling" text="{=NTP.CEK2M_nordling}Voivoda {NAME}" />
+	<string id="str_ntp_title_set.CEK_2F_nordling" text="{=NTP.CEK2F_nordling}Voivoda {NAME}" />
+	<string id="str_ntp_title_set.CEK_3M_nordling" text="{=NTP.CEK3M_nordling}Voivoda {NAME}" />
+	<string id="str_ntp_title_set.CEK_3F_nordling" text="{=NTP.CEK3F_nordling}Voivoda {NAME}" />
+	<string id="str_ntp_title_set.CEK_4M_nordling" text="{=NTP.CEK4M_nordling}Voivoda {NAME}" />
+	<string id="str_ntp_title_set.CEK_4F_nordling" text="{=NTP.CEK4F_nordling}Voivoda {NAME}" />
+	<string id="str_ntp_title_set.CEK_5M_nordling" text="{=NTP.CEK5M_nordling}Gospodin {NAME}" />
+	<string id="str_ntp_title_set.CEK_5F_nordling" text="{=NTP.CEK5F_nordling}Gospodina {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownM_nordling" text="{=NTP.CEKCrownM_nordling}Korolevich {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownF_nordling" text="{=NTP.CEKCrownF_nordling}Korolevna {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalM_nordling" text="{=NTP.CEKRoyalM_nordling}Gospodin {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalF_nordling" text="{=NTP.CEKRoyalF_nordling}Gospodina {NAME}" />
+
+	<!-- Rhodok -->
+	<string id="str_ntp_title_set.CEK_1M_rodhok" text="{=NTP.CEK1M_rodhok}Rois {NAME}" />
+	<string id="str_ntp_title_set.CEK_1F_rodhok" text="{=NTP.CEK1F_rodhok}Regna {NAME}" />
+	<string id="str_ntp_title_set.CEK_2M_rodhok" text="{=NTP.CEK2M_rodhok}Duc {NAME}" />
+	<string id="str_ntp_title_set.CEK_2F_rodhok" text="{=NTP.CEK2F_rodhok}Duquesse {NAME}" />
+	<string id="str_ntp_title_set.CEK_3M_rodhok" text="{=NTP.CEK3M_rodhok}Comte {NAME}" />
+	<string id="str_ntp_title_set.CEK_3F_rodhok" text="{=NTP.CEK3F_rodhok}Comtesse {NAME}" />
+	<string id="str_ntp_title_set.CEK_4M_rodhok" text="{=NTP.CEK4M_rodhok}Baron {NAME}" />
+	<string id="str_ntp_title_set.CEK_4F_rodhok" text="{=NTP.CEK4F_rodhok}Baronne {NAME}" />
+	<string id="str_ntp_title_set.CEK_5M_rodhok" text="{=NTP.CEK5M_rodhok}Seigneur {NAME}" />
+	<string id="str_ntp_title_set.CEK_5F_rodhok" text="{=NTP.CEK5F_rodhok}Seigneuse {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownM_rodhok" text="{=NTP.CEKCrownM_rodhok}Seigneur {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownF_rodhok" text="{=NTP.CEKCrownF_rodhok}Seigneuse {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalM_rodhok" text="{=NTP.CEKRoyalM_rodhok}Seigneur {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalF_rodhok" text="{=NTP.CEKRoyalF_rodhok}Seigneuse {NAME}" />
 
 
-        <!-- Lyrion culture -->
-        <string id="str_ntp_title_set.CEK_1M_lyrion" text="{=NTP.CEK1M_lyrion}King {NAME}" />
-        <string id="str_ntp_title_set.CEK_1F_lyrion" text="{=NTP.CEK1F_lyrion}Queen {NAME}" />
-        <string id="str_ntp_title_set.CEK_2M_lyrion" text="{=NTP.CEK2M_lyrion}Duke {NAME}" />
-        <string id="str_ntp_title_set.CEK_2F_lyrion" text="{=NTP.CEK2F_lyrion}Duchess {NAME}" />
-        <string id="str_ntp_title_set.CEK_3M_lyrion" text="{=NTP.CEK3M_lyrion}Count {NAME}" />
-        <string id="str_ntp_title_set.CEK_3F_lyrion" text="{=NTP.CEK3F_lyrion}Countess {NAME}" />
-        <string id="str_ntp_title_set.CEK_4M_lyrion" text="{=NTP.CEK4M_lyrion}Baron {NAME}" />
-        <string id="str_ntp_title_set.CEK_4F_lyrion" text="{=NTP.CEK4F_lyrion}Baroness {NAME}" />
-        <string id="str_ntp_title_set.CEK_5M_lyrion" text="{=NTP.CEK5M_lyrion}Lord {NAME}" />
-        <string id="str_ntp_title_set.CEK_5F_lyrion" text="{=NTP.CEK5F_lyrion}Lady {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownM_lyrion" text="{=NTP.CEKCrownM_lyrion}Lord {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownF_lyrion" text="{=NTP.CEKCrownF_lyrion}Lady {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalM_lyrion" text="{=NTP.CEKRoyalM_lyrion}Lord {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalF_lyrion" text="{=NTP.CEKRoyalF_lyrion}Lady {NAME}" />
+	<!-- Apolssalian culture -->
+	<string id="str_ntp_title_set.CEK_1M_apolssalian" text="{=NTP.CEK1M_apolssalian}Posis {NAME}" />
+	<string id="str_ntp_title_set.CEK_1F_apolssalian" text="{=NTP.CEK1F_apolssalian}Posis {NAME}" />
+	<string id="str_ntp_title_set.CEK_2M_apolssalian" text="{=NTP.CEK2M_apolssalian}Archon {NAME}" />
+	<string id="str_ntp_title_set.CEK_2F_apolssalian" text="{=NTP.CEK2F_apolssalian}Archontissa {NAME}" />
+	<string id="str_ntp_title_set.CEK_3M_apolssalian" text="{=NTP.CEK3M_apolssalian}Archon {NAME}" />
+	<string id="str_ntp_title_set.CEK_3F_apolssalian" text="{=NTP.CEK3F_apolssalian}Archontissa {NAME}" />
+	<string id="str_ntp_title_set.CEK_4M_apolssalian" text="{=NTP.CEK4M_apolssalian}Archon {NAME}" />
+	<string id="str_ntp_title_set.CEK_4F_apolssalian" text="{=NTP.CEK4F_apolssalian}Archontissa {NAME}" />
+	<string id="str_ntp_title_set.CEK_5M_apolssalian" text="{=NTP.CEK5M_apolssalian}Patrikios {NAME}" />
+	<string id="str_ntp_title_set.CEK_5F_apolssalian" text="{=NTP.CEK5F_apolssalian}Patrikia {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownM_apolssalian" text="{=NTP.CEKCrownM_apolssalian}Patrikios {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownF_apolssalian" text="{=NTP.CEKCrownF_apolssalian}Patrikia {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalM_apolssalian" text="{=NTP.CEKRoyalM_apolssalian}Patrikios {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalF_apolssalian" text="{=NTP.CEKRoyalF_apolssalian}Patrikia {NAME}" />
 
 
-        <!-- Khergit culture -->
-        <string id="str_ntp_title_set.CEK_1M_rebkhu" text="{=NTP.CEK1M_rebkhu}{NAME} Khan" />
-        <string id="str_ntp_title_set.CEK_1F_rebkhu" text="{=NTP.CEK1F_rebkhu}{NAME} Khatun" />
-        <string id="str_ntp_title_set.CEK_2M_rebkhu" text="{=NTP.CEK2M_rebkhu}{NAME} Ulusbey" />
-        <string id="str_ntp_title_set.CEK_2F_rebkhu" text="{=NTP.CEK2F_rebkhu}{NAME} Ulusbeygum" />
-        <string id="str_ntp_title_set.CEK_3M_rebkhu" text="{=NTP.CEK3M_rebkhu}{NAME} Beylerlbey" />
-        <string id="str_ntp_title_set.CEK_3F_rebkhu" text="{=NTP.CEK3F_rebkhu}{NAME} Beylerlbeygum" />
-        <string id="str_ntp_title_set.CEK_4M_rebkhu" text="{=NTP.CEK4M_rebkhu}{NAME} Bey" />
-        <string id="str_ntp_title_set.CEK_4F_rebkhu" text="{=NTP.CEK4F_rebkhu}{NAME} Beygum" />
-        <string id="str_ntp_title_set.CEK_5M_rebkhu" text="{=NTP.CEK5M_rebkhu}{NAME} Noyan" />
-        <string id="str_ntp_title_set.CEK_5F_rebkhu" text="{=NTP.CEK5F_rebkhu}{NAME} Noyan" />
-        <string id="str_ntp_title_set.CEK_crownM_rebkhu" text="{=NTP.CEKCrownM_rebkhu}{NAME} Noyan" />
-        <string id="str_ntp_title_set.CEK_crownF_rebkhu" text="{=NTP.CEKCrownF_rebkhu}{NAME} Noyan" />
-        <string id="str_ntp_title_set.CEK_royalM_rebkhu" text="{=NTP.CEKRoyalM_rebkhu}{NAME} Noyan" />
-        <string id="str_ntp_title_set.CEK_royalF_rebkhu" text="{=NTP.CEKRoyalF_rebkhu}{NAME} Noyan" />
+	<!-- Lyrion culture -->
+	<string id="str_ntp_title_set.CEK_1M_lyrion" text="{=NTP.CEK1M_lyrion}King {NAME}" />
+	<string id="str_ntp_title_set.CEK_1F_lyrion" text="{=NTP.CEK1F_lyrion}Queen {NAME}" />
+	<string id="str_ntp_title_set.CEK_2M_lyrion" text="{=NTP.CEK2M_lyrion}Duke {NAME}" />
+	<string id="str_ntp_title_set.CEK_2F_lyrion" text="{=NTP.CEK2F_lyrion}Duchess {NAME}" />
+	<string id="str_ntp_title_set.CEK_3M_lyrion" text="{=NTP.CEK3M_lyrion}Count {NAME}" />
+	<string id="str_ntp_title_set.CEK_3F_lyrion" text="{=NTP.CEK3F_lyrion}Countess {NAME}" />
+	<string id="str_ntp_title_set.CEK_4M_lyrion" text="{=NTP.CEK4M_lyrion}Baron {NAME}" />
+	<string id="str_ntp_title_set.CEK_4F_lyrion" text="{=NTP.CEK4F_lyrion}Baroness {NAME}" />
+	<string id="str_ntp_title_set.CEK_5M_lyrion" text="{=NTP.CEK5M_lyrion}Lord {NAME}" />
+	<string id="str_ntp_title_set.CEK_5F_lyrion" text="{=NTP.CEK5F_lyrion}Lady {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownM_lyrion" text="{=NTP.CEKCrownM_lyrion}Lord {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownF_lyrion" text="{=NTP.CEKCrownF_lyrion}Lady {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalM_lyrion" text="{=NTP.CEKRoyalM_lyrion}Lord {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalF_lyrion" text="{=NTP.CEKRoyalF_lyrion}Lady {NAME}" />
 
 
-        <!-- Paleician culture -->
-        <string id="str_ntp_title_set.CEK_1M_paleician" text="{=NTP.CEK1M_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_1F_paleician" text="{=NTP.CEK1F_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_2M_paleician" text="{=NTP.CEK2M_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_2F_paleician" text="{=NTP.CEK2F_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_3M_paleician" text="{=NTP.CEK3M_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_3F_paleician" text="{=NTP.CEK3F_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_4M_paleician" text="{=NTP.CEK4M_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_4F_paleician" text="{=NTP.CEK4F_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_5M_paleician" text="{=NTP.CEK5M_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_5F_paleician" text="{=NTP.CEK5F_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_crownM_paleician" text="{=NTP.CEKCrownM_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_crownF_paleician" text="{=NTP.CEKCrownF_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_royalM_paleician" text="{=NTP.CEKRoyalM_paleician}{NAME}" />
-        <string id="str_ntp_title_set.CEK_royalF_paleician" text="{=NTP.CEKRoyalF_paleician}{NAME}" />
+	<!-- Khergit culture -->
+	<string id="str_ntp_title_set.CEK_1M_rebkhu" text="{=NTP.CEK1M_rebkhu}{NAME} Khan" />
+	<string id="str_ntp_title_set.CEK_1F_rebkhu" text="{=NTP.CEK1F_rebkhu}{NAME} Khatun" />
+	<string id="str_ntp_title_set.CEK_2M_rebkhu" text="{=NTP.CEK2M_rebkhu}{NAME} Ulusbey" />
+	<string id="str_ntp_title_set.CEK_2F_rebkhu" text="{=NTP.CEK2F_rebkhu}{NAME} Ulusbeygum" />
+	<string id="str_ntp_title_set.CEK_3M_rebkhu" text="{=NTP.CEK3M_rebkhu}{NAME} Beylerlbey" />
+	<string id="str_ntp_title_set.CEK_3F_rebkhu" text="{=NTP.CEK3F_rebkhu}{NAME} Beylerlbeygum" />
+	<string id="str_ntp_title_set.CEK_4M_rebkhu" text="{=NTP.CEK4M_rebkhu}{NAME} Bey" />
+	<string id="str_ntp_title_set.CEK_4F_rebkhu" text="{=NTP.CEK4F_rebkhu}{NAME} Beygum" />
+	<string id="str_ntp_title_set.CEK_5M_rebkhu" text="{=NTP.CEK5M_rebkhu}{NAME} Noyan" />
+	<string id="str_ntp_title_set.CEK_5F_rebkhu" text="{=NTP.CEK5F_rebkhu}{NAME} Noyan" />
+	<string id="str_ntp_title_set.CEK_crownM_rebkhu" text="{=NTP.CEKCrownM_rebkhu}{NAME} Noyan" />
+	<string id="str_ntp_title_set.CEK_crownF_rebkhu" text="{=NTP.CEKCrownF_rebkhu}{NAME} Noyan" />
+	<string id="str_ntp_title_set.CEK_royalM_rebkhu" text="{=NTP.CEKRoyalM_rebkhu}{NAME} Noyan" />
+	<string id="str_ntp_title_set.CEK_royalF_rebkhu" text="{=NTP.CEKRoyalF_rebkhu}{NAME} Noyan" />
 
 
-        <!-- Republic culture -->
-        <string id="str_ntp_title_set.CEK_1M_republic" text="{=NTP.CEK1M_republic}Dictator {NAME}" />
-        <string id="str_ntp_title_set.CEK_1F_republic" text="{=NTP.CEK1F_republic}Dictator {NAME}" />
-        <string id="str_ntp_title_set.CEK_2M_republic" text="{=NTP.CEK2M_republic}Proconsul {NAME}" />
-        <string id="str_ntp_title_set.CEK_2F_republic" text="{=NTP.CEK2F_republic}Proconsul {NAME}" />
-        <string id="str_ntp_title_set.CEK_3M_republic" text="{=NTP.CEK3M_republic}Propraetor {NAME}" />
-        <string id="str_ntp_title_set.CEK_3F_republic" text="{=NTP.CEK3F_republic}Propraetor {NAME}" />
-        <string id="str_ntp_title_set.CEK_4M_republic" text="{=NTP.CEK4M_republic}Proquaestor {NAME}" />
-        <string id="str_ntp_title_set.CEK_4F_republic" text="{=NTP.CEK4F_republic}Proquaestor {NAME}" />
-        <string id="str_ntp_title_set.CEK_5M_republic" text="{=NTP.CEK5M_republic}Noblis {NAME}" />
-        <string id="str_ntp_title_set.CEK_5F_republic" text="{=NTP.CEK5F_republic}Nobile {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownM_republic" text="{=NTP.CEKCrownM_republic}Nobilis {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownF_republic" text="{=NTP.CEKCrownF_republic}Nobile {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalM_republic" text="{=NTP.CEKRoyalM_republic}Nobilis {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalF_republic" text="{=NTP.CEKRoyalF_republic}Nobile {NAME}" />
+	<!-- Paleician culture -->
+	<string id="str_ntp_title_set.CEK_1M_paleician" text="{=NTP.CEK1M_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_1F_paleician" text="{=NTP.CEK1F_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_2M_paleician" text="{=NTP.CEK2M_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_2F_paleician" text="{=NTP.CEK2F_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_3M_paleician" text="{=NTP.CEK3M_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_3F_paleician" text="{=NTP.CEK3F_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_4M_paleician" text="{=NTP.CEK4M_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_4F_paleician" text="{=NTP.CEK4F_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_5M_paleician" text="{=NTP.CEK5M_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_5F_paleician" text="{=NTP.CEK5F_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_crownM_paleician" text="{=NTP.CEKCrownM_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_crownF_paleician" text="{=NTP.CEKCrownF_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_royalM_paleician" text="{=NTP.CEKRoyalM_paleician}{NAME}" />
+	<string id="str_ntp_title_set.CEK_royalF_paleician" text="{=NTP.CEKRoyalF_paleician}{NAME}" />
 
 
-        <!-- Aroiorum culture -->
-        <string id="str_ntp_title_set.CEK_1M_ariorum" text="{=NTP.CEK1M_ariorum}Despotes {NAME}" />
-        <string id="str_ntp_title_set.CEK_1F_ariorum" text="{=NTP.CEK1F_ariorum}Despotessa {NAME}" />
-        <string id="str_ntp_title_set.CEK_2M_ariorum" text="{=NTP.CEK2M_ariorum}Archon {NAME}" />
-        <string id="str_ntp_title_set.CEK_2F_ariorum" text="{=NTP.CEK2F_ariorum}Archonissa {NAME}" />
-        <string id="str_ntp_title_set.CEK_3M_ariorum" text="{=NTP.CEK3M_ariorum}Archon {NAME}" />
-        <string id="str_ntp_title_set.CEK_3F_ariorum" text="{=NTP.CEK3F_ariorum}Archonissa {NAME}" />
-        <string id="str_ntp_title_set.CEK_4M_ariorum" text="{=NTP.CEK4M_ariorum}Archon {NAME}" />
-        <string id="str_ntp_title_set.CEK_4F_ariorum" text="{=NTP.CEK4F_ariorum}Archonissa {NAME}" />
-        <string id="str_ntp_title_set.CEK_5M_ariorum" text="{=NTP.CEK5M_ariorum}Patrikios {NAME}" />
-        <string id="str_ntp_title_set.CEK_5F_ariorum" text="{=NTP.CEK5F_ariorum}Patrikia {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownM_ariorum" text="{=NTP.CEKCrownM_ariorum}Patrikios {NAME}" />
-        <string id="str_ntp_title_set.CEK_crownF_ariorum" text="{=NTP.CEKCrownF_ariorum}Patrikia {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalM_ariorum" text="{=NTP.CEKRoyalM_ariorum}Patrikios {NAME}" />
-        <string id="str_ntp_title_set.CEK_royalF_ariorum" text="{=NTP.CEKRoyalF_ariorum}Patrikia {NAME}" />
+	<!-- Republic culture -->
+	<string id="str_ntp_title_set.CEK_1M_republic" text="{=NTP.CEK1M_republic}Dictator {NAME}" />
+	<string id="str_ntp_title_set.CEK_1F_republic" text="{=NTP.CEK1F_republic}Dictator {NAME}" />
+	<string id="str_ntp_title_set.CEK_2M_republic" text="{=NTP.CEK2M_republic}Proconsul {NAME}" />
+	<string id="str_ntp_title_set.CEK_2F_republic" text="{=NTP.CEK2F_republic}Proconsul {NAME}" />
+	<string id="str_ntp_title_set.CEK_3M_republic" text="{=NTP.CEK3M_republic}Propraetor {NAME}" />
+	<string id="str_ntp_title_set.CEK_3F_republic" text="{=NTP.CEK3F_republic}Propraetor {NAME}" />
+	<string id="str_ntp_title_set.CEK_4M_republic" text="{=NTP.CEK4M_republic}Proquaestor {NAME}" />
+	<string id="str_ntp_title_set.CEK_4F_republic" text="{=NTP.CEK4F_republic}Proquaestor {NAME}" />
+	<string id="str_ntp_title_set.CEK_5M_republic" text="{=NTP.CEK5M_republic}Noblis {NAME}" />
+	<string id="str_ntp_title_set.CEK_5F_republic" text="{=NTP.CEK5F_republic}Nobile {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownM_republic" text="{=NTP.CEKCrownM_republic}Nobilis {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownF_republic" text="{=NTP.CEKCrownF_republic}Nobile {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalM_republic" text="{=NTP.CEKRoyalM_republic}Nobilis {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalF_republic" text="{=NTP.CEKRoyalF_republic}Nobile {NAME}" />
 
 
-        <string id="str_ntp_title_set.CEK_MinorLM_legion_of_the_betrayed" text="{=NTP.CEKMinorLM_legion_of_the_betrayed}Legatus {NAME}" />
-        <string id="str_ntp_title_set.CEK_MinorLF_legion_of_the_betrayed" text="{=NTP.CEKMinorLF_legion_of_the_betrayed}Legatus {NAME}" />
-        <string id="str_ntp_title_set.CEK_MinorMM_legion_of_the_betrayed" text="{=NTP.CEKMinorMM_legion_of_the_betrayed}Tribunus {NAME}" />
-        <string id="str_ntp_title_set.CEK_MinorMF_legion_of_the_betrayed" text="{=NTP.CEKMinorMF_legion_of_the_betrayed}Tribunus {NAME}" />
-	</strings>
+	<!-- Aroiorum culture -->
+	<string id="str_ntp_title_set.CEK_1M_ariorum" text="{=NTP.CEK1M_ariorum}Despotes {NAME}" />
+	<string id="str_ntp_title_set.CEK_1F_ariorum" text="{=NTP.CEK1F_ariorum}Despotessa {NAME}" />
+	<string id="str_ntp_title_set.CEK_2M_ariorum" text="{=NTP.CEK2M_ariorum}Archon {NAME}" />
+	<string id="str_ntp_title_set.CEK_2F_ariorum" text="{=NTP.CEK2F_ariorum}Archonissa {NAME}" />
+	<string id="str_ntp_title_set.CEK_3M_ariorum" text="{=NTP.CEK3M_ariorum}Archon {NAME}" />
+	<string id="str_ntp_title_set.CEK_3F_ariorum" text="{=NTP.CEK3F_ariorum}Archonissa {NAME}" />
+	<string id="str_ntp_title_set.CEK_4M_ariorum" text="{=NTP.CEK4M_ariorum}Archon {NAME}" />
+	<string id="str_ntp_title_set.CEK_4F_ariorum" text="{=NTP.CEK4F_ariorum}Archonissa {NAME}" />
+	<string id="str_ntp_title_set.CEK_5M_ariorum" text="{=NTP.CEK5M_ariorum}Patrikios {NAME}" />
+	<string id="str_ntp_title_set.CEK_5F_ariorum" text="{=NTP.CEK5F_ariorum}Patrikia {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownM_ariorum" text="{=NTP.CEKCrownM_ariorum}Patrikios {NAME}" />
+	<string id="str_ntp_title_set.CEK_crownF_ariorum" text="{=NTP.CEKCrownF_ariorum}Patrikia {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalM_ariorum" text="{=NTP.CEKRoyalM_ariorum}Patrikios {NAME}" />
+	<string id="str_ntp_title_set.CEK_royalF_ariorum" text="{=NTP.CEKRoyalF_ariorum}Patrikia {NAME}" />
+
+
+	<string id="str_ntp_title_set.CEK_MinorLM_legion_of_the_betrayed" text="{=NTP.CEKMinorLM_legion_of_the_betrayed}Legatus {NAME}" />
+	<string id="str_ntp_title_set.CEK_MinorLF_legion_of_the_betrayed" text="{=NTP.CEKMinorLF_legion_of_the_betrayed}Legatus {NAME}" />
+	<string id="str_ntp_title_set.CEK_MinorMM_legion_of_the_betrayed" text="{=NTP.CEKMinorMM_legion_of_the_betrayed}Tribunus {NAME}" />
+	<string id="str_ntp_title_set.CEK_MinorMF_legion_of_the_betrayed" text="{=NTP.CEKMinorMF_legion_of_the_betrayed}Tribunus {NAME}" />
+</strings>
