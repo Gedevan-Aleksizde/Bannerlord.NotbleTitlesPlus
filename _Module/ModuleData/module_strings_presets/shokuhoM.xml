@@ -8,8 +8,8 @@
 	<string id="str_ntp_title_set.SHOM_2F_default" text="{=NTP.SHOM2F_default}Karou-fujin {CLAN} {NAME}" />
 	<string id="str_ntp_title_set.SHOM_3M_default" text="{=NTP.SHOM3M_default}Karou {CLAN} {NAME}" />
 	<string id="str_ntp_title_set.SHOM_3F_default" text="{=NTP.SHOM3F_default}Karou-fujin {CLAN} {NAME}" />
-	<string id="str_ntp_title_set.SHOM_4M_default" text="{=NTP.SHOM4M_default}Lord Castellan {CLAN} {NAME}" />
-	<string id="str_ntp_title_set.SHOM_4F_default" text="{=NTP.SHOM4F_default}Lord Châtelaine {CLAN} {NAME}" />
+	<string id="str_ntp_title_set.SHOM_4M_default" text="{=NTP.SHOM4M_default}Joushu {CLAN} {NAME}" />
+	<string id="str_ntp_title_set.SHOM_4F_default" text="{=NTP.SHOM4F_default}Joushu-fujin {CLAN} {NAME}" />
 	<string id="str_ntp_title_set.SHOM_5M_default" text="{=NTP.SHOM5M_default}Gokenin {CLAN} {NAME}" />
 	<string id="str_ntp_title_set.SHOM_5F_default" text="{=NTP.SHOM5F_default}Hime {CLAN} {NAME}" />
 	<string id="str_ntp_title_set.SHOM_crownM_default" text="{=NTP.SHOMCrownM_default}Shishi {CLAN} {NAME}" />

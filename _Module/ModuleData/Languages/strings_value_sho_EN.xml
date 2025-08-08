@@ -12,8 +12,8 @@
 		<string id="NTP.SHO2F_default" text="Karou-fujin {NAME}" />
 		<string id="NTP.SHO3M_default" text="Karou {NAME}" />
 		<string id="NTP.SHO3F_default" text="Karou-fujin {NAME}" />
-		<string id="NTP.SHO4M_default" text="Lord Castellan {NAME}" />
-		<string id="NTP.SHO4F_default" text="Lord Châtelaine {NAME}" />
+		<string id="NTP.SHO4M_default" text="Joushu {NAME}" />
+		<string id="NTP.SHO4F_default" text="Joushu-fujin {NAME}" />
 		<string id="NTP.SHO5M_default" text="Gokenin {NAME}" />
 		<string id="NTP.SHO5F_default" text="Hime {NAME}" />
 		<string id="NTP.SHOCrownM_default" text="Shishi {NAME}" />

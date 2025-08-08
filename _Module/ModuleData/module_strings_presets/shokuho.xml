@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <strings>
+	<string id="str_ntp_mcm.preset_shokuho" text="{=NTP.MCMShokuho}Shokuhō" />
 	<!-- Shokuho modified preset -->
-		<string id="str_ntp_mcm.preset_shokuho" text="{=NTP.MCMShokuho}Shokuhō" />
-    
-    <string id="str_ntp_title_set.SHO_1M_default" text="{=NTP.SHO1M_default}{?IS_UNLAND}Daimyou{?}{\?} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
-    <string id="str_ntp_title_set.SHO_1F_default" text="{=NTP.SHO1F_default}Daimyou-fujin {NAME}" />
-    <string id="str_ntp_title_set.SHO_2M_default" text="{=NTP.SHO2M_default}Karou {NAME}" />
-    <string id="str_ntp_title_set.SHO_2F_default" text="{=NTP.SHO2F_default}Karou-fujin {NAME}" />
-    <string id="str_ntp_title_set.SHO_3M_default" text="{=NTP.SHO3M_default}Karou {NAME}" />
-    <string id="str_ntp_title_set.SHO_3F_default" text="{=NTP.SHO3F_default}Karou-fujin {NAME}" />
-    <string id="str_ntp_title_set.SHO_4M_default" text="{=NTP.SHO4M_default}Lord Castellan {NAME}" />
-    <string id="str_ntp_title_set.SHO_4F_default" text="{=NTP.SHO4F_default}Lord Châtelaine {NAME}" />
-    <string id="str_ntp_title_set.SHO_5M_default" text="{=NTP.SHO5M_default}Gokenin {NAME}" />
-    <string id="str_ntp_title_set.SHO_5F_default" text="{=NTP.SHO5F_default}Hime {NAME}" />
-    <string id="str_ntp_title_set.SHO_crownM_default" text="{=NTP.SHOCrownM_default}Shishi {NAME}" />
-    <string id="str_ntp_title_set.SHO_crownF_default" text="{=NTP.SHOCrownF_default}Hime {NAME}" />
-    <string id="str_ntp_title_set.SHO_royalM_default" text="{=NTP.SHORoyalM_default}Jikisan {NAME}" />
-    <string id="str_ntp_title_set.SHO_royalF_default" text="{=NTP.SHORoyalF_default}Hime {NAME}" />
-    
-    <string id="str_ntp_title_set.SHO_MinorLM_default" text="{=NTP.SHOMinorLM_default}{NAME} of {CLAN_SHORT}" />
-    <string id="str_ntp_title_set.SHO_MinorLF_default" text="{=NTP.SHOMinorLF_default}{NAME} of {CLAN_SHORT}" />
-    <string id="str_ntp_title_set.SHO_MinorMM_default" text="{=NTP.SHOMinorMM_default}{NAME} of {CLAN_SHORT}" />
-    <string id="str_ntp_title_set.SHO_MinorMF_default" text="{=NTP.SHOMinorMF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.SHO_1M_default" text="{=NTP.SHO1M_default}{?IS_UNLAND}Daimyou{?}{\?} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+	<string id="str_ntp_title_set.SHO_1F_default" text="{=NTP.SHO1F_default}Daimyou-fujin {NAME}" />
+	<string id="str_ntp_title_set.SHO_2M_default" text="{=NTP.SHO2M_default}Karou {NAME}" />
+	<string id="str_ntp_title_set.SHO_2F_default" text="{=NTP.SHO2F_default}Karou-fujin {NAME}" />
+	<string id="str_ntp_title_set.SHO_3M_default" text="{=NTP.SHO3M_default}Karou {NAME}" />
+	<string id="str_ntp_title_set.SHO_3F_default" text="{=NTP.SHO3F_default}Karou-fujin {NAME}" />
+	<string id="str_ntp_title_set.SHO_4M_default" text="{=NTP.SHO4M_default}Joushu {NAME}" />
+	<string id="str_ntp_title_set.SHO_4F_default" text="{=NTP.SHO4F_default}Joushu-fujin {NAME}" />
+	<string id="str_ntp_title_set.SHO_5M_default" text="{=NTP.SHO5M_default}Gokenin {NAME}" />
+	<string id="str_ntp_title_set.SHO_5F_default" text="{=NTP.SHO5F_default}Hime {NAME}" />
+	<string id="str_ntp_title_set.SHO_crownM_default" text="{=NTP.SHOCrownM_default}Shishi {NAME}" />
+	<string id="str_ntp_title_set.SHO_crownF_default" text="{=NTP.SHOCrownF_default}Hime {NAME}" />
+	<string id="str_ntp_title_set.SHO_royalM_default" text="{=NTP.SHORoyalM_default}Jikisan {NAME}" />
+	<string id="str_ntp_title_set.SHO_royalF_default" text="{=NTP.SHORoyalF_default}Hime {NAME}" />
+	
+	<string id="str_ntp_title_set.SHO_MinorLM_default" text="{=NTP.SHOMinorLM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.SHO_MinorLF_default" text="{=NTP.SHOMinorLF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.SHO_MinorMM_default" text="{=NTP.SHOMinorMM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.SHO_MinorMF_default" text="{=NTP.SHOMinorMF_default}{NAME} of {CLAN_SHORT}" />
 </strings>

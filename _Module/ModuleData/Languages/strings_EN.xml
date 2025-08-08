@@ -31,7 +31,7 @@
 		<string id="NTP.MCMHeirPrimoF" text="Female Primogemiture"/>
 		<string id="NTP.MCMHeirAdult" text="Adult"/>
 		<string id="NTP.MCMHeirElder" text="Elder"/>
-		<string id="NTP.MCMHeirHint" text="(WIP) Law of heir to the throne. Primogeniture: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule."/>
+		<string id="NTP.MCMHeirHint" text="(WIP) Law of heir to the throne. Primogeniture: the ruler's oldest son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule."/>
 		<string id="NTP.landless" text="Landless" />
 		<string id="NTP.MCMRank1M" text="King (Rank 1)"/>
 		<string id="NTP.MCMRank1MHint" text="Title format of the male monorch"/>
