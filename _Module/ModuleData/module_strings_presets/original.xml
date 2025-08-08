@@ -17,6 +17,11 @@
 	<string id="str_ntp_title_set.ORI_royalM_default" text="{=NTP.ORIRoyalM_default}{NAME}" />
 	<string id="str_ntp_title_set.ORI_royalF_default" text="{=NTP.ORIRoyalF_default}{NAME}" />
 	
+	<string id="str_ntp_title_set.ORI_MinorLM_default" text="{=NTP.ORIMinorLM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.ORI_MinorLF_default" text="{=NTP.ORIMinorLF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.ORI_MinorMM_default" text="{=NTP.ORIMinorMM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="str_ntp_title_set.ORI_MinorMF_default" text="{=NTP.ORIMinorMF_default}{NAME} of {CLAN_SHORT}" />
+	
 	<string id="str_ntp_title_set.ORI_1M_aserai" text="{=NTP.ORI1M_aserai}Sultan {NAME}" />
 	<string id="str_ntp_title_set.ORI_1F_aserai" text="{=NTP.ORI1F_aserai}Sultana {NAME}" />
 	<string id="str_ntp_title_set.ORI_2M_aserai" text="{=NTP.ORI2M_aserai}Prince {NAME}" />
