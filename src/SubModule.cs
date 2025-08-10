@@ -20,13 +20,12 @@ namespace NobleTitlesPlus
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
-            Util.EnableLog = true; // enable various debug logging
-            Util.EnableTracer = false; // enable code event tracing (requires enabled logging)
+            Util.EnableLog = true;
+            Util.EnableTracer = false;
             this.harmony = new(SubModule.HarmonyDomain);
         }
         protected override void OnBeforeInitialModuleScreenSetAsRoot()
         {
-            // Util.Log.Print($">> OnBeforeInitialModuleScreenSetAsRoot called");
             base.OnBeforeInitialModuleScreenSetAsRoot();
 
             if (!this.hasLoaded && !this.canceled)
