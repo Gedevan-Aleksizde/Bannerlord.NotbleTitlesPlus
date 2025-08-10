@@ -27,20 +27,20 @@
 		<string id="NTP.SHOMMinorMM_default" text="{CLAN_SHORT}の{NAME}" />
 		<string id="NTP.SHOMMinorMF_default" text="{CLAN_SHORT}の{NAME}" />
 		
-		<string id="NTP.SHO1M_asakura" text="越前守護代{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_ashikaga" text="征夷大將軍{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_hatakeyama" text="能登守護{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_imagawa" text="駿遠守護{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_oda" text="尾張守護代{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_otomo" text="豐後守護{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_satake" text="常陸守護{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_shimazu" text="薩摩守護{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_takeda" text="甲斐守護{CLAN}{NAME}" /> 	
-		<string id="NTP.SHO1M_uesugi" text="關東管領{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_utsunomiya" text="下野守護{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_rokkaku" text="近江守護{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_mori" text="右馬頭{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1M_ikko_shu" text="法主{CLAN}{NAME}" /> 
-		<string id="NTP.SHO1F_ikko_shu" text="{CLAN}{NAME}夫人" /> 
+		<string id="NTP.SHOM1M_asakura" text="越前守護代{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_ashikaga" text="征夷大將軍{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_hatakeyama" text="能登守護{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_imagawa" text="駿遠守護{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_oda" text="{CLAN}尾張守{NAME}" /> 
+		<string id="NTP.SHOM1M_otomo" text="豐後守護{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_satake" text="常陸守護{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_shimazu" text="薩摩守護{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_takeda" text="甲斐守護{CLAN}{NAME}" /> 	
+		<string id="NTP.SHOM1M_uesugi" text="關東管領{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_utsunomiya" text="下野守護{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_rokkaku" text="近江守護{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_mori" text="{CLAN}右馬頭{NAME}" /> 
+		<string id="NTP.SHOM1M_ikko_shu" text="法主{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1F_ikko_shu" text="{CLAN}{NAME}夫人" /> 
 	</strings>
 </base>

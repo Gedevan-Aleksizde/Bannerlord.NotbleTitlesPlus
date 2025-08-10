@@ -30,8 +30,8 @@
 		<string id="NTP.SHO1M_asakura" text="越前守護代{NAME}" /> 
 		<string id="NTP.SHO1M_ashikaga" text="征夷大將軍{NAME}" /> 
 		<string id="NTP.SHO1M_hatakeyama" text="能登守護{NAME}" /> 
-		<string id="NTP.SHO1M_imagawa" text="遠江・駿河守護{NAME}" /> 
-		<string id="NTP.SHO1M_oda" text="尾張守護代{NAME}" /> 
+		<string id="NTP.SHO1M_imagawa" text="駿遠守護{NAME}" /> 
+		<string id="NTP.SHO1M_oda" text="尾張守{NAME}" /> 
 		<string id="NTP.SHO1M_otomo" text="豐後守護{NAME}" /> 
 		<string id="NTP.SHO1M_satake" text="常陸守護{NAME}" /> 
 		<string id="NTP.SHO1M_shimazu" text="薩摩守護{NAME}" /> 
