@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData id="日本語" name="日本語" subtitle_extension="jp" supported_iso="ja,jpn,ja-ja,ja-jp,jp-jp" under_development="false">
 	<LanguageFile xml_path="JP/strings_JP.xml" />
-	<LanguageFile xml_path="JP/strings_value_JP.xml" />
-	<LanguageFile xml_path="JP/strings_value_orig_JP.xml" />
-	<LanguageFile xml_path="JP/strings_value_var_JP.xml" />
-	<LanguageFile xml_path="JP/strings_value_varm_JP.xml" />
-	<LanguageFile xml_path="JP/strings_value_cek_JP.xml" />
-	<LanguageFile xml_path="JP/strings_value_bk_JP.xml" />
-	<LanguageFile xml_path="JP/strings_value_sho_JP.xml" />
-	<LanguageFile xml_path="JP/strings_value_shoM_JP.xml" />
+	<LanguageFile xml_path="JP/shokuho_provinces_JP.xml" />
+	<LanguageFile xml_path="JP/preset_default_JP.xml" />
+	<LanguageFile xml_path="JP/preset_orig_JP.xml" />
+	<LanguageFile xml_path="JP/preset_var_JP.xml" />
+	<LanguageFile xml_path="JP/preset_varm_JP.xml" />
+	<LanguageFile xml_path="JP/preset_cek_JP.xml" />
+	<LanguageFile xml_path="JP/preset_bk_JP.xml" />
+	<LanguageFile xml_path="JP/preset_sho_JP.xml" />
+	<LanguageFile xml_path="JP/preset_shoM_JP.xml" />
 </LanguageData>

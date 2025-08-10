@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base>
+  <tags>
+    <tag language="日本語"/>
+  </tags>
+  <strings>
+    <string id="41b983B1" text="Dewa"/>
+    <string id="53EA7489" text="Mutsu"/>
+    <string id="5e63b676" text="Shimotsuke"/>
+    <string id="32c028f6" text="Kouzuke"/>
+    <string id="0c036123" text="Shinano"/>
+    <string id="c0A99b0C" text="Mino"/>
+    <string id="3DcfeFBF" text="Oumi"/>
+    <string id="f2F9D8a8" text="Hitachi"/>
+    <string id="Fb984391" text="Shimousa"/>
+    <string id="549dB29C" text="Kazusa"/>
+    <string id="FbF7FE46" text="Anbou"/>
+    <string id="7f07f046" text="Musashi"/>
+    <string id="906A337C" text="Sagami"/>
+    <string id="554b16C7" text="Kai"/>
+    <string id="3e3605AA" text="Izu"/>
+    <string id="4BEB8984" text="Tōtoumi"/>
+    <string id="D34A3758" text="Suruga"/>
+    <string id="a8104Cd9" text="Mikawa"/>
+    <string id="53F3Fc0f" text="Owari"/>
+    <string id="9f152D27" text="Iga"/>
+    <string id="Eb1b43f9" text="Ise"/>
+    <string id="E5Bf8251" text="Shima"/>
+    <string id="8618eC5F" text="Yamato"/>
+    <string id="3F51ce40" text="Kawachi"/>
+    <string id="8407707b" text="Izumi"/>
+    <string id="24d36908" text="Yamashiro"/>
+    <string id="213A9303" text="Settsu"/>
+    <string id="84863926" text="Echigo"/>
+    <string id="4C9f8aA0" text="Sado"/>
+    <string id="d63a8F26" text="Etchū"/>
+    <string id="4F878aa5" text="Kaga"/>
+    <string id="00672cBA" text="Noto"/>
+    <string id="41a25e90" text="Echizen"/>
+    <string id="03891222" text="Wakasa"/>
+    <string id="2AF6d6C5" text="Kī"/>
+    <string id="3996f905" text="Awaji"/>
+    <string id="c276C68e" text="Awa"/>
+    <string id="64b2F9b1" text="Sanuki"/>
+    <string id="C3ED5d0A" text="Tosa"/>
+    <string id="9fFC200D" text="Iyo"/>
+    <string id="2a9798FB" text="Harima"/>
+    <string id="46EBa592" text="Bizen"/>
+    <string id="096168ff" text="Bitchū"/>
+    <string id="1EF7cEA9" text="Bingo"/>
+    <string id="C78fd853" text="Mimasaka"/>
+    <string id="5795Ff35" text="Aki"/>
+    <string id="391249eC" text="Suou"/>
+    <string id="42F4109C" text="Nagato"/>
+    <string id="6461053f" text="Tanba"/>
+    <string id="68bCD3EE" text="Tango"/>
+    <string id="f6F96E8C" text="Tajima"/>
+    <string id="c40080ff" text="Inaba"/>
+    <string id="0465EaAB" text="Houki"/>
+    <string id="D93dEA4E" text="Izumo"/>
+    <string id="0d7EAd6C" text="Oki"/>
+    <string id="a47F6Bd1" text="Iwami"/>
+    <string id="F9E37c22" text="Chikuzen"/>
+    <string id="28c58309" text="Chikugo"/>
+    <string id="116e7113" text="Buzen"/>
+    <string id="9639B1b6" text="Bungo"/>
+    <string id="462450e3" text="Hizen"/>
+    <string id="D90394ea" text="higo"/>
+    <string id="2F6228aA" text="Hyūga"/>
+    <string id="3C7CeD22" text="Ōsumi"/>
+    <string id="39d3a799" text="Satuma"/>
+    <string id="151eC682" text="Iki"/>
+    <string id="d2FE3713" text="Tsushima"/>
+    <string id="Qpr6E5Yt" text="Kyouto"/>
+    <string id="6EbDB187" text="Unlanded"/>
+  </strings>
+</base>

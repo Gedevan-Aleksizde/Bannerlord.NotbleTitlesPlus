@@ -137,6 +137,6 @@
 	<string id="ntp_sho_prov.satsuma" text="{=39d3a799}Satuma"/>
 	<string id="ntp_sho_prov.iki" text="{=151eC682}Iki"/>
 	<string id="ntp_sho_prov.tsushima" text="{=d2FE3713}Tsushima"/>
-	<string id="ntp_sho_prov.keichou" text="{=Qpr6E5Ytu}Kyouto"/>
+	<string id="ntp_sho_prov.keichou" text="{=Qpr6E5Yt}Kyouto"/>
 	<string id="ntp_sho_prov.default" text="{=6EbDB187}Unlanded"/>
 </strings>

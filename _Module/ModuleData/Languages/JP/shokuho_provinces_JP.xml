@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base>
+  <tags>
+    <tag language="日本語"/>
+  </tags>
+  <strings>
+    <string id="41b983B1" text="出羽"/>
+    <string id="53EA7489" text="陸奥"/>
+    <string id="5e63b676" text="下野"/>
+    <string id="32c028f6" text="上野"/>
+    <string id="0c036123" text="信濃"/>
+    <string id="c0A99b0C" text="美濃"/>
+    <string id="3DcfeFBF" text="近江"/>
+    <string id="f2F9D8a8" text="常陸"/>
+    <string id="Fb984391" text="下総"/>
+    <string id="549dB29C" text="上総"/>
+    <string id="FbF7FE46" text="安房"/>
+    <string id="7f07f046" text="武蔵"/>
+    <string id="906A337C" text="相模"/>
+    <string id="554b16C7" text="甲斐"/>
+    <string id="3e3605AA" text="伊豆"/>
+    <string id="4BEB8984" text="遠江"/>
+    <string id="D34A3758" text="駿河"/>
+    <string id="a8104Cd9" text="参河"/>
+    <string id="53F3Fc0f" text="尾張"/>
+    <string id="9f152D27" text="伊賀"/>
+    <string id="Eb1b43f9" text="伊勢"/>
+    <string id="E5Bf8251" text="志摩"/>
+    <string id="8618eC5F" text="大和"/>
+    <string id="3F51ce40" text="河内"/>
+    <string id="8407707b" text="和泉"/>
+    <string id="24d36908" text="山城"/>
+    <string id="213A9303" text="摂津"/>
+    <string id="84863926" text="越後"/>
+    <string id="4C9f8aA0" text="佐渡"/>
+    <string id="d63a8F26" text="越中"/>
+    <string id="4F878aa5" text="加賀"/>
+    <string id="00672cBA" text="能登"/>
+    <string id="41a25e90" text="越前"/>
+    <string id="03891222" text="若狭"/>
+    <string id="2AF6d6C5" text="紀伊"/>
+    <string id="3996f905" text="淡路"/>
+    <string id="c276C68e" text="阿波"/>
+    <string id="64b2F9b1" text="讃岐"/>
+    <string id="C3ED5d0A" text="土佐"/>
+    <string id="9fFC200D" text="伊予"/>
+    <string id="2a9798FB" text="播磨"/>
+    <string id="46EBa592" text="備前"/>
+    <string id="096168ff" text="備中"/>
+    <string id="1EF7cEA9" text="備後"/>
+    <string id="C78fd853" text="美作"/>
+    <string id="5795Ff35" text="安芸"/>
+    <string id="391249eC" text="周防"/>
+    <string id="42F4109C" text="長門"/>
+    <string id="6461053f" text="丹波"/>
+    <string id="68bCD3EE" text="丹後"/>
+    <string id="f6F96E8C" text="但馬"/>
+    <string id="c40080ff" text="因幡"/>
+    <string id="0465EaAB" text="伯耆"/>
+    <string id="D93dEA4E" text="出雲"/>
+    <string id="0d7EAd6C" text="隠岐"/>
+    <string id="a47F6Bd1" text="石見"/>
+    <string id="F9E37c22" text="筑前"/>
+    <string id="28c58309" text="筑後"/>
+    <string id="116e7113" text="豊前"/>
+    <string id="9639B1b6" text="豊後"/>
+    <string id="462450e3" text="肥前"/>
+    <string id="D90394ea" text="肥後"/>
+    <string id="2F6228aA" text="日向"/>
+    <string id="3C7CeD22" text="大隅"/>
+    <string id="39d3a799" text="薩摩"/>
+    <string id="151eC682" text="壱岐"/>
+    <string id="d2FE3713" text="対馬"/>
+    <string id="Qpr6E5Yt" text="京兆"/>
+    <string id="6EbDB187" text="無領"/>
+  </strings>
+</base>
