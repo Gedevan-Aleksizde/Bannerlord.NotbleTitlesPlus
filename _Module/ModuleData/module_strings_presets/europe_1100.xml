@@ -1,670 +1,670 @@
 <?xml version="1.0" encoding="utf-8"?>
 <strings>
-	<string id="str_ntp_mcm.preset_europe_1100" text="{=NTP.MCMEU1100}Europe 1100" />
-	<string id="str_ntp_title_set.EU1100_1M_default" text="{=NTP.EU11001M_default}Rex {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_default" text="{=NTP.EU11001F_default}Regna {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_default" text="{=NTP.EU11002M_default}Dux {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_default" text="{=NTP.EU11002F_default}Duchissa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_default" text="{=NTP.EU11003M_default}Comes {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_default" text="{=NTP.EU11003F_default}Comes {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_default" text="{=NTP.EU11004M_default}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_default" text="{=NTP.EU11004F_default}Baroness {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_default" text="{=NTP.EU11005M_default}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_default" text="{=NTP.EU11005F_default}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_default" text="{=NTP.EU1100CrownM_default}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_default" text="{=NTP.EU1100CrownF_default}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_default" text="{=NTP.EU1100RoyalM_default}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_default" text="{=NTP.EU1100RoyalF_default}{NAME}" />
+	<string id="ntp_mcm.preset_europe_1100" text="{=NTP.MCMEU1100}Europe 1100" />
+	<string id="ntp_title_set.EU1100_1M_default" text="{=NTP.EU11001M_default}Rex {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_default" text="{=NTP.EU11001F_default}Regna {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_default" text="{=NTP.EU11002M_default}Dux {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_default" text="{=NTP.EU11002F_default}Duchissa {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_default" text="{=NTP.EU11003M_default}Comes {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_default" text="{=NTP.EU11003F_default}Comes {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_default" text="{=NTP.EU11004M_default}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_default" text="{=NTP.EU11004F_default}Baroness {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_default" text="{=NTP.EU11005M_default}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_default" text="{=NTP.EU11005F_default}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_default" text="{=NTP.EU1100CrownM_default}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_default" text="{=NTP.EU1100CrownF_default}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_default" text="{=NTP.EU1100RoyalM_default}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_default" text="{=NTP.EU1100RoyalF_default}{NAME}" />
 	
-	<string id="str_ntp_title_set.EU1100_MinorLM_default" text="{=NTP.EU1100MinorLM_default}{NAME} of {CLAN_SHORT}" />
-	<string id="str_ntp_title_set.EU1100_MinorLF_default" text="{=NTP.EU1100MinorLF_default}{NAME} of {CLAN_SHORT}" />
-	<string id="str_ntp_title_set.EU1100_MinorMM_default" text="{=NTP.EU1100MinorMM_default}{NAME} of {CLAN_SHORT}" />
-	<string id="str_ntp_title_set.EU1100_MinorMF_default" text="{=NTP.EU1100MinorMF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.EU1100_MinorLM_default" text="{=NTP.EU1100MinorLM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.EU1100_MinorLF_default" text="{=NTP.EU1100MinorLF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.EU1100_MinorMM_default" text="{=NTP.EU1100MinorMM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.EU1100_MinorMF_default" text="{=NTP.EU1100MinorMF_default}{NAME} of {CLAN_SHORT}" />
 	
 	
 	<!-- Berber (Imazighen) culture -->
 	<!-- Almovite Sultanate -->
-	<string id="str_ntp_title_set.EU1100_1M_aserai" text="{=NTP.EU11001M_almovite}Emir {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_aserai" text="{=NTP.EU11001F_almovite}Emira {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_aserai" text="{=NTP.EU11002M_almovite}Vizier {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_aserai" text="{=NTP.EU11002F_almovite}Vizier {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_aserai" text="{=NTP.EU11003M_almovite}Vizier {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_aserai" text="{=NTP.EU11003F_almovite}Vizier {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_aserai" text="{=NTP.EU11004M_almovite}Vizier {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_aserai" text="{=NTP.EU11004F_almovite}Vizier {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_aserai" text="{=NTP.EU11005M_almovite}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_aserai" text="{=NTP.EU11005F_almovite}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_aserai" text="{=NTP.EU1100CrownM_almovite}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_aserai" text="{=NTP.EU1100CrownF_almovite}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_aserai" text="{=NTP.EU1100RoyalM_almovite}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_aserai" text="{=NTP.EU1100RoyalF_almovite}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_aserai" text="{=NTP.EU11001M_almovite}Emir {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_aserai" text="{=NTP.EU11001F_almovite}Emira {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_aserai" text="{=NTP.EU11002M_almovite}Vizier {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_aserai" text="{=NTP.EU11002F_almovite}Vizier {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_aserai" text="{=NTP.EU11003M_almovite}Vizier {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_aserai" text="{=NTP.EU11003F_almovite}Vizier {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_aserai" text="{=NTP.EU11004M_almovite}Vizier {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_aserai" text="{=NTP.EU11004F_almovite}Vizier {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_aserai" text="{=NTP.EU11005M_almovite}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_aserai" text="{=NTP.EU11005F_almovite}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_aserai" text="{=NTP.EU1100CrownM_almovite}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_aserai" text="{=NTP.EU1100CrownF_almovite}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_aserai" text="{=NTP.EU1100RoyalM_almovite}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_aserai" text="{=NTP.EU1100RoyalF_almovite}{NAME}" />
 	<!--Hammadid Sultanate -->
-	<string id="str_ntp_title_set.EU1100_1M_hammadid" text="{=NTP.EU11001M_hammadid}Sultan {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_hammadid" text="{=NTP.EU11001F_hammadid}Sultana {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_hammadid" text="{=NTP.EU11002M_hammadid}Emir {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_hammadid" text="{=NTP.EU11002F_hammadid}Emira {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_hammadid" text="{=NTP.EU11003M_hammadid}Emir {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_hammadid" text="{=NTP.EU11003F_hammadid}Emira {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_hammadid" text="{=NTP.EU11004M_hammadid}Emir {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_hammadid" text="{=NTP.EU11004F_hammadid}Emira {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_hammadid" text="{=NTP.EU11005M_hammadid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_hammadid" text="{=NTP.EU11005F_hammadid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_hammadid" text="{=NTP.EU1100CrownM_hammadid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_hammadid" text="{=NTP.EU1100CrownF_hammadid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_hammadid" text="{=NTP.EU1100RoyalM_hammadid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_hammadid" text="{=NTP.EU1100RoyalF_hammadid}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_hammadid" text="{=NTP.EU11001M_hammadid}Sultan {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_hammadid" text="{=NTP.EU11001F_hammadid}Sultana {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_hammadid" text="{=NTP.EU11002M_hammadid}Emir {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_hammadid" text="{=NTP.EU11002F_hammadid}Emira {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_hammadid" text="{=NTP.EU11003M_hammadid}Emir {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_hammadid" text="{=NTP.EU11003F_hammadid}Emira {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_hammadid" text="{=NTP.EU11004M_hammadid}Emir {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_hammadid" text="{=NTP.EU11004F_hammadid}Emira {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_hammadid" text="{=NTP.EU11005M_hammadid}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_hammadid" text="{=NTP.EU11005F_hammadid}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_hammadid" text="{=NTP.EU1100CrownM_hammadid}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_hammadid" text="{=NTP.EU1100CrownF_hammadid}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_hammadid" text="{=NTP.EU1100RoyalM_hammadid}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_hammadid" text="{=NTP.EU1100RoyalF_hammadid}{NAME}" />
 	
 	
 	<!-- Ayyubid (Arabic) Culture -->
 	<!-- Famitmid Calophnate -->
-	<string id="str_ntp_title_set.EU1100_1M_ayuubid" text="{=NTP.EU11001M_ayuubid}Caliph {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_ayuubid" text="{=NTP.EU11001F_ayuubid}Caliph {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_ayuubid" text="{=NTP.EU11002M_ayuubid}Emir {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_ayuubid" text="{=NTP.EU11002F_ayuubid}Emira {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_ayuubid" text="{=NTP.EU11003M_ayuubid}Emir {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_ayuubid" text="{=NTP.EU11003F_ayuubid}Emira {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_ayuubid" text="{=NTP.EU11004M_ayuubid}Emir {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_ayuubid" text="{=NTP.EU11004F_ayuubid}Emira {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_ayuubid" text="{=NTP.EU11005M_ayuubid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_ayuubid" text="{=NTP.EU11005F_ayuubid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_ayuubid" text="{=NTP.EU1100CrownM_ayuubid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_ayuubid" text="{=NTP.EU1100CrownF_ayuubid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_ayuubid" text="{=NTP.EU1100RoyalM_ayuubid}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_ayuubid" text="{=NTP.EU1100RoyalF_ayuubid}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_ayuubid" text="{=NTP.EU11001M_ayuubid}Caliph {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_ayuubid" text="{=NTP.EU11001F_ayuubid}Caliph {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_ayuubid" text="{=NTP.EU11002M_ayuubid}Emir {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_ayuubid" text="{=NTP.EU11002F_ayuubid}Emira {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_ayuubid" text="{=NTP.EU11003M_ayuubid}Emir {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_ayuubid" text="{=NTP.EU11003F_ayuubid}Emira {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_ayuubid" text="{=NTP.EU11004M_ayuubid}Emir {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_ayuubid" text="{=NTP.EU11004F_ayuubid}Emira {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_ayuubid" text="{=NTP.EU11005M_ayuubid}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_ayuubid" text="{=NTP.EU11005F_ayuubid}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_ayuubid" text="{=NTP.EU1100CrownM_ayuubid}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_ayuubid" text="{=NTP.EU1100CrownF_ayuubid}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_ayuubid" text="{=NTP.EU1100RoyalM_ayuubid}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_ayuubid" text="{=NTP.EU1100RoyalF_ayuubid}{NAME}" />
 	
 	
 	<!--Baltic culture (why golden horde?)-->
 	<!-- Baltic Tribes -->
-	<string id="str_ntp_title_set.EU1100_1M_goldenhorde" text="{=NTP.EU11001M_goldenhorde}Kuningas {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_goldenhorde" text="{=NTP.EU11001F_goldenhorde}Kuningas {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_goldenhorde" text="{=NTP.EU11002M_goldenhorde}Bajorai {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_goldenhorde" text="{=NTP.EU11002F_goldenhorde}Bajorai {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_goldenhorde" text="{=NTP.EU11003M_goldenhorde}Bajorai {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_goldenhorde" text="{=NTP.EU11003F_goldenhorde}Bajorai {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_goldenhorde" text="{=NTP.EU11004M_goldenhorde}Bajorai {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_goldenhorde" text="{=NTP.EU11004F_goldenhorde}Bajorai {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_goldenhorde" text="{=NTP.EU11005M_goldenhorde}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_goldenhorde" text="{=NTP.EU11005F_goldenhorde}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_goldenhorde" text="{=NTP.EU1100CrownM_goldenhorde}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_goldenhorde" text="{=NTP.EU1100CrownF_goldenhorde}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_goldenhorde" text="{=NTP.EU1100RoyalM_goldenhorde}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_goldenhorde" text="{=NTP.EU1100RoyalF_goldenhorde}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_goldenhorde" text="{=NTP.EU11001M_goldenhorde}Kuningas {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_goldenhorde" text="{=NTP.EU11001F_goldenhorde}Kuningas {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_goldenhorde" text="{=NTP.EU11002M_goldenhorde}Bajorai {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_goldenhorde" text="{=NTP.EU11002F_goldenhorde}Bajorai {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_goldenhorde" text="{=NTP.EU11003M_goldenhorde}Bajorai {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_goldenhorde" text="{=NTP.EU11003F_goldenhorde}Bajorai {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_goldenhorde" text="{=NTP.EU11004M_goldenhorde}Bajorai {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_goldenhorde" text="{=NTP.EU11004F_goldenhorde}Bajorai {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_goldenhorde" text="{=NTP.EU11005M_goldenhorde}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_goldenhorde" text="{=NTP.EU11005F_goldenhorde}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_goldenhorde" text="{=NTP.EU1100CrownM_goldenhorde}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_goldenhorde" text="{=NTP.EU1100CrownF_goldenhorde}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_goldenhorde" text="{=NTP.EU1100RoyalM_goldenhorde}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_goldenhorde" text="{=NTP.EU1100RoyalF_goldenhorde}{NAME}" />
 	
 	
 	<!-- Greco-Roman (Byzantine) -->
-	<string id="str_ntp_title_set.EU1100_1M_byzantine" text="{=NTP.EU11001M_byzantine}Basileus {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_byzantine" text="{=NTP.EU11001F_byzantine}Basilissa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_byzantine" text="{=NTP.EU11002M_byzantine}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_byzantine" text="{=NTP.EU11002F_byzantine}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_byzantine" text="{=NTP.EU11003M_byzantine}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_byzantine" text="{=NTP.EU11003F_byzantine}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_byzantine" text="{=NTP.EU11004M_byzantine}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_byzantine" text="{=NTP.EU11004F_byzantine}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_byzantine" text="{=NTP.EU11005M_byzantine}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_byzantine" text="{=NTP.EU11005F_byzantine}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_byzantine" text="{=NTP.EU1100CrownM_byzantine}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_byzantine" text="{=NTP.EU1100CrownF_byzantine}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_byzantine" text="{=NTP.EU1100RoyalM_byzantine}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_byzantine" text="{=NTP.EU1100RoyalF_byzantine}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_byzantine" text="{=NTP.EU11001M_byzantine}Basileus {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_byzantine" text="{=NTP.EU11001F_byzantine}Basilissa {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_byzantine" text="{=NTP.EU11002M_byzantine}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_byzantine" text="{=NTP.EU11002F_byzantine}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_byzantine" text="{=NTP.EU11003M_byzantine}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_byzantine" text="{=NTP.EU11003F_byzantine}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_byzantine" text="{=NTP.EU11004M_byzantine}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_byzantine" text="{=NTP.EU11004F_byzantine}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_byzantine" text="{=NTP.EU11005M_byzantine}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_byzantine" text="{=NTP.EU11005F_byzantine}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_byzantine" text="{=NTP.EU1100CrownM_byzantine}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_byzantine" text="{=NTP.EU1100CrownF_byzantine}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_byzantine" text="{=NTP.EU1100RoyalM_byzantine}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_byzantine" text="{=NTP.EU1100RoyalF_byzantine}{NAME}" />
 	<!-- Byazantium -->
-	<string id="str_ntp_title_set.EU1100_1M_byzantium" text="{=NTP.EU11001M_byzantium}Basileus {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_byzantium" text="{=NTP.EU11001F_byzantium}Basilissa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_byzantium" text="{=NTP.EU11002M_byzantium}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_byzantium" text="{=NTP.EU11002F_byzantium}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_byzantium" text="{=NTP.EU11003M_byzantium}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_byzantium" text="{=NTP.EU11003F_byzantium}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_byzantium" text="{=NTP.EU11004M_byzantium}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_byzantium" text="{=NTP.EU11004F_byzantium}Kephale {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_byzantium" text="{=NTP.EU11005M_byzantium}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_byzantium" text="{=NTP.EU11005F_byzantium}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_byzantium" text="{=NTP.EU1100CrownM_byzantium}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_byzantium" text="{=NTP.EU1100CrownF_byzantium}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_byzantium" text="{=NTP.EU1100RoyalM_byzantium}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_byzantium" text="{=NTP.EU1100RoyalF_byzantium}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_byzantium" text="{=NTP.EU11001M_byzantium}Basileus {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_byzantium" text="{=NTP.EU11001F_byzantium}Basilissa {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_byzantium" text="{=NTP.EU11002M_byzantium}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_byzantium" text="{=NTP.EU11002F_byzantium}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_byzantium" text="{=NTP.EU11003M_byzantium}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_byzantium" text="{=NTP.EU11003F_byzantium}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_byzantium" text="{=NTP.EU11004M_byzantium}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_byzantium" text="{=NTP.EU11004F_byzantium}Kephale {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_byzantium" text="{=NTP.EU11005M_byzantium}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_byzantium" text="{=NTP.EU11005F_byzantium}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_byzantium" text="{=NTP.EU1100CrownM_byzantium}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_byzantium" text="{=NTP.EU1100CrownF_byzantium}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_byzantium" text="{=NTP.EU1100RoyalM_byzantium}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_byzantium" text="{=NTP.EU1100RoyalF_byzantium}{NAME}" />
 	
 	
 	<!-- Nordic culture -->
 	<!-- Norway -->
-	<string id="str_ntp_title_set.EU1100_1M_sturgia" text="{=NTP.EU11001M_sturgia}Konge {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_sturgia" text="{=NTP.EU11001F_sturgia}Drnning {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_sturgia" text="{=NTP.EU11002M_sturgia}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_sturgia" text="{=NTP.EU11002F_sturgia}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_sturgia" text="{=NTP.EU11003M_sturgia}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_sturgia" text="{=NTP.EU11003F_sturgia}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_sturgia" text="{=NTP.EU11004M_sturgia}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_sturgia" text="{=NTP.EU11004F_sturgia}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_sturgia" text="{=NTP.EU11005M_sturgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_sturgia" text="{=NTP.EU11005F_sturgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_sturgia" text="{=NTP.EU1100CrownM_sturgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_sturgia" text="{=NTP.EU1100CrownF_sturgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_sturgia" text="{=NTP.EU1100RoyalM_sturgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_sturgia" text="{=NTP.EU1100RoyalF_sturgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_sturgia" text="{=NTP.EU11001M_sturgia}Konge {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_sturgia" text="{=NTP.EU11001F_sturgia}Drnning {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_sturgia" text="{=NTP.EU11002M_sturgia}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_sturgia" text="{=NTP.EU11002F_sturgia}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_sturgia" text="{=NTP.EU11003M_sturgia}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_sturgia" text="{=NTP.EU11003F_sturgia}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_sturgia" text="{=NTP.EU11004M_sturgia}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_sturgia" text="{=NTP.EU11004F_sturgia}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_sturgia" text="{=NTP.EU11005M_sturgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_sturgia" text="{=NTP.EU11005F_sturgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_sturgia" text="{=NTP.EU1100CrownM_sturgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_sturgia" text="{=NTP.EU1100CrownF_sturgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_sturgia" text="{=NTP.EU1100RoyalM_sturgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_sturgia" text="{=NTP.EU1100RoyalF_sturgia}{NAME}" />
 	<!-- Sweden -->
-	<string id="str_ntp_title_set.EU1100_1M_sweden" text="{=NTP.EU11001M_sweden}Kung {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_sweden" text="{=NTP.EU11001F_sweden}Drottning {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_sweden" text="{=NTP.EU11002M_sweden}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_sweden" text="{=NTP.EU11002F_sweden}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_sweden" text="{=NTP.EU11003M_sweden}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_sweden" text="{=NTP.EU11003F_sweden}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_sweden" text="{=NTP.EU11004M_sweden}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_sweden" text="{=NTP.EU11004F_sweden}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_sweden" text="{=NTP.EU11005M_sweden}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_sweden" text="{=NTP.EU11005F_sweden}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_sweden" text="{=NTP.EU1100CrownM_sweden}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_sweden" text="{=NTP.EU1100CrownF_sweden}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_sweden" text="{=NTP.EU1100RoyalM_sweden}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_sweden" text="{=NTP.EU1100RoyalF_sweden}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_sweden" text="{=NTP.EU11001M_sweden}Kung {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_sweden" text="{=NTP.EU11001F_sweden}Drottning {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_sweden" text="{=NTP.EU11002M_sweden}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_sweden" text="{=NTP.EU11002F_sweden}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_sweden" text="{=NTP.EU11003M_sweden}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_sweden" text="{=NTP.EU11003F_sweden}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_sweden" text="{=NTP.EU11004M_sweden}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_sweden" text="{=NTP.EU11004F_sweden}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_sweden" text="{=NTP.EU11005M_sweden}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_sweden" text="{=NTP.EU11005F_sweden}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_sweden" text="{=NTP.EU1100CrownM_sweden}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_sweden" text="{=NTP.EU1100CrownF_sweden}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_sweden" text="{=NTP.EU1100RoyalM_sweden}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_sweden" text="{=NTP.EU1100RoyalF_sweden}{NAME}" />
 	<!--Denmark -->
-	<string id="str_ntp_title_set.EU1100_1M_denmark" text="{=NTP.EU11001M_denmark}Konge {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_denmark" text="{=NTP.EU11001F_denmark}Dronning {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_denmark" text="{=NTP.EU11002M_denmark}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_denmark" text="{=NTP.EU11002F_denmark}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_denmark" text="{=NTP.EU11003M_denmark}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_denmark" text="{=NTP.EU11003F_denmark}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_denmark" text="{=NTP.EU11004M_denmark}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_denmark" text="{=NTP.EU11004F_denmark}Jarl {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_denmark" text="{=NTP.EU11005M_denmark}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_denmark" text="{=NTP.EU11005F_denmark}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_denmark" text="{=NTP.EU1100CrownM_denmark}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_denmark" text="{=NTP.EU1100CrownF_denmark}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_denmark" text="{=NTP.EU1100RoyalM_denmark}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_denmark" text="{=NTP.EU1100RoyalF_denmark}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_denmark" text="{=NTP.EU11001M_denmark}Konge {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_denmark" text="{=NTP.EU11001F_denmark}Dronning {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_denmark" text="{=NTP.EU11002M_denmark}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_denmark" text="{=NTP.EU11002F_denmark}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_denmark" text="{=NTP.EU11003M_denmark}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_denmark" text="{=NTP.EU11003F_denmark}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_denmark" text="{=NTP.EU11004M_denmark}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_denmark" text="{=NTP.EU11004F_denmark}Jarl {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_denmark" text="{=NTP.EU11005M_denmark}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_denmark" text="{=NTP.EU11005F_denmark}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_denmark" text="{=NTP.EU1100CrownM_denmark}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_denmark" text="{=NTP.EU1100CrownF_denmark}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_denmark" text="{=NTP.EU1100RoyalM_denmark}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_denmark" text="{=NTP.EU1100RoyalF_denmark}{NAME}" />
 	
 	
 	<!-- Spanish culture -->
-	<string id="str_ntp_title_set.EU1100_1M_spanish" text="{=NTP.EU11001M_spanish}Rey {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_spanish" text="{=NTP.EU11001F_spanish}Reina {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_spanish" text="{=NTP.EU11002M_spanish}Duque {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_spanish" text="{=NTP.EU11002F_spanish}Duquesa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_spanish" text="{=NTP.EU11003M_spanish}Conde {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_spanish" text="{=NTP.EU11003F_spanish}Conde {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_spanish" text="{=NTP.EU11004M_spanish}Barón {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_spanish" text="{=NTP.EU11004F_spanish}Baronesa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_spanish" text="{=NTP.EU11005M_spanish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_spanish" text="{=NTP.EU11005F_spanish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_spanish" text="{=NTP.EU1100CrownM_spanish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_spanish" text="{=NTP.EU1100CrownF_spanish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_spanish" text="{=NTP.EU1100RoyalM_spanish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_spanish" text="{=NTP.EU1100RoyalF_spanish}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_spanish" text="{=NTP.EU11001M_spanish}Rey {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_spanish" text="{=NTP.EU11001F_spanish}Reina {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_spanish" text="{=NTP.EU11002M_spanish}Duque {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_spanish" text="{=NTP.EU11002F_spanish}Duquesa {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_spanish" text="{=NTP.EU11003M_spanish}Conde {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_spanish" text="{=NTP.EU11003F_spanish}Conde {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_spanish" text="{=NTP.EU11004M_spanish}Barón {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_spanish" text="{=NTP.EU11004F_spanish}Baronesa {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_spanish" text="{=NTP.EU11005M_spanish}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_spanish" text="{=NTP.EU11005F_spanish}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_spanish" text="{=NTP.EU1100CrownM_spanish}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_spanish" text="{=NTP.EU1100CrownF_spanish}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_spanish" text="{=NTP.EU1100RoyalM_spanish}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_spanish" text="{=NTP.EU1100RoyalF_spanish}{NAME}" />
 	<!-- Castile -->
-	<string id="str_ntp_title_set.EU1100_1M_empire_w" text="{=NTP.EU11001M_castile}Rey {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_empire_w" text="{=NTP.EU11001F_castile}Reina {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_empire_w" text="{=NTP.EU11002M_castile}Duque {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_empire_w" text="{=NTP.EU11002F_castile}Duquesa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_empire_w" text="{=NTP.EU11003M_castile}Conde {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_empire_w" text="{=NTP.EU11003F_castile}Conde {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_empire_w" text="{=NTP.EU11004M_castile}Barón {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_empire_w" text="{=NTP.EU11004F_castile}Baronesa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_empire_w" text="{=NTP.EU11005M_castile}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_empire_w" text="{=NTP.EU11005F_castile}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_empire_w" text="{=NTP.EU1100CrownM_castile}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_empire_w" text="{=NTP.EU1100CrownF_castile}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_empire_w" text="{=NTP.EU1100RoyalM_castile}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_empire_w" text="{=NTP.EU1100RoyalF_castile}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_empire_w" text="{=NTP.EU11001M_castile}Rey {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_empire_w" text="{=NTP.EU11001F_castile}Reina {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_empire_w" text="{=NTP.EU11002M_castile}Duque {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_empire_w" text="{=NTP.EU11002F_castile}Duquesa {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_empire_w" text="{=NTP.EU11003M_castile}Conde {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_empire_w" text="{=NTP.EU11003F_castile}Conde {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_empire_w" text="{=NTP.EU11004M_castile}Barón {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_empire_w" text="{=NTP.EU11004F_castile}Baronesa {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_empire_w" text="{=NTP.EU11005M_castile}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_empire_w" text="{=NTP.EU11005F_castile}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_empire_w" text="{=NTP.EU1100CrownM_castile}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_empire_w" text="{=NTP.EU1100CrownF_castile}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_empire_w" text="{=NTP.EU1100RoyalM_castile}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_empire_w" text="{=NTP.EU1100RoyalF_castile}{NAME}" />
 	<!-- Aragon -->
-	<string id="str_ntp_title_set.EU1100_1M_aragon" text="{=NTP.EU11001M_aragon}Rey {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_aragon" text="{=NTP.EU11001F_aragon}Reina {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_aragon" text="{=NTP.EU11002M_aragon}Duque {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_aragon" text="{=NTP.EU11002F_aragon}Duquesa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_aragon" text="{=NTP.EU11003M_aragon}Conde {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_aragon" text="{=NTP.EU11003F_aragon}Conde {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_aragon" text="{=NTP.EU11004M_aragon}Barón {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_aragon" text="{=NTP.EU11004F_aragon}Baronesa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_aragon" text="{=NTP.EU11005M_aragon}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_aragon" text="{=NTP.EU11005F_aragon}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_aragon" text="{=NTP.EU1100CrownM_aragon}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_aragon" text="{=NTP.EU1100CrownF_aragon}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_aragon" text="{=NTP.EU1100RoyalM_aragon}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_aragon" text="{=NTP.EU1100RoyalF_aragon}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_aragon" text="{=NTP.EU11001M_aragon}Rey {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_aragon" text="{=NTP.EU11001F_aragon}Reina {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_aragon" text="{=NTP.EU11002M_aragon}Duque {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_aragon" text="{=NTP.EU11002F_aragon}Duquesa {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_aragon" text="{=NTP.EU11003M_aragon}Conde {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_aragon" text="{=NTP.EU11003F_aragon}Conde {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_aragon" text="{=NTP.EU11004M_aragon}Barón {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_aragon" text="{=NTP.EU11004F_aragon}Baronesa {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_aragon" text="{=NTP.EU11005M_aragon}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_aragon" text="{=NTP.EU11005F_aragon}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_aragon" text="{=NTP.EU1100CrownM_aragon}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_aragon" text="{=NTP.EU1100CrownF_aragon}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_aragon" text="{=NTP.EU1100RoyalM_aragon}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_aragon" text="{=NTP.EU1100RoyalF_aragon}{NAME}" />
 	
 	
 	<!-- French Culture-->
 	<!-- France -->
-	<string id="str_ntp_title_set.EU1100_1M_vlandia" text="{=NTP.EU11001M_vlandia}Reis {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_vlandia" text="{=NTP.EU11001F_vlandia}Regna {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_vlandia" text="{=NTP.EU11002M_vlandia}Duc {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_vlandia" text="{=NTP.EU11002F_vlandia}Duquessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_vlandia" text="{=NTP.EU11003M_vlandia}Comte {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_vlandia" text="{=NTP.EU11003F_vlandia}Comtesse {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_vlandia" text="{=NTP.EU11004M_vlandia}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_vlandia" text="{=NTP.EU11004F_vlandia}Baronne {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_vlandia" text="{=NTP.EU11005M_vlandia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_vlandia" text="{=NTP.EU11005F_vlandia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_vlandia" text="{=NTP.EU1100CrownM_vlandia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_vlandia" text="{=NTP.EU1100CrownF_vlandia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_vlandia" text="{=NTP.EU1100RoyalM_vlandia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_vlandia" text="{=NTP.EU1100RoyalF_vlandia}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_vlandia" text="{=NTP.EU11001M_vlandia}Reis {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_vlandia" text="{=NTP.EU11001F_vlandia}Regna {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_vlandia" text="{=NTP.EU11002M_vlandia}Duc {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_vlandia" text="{=NTP.EU11002F_vlandia}Duquessa {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_vlandia" text="{=NTP.EU11003M_vlandia}Comte {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_vlandia" text="{=NTP.EU11003F_vlandia}Comtesse {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_vlandia" text="{=NTP.EU11004M_vlandia}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_vlandia" text="{=NTP.EU11004F_vlandia}Baronne {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_vlandia" text="{=NTP.EU11005M_vlandia}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_vlandia" text="{=NTP.EU11005F_vlandia}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_vlandia" text="{=NTP.EU1100CrownM_vlandia}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_vlandia" text="{=NTP.EU1100CrownF_vlandia}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_vlandia" text="{=NTP.EU1100RoyalM_vlandia}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_vlandia" text="{=NTP.EU1100RoyalF_vlandia}{NAME}" />
 	<!-- Outremer -->
-	<string id="str_ntp_title_set.EU1100_1M_crusade" text="{=NTP.EU11001M_crusade}Adovocatus Sancti Seprichiri {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_crusade" text="{=NTP.EU11001F_crusade}Adovocatus Sancti Seprichiri {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_crusade" text="{=NTP.EU11002M_crusade}Duc {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_crusade" text="{=NTP.EU11002F_crusade}Duquessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_crusade" text="{=NTP.EU11003M_crusade}Comte {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_crusade" text="{=NTP.EU11003F_crusade}Comtesse {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_crusade" text="{=NTP.EU11004M_crusade}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_crusade" text="{=NTP.EU11004F_crusade}Baronne {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_crusade" text="{=NTP.EU11005M_crusade}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_crusade" text="{=NTP.EU11005F_crusade}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_crusade" text="{=NTP.EU1100CrownM_crusade}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_crusade" text="{=NTP.EU1100CrownF_crusade}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_crusade" text="{=NTP.EU1100RoyalM_crusade}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_crusade" text="{=NTP.EU1100RoyalF_crusade}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_crusade" text="{=NTP.EU11001M_crusade}Adovocatus Sancti Seprichiri {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_crusade" text="{=NTP.EU11001F_crusade}Adovocatus Sancti Seprichiri {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_crusade" text="{=NTP.EU11002M_crusade}Duc {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_crusade" text="{=NTP.EU11002F_crusade}Duquessa {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_crusade" text="{=NTP.EU11003M_crusade}Comte {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_crusade" text="{=NTP.EU11003F_crusade}Comtesse {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_crusade" text="{=NTP.EU11004M_crusade}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_crusade" text="{=NTP.EU11004F_crusade}Baronne {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_crusade" text="{=NTP.EU11005M_crusade}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_crusade" text="{=NTP.EU11005F_crusade}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_crusade" text="{=NTP.EU1100CrownM_crusade}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_crusade" text="{=NTP.EU1100CrownF_crusade}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_crusade" text="{=NTP.EU1100RoyalM_crusade}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_crusade" text="{=NTP.EU1100RoyalF_crusade}{NAME}" />
 	
 	
 	<!-- England Culture-->
-	<string id="str_ntp_title_set.EU1100_1M_english" text="{=NTP.EU11001M_english}King {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_english" text="{=NTP.EU11001F_english}Queen {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_english" text="{=NTP.EU11002M_english}Duke {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_english" text="{=NTP.EU11002F_english}Duchess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_english" text="{=NTP.EU11003M_english}Count {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_english" text="{=NTP.EU11003F_english}Countess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_english" text="{=NTP.EU11004M_english}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_english" text="{=NTP.EU11004F_english}Baroness {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_english" text="{=NTP.EU11005M_english}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_english" text="{=NTP.EU11005F_english}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_english" text="{=NTP.EU1100CrownM_english}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_english" text="{=NTP.EU1100CrownF_english}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_english" text="{=NTP.EU1100RoyalM_english}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_english" text="{=NTP.EU1100RoyalF_english}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_english" text="{=NTP.EU11001M_english}King {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_english" text="{=NTP.EU11001F_english}Queen {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_english" text="{=NTP.EU11002M_english}Duke {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_english" text="{=NTP.EU11002F_english}Duchess {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_english" text="{=NTP.EU11003M_english}Count {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_english" text="{=NTP.EU11003F_english}Countess {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_english" text="{=NTP.EU11004M_english}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_english" text="{=NTP.EU11004F_english}Baroness {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_english" text="{=NTP.EU11005M_english}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_english" text="{=NTP.EU11005F_english}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_english" text="{=NTP.EU1100CrownM_english}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_english" text="{=NTP.EU1100CrownF_english}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_english" text="{=NTP.EU1100RoyalM_english}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_english" text="{=NTP.EU1100RoyalF_english}{NAME}" />
 	<!-- England -->
-	<string id="str_ntp_title_set.EU1100_1M_england" text="{=NTP.EU11001M_england}King {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_england" text="{=NTP.EU11001F_england}Queen {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_england" text="{=NTP.EU11002M_england}Duke {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_england" text="{=NTP.EU11002F_england}Duchess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_england" text="{=NTP.EU11003M_england}Count {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_england" text="{=NTP.EU11003F_england}Countess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_england" text="{=NTP.EU11004M_england}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_england" text="{=NTP.EU11004F_england}Baroness {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_england" text="{=NTP.EU11005M_england}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_england" text="{=NTP.EU11005F_england}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_england" text="{=NTP.EU1100CrownM_england}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_england" text="{=NTP.EU1100CrownF_england}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_england" text="{=NTP.EU1100RoyalM_england}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_england" text="{=NTP.EU1100RoyalF_england}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_england" text="{=NTP.EU11001M_england}King {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_england" text="{=NTP.EU11001F_england}Queen {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_england" text="{=NTP.EU11002M_england}Duke {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_england" text="{=NTP.EU11002F_england}Duchess {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_england" text="{=NTP.EU11003M_england}Count {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_england" text="{=NTP.EU11003F_england}Countess {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_england" text="{=NTP.EU11004M_england}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_england" text="{=NTP.EU11004F_england}Baroness {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_england" text="{=NTP.EU11005M_england}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_england" text="{=NTP.EU11005F_england}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_england" text="{=NTP.EU1100CrownM_england}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_england" text="{=NTP.EU1100CrownF_england}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_england" text="{=NTP.EU1100RoyalM_england}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_england" text="{=NTP.EU1100RoyalF_england}{NAME}" />
 	
 	
 	<!-- Italian Culture-->
-	<string id="str_ntp_title_set.EU1100_1M_italian" text="{=NTP.EU11001M_italian}Re {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_italian" text="{=NTP.EU11001F_italian}Regna {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_italian" text="{=NTP.EU11002M_italian}Duca {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_italian" text="{=NTP.EU11002F_italian}Duchess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_italian" text="{=NTP.EU11003M_italian}Conte {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_italian" text="{=NTP.EU11003F_italian}Contesss {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_italian" text="{=NTP.EU11004M_italian}Barone {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_italian" text="{=NTP.EU11004F_italian}Baronessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_italian" text="{=NTP.EU11005M_italian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_italian" text="{=NTP.EU11005F_italian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_italian" text="{=NTP.EU1100CrownM_italian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_italian" text="{=NTP.EU1100CrownF_italian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_italian" text="{=NTP.EU1100RoyalM_italian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_italian" text="{=NTP.EU1100RoyalF_italian}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_italian" text="{=NTP.EU11001M_italian}Re {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_italian" text="{=NTP.EU11001F_italian}Regna {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_italian" text="{=NTP.EU11002M_italian}Duca {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_italian" text="{=NTP.EU11002F_italian}Duchess {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_italian" text="{=NTP.EU11003M_italian}Conte {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_italian" text="{=NTP.EU11003F_italian}Contesss {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_italian" text="{=NTP.EU11004M_italian}Barone {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_italian" text="{=NTP.EU11004F_italian}Baronessa {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_italian" text="{=NTP.EU11005M_italian}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_italian" text="{=NTP.EU11005F_italian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_italian" text="{=NTP.EU1100CrownM_italian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_italian" text="{=NTP.EU1100CrownF_italian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_italian" text="{=NTP.EU1100RoyalM_italian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_italian" text="{=NTP.EU1100RoyalF_italian}{NAME}" />
 	
 	<!-- Papal State -->
-	<string id="str_ntp_title_set.EU1100_1M_pope" text="{=NTP.EU11001M_pope}Pontifex Maximus {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_pope" text="{=NTP.EU11001F_pope}Popess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_pope" text="{=NTP.EU11002M_pope}Cardinal {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_pope" text="{=NTP.EU11002F_pope}Cardinal {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_pope" text="{=NTP.EU11003M_pope}Archbisop {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_pope" text="{=NTP.EU11003F_pope}Archbisopess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_pope" text="{=NTP.EU11004M_pope}Bishop {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_pope" text="{=NTP.EU11004F_pope}Bisoppess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_pope" text="{=NTP.EU11005M_pope}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_pope" text="{=NTP.EU11005F_pope}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_pope" text="{=NTP.EU1100CrownM_pope}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_pope" text="{=NTP.EU1100CrownF_pope}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_pope" text="{=NTP.EU1100RoyalM_pope}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_pope" text="{=NTP.EU1100RoyalF_pope}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_pope" text="{=NTP.EU11001M_pope}Pontifex Maximus {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_pope" text="{=NTP.EU11001F_pope}Popess {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_pope" text="{=NTP.EU11002M_pope}Cardinal {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_pope" text="{=NTP.EU11002F_pope}Cardinal {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_pope" text="{=NTP.EU11003M_pope}Archbisop {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_pope" text="{=NTP.EU11003F_pope}Archbisopess {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_pope" text="{=NTP.EU11004M_pope}Bishop {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_pope" text="{=NTP.EU11004F_pope}Bisoppess {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_pope" text="{=NTP.EU11005M_pope}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_pope" text="{=NTP.EU11005F_pope}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_pope" text="{=NTP.EU1100CrownM_pope}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_pope" text="{=NTP.EU1100CrownF_pope}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_pope" text="{=NTP.EU1100RoyalM_pope}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_pope" text="{=NTP.EU1100RoyalF_pope}{NAME}" />
 	
 	<!-- Venice -->
-	<string id="str_ntp_title_set.EU1100_1M_venice" text="{=NTP.EU11001M_venice}Doge {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_venice" text="{=NTP.EU11001F_venice}Dogessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_venice" text="{=NTP.EU11002M_venice}Signoria {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_venice" text="{=NTP.EU11002F_venice}Signoria {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_venice" text="{=NTP.EU11003M_venice}Signoria {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_venice" text="{=NTP.EU11003F_venice}Signoria {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_venice" text="{=NTP.EU11004M_venice}Signoria {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_venice" text="{=NTP.EU11004F_venice}Signoria {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_venice" text="{=NTP.EU11005M_venice}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_venice" text="{=NTP.EU11005F_venice}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_venice" text="{=NTP.EU1100CrownM_venice}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_venice" text="{=NTP.EU1100CrownF_venice}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_venice" text="{=NTP.EU1100RoyalM_venice}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_venice" text="{=NTP.EU1100RoyalF_venice}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_venice" text="{=NTP.EU11001M_venice}Doge {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_venice" text="{=NTP.EU11001F_venice}Dogessa {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_venice" text="{=NTP.EU11002M_venice}Signoria {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_venice" text="{=NTP.EU11002F_venice}Signoria {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_venice" text="{=NTP.EU11003M_venice}Signoria {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_venice" text="{=NTP.EU11003F_venice}Signoria {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_venice" text="{=NTP.EU11004M_venice}Signoria {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_venice" text="{=NTP.EU11004F_venice}Signoria {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_venice" text="{=NTP.EU11005M_venice}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_venice" text="{=NTP.EU11005F_venice}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_venice" text="{=NTP.EU1100CrownM_venice}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_venice" text="{=NTP.EU1100CrownF_venice}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_venice" text="{=NTP.EU1100RoyalM_venice}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_venice" text="{=NTP.EU1100RoyalF_venice}{NAME}" />
 	
 	
 	<!-- Sicilian culture -->
-	<string id="str_ntp_title_set.EU1100_1M_sicilian" text="{=NTP.EU11001M_sicilian}Re {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_sicilian" text="{=NTP.EU11001F_sicilian}Regina {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_sicilian" text="{=NTP.EU11002M_sicilian}Duca {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_sicilian" text="{=NTP.EU11002F_sicilian}Duchessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_sicilian" text="{=NTP.EU11003M_sicilian}Conte {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_sicilian" text="{=NTP.EU11003F_sicilian}Contessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_sicilian" text="{=NTP.EU11004M_sicilian}Barone {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_sicilian" text="{=NTP.EU11004F_sicilian}Baronessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_sicilian" text="{=NTP.EU11005M_sicilian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_sicilian" text="{=NTP.EU11005F_sicilian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_sicilian" text="{=NTP.EU1100CrownM_sicilian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_sicilian" text="{=NTP.EU1100CrownF_sicilian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_sicilian" text="{=NTP.EU1100RoyalM_sicilian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_sicilian" text="{=NTP.EU1100RoyalF_sicilian}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_sicilian" text="{=NTP.EU11001M_sicilian}Re {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_sicilian" text="{=NTP.EU11001F_sicilian}Regina {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_sicilian" text="{=NTP.EU11002M_sicilian}Duca {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_sicilian" text="{=NTP.EU11002F_sicilian}Duchessa {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_sicilian" text="{=NTP.EU11003M_sicilian}Conte {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_sicilian" text="{=NTP.EU11003F_sicilian}Contessa {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_sicilian" text="{=NTP.EU11004M_sicilian}Barone {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_sicilian" text="{=NTP.EU11004F_sicilian}Baronessa {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_sicilian" text="{=NTP.EU11005M_sicilian}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_sicilian" text="{=NTP.EU11005F_sicilian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_sicilian" text="{=NTP.EU1100CrownM_sicilian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_sicilian" text="{=NTP.EU1100CrownF_sicilian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_sicilian" text="{=NTP.EU1100RoyalM_sicilian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_sicilian" text="{=NTP.EU1100RoyalF_sicilian}{NAME}" />
 	<!-- Country of Sicily -->        
-	<string id="str_ntp_title_set.EU1100_1M_empire_s" text="{=NTP.EU11001M_empire_s}Conte {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_empire_s" text="{=NTP.EU11001F_empire_s}Contessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_empire_s" text="{=NTP.EU11002M_empire_s}Visconte {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_empire_s" text="{=NTP.EU11002F_empire_s}Viscontessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_empire_s" text="{=NTP.EU11003M_empire_s}Barone {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_empire_s" text="{=NTP.EU11003F_empire_s}Baronessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_empire_s" text="{=NTP.EU11004M_empire_s}Barone {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_empire_s" text="{=NTP.EU11004F_empire_s}Baronessa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_empire_s" text="{=NTP.EU11005M_empire_s}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_empire_s" text="{=NTP.EU11005F_empire_s}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_empire_s" text="{=NTP.EU1100CrownM_empire_s}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_empire_s" text="{=NTP.EU1100CrownF_empire_s}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_empire_s" text="{=NTP.EU1100RoyalM_empire_s}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_empire_s" text="{=NTP.EU1100RoyalF_empire_s}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_empire_s" text="{=NTP.EU11001M_empire_s}Conte {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_empire_s" text="{=NTP.EU11001F_empire_s}Contessa {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_empire_s" text="{=NTP.EU11002M_empire_s}Visconte {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_empire_s" text="{=NTP.EU11002F_empire_s}Viscontessa {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_empire_s" text="{=NTP.EU11003M_empire_s}Barone {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_empire_s" text="{=NTP.EU11003F_empire_s}Baronessa {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_empire_s" text="{=NTP.EU11004M_empire_s}Barone {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_empire_s" text="{=NTP.EU11004F_empire_s}Baronessa {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_empire_s" text="{=NTP.EU11005M_empire_s}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_empire_s" text="{=NTP.EU11005F_empire_s}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_empire_s" text="{=NTP.EU1100CrownM_empire_s}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_empire_s" text="{=NTP.EU1100CrownF_empire_s}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_empire_s" text="{=NTP.EU1100RoyalM_empire_s}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_empire_s" text="{=NTP.EU1100RoyalF_empire_s}{NAME}" />
 	
 	
 	<!-- Turkic  -->
 	<!--Cuman Khanate -->
-	<string id="str_ntp_title_set.EU1100_1M_khuzait" text="{=NTP.EU11001M_khuzait}{NAME} Khan" />
-	<string id="str_ntp_title_set.EU1100_1F_khuzait" text="{=NTP.EU11001F_khuzait}{NAME} Khatun" />
-	<string id="str_ntp_title_set.EU1100_2M_khuzait" text="{=NTP.EU11002M_khuzait}{NAME} Beg" />
-	<string id="str_ntp_title_set.EU1100_2F_khuzait" text="{=NTP.EU11002F_khuzait}{NAME} Begum" />
-	<string id="str_ntp_title_set.EU1100_3M_khuzait" text="{=NTP.EU11003M_khuzait}{NAME} Beg" />
-	<string id="str_ntp_title_set.EU1100_3F_khuzait" text="{=NTP.EU11003F_khuzait}NAME} Begum" />
-	<string id="str_ntp_title_set.EU1100_4M_khuzait" text="{=NTP.EU11004M_khuzait}NAME} Beg" />
-	<string id="str_ntp_title_set.EU1100_4F_khuzait" text="{=NTP.EU11004F_khuzait}{NAME} Begum" />
-	<string id="str_ntp_title_set.EU1100_5M_khuzait" text="{=NTP.EU11005M_khuzait}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_khuzait" text="{=NTP.EU11005F_khuzait}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_khuzait" text="{=NTP.EU1100CrownM_khuzait}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_khuzait" text="{=NTP.EU1100CrownF_khuzait}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_khuzait" text="{=NTP.EU1100RoyalM_khuzait}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_khuzait" text="{=NTP.EU1100RoyalF_khuzait}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_khuzait" text="{=NTP.EU11001M_khuzait}{NAME} Khan" />
+	<string id="ntp_title_set.EU1100_1F_khuzait" text="{=NTP.EU11001F_khuzait}{NAME} Khatun" />
+	<string id="ntp_title_set.EU1100_2M_khuzait" text="{=NTP.EU11002M_khuzait}{NAME} Beg" />
+	<string id="ntp_title_set.EU1100_2F_khuzait" text="{=NTP.EU11002F_khuzait}{NAME} Begum" />
+	<string id="ntp_title_set.EU1100_3M_khuzait" text="{=NTP.EU11003M_khuzait}{NAME} Beg" />
+	<string id="ntp_title_set.EU1100_3F_khuzait" text="{=NTP.EU11003F_khuzait}NAME} Begum" />
+	<string id="ntp_title_set.EU1100_4M_khuzait" text="{=NTP.EU11004M_khuzait}NAME} Beg" />
+	<string id="ntp_title_set.EU1100_4F_khuzait" text="{=NTP.EU11004F_khuzait}{NAME} Begum" />
+	<string id="ntp_title_set.EU1100_5M_khuzait" text="{=NTP.EU11005M_khuzait}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_khuzait" text="{=NTP.EU11005F_khuzait}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_khuzait" text="{=NTP.EU1100CrownM_khuzait}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_khuzait" text="{=NTP.EU1100CrownF_khuzait}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_khuzait" text="{=NTP.EU1100RoyalM_khuzait}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_khuzait" text="{=NTP.EU1100RoyalF_khuzait}{NAME}" />
 	
 	<!--Pechenegs -->
-	<string id="str_ntp_title_set.EU1100_1M_pecheneg" text="{=NTP.EU11001M_pecheneg}Khan {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_pecheneg" text="{=NTP.EU11001F_pecheneg}Khatun {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_pecheneg" text="{=NTP.EU11002M_pecheneg}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_pecheneg" text="{=NTP.EU11002F_pecheneg}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_pecheneg" text="{=NTP.EU11003M_pecheneg}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_pecheneg" text="{=NTP.EU11003F_pecheneg}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_pecheneg" text="{=NTP.EU11004M_pecheneg}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_pecheneg" text="{=NTP.EU11004F_pecheneg}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_pecheneg" text="{=NTP.EU11005M_pecheneg}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_pecheneg" text="{=NTP.EU11005F_pecheneg}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_pecheneg" text="{=NTP.EU1100CrownM_pecheneg}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_pecheneg" text="{=NTP.EU1100CrownF_pecheneg}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_pecheneg" text="{=NTP.EU1100RoyalM_pecheneg}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_pecheneg" text="{=NTP.EU1100RoyalF_pecheneg}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_pecheneg" text="{=NTP.EU11001M_pecheneg}Khan {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_pecheneg" text="{=NTP.EU11001F_pecheneg}Khatun {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_pecheneg" text="{=NTP.EU11002M_pecheneg}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_pecheneg" text="{=NTP.EU11002F_pecheneg}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_pecheneg" text="{=NTP.EU11003M_pecheneg}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_pecheneg" text="{=NTP.EU11003F_pecheneg}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_pecheneg" text="{=NTP.EU11004M_pecheneg}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_pecheneg" text="{=NTP.EU11004F_pecheneg}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_pecheneg" text="{=NTP.EU11005M_pecheneg}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_pecheneg" text="{=NTP.EU11005F_pecheneg}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_pecheneg" text="{=NTP.EU1100CrownM_pecheneg}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_pecheneg" text="{=NTP.EU1100CrownF_pecheneg}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_pecheneg" text="{=NTP.EU1100RoyalM_pecheneg}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_pecheneg" text="{=NTP.EU1100RoyalF_pecheneg}{NAME}" />
 	
 	
 	<!-- Persian Culture -->
-	<string id="str_ntp_title_set.EU1100_1M_persian" text="{=NTP.EU11001M_persian}Sultan {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_persian" text="{=NTP.EU11001F_persian}Sultana {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_persian" text="{=NTP.EU11002M_persian}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_persian" text="{=NTP.EU11002F_persian}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_persian" text="{=NTP.EU11003M_persian}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_persian" text="{=NTP.EU11003F_persian}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_persian" text="{=NTP.EU11004M_persian}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_persian" text="{=NTP.EU11004F_persian}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_persian" text="{=NTP.EU11005M_persian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_persian" text="{=NTP.EU11005F_persian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_persian" text="{=NTP.EU1100CrownM_persian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_persian" text="{=NTP.EU1100CrownF_persian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_persian" text="{=NTP.EU1100RoyalM_persian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_persian" text="{=NTP.EU1100RoyalF_persian}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_persian" text="{=NTP.EU11001M_persian}Sultan {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_persian" text="{=NTP.EU11001F_persian}Sultana {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_persian" text="{=NTP.EU11002M_persian}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_persian" text="{=NTP.EU11002F_persian}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_persian" text="{=NTP.EU11003M_persian}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_persian" text="{=NTP.EU11003F_persian}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_persian" text="{=NTP.EU11004M_persian}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_persian" text="{=NTP.EU11004F_persian}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_persian" text="{=NTP.EU11005M_persian}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_persian" text="{=NTP.EU11005F_persian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_persian" text="{=NTP.EU1100CrownM_persian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_persian" text="{=NTP.EU1100CrownF_persian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_persian" text="{=NTP.EU1100RoyalM_persian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_persian" text="{=NTP.EU1100RoyalF_persian}{NAME}" />
 	
 	<!-- Rum -->
-	<string id="str_ntp_title_set.EU1100_1M_rum" text="{=NTP.EU11001M_rum}Sultan {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_rum" text="{=NTP.EU11001F_rum}Sultana {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_rum" text="{=NTP.EU11002M_rum}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_rum" text="{=NTP.EU11002F_rum}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_rum" text="{=NTP.EU11003M_rum}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_rum" text="{=NTP.EU11003F_rum}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_rum" text="{=NTP.EU11004M_rum}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_rum" text="{=NTP.EU11004F_rum}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_rum" text="{=NTP.EU11005M_rum}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_rum" text="{=NTP.EU11005F_rum}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_rum" text="{=NTP.EU1100CrownM_rum}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_rum" text="{=NTP.EU1100CrownF_rum}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_rum" text="{=NTP.EU1100RoyalM_rum}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_rum" text="{=NTP.EU1100RoyalF_rum}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_rum" text="{=NTP.EU11001M_rum}Sultan {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_rum" text="{=NTP.EU11001F_rum}Sultana {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_rum" text="{=NTP.EU11002M_rum}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_rum" text="{=NTP.EU11002F_rum}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_rum" text="{=NTP.EU11003M_rum}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_rum" text="{=NTP.EU11003F_rum}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_rum" text="{=NTP.EU11004M_rum}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_rum" text="{=NTP.EU11004F_rum}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_rum" text="{=NTP.EU11005M_rum}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_rum" text="{=NTP.EU11005F_rum}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_rum" text="{=NTP.EU1100CrownM_rum}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_rum" text="{=NTP.EU1100CrownF_rum}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_rum" text="{=NTP.EU1100RoyalM_rum}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_rum" text="{=NTP.EU1100RoyalF_rum}{NAME}" />
 	
 	<!-- Selkuk Empire -->
-	<string id="str_ntp_title_set.EU1100_1M_seljuk" text="{=NTP.EU11001M_seljuk}Sultan-Shah {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_seljuk" text="{=NTP.EU11001F_seljuk}Sultana-Shah {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_seljuk" text="{=NTP.EU11002M_seljuk}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_seljuk" text="{=NTP.EU11002F_seljuk}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_seljuk" text="{=NTP.EU11003M_seljuk}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_seljuk" text="{=NTP.EU11003F_seljuk}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_seljuk" text="{=NTP.EU11004M_seljuk}Beg {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_seljuk" text="{=NTP.EU11004F_seljuk}Begum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_seljuk" text="{=NTP.EU11005M_seljuk}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_seljuk" text="{=NTP.EU11005F_seljuk}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_seljuk" text="{=NTP.EU1100CrownM_seljuk}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_seljuk" text="{=NTP.EU1100CrownF_seljuk}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_seljuk" text="{=NTP.EU1100RoyalM_seljuk}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_seljuk" text="{=NTP.EU1100RoyalF_seljuk}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_seljuk" text="{=NTP.EU11001M_seljuk}Sultan-Shah {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_seljuk" text="{=NTP.EU11001F_seljuk}Sultana-Shah {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_seljuk" text="{=NTP.EU11002M_seljuk}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_seljuk" text="{=NTP.EU11002F_seljuk}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_seljuk" text="{=NTP.EU11003M_seljuk}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_seljuk" text="{=NTP.EU11003F_seljuk}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_seljuk" text="{=NTP.EU11004M_seljuk}Beg {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_seljuk" text="{=NTP.EU11004F_seljuk}Begum {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_seljuk" text="{=NTP.EU11005M_seljuk}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_seljuk" text="{=NTP.EU11005F_seljuk}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_seljuk" text="{=NTP.EU1100CrownM_seljuk}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_seljuk" text="{=NTP.EU1100CrownF_seljuk}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_seljuk" text="{=NTP.EU1100RoyalM_seljuk}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_seljuk" text="{=NTP.EU1100RoyalF_seljuk}{NAME}" />
 	
 	
 	<!-- Rus culture -->
 	<!-- Rus Principality -->
-	<string id="str_ntp_title_set.EU1100_1M_rus" text="{=NTP.EU11001M_rus}Velky Kunyaz {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_rus" text="{=NTP.EU11001F_rus}Velkaya Kunyazinya {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_rus" text="{=NTP.EU11002M_rus}Boyar {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_rus" text="{=NTP.EU11002F_rus}Boyarina {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_rus" text="{=NTP.EU11003M_rus}Boyar {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_rus" text="{=NTP.EU11003F_rus}Boyarina {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_rus" text="{=NTP.EU11004M_rus}Boyar {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_rus" text="{=NTP.EU11004F_rus}Boyarina {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_rus" text="{=NTP.EU11005M_rus}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_rus" text="{=NTP.EU11005F_rus}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_rus" text="{=NTP.EU1100CrownM_rus}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_rus" text="{=NTP.EU1100CrownF_rus}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_rus" text="{=NTP.EU1100RoyalM_rus}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_rus" text="{=NTP.EU1100RoyalF_rus}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_rus" text="{=NTP.EU11001M_rus}Velky Kunyaz {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_rus" text="{=NTP.EU11001F_rus}Velkaya Kunyazinya {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_rus" text="{=NTP.EU11002M_rus}Boyar {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_rus" text="{=NTP.EU11002F_rus}Boyarina {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_rus" text="{=NTP.EU11003M_rus}Boyar {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_rus" text="{=NTP.EU11003F_rus}Boyarina {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_rus" text="{=NTP.EU11004M_rus}Boyar {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_rus" text="{=NTP.EU11004F_rus}Boyarina {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_rus" text="{=NTP.EU11005M_rus}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_rus" text="{=NTP.EU11005F_rus}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_rus" text="{=NTP.EU1100CrownM_rus}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_rus" text="{=NTP.EU1100CrownF_rus}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_rus" text="{=NTP.EU1100RoyalM_rus}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_rus" text="{=NTP.EU1100RoyalF_rus}{NAME}" />
 	
 	
 	<!-- Battania culture -->
 	<!-- Ireland -->
-	<string id="str_ntp_title_set.EU1100_1M_battania" text="{=NTP.EU11001M_battania}Ard Rí {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_battania" text="{=NTP.EU11001F_battania}Ard Rí {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_battania" text="{=NTP.EU11002M_battania}Rí ruirech {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_battania" text="{=NTP.EU11002F_battania}Rí ruirech {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_battania" text="{=NTP.EU11003M_battania}Rí buiden {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_battania" text="{=NTP.EU11003F_battania}Rí buiden {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_battania" text="{=NTP.EU11004M_battania}Rí benn {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_battania" text="{=NTP.EU11004F_battania}Rí benn {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_battania" text="{=NTP.EU11005M_battania}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_battania" text="{=NTP.EU11005F_battania}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_battania" text="{=NTP.EU1100CrownM_battania}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_battania" text="{=NTP.EU1100CrownF_battania}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_battania" text="{=NTP.EU1100RoyalM_battania}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_battania" text="{=NTP.EU1100RoyalF_battania}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_battania" text="{=NTP.EU11001M_battania}Ard Rí {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_battania" text="{=NTP.EU11001F_battania}Ard Rí {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_battania" text="{=NTP.EU11002M_battania}Rí ruirech {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_battania" text="{=NTP.EU11002F_battania}Rí ruirech {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_battania" text="{=NTP.EU11003M_battania}Rí buiden {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_battania" text="{=NTP.EU11003F_battania}Rí buiden {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_battania" text="{=NTP.EU11004M_battania}Rí benn {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_battania" text="{=NTP.EU11004F_battania}Rí benn {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_battania" text="{=NTP.EU11005M_battania}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_battania" text="{=NTP.EU11005F_battania}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_battania" text="{=NTP.EU1100CrownM_battania}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_battania" text="{=NTP.EU1100CrownF_battania}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_battania" text="{=NTP.EU1100RoyalM_battania}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_battania" text="{=NTP.EU1100RoyalF_battania}{NAME}" />
 	
 	
 	<!-- Scottish culture -->
-	<string id="str_ntp_title_set.EU1100_1M_scottish" text="{=NTP.EU11001M_scottish}Ard Rí {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_scottish" text="{=NTP.EU11001F_scottish}Ard Rí {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_scottish" text="{=NTP.EU11002M_scottish}Mormaer {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_scottish" text="{=NTP.EU11002F_scottish}Banmormaer {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_scottish" text="{=NTP.EU11003M_scottish}Mormaer {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_scottish" text="{=NTP.EU11003F_scottish}Banmormaer {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_scottish" text="{=NTP.EU11004M_scottish}Toísech {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_scottish" text="{=NTP.EU11004F_scottish}Bantoísech {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_scottish" text="{=NTP.EU11005M_scottish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_scottish" text="{=NTP.EU11005F_scottish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_scottish" text="{=NTP.EU1100CrownM_scottish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_scottish" text="{=NTP.EU1100CrownF_scottish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_scottish" text="{=NTP.EU1100RoyalM_scottish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_scottish" text="{=NTP.EU1100RoyalF_scottish}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_scottish" text="{=NTP.EU11001M_scottish}Ard Rí {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_scottish" text="{=NTP.EU11001F_scottish}Ard Rí {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_scottish" text="{=NTP.EU11002M_scottish}Mormaer {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_scottish" text="{=NTP.EU11002F_scottish}Banmormaer {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_scottish" text="{=NTP.EU11003M_scottish}Mormaer {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_scottish" text="{=NTP.EU11003F_scottish}Banmormaer {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_scottish" text="{=NTP.EU11004M_scottish}Toísech {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_scottish" text="{=NTP.EU11004F_scottish}Bantoísech {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_scottish" text="{=NTP.EU11005M_scottish}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_scottish" text="{=NTP.EU11005F_scottish}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_scottish" text="{=NTP.EU1100CrownM_scottish}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_scottish" text="{=NTP.EU1100CrownF_scottish}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_scottish" text="{=NTP.EU1100RoyalM_scottish}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_scottish" text="{=NTP.EU1100RoyalF_scottish}{NAME}" />
 	
 	<!-- Scotland -->
-	<string id="str_ntp_title_set.EU1100_1M_scotland" text="{=NTP.EU11001M_scotland}Ard Rí {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_scotland" text="{=NTP.EU11001F_scotland}Ard Rí {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_scotland" text="{=NTP.EU11002M_scotland}Mormaer {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_scotland" text="{=NTP.EU11002F_scotland}Banmormaer {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_scotland" text="{=NTP.EU11003M_scotland}Mormaer {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_scotland" text="{=NTP.EU11003F_scotland}Banmormaer {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_scotland" text="{=NTP.EU11004M_scotland}Toísech {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_scotland" text="{=NTP.EU11004F_scotland}Toísech {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_scotland" text="{=NTP.EU11005M_scotland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_scotland" text="{=NTP.EU11005F_scotland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_scotland" text="{=NTP.EU1100CrownM_scotland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_scotland" text="{=NTP.EU1100CrownF_scotland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_scotland" text="{=NTP.EU1100RoyalM_scotland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_scotland" text="{=NTP.EU1100RoyalF_scotland}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_scotland" text="{=NTP.EU11001M_scotland}Ard Rí {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_scotland" text="{=NTP.EU11001F_scotland}Ard Rí {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_scotland" text="{=NTP.EU11002M_scotland}Mormaer {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_scotland" text="{=NTP.EU11002F_scotland}Banmormaer {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_scotland" text="{=NTP.EU11003M_scotland}Mormaer {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_scotland" text="{=NTP.EU11003F_scotland}Banmormaer {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_scotland" text="{=NTP.EU11004M_scotland}Toísech {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_scotland" text="{=NTP.EU11004F_scotland}Toísech {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_scotland" text="{=NTP.EU11005M_scotland}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_scotland" text="{=NTP.EU11005F_scotland}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_scotland" text="{=NTP.EU1100CrownM_scotland}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_scotland" text="{=NTP.EU1100CrownF_scotland}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_scotland" text="{=NTP.EU1100RoyalM_scotland}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_scotland" text="{=NTP.EU1100RoyalF_scotland}{NAME}" />
 	
 	
 	<!-- German culture -->
 	<!-- HRE -->
-	<string id="str_ntp_title_set.EU1100_1M_empire" text="{=NTP.EU11001M_empire}Imperator Romanorum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_empire" text="{=NTP.EU11001F_empire}Imperator Romanorum {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_empire" text="{=NTP.EU11002M_empire}Markgraf {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_empire" text="{=NTP.EU11002F_empire}Markgräfin {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_empire" text="{=NTP.EU11003M_empire}Landgraf {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_empire" text="{=NTP.EU11003F_empire}Landgräfin {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_empire" text="{=NTP.EU11004M_empire}Burgraf {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_empire" text="{=NTP.EU11004F_empire}Burgräfin {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_empire" text="{=NTP.EU11005M_empire}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_empire" text="{=NTP.EU11005F_empire}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_empire" text="{=NTP.EU1100CrownM_empire}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_empire" text="{=NTP.EU1100CrownF_empire}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_empire" text="{=NTP.EU1100RoyalM_empire}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_empire" text="{=NTP.EU1100RoyalF_empire}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_empire" text="{=NTP.EU11001M_empire}Imperator Romanorum {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_empire" text="{=NTP.EU11001F_empire}Imperator Romanorum {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_empire" text="{=NTP.EU11002M_empire}Markgraf {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_empire" text="{=NTP.EU11002F_empire}Markgräfin {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_empire" text="{=NTP.EU11003M_empire}Landgraf {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_empire" text="{=NTP.EU11003F_empire}Landgräfin {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_empire" text="{=NTP.EU11004M_empire}Burgraf {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_empire" text="{=NTP.EU11004F_empire}Burgräfin {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_empire" text="{=NTP.EU11005M_empire}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_empire" text="{=NTP.EU11005F_empire}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_empire" text="{=NTP.EU1100CrownM_empire}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_empire" text="{=NTP.EU1100CrownF_empire}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_empire" text="{=NTP.EU1100RoyalM_empire}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_empire" text="{=NTP.EU1100RoyalF_empire}{NAME}" />
 	
 	
 	<!-- Polish culture -->
-	<string id="str_ntp_title_set.EU1100_1M_polish" text="{=NTP.EU11001M_polish}Król {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_polish" text="{=NTP.EU11001F_polish}królowa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_polish" text="{=NTP.EU11002M_polish}Książę {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_polish" text="{=NTP.EU11002F_polish}księżniczka {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_polish" text="{=NTP.EU11003M_polish}Count {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_polish" text="{=NTP.EU11003F_polish}Countess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_polish" text="{=NTP.EU11004M_polish}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_polish" text="{=NTP.EU11004F_polish}Baroness {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_polish" text="{=NTP.EU11005M_polish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_polish" text="{=NTP.EU11005F_polish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_polish" text="{=NTP.EU1100CrownM_polish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_polish" text="{=NTP.EU1100CrownF_polish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_polish" text="{=NTP.EU1100RoyalM_polish}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_polish" text="{=NTP.EU1100RoyalF_polish}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_polish" text="{=NTP.EU11001M_polish}Król {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_polish" text="{=NTP.EU11001F_polish}królowa {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_polish" text="{=NTP.EU11002M_polish}Książę {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_polish" text="{=NTP.EU11002F_polish}księżniczka {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_polish" text="{=NTP.EU11003M_polish}Count {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_polish" text="{=NTP.EU11003F_polish}Countess {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_polish" text="{=NTP.EU11004M_polish}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_polish" text="{=NTP.EU11004F_polish}Baroness {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_polish" text="{=NTP.EU11005M_polish}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_polish" text="{=NTP.EU11005F_polish}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_polish" text="{=NTP.EU1100CrownM_polish}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_polish" text="{=NTP.EU1100CrownF_polish}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_polish" text="{=NTP.EU1100RoyalM_polish}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_polish" text="{=NTP.EU1100RoyalF_polish}{NAME}" />
 	<!-- Poland -->
-	<string id="str_ntp_title_set.EU1100_1M_poland" text="{=NTP.EU11001M_poland}Książę {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_poland" text="{=NTP.EU11001F_poland}księżniczka {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_poland" text="{=NTP.EU11002M_poland}Count {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_poland" text="{=NTP.EU11002F_poland}Countess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_poland" text="{=NTP.EU11003M_poland}Count {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_poland" text="{=NTP.EU11003F_poland}Countess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_poland" text="{=NTP.EU11004M_poland}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_poland" text="{=NTP.EU11004F_poland}Baroness {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_poland" text="{=NTP.EU11005M_poland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_poland" text="{=NTP.EU11005F_poland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_poland" text="{=NTP.EU1100CrownM_poland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_poland" text="{=NTP.EU1100CrownF_poland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_poland" text="{=NTP.EU1100RoyalM_poland}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_poland" text="{=NTP.EU1100RoyalF_poland}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_poland" text="{=NTP.EU11001M_poland}Książę {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_poland" text="{=NTP.EU11001F_poland}księżniczka {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_poland" text="{=NTP.EU11002M_poland}Count {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_poland" text="{=NTP.EU11002F_poland}Countess {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_poland" text="{=NTP.EU11003M_poland}Count {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_poland" text="{=NTP.EU11003F_poland}Countess {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_poland" text="{=NTP.EU11004M_poland}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_poland" text="{=NTP.EU11004F_poland}Baroness {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_poland" text="{=NTP.EU11005M_poland}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_poland" text="{=NTP.EU11005F_poland}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_poland" text="{=NTP.EU1100CrownM_poland}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_poland" text="{=NTP.EU1100CrownF_poland}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_poland" text="{=NTP.EU1100RoyalM_poland}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_poland" text="{=NTP.EU1100RoyalF_poland}{NAME}" />
 	
 	
 	<!-- Hungarian culture -->
 	<!-- Hungary -->
-	<string id="str_ntp_title_set.EU1100_1M_hungary" text="{=NTP.EU11001M_hungary}király {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_hungary" text="{=NTP.EU11001F_hungary}Királynő {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_hungary" text="{=NTP.EU11002M_hungary}Duke {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_hungary" text="{=NTP.EU11002F_hungary}Duchess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_hungary" text="{=NTP.EU11003M_hungary}Count {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_hungary" text="{=NTP.EU11003F_hungary}Countess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_hungary" text="{=NTP.EU11004M_hungary}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_hungary" text="{=NTP.EU11004F_hungary}Baroness {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_hungary" text="{=NTP.EU11005M_hungary}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_hungary" text="{=NTP.EU11005F_hungary}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_hungary" text="{=NTP.EU1100CrownM_hungary}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_hungary" text="{=NTP.EU1100CrownF_hungary}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_hungary" text="{=NTP.EU1100RoyalM_hungary}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_hungary" text="{=NTP.EU1100RoyalF_hungary}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_hungary" text="{=NTP.EU11001M_hungary}király {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_hungary" text="{=NTP.EU11001F_hungary}Királynő {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_hungary" text="{=NTP.EU11002M_hungary}Duke {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_hungary" text="{=NTP.EU11002F_hungary}Duchess {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_hungary" text="{=NTP.EU11003M_hungary}Count {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_hungary" text="{=NTP.EU11003F_hungary}Countess {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_hungary" text="{=NTP.EU11004M_hungary}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_hungary" text="{=NTP.EU11004F_hungary}Baroness {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_hungary" text="{=NTP.EU11005M_hungary}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_hungary" text="{=NTP.EU11005F_hungary}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_hungary" text="{=NTP.EU1100CrownM_hungary}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_hungary" text="{=NTP.EU1100CrownF_hungary}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_hungary" text="{=NTP.EU1100RoyalM_hungary}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_hungary" text="{=NTP.EU1100RoyalF_hungary}{NAME}" />
 	
 	
 	<!-- Georgian culture-->
 	<!-- Georgia -->
-	<string id="str_ntp_title_set.EU1100_1M_georgia" text="{=NTP.EU11001M_georgia}Mepe {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_georgia" text="{=NTP.EU11001F_georgia}Dedopali {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_georgia" text="{=NTP.EU11002M_georgia}Duke {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_georgia" text="{=NTP.EU11002F_georgia}Duchess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_georgia" text="{=NTP.EU11003M_georgia}Count {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_georgia" text="{=NTP.EU11003F_georgia}Countess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_georgia" text="{=NTP.EU11004M_georgia}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_georgia" text="{=NTP.EU11004F_georgia}Baroness {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_georgia" text="{=NTP.EU11005M_georgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_georgia" text="{=NTP.EU11005F_georgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_georgia" text="{=NTP.EU1100CrownM_georgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_georgia" text="{=NTP.EU1100CrownF_georgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_georgia" text="{=NTP.EU1100RoyalM_georgia}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_georgia" text="{=NTP.EU1100RoyalF_georgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_georgia" text="{=NTP.EU11001M_georgia}Mepe {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_georgia" text="{=NTP.EU11001F_georgia}Dedopali {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_georgia" text="{=NTP.EU11002M_georgia}Duke {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_georgia" text="{=NTP.EU11002F_georgia}Duchess {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_georgia" text="{=NTP.EU11003M_georgia}Count {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_georgia" text="{=NTP.EU11003F_georgia}Countess {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_georgia" text="{=NTP.EU11004M_georgia}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_georgia" text="{=NTP.EU11004F_georgia}Baroness {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_georgia" text="{=NTP.EU11005M_georgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_georgia" text="{=NTP.EU11005F_georgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_georgia" text="{=NTP.EU1100CrownM_georgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_georgia" text="{=NTP.EU1100CrownF_georgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_georgia" text="{=NTP.EU1100RoyalM_georgia}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_georgia" text="{=NTP.EU1100RoyalF_georgia}{NAME}" />
 	<!-- Bulgarian culture -->
-	<string id="str_ntp_title_set.EU1100_1M_bulgarian" text="{=NTP.EU11001M_bulgarian}Mepe {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_bulgarian" text="{=NTP.EU11001F_bulgarian}Dedopali {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_bulgarian" text="{=NTP.EU11002M_bulgarian}Duke {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_bulgarian" text="{=NTP.EU11002F_bulgarian}Duchess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_bulgarian" text="{=NTP.EU11003M_bulgarian}Count {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_bulgarian" text="{=NTP.EU11003F_bulgarian}Countess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_bulgarian" text="{=NTP.EU11004M_bulgarian}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_bulgarian" text="{=NTP.EU11004F_bulgarian}Baroness {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_bulgarian" text="{=NTP.EU11005M_bulgarian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_bulgarian" text="{=NTP.EU11005F_bulgarian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_bulgarian" text="{=NTP.EU1100CrownM_bulgarian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_bulgarian" text="{=NTP.EU1100CrownF_bulgarian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_bulgarian" text="{=NTP.EU1100RoyalM_bulgarian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_bulgarian" text="{=NTP.EU1100RoyalF_bulgarian}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_bulgarian" text="{=NTP.EU11001M_bulgarian}Mepe {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_bulgarian" text="{=NTP.EU11001F_bulgarian}Dedopali {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_bulgarian" text="{=NTP.EU11002M_bulgarian}Duke {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_bulgarian" text="{=NTP.EU11002F_bulgarian}Duchess {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_bulgarian" text="{=NTP.EU11003M_bulgarian}Count {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_bulgarian" text="{=NTP.EU11003F_bulgarian}Countess {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_bulgarian" text="{=NTP.EU11004M_bulgarian}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_bulgarian" text="{=NTP.EU11004F_bulgarian}Baroness {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_bulgarian" text="{=NTP.EU11005M_bulgarian}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_bulgarian" text="{=NTP.EU11005F_bulgarian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_bulgarian" text="{=NTP.EU1100CrownM_bulgarian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_bulgarian" text="{=NTP.EU1100CrownF_bulgarian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_bulgarian" text="{=NTP.EU1100RoyalM_bulgarian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_bulgarian" text="{=NTP.EU1100RoyalF_bulgarian}{NAME}" />
 	
 	
 	<!-- Portuguese -->
-	<string id="str_ntp_title_set.EU1100_1M_portuguese" text="{=NTP.EU11001M_portuguese}Rei {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_portuguese" text="{=NTP.EU11001F_portuguese}Reihna {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_portuguese" text="{=NTP.EU11002M_portuguese}Duque {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_portuguese" text="{=NTP.EU11002F_portuguese}Duqesa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_portuguese" text="{=NTP.EU11003M_portuguese}Conde {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_portuguese" text="{=NTP.EU11003F_portuguese}Condesa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_portuguese" text="{=NTP.EU11004M_portuguese}Barão {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_portuguese" text="{=NTP.EU11004F_portuguese}Baronesa {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_portuguese" text="{=NTP.EU11005M_portuguese}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_portuguese" text="{=NTP.EU11005F_portuguese}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_portuguese" text="{=NTP.EU1100CrownM_portuguese}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_portuguese" text="{=NTP.EU1100CrownF_portuguese}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_portuguese" text="{=NTP.EU1100RoyalM_portuguese}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_portuguese" text="{=NTP.EU1100RoyalF_portuguese}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_portuguese" text="{=NTP.EU11001M_portuguese}Rei {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_portuguese" text="{=NTP.EU11001F_portuguese}Reihna {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_portuguese" text="{=NTP.EU11002M_portuguese}Duque {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_portuguese" text="{=NTP.EU11002F_portuguese}Duqesa {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_portuguese" text="{=NTP.EU11003M_portuguese}Conde {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_portuguese" text="{=NTP.EU11003F_portuguese}Condesa {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_portuguese" text="{=NTP.EU11004M_portuguese}Barão {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_portuguese" text="{=NTP.EU11004F_portuguese}Baronesa {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_portuguese" text="{=NTP.EU11005M_portuguese}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_portuguese" text="{=NTP.EU11005F_portuguese}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_portuguese" text="{=NTP.EU1100CrownM_portuguese}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_portuguese" text="{=NTP.EU1100CrownF_portuguese}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_portuguese" text="{=NTP.EU1100RoyalM_portuguese}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_portuguese" text="{=NTP.EU1100RoyalF_portuguese}{NAME}" />
 	
 	
 	<!-- Welsh -->
-	<string id="str_ntp_title_set.EU1100_1M_welch" text="{=NTP.EU11001M_welch}Brenhyn {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_welch" text="{=NTP.EU11001F_welch}Brenhynes {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_welch" text="{=NTP.EU11002M_welch}Tywysog {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_welch" text="{=NTP.EU11002F_welch}Tywysoges {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_welch" text="{=NTP.EU11003M_welch}Cownt {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_welch" text="{=NTP.EU11003F_welch}Cowntes {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_welch" text="{=NTP.EU11004M_welch}Barwn {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_welch" text="{=NTP.EU11004F_welch}Barwnes {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_welch" text="{=NTP.EU11005M_welch}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_welch" text="{=NTP.EU11005F_welch}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_welch" text="{=NTP.EU1100CrownM_welch}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_welch" text="{=NTP.EU1100CrownF_welch}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_welch" text="{=NTP.EU1100RoyalM_welch}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_welch" text="{=NTP.EU1100RoyalF_welch}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_welch" text="{=NTP.EU11001M_welch}Brenhyn {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_welch" text="{=NTP.EU11001F_welch}Brenhynes {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_welch" text="{=NTP.EU11002M_welch}Tywysog {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_welch" text="{=NTP.EU11002F_welch}Tywysoges {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_welch" text="{=NTP.EU11003M_welch}Cownt {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_welch" text="{=NTP.EU11003F_welch}Cowntes {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_welch" text="{=NTP.EU11004M_welch}Barwn {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_welch" text="{=NTP.EU11004F_welch}Barwnes {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_welch" text="{=NTP.EU11005M_welch}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_welch" text="{=NTP.EU11005F_welch}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_welch" text="{=NTP.EU1100CrownM_welch}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_welch" text="{=NTP.EU1100CrownF_welch}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_welch" text="{=NTP.EU1100RoyalM_welch}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_welch" text="{=NTP.EU1100RoyalF_welch}{NAME}" />
 	
 	
 	<!-- Serbian -->
-	<string id="str_ntp_title_set.EU1100_1M_serbian" text="{=NTP.EU11001M_serbian}Veliki Župan {NAME}" />
-	<string id="str_ntp_title_set.EU1100_1F_serbian" text="{=NTP.EU11001F_serbian}Velika Župana {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2M_serbian" text="{=NTP.EU11002M_serbian}Župan {NAME}" />
-	<string id="str_ntp_title_set.EU1100_2F_serbian" text="{=NTP.EU11002F_serbian}Župana {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3M_serbian" text="{=NTP.EU11003M_serbian}Count {NAME}" />
-	<string id="str_ntp_title_set.EU1100_3F_serbian" text="{=NTP.EU11003F_serbian}Countess {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4M_serbian" text="{=NTP.EU11004M_serbian}Baron {NAME}" />
-	<string id="str_ntp_title_set.EU1100_4F_serbian" text="{=NTP.EU11004F_serbian}Baroness {NAME}" />
-	<string id="str_ntp_title_set.EU1100_5M_serbian" text="{=NTP.EU11005M_serbian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_5F_serbian" text="{=NTP.EU11005F_serbian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownM_serbian" text="{=NTP.EU1100CrownM_serbian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_crownF_serbian" text="{=NTP.EU1100CrownF_serbian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalM_serbian" text="{=NTP.EU1100RoyalM_serbian}{NAME}" />
-	<string id="str_ntp_title_set.EU1100_royalF_serbian" text="{=NTP.EU1100RoyalF_serbian}{NAME}" />
+	<string id="ntp_title_set.EU1100_1M_serbian" text="{=NTP.EU11001M_serbian}Veliki Župan {NAME}" />
+	<string id="ntp_title_set.EU1100_1F_serbian" text="{=NTP.EU11001F_serbian}Velika Župana {NAME}" />
+	<string id="ntp_title_set.EU1100_2M_serbian" text="{=NTP.EU11002M_serbian}Župan {NAME}" />
+	<string id="ntp_title_set.EU1100_2F_serbian" text="{=NTP.EU11002F_serbian}Župana {NAME}" />
+	<string id="ntp_title_set.EU1100_3M_serbian" text="{=NTP.EU11003M_serbian}Count {NAME}" />
+	<string id="ntp_title_set.EU1100_3F_serbian" text="{=NTP.EU11003F_serbian}Countess {NAME}" />
+	<string id="ntp_title_set.EU1100_4M_serbian" text="{=NTP.EU11004M_serbian}Baron {NAME}" />
+	<string id="ntp_title_set.EU1100_4F_serbian" text="{=NTP.EU11004F_serbian}Baroness {NAME}" />
+	<string id="ntp_title_set.EU1100_5M_serbian" text="{=NTP.EU11005M_serbian}{NAME}" />
+	<string id="ntp_title_set.EU1100_5F_serbian" text="{=NTP.EU11005F_serbian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownM_serbian" text="{=NTP.EU1100CrownM_serbian}{NAME}" />
+	<string id="ntp_title_set.EU1100_crownF_serbian" text="{=NTP.EU1100CrownF_serbian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalM_serbian" text="{=NTP.EU1100RoyalM_serbian}{NAME}" />
+	<string id="ntp_title_set.EU1100_royalF_serbian" text="{=NTP.EU1100RoyalF_serbian}{NAME}" />
 	
 </strings>
