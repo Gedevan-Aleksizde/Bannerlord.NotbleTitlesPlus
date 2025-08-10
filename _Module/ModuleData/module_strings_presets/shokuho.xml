@@ -2,9 +2,9 @@
 <strings>
 	<string id="str_ntp_mcm.preset_shokuho" text="{=NTP.MCMShokuho}Shokuhō" />
 	<!-- Shokuho modified preset -->
-	<string id="str_ntp_title_set.SHO_1M_default" text="{=NTP.SHO1M_default}{?IS_UNLAND}Daimyou{?}{\?} {NAME}{?IS_UNLAND}{?}, Protector of Province {PROVINCE}{\?}" />
+	<string id="str_ntp_title_set.SHO_1M_default" text="{=NTP.SHO1M_default}{PROVINCE_SHO} Daimyo {NAME}" />
 	<string id="str_ntp_title_set.SHO_1F_default" text="{=NTP.SHO1F_default}Daimyou-fujin {NAME}" />
-	<string id="str_ntp_title_set.SHO_2M_default" text="{=NTP.SHO2M_default}Karou {NAME}" />
+	<string id="str_ntp_title_set.SHO_2M_default" text="{=NTP.SHO2M_default}Daimyou {NAME}" />
 	<string id="str_ntp_title_set.SHO_2F_default" text="{=NTP.SHO2F_default}Karou-fujin {NAME}" />
 	<string id="str_ntp_title_set.SHO_3M_default" text="{=NTP.SHO3M_default}Karou {NAME}" />
 	<string id="str_ntp_title_set.SHO_3F_default" text="{=NTP.SHO3F_default}Karou-fujin {NAME}" />
@@ -21,4 +21,21 @@
 	<string id="str_ntp_title_set.SHO_MinorLF_default" text="{=NTP.SHOMinorLF_default}{NAME} of {CLAN_SHORT}" />
 	<string id="str_ntp_title_set.SHO_MinorMM_default" text="{=NTP.SHOMinorMM_default}{NAME} of {CLAN_SHORT}" />
 	<string id="str_ntp_title_set.SHO_MinorMF_default" text="{=NTP.SHOMinorMF_default}{NAME} of {CLAN_SHORT}" />
+	
+	
+	<string id="str_ntp_title_set.SHO_1M_asakura" text="{=NTP.SHO1M_asakura}{NAME}, Deputy Protector of Echizen Province" />
+	<string id="str_ntp_title_set.SHO_1M_ashikaga" text="{=NTP.SHO1M_ashikaga}Sēi-taishougun {NAME}" />
+	<string id="str_ntp_title_set.SHO_1M_hatakeyama" text="{=NTP.SHO1M_hatakeyama}{NAME}, Protector of Noto Province" />
+	<string id="str_ntp_title_set.SHO_1M_imagawa" text="{=NTP.SHO1M_imagawa}{NAME}, Protector of Tōtoumi and Suruga Provinces" />
+	<string id="str_ntp_title_set.SHO_1M_oda" text="{=NTP.SHO1M_oda}{NAME}, Deputy Protector of Owari Province" />
+	<string id="str_ntp_title_set.SHO_1M_otomo" text="{=NTP.SHO1M_otomo}{NAME}, Protector of Bungo Province" />
+	<string id="str_ntp_title_set.SHO_1M_satake" text="{=NTP.SHO1M_satake}{NAME}, Protector of Hitachi Province" />
+	<string id="str_ntp_title_set.SHO_1M_shimazu" text="{=NTP.SHO1M_shimazu}{NAME}, Protector of Satsuma Province" />
+	<string id="str_ntp_title_set.SHO_1M_takeda" text="{=NTP.SHO1M_takeda}{NAME}, Protector of Kai Province" />	
+	<string id="str_ntp_title_set.SHO_1M_uesugi" text="{=NTP.SHO1M_uesugi}Kantou-kanrei {NAME}" />
+	<string id="str_ntp_title_set.SHO_1M_utsunomiya" text="{=NTP.SHO1M_utsunomiya}{NAME}, Protector of Shimotsuke Province" />
+	<string id="str_ntp_title_set.SHO_1M_rokkaku" text="{=NTP.SHO1M_rokkaku}{NAME}, Protector of Oumi Province" />
+	<string id="str_ntp_title_set.SHO_1M_mori" text="{=NTP.SHO1M_mori}{NAME}, Vice Master of the Horse" />
+	<string id="str_ntp_title_set.SHO_1M_ikko_shu" text="{=NTP.SHO1M_ikko_shu}High Priest {NAME}" />
+	<string id="str_ntp_title_set.SHO_1F_ikko_shu" text="{=NTP.SHO1F_ikko_shu}Lady {NAME}" />
 </strings>

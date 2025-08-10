@@ -7,7 +7,7 @@
 		<!-- #region Shokuho -->
 		<string id="NTP.MCMShokuho" text="Shokuhō"/>
 		
-		<string id="NTP.SHO1M_default" text="{?IS_UNLAND}大名{?}{PROVINCE}守護{\?}{NAME}" />
+		<string id="NTP.SHO1M_default" text="{PROVINCE_SHO}の大名{NAME}" />
 		<string id="NTP.SHO1F_default" text="大名夫人{NAME}" />
 		<string id="NTP.SHO2M_default" text="家老{NAME}" />
 		<string id="NTP.SHO2F_default" text="家老夫人{NAME}" />
@@ -26,6 +26,22 @@
 		<string id="NTP.SHOMinorLF_default" text="{CLAN_SHORT}の{NAME}" />
 		<string id="NTP.SHOMinorMM_default" text="{CLAN_SHORT}の{NAME}" />
 		<string id="NTP.SHOMinorMF_default" text="{CLAN_SHORT}の{NAME}" />
+		
+		<string id="NTP.SHO1M_asakura" text="越前守護代{NAME}" /> 
+		<string id="NTP.SHO1M_ashikaga" text="征夷大將軍{NAME}" /> 
+		<string id="NTP.SHO1M_hatakeyama" text="能登守護{NAME}" /> 
+		<string id="NTP.SHO1M_imagawa" text="遠江・駿河守護{NAME}" /> 
+		<string id="NTP.SHO1M_oda" text="尾張守護代{NAME}" /> 
+		<string id="NTP.SHO1M_otomo" text="豐後守護{NAME}" /> 
+		<string id="NTP.SHO1M_satake" text="常陸守護{NAME}" /> 
+		<string id="NTP.SHO1M_shimazu" text="薩摩守護{NAME}" /> 
+		<string id="NTP.SHO1M_takeda" text="甲斐守護{NAME}" /> 	
+		<string id="NTP.SHO1M_uesugi" text="關東管領{NAME}" /> 
+		<string id="NTP.SHO1M_utsunomiya" text="下野守護{NAME}" /> 
+		<string id="NTP.SHO1M_rokkaku" text="近江守護{NAME}" /> 
+		<string id="NTP.SHO1M_mori" text="右馬頭{NAME}" /> 
+		<string id="NTP.SHO1M_ikko_shu" text="法主{NAME}" /> 
+		<string id="NTP.SHO1F_ikko_shu" text="{NAME}夫人" /> 
 		<!-- #endregion -->
 	</strings>
 </base>

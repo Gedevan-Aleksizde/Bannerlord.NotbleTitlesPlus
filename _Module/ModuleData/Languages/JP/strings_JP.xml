@@ -15,6 +15,14 @@
 		<string id="NTP.MCMGMinor" text="小規模勢力のデフォルトの称号"/>
 		<string id="NTP.MCMFOWHint" text="称号に戦場の霧要素を適用します。会ったことのないヒーローの称号は表示されません。"/>
 		<string id="NTP.MCMencyclopediaHint" text="現在使用不可"/>
+		<string id="LMkm6aToS" text="会話時に適用する" />
+		<string id="raU1kxa6E" text="会話画面での台詞枠上部の名前にフォーマットを適用します。" />
+		<string id="0vnxDT91U" text="ミッションマップに適用する" />
+		<string id="oWD7Vn3fg" text="ミッションマップで表示される名前にフォーマットを適用します。" />
+		<string id="SF9DCetBr" text="集落UIに適用する" />
+		<string id="5KdbtSaqn" text="集落パネルUI上の名前にフォーマットを適用します。" />
+		<string id="B5O6vBo6Z" text="部隊ツールチップに表示する" />
+		<string id="s5BEIPDa7" text="キャンペーンマップ上の部隊ツールチップに表示される名前にフォーマットを適用します。" />
 		<string id="NTP.MCMVerbose" text="冗長なログ"/>
 		<string id="NTP.MCMVerboseHint" text="(デバッグ用) ログファイルにより多くの情報を出力します。"/>
 		<string id="NTP.MCMTag" text="タギング"/>

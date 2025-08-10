@@ -8,6 +8,10 @@
 	<string id="str_ntp_mcm.fallback_player" text="{=NTP.MCMyour}Your Kingdom" />
 	<string id="str_ntp_mcm.fow_hint" text="{=NTP.MCMFOWHint}Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
 	<string id="str_ntp_mcm.encyclo_hint" text="{=NTP.MCMencyclopediaHint}Current Inavailable"/>
+	<string id="str_ntp_mcm.show_conversation_hint" text="{=raU1kxa6E}Apply the title format to the top of conversation textbox." />
+	<string id="str_ntp_mcm.show_mission_hint" text="{=oWD7Vn3fg}Apply the title format to the popup nameplate in the mission scene." />
+	<string id="str_ntp_mcm.show_settlement_hint" text="{=5KdbtSaqn}Apply the title format to the names on the settlement Panel UI." />
+	<string id="str_ntp_mcm.show_partytt_hint" text="{=s5BEIPDa7}Apply the title format to the names on the party tooltip in the campaign map." />
 	<string id="str_ntp_mcm.verbose" text="{=NTP.MCMVerbose}Verbose Log"/>
 	<string id="str_ntp_mcm.verbose_hint" text="{=NTP.MCMVerboseHint}(For debugging) Output extra information to the log file"/>
 	<string id="str_ntp_mcm.tagging" text="{=NTP.MCMTag}Tagging"/>
@@ -67,4 +71,73 @@
 	<string id="str_ntp_mcm.CrownF_hint" text="{=NTP.MCMCrownFHint}The female succession's title format" />
 	<string id="str_ntp_mcm.RoyalM_hint" text="{=NTP.MCMRoyalMHint}A male ruler clan menber's title" />
 	<string id="str_ntp_mcm.RoyalF_hint" text="{=NTP.MCMRoyalFHint}A female ruler clan menber's title" />
+	<string id="str_ntp_sho_prov.dewa" text="Dewa" />
+	<string id="str_ntp_sho_prov.mutsu" text="Mutsu" />
+	<string id="str_ntp_sho_prov.shimotsuke" text="Shimotsuke" />
+	<string id="str_ntp_sho_prov.kouzuke" text="Kouzuke" />
+	<string id="str_ntp_sho_prov.shinano" text="Shinano" />
+	<string id="str_ntp_sho_prov.hida" text="Mino" />
+	<string id="str_ntp_sho_prov.oumi" text="Oumi" />
+	<string id="str_ntp_sho_prov.hitachi" text="Hitachi" />
+	<string id="str_ntp_sho_prov.simousa" text="Shimousa" />
+	<string id="str_ntp_sho_prov.kazusa" text="Kazusa" />
+	<string id="str_ntp_sho_prov.anbou" text="Anbou" />
+	<string id="str_ntp_sho_prov.musashi" text="Musashi" />
+	<string id="str_ntp_sho_prov.sagami" text="Sagami" />
+	<string id="str_ntp_sho_prov.kai" text="Kai" />
+	<string id="str_ntp_sho_prov.izu" text="Izu" />
+	<string id="str_ntp_sho_prov.suruga" text="Tōtoumi" />
+	<string id="str_ntp_sho_prov.suruga" text="Suruga" />
+	<string id="str_ntp_sho_prov.mikawa" text="Mikawa" />
+	<string id="str_ntp_sho_prov.owari" text="Owari" />
+	<string id="str_ntp_sho_prov.iga" text="Iga" />
+	<string id="str_ntp_sho_prov.ise" text="Ise" />
+	<string id="str_ntp_sho_prov.shima" text="Shima" />
+	<string id="str_ntp_sho_prov.yamato" text="Yamato" />
+	<string id="str_ntp_sho_prov.kawachi" text="Kawachi" />
+	<string id="str_ntp_sho_prov.izumi" text="Izumi" />
+	<string id="str_ntp_sho_prov.yamashiro" text="Yamashiro" />
+	<string id="str_ntp_sho_prov.settsu" text="Settsu" />
+	<string id="str_ntp_sho_prov.echigo" text="Echigo" />
+	<string id="str_ntp_sho_prov.sado" text="Sado" />
+	<string id="str_ntp_sho_prov.etchu" text="Etchū" />
+	<string id="str_ntp_sho_prov.kaga" text="Kaga" />
+	<string id="str_ntp_sho_prov.noto" text="Noto" />
+	<string id="str_ntp_sho_prov.echizen" text="Echizen" />
+	<string id="str_ntp_sho_prov.wakasa" text="Wakasa" />
+	<string id="str_ntp_sho_prov.ki" text="Kī" />
+	<string id="str_ntp_sho_prov.awaji" text="Awaji" />
+	<string id="str_ntp_sho_prov.awa" text="Awa" />
+	<string id="str_ntp_sho_prov.sanuki" text="Sanuki" />
+	<string id="str_ntp_sho_prov.tosa" text="Tosa" />
+	<string id="str_ntp_sho_prov.iyo" text="Iyo" />
+	<string id="str_ntp_sho_prov.harima" text="Harima" />
+	<string id="str_ntp_sho_prov.bizen" text="Bizen" />
+	<string id="str_ntp_sho_prov.bitchu" text="Bitchū" />
+	<string id="str_ntp_sho_prov.bingo" text="Bingo" />
+	<string id="str_ntp_sho_prov.mimakaska" text="Mimasaka" />
+	<string id="str_ntp_sho_prov.aki" text="Aki" />
+	<string id="str_ntp_sho_prov.suou" text="Suou" />
+	<string id="str_ntp_sho_prov.nagato" text="Nagato" />
+	<string id="str_ntp_sho_prov.tanba" text="Tanba" />
+	<string id="str_ntp_sho_prov.tango" text="Tango" />
+	<string id="str_ntp_sho_prov.tajima" text="Tajima" />
+	<string id="str_ntp_sho_prov.inaba" text="Inaba" />
+	<string id="str_ntp_sho_prov.houki" text="Houki" />
+	<string id="str_ntp_sho_prov.izumo" text="Izumo" />
+	<string id="str_ntp_sho_prov.oki" text="Oki" />
+	<string id="str_ntp_sho_prov.iwami" text="Iwami" />
+	<string id="str_ntp_sho_prov.chikuzen" text="Chikuzen" />
+	<string id="str_ntp_sho_prov.chikugo" text="Chikugo" />
+	<string id="str_ntp_sho_prov.buzen" text="Buzen" />
+	<string id="str_ntp_sho_prov.bungo" text="Bungo" />
+	<string id="str_ntp_sho_prov.hizen" text="Hizen" />
+	<string id="str_ntp_sho_prov.higo" text="higo" />
+	<string id="str_ntp_sho_prov.hyuga" text="Hyūga" />
+	<string id="str_ntp_sho_prov.osumi" text="Ōsumi" />
+	<string id="str_ntp_sho_prov.satsuma" text="Satuma" />
+	<string id="str_ntp_sho_prov.iki" text="Iki" />
+	<string id="str_ntp_sho_prov.tsushima" text="Tsushima" />
+	<string id="str_ntp_sho_prov.keichou" text="Kyouto" />
+	<string id="str_ntp_sho_prov.default" text="Unlanded" />
 </strings>

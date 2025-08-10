@@ -148,4 +148,9 @@
     <string id="str_ntp_title_set.VAR_MinorLF_legion_of_the_betrayed" text="{=NTP.VARMinorLF_legion_of_the_betrayed}Legatus {NAME}" />
     <string id="str_ntp_title_set.VAR_MinorMM_legion_of_the_betrayed" text="{=NTP.VARMinorMM_legion_of_the_betrayed}Tribunus {NAME}" />
     <string id="str_ntp_title_set.VAR_MinorMF_legion_of_the_betrayed" text="{=NTP.VARMinorMF_legion_of_the_betrayed}Tribunus {NAME}" />
+    
+    <string id="str_ntp_title_set.VAR_MinorLM_karakhergit" text="{=0jScsrwyR}{NAME} Noyon " />
+    <string id="str_ntp_title_set.VAR_MinorLF_karakhergit" text="{=nFuxKkjtj}{NAME} Noyon" />
+    <string id="str_ntp_title_set.VAR_MinorMM_karakhergit" text="{=9Mpm8DCph}{NAME} Tarqan" />
+    <string id="str_ntp_title_set.VAR_MinorMF_karakhergit" text="{=1HGM6q3EI}{NAME} Tarqan" />
 </strings>
