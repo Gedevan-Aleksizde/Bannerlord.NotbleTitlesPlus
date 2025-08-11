@@ -17,12 +17,16 @@ namespace NobleTitlesPlus.MCMSettings
         public bool VerboseLog { get; set; } = false;
         public bool FogOfWar { get; set; } = true;
         public bool Encyclopedia { get; set; } = false;
+        public bool ShowOnSettlementUI { get; set; } = true;
+        public bool ShowOnConversation { get; set; } = true;
+        public bool ShowOnMission { get; set; } = true;
+        public bool ShowOnPartyTooltip { get; set; } = true;
         public bool SpouseTitle { get; private set; } = true;
         public bool Tagging { get; set; } = false;
         public string FiefNameSeparator { get; set; } = ",";
         public string FiefNameSeparatorLast { get; set; } = "and";
         public int MaxFiefNames { get; set; } = 1;
-        public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(DB.Inheritance)).OfType<DB.Inheritance>().ToList().Select(x => GameTexts.FindText("str_ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
+        public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(DB.Inheritance)).OfType<DB.Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
         public TitleSet TitleSet { get; set; } = new();
     }
     internal static class RuntimeSettings
@@ -74,7 +78,7 @@ namespace NobleTitlesPlus.MCMSettings
                 j++;
             }
             builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, new(), "DEF"));
-            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant"), ("SHO", "Shokuho"), ("SHOM", "ShokuhoModified") })
+            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant"), ("VARM", "VariantModified"), ("SHO", "Shokuho"), ("SHOM", "ShokuhoModified") })
             {
                 builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, new(), presetName.id));
             }
@@ -87,23 +91,50 @@ namespace NobleTitlesPlus.MCMSettings
                         value => options.FogOfWar = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("fow_hint")).SetOrder(0)
                     )
+                // TODO
+                /*
                 .AddBool("encyclopedia", "{=MxmOWsHj}Encyclopedia",
                     new ProxyRef<bool>(
                         () => options.Encyclopedia,
                         value => options.Encyclopedia = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("encyclo_hint")).SetOrder(1)
                     )
-                .AddBool("VerboseLog", FindTextShortMCM("verbose"),
-                new ProxyRef<bool>(
-                    () => options.VerboseLog,
-                    value => options.VerboseLog = value),
-                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(2)
-                )
+                .AddBool("showOnConversation", "{=LMkm6aToS}Show Titles On Conversation",
+                    new ProxyRef<bool>(
+                        () => options.ShowOnConversation,
+                        value => options.ShowOnConversation = value),
+                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_conversation_hint")).SetOrder(2)
+                    )
+                .AddBool("showOnMission", "{=0vnxDT91U}Show Titles On Mission Map",
+                    new ProxyRef<bool>(
+                        () => options.ShowOnMission,
+                        value => options.ShowOnMission = value),
+                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_mission_hint")).SetOrder(3)
+                    )
+                .AddBool("showOnSettlementUI", "{=SF9DCetBr}Show Titles On The Settlement UI",
+                    new ProxyRef<bool>(
+                        () => options.ShowOnSettlementUI,
+                        value => options.ShowOnSettlementUI = value),
+                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_settlement_hint")).SetOrder(4)
+                    )
+                .AddBool("showOnPartyTooltip", "{=B5O6vBo6Z}Show Titles On The Party Tooltip",
+                    new ProxyRef<bool>(
+                        () => options.ShowOnPartyTooltip,
+                        value => options.ShowOnPartyTooltip = value),
+                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_partytt_hint")).SetOrder(5)
+                    )
+                */
                 .AddDropdown("heir", FindTextShortMCM("heir"), 1,
                     new ProxyRef<Dropdown<TextObject>>(
                         () => options.Inheritance,
                         value => options.Inheritance = value),
-                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(4)
+                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(6)
+                )
+                .AddBool("VerboseLog", FindTextShortMCM("verbose"),
+                new ProxyRef<bool>(
+                    () => options.VerboseLog,
+                    value => options.VerboseLog = value),
+                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(7)
                 )
                 .SetGroupOrder(0);
             void BuildFormattingGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
@@ -301,11 +332,11 @@ namespace NobleTitlesPlus.MCMSettings
                 }
             }
         }
-        public const string moduleStrTitles = "str_ntp_title_set";
+        public const string moduleStrTitles = "ntp_title_set";
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static string FindTextShortMCM(string variantId)
         {
-            return GameTexts.FindText("str_ntp_mcm", variantId).ToString();
+            return GameTexts.FindText("ntp_mcm", variantId).ToString();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static string FindTitleTextString(string preset, string rank, string gender, string group)

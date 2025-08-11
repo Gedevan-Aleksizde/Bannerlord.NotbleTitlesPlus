@@ -57,13 +57,5 @@
         <GameType value="ShokuhoCampaign"/>
       </IncludedGameTypes>
     </XmlNode>
-    <XmlNode>
-      <XmlName id="SHOCastles" path="sho_castles"/>
-      <IncludedGameTypes>
-        <GameType value="ShokuhoCampaign"/>
-        <GameType value="Campaign"/>
-        <GameType value="CustomGame"/>
-      </IncludedGameTypes>
-    </XmlNode>
   </Xmls>
 </Module>

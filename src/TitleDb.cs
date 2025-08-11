@@ -1,14 +1,21 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using NobleTitlesPlus.json;
+using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using Newtonsoft.Json;
-using TaleWorlds.Core;
-using TaleWorlds.CampaignSystem;
-using TaleWorlds.Localization;
+using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
+using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
+using TaleWorlds.Library;
+using TaleWorlds.Localization;
+
 
 namespace NobleTitlesPlus.DB
 {
+    /// <summary>
+    /// A collection of formats and terms
+    /// </summary>
     [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     public class TitleSet
     {
@@ -24,6 +31,8 @@ namespace NobleTitlesPlus.DB
             this.InitCultureTitles(AssignMode.Assign);
             this.InitFactionTitles(AssignMode.Blank);
             this.InitMinorFactionTitles(AssignMode.Assign);
+            this.ReadJsonShokuhoCastleProvince();
+            this.ReadJsonShokuhoClanNames();
             // this.TmpDebug();
         }
         public void InitCultureTitles(AssignMode mode)
@@ -31,12 +40,12 @@ namespace NobleTitlesPlus.DB
             List<string> cultureIds = Kingdom.All.Select(k => k.Culture.StringId).Distinct().ToList();
             foreach (string cultureId in cultureIds)
             {
-                if(!this.cultures.ContainsKey(cultureId)) this.cultures.Add(cultureId, BlankTitleSet);
+                if (!this.cultures.ContainsKey(cultureId)) this.cultures.Add(cultureId, BlankTitleSet);
             }
             if (mode == AssignMode.None) return;
             else if (mode == AssignMode.Assign)
             {
-                foreach(string cultureId in cultureIds)
+                foreach (string cultureId in cultureIds)
                 {
                     foreach (bool isFemale in new bool[] { false, true })
                     {
@@ -47,7 +56,7 @@ namespace NobleTitlesPlus.DB
                     }
                 }
             }
-            else if(mode == AssignMode.Blank)
+            else if (mode == AssignMode.Blank)
             {
                 foreach (string cultureId in cultureIds)
                 {
@@ -69,7 +78,7 @@ namespace NobleTitlesPlus.DB
             List<Kingdom> kingdoms = Kingdom.All.Where(k => !cultureIds.Contains(k.StringId)).ToList();
             foreach (Kingdom k in kingdoms)
             {
-                if(!this.factions.ContainsKey(k.StringId)) this.factions.Add(k.StringId, BlankTitleSet);
+                if (!this.factions.ContainsKey(k.StringId)) this.factions.Add(k.StringId, BlankTitleSet);
             }
             if (mode == AssignMode.None) return;
             else if (mode == AssignMode.Assign)
@@ -85,7 +94,7 @@ namespace NobleTitlesPlus.DB
                     }
                 }
             }
-            else if(mode == AssignMode.Blank)
+            else if (mode == AssignMode.Blank)
             {
                 foreach (Kingdom k in kingdoms)
                 {
@@ -102,14 +111,14 @@ namespace NobleTitlesPlus.DB
         }
         public void InitMinorFactionTitles(AssignMode mode)
         {
-            if(mode == AssignMode.None || mode == AssignMode.Assign)
+            if (mode == AssignMode.None || mode == AssignMode.Assign)
             {
                 foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !(c.Leader?.IsHumanPlayerCharacter ?? false)))
                 {
                     this.minorFactions.Add(c.StringId, DefaultMinorFactionValue);
                 }
             }
-            else if(mode == AssignMode.Blank)
+            else if (mode == AssignMode.Blank)
             {
                 // perhaps never used
                 foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !(c.Leader?.IsHumanPlayerCharacter ?? false))) // ていうかなんでnull返すの?
@@ -120,13 +129,13 @@ namespace NobleTitlesPlus.DB
         }
         public void AddDefaultCutlureTitles()
         {
-            foreach(string cultureId in /*new string[] { "aserai", "battania", "empire", "khuzait", "sturgia", "vlandia" }*/ Kingdom.All.Select(k => k.Culture.StringId).Distinct())
+            foreach (string cultureId in /*new string[] { "aserai", "battania", "empire", "khuzait", "sturgia", "vlandia" }*/ Kingdom.All.Select(k => k.Culture.StringId).Distinct())
             {
                 if (!this.cultures.ContainsKey(cultureId))
                 {
                     TextObject ruler = GameTexts.FindText("str_faction_ruler_name_with_title", cultureId);
                     TextObject noble = GameTexts.FindText("str_faction_noble_name_with_title", cultureId);
-                    TextObject whyneedM = new("", new Dictionary<string, object>() { { "GENDER", 0}, { "NAME", "______MOCKPLACEHOLDER_____" } });
+                    TextObject whyneedM = new("", new Dictionary<string, object>() { { "GENDER", 0 }, { "NAME", "______MOCKPLACEHOLDER_____" } });
                     TextObject whyneedF = new("", new Dictionary<string, object>() { { "GENDER", 1 }, { "NAME", "______MOCKPLACEHOLDER_____" } });
                     this.cultures.Add(
                         cultureId,
@@ -144,26 +153,26 @@ namespace NobleTitlesPlus.DB
         }
         public void SetDefaultCultureTitle(string cultureId, bool isFemale, TitleRank rank)
         {
-            TextObject title = GameTexts.FindText(rank == TitleRank.King ? "str_faction_ruler_name_with_title": "str_faction_noble_name_with_title", cultureId);
-            TextObject dummy = new("", new Dictionary<string, object>() { { "GENDER", isFemale? 1: 0 }, { "NAME", "______MOCKPLACEHOLDER_____" } });
+            TextObject title = GameTexts.FindText(rank == TitleRank.King ? "str_faction_ruler_name_with_title" : "str_faction_noble_name_with_title", cultureId);
+            TextObject dummy = new("", new Dictionary<string, object>() { { "GENDER", isFemale ? 1 : 0 }, { "NAME", "______MOCKPLACEHOLDER_____" } });
             this.SetCultureTitle(Util.QuoteVarBitEasiler(title.SetTextVariable("RULER", dummy)), cultureId, isFemale, rank);
         }
         public void AddAllMinorFactionTitles()
         {
-            foreach(Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
+            foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
             {
                 this.minorFactions.Add(c.StringId, DefaultMinorFactionValue);
-                if (TitleBehavior.options.VerboseLog)  Util.Log.Print($">> [DEBUG] Intialized title set  for minor faction {c.StringId}");
+                if (TitleBehavior.options.VerboseLog) Util.Log.Print($">> [DEBUG] Intialized title set  for minor faction {c.StringId}");
             }
         }
         public void TmpDebug()
         {
-            foreach(string keys in this.cultures.Keys)
+            foreach (string keys in this.cultures.Keys)
             {
                 Util.Log.Print($"Calture key: {keys}");
-                for(int i = 1; i <= 5; i++)
+                for (int i = 1; i <= 5; i++)
                 {
-                    Util.Log.Print($"King = ({this.cultures[keys].GetTitleRaw(true, (TitleRank)i )}, {this.cultures[keys].GetTitleRaw(false, (TitleRank)i)})");
+                    Util.Log.Print($"King = ({this.cultures[keys].GetTitleRaw(true, (TitleRank)i)}, {this.cultures[keys].GetTitleRaw(false, (TitleRank)i)})");
                 }
             }
             foreach (string keys in this.factions.Keys)
@@ -181,7 +190,7 @@ namespace NobleTitlesPlus.DB
                 Util.Log.Print($"Member = ({this.minorFactions[keys].GetTitleRaw(true, TitleRank.Noble)}, {this.minorFactions[keys].GetTitleRaw(false, TitleRank.Noble)})");
             }
         }
-        
+
         internal void SetFactionTitle(string newTitle, string id, bool isFemale, TitleRank rank, bool append = false)
         {
             if (this.factions.ContainsKey(id))
@@ -346,7 +355,8 @@ namespace NobleTitlesPlus.DB
         }
         internal bool FactionTitleExists(string factionId, bool isFemale, TitleRank rank)
         {
-            if(this.factions.TryGetValue(factionId, out FactionTitleSet titleSet)){
+            if (this.factions.TryGetValue(factionId, out FactionTitleSet titleSet))
+            {
                 if (titleSet.GetTitleRaw(isFemale, rank) == "")
                 {
                     return false;
@@ -365,7 +375,7 @@ namespace NobleTitlesPlus.DB
         {
             if (this.minorFactions.TryGetValue(clanId, out FactionTitleSet titleSet))
             {
-                if(titleSet.GetTitleRaw(isFemale, rank) == "")
+                if (titleSet.GetTitleRaw(isFemale, rank) == "")
                 {
                     return false;
                 }
@@ -419,6 +429,20 @@ namespace NobleTitlesPlus.DB
                 Util.Log.Print($">> [WARNING] Irregular minor faction rank requested! ({rank})");
             }
         }
+        internal void ReadJsonShokuhoCastleProvince(string? jsonPath = null)
+        {
+            string fp = jsonPath ?? System.IO.Path.Combine(BasePath.Name, "Modules", SubModule.modFolderName, "ModuleData/sho_castles.json");
+            this.shokuhoCastleProvinceMap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(fp));
+        }
+        internal void ReadJsonShokuhoClanNames(string? jsonPath = null)
+        {
+            string fp = jsonPath ?? System.IO.Path.Combine(BasePath.Name, "Modules", SubModule.modFolderName, "ModuleData/sho_clans.json");
+            this.shokuhoClanNames = JsonConvert.DeserializeObject<Dictionary<string, ClanNamePair>>(File.ReadAllText(fp));
+            Util.Log.Print($"Shokuho clan names loaded. size={shokuhoClanNames.Count}");
+            Util.Log.Print($"Miki short={this.shokuhoClanNames["clan_miki_1"].ClanShort}, long={this.shokuhoClanNames["clan_miki_1"].ClanLong}");
+        }
+        public Dictionary<string, string> shokuhoCastleProvinceMap = new();
+        public Dictionary<string, ClanNamePair> shokuhoClanNames = new();
         [JsonProperty("CULTURES")]
         public Dictionary<string, FactionTitleSet> cultures = new() { { "default", DefaultCultureValue } };
         [JsonProperty("MINORS")]
@@ -495,7 +519,7 @@ namespace NobleTitlesPlus.DB
                 this.duke = duke;
                 this.count = count;
                 this.baron = baron;
-                this.prince = prince?? new("{NAME}", "{NAME}");
+                this.prince = prince ?? new("{NAME}", "{NAME}");
                 this.noble = noble ?? new("{NAME}", "{NAME}");
                 this.royal = royal ?? new("{NAME}", "{NAME}");
             }
@@ -605,7 +629,7 @@ namespace NobleTitlesPlus.DB
                 {
                     this.male = genderTitlePair.male;
                     this.maleFormat = new(this.male);
-                    this.female= genderTitlePair.female;
+                    this.female = genderTitlePair.female;
                     this.femaleFormat = new(genderTitlePair.female);
                 }
                 private string NormalizeInputTitle(string titleFormat)
@@ -638,7 +662,7 @@ namespace NobleTitlesPlus.DB
                 }
             }
         }
-    }  
+    }
     public enum TitleRank
     {
         None,

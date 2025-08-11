@@ -1,6 +1,6 @@
 ﻿using HarmonyLib;
 using NobleTitlesPlus.DB;
-using SandBox.ViewModelCollection.Missions.NameMarker;
+using NobleTitlesPlus.json;
 using SandBox.ViewModelCollection.Nameplate;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Conversation;
@@ -32,9 +32,9 @@ namespace NobleTitlesPlus.Patches
                     TextObject title = TitleBehavior.options.TitleSet.GetTitle(__instance, rank).SetTextVariable("NAME", __instance.FirstName)
                         .SetTextVariable("CLAN", __instance.Clan.Name)
                         .SetTextVariable("CLAN_SHORT", __instance.Clan.InformalName);
-                    if (TitleBehavior.nomenclatura.FiefLists.TryGetValue(__instance.Clan, out TextObject fiefNames))
+                    if (TitleBehavior.nomenclatura.ClanAttrs.TryGetValue(__instance.Clan, out (TextObject strFief, TextObject shokuhoProv, ClanNamePair clanNamesPair) fiefNames))
                     {
-                        title = title.SetTextVariable("FIEFS", fiefNames);
+                        title = title.SetTextVariable("FIEFS", fiefNames.strFief).SetTextVariable("PROVINCE_SHO", fiefNames.shokuhoProv);
                     }
                     __result = new TextObject(title.ToString());
                 }
@@ -133,16 +133,6 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
-    [HarmonyPatch(typeof(MissionNameMarkerVM), nameof(MissionNameMarkerVM.AddAgentTarget))]
-    internal class ModifyMissionNameMarkerVM
-    {
-        [HarmonyPostfix]
-        private static void Test(MissionNameMarkerVM __instance)
-        {
-            // Util.Log.Print($"MissionNameMarkerVM.AddAgentTarget = {__instance}");
-        }
-    }
-
     /*[HarmonyPatch(typeof(EncyclopediaListItemVM), nameof(EncyclopediaListItemVM.Name), MethodType.Getter)]
     internal class EncyclopediaName
     {

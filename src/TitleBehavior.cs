@@ -1,4 +1,5 @@
 ﻿using NobleTitlesPlus.DB;
+using NobleTitlesPlus.json;
 using NobleTitlesPlus.MCMSettings;
 using System;
 using System.Collections.Generic;
@@ -67,10 +68,13 @@ namespace NobleTitlesPlus
             }
         }
     }
+    /// <summary>
+    /// Cache for access the text faster
+    /// </summary>
     class Nomenclatura
     {
         public Dictionary<Hero, TitleRank> HeroRank { get; private set; } = new();
-        public Dictionary<Clan, TextObject> FiefLists { get; private set; } = new();
+        public Dictionary<Clan, (TextObject FiefText, TextObject ShokuhoProvName, ClanNamePair ClanNames)> ClanAttrs { get; private set; } = new();
         public Nomenclatura(bool update = false)
         {
             if (update) this.UpdateAll();
@@ -84,6 +88,7 @@ namespace NobleTitlesPlus
             foreach (Clan c in Clan.All)
             {
                 this.UpdateFiefList(c);
+                this.UpdateClanName(c);
             }
             this.AddTitlesToMinorFaction();
             this.RemoveTitleFromDead();
@@ -99,28 +104,86 @@ namespace NobleTitlesPlus
             }
         }
         /// <summary>
-        /// updates the list of fiefs that a clan have
+        /// updates each clan's fief information and values assigned to fief and province variable.
         /// </summary>
         /// <param name="clan"></param>
         public void UpdateFiefList(Clan clan)
         {
-            List<string> fiefList = clan.Fiefs.Take(TitleBehavior.options.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
+            // TODO: keeping TextObject causes replacing wrong name, very weird.
+            List<(string SettlementId, string Name)> fiefTupleList = clan.Fiefs.Take(TitleBehavior.options.MaxFiefNames).Select(x => (SettlementId: x.Settlement.StringId, Name: x.Name.ToString())).ToList();
 
-            if (fiefList.Count() <= 1 || TitleBehavior.options.MaxFiefNames <= 1)
+            if (fiefTupleList.Count() <= 1 || TitleBehavior.options.MaxFiefNames <= 1)
             {
-                this.FiefLists[clan] = new TextObject(fiefList.FirstOrDefault());
+                (string SettlementId, string Name) = fiefTupleList.FirstOrDefault();
+                if (!TitleBehavior.options.TitleSet.shokuhoCastleProvinceMap.TryGetValue(SettlementId ?? "", out string strProvId))
+                {
+                    strProvId = "default";
+                }
+                Util.Log.Print($"sett_id={SettlementId ?? ""}, province_id={strProvId}");
+                this.ClanAttrs[clan] = (
+                    FiefText: new TextObject(Name),
+                    ShokuhoProvName: GameTexts.FindText("ntp_sho_prov", strProvId),
+                    ClanNames: this.ClanAttrs.ContainsKey(clan) ? this.ClanAttrs[clan].ClanNames : new(""));
             }
-            else if (fiefList.Count > 1)
+            else if (fiefTupleList.Count > 1)
             {
                 string sep = TitleBehavior.options.FiefNameSeparator + " ";
-                string fiefs = string.Join(sep, fiefList.Take(Math.Min(fiefList.Count() - 1, TitleBehavior.options.MaxFiefNames)).ToArray<string>());
-                string lastElement = string.Join(" ", new string[] { TitleBehavior.options.FiefNameSeparatorLast, fiefList.Last() });
-                this.FiefLists[clan] = new TextObject(string.Join(" ", new string[] { fiefs, lastElement }));
+                string fiefs = string.Join(sep, fiefTupleList.Take(Math.Min(fiefTupleList.Count() - 1, TitleBehavior.options.MaxFiefNames)).Select(x => x.Name).ToArray<string>());
+                string lastElement = string.Join(" ", new string[] { TitleBehavior.options.FiefNameSeparatorLast, fiefTupleList.Last().Name });
+
+                if (!TitleBehavior.options.TitleSet.shokuhoCastleProvinceMap.TryGetValue(fiefTupleList.Last().SettlementId ?? "", out string strProvId))
+                {
+                    strProvId = "default";
+                }
+                Util.Log.Print($"sett_id={fiefTupleList.Last().SettlementId ?? ""}, province_id={strProvId}");
+                this.ClanAttrs[clan] = (
+                    FiefText: new TextObject(string.Join(" ", new string[] { fiefs, lastElement })),
+                    ShokuhoProvName: GameTexts.FindText("ntp_sho_prov", strProvId),
+                    ClanNames: this.ClanAttrs.ContainsKey(clan) ? this.ClanAttrs[clan].ClanNames : new("")
+                    );
             }
             else
             {
-                this.FiefLists[clan] = GameTexts.FindText("str_ntp_landless");
+                this.ClanAttrs[clan] = (
+                    FiefText: GameTexts.FindText("ntp_landless"),
+                    ShokuhoProvName: GameTexts.FindText("ntp_sho_prov.default"),
+                    ClanNames: this.ClanAttrs.ContainsKey(clan) ? this.ClanAttrs[clan].ClanNames : new("")
+                    );
             }
+        }
+        /// <summary>
+        /// Store All clan's long names and short names. This feature is intended to use with Shokuhō which has duplicated clan names. The clan's long name means game-originally name for indentification, and the short name is normally format which can be duplicated with another
+        /// </summary>
+        /// <param name=""></param>
+        public void UpdateClanName(Clan clan)
+        {
+            TextObject shortName;
+            TextObject longName;
+            if (TitleBehavior.options.TitleSet.shokuhoClanNames.TryGetValue(clan.StringId, out ClanNamePair namePair))
+            {
+                if (namePair?.ClanShort is null || namePair?.ClanLong is null)
+                {
+                    throw new NullReferenceException("Clan Names failed to be loaded.");
+                }
+                shortName = namePair.ClanShort;
+                longName = namePair.ClanLong;
+            }
+            else
+            {
+                shortName = clan.Name;
+                longName = clan.Name;
+            }
+            bool contains = this.ClanAttrs.ContainsKey(clan);
+            if (contains)
+            {
+                (TextObject FiefText, TextObject ShokuhoProvName, ClanNamePair ClanNames) t = this.ClanAttrs[clan];
+            }
+            clan.ChangeClanName(clan.Name, shortName);
+            this.ClanAttrs[clan] = (
+                FiefText: contains ? this.ClanAttrs[clan].FiefText : new(""),
+                ShokuhoProvName: contains ? this.ClanAttrs[clan].ShokuhoProvName : new(""),
+                ClanNames: new(shortName, longName)
+                );
         }
         /// <summary>
         /// Adds titles to all heroes in a kingdom
