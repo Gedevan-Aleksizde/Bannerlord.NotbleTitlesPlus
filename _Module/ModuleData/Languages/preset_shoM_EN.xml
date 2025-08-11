@@ -29,7 +29,7 @@
 		
 		<string id="NTP.SHOM1M_asakura" text="{CLAN} {NAME}, Deputy Protector of Echizen Province" /> 
 		<string id="NTP.SHOM1M_ashikaga" text="Sēi-taishougun {CLAN} {NAME}" /> 
-		<string id="NTP.SHOM1M_hatakeyama" text="{CLAN} {NAME}, Protector of Noto Province" /> 
+		<string id="NTP.SHOM1M_hatakeyama" text="{CLAN} {NAME}, Protector of Kī Province" /> 
 		<string id="NTP.SHOM1M_imagawa" text="{CLAN} {NAME}, Protector of Tōtoumi and Suruga Provinces" /> 
 		<string id="NTP.SHOM1M_oda" text="{CLAN} {NAME}, Deputy Protector of Owari Province" /> 
 		<string id="NTP.SHOM1M_otomo" text="{CLAN} {NAME}, Protector of Bungo Province" /> 

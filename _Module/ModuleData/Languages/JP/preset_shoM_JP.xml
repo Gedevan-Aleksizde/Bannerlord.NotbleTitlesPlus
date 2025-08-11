@@ -29,7 +29,7 @@
 		
 		<string id="NTP.SHOM1M_asakura" text="越前守護代{CLAN}{NAME}" /> 
 		<string id="NTP.SHOM1M_ashikaga" text="征夷大將軍{CLAN}{NAME}" /> 
-		<string id="NTP.SHOM1M_hatakeyama" text="能登守護{CLAN}{NAME}" /> 
+		<string id="NTP.SHOM1M_hatakeyama" text="紀伊守護{CLAN}{NAME}" /> 
 		<string id="NTP.SHOM1M_imagawa" text="駿遠守護{CLAN}{NAME}" /> 
 		<string id="NTP.SHOM1M_oda" text="{CLAN}尾張守{NAME}" /> 
 		<string id="NTP.SHOM1M_otomo" text="豐後守護{CLAN}{NAME}" /> 
