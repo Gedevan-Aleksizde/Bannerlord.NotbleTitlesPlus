@@ -7,7 +7,7 @@
 		<!-- Shokuho modified preset -->
 		<string id="NTP.MCMSshokuhomodified" text="Shokuhō Modified" />
 		
-		<string id="NTP.SHOM1M_default" text="{PROVINCE_SHO} Daimyo {CLAN} {NAME}" />
+		<string id="NTP.SHOM1M_default" text="{PROVINCE_SHO} Daimyo {CLAN_SHORT} {NAME}" />
 		<string id="NTP.SHOM1F_default" text="Daimyou-fujin {NAME}" />
 		<string id="NTP.SHOM2M_default" text="Karou {NAME}" />
 		<string id="NTP.SHOM2F_default" text="Karou-fujin {NAME}" />
@@ -27,20 +27,20 @@
 		<string id="NTP.SHOMMinorMM_default" text="{NAME} of {CLAN_SHORT}" />
 		<string id="NTP.SHOMMinorMF_default" text="{NAME} of {CLAN_SHORT}" />
 		
-		<string id="NTP.SHOM1M_asakura" text="{CLAN} {NAME}, Deputy Protector of Echizen Province" /> 
-		<string id="NTP.SHOM1M_ashikaga" text="Sēi-taishougun {CLAN} {NAME}" /> 
-		<string id="NTP.SHOM1M_hatakeyama" text="{CLAN} {NAME}, Protector of Kī Province" /> 
-		<string id="NTP.SHOM1M_imagawa" text="{CLAN} {NAME}, Protector of Tōtoumi and Suruga Provinces" /> 
-		<string id="NTP.SHOM1M_oda" text="{CLAN} {NAME}, Deputy Protector of Owari Province" /> 
-		<string id="NTP.SHOM1M_otomo" text="{CLAN} {NAME}, Protector of Bungo Province" /> 
-		<string id="NTP.SHOM1M_satake" text="{CLAN} {NAME}, Protector of Hitachi Province" /> 
-		<string id="NTP.SHOM1M_shimazu" text="{CLAN} {NAME}, Protector of Satsuma Province" /> 
-		<string id="NTP.SHOM1M_takeda" text="{CLAN} {NAME}, Protector of Kai Province" /> 	
-		<string id="NTP.SHOM1M_uesugi" text="Kantou-kanrei {CLAN} {NAME}" /> 
-		<string id="NTP.SHOM1M_utsunomiya" text="{CLAN} {NAME}, Protector of Shimotsuke Province" /> 
-		<string id="NTP.SHOM1M_rokkaku" text="{CLAN} {NAME}, Protector of Oumi Province" /> 
-		<string id="NTP.SHOM1M_mori" text="{CLAN} {NAME}, Vice Master of the Horse" /> 
-		<string id="NTP.SHOM1M_ikko_shu" text="High Priest {CLAN} {NAME}" /> 
-		<string id="NTP.SHOM1F_ikko_shu" text="Lady {CLAN} {NAME}" /> 
+		<string id="NTP.SHOM1M_asakura" text="{CLAN_SHORT} {NAME}, Deputy Protector of Echizen Province" /> 
+		<string id="NTP.SHOM1M_ashikaga" text="Sēi-taishougun {CLAN_SHORT} {NAME}" /> 
+		<string id="NTP.SHOM1M_hatakeyama" text="{CLAN_SHORT} {NAME}, Protector of Kī Province" /> 
+		<string id="NTP.SHOM1M_imagawa" text="{CLAN_SHORT} {NAME}, Protector of Tōtoumi and Suruga Provinces" /> 
+		<string id="NTP.SHOM1M_oda" text="{CLAN_SHORT} {NAME}, Deputy Protector of Owari Province" /> 
+		<string id="NTP.SHOM1M_otomo" text="{CLAN_SHORT} {NAME}, Protector of Bungo Province" /> 
+		<string id="NTP.SHOM1M_satake" text="{CLAN_SHORT} {NAME}, Protector of Hitachi Province" /> 
+		<string id="NTP.SHOM1M_shimazu" text="{CLAN_SHORT} {NAME}, Protector of Satsuma Province" /> 
+		<string id="NTP.SHOM1M_takeda" text="{CLAN_SHORT} {NAME}, Protector of Kai Province" /> 	
+		<string id="NTP.SHOM1M_uesugi" text="Kantou-kanrei {CLAN_SHORT} {NAME}" /> 
+		<string id="NTP.SHOM1M_utsunomiya" text="{CLAN_SHORT} {NAME}, Protector of Shimotsuke Province" /> 
+		<string id="NTP.SHOM1M_rokkaku" text="{CLAN_SHORT} {NAME}, Protector of Oumi Province" /> 
+		<string id="NTP.SHOM1M_mori" text="{CLAN_SHORT} {NAME}, Vice Master of the Horse" /> 
+		<string id="NTP.SHOM1M_ikko_shu" text="High Priest {CLAN_SHORT} {NAME}" /> 
+		<string id="NTP.SHOM1F_ikko_shu" text="Lady {CLAN_SHORT} {NAME}" /> 
   </strings>
 </base>
