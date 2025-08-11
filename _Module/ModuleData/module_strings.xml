@@ -78,14 +78,14 @@
 	<string id="ntp_sho_prov.hida" text="{=c0A99b0C}Mino"/>
 	<string id="ntp_sho_prov.oumi" text="{=3DcfeFBF}Oumi"/>
 	<string id="ntp_sho_prov.hitachi" text="{=f2F9D8a8}Hitachi"/>
-	<string id="ntp_sho_prov.simousa" text="{=Fb984391}Shimousa"/>
+	<string id="ntp_sho_prov.shimousa" text="{=Fb984391}Shimousa"/>
 	<string id="ntp_sho_prov.kazusa" text="{=549dB29C}Kazusa"/>
 	<string id="ntp_sho_prov.anbou" text="{=FbF7FE46}Anbou"/>
 	<string id="ntp_sho_prov.musashi" text="{=7f07f046}Musashi"/>
 	<string id="ntp_sho_prov.sagami" text="{=906A337C}Sagami"/>
 	<string id="ntp_sho_prov.kai" text="{=554b16C7}Kai"/>
 	<string id="ntp_sho_prov.izu" text="{=3e3605AA}Izu"/>
-	<string id="ntp_sho_prov.suruga" text="{=4BEB8984}Tōtoumi"/>
+	<string id="ntp_sho_prov.tonoumi" text="{=4BEB8984}Tōtoumi"/>
 	<string id="ntp_sho_prov.suruga" text="{=D34A3758}Suruga"/>
 	<string id="ntp_sho_prov.mikawa" text="{=a8104Cd9}Mikawa"/>
 	<string id="ntp_sho_prov.owari" text="{=53F3Fc0f}Owari"/>

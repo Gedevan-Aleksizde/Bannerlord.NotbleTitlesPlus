@@ -1,0 +1,818 @@
+{
+  "clan_hatakeyama_1": {
+    "name_short": "{=uUwLCMKuu}Hatakeyama",
+    "name_long": "{=lx34RrxX}Bishū-Hatakeyama"
+  },
+  "clan_notohatakeyama_1": {
+    "name_short": "{=v4QvrR3f2}Hatakeyama",
+    "name_long": "{=1iyE0PaI}Noto-Hatakeyama"
+  },
+  "clan_murakami_1": {
+    "name_short": "{=wnzNkLNfP}Murakami",
+    "name_long": "{=1Ty8UxNT}Murakami Pirates"
+  },
+  "clan_murakami_2": {
+    "name_short": "{=Jdn0EFHiw}Murakami",
+    "name_long": "{=zMS7kVYL}Shinano-Murakami "
+  },
+  "clan_kogakubo_1": {
+    "name_short": "{=7m3WCfW9W}Ashikaga",
+    "name_long": "{=JcaTBEWg}Ashikaga Koga-Kubou"
+  },
+  "clan_ashikaga_1": {
+    "name_short": "{=tC6dh7QrC}Ashikaga",
+    "name_long": "{=cm25rmmT}Ashikaga"
+  },
+  "clan_sakai_1": {
+    "name_short": "{=XUoba6I0v}Sakai",
+    "name_long": "{=8ARCCCRo}Mikawa-Sakai"
+  },
+  "clan_sakai_2": {
+    "name_short": "{=MdGAKCzwR}Sakai",
+    "name_long": "{=929b08aD}Toke-Sakai "
+  },
+  "clan_kakizaki_2 ": {
+    "name_short": "{=n8KgX5KAl}Kakizaki",
+    "name_long": "{=xy3cU9cP}Matsumae-Kakizaki"
+  },
+  "clan_kakizaki_1": {
+    "name_short": "{=mqeRVL7R1}Kakizaki",
+    "name_long": "{=ut0zK1q3}Echigo-Kakizaki "
+  },
+  "clan_shibata_1": {
+    "name_short": "{=NGOfCE9Ue}Shitbata",
+    "name_long": "{=dOsL2isy}Owari-Shibata"
+  },
+  "clan_shibata_2": {
+    "name_short": "{=LmFpMDrMD}Shibata",
+    "name_long": "{=dKQsidWH}Ecgigo-Shibata "
+  },
+  "clan_asakura_1": {
+    "name_short": "{=fbNnug0w5}Asakura",
+    "name_long": "{=XRWN4wOB}Asakura"
+  },
+  "clan_yamazaki_1": {
+    "name_short": "{=oXK2BXg2P}Yamazaki",
+    "name_long": "{=0EuaiL5U}Yamazaki"
+  },
+  "clan_mizoe_1": {
+    "name_short": "{=P0vbtKhHr}Mizoe",
+    "name_long": "{=65nRjENB}Mizoe"
+  },
+  "clan_maeba_1": {
+    "name_short": "{=zgyTE4l8R}Maeba",
+    "name_long": "{=QWSAhV9G}Maeba"
+  },
+  "clan_anekouji_1": {
+    "name_short": "{=cVU7TI8X1}Anekouji",
+    "name_long": "{=lo1uTEQ8}Anekouji"
+  },
+  "clan_miki_1": {
+    "name_short": "{=uyXwTNqaJ}Miki",
+    "name_long": "{=SNvfboK3}Miki"
+  },
+  "clan_uchigashima_1": {
+    "name_short": "{=RGboTbjO3}Uchigashima",
+    "name_long": "{=LboIPHhY}Uchigashima"
+  },
+  "clan_shimotsuma_1": {
+    "name_short": "{=u6DeoesxH}Shimotsuma",
+    "name_long": "{=8Kqhx9R1}Shimotsuma"
+  },
+  "clan_shichiri_1": {
+    "name_short": "{=adJHyZIor}Shichiri",
+    "name_long": "{=kXGcCns5}Shichiri"
+  },
+  "clan_cho_1": {
+    "name_short": "{=d1p7sVeHw}Chou",
+    "name_long": "{=oooOrCfb}Chou"
+  },
+  "clan_yusa_1": {
+    "name_short": "{=mKF2GoAaU}Yusa",
+    "name_long": "{=iilNBXIF}Yusa"
+  },
+  "clan_nukui_1": {
+    "name_short": "{=4wcdI6Z5A}Nukui",
+    "name_long": "{=IqeslrzB}Nukui"
+  },
+  "clan_maeda_1": {
+    "name_short": "{=57kc5oJy1}Maeda",
+    "name_long": "{=PQRi3uY3}Maeda"
+  },
+  "clan_akechi_1": {
+    "name_short": "{=uuGOBW6P7}Akechi",
+    "name_long": "{=c0sws5As}Akechi"
+  },
+  "clan_niwa_1": {
+    "name_short": "{=Yi4KhvoKt}Niwa",
+    "name_long": "{=uUYsYxYv}Niwa"
+  },
+  "clan_ikeda_1": {
+    "name_short": "{=5fKDPORjr}Ikeda",
+    "name_long": "{=XUZY7RKL}Ikeda"
+  },
+  "clan_tokugawa_1": {
+    "name_short": "{=e2SZ77tis}Tokugawa",
+    "name_long": "{=qVwe6PhI}Tokugawa"
+  },
+  "clan_honda_1": {
+    "name_short": "{=Ir6LOcCzk}Honda",
+    "name_long": "{=u6lrAs3a}Honda"
+  },
+  "clan_sakakibara_1": {
+    "name_short": "{=9DsR1lRnK}Sakakibara",
+    "name_long": "{=5WrhQacH}Sakakibara"
+  },
+  "clan_ii_1": {
+    "name_short": "{=erhBM9QNF}Ī",
+    "name_long": "{=2UQC6ICH}Ii"
+  },
+  "clan_okubo_1": {
+    "name_short": "{=MoKbs99yR}Ōkubo",
+    "name_long": "{=Oznhza31}Ōkubo"
+  },
+  "clan_hattori_1": {
+    "name_short": "{=eCyBLPRKr}Hattori",
+    "name_long": "{=mQXREA7g}Hattori"
+  },
+  "clan_uesugi_1": {
+    "name_short": "{=rPnZmMTAr}Uesugi",
+    "name_long": "{=cst28b0f}Uesugi"
+  },
+  "clan_irobe_1": {
+    "name_short": "{=zS4lepnDm}Irobe",
+    "name_long": "{=KLuc7HoH}Irobe"
+  },
+  "clan_naoe_1": {
+    "name_short": "{=t8bMIrSRc}Naoe",
+    "name_long": "{=46beFBYz}Naoe"
+  },
+  "clan_jinbo_1": {
+    "name_short": "{=rYkS3HKEa}Jinbo",
+    "name_long": "{=5CN6Gy5S}Jinbo"
+  },
+  "clan_honma_1": {
+    "name_short": "{=3tpSMmEBB}Honma",
+    "name_long": "{=vbUCt3rO}Honma"
+  },
+  "clan_honjo_1": {
+    "name_short": "{=5uvU4l96X}Honjou",
+    "name_long": "{=Zh7GjSjo}Honjou"
+  },
+  "clan_takeda_1": {
+    "name_short": "{=mblDhrbYo}Takeda",
+    "name_long": "{=yCcCT6mZ}Takeda"
+  },
+  "clan_baba_1": {
+    "name_short": "{=ynEismscX}Baba",
+    "name_long": "{=I9hQfxer}Baba"
+  },
+  "clan_kiso_1": {
+    "name_short": "{=U7U0sfGT7}Kiso",
+    "name_long": "{=gW4rfIRa}Kiso"
+  },
+  "clan_sanada_1": {
+    "name_short": "{=fBGMw56jR}Sanada",
+    "name_long": "{=9k6cL3KU}Sanada"
+  },
+  "clan_nishina_1": {
+    "name_short": "{=RFrcczBp2}Nishina",
+    "name_long": "{=or53kdM3}Nishina"
+  },
+  "clan_oyamada_1": {
+    "name_short": "{=iprN8Ccrm}Oyamada",
+    "name_long": "{=QowjvKFN}Oyamada"
+  },
+  "clan_anayama_1": {
+    "name_short": "{=hYSITlKjI}Anayama",
+    "name_long": "{=lJ4G39SA}Anayama"
+  },
+  "clan_yamagata_1": {
+    "name_short": "{=BKYPCQJGV}Yamagata",
+    "name_long": "{=EsXGTKG6}Yamagata"
+  },
+  "clan_kasuga_1": {
+    "name_short": "{=qNQPTylek}Kasuga",
+    "name_long": "{=cNcintrO}Kasuga"
+  },
+  "clan_imagawa_1": {
+    "name_short": "{=Q0DEHuqlz}Imagawa",
+    "name_long": "{=PUbRLoYj}Imagawa"
+  },
+  "clan_asahina_1": {
+    "name_short": "{=FKuPCVvQL}Asahina",
+    "name_long": "{=AWRMmV7h}Asahina"
+  },
+  "clan_fuji_1": {
+    "name_short": "{=sepzMMUgr}Fuji",
+    "name_long": "{=kRGxcRfS}Fuji"
+  },
+  "clan_okabe_1": {
+    "name_short": "{=MjzqJcqBh}Okabe",
+    "name_long": "{=Ewr11Fdb}Okabe"
+  },
+  "clan_mori_1": {
+    "name_short": "{=W63pY1FWi}Mouri",
+    "name_long": "{=TR017av3}Mouri"
+  },
+  "clan_kobayakawa_1": {
+    "name_short": "{=Swt5POyQa}Kobayakawa",
+    "name_long": "{=w0u8gG6o}Kobayakawa"
+  },
+  "clan_kikkawa_1": {
+    "name_short": "{=NNn3MxrZM}Kikkawa",
+    "name_long": "{=n2CCJZwh}Kikkawa"
+  },
+  "clan_yoshimi_1": {
+    "name_short": "{=NDpMhhyaM}Yoshimi",
+    "name_long": "{=CpuD24Mi}Yoshimi"
+  },
+  "clan_naito_1": {
+    "name_short": "{=2sSv2PGXD}Naitou",
+    "name_long": "{=wwt1foUn}Naitou"
+  },
+  "clan_nanjo_1": {
+    "name_short": "{=MIvFF9YuD}Nanjou",
+    "name_long": "{=J9HRNpb0}Nanjou"
+  },
+  "clan_misawa_1": {
+    "name_short": "{=fWC65H9AN}Mizawa",
+    "name_long": "{=JGZnehmf}Mizawa"
+  },
+  "clan_amano_1": {
+    "name_short": "{=rQBvo0MQn}Amano",
+    "name_long": "{=2SX9wmc3}Amano"
+  },
+  "clan_kawano_1": {
+    "name_short": "{=ialnsHHJt}Kawano",
+    "name_long": "{=kL7d963P}Kawano"
+  },
+  "clan_uragami_1": {
+    "name_short": "{=1PXJufn8D}Uragami",
+    "name_long": "{=0lgrXKVm}Uragami"
+  },
+  "clan_ukita_1": {
+    "name_short": "{=687EDYG52}Ukita",
+    "name_long": "{=qEujWHaS}Ukita"
+  },
+  "clan_akashi_1": {
+    "name_short": "{=JVqENcJCa}Akashi",
+    "name_long": "{=w9bAATVj}Akashi"
+  },
+  "clan_amago_1": {
+    "name_short": "{=TrYqNJsba}Amago",
+    "name_long": "{=bURjXC3v}Amago"
+  },
+  "clan_yamanaka_1": {
+    "name_short": "{=iosMv4IZm}Yamanaka",
+    "name_long": "{=EVP3ylVc}Yamanaka"
+  },
+  "clan_tatsuhara_1": {
+    "name_short": "{=OepxUV620}Tachihara",
+    "name_long": "{=JFYyHHSe}Tachihara"
+  },
+  "clan_obata_1": {
+    "name_short": "{=IZUuqKbSZ}Obata",
+    "name_long": "{=lE7sVvZR}Obata"
+  },
+  "clan_yura_1": {
+    "name_short": "{=guuxXNZUC}Yura",
+    "name_long": "{=9rJNJbXR}Yura"
+  },
+  "clan_hojo_1": {
+    "name_short": "{=aVj8T6EWA}Houjou",
+    "name_long": "{=TJfQdtFe}Houjou"
+  },
+  "clan_matsuda_1": {
+    "name_short": "{=PGmBm2mXg}Matsuda",
+    "name_long": "{=57hjGaZL}Matsuda"
+  },
+  "clan_toyama_1": {
+    "name_short": "{=tfYLSqMR6}Tōyama",
+    "name_long": "{=XxcwBNno}Tōyama"
+  },
+  "clan_didoji_1": {
+    "name_short": "{=Hvd8w6n5w}Daidouji",
+    "name_long": "{=a5C2zixP}Daidouji"
+  },
+  "clan_narita_1": {
+    "name_short": "{=pzvdbeihb}Narita",
+    "name_long": "{=7odtySTp}Narita"
+  },
+  "clan_chiba_1": {
+    "name_short": "{=oiyGZy5HZ}Chiba",
+    "name_long": "{=hfTDnPCp}Chiba"
+  },
+  "clan_oda_2": {
+    "name_short": "{=d2edgM2G2}Oda",
+    "name_long": "{=obBB8IMs}Oda"
+  },
+  "clan_sano_1": {
+    "name_short": "{=7rZXmd4yR}Sano",
+    "name_long": "{=4YXW6utE}Sano"
+  },
+  "clan_yuki_1": {
+    "name_short": "{=2SuIxJ6bb}Yūki",
+    "name_long": "{=KmXmnjce}Yūki"
+  },
+  "clan_satomi_1": {
+    "name_short": "{=LFEZ4afdb}Satomi",
+    "name_long": "{=UOfUWQw6}Satomi"
+  },
+  "clan_masaki_1": {
+    "name_short": "{=Vph7Qo8mw}Masaki",
+    "name_long": "{=O1t78okp}Masaki"
+  },
+  "clan_utsunomiya_1": {
+    "name_short": "{=EicH77XFW}Utsunomiya",
+    "name_long": "{=2u6WvxxW}Utsunomiya"
+  },
+  "clan_haga_1": {
+    "name_short": "{=woc2lf9BH}Haga",
+    "name_long": "{=9zQ8kYAR}Haga"
+  },
+  "clan_kasama_1": {
+    "name_short": "{=efopA1Mer}Kasama",
+    "name_long": "{=3cIhQHtN}Kasama"
+  },
+  "clan_satake_1": {
+    "name_short": "{=XUB4sMMWk}Satake",
+    "name_long": "{=DOFvDvMn}Satake"
+  },
+  "clan_edo_1": {
+    "name_short": "{=xaYV2wYcq}Edo",
+    "name_long": "{=L1YBjtAz}Edo"
+  },
+  "clan_daijo_1": {
+    "name_short": "{=8l6wptb7l}Daijou",
+    "name_long": "{=M0xrXK9O}Daijou"
+  },
+  "clan_kashima_1": {
+    "name_short": "{=pasTLO39C}Kashima",
+    "name_long": "{=BCsXgT4T}Kashima"
+  },
+  "clan_nasu_1": {
+    "name_short": "{=CQzXRxYiW}Nasu",
+    "name_long": "{=hOwxMbu9}Nasu"
+  },
+  "clan_akamatsu_1": {
+    "name_short": "{=QJl8tFZnq}Akamatsu",
+    "name_long": "{=YlpRkhrE}Akamatsu"
+  },
+  "clan_kodera_1": {
+    "name_short": "{=0vSk0Te5M}Kodera",
+    "name_long": "{=cLtGOm40}Kodera"
+  },
+  "clan_kuroda_1": {
+    "name_short": "{=e9bfvB8D3}Kuroda",
+    "name_long": "{=lY9SDV7a}Kuroda"
+  },
+  "clan_bessho_1": {
+    "name_short": "{=mcFt0Pw0r}Bessho",
+    "name_long": "{=1O30HvkU}Bessho"
+  },
+  "clan_matsunaga_1": {
+    "name_short": "{=G4xO70yIj}Matsunaga",
+    "name_long": "{=RmkJpDHV}Matsunaga"
+  },
+  "clan_tsutsui_1": {
+    "name_short": "{=yU5lXRomY}Tsutsui",
+    "name_long": "{=HTqZfe96}Tsutsui"
+  },
+  "clan_atagi_1": {
+    "name_short": "{=JtuaWGAms}Atagi",
+    "name_long": "{=PLqvpKje}Atagi"
+  },
+  "clan_hosokawa_1": {
+    "name_short": "{=vLHzWKYSh}Hosokawa",
+    "name_long": "{=j0760mT5}Hosokawa"
+  },
+  "clan_issiki_1": {
+    "name_short": "{=nT4lKDKtP}Issiki",
+    "name_long": "{=gq9NGwvB}Issiki"
+  },
+  "clan_yamana_1": {
+    "name_short": "{=ePh8BM2Un}Yamana",
+    "name_long": "{=kwCYCFhQ}Yamana"
+  },
+  "clan_honganji_1": {
+    "name_short": "{=xoifkD611}Honganji",
+    "name_long": "{=xRnrOdTc}Honganji"
+  },
+  "clan_ganshoji_1": {
+    "name_short": "{=dYvJJ2axo}Ganshouji",
+    "name_long": "{=Hkaz0M4C}Ganshouji"
+  },
+  "clan_yasumi_1": {
+    "name_short": "{=CeSdSmh5G}Yasumi",
+    "name_long": "{=99Mh6vBQ}Yasumi"
+  },
+  "clan_yukawa_1": {
+    "name_short": "{=5bmJWDqla}Yukawa",
+    "name_long": "{=ikViyOmi}Yukawa"
+  },
+  "clan_rokkaku_1": {
+    "name_short": "{=oofOg1oXl}Rokkaku",
+    "name_long": "{=AFuBZx4V}Rokkaku"
+  },
+  "clan_gamou_1": {
+    "name_short": "{=eUKUSiTEe}Gamou",
+    "name_long": "{=skZuhNKm}Gamou"
+  },
+  "clan_azai_1": {
+    "name_short": "{=xVnHZYcVA}Azai",
+    "name_long": "{=9jmhs2Af}Azai"
+  },
+  "clan_todo_1": {
+    "name_short": "{=NWlXJCCmY}Toudou",
+    "name_long": "{=QGOk0nP3}Toudou"
+  },
+  "clan_isono_1": {
+    "name_short": "{=jILIxG22v}Isono",
+    "name_long": "{=iHzPlDkM}Isono"
+  },
+  "clan_akao_1": {
+    "name_short": "{=LpaifGFQz}Akao",
+    "name_long": "{=Mq2WPvMA}Akao"
+  },
+  "clan_oda_1": {
+    "name_short": "{=BZV3TRj7F}Oda",
+    "name_long": "{=lfglFdss}Oda"
+  },
+  "clan_kinoshita_1": {
+    "name_short": "{=KAnzdhWmb}Kinoshita",
+    "name_long": "{=OljOni7v}Kinoshita"
+  },
+  "clan_sakuma_1": {
+    "name_short": "{=k9Bv1wWOn}Sakuma",
+    "name_long": "{=Fch4loOb}Sakuma"
+  },
+  "clan_takigawa_1": {
+    "name_short": "{=HGIXbzy5e}Takigawa",
+    "name_long": "{=g1Mabrdw}Takigawa"
+  },
+  "clan_kuki_1": {
+    "name_short": "{=KOPHWa50l}Kuki",
+    "name_long": "{=Oz4Epb0l}Kuki"
+  },
+  "clan_kitabatake_1": {
+    "name_short": "{=w0B0TEhAt}Kitabatake",
+    "name_long": "{=L48ll2wn}Kitabatake"
+  },
+  "clan_shimazu_1": {
+    "name_short": "{=G6PUAY7iq}Shimazu",
+    "name_long": "{=xtwV8mNg}Shimazu"
+  },
+  "clan_ijuin_1": {
+    "name_short": "{=fqL6E2ARu}Ijūin",
+    "name_long": "{=vb51XuDL}Ijūin"
+  },
+  "clan_hongo_1": {
+    "name_short": "{=QWtG2FfXh}Hongou",
+    "name_long": "{=gqaEBwUE}Hongou"
+  },
+  "clan_tanegashima_1": {
+    "name_short": "{=NRN2Cypde}Tanegashima",
+    "name_long": "{=kKsnNZDD}Tanegashima"
+  },
+  "clan_kawakami_1": {
+    "name_short": "{=PRChlIy9n}Kawakami",
+    "name_long": "{=DRRT6Yh1}Kawakami"
+  },
+  "clan_uwai_1": {
+    "name_short": "{=4LKAXPbgr}Uwai",
+    "name_long": "{=prFVNkLc}Uwai"
+  },
+  "clan_niro_1": {
+    "name_short": "{=s52g8Omdb}Nīro",
+    "name_long": "{=6WeEzXMc}Nīro"
+  },
+  "clan_aso_1": {
+    "name_short": "{=OPGqoIxHD}Aso",
+    "name_long": "{=2nPDxvvU}Aso"
+  },
+  "clan_kai_1": {
+    "name_short": "{=K4hGqf4CG}Kai",
+    "name_long": "{=PcbbEMKz}Kai"
+  },
+  "clan_nawa_1": {
+    "name_short": "{=IXssEIszg}Nawa",
+    "name_long": "{=yJvoBlCU}Nawa"
+  },
+  "clan_nishi_1": {
+    "name_short": "{=JSaet8224}Nishi",
+    "name_long": "{=qfHKfquH}Nishi"
+  },
+  "clan_takezaki_1": {
+    "name_short": "{=0K8xOEtw4}Takezaki",
+    "name_long": "{=xq41XdpH}Takezaki"
+  },
+  "clan_ito_1": {
+    "name_short": "{=3O9FinVyR}Itou",
+    "name_long": "{=erfPD3kM}Itou"
+  },
+  "clan_mera_1": {
+    "name_short": "{=8A1lunO2x}Mera",
+    "name_long": "{=1GCcC8FV}Mera"
+  },
+  "clan_nagakura_1": {
+    "name_short": "{=KCBJwW0Rr}Nagakura",
+    "name_long": "{=5mXM9iS3}Nagakura"
+  },
+  "clan_kimotsuki_1": {
+    "name_short": "{=WO43weTCK}Kimotsuki",
+    "name_long": "{=FfWqS9rv}Kimotsuki"
+  },
+  "clan_sagara_1": {
+    "name_short": "{=zmHnKR16d}Sagara",
+    "name_long": "{=WMGq6j1n}Sagara"
+  },
+  "clan_indo_1": {
+    "name_short": "{=Nwu7o97jv}Indou",
+    "name_long": "{=FHrTjQq8}Indou"
+  },
+  "clan_amakusa_1": {
+    "name_short": "{=ereoUvcBT}Amakusa",
+    "name_long": "{=hepAMIkF}Amakusa"
+  },
+  "clan_otomo_1": {
+    "name_short": "{=cWHPFyKDt}Ōtomo",
+    "name_long": "{=fHnbNu30}Ōtomo"
+  },
+  "clan_kii_1": {
+    "name_short": "{=9Oq2IN5b5}Kī",
+    "name_long": "{=2yKuCKTm}Kī"
+  },
+  "clan_kamachi_1": {
+    "name_short": "{=geNcIsg75}Kamachi",
+    "name_long": "{=nKMoFXSw}Kamachi"
+  },
+  "clan_bekki_1": {
+    "name_short": "{=MHcgByB7g}Bekki",
+    "name_long": "{=kAG0Yn7Z}Bekki"
+  },
+  "clan_yoshihiro_1": {
+    "name_short": "{=j4TUY3jCj}Yoshihiro",
+    "name_long": "{=nyZnP0q5}Yoshihiro"
+  },
+  "clan_takahashi_1": {
+    "name_short": "{=p8YkX9ggV}Takahashi",
+    "name_long": "{=MUFiSZnN}Takahashi"
+  },
+  "clan_arima_1": {
+    "name_short": "{=naMr2rvCS}Arima",
+    "name_long": "{=VqhXPqel}Arima"
+  },
+  "clan_omura_1": {
+    "name_short": "{=t728x1Va0}Ōmura",
+    "name_long": "{=WHJDjBAc}Ōmura"
+  },
+  "clan_yasutomi_1": {
+    "name_short": "{=Caw3avQPn}Yasutomi",
+    "name_long": "{=mBLBhiJ2}Yasutomi"
+  },
+  "clan_fukuda_1": {
+    "name_short": "{=BfZRZagjO}Fukuda",
+    "name_long": "{=pmrkQRf2}Fukuda"
+  },
+  "clan_ryuzoji_1": {
+    "name_short": "{=MS2JbxMOu}Ryūzouji",
+    "name_long": "{=ztOTUHZ8}Ryūzouji"
+  },
+  "clan_matsuura_1": {
+    "name_short": "{=kQqSPXkZJ}Matsuura",
+    "name_long": "{=tF67sEyg}Matsuura"
+  },
+  "clan_nabeshima_1": {
+    "name_short": "{=0gjWAzh9Q}Nabeshima",
+    "name_long": "{=FQ1msfS3}Nabeshima"
+  },
+  "clan_saigo_1": {
+    "name_short": "{=oSGRVoxbr}Saigou",
+    "name_long": "{=eym8aSZ5}Saigou"
+  },
+  "clan_kumabe_1": {
+    "name_short": "{=rngVV7Tt2}Kumabe",
+    "name_long": "{=LvmXDnyd}Kumabe"
+  },
+  "clan_saionji_1": {
+    "name_short": "{=W2A9emZLG}Saionji",
+    "name_long": "{=wApBgknq}Saionji"
+  },
+  "clan_kashuji_1": {
+    "name_short": "{=sAAUWUAkN}Kajūji",
+    "name_long": "{=fjHaaIVW}Kajūji"
+  },
+  "clan_hoketsu_1": {
+    "name_short": "{=ZQawRsQEf}Hoketsu",
+    "name_long": "{=PpQpwq85}Hoketsu"
+  },
+  "clan_ichijo_1": {
+    "name_short": "{=mlgN89wQa}Ichijou",
+    "name_long": "{=B2hBOm0p}Ichijou"
+  },
+  "clan_doi_1": {
+    "name_short": "{=ae1lMcT2U}Doi",
+    "name_long": "{=pM9CGa9T}Doi"
+  },
+  "clan_aki_1": {
+    "name_short": "{=FnRivPrRb}Aki",
+    "name_long": "{=KFO7OUtf}Aki"
+  },
+  "clan_tsuno_1": {
+    "name_short": "{=MoNZD9Fel}Tsuno",
+    "name_long": "{=uymXzBkI}Tsuno"
+  },
+  "clan_chosokabe_1": {
+    "name_short": "{=nmjhUVjoE}Chousokabe",
+    "name_long": "{=92mcWZ66}Chousokabe"
+  },
+  "clan_kosokabe_1": {
+    "name_short": "{=kbu6v8CZT}Kousokabe",
+    "name_long": "{=VweRUc2K}Kousokabe"
+  },
+  "clan_kira_1": {
+    "name_short": "{=Rtk2eLMCZ}Kira",
+    "name_long": "{=YrjfSw48}Kira"
+  },
+  "clan_hisatake_1": {
+    "name_short": "{=ls6lJZPyG}Hisatake",
+    "name_long": "{=Ec8VRUVe}Hisatake"
+  },
+  "clan_yoshida_1": {
+    "name_short": "{=kAJTA1QnP}Yoshida",
+    "name_long": "{=DNhzKMbS}Yoshida"
+  },
+  "clan_fukudome_1": {
+    "name_short": "{=BGlHMmoNw}Fukudome",
+    "name_long": "{=flZ5WVeG}Fukudome"
+  },
+  "clan_miyoshi_1": {
+    "name_short": "{=vDY6Ee5Rh}Miyoshi",
+    "name_long": "{=mBoaB6DD}Miyoshi"
+  },
+  "clan_sogo_1": {
+    "name_short": "{=iJQENW4Xn}Sogou",
+    "name_long": "{=IYIPPzhY}Sogou"
+  },
+  "clan_shingai_1": {
+    "name_short": "{=4ZUfELUO7}Shingai",
+    "name_long": "{=bE75tDOy}Shingai"
+  },
+  "clan_onishi_1": {
+    "name_short": "{=pGO7qGh5l}Ōnishi",
+    "name_long": "{=sb0Pv1Rt}Ōnishi"
+  },
+  "clan_ashina_1": {
+    "name_short": "{=KY25Te3up}Ashina",
+    "name_long": "{=eC2ASTQN}Ashina"
+  },
+  "clan_inawashiro_1": {
+    "name_short": "{=uKk44idbx}Inawashiro",
+    "name_long": "{=fynHJTwu}Inawashiro"
+  },
+  "clan_saze_1": {
+    "name_short": "{=pvSU5OTrU}Saze",
+    "name_long": "{=8FEa2FoG}Saze"
+  },
+  "clan_matsumoto_1": {
+    "name_short": "{=AlfEpBDw0}Matsumoto",
+    "name_long": "{=GXmPOdWx}Matsumoto"
+  },
+  "clan_nikaido_1": {
+    "name_short": "{=Y5SJYcdsV}Nikaidou",
+    "name_long": "{=H87qo4NM}Nikaidou"
+  },
+  "clan_soma_1": {
+    "name_short": "{=aEV31cBfu}Souma",
+    "name_long": "{=AomEuPxP}Souma"
+  },
+  "clan_nihonmatsu_1": {
+    "name_short": "{=7N4jDTg65}Nihonmatsu",
+    "name_long": "{=kXgAqsVE}Nihonmatsu"
+  },
+  "clan_tamura_1": {
+    "name_short": "{=69FUkZoJa}Tamura",
+    "name_long": "{=Txtm8EQj}Tamura"
+  },
+  "clan_okada_1": {
+    "name_short": "{=3cVHmGbcn}Okada",
+    "name_long": "{=LOgpObOY}Okada"
+  },
+  "clan_date_1": {
+    "name_short": "{=rKLHchJzC}Date",
+    "name_long": "{=5BAcZId0}Date"
+  },
+  "clan_katakura_1": {
+    "name_short": "{=BtNrf8lst}Katakura",
+    "name_long": "{=KOOT63wV}Katakura"
+  },
+  "clan_oniniwa_1": {
+    "name_short": "{=dRQQ6J8GV}Oniniwa",
+    "name_long": "{=PTlPcJhs}Oniniwa"
+  },
+  "clan_watari_1": {
+    "name_short": "{=u86EqkJ4j}Watari",
+    "name_long": "{=yoWzFxzf}Watari"
+  },
+  "clan_osaki_1": {
+    "name_short": "{=TaKoJ8khl}Ōsaki",
+    "name_long": "{=N3obbklH}Ōsaki"
+  },
+  "clan_kasai_1": {
+    "name_short": "{=cwdLudfVw}Kasai",
+    "name_long": "{=52ZbOGpN}Kasai"
+  },
+  "clan_iwaki_1": {
+    "name_short": "{=malzpckeX}Iwaki",
+    "name_long": "{=GghWbhMx}Iwaki"
+  },
+  "clan_rusu_1": {
+    "name_short": "{=enHzXLYv4}Rusu",
+    "name_long": "{=Mmlec0W6}Rusu"
+  },
+  "clan_mogami_1": {
+    "name_short": "{=CfVQqAgwV}Mogami",
+    "name_long": "{=5opAomPm}Mogami"
+  },
+  "clan_tendo_1": {
+    "name_short": "{=oya8ew8QG}Tendou",
+    "name_long": "{=e0X7neFB}Tendou"
+  },
+  "clan_ujiie_1": {
+    "name_short": "{=VnkSf1DHK}Ujiie",
+    "name_long": "{=piDj6z9f}Ujiie"
+  },
+  "clan_nobesawa_1": {
+    "name_short": "{=Q9GIel71r}Nobesawa",
+    "name_long": "{=0rKkFwOg}Nobesawa"
+  },
+  "clan_tateoka_1": {
+    "name_short": "{=klaqCJqJk}Tateoka",
+    "name_long": "{=k1xUIUj8}Tateoka"
+  },
+  "clan_daihoji_1": {
+    "name_short": "{=zUEKah01q}Daihouji",
+    "name_long": "{=71PEDLZf}Daihouji"
+  },
+  "clan_onodera_1": {
+    "name_short": "{=UQYkGrcE1}Onodera",
+    "name_long": "{=wmoenMOl}Onodera"
+  },
+  "clan_sakenobe_1": {
+    "name_short": "{=ieSTR4lKa}Sakenobe",
+    "name_long": "{=NuTx5zmj}Sakenobe"
+  },
+  "clan_nikaho_1": {
+    "name_short": "{=2bT3fADQP}Nikaho",
+    "name_long": "{=pI6YjX8M}Nikaho"
+  },
+  "clan_ando_1": {
+    "name_short": "{=SKvnmuZbK}Andou",
+    "name_long": "{=6NWgGmYf}Andou"
+  },
+  "clan_asari_1": {
+    "name_short": "{=cSTcp5UX7}Asari",
+    "name_long": "{=6LMl0tI8}Asari"
+  },
+  "clan_tozawa_1": {
+    "name_short": "{=ipUEvMSYN}Tozawa",
+    "name_long": "{=4IKyEBDc}Tozawa"
+  },
+  "clan_nanbu_1": {
+    "name_short": "{=qNXmGOZau}Nanbu",
+    "name_long": "{=c006Hx4r}Nanbu"
+  },
+  "clan_shichinohe_1": {
+    "name_short": "{=wdABBt8ua}Shichinohe",
+    "name_long": "{=kHne65Y9}Shichinohe"
+  },
+  "clan_hachinohe_1": {
+    "name_short": "{=GXNWPy5IS}Hachinohe",
+    "name_long": "{=flBMJ4Es}Hachinohe"
+  },
+  "clan_konohe_1": {
+    "name_short": "{=BDPHjj6bc}Kunohe",
+    "name_long": "{=ZVlwFZZv}Kunohe"
+  },
+  "clan_kita_1": {
+    "name_short": "{=p6sdrqgNb}Kita",
+    "name_long": "{=NyMA6A7K}Kita"
+  },
+  "clan_oura_1": {
+    "name_short": "{=77aACcgAB}Ōura",
+    "name_long": "{=UyMq8aDj}Ōura"
+  },
+  "clan_shiba_1": {
+    "name_short": "{=v9NZ7boqj}Shiba",
+    "name_long": "{=3LujlMb3}Shiba"
+  },
+  "clan_asonuma_1": {
+    "name_short": "{=0CytYWw1L}Asonuma",
+    "name_long": "{=BMQyxH2f}Asonuma"
+  },
+  "clan_namioka_1": {
+    "name_short": "{=jsYzXRJYp}Namioka",
+    "name_long": "{=aArztftR}Namioka"
+  }
+}

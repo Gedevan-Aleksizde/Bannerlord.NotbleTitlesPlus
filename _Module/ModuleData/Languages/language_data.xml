@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData id="English">
 	<LanguageFile xml_path="strings_EN.xml" />
-	<LanguageFile xml_path="JP/shokuho_provinces_EN.xml" />
+	<LanguageFile xml_path="shokuho_provinces_EN.xml" />
+	<LanguageFile xml_path="shokuho_clans_EN.xml" />
 	<LanguageFile xml_path="preset_default_EN.xml" />
 	<LanguageFile xml_path="preset_orig_EN.xml" />
 	<LanguageFile xml_path="preset_var_EN.xml" />
