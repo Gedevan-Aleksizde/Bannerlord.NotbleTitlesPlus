@@ -4,213 +4,413 @@
 		<tag language="English"/>
 	</tags>
 	<strings>	
+		<string id="elZvEpnCxy" text="Bishū-Hatakeyama-ke" />
 		<string id="uUwLCMKuu" text="Hatakeyama" />
+		<string id="qzmx8BArT3" text="Noto-Hatakeyama-ke" />
 		<string id="v4QvrR3f2" text="Hatakeyama" />
+		<string id="FgCVDLBuIW" text="Murakami Pirates" />
 		<string id="wnzNkLNfP" text="Murakami" />
+		<string id="SXG3Ym1M1A" text="Shinano-Murakami-shi" />
 		<string id="Jdn0EFHiw" text="Murakami" />
+		<string id="ibCMi5IZrG" text="Ashikaga Koga-kubou-ke" />
 		<string id="7m3WCfW9W" text="Ashikaga" />
+		<string id="zgDMscNWjp" text="Ashikaga Shougun-ke" />
 		<string id="po9VK9ryZ" text="Ashikaga" />
+		<string id="a8LS6L1sZl" text="Mikawa-Sakai-shi" />
 		<string id="XUoba6I0v" text="Sakai" />
+		<string id="N96yvt05CL" text="Toke-Sakai-shi" />
 		<string id="MdGAKCzwR" text="Sakai" />
+		<string id="hFtLyQ2f4I" text="Matsumae-Kakizaki-shi" />
 		<string id="n8KgX5KAl" text="Kakizaki" />
+		<string id="1qo6CgvyVP" text="Echigo-Kakizaki-shi" />
 		<string id="mqeRVL7R1" text="Kakizaki" />
+		<string id="cUmTDcOHfs" text="Owari-Shibata-shi" />
 		<string id="NGOfCE9Ue" text="Shitbata" />
+		<string id="noojCjn2Ge" text="Ecgigo-Shibata-shi" />
 		<string id="LmFpMDrMD" text="Shibata" />
+		<string id="dod9e7l7l3" text="Asakura-shi" />
 		<string id="fbNnug0w5" text="Asakura" />
+		<string id="lekrKFi5i9" text="Yamazaki-shi" />
 		<string id="oXK2BXg2P" text="Yamazaki" />
+		<string id="7nXNWTk86q" text="Mizoe-shi" />
 		<string id="P0vbtKhHr" text="Mizoe" />
+		<string id="7zhCFzgO4a" text="Maeba-shi" />
 		<string id="zgyTE4l8R" text="Maeba" />
+		<string id="NYaZdX8p2l" text="Anekouji-shi" />
 		<string id="cVU7TI8X1" text="Anekouji" />
+		<string id="vqqLyRyZz5" text="Miki-shi" />
 		<string id="uyXwTNqaJ" text="Miki" />
+		<string id="MYVYYbvKdr" text="Uchigashima-shi" />
 		<string id="RGboTbjO3" text="Uchigashima" />
+		<string id="zA0GFhEFG3" text="Shimotsuma-shi" />
 		<string id="u6DeoesxH" text="Shimotsuma" />
+		<string id="2cZMW874yY" text="Shichiri-shi" />
 		<string id="adJHyZIor" text="Shichiri" />
+		<string id="a0YZdOmF4f" text="Chou-shi" />
 		<string id="d1p7sVeHw" text="Chou" />
+		<string id="hCBQWR6ES9" text="Yusa-shi" />
 		<string id="mKF2GoAaU" text="Yusa" />
+		<string id="AT5GMnou0P" text="Nukui-shi" />
 		<string id="4wcdI6Z5A" text="Nukui" />
+		<string id="oeHyTiKkbO" text="Maeda-shi" />
 		<string id="57kc5oJy1" text="Maeda" />
+		<string id="Y83JjX4z0Z" text="Akechi-shi" />
 		<string id="uuGOBW6P7" text="Akechi" />
+		<string id="zUT7xYUE8s" text="Niwa-shi" />
 		<string id="Yi4KhvoKt" text="Niwa" />
+		<string id="YQAeGb8j95" text="Ikeda-shi" />
 		<string id="5fKDPORjr" text="Ikeda" />
+		<string id="pSpiZp4Xj8" text="Tokugawa-shi" />
 		<string id="e2SZ77tis" text="Tokugawa" />
+		<string id="IUhjYKHlnF" text="Honda-shi" />
 		<string id="Ir6LOcCzk" text="Honda" />
+		<string id="aIwaoLRvrD" text="Sakakibara-shi" />
 		<string id="9DsR1lRnK" text="Sakakibara" />
+		<string id="0TR3NZlB9p" text="Ī-shi" />
 		<string id="erhBM9QNF" text="Ī" />
+		<string id="gAkq2sVyw2" text="Ōkubo-shi" />
 		<string id="MoKbs99yR" text="Ōkubo" />
+		<string id="1iC0bdbiLD" text="Hattori-shi" />
 		<string id="eCyBLPRKr" text="Hattori" />
+		<string id="gkpMwfwnFP" text="Uesugi-shi" />
 		<string id="rPnZmMTAr" text="Uesugi" />
+		<string id="g1EltTFaLr" text="Irobe-shi" />
 		<string id="zS4lepnDm" text="Irobe" />
+		<string id="fH2IX2xnjM" text="Naoe-shi" />
 		<string id="t8bMIrSRc" text="Naoe" />
+		<string id="9n4T3NI0ZG" text="Jinbo-shi" />
 		<string id="rYkS3HKEa" text="Jinbo" />
+		<string id="GV2SY2w4q1" text="Honma-shi" />
 		<string id="3tpSMmEBB" text="Honma" />
+		<string id="AIlYFFsgxN" text="Honjou-shi" />
 		<string id="5uvU4l96X" text="Honjou" />
+		<string id="spUhY1AlZy" text="Takeda-shi" />
 		<string id="mblDhrbYo" text="Takeda" />
+		<string id="76gJBKTIMG" text="Baba-shi" />
 		<string id="ynEismscX" text="Baba" />
+		<string id="wWR4baWLqq" text="Kiso-shi" />
 		<string id="U7U0sfGT7" text="Kiso" />
+		<string id="0U3iaToej0" text="Sanada-shi" />
 		<string id="fBGMw56jR" text="Sanada" />
+		<string id="rPN9t7iVZB" text="Nishina-shi" />
 		<string id="RFrcczBp2" text="Nishina" />
+		<string id="YWZaKVnDH8" text="Oyamada-shi" />
 		<string id="iprN8Ccrm" text="Oyamada" />
+		<string id="N7dWZUFEt3" text="Anayama-shi" />
 		<string id="hYSITlKjI" text="Anayama" />
+		<string id="O4HEMihT1X" text="Yamagata-shi" />
 		<string id="BKYPCQJGV" text="Yamagata" />
+		<string id="WSdJb8tJ95" text="Kasuga-shi" />
 		<string id="qNQPTylek" text="Kasuga" />
+		<string id="hF8Ll9dOxt" text="Imagawa-shi" />
 		<string id="Q0DEHuqlz" text="Imagawa" />
+		<string id="fzZasDo88g" text="Asahina-shi" />
 		<string id="FKuPCVvQL" text="Asahina" />
+		<string id="jOVplNqSSh" text="Fuji-shi" />
 		<string id="sepzMMUgr" text="Fuji" />
+		<string id="SXKwPkqucj" text="Okabe-shi" />
 		<string id="MjzqJcqBh" text="Okabe" />
+		<string id="b8wxqquOqR" text="Mouri-shi" />
 		<string id="W63pY1FWi" text="Mouri" />
+		<string id="zzvxYAqmpA" text="Kobayakawa-shi" />
 		<string id="Swt5POyQa" text="Kobayakawa" />
+		<string id="ydmX3xreGG" text="Kikkawa-shi" />
 		<string id="NNn3MxrZM" text="Kikkawa" />
+		<string id="BMGEEPcwUT" text="Yoshimi-shi" />
 		<string id="NDpMhhyaM" text="Yoshimi" />
+		<string id="NRsJiU8de2" text="Naitou-shi" />
 		<string id="2sSv2PGXD" text="Naitou" />
+		<string id="ezLrNtRoYw" text="Nanjou-shi" />
 		<string id="MIvFF9YuD" text="Nanjou" />
+		<string id="p1hKpAPom3" text="Mizawa-shi" />
 		<string id="fWC65H9AN" text="Mizawa" />
+		<string id="kxOU2HA7L1" text="Amano-shi" />
 		<string id="rQBvo0MQn" text="Amano" />
+		<string id="x8vjBymNl2" text="Kawano-shi" />
 		<string id="ialnsHHJt" text="Kawano" />
+		<string id="DCMIkzhaLY" text="Uragami-shi" />
 		<string id="1PXJufn8D" text="Uragami" />
+		<string id="fKpdZMTU2c" text="Ukita-shi" />
 		<string id="687EDYG52" text="Ukita" />
+		<string id="2j1hqXwbsd" text="Akashi-shi" />
 		<string id="JVqENcJCa" text="Akashi" />
+		<string id="IyRKNLKfaJ" text="Amago-shi" />
 		<string id="TrYqNJsba" text="Amago" />
+		<string id="1y8uMtew4d" text="Yamanaka-shi" />
 		<string id="iosMv4IZm" text="Yamanaka" />
+		<string id="tBrQoOXMWd" text="Tachihara-shi" />
 		<string id="OepxUV620" text="Tachihara" />
+		<string id="bv51bLSUBR" text="Obata-shi" />
 		<string id="IZUuqKbSZ" text="Obata" />
+		<string id="D31nHWg2ST" text="Yura-shi" />
 		<string id="guuxXNZUC" text="Yura" />
+		<string id="RLJxepPzOZ" text="Houjou-shi" />
 		<string id="aVj8T6EWA" text="Houjou" />
+		<string id="cNkId7q6u3" text="Matsuda-shi" />
 		<string id="PGmBm2mXg" text="Matsuda" />
+		<string id="odRl3Js0N4" text="Tōyama-shi" />
 		<string id="tfYLSqMR6" text="Tōyama" />
+		<string id="bV0GR58dTa" text="Daidouji-shi" />
 		<string id="Hvd8w6n5w" text="Daidouji" />
+		<string id="yb0JxinUqc" text="Narita-shi" />
 		<string id="pzvdbeihb" text="Narita" />
+		<string id="H49O7IFOmb" text="Chiba-shi" />
 		<string id="oiyGZy5HZ" text="Chiba" />
+		<string id="TbZMUcynhW" text="Oda-shi" />
 		<string id="d2edgM2G2" text="Oda" />
+		<string id="Bo9bIJgKB2" text="Sano-shi" />
 		<string id="7rZXmd4yR" text="Sano" />
+		<string id="CtqZMdKTdj" text="Yūki-shi" />
 		<string id="2SuIxJ6bb" text="Yūki" />
+		<string id="XjhSmUuYPV" text="Satomi-shi" />
 		<string id="LFEZ4afdb" text="Satomi" />
+		<string id="CDeFknSaMz" text="Masaki-shi" />
 		<string id="Vph7Qo8mw" text="Masaki" />
+		<string id="NRXoePeOGM" text="Utsunomiya-shi" />
 		<string id="EicH77XFW" text="Utsunomiya" />
+		<string id="LXIL9wMy14" text="Haga-shi" />
 		<string id="woc2lf9BH" text="Haga" />
+		<string id="tNz9tnTUGn" text="Kasama-shi" />
 		<string id="efopA1Mer" text="Kasama" />
+		<string id="RL6SY2aKn8" text="Satake-shi" />
 		<string id="XUB4sMMWk" text="Satake" />
+		<string id="YcEy7aOvcL" text="Edo-shi" />
 		<string id="xaYV2wYcq" text="Edo" />
+		<string id="apnxJosobS" text="Daijou-shi" />
 		<string id="8l6wptb7l" text="Daijou" />
+		<string id="ng8DeXJT4O" text="Kashima-shi" />
 		<string id="pasTLO39C" text="Kashima" />
+		<string id="bl93n6gJL7" text="Nasu-shi" />
 		<string id="CQzXRxYiW" text="Nasu" />
+		<string id="AimXmgpqfW" text="Akamatsu-shi" />
 		<string id="QJl8tFZnq" text="Akamatsu" />
+		<string id="zpIJKRQERb" text="Kodera-shi" />
 		<string id="0vSk0Te5M" text="Kodera" />
+		<string id="WGkvbb2jTt" text="Kuroda-shi" />
 		<string id="e9bfvB8D3" text="Kuroda" />
+		<string id="BypITVErub" text="Bessho-shi" />
 		<string id="mcFt0Pw0r" text="Bessho" />
+		<string id="puY40Pus7S" text="Matsunaga-shi" />
 		<string id="G4xO70yIj" text="Matsunaga" />
+		<string id="SLMHTfQWeO" text="Tsutsui-shi" />
 		<string id="yU5lXRomY" text="Tsutsui" />
+		<string id="VgIkEJB9KU" text="Atagi-shi" />
 		<string id="JtuaWGAms" text="Atagi" />
-		<string id="tC6dh7QrC" text="Ashikaga" />
+		<string id="TGYKSYTL70" text="Hosokawa-shi" />
 		<string id="vLHzWKYSh" text="Hosokawa" />
+		<string id="yEsW2488xr" text="Issiki-shi" />
 		<string id="nT4lKDKtP" text="Issiki" />
+		<string id="8lUcmxWMPt" text="Yamana-shi" />
 		<string id="ePh8BM2Un" text="Yamana" />
+		<string id="muyyqXplwP" text="Honganji-ha" />
 		<string id="xoifkD611" text="Honganji" />
+		<string id="7ckErOJhwf" text="Ganshouji-Ikkou-shū" />
 		<string id="dYvJJ2axo" text="Ganshouji" />
+		<string id="T04L6OMOUn" text="Yasumi-shi" />
 		<string id="CeSdSmh5G" text="Yasumi" />
+		<string id="XMAl8c91SH" text="Yukawa-shi" />
 		<string id="5bmJWDqla" text="Yukawa" />
+		<string id="P97PjYzMl5" text="Rokkaku-shi" />
 		<string id="oofOg1oXl" text="Rokkaku" />
+		<string id="v2q8a6Fefl" text="Gamou-shi" />
 		<string id="eUKUSiTEe" text="Gamou" />
+		<string id="utMr8XFIHf" text="Azai-shi" />
 		<string id="xVnHZYcVA" text="Azai" />
+		<string id="6IAaaFyWqQ" text="Toudou-shi" />
 		<string id="NWlXJCCmY" text="Toudou" />
+		<string id="T1dOO66ZyW" text="Isono-shi" />
 		<string id="jILIxG22v" text="Isono" />
+		<string id="4i1xoxx363" text="Akao-shi" />
 		<string id="LpaifGFQz" text="Akao" />
+		<string id="6Y1HtngR2n" text="Oda-danjou-no-chū-ke" />
 		<string id="BZV3TRj7F" text="Oda" />
+		<string id="vLbh1ezAEe" text="Kinoshita-shi" />
 		<string id="KAnzdhWmb" text="Kinoshita" />
+		<string id="1tICbIFYVD" text="Sakuma-shi" />
 		<string id="k9Bv1wWOn" text="Sakuma" />
+		<string id="NJ3haBJwH5" text="Takigawa-shi" />
 		<string id="HGIXbzy5e" text="Takigawa" />
+		<string id="zsh3x3Zczo" text="Kuki-shi" />
 		<string id="KOPHWa50l" text="Kuki" />
+		<string id="qGdqXxOGE0" text="Kitabatake-shi" />
 		<string id="w0B0TEhAt" text="Kitabatake" />
+		<string id="Ngl8nKcgEZ" text="Shimazu-shi" />
 		<string id="G6PUAY7iq" text="Shimazu" />
+		<string id="xS0cHB2UV9" text="Ijūin-shi" />
 		<string id="fqL6E2ARu" text="Ijūin" />
+		<string id="QXpwsZzNG1" text="Hongou-shi" />
 		<string id="QWtG2FfXh" text="Hongou" />
+		<string id="HBJOmXIkff" text="Tanegashima-shi" />
 		<string id="NRN2Cypde" text="Tanegashima" />
+		<string id="yDK23rKljz" text="Kawakami-shi" />
 		<string id="PRChlIy9n" text="Kawakami" />
+		<string id="pKFdQUq3dC" text="Uwai-shi" />
 		<string id="4LKAXPbgr" text="Uwai" />
+		<string id="l7zqOQKfb9" text="Nīro-shi" />
 		<string id="s52g8Omdb" text="Nīro" />
+		<string id="RhaTf3UajE" text="Aso-shi" />
 		<string id="OPGqoIxHD" text="Aso" />
+		<string id="viT5XbxXen" text="Kai-shi" />
 		<string id="K4hGqf4CG" text="Kai" />
+		<string id="31rxvYValb" text="Nawa-shi" />
 		<string id="IXssEIszg" text="Nawa" />
+		<string id="jjhBJLQ4NO" text="Nishi-shi" />
 		<string id="JSaet8224" text="Nishi" />
+		<string id="9YJSmqFxWo" text="Takezaki-shi" />
 		<string id="0K8xOEtw4" text="Takezaki" />
+		<string id="w3pz6BeW2Y" text="Itou-shi" />
 		<string id="3O9FinVyR" text="Itou" />
+		<string id="cK1rmMc8xC" text="Mera-shi" />
 		<string id="8A1lunO2x" text="Mera" />
+		<string id="S3yPDklE4S" text="Nagakura-shi" />
 		<string id="KCBJwW0Rr" text="Nagakura" />
+		<string id="qNh7Ij4S5V" text="Kimotsuki-shi" />
 		<string id="WO43weTCK" text="Kimotsuki" />
+		<string id="u8SGMbXWjW" text="Sagara-shi" />
 		<string id="zmHnKR16d" text="Sagara" />
+		<string id="x6gfPqKkZy" text="Indou-shi" />
 		<string id="Nwu7o97jv" text="Indou" />
+		<string id="iSJxRFzOkt" text="Amakusa-shi" />
 		<string id="ereoUvcBT" text="Amakusa" />
+		<string id="bdwov4QUym" text="Ōtomo-shi" />
 		<string id="cWHPFyKDt" text="Ōtomo" />
+		<string id="GPQAo8beQH" text="Kī-shi" />
 		<string id="9Oq2IN5b5" text="Kī" />
+		<string id="4Ksh304Yfd" text="Kamachi-shi" />
 		<string id="geNcIsg75" text="Kamachi" />
+		<string id="9sHFOLMpgk" text="Bekki-shi" />
 		<string id="MHcgByB7g" text="Bekki" />
+		<string id="26KHwS52Z9" text="Yoshihiro-shi" />
 		<string id="j4TUY3jCj" text="Yoshihiro" />
+		<string id="414nXngXMi" text="Takahashi-shi" />
 		<string id="p8YkX9ggV" text="Takahashi" />
+		<string id="8eNlWdw4mK" text="Arima-shi" />
 		<string id="naMr2rvCS" text="Arima" />
+		<string id="wKp0q18Yvc" text="Ōmura-shi" />
 		<string id="t728x1Va0" text="Ōmura" />
+		<string id="gRV9nx1FCl" text="Yasutomi-shi" />
 		<string id="Caw3avQPn" text="Yasutomi" />
+		<string id="DtOE0EV7ag" text="Fukuda-shi" />
 		<string id="BfZRZagjO" text="Fukuda" />
+		<string id="Zo7X2FzlkU" text="Ryūzouji-shi" />
 		<string id="MS2JbxMOu" text="Ryūzouji" />
+		<string id="QhL8uOSyvM" text="Matsuura-shi" />
 		<string id="kQqSPXkZJ" text="Matsuura" />
+		<string id="Q5DuFzr8T0" text="Nabeshima-shi" />
 		<string id="0gjWAzh9Q" text="Nabeshima" />
+		<string id="2BovOybIGv" text="Saigou-shi" />
 		<string id="oSGRVoxbr" text="Saigou" />
+		<string id="GevMW74Esr" text="Kumabe-shi" />
 		<string id="rngVV7Tt2" text="Kumabe" />
+		<string id="iCxxsHpWL7" text="Iyo-Saionji-shi" />
 		<string id="W2A9emZLG" text="Saionji" />
+		<string id="TVOZNudlH9" text="Kajūji-shi" />
 		<string id="sAAUWUAkN" text="Kajūji" />
+		<string id="sIQkifbkpM" text="Hoketsu-shi" />
 		<string id="ZQawRsQEf" text="Hoketsu" />
+		<string id="onWoHEdCT1" text="Tosa-Ichijou-shi" />
 		<string id="mlgN89wQa" text="Ichijou" />
+		<string id="MNR3IYGdUv" text="Doi-shi" />
 		<string id="ae1lMcT2U" text="Doi" />
+		<string id="EHeHCD9YqW" text="Aki-shi" />
 		<string id="FnRivPrRb" text="Aki" />
+		<string id="MUNkXlsD2L" text="Tsuno-shi" />
 		<string id="MoNZD9Fel" text="Tsuno" />
+		<string id="C0XSdxj5yE" text="Chousokabe-shi" />
 		<string id="nmjhUVjoE" text="Chousokabe" />
+		<string id="Ub21gV6FLq" text="Kousokabe-shi" />
 		<string id="kbu6v8CZT" text="Kousokabe" />
+		<string id="2syt6a1ANX" text="Kira-shi" />
 		<string id="Rtk2eLMCZ" text="Kira" />
+		<string id="L9cUppqqMQ" text="Hisatake-shi" />
 		<string id="ls6lJZPyG" text="Hisatake" />
+		<string id="zQGSPjp3EW" text="Yoshida-shi" />
 		<string id="kAJTA1QnP" text="Yoshida" />
+		<string id="kQZanW5EOT" text="Fukudome-shi" />
 		<string id="BGlHMmoNw" text="Fukudome" />
+		<string id="ICxy8x7u98" text="Miyoshi-shi" />
 		<string id="vDY6Ee5Rh" text="Miyoshi" />
+		<string id="TWaFACuom8" text="Sogou-shi" />
 		<string id="iJQENW4Xn" text="Sogou" />
+		<string id="8fGlfeKdoO" text="Shingai-shi" />
 		<string id="4ZUfELUO7" text="Shingai" />
+		<string id="jnELTVo8Il" text="Ōnishi-shi" />
 		<string id="pGO7qGh5l" text="Ōnishi" />
+		<string id="eRO9CCVPl8" text="Ashina-shi" />
 		<string id="KY25Te3up" text="Ashina" />
+		<string id="0oeKI9Ub8B" text="Inawashiro-shi" />
 		<string id="uKk44idbx" text="Inawashiro" />
+		<string id="XW7Kqe4uaL" text="Saze-shi" />
 		<string id="pvSU5OTrU" text="Saze" />
+		<string id="mgubQhVmjx" text="Matsumoto-shi" />
 		<string id="AlfEpBDw0" text="Matsumoto" />
+		<string id="ZQ1Kh1xOXe" text="Nikaidou-shi" />
 		<string id="Y5SJYcdsV" text="Nikaidou" />
+		<string id="TJPlqthJX8" text="Souma-shi" />
 		<string id="aEV31cBfu" text="Souma" />
+		<string id="HHNTUzk5Qw" text="Nihonmatsu-shi" />
 		<string id="7N4jDTg65" text="Nihonmatsu" />
+		<string id="V3DB0phIl4" text="Tamura-shi" />
 		<string id="69FUkZoJa" text="Tamura" />
+		<string id="zjDk143gYK" text="Okada-shi" />
 		<string id="3cVHmGbcn" text="Okada" />
+		<string id="VhBrtn8oot" text="Date-shi" />
 		<string id="rKLHchJzC" text="Date" />
+		<string id="whDp5Z7ewS" text="Katakura-shi" />
 		<string id="BtNrf8lst" text="Katakura" />
+		<string id="flsQElJSnz" text="Oniniwa-shi" />
 		<string id="dRQQ6J8GV" text="Oniniwa" />
+		<string id="I2Ea3NOlrG" text="Watari-shi" />
 		<string id="u86EqkJ4j" text="Watari" />
+		<string id="4pGYk49ctO" text="Ōsaki-shi" />
 		<string id="TaKoJ8khl" text="Ōsaki" />
+		<string id="UfgAmtd5qP" text="Kasai-shi" />
 		<string id="cwdLudfVw" text="Kasai" />
+		<string id="kQVfxdu9YG" text="Iwaki-shi" />
 		<string id="malzpckeX" text="Iwaki" />
+		<string id="UVAVKpA4MU" text="Rusu-shi" />
 		<string id="enHzXLYv4" text="Rusu" />
+		<string id="fbTIRvhohH" text="Mogami-shi" />
 		<string id="CfVQqAgwV" text="Mogami" />
+		<string id="MYK4OUQOO3" text="Tendou-shi" />
 		<string id="oya8ew8QG" text="Tendou" />
+		<string id="EYxKWUmwGG" text="Ujiie-shi" />
 		<string id="VnkSf1DHK" text="Ujiie" />
+		<string id="1oRjkGhxci" text="Nobesawa-shi" />
 		<string id="Q9GIel71r" text="Nobesawa" />
+		<string id="ySy1w9yEI9" text="Tateoka-shi" />
 		<string id="klaqCJqJk" text="Tateoka" />
+		<string id="4yUhcGdvln" text="Daihouji-shi" />
 		<string id="zUEKah01q" text="Daihouji" />
+		<string id="2SIkIdxJK1" text="Onodera-shi" />
 		<string id="UQYkGrcE1" text="Onodera" />
+		<string id="BfzIB8Kf7y" text="Sakenobe-shi" />
 		<string id="ieSTR4lKa" text="Sakenobe" />
+		<string id="svf44wOCIe" text="Nikaho-shi" />
 		<string id="2bT3fADQP" text="Nikaho" />
+		<string id="rdVXPwojG4" text="Andou-shi" />
 		<string id="SKvnmuZbK" text="Andou" />
+		<string id="SuXKwvQt55" text="Asari-shi" />
 		<string id="cSTcp5UX7" text="Asari" />
+		<string id="gBoi8fKKTl" text="Tozawa-shi" />
 		<string id="ipUEvMSYN" text="Tozawa" />
+		<string id="TvPPcygfdw" text="Nanbu-shi" />
 		<string id="qNXmGOZau" text="Nanbu" />
+		<string id="T4NIBYh904" text="Shichinohe-shi" />
 		<string id="wdABBt8ua" text="Shichinohe" />
+		<string id="G2JfbKcfw9" text="Hachinohe-shi" />
 		<string id="GXNWPy5IS" text="Hachinohe" />
+		<string id="r9AKnrbv5B" text="Konohe-shi" />
 		<string id="BDPHjj6bc" text="Kunohe" />
+		<string id="ADmCb2G2wh" text="Kita-shi" />
 		<string id="p6sdrqgNb" text="Kita" />
+		<string id="odV1sCSioU" text="Ōura-shi" />
 		<string id="77aACcgAB" text="Ōura" />
+		<string id="PEclJ8porP" text="Shiba-shi" />
 		<string id="v9NZ7boqj" text="Shiba" />
+		<string id="xMUS7DOwFr" text="Asonuma-shi" />
 		<string id="0CytYWw1L" text="Asonuma" />
+		<string id="vooBcyACMC" text="Namioka-shi" />
 		<string id="jsYzXRJYp" text="Namioka" />
-
-
-
  	</strings>
 </base>
