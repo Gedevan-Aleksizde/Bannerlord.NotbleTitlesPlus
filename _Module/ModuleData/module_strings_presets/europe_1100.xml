@@ -15,6 +15,8 @@
 	<string id="ntp_title_set.EU1100_crownF_default" text="{=NTP.EU1100CrownF_default}{NAME}" />
 	<string id="ntp_title_set.EU1100_royalM_default" text="{=NTP.EU1100RoyalM_default}{NAME}" />
 	<string id="ntp_title_set.EU1100_royalF_default" text="{=NTP.EU1100RoyalF_default}{NAME}" />
+	<string id="ntp_title_set.EU1100_0M_default" text="{=5HylvkuIx}{NAME}" />
+	<string id="ntp_title_set.EU1100_0F_default" text="{=yd65InR31}{NAME}" />
 	
 	<string id="ntp_title_set.EU1100_MinorLM_default" text="{=NTP.EU1100MinorLM_default}{NAME} of {CLAN_SHORT}" />
 	<string id="ntp_title_set.EU1100_MinorLF_default" text="{=NTP.EU1100MinorLF_default}{NAME} of {CLAN_SHORT}" />

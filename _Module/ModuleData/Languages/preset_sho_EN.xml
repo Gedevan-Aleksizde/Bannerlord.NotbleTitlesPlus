@@ -20,6 +20,8 @@
 		<string id="NTP.SHOCrownF_default" text="Hime {NAME}" />
 		<string id="NTP.SHORoyalM_default" text="Jikisan {NAME}" />
 		<string id="NTP.SHORoyalF_default" text="Hime {NAME}" />
+		<string id="JoYfc56DI" text="{NAME}" />
+		<string id="87pLprAEk" text="{NAME}" />
 		
 		<string id="NTP.SHOMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
 		<string id="NTP.SHOMinorLF_default" text="{NAME} of {CLAN_SHORT}" />

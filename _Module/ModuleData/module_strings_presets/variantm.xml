@@ -17,6 +17,8 @@
     <string id="ntp_title_set.VARM_crownF_default" text="{=NTP.VARMCrownF_default}Crown Princess {NAME}" />
     <string id="ntp_title_set.VARM_royalM_default" text="{=NTP.VARMRoyalM_default}Prince {NAME}" />
     <string id="ntp_title_set.VARM_royalF_default" text="{=NTP.VARMRoyalF_default}Princess {NAME}" />
+    <string id="ntp_title_set.VARM_0M_default" text="{=cc9FztqSx}{NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_0F_default" text="{=kv7mfNSWW}{NAME} {CLAN}" />
     
     <string id="ntp_title_set.VARM_MinorLM_default" text="{=NTP.VARMMinorLM_default}{NAME} of {CLAN_SHORT}" />
     <string id="ntp_title_set.VARM_MinorLF_default" text="{=NTP.VARMMinorLF_default}{NAME} of {CLAN_SHORT}" />

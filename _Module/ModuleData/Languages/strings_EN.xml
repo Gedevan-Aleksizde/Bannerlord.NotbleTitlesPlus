@@ -61,6 +61,10 @@
 		<string id="NTP.MCMRank5MHint" text="A male clan member's title format"/>
 		<string id="NTP.MCMRank5F" text="Noblewoman (Rank 5)"/>
 		<string id="NTP.MCMRank5FHint" text="A female clan member's title format"/>
+		<string id="NTP.MCM0M" text="Male Hero (Other Cases)"/>
+		<string id="NTP.MCM0MHint" text="Title format of male hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
+		<string id="NTP.MCM0F" text="Female Hero (Other Cases)"/>
+		<string id="NTP.MCM0FHint" text="Title format of female hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
 		<string id="NTP.MCMCrownM" text="Crown Prince"/>
 		<string id="NTP.MCMCrownMHint" text="The male succession's title format"/>
 		<string id="NTP.MCMCrownF" text="Crown Princess"/>

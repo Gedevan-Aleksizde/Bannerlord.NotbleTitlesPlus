@@ -20,6 +20,8 @@
 		<string id="NTP.VARM4F_default" text="{NAME}゠{CLAN}女男爵" />
 		<string id="NTP.VARM5M_default" text="{NAME}゠{CLAN}卿" />
 		<string id="NTP.VARM5F_default" text="{NAME}゠{CLAN}女卿" />
+		<string id="cc9FztqSx" text="{NAME}゠{CLAN}" />
+		<string id="kv7mfNSWW" text="{NAME}゠{CLAN}" />
 
 		<string id="NTP.VARM1M_empire" text="バシレイオス゠{NAME}" />
 		<string id="NTP.VARM1F_empire" text="バシリッサ゠{NAME}" />

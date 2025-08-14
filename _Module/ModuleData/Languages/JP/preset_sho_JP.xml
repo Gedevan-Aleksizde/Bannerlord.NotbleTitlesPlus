@@ -21,6 +21,8 @@
 		<string id="NTP.SHOCrownF_default" text="{NAME}姫" />
 		<string id="NTP.SHORoyalM_default" text="直参{NAME}" />
 		<string id="NTP.SHORoyalF_default" text="{NAME}姫" />
+		<string id="JoYfc56DI" text="{NAME}" />
+		<string id="87pLprAEk" text="{NAME}" />
 		
 		<string id="NTP.SHOMinorLM_default" text="{CLAN_SHORT}の{NAME}" />
 		<string id="NTP.SHOMinorLF_default" text="{CLAN_SHORT}の{NAME}" />

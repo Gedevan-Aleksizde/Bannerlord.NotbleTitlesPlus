@@ -20,6 +20,8 @@
 		<string id="NTP.VAR4F_default" text="{NAME}女男爵" />
 		<string id="NTP.VAR5M_default" text="{NAME}卿" />
 		<string id="NTP.VAR5F_default" text="{NAME}女卿" />
+		<string id="866CQtAFX" text="{NAME}" />
+		<string id="iakryyvks" text="{NAME}" />
 
 		<string id="NTP.VAR1M_empire" text="バシレイオス゠{NAME}" />
 		<string id="NTP.VAR1F_empire" text="バシリッサ゠{NAME}" />

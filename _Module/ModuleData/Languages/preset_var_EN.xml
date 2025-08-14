@@ -20,6 +20,8 @@
 		<string id="NTP.VAR4F_default" text="Baroness {NAME}" />
 		<string id="NTP.VAR5M_default" text="Sir {NAME}" />
 		<string id="NTP.VAR5F_default" text="Lady {NAME}" />
+		<string id="866CQtAFX" text="{NAME}" />
+		<string id="iakryyvks" text="{NAME}" />
 
 		<string id="NTP.VAR1M_empire" text="Basileus {NAME}" />
 		<string id="NTP.VAR1F_empire" text="Basileia {NAME}" />

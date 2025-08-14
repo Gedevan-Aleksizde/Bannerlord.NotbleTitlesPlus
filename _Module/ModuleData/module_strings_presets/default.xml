@@ -15,7 +15,9 @@
 	<string id="ntp_title_set.DEF_crownM_default" text="{=NTP.DEFCrownM_default}{NAME}" />
 	<string id="ntp_title_set.DEF_crownF_default" text="{=NTP.DEFCrownF_default}{NAME}" />
 	<string id="ntp_title_set.DEF_royalM_default" text="{=NTP.DEFRoyalM_default}{NAME}" />
-	<string id="ntp_title_set.DEF_royalF_default" text="{=NTP.DEFRoyalF_default}{NAME}" />
+	<string id="ntp_title_set.DEF_royalF_default" text="{=NTP.DEFRoyalF_default}{NAME}" />	
+	<string id="ntp_title_set.DEF_0M_default" text="{=8qAnmzn7A}{NAME}" />
+	<string id="ntp_title_set.DEF_0F_default" text="{=WT2EeLJ6b}{NAME}" />
 	
 	<string id="ntp_title_set.DEF_MinorLM_default" text="{=NTP.DEFMinorLM_default}{NAME} of {CLAN_SHORT}" />
 	<string id="ntp_title_set.DEF_MinorLF_default" text="{=NTP.DEFMinorLF_default}{NAME} of {CLAN_SHORT}" />

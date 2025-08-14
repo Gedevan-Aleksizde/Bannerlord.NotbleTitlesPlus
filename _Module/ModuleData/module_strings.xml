@@ -33,7 +33,7 @@
 	<string id="ntp_mcm.heir_elder" text="{=NTP.MCMHeirElder}Elder"/>
 	<string id="ntp_mcm.heir_hint" text="{=NTP.MCMHeirHint}(WIP) Law of heir to the throne. Primogeniture: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule. This option should be used with the other mods which change succession laws."/>
 	<string id="ntp_mcm.error_kingdom" text="{=bWMiFgw5ac}Error 001: Kingdom Name Not Found"/>
-	<string id="ntp.landless" text="{=7FEC5f10}{NTP.landless}Landless"/>
+	<string id="ntp.landless" text="{=7FEC5f10}{NTP.landless}Landless"/>	
 	<string id="ntp_mcm.title_1M" text="{=NTP.MCMRank1M}King (Rank 1)"/>
 	<string id="ntp_mcm.title_1F" text="{=NTP.MCMRank1F}Queen (Rank 1)"/>
 	<string id="ntp_mcm.title_2M" text="{=NTP.MCMRank2M}Duke (Rank 2)"/>
@@ -44,6 +44,8 @@
 	<string id="ntp_mcm.title_4F" text="{=NTP.MCMRank4F}Baroness (Rank 4)"/>
 	<string id="ntp_mcm.title_5M" text="{=NTP.MCMRank5M}Nobleman (Rank 5)"/>
 	<string id="ntp_mcm.title_5F" text="{=NTP.MCMRank5F}Noblewoman (Rank 5)"/>
+	<string id="ntp_mcm.title_0M" text="{=NTP.MCM0M}Other Male Cases"/>
+	<string id="ntp_mcm.title_0F" text="{=NTP.MCM0F}Other Female Cases"/>
 	<string id="ntp_mcm.title_minorLM" text="{=NTP.MCMMinorLM}Male Leader"/>
 	<string id="ntp_mcm.title_minorLF" text="{=NTP.MCMMinorLF}Female Leader"/>
 	<string id="ntp_mcm.title_minorMM" text="{=NTP.MCMMinorMM}Male Member"/>
@@ -62,6 +64,8 @@
 	<string id="ntp_mcm.4F_hint" text="{=NTP.MCMRank4FHint}Title format of a rank 4 female vassal"/>
 	<string id="ntp_mcm.5M_hint" text="{=NTP.MCMRank5MHint}A male clan member's title format"/>
 	<string id="ntp_mcm.5F_hint" text="{=NTP.MCMRank5FHint}A female clan member's title format"/>
+	<string id="ntp_mcm.0M_hint" text="{=NTP.MCM0MHint}Title format of male hero who doesn't serve for any reason"/>
+	<string id="ntp_mcm.0F_hint" text="{=NTP.MCM0FHint}Title format of female hero who doesn't serve for any reason"/>
 	<string id="ntp_mcm.minorLM_hint" text="{=NTP.MCMMinorLMHint}Title format of the male leader"/>
 	<string id="ntp_mcm.minorLF_hint" text="{=NTP.MCMMinorLFHint}Title format of the female leader"/>
 	<string id="ntp_mcm.minorMM_hint" text="{=NTP.MCMMinorMMHint}A male menber's title format"/>

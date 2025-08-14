@@ -21,6 +21,8 @@
 		<string id="NTP.SHOMCrownF_default" text="Hime {NAME}" />
 		<string id="NTP.SHOMRoyalM_default" text="Jikisan {NAME}" />
 		<string id="NTP.SHOMRoyalF_default" text="Hime {NAME}" />
+		<string id="pizHT3XZH" text="{CLAN_SHORT} {NAME}" />
+		<string id="D6fMWzOce" text="{CLAN_SHORT} {NAME}" />
 		
 		<string id="NTP.SHOMMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
 		<string id="NTP.SHOMMinorLF_default" text="{NAME} of {CLAN_SHORT}" />

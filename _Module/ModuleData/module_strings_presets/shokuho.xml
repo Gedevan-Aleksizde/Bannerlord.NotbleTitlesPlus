@@ -16,6 +16,8 @@
 	<string id="ntp_title_set.SHO_crownF_default" text="{=NTP.SHOCrownF_default}Hime {NAME}" />
 	<string id="ntp_title_set.SHO_royalM_default" text="{=NTP.SHORoyalM_default}Jikisan {NAME}" />
 	<string id="ntp_title_set.SHO_royalF_default" text="{=NTP.SHORoyalF_default}Hime {NAME}" />
+	<string id="ntp_title_set.SHO_0M_default" text="{=JoYfc56DI}{NAME}" />
+	<string id="ntp_title_set.SHO_0F_default" text="{=87pLprAEk}{NAME}" />
 	
 	<string id="ntp_title_set.SHO_MinorLM_default" text="{=NTP.SHOMinorLM_default}{NAME} of {CLAN_SHORT}" />
 	<string id="ntp_title_set.SHO_MinorLF_default" text="{=NTP.SHOMinorLF_default}{NAME} of {CLAN_SHORT}" />

@@ -16,6 +16,8 @@
 	<string id="ntp_title_set.CEK_crownF_default" text="{=NTP.CEKCrownF_default}Crown Princess {NAME}" />
 	<string id="ntp_title_set.CEK_royalM_default" text="{=NTP.CEKRoyalM_default}Prince {NAME}" />
 	<string id="ntp_title_set.CEK_royalF_default" text="{=NTP.CEKRoyalF_default}Princess {NAME}" />
+	<string id="ntp_title_set.CEK_0M_default" text="{=0vJB7Mucx}{NAME}" />
+	<string id="ntp_title_set.CEK_0F_default" text="{=u6UQ3KwYD}{NAME}" />
 	
 	<string id="ntp_title_set.CEK_MinorLM_default" text="{=NTP.CEKMinorLM_default}{NAME} of {CLAN_SHORT}" />
 	<string id="ntp_title_set.CEK_MinorLF_default" text="{=NTP.CEKMinorLF_default}{NAME} of {CLAN_SHORT}" />

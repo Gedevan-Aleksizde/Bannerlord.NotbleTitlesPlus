@@ -21,6 +21,8 @@
 		<string id="=NTP.BKCrownF_default" text="Crown Princess {NAME}" />
 		<string id="=NTP.BKRoyalM_default" text="Prince {NAME}" />
 		<string id="=NTP.BKRoyalF_default" text="Princess {NAME}" />
+		<string id="n46KteAzK" text="{NAME}" />
+		<string id="aCiRs282C" text="{NAME}" />
 
 		<!-- Nahasawi (Nahasan) -->
 		<string id="=NTP.BK1M_aserai" text="Sultan {NAME}" />

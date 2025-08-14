@@ -61,6 +61,10 @@
 		<string id="NTP.MCMRank5MHint" text="一般男性クランメンバーの称号形式です。"/>
 		<string id="NTP.MCMRank5F" text="女貴族 (第5位)"/>
 		<string id="NTP.MCMRank5FHint" text="一般女性クランメンバーの称号形式です。"/>
+		<string id="NTP.MCM0M" text="その他男性"/>
+		<string id="NTP.MCM0MHint" text="何らかの理由で勢力に仕えていない男性ヒーローの称号形式です。「戦場の霧」を有効にしている際のデフォルトの表記にも使われます。"/>
+		<string id="NTP.MCM0F" text="その他女性"/>
+		<string id="NTP.MCM0FHint" text="何らかの理由で勢力に仕えていない女性ヒーローの称号形式です。「戦場の霧」を有効にしている際のデフォルトの表記にも使われます。"/>
 		<string id="NTP.MCMCrownM" text="王太子"/>
 		<string id="NTP.MCMCrownMHint" text="君主の男性後継者の称号形式です。"/>
 		<string id="NTP.MCMCrownF" text="王太女"/>

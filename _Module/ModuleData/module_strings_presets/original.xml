@@ -16,6 +16,8 @@
 	<string id="ntp_title_set.ORI_crownF_default" text="{=NTP.ORICrownF_default}{NAME}" />
 	<string id="ntp_title_set.ORI_royalM_default" text="{=NTP.ORIRoyalM_default}{NAME}" />
 	<string id="ntp_title_set.ORI_royalF_default" text="{=NTP.ORIRoyalF_default}{NAME}" />
+	<string id="ntp_title_set.ORI_0M_default" text="{=IVH2v3A4m}{NAME}" />
+	<string id="ntp_title_set.ORI_0F_default" text="{=Rg5OzlkQl}{NAME}" />
 	
 	<string id="ntp_title_set.ORI_MinorLM_default" text="{=NTP.ORIMinorLM_default}{NAME} of {CLAN_SHORT}" />
 	<string id="ntp_title_set.ORI_MinorLF_default" text="{=NTP.ORIMinorLF_default}{NAME} of {CLAN_SHORT}" />

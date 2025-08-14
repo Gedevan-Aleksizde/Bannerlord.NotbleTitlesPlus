@@ -21,6 +21,8 @@
 		<string id="NTP.DEF5M_default" text="{NAME}" />
 		<string id="NTP.DEFRoyalM_default" text="{NAME}" />
 		<string id="NTP.DEFRoyalF_default" text="{NAME}" />
+		<string id="8qAnmzn7A" text="{NAME}" />
+		<string id="WT2EeLJ6b" text="{NAME}" />
 		
 		<string id="NTP.DEFMinorLM_default" text="{NAME} of {CLAN_SHORT}" />
 		<string id="NTP.DEFMinorLF_default" text="{NAME} of {CLAN_SHORT}"/>
