@@ -81,6 +81,10 @@
 		<string id="NTP.MCMMinorMMHint" text="一般男性メンバーの称号形式です。"/>
 		<string id="NTP.MCMMinorMF" text="女性メンバー"/>
 		<string id="NTP.MCMMinorMFHint" text="一般女性メンバーの称号形式です。"/>
+		<string id="NTP.MCMMinorFallbackM" text="男性用フォールバック"/>
+		<string id="NTP.MCMMinorFallbackMHint" text="何らかの理由で勢力に仕えていない男性ヒーローの称号形式です。「戦場の霧」を有効にしている際のデフォルトの表記にも使われます。"/>
+		<string id="NTP.MCMMinorFallbackF" text="女性用フォールバック"/>
+		<string id="NTP.MCMMinorFallbackFHint" text="何らかの理由で勢力に仕えていない女性ヒーローの称号形式です。「戦場の霧」を有効にしている際のデフォルトの表記にも使われます。"/>
 		<string id="bWMiFgw5ac" text="Error 001: 国名を取得できません"/>
  </strings>
 </base>

@@ -7,20 +7,20 @@
 		<!-- Shokuho modified preset -->
 		<string id="NTP.MCMSshokuhomodified" text="Shokuhō Modified" />
 		
-		<string id="NTP.SHOM1M_default" text="{PROVINCE_SHO} Daimyo {CLAN_SHORT} {NAME}" />
-		<string id="NTP.SHOM1F_default" text="Daimyou-fujin {NAME}" />
-		<string id="NTP.SHOM2M_default" text="Karou {NAME}" />
-		<string id="NTP.SHOM2F_default" text="Karou-fujin {NAME}" />
-		<string id="NTP.SHOM3M_default" text="Karou {NAME}" />
-		<string id="NTP.SHOM3F_default" text="Karou-fujin {NAME}" />
-		<string id="NTP.SHOM4M_default" text="Lord Castellan {NAME}" />
-		<string id="NTP.SHOM4F_default" text="Lord Châtelaine {NAME}" />
-		<string id="NTP.SHOM5M_default" text="Gokenin {NAME}" />
-		<string id="NTP.SHOM5F_default" text="Hime {NAME}" />
+		<string id="NTP.SHOM1M_default" text="{CLAN_SHORT} {NAME}, Daimyo of {PROVINCE_SHO} Province" />
+		<string id="NTP.SHOM1F_default" text="Daimyou-fujin {CLAN_SHORT} {NAME}" />
+		<string id="NTP.SHOM2M_default" text="Karou {CLAN_SHORT} {NAME}" />
+		<string id="NTP.SHOM2F_default" text="Karou-fujin {CLAN_SHORT} {NAME}" />
+		<string id="NTP.SHOM3M_default" text="Karou {CLAN_SHORT} {NAME}" />
+		<string id="NTP.SHOM3F_default" text="Karou-fujin {CLAN_SHORT} {NAME}" />
+		<string id="NTP.SHOM4M_default" text="Joushu {CLAN_SHORT} {NAME}" />
+		<string id="NTP.SHOM4F_default" text="Lord Châtelaine {CLAN_SHORT} {NAME}" />
+		<string id="NTP.SHOM5M_default" text="Gokenin {CLAN_SHORT} {NAME}" />
+		<string id="NTP.SHOM5F_default" text="{NAME}" />
 		<string id="NTP.SHOMCrownM_default" text="Shishi {NAME}" />
-		<string id="NTP.SHOMCrownF_default" text="Hime {NAME}" />
+		<string id="NTP.SHOMCrownF_default" text="Lady {NAME}" />
 		<string id="NTP.SHOMRoyalM_default" text="Jikisan {NAME}" />
-		<string id="NTP.SHOMRoyalF_default" text="Hime {NAME}" />
+		<string id="NTP.SHOMRoyalF_default" text="Lady {NAME}" />
 		<string id="pizHT3XZH" text="{CLAN_SHORT} {NAME}" />
 		<string id="D6fMWzOce" text="{CLAN_SHORT} {NAME}" />
 		

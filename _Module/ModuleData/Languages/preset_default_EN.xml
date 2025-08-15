@@ -28,6 +28,8 @@
 		<string id="NTP.DEFMinorLF_default" text="{NAME} of {CLAN_SHORT}"/>
 		<string id="NTP.DEFMinorMM_default" text="{NAME} of {CLAN_SHORT}" />
 		<string id="NTP.DEFMinorMF_default" text="{NAME} of {CLAN_SHORT}"/>
+		<string id="NTP.DEFMinorFallbackM_default" text="{NAME} of {CLAN_SHORT}" />
+		<string id="NTP.DEFMinorFallbackF_default" text="{NAME} of {CLAN_SHORT}" />
 
 		<string id="NTP.DEF1M_empire" text="Emperor {NAME}" />
 		<string id="NTP.DEF1F_empire" text="Empress {NAME}" />

@@ -16,11 +16,11 @@
 		<string id="NTP.SHOM4M_default" text="城主{CLAN_SHORT}{NAME}" />
 		<string id="NTP.SHOM4F_default" text="城主夫人{CLAN_SHORT}{NAME}" />
 		<string id="NTP.SHOM5M_default" text="御家人{CLAN_SHORT}{NAME}" />
-		<string id="NTP.SHOM5F_default" text="{CLAN_SHORT}{NAME}姫" />
+		<string id="NTP.SHOM5F_default" text="{CLAN_SHORT}{NAME}" />
 		<string id="NTP.SHOMCrownM_default" text="嗣子{CLAN_SHORT}{NAME}" />
-		<string id="NTP.SHOMCrownF_default" text="{CLAN_SHORT}{NAME}姫" />
+		<string id="NTP.SHOMCrownF_default" text="{CLAN_SHORT}{NAME}" />
 		<string id="NTP.SHOMRoyalM_default" text="直参{CLAN_SHORT}{NAME}" />
-		<string id="NTP.SHOMRoyalF_default" text="{CLAN_SHORT}{NAME}姫" />
+		<string id="NTP.SHOMRoyalF_default" text="{CLAN_SHORT}{NAME}" />
 		<string id="pizHT3XZH" text="{CLAN_SHORT}{NAME}" />
 		<string id="D6fMWzOce" text="{CLAN_SHORT}{NAME}" />
 		

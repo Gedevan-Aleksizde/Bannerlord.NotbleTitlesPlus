@@ -16,11 +16,11 @@
 		<string id="NTP.SHO4M_default" text="城主{NAME}" />
 		<string id="NTP.SHO4F_default" text="城主夫人{NAME}" />
 		<string id="NTP.SHO5M_default" text="御家人{NAME}" />
-		<string id="NTP.SHO5F_default" text="{NAME}姫" />
+		<string id="NTP.SHO5F_default" text="{NAME}" />
 		<string id="NTP.SHOCrownM_default" text="嗣子{NAME}" />
-		<string id="NTP.SHOCrownF_default" text="{NAME}姫" />
+		<string id="NTP.SHOCrownF_default" text="{NAME}" />
 		<string id="NTP.SHORoyalM_default" text="直参{NAME}" />
-		<string id="NTP.SHORoyalF_default" text="{NAME}姫" />
+		<string id="NTP.SHORoyalF_default" text="{NAME}" />
 		<string id="JoYfc56DI" text="{NAME}" />
 		<string id="87pLprAEk" text="{NAME}" />
 		

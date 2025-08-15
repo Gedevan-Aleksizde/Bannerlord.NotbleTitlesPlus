@@ -81,6 +81,10 @@
 		<string id="NTP.MCMMinorMMHint" text="A male menber's title format"/>
 		<string id="NTP.MCMMinorMF" text="Female Member"/>
 		<string id="NTP.MCMMinorMFHint" text="A female member's title format"/>
+		<string id="NTP.MCMMinorFallbackM" text="Fallback Male"/>
+		<string id="NTP.MCMMinorFallbackMHint" text="Title format of male hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
+		<string id="NTP.MCMMinorFallbackF" text="Factionllback Female"/>
+		<string id="NTP.MCMMinorFallbackFHint" text="Title format of female hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
 		<string id="bWMiFgw5ac" text="Error 001: Kingdom Name Not Found"/>
  	</strings>
 </base>

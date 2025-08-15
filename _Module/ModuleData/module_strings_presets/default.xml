@@ -23,6 +23,8 @@
 	<string id="ntp_title_set.DEF_MinorLF_default" text="{=NTP.DEFMinorLF_default}{NAME} of {CLAN_SHORT}" />
 	<string id="ntp_title_set.DEF_MinorMM_default" text="{=NTP.DEFMinorMM_default}{NAME} of {CLAN_SHORT}" />
 	<string id="ntp_title_set.DEF_MinorMF_default" text="{=NTP.DEFMinorMF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.DEF_MinorFallbackM_default" text="{=NTP.DEFMinorFallbackM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.DEF_MinorFallbackF_default" text="{=NTP.DEFMinorFallbackF_default}{NAME} of {CLAN_SHORT}" />
 	
 	<string id="ntp_title_set.DEF_1M_aserai" text="{=NTP.DEF1M_aserai}Sultan {NAME}" />
 	<string id="ntp_title_set.DEF_1F_aserai" text="{=NTP.DEF1F_aserai}Sultana {NAME}" />

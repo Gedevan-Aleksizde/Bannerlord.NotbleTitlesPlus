@@ -50,6 +50,8 @@
 	<string id="ntp_mcm.title_minorLF" text="{=NTP.MCMMinorLF}Female Leader"/>
 	<string id="ntp_mcm.title_minorMM" text="{=NTP.MCMMinorMM}Male Member"/>
 	<string id="ntp_mcm.title_minorMF" text="{=NTP.MCMMinorMF}Female Member"/>
+	<string id="ntp_mcm.title_minorFallbackM" text="{=NTP.MCMMinorFallbackM}Fallback Male"/>
+	<string id="ntp_mcm.title_minorFallbackF" text="{=NTP.MCMMinorFallbackF}Fallback Female"/>
 	<string id="ntp_mcm.title_CrownM" text="{=NTP.MCMCrownM}Crown Prince"/>
 	<string id="ntp_mcm.title_CrownF" text="{=NTP.MCMCrownF}Crown Princess"/>
 	<string id="ntp_mcm.title_RoyalM" text="{=NTP.MCMRoyalM}Royal Male"/>
@@ -64,12 +66,14 @@
 	<string id="ntp_mcm.4F_hint" text="{=NTP.MCMRank4FHint}Title format of a rank 4 female vassal"/>
 	<string id="ntp_mcm.5M_hint" text="{=NTP.MCMRank5MHint}A male clan member's title format"/>
 	<string id="ntp_mcm.5F_hint" text="{=NTP.MCMRank5FHint}A female clan member's title format"/>
-	<string id="ntp_mcm.0M_hint" text="{=NTP.MCM0MHint}Title format of male hero who doesn't serve for any reason"/>
-	<string id="ntp_mcm.0F_hint" text="{=NTP.MCM0FHint}Title format of female hero who doesn't serve for any reason"/>
+	<string id="ntp_mcm.0M_hint" text="{=NTP.MCM0MHint}Title format of male hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
+	<string id="ntp_mcm.0F_hint" text="{=NTP.MCM0FHint}Title format of female hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
 	<string id="ntp_mcm.minorLM_hint" text="{=NTP.MCMMinorLMHint}Title format of the male leader"/>
 	<string id="ntp_mcm.minorLF_hint" text="{=NTP.MCMMinorLFHint}Title format of the female leader"/>
 	<string id="ntp_mcm.minorMM_hint" text="{=NTP.MCMMinorMMHint}A male menber's title format"/>
 	<string id="ntp_mcm.minorMF_hint" text="{=NTP.MCMMinorMFHint}A female menber's title format"/>
+	<string id="ntp_mcm.minorFallbackM_hint" text="{=NTP.MCMMinorMMHint}Title format of male hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
+	<string id="ntp_mcm.minorFallbackF_hint" text="{=NTP.MCMMinorMFHint}Title format of female hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
 	<string id="ntp_mcm.CrownM_hint" text="{=NTP.MCMCrownMHint}The male succession's title format"/>
 	<string id="ntp_mcm.CrownF_hint" text="{=NTP.MCMCrownFHint}The female succession's title format"/>
 	<string id="ntp_mcm.RoyalM_hint" text="{=NTP.MCMRoyalMHint}A male ruler clan menber's title"/>
