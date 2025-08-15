@@ -119,7 +119,6 @@ namespace NobleTitlesPlus
                 {
                     strProvId = "default";
                 }
-                Util.Log.Print($"sett_id={SettlementId ?? ""}, province_id={strProvId}");
                 this.ClanAttrs[clan] = (
                     FiefText: new TextObject(Name),
                     ShokuhoProvName: GameTexts.FindText("ntp_sho_prov", strProvId),
@@ -135,7 +134,6 @@ namespace NobleTitlesPlus
                 {
                     strProvId = "default";
                 }
-                Util.Log.Print($"sett_id={fiefTupleList.Last().SettlementId ?? ""}, province_id={strProvId}");
                 this.ClanAttrs[clan] = (
                     FiefText: new TextObject(string.Join(" ", new string[] { fiefs, lastElement })),
                     ShokuhoProvName: GameTexts.FindText("ntp_sho_prov", strProvId),
@@ -170,7 +168,7 @@ namespace NobleTitlesPlus
             }
             else
             {
-                shortName = clan.Name;
+                shortName = clan.InformalName;
                 longName = clan.Name;
             }
             bool contains = this.ClanAttrs.ContainsKey(clan);
@@ -178,7 +176,7 @@ namespace NobleTitlesPlus
             {
                 (TextObject FiefText, TextObject ShokuhoProvName, ClanNamePair ClanNames) t = this.ClanAttrs[clan];
             }
-            clan.ChangeClanName(clan.Name, shortName);
+            clan.ChangeClanName(longName, shortName);
             this.ClanAttrs[clan] = (
                 FiefText: contains ? this.ClanAttrs[clan].FiefText : new(""),
                 ShokuhoProvName: contains ? this.ClanAttrs[clan].ShokuhoProvName : new(""),

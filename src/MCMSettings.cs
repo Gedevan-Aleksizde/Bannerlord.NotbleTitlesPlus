@@ -84,6 +84,9 @@ namespace NobleTitlesPlus.MCMSettings
             }
             return builder;
 
+            /*
+             * general setting items
+             */
             void BuildGeneralGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddBool("fogOfWar", "{=yF9agd1M}Fog of War",
                     new ProxyRef<bool>(
@@ -166,6 +169,10 @@ namespace NobleTitlesPlus.MCMSettings
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("size_hint")).SetOrder(3)
                     )
                 .SetGroupOrder(1);
+
+            /*
+             * each kingdom's title format entries
+             */
             Action<ISettingsPropertyGroupBuilder> GenerateKingdomGroupPropertiesBuilder(string id, int order, bool isCulture = true)
             {
                 void BuildFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
@@ -174,8 +181,8 @@ namespace NobleTitlesPlus.MCMSettings
                     {
                         bool isFemale = s == "F";
                         string genderLong = s == "F" ? "Female" : "Male";
-                        // for(int  rank = 1; rank < 6; rank++) // TODO: Why not working??
-                        foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
+                        // for(int  rank = 0; rank < 6; rank++) // TODO: Why not working??
+                        foreach (int rank in new int[] { 0, 1, 2, 3, 4, 5 })
                         {
                             builder
                                 .AddText(
@@ -189,7 +196,7 @@ namespace NobleTitlesPlus.MCMSettings
                                         }
                                     ),
                                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"{rank}{s}_hint"))
-                                    .SetOrder(2 + 2 * rank + (isFemale ? 0 : 1))
+                                    .SetOrder(rank == 0 ? 99 : 2 + 2 * rank + (isFemale ? 0 : 1))
                                     );
                         }
                         builder
@@ -221,6 +228,9 @@ namespace NobleTitlesPlus.MCMSettings
                 }
                 return BuildFactionGroupProperties;
             }
+            /*
+             * each minor faction's title format entries
+             */
             Action<ISettingsPropertyGroupBuilder> GenerateMinorFactionGroupProperties(string clanStringId, int order)
             {
                 void BuildMinorFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
@@ -251,6 +261,12 @@ namespace NobleTitlesPlus.MCMSettings
                 }
                 return BuildMinorFactionGroupProperties;
             }
+
+            ///
+            /// <summary>
+            /// set preset values
+            /// </summary>
+            ///
             void BuildPreset(ISettingsPresetBuilder builder, Options option, string preset)
             {
                 builder
@@ -281,7 +297,7 @@ namespace NobleTitlesPlus.MCMSettings
                     // tried to get value from kingdoms, then get it from cultures when failed that
                     foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
-                        foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
+                        foreach (int rank in new int[] { 0, 1, 2, 3, 4, 5 })
                         {
                             if (preset == "DEF")
                             {
