@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Module xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
+<Module xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
   <Id value="NobleTitlesPlus" />
   <Name value="Noble Titles Plus" />
-  <Version value="v2.3.2" />
+  <Version value="v2.4.0" />
   <DefaultModule value="false" />
   <ModuleCategory value="Singleplayer"/>
   <ModuleType value="Community" />
@@ -42,19 +41,21 @@
     </SubModule>
   </SubModules>
   <Xmls>
-		<XmlNode>
+    <XmlNode>
       <XmlName id="GameText" path="module_strings"/>
       <IncludedGameTypes>
-        <GameType value = "Campaign"/>
-        <GameType value = "CampaignStoryMode"/>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="ShokuhoCampaign"/>
       </IncludedGameTypes>
     </XmlNode>
     <XmlNode>
       <XmlName id="GameText" path="module_strings_presets"/>
       <IncludedGameTypes>
-        <GameType value = "Campaign"/>
-        <GameType value = "CampaignStoryMode"/>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="ShokuhoCampaign"/>
       </IncludedGameTypes>
     </XmlNode>
-	</Xmls>
+  </Xmls>
 </Module>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<base>
+ 		<tags>
+  		<tag language="日本語" />
+ 	</tags>
+	<strings>
+		<!-- #region Shokuho -->
+		<string id="NTP.MCMShokuhomodified" text="Shokuhō Modified"/>
+
+		<string id="NTP.SHOM1M_default" text="{PROVINCE_SHO}の大名{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOM1F_default" text="大名夫人{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOM2M_default" text="家老{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOM2F_default" text="家老夫人{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOM3M_default" text="家老{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOM3F_default" text="家老夫人{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOM4M_default" text="城主{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOM4F_default" text="城主夫人{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOM5M_default" text="御家人{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOM5F_default" text="{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOMCrownM_default" text="嗣子{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOMCrownF_default" text="{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOMRoyalM_default" text="直参{CLAN_SHORT}{NAME}" />
+		<string id="NTP.SHOMRoyalF_default" text="{CLAN_SHORT}{NAME}" />
+		<string id="pizHT3XZH" text="{CLAN_SHORT}{NAME}" />
+		<string id="D6fMWzOce" text="{CLAN_SHORT}{NAME}" />
+		
+		<string id="NTP.SHOMMinorLM_default" text="{CLAN_SHORT}の{NAME}" />
+		<string id="NTP.SHOMMinorLF_default" text="{CLAN_SHORT}の{NAME}" />
+		<string id="NTP.SHOMMinorMM_default" text="{CLAN_SHORT}の{NAME}" />
+		<string id="NTP.SHOMMinorMF_default" text="{CLAN_SHORT}の{NAME}" />
+		
+		<string id="NTP.SHOM1M_asakura" text="越前守護代{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_ashikaga" text="征夷大將軍{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_hatakeyama" text="紀伊守護{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_imagawa" text="駿遠守護{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_oda" text="{CLAN_SHORT}尾張守{NAME}" /> 
+		<string id="NTP.SHOM1M_otomo" text="豐後守護{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_satake" text="常陸守護{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_shimazu" text="薩摩守護{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_takeda" text="甲斐守護{CLAN_SHORT}{NAME}" /> 	
+		<string id="NTP.SHOM1M_uesugi" text="關東管領{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_utsunomiya" text="下野守護{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_rokkaku" text="近江守護{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1M_mori" text="{CLAN_SHORT}右馬頭{NAME}" /> 
+		<string id="NTP.SHOM1M_ikko_shu" text="法主{CLAN_SHORT}{NAME}" /> 
+		<string id="NTP.SHOM1F_ikko_shu" text="{CLAN_SHORT}{NAME}夫人" /> 
+	</strings>
+</base>

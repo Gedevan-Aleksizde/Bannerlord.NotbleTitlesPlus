@@ -1,98 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <strings>
-        <!-- default preset -->
-        <string id="str_ntp_title_set.ORI_1M_default" text="{=NTP.ORI1M_default}King {NAME}" />
-        <string id="str_ntp_title_set.ORI_1F_default" text="{=NTP.ORI1F_default}Queen {NAME}" />
-        <string id="str_ntp_title_set.ORI_2M_default" text="{=NTP.ORI2M_default}Duke {NAME}" />
-        <string id="str_ntp_title_set.ORI_2F_default" text="{=NTP.ORI2F_default}Duchess {NAME}" />
-        <string id="str_ntp_title_set.ORI_3M_default" text="{=NTP.ORI3M_default}Count {NAME}" />
-        <string id="str_ntp_title_set.ORI_3F_default" text="{=NTP.ORI3F_default}Countess {NAME}" />
-        <string id="str_ntp_title_set.ORI_4M_default" text="{=NTP.ORI4M_default}Baron {NAME}" />
-        <string id="str_ntp_title_set.ORI_4F_default" text="{=NTP.ORI4F_default}Baroness {NAME}" />
-        <string id="str_ntp_title_set.ORI_5M_default" text="{=NTP.ORI5M_default}{NAME}" />
-        <string id="str_ntp_title_set.ORI_5F_default" text="{=NTP.ORI5F_default}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownM_default" text="{=NTP.ORICrownM_default}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownF_default" text="{=NTP.ORICrownF_default}{NAME}" />
-        <string id="str_ntp_title_set.ORI_royalM_default" text="{=NTP.ORIRoyalM_default}{NAME}" />
-        <string id="str_ntp_title_set.ORI_royalF_default" text="{=NTP.ORIRoyalF_default}{NAME}" />
-
-        <string id="str_ntp_title_set.ORI_1M_aserai" text="{=NTP.ORI1M_aserai}Sultan {NAME}" />
-        <string id="str_ntp_title_set.ORI_1F_aserai" text="{=NTP.ORI1F_aserai}Sultana {NAME}" />
-        <string id="str_ntp_title_set.ORI_2M_aserai" text="{=NTP.ORI2M_aserai}Prince {NAME}" />
-        <string id="str_ntp_title_set.ORI_2F_aserai" text="{=NTP.ORI2F_aserai}Princess {NAME}" />
-        <string id="str_ntp_title_set.ORI_3M_aserai" text="{=NTP.ORI3M_aserai}Emir {NAME}" />
-        <string id="str_ntp_title_set.ORI_3F_aserai" text="{=NTP.ORI3F_aserai}Emira {NAME}" />
-        <string id="str_ntp_title_set.ORI_4M_aserai" text="{=NTP.ORI4M_aserai}Sheikh {NAME}" />
-        <string id="str_ntp_title_set.ORI_4F_aserai" text="{=NTP.ORI4F_aserai}Sheikha {NAME}" />
-        <string id="str_ntp_title_set.ORI_5M_aserai" text="{=NTP.ORI5M_aserai}{NAME}" />
-        <string id="str_ntp_title_set.ORI_5F_aserai" text="{=NTP.ORI5F_aserai}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownM_aserai" text="{=NTP.ORICrownM_aserai}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownF_aserai" text="{=NTP.ORICrownF_aserai}{NAME}" />
-
-        <string id="str_ntp_title_set.ORI_1M_battania" text="{=NTP.ORI1M_battania}High King {NAME}" />
-        <string id="str_ntp_title_set.ORI_1F_battania" text="{=NTP.ORI1F_battania}High Queen {NAME}" />
-        <string id="str_ntp_title_set.ORI_2M_battania" text="{=NTP.ORI2M_battania}Mormaer {NAME}" />
-        <string id="str_ntp_title_set.ORI_2F_battania" text="{=NTP.ORI2F_battania}Bantiarna {NAME}" />
-        <string id="str_ntp_title_set.ORI_3M_battania" text="{=NTP.ORI3M_battania}High Chief {NAME}" />
-        <string id="str_ntp_title_set.ORI_3F_battania" text="{=NTP.ORI3F_battania}High Chieftess {NAME}" />
-        <string id="str_ntp_title_set.ORI_4M_battania" text="{=NTP.ORI4M_battania}Chief {NAME}" />
-        <string id="str_ntp_title_set.ORI_4F_battania" text="{=NTP.ORI4F_battania}Chieftess {NAME}" />
-        <string id="str_ntp_title_set.ORI_5M_battania" text="{=NTP.ORI5M_battania}{NAME}" />
-        <string id="str_ntp_title_set.ORI_5F_battania" text="{=NTP.ORI5F_battania}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownM_battania" text="{=NTP.ORICrownM_battania}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownF_battania" text="{=NTP.ORICrownF_battania}{NAME}" />
-
-        <string id="str_ntp_title_set.ORI_1M_empire" text="{=NTP.ORI1M_empire}Emperor {NAME}" />
-        <string id="str_ntp_title_set.ORI_1F_empire" text="{=NTP.ORI1F_empire}Empress {NAME}" />
-        <string id="str_ntp_title_set.ORI_2M_empire" text="{=NTP.ORI2M_empire}Duke {NAME}" />
-        <string id="str_ntp_title_set.ORI_2F_empire" text="{=NTP.ORI2F_empire}Duchess {NAME}" />
-        <string id="str_ntp_title_set.ORI_3M_empire" text="{=NTP.ORI3M_empire}Catepan {NAME}" />
-        <string id="str_ntp_title_set.ORI_3F_empire" text="{=NTP.ORI3F_empire}Kyria {NAME}" />
-        <string id="str_ntp_title_set.ORI_4M_empire" text="{=NTP.ORI4M_empire}Strategos {NAME}" />
-        <string id="str_ntp_title_set.ORI_4F_empire" text="{=NTP.ORI4F_empire}Kyria {NAME}" />
-        <string id="str_ntp_title_set.ORI_5M_empire" text="{=NTP.ORI5M_empire}{NAME}" />
-        <string id="str_ntp_title_set.ORI_5F_empire" text="{=NTP.ORI5F_empire}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownM_empire" text="{=NTP.ORICrownM_empire}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownF_empire" text="{=NTP.ORICrownF_empire}{NAME}" />
-
-        <string id="str_ntp_title_set.ORI_1M_khuzait" text="{=NTP.ORI1M_khuzait}Khagan {NAME}" />
-        <string id="str_ntp_title_set.ORI_1F_khuzait" text="{=NTP.ORI1F_khuzait}Khanum {NAME}" />
-        <string id="str_ntp_title_set.ORI_2M_khuzait" text="{=NTP.ORI2M_khuzait}Baghatur {NAME}" />
-        <string id="str_ntp_title_set.ORI_2F_khuzait" text="{=NTP.ORI2F_khuzait}Bekhi {NAME}" />
-        <string id="str_ntp_title_set.ORI_3M_khuzait" text="{=NTP.ORI3M_khuzait}Khan {NAME}" />
-        <string id="str_ntp_title_set.ORI_3F_khuzait" text="{=NTP.ORI3F_khuzait}Khanum {NAME}" />
-        <string id="str_ntp_title_set.ORI_4M_khuzait" text="{=NTP.ORI4M_khuzait}Bey {NAME}" />
-        <string id="str_ntp_title_set.ORI_4F_khuzait" text="{=NTP.ORI4F_khuzait}Begum {NAME}" />
-        <string id="str_ntp_title_set.ORI_5M_khuzait" text="{=NTP.ORI5M_khuzait}{NAME}" />
-        <string id="str_ntp_title_set.ORI_5F_khuzait" text="{=NTP.ORI5F_khuzait}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownM_khuzait" text="{=NTP.ORICrownM_khuzait}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownF_khuzait" text="{=NTP.ORICrownF_khuzait}{NAME}" />
-
-        <string id="str_ntp_title_set.ORI_1M_sturgia" text="{=NTP.ORI1M_sturgia}Grand Prince {NAME}" />
-        <string id="str_ntp_title_set.ORI_1F_sturgia" text="{=NTP.ORI1F_sturgia}Grand Princess {NAME}" />
-        <string id="str_ntp_title_set.ORI_2M_sturgia" text="{=NTP.ORI2M_sturgia}Prince {NAME}" />
-        <string id="str_ntp_title_set.ORI_2F_sturgia" text="{=NTP.ORI2F_sturgia}Princess {NAME}" />
-        <string id="str_ntp_title_set.ORI_3M_sturgia" text="{=NTP.ORI3M_sturgia}Jarl {NAME}" />
-        <string id="str_ntp_title_set.ORI_3F_sturgia" text="{=NTP.ORI3F_sturgia}Jarl {NAME}" />
-        <string id="str_ntp_title_set.ORI_4M_sturgia" text="{=NTP.ORI4M_sturgia}Boyar {NAME}" />
-        <string id="str_ntp_title_set.ORI_4F_sturgia" text="{=NTP.ORI4F_sturgia}Boyarina {NAME}" />
-        <string id="str_ntp_title_set.ORI_5M_sturgia" text="{=NTP.ORI5M_strurgia}{NAME}" />
-        <string id="str_ntp_title_set.ORI_5F_sturgia" text="{=NTP.ORI5F_sturgia}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownM_sturgia" text="{=NTP.ORICrownM_sturgia}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownF_sturgia" text="{=NTP.ORICrownF_sturgia}{NAME}" />
-
-        <string id="str_ntp_title_set.ORI_1M_vlandia" text="{=NTP.ORI1M_vlandia}King {NAME}" />
-        <string id="str_ntp_title_set.ORI_1F_vlandia" text="{=NTP.ORI1F_vlandia}Queen {NAME}" />
-        <string id="str_ntp_title_set.ORI_2M_vlandia" text="{=NTP.ORI2M_vlandia}Duke {NAME}" />
-        <string id="str_ntp_title_set.ORI_2F_vlandia" text="{=NTP.ORI2F_vlandia}Duchess {NAME}" />
-        <string id="str_ntp_title_set.ORI_3M_vlandia" text="{=NTP.ORI3M_vlandia}Count {NAME}" />
-        <string id="str_ntp_title_set.ORI_3F_vlandia" text="{=NTP.ORI3F_vlandia}Countess {NAME}" />
-        <string id="str_ntp_title_set.ORI_4M_vlandia" text="{=NTP.ORI4M_vlandia}Baron {NAME}" />
-        <string id="str_ntp_title_set.ORI_4F_vlandia" text="{=NTP.ORI4F_vlandia}Baroness {NAME}" />
-        <string id="str_ntp_title_set.ORI_5M_vlandia" text="{=NTP.ORI5M_vlandia}{NAME}" />
-        <string id="str_ntp_title_set.ORI_5F_vlandia" text="{=NTP.ORI5F_vlandia}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownM_vlandia" text="{=NTP.ORICrownM_vlandia}{NAME}" />
-        <string id="str_ntp_title_set.ORI_crownF_vlandia" text="{=NTP.ORICrownF_vlandia}{NAME}" />
-
-
-	</strings>
+<strings>
+	<string id="ntp_mcm.preset_original" text="{=NTP.MCMOriginal}Zijistark's Original" />
+	<!-- default preset -->
+	<string id="ntp_title_set.ORI_1M_default" text="{=NTP.ORI1M_default}King {NAME}" />
+	<string id="ntp_title_set.ORI_1F_default" text="{=NTP.ORI1F_default}Queen {NAME}" />
+	<string id="ntp_title_set.ORI_2M_default" text="{=NTP.ORI2M_default}Duke {NAME}" />
+	<string id="ntp_title_set.ORI_2F_default" text="{=NTP.ORI2F_default}Duchess {NAME}" />
+	<string id="ntp_title_set.ORI_3M_default" text="{=NTP.ORI3M_default}Count {NAME}" />
+	<string id="ntp_title_set.ORI_3F_default" text="{=NTP.ORI3F_default}Countess {NAME}" />
+	<string id="ntp_title_set.ORI_4M_default" text="{=NTP.ORI4M_default}Baron {NAME}" />
+	<string id="ntp_title_set.ORI_4F_default" text="{=NTP.ORI4F_default}Baroness {NAME}" />
+	<string id="ntp_title_set.ORI_5M_default" text="{=NTP.ORI5M_default}{NAME}" />
+	<string id="ntp_title_set.ORI_5F_default" text="{=NTP.ORI5F_default}{NAME}" />
+	<string id="ntp_title_set.ORI_crownM_default" text="{=NTP.ORICrownM_default}{NAME}" />
+	<string id="ntp_title_set.ORI_crownF_default" text="{=NTP.ORICrownF_default}{NAME}" />
+	<string id="ntp_title_set.ORI_royalM_default" text="{=NTP.ORIRoyalM_default}{NAME}" />
+	<string id="ntp_title_set.ORI_royalF_default" text="{=NTP.ORIRoyalF_default}{NAME}" />
+	<string id="ntp_title_set.ORI_0M_default" text="{=IVH2v3A4m}{NAME}" />
+	<string id="ntp_title_set.ORI_0F_default" text="{=Rg5OzlkQl}{NAME}" />
+	
+	<string id="ntp_title_set.ORI_MinorLM_default" text="{=NTP.ORIMinorLM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.ORI_MinorLF_default" text="{=NTP.ORIMinorLF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.ORI_MinorMM_default" text="{=NTP.ORIMinorMM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.ORI_MinorMF_default" text="{=NTP.ORIMinorMF_default}{NAME} of {CLAN_SHORT}" />
+	
+	<string id="ntp_title_set.ORI_1M_aserai" text="{=NTP.ORI1M_aserai}Sultan {NAME}" />
+	<string id="ntp_title_set.ORI_1F_aserai" text="{=NTP.ORI1F_aserai}Sultana {NAME}" />
+	<string id="ntp_title_set.ORI_2M_aserai" text="{=NTP.ORI2M_aserai}Prince {NAME}" />
+	<string id="ntp_title_set.ORI_2F_aserai" text="{=NTP.ORI2F_aserai}Princess {NAME}" />
+	<string id="ntp_title_set.ORI_3M_aserai" text="{=NTP.ORI3M_aserai}Emir {NAME}" />
+	<string id="ntp_title_set.ORI_3F_aserai" text="{=NTP.ORI3F_aserai}Emira {NAME}" />
+	<string id="ntp_title_set.ORI_4M_aserai" text="{=NTP.ORI4M_aserai}Sheikh {NAME}" />
+	<string id="ntp_title_set.ORI_4F_aserai" text="{=NTP.ORI4F_aserai}Sheikha {NAME}" />
+	<string id="ntp_title_set.ORI_5M_aserai" text="{=NTP.ORI5M_aserai}{NAME}" />
+	<string id="ntp_title_set.ORI_5F_aserai" text="{=NTP.ORI5F_aserai}{NAME}" />
+	<string id="ntp_title_set.ORI_crownM_aserai" text="{=NTP.ORICrownM_aserai}{NAME}" />
+	<string id="ntp_title_set.ORI_crownF_aserai" text="{=NTP.ORICrownF_aserai}{NAME}" />
+	
+	<string id="ntp_title_set.ORI_1M_battania" text="{=NTP.ORI1M_battania}High King {NAME}" />
+	<string id="ntp_title_set.ORI_1F_battania" text="{=NTP.ORI1F_battania}High Queen {NAME}" />
+	<string id="ntp_title_set.ORI_2M_battania" text="{=NTP.ORI2M_battania}Mormaer {NAME}" />
+	<string id="ntp_title_set.ORI_2F_battania" text="{=NTP.ORI2F_battania}Bantiarna {NAME}" />
+	<string id="ntp_title_set.ORI_3M_battania" text="{=NTP.ORI3M_battania}High Chief {NAME}" />
+	<string id="ntp_title_set.ORI_3F_battania" text="{=NTP.ORI3F_battania}High Chieftess {NAME}" />
+	<string id="ntp_title_set.ORI_4M_battania" text="{=NTP.ORI4M_battania}Chief {NAME}" />
+	<string id="ntp_title_set.ORI_4F_battania" text="{=NTP.ORI4F_battania}Chieftess {NAME}" />
+	<string id="ntp_title_set.ORI_5M_battania" text="{=NTP.ORI5M_battania}{NAME}" />
+	<string id="ntp_title_set.ORI_5F_battania" text="{=NTP.ORI5F_battania}{NAME}" />
+	<string id="ntp_title_set.ORI_crownM_battania" text="{=NTP.ORICrownM_battania}{NAME}" />
+	<string id="ntp_title_set.ORI_crownF_battania" text="{=NTP.ORICrownF_battania}{NAME}" />
+	
+	<string id="ntp_title_set.ORI_1M_empire" text="{=NTP.ORI1M_empire}Emperor {NAME}" />
+	<string id="ntp_title_set.ORI_1F_empire" text="{=NTP.ORI1F_empire}Empress {NAME}" />
+	<string id="ntp_title_set.ORI_2M_empire" text="{=NTP.ORI2M_empire}Duke {NAME}" />
+	<string id="ntp_title_set.ORI_2F_empire" text="{=NTP.ORI2F_empire}Duchess {NAME}" />
+	<string id="ntp_title_set.ORI_3M_empire" text="{=NTP.ORI3M_empire}Catepan {NAME}" />
+	<string id="ntp_title_set.ORI_3F_empire" text="{=NTP.ORI3F_empire}Kyria {NAME}" />
+	<string id="ntp_title_set.ORI_4M_empire" text="{=NTP.ORI4M_empire}Strategos {NAME}" />
+	<string id="ntp_title_set.ORI_4F_empire" text="{=NTP.ORI4F_empire}Kyria {NAME}" />
+	<string id="ntp_title_set.ORI_5M_empire" text="{=NTP.ORI5M_empire}{NAME}" />
+	<string id="ntp_title_set.ORI_5F_empire" text="{=NTP.ORI5F_empire}{NAME}" />
+	<string id="ntp_title_set.ORI_crownM_empire" text="{=NTP.ORICrownM_empire}{NAME}" />
+	<string id="ntp_title_set.ORI_crownF_empire" text="{=NTP.ORICrownF_empire}{NAME}" />
+	
+	<string id="ntp_title_set.ORI_1M_khuzait" text="{=NTP.ORI1M_khuzait}Khagan {NAME}" />
+	<string id="ntp_title_set.ORI_1F_khuzait" text="{=NTP.ORI1F_khuzait}Khanum {NAME}" />
+	<string id="ntp_title_set.ORI_2M_khuzait" text="{=NTP.ORI2M_khuzait}Baghatur {NAME}" />
+	<string id="ntp_title_set.ORI_2F_khuzait" text="{=NTP.ORI2F_khuzait}Bekhi {NAME}" />
+	<string id="ntp_title_set.ORI_3M_khuzait" text="{=NTP.ORI3M_khuzait}Khan {NAME}" />
+	<string id="ntp_title_set.ORI_3F_khuzait" text="{=NTP.ORI3F_khuzait}Khanum {NAME}" />
+	<string id="ntp_title_set.ORI_4M_khuzait" text="{=NTP.ORI4M_khuzait}Bey {NAME}" />
+	<string id="ntp_title_set.ORI_4F_khuzait" text="{=NTP.ORI4F_khuzait}Begum {NAME}" />
+	<string id="ntp_title_set.ORI_5M_khuzait" text="{=NTP.ORI5M_khuzait}{NAME}" />
+	<string id="ntp_title_set.ORI_5F_khuzait" text="{=NTP.ORI5F_khuzait}{NAME}" />
+	<string id="ntp_title_set.ORI_crownM_khuzait" text="{=NTP.ORICrownM_khuzait}{NAME}" />
+	<string id="ntp_title_set.ORI_crownF_khuzait" text="{=NTP.ORICrownF_khuzait}{NAME}" />
+	
+	<string id="ntp_title_set.ORI_1M_sturgia" text="{=NTP.ORI1M_sturgia}Grand Prince {NAME}" />
+	<string id="ntp_title_set.ORI_1F_sturgia" text="{=NTP.ORI1F_sturgia}Grand Princess {NAME}" />
+	<string id="ntp_title_set.ORI_2M_sturgia" text="{=NTP.ORI2M_sturgia}Prince {NAME}" />
+	<string id="ntp_title_set.ORI_2F_sturgia" text="{=NTP.ORI2F_sturgia}Princess {NAME}" />
+	<string id="ntp_title_set.ORI_3M_sturgia" text="{=NTP.ORI3M_sturgia}Jarl {NAME}" />
+	<string id="ntp_title_set.ORI_3F_sturgia" text="{=NTP.ORI3F_sturgia}Jarl {NAME}" />
+	<string id="ntp_title_set.ORI_4M_sturgia" text="{=NTP.ORI4M_sturgia}Boyar {NAME}" />
+	<string id="ntp_title_set.ORI_4F_sturgia" text="{=NTP.ORI4F_sturgia}Boyarina {NAME}" />
+	<string id="ntp_title_set.ORI_5M_sturgia" text="{=NTP.ORI5M_strurgia}{NAME}" />
+	<string id="ntp_title_set.ORI_5F_sturgia" text="{=NTP.ORI5F_sturgia}{NAME}" />
+	<string id="ntp_title_set.ORI_crownM_sturgia" text="{=NTP.ORICrownM_sturgia}{NAME}" />
+	<string id="ntp_title_set.ORI_crownF_sturgia" text="{=NTP.ORICrownF_sturgia}{NAME}" />
+	
+	<string id="ntp_title_set.ORI_1M_vlandia" text="{=NTP.ORI1M_vlandia}King {NAME}" />
+	<string id="ntp_title_set.ORI_1F_vlandia" text="{=NTP.ORI1F_vlandia}Queen {NAME}" />
+	<string id="ntp_title_set.ORI_2M_vlandia" text="{=NTP.ORI2M_vlandia}Duke {NAME}" />
+	<string id="ntp_title_set.ORI_2F_vlandia" text="{=NTP.ORI2F_vlandia}Duchess {NAME}" />
+	<string id="ntp_title_set.ORI_3M_vlandia" text="{=NTP.ORI3M_vlandia}Count {NAME}" />
+	<string id="ntp_title_set.ORI_3F_vlandia" text="{=NTP.ORI3F_vlandia}Countess {NAME}" />
+	<string id="ntp_title_set.ORI_4M_vlandia" text="{=NTP.ORI4M_vlandia}Baron {NAME}" />
+	<string id="ntp_title_set.ORI_4F_vlandia" text="{=NTP.ORI4F_vlandia}Baroness {NAME}" />
+	<string id="ntp_title_set.ORI_5M_vlandia" text="{=NTP.ORI5M_vlandia}{NAME}" />
+	<string id="ntp_title_set.ORI_5F_vlandia" text="{=NTP.ORI5F_vlandia}{NAME}" />
+	<string id="ntp_title_set.ORI_crownM_vlandia" text="{=NTP.ORICrownM_vlandia}{NAME}" />
+	<string id="ntp_title_set.ORI_crownF_vlandia" text="{=NTP.ORICrownF_vlandia}{NAME}" />
+	
+	
+</strings>

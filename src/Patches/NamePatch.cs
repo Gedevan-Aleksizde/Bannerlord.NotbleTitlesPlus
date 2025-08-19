@@ -1,55 +1,77 @@
 ﻿using HarmonyLib;
+using NobleTitlesPlus.DB;
+using NobleTitlesPlus.json;
+using SandBox.ViewModelCollection.Nameplate;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Conversation;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
-using TaleWorlds.Localization;
-using NobleTitlesPlus.DB;
-using SandBox.ViewModelCollection.Nameplate;
-using System.Diagnostics;
-using TaleWorlds.CampaignSystem.ViewModelCollection.Party;
 using TaleWorlds.CampaignSystem.ViewModelCollection.GameMenu.Overlay;
-using TaleWorlds.Library;
-using SandBox.ViewModelCollection.Missions.NameMarker;
+using TaleWorlds.Localization;
 
 namespace NobleTitlesPlus.Patches
 {
     [HarmonyPatch(typeof(Hero), nameof(Hero.Name), MethodType.Getter)]
-    internal class ModifyTitleOnHeroName
+    [HarmonyPatchCategory("NameChangerCore")]
+    internal class HeroNameChanger
     {
-        [HarmonyPostfix]
-        private static void ChangeTitles(Hero __instance, ref TextObject __result)
+        public static TextObject ReplaceName(Hero hero, TextObject name)
         {
-            if (__instance.IsLord && __instance.IsAlive && !__instance.IsRebel && (__instance.IsKnownToPlayer || !TitleBehavior.options.FogOfWar || __instance
-                .IsFactionLeader))
+            if (hero.IsLord && !hero.IsRebel)
             {
-                if (__instance?.Clan?.StringId == null)
+                if (hero?.Clan?.StringId == null)
                 {
-                    Util.Log.Print($">> [WARNING] Clan is null: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
+                    Util.Log.Print($">> [WARNING] Clan is null: when {name} (clan={hero?.Clan?.Name}) called");
                 }
-                if (__instance?.IsMinorFactionHero == null)
+                if (hero?.IsMinorFactionHero == null)
                 {
-                    Util.Log.Print($">> [WARNING] isMinorFactionHero is null: when {__instance.FirstName} (clan={__instance?.Clan?.Name}) called");
+                    Util.Log.Print($">> [WARNING] isMinorFactionHero is null: when {name} (clan={hero?.Clan?.Name}) called");
                 }
-                if (TitleBehavior.nomenclatura.HeroRank.TryGetValue(__instance, out TitleRank rank) && __instance.IsAlive)
+                TextObject title = new("{NAME}");
+                if (!hero.IsAlive)
                 {
-                    TextObject title = TitleBehavior.options.TitleSet.GetTitle(__instance, rank).SetTextVariable("NAME", __instance.FirstName)
-                        .SetTextVariable("CLAN", __instance.Clan.Name)
-                        .SetTextVariable("CLAN_SHORT", __instance.Clan.InformalName);
-                    if (TitleBehavior.nomenclatura.FiefLists.TryGetValue(__instance.Clan, out TextObject fiefNames))
-                    {
-                        title = title.SetTextVariable("FIEFS", fiefNames);
-                    }
-                    __result = new TextObject(title.ToString());
+                    title = TitleBehavior.options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
+                }
+                else if ((hero.IsKnownToPlayer || !TitleBehavior.options.FogOfWar || hero.IsFactionLeader))
+                {
+                    bool hasRank = TitleBehavior.nomenclatura.HeroRank.TryGetValue(hero, out TitleRank rank);
+
+                    title = TitleBehavior.options.TitleSet.GetMatchedTitle(hero, hasRank ? rank : TitleRank.None);
                 }
                 else
                 {
-                    if (!__instance.IsHumanPlayerCharacter) Util.Log.Print($"[WARNIG] title not found when {__instance.FirstName} (clan={__instance?.Clan?.Name}/{__instance?.Clan?.StringId}) called");
+                    title = TitleBehavior.options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
                 }
+                title = title.SetTextVariable("NAME", name)
+                            .SetTextVariable("CLAN", hero?.Clan?.Name)
+                            .SetTextVariable("CLAN_SHORT", hero?.Clan?.InformalName);
+                if (TitleBehavior.nomenclatura.ClanAttrs.TryGetValue(hero?.Clan, out (TextObject strFief, TextObject shokuhoProv, ClanNamePair clanNamesPair) fiefNames))
+                {
+                    title = title.SetTextVariable("FIEFS", fiefNames.strFief).SetTextVariable("PROVINCE_SHO", fiefNames.shokuhoProv);
+                }
+                return new TextObject(title.ToString());
             }
+            return name;
+        }
+        [HarmonyPostfix]
+        private static void ReplaceNameFormat(Hero __instance, ref TextObject ____name, ref TextObject __result)
+        {
+
+            __result = ReplaceName(__instance, ____name);
+        }
+    }
+    [HarmonyPatch(typeof(Hero), nameof(Hero.FirstName), MethodType.Getter)]
+    [HarmonyPatchCategory("NameChangerCore")]
+    internal class HeroFirstNameChanger
+    {
+        [HarmonyPostfix]
+        private static void ReplaceFirstNameFormat(Hero __instance, ref TextObject ____firstName, TextObject __result)
+        {
+            __result = HeroNameChanger.ReplaceName(__instance, ____firstName);
         }
     }
     // fix the nameplate on the conversation UI
     [HarmonyPatch(typeof(MissionConversationVM), nameof(MissionConversationVM.Refresh))]
+    [HarmonyPatchCategory("Converstation")]
     internal class ModifyTitleOnMissionConversationVM
     {
         private static TextObject namePre = new();
@@ -70,56 +92,62 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
-    // nameplate hover on the parties in the campaign map
-    // FIXME: This patch does nothing, but the titles disappear from alternative party nameplate on the campaign map if erased. WHY???
+    /// <summary>
+    /// nameplate hover on the parties in the campaign map
+    /// FIXME: This patch does nothing, but the titles disappear from alternative party nameplate on the campaign map if erased this method. WHY??? UPDATE: now not working. WHY?????? 
+    /// </summary>
     [HarmonyPatch(typeof(PartyNameplateVM), nameof(PartyNameplateVM.RefreshDynamicProperties))]
+    [HarmonyPatchCategory("PartyPopUp")]
     internal class ModifyTitleOnPartyNamePlateVM
     {
         [HarmonyPostfix]
         private static void ChangeTitle(PartyNameplateVM __instance)
         {
-            __instance.FullName = "TEST";
-            /*
-            // __instance.FullName
-            if(!(__instance.Party.IsCaravan || __instance.IsBehind) && __instance.IsVisibleOnMap)
+            /*__instance.FullName = "TEST";
+            if (!(__instance.Party.IsCaravan || __instance.IsBehind) && __instance.IsVisibleOnMap)
             {
                 if (__instance.IsArmy)
                 {
-
                 }
                 else
                 {
-                    // __instance.FullName = "TEST";
+                    __instance.FullName = "TEST";
                 }
                 // Util.Log.Print($"[TEST]party fullname={__instance.FullName}");
-            }
-            */
+            }*/
         }
     }
-    // TODO: Can patching GameTexts more clever? 
+    /// <summary>
+    /// TODO: is it possible to do patching GameTexts more clever?  
+    /// </summary>
     [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.EncyclopediaRulerTitle), MethodType.Getter)]
+    [HarmonyPatchCategory("Encyclopedia")]
     internal class ModifyTitleOnKingdomEncyclopediaRuler
     {
         [HarmonyPostfix]
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
         {
             Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Name}");
-            __result = TitleBehavior.options.TitleSet.GetTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
-            // __result = TitleBehavior.nomenclatura.titleDb.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
+            __result = TitleBehavior.options.TitleSet.GetMatchedTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
+            // __result = TitleBehavior.nomenclatura.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
 
     /* used by SettlementMenuOverlayVM.CharacterList and so on*/
+    /// <summary>
+    /// Shows titles on the nameplates at the top of the settlement panel
+    /// </summary>
     [HarmonyPatch(typeof(GameMenuPartyItemVM), nameof(GameMenuPartyItemVM.RefreshProperties))]
+    [HarmonyPatchCategory("SettlementPanel")]
     internal class ModifyTitleOnPartyItemVMName
     {
         [HarmonyPostfix]
         private static void FormatTitle(GameMenuPartyItemVM __instance)
         {
-            if(__instance?.Party != null)
+            if (__instance?.Party != null)
             {
             }
-            else if(__instance?.Character != null)
+            else if (__instance?.Character != null)
             {
                 if (__instance.Character.IsHero)
                 {
@@ -129,16 +157,6 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
-    [HarmonyPatch(typeof(MissionNameMarkerVM), nameof(MissionNameMarkerVM.AddAgentTarget))]
-    internal class ModifyMissionNameMarkerVM
-    {
-        [HarmonyPostfix]
-        private static void Test(MissionNameMarkerVM __instance)
-        {
-            Util.Log.Print($"MissionNameMarkerVM.AddAgentTarget = {__instance.Name}");
-        }
-    }
-
     /*[HarmonyPatch(typeof(EncyclopediaListItemVM), nameof(EncyclopediaListItemVM.Name), MethodType.Getter)]
     internal class EncyclopediaName
     {

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData id="English">
-    <LanguageFile xml_path="strings_EN.xml" />
-    <LanguageFile xml_path="strings_value_EN.xml" />
-    <LanguageFile xml_path="strings_value_orig_EN.xml" />
-    <LanguageFile xml_path="strings_value_var_EN.xml" />
-    <LanguageFile xml_path="strings_value_bk_EN.xml" />
+	<LanguageFile xml_path="strings_EN.xml" />
+	<LanguageFile xml_path="shokuho_provinces_EN.xml" />
+	<LanguageFile xml_path="shokuho_clans_EN.xml" />
+	<LanguageFile xml_path="preset_default_EN.xml" />
+	<LanguageFile xml_path="preset_orig_EN.xml" />
+	<LanguageFile xml_path="preset_var_EN.xml" />
+	<LanguageFile xml_path="preset_varm_EN.xml" />
+	<LanguageFile xml_path="preset_bk_EN.xml" />
+	<LanguageFile xml_path="preset_sho_EN.xml" />
+	<LanguageFile xml_path="preset_shoM_EN.xml" />
 </LanguageData>

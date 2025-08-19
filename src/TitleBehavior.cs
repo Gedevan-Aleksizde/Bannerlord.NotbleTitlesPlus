@@ -1,12 +1,13 @@
-﻿using System;
+﻿using NobleTitlesPlus.DB;
+using NobleTitlesPlus.json;
+using NobleTitlesPlus.MCMSettings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
-using NobleTitlesPlus.DB;
-using NobleTitlesPlus.Settings;
 
 namespace NobleTitlesPlus
 {
@@ -58,7 +59,7 @@ namespace NobleTitlesPlus
         public void UpdateArmyNames()
         {
             // TODO
-            if(Campaign.Current != null)
+            if (Campaign.Current != null)
             {
                 foreach (MobileParty mp in MobileParty.All)
                 {
@@ -67,13 +68,16 @@ namespace NobleTitlesPlus
             }
         }
     }
+    /// <summary>
+    /// Cache for access the text faster
+    /// </summary>
     class Nomenclatura
     {
         public Dictionary<Hero, TitleRank> HeroRank { get; private set; } = new();
-        public Dictionary<Clan, TextObject> FiefLists { get; private set; } = new();
+        public Dictionary<Clan, (TextObject FiefText, TextObject ShokuhoProvName, ClanNamePair ClanNames)> ClanAttrs { get; private set; } = new();
         public Nomenclatura(bool update = false)
         {
-            if(update) this.UpdateAll();
+            if (update) this.UpdateAll();
         }
         public void UpdateAll()
         {
@@ -81,16 +85,17 @@ namespace NobleTitlesPlus
             {
                 this.AddTitlesToKingdomHeroes(k);
             }
-            foreach(Clan c in Clan.All)
+            foreach (Clan c in Clan.All)
             {
                 this.UpdateFiefList(c);
+                this.UpdateClanName(c);
             }
             this.AddTitlesToMinorFaction();
             this.RemoveTitleFromDead();
         }
         private void RemoveTitleFromDead()
         {
-            foreach(Hero h in this.HeroRank.Keys.ToArray())
+            foreach (Hero h in this.HeroRank.Keys.ToArray())
             {
                 if (h.IsDead)
                 {
@@ -98,26 +103,90 @@ namespace NobleTitlesPlus
                 }
             }
         }
+        /// <summary>
+        /// updates each clan's fief information and values assigned to fief and province variable.
+        /// </summary>
+        /// <param name="clan"></param>
         public void UpdateFiefList(Clan clan)
         {
-            List<string> fiefList = clan.Fiefs.Take(TitleBehavior.options.MaxFiefNames).Select(x => x.Name.ToString()).ToList();
-            
-            if( fiefList.Count() <= 1 || TitleBehavior.options.MaxFiefNames <= 1)
+            // TODO: keeping TextObject causes replacing wrong name, very weird.
+            List<(string SettlementId, string Name)> fiefTupleList = clan.Fiefs.Take(TitleBehavior.options.MaxFiefNames).Select(x => (SettlementId: x.Settlement.StringId, Name: x.Name.ToString())).ToList();
+
+            if (fiefTupleList.Count() <= 1 || TitleBehavior.options.MaxFiefNames <= 1)
             {
-                this.FiefLists[clan] = new TextObject(fiefList.FirstOrDefault());
+                (string SettlementId, string Name) = fiefTupleList.FirstOrDefault();
+                if (!TitleBehavior.options.TitleSet.shokuhoCastleProvinceMap.TryGetValue(SettlementId ?? "", out string strProvId))
+                {
+                    strProvId = "default";
+                }
+                this.ClanAttrs[clan] = (
+                    FiefText: new TextObject(Name),
+                    ShokuhoProvName: GameTexts.FindText("ntp_sho_prov", strProvId),
+                    ClanNames: this.ClanAttrs.ContainsKey(clan) ? this.ClanAttrs[clan].ClanNames : new(""));
             }
-            else if (fiefList.Count > 1)
+            else if (fiefTupleList.Count > 1)
             {
                 string sep = TitleBehavior.options.FiefNameSeparator + " ";
-                string fiefs = string.Join(sep, fiefList.Take(Math.Min(fiefList.Count() - 1, TitleBehavior.options.MaxFiefNames)).ToArray<string>());
-                string lastElement = string.Join(" ", new string[] { TitleBehavior.options.FiefNameSeparatorLast, fiefList.Last() });
-                this.FiefLists[clan] = new TextObject(string.Join(" ", new string[] { fiefs, lastElement }));
+                string fiefs = string.Join(sep, fiefTupleList.Take(Math.Min(fiefTupleList.Count() - 1, TitleBehavior.options.MaxFiefNames)).Select(x => x.Name).ToArray<string>());
+                string lastElement = string.Join(" ", new string[] { TitleBehavior.options.FiefNameSeparatorLast, fiefTupleList.Last().Name });
+
+                if (!TitleBehavior.options.TitleSet.shokuhoCastleProvinceMap.TryGetValue(fiefTupleList.Last().SettlementId ?? "", out string strProvId))
+                {
+                    strProvId = "default";
+                }
+                this.ClanAttrs[clan] = (
+                    FiefText: new TextObject(string.Join(" ", new string[] { fiefs, lastElement })),
+                    ShokuhoProvName: GameTexts.FindText("ntp_sho_prov", strProvId),
+                    ClanNames: this.ClanAttrs.ContainsKey(clan) ? this.ClanAttrs[clan].ClanNames : new("")
+                    );
             }
             else
             {
-                this.FiefLists[clan] = GameTexts.FindText("str_ntp_landless");
+                this.ClanAttrs[clan] = (
+                    FiefText: GameTexts.FindText("ntp_landless"),
+                    ShokuhoProvName: GameTexts.FindText("ntp_sho_prov.default"),
+                    ClanNames: this.ClanAttrs.ContainsKey(clan) ? this.ClanAttrs[clan].ClanNames : new("")
+                    );
             }
         }
+        /// <summary>
+        /// Store All clan's long names and short names. This feature is intended to use with Shokuhō which has duplicated clan names. The clan's long name means game-originally name for indentification, and the short name is normally format which can be duplicated with another
+        /// </summary>
+        /// <param name=""></param>
+        public void UpdateClanName(Clan clan)
+        {
+            TextObject shortName;
+            TextObject longName;
+            if (TitleBehavior.options.TitleSet.shokuhoClanNames.TryGetValue(clan.StringId, out ClanNamePair namePair))
+            {
+                if (namePair?.ClanShort is null || namePair?.ClanLong is null)
+                {
+                    throw new NullReferenceException("Clan Names failed to be loaded.");
+                }
+                shortName = namePair.ClanShort;
+                longName = namePair.ClanLong;
+            }
+            else
+            {
+                shortName = clan.InformalName;
+                longName = clan.Name;
+            }
+            bool contains = this.ClanAttrs.ContainsKey(clan);
+            if (contains)
+            {
+                (TextObject FiefText, TextObject ShokuhoProvName, ClanNamePair ClanNames) t = this.ClanAttrs[clan];
+            }
+            clan.ChangeClanName(longName, shortName);
+            this.ClanAttrs[clan] = (
+                FiefText: contains ? this.ClanAttrs[clan].FiefText : new(""),
+                ShokuhoProvName: contains ? this.ClanAttrs[clan].ShokuhoProvName : new(""),
+                ClanNames: new(shortName, longName)
+                );
+        }
+        /// <summary>
+        /// Adds titles to all heroes in a kingdom
+        /// </summary>
+        /// <param name="kingdom"></param>
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
             List<string> tr = new() { $">> [INFO] Adding noble titles to \"{kingdom.Name}\" (ID={kingdom.StringId}) (culture={kingdom.Culture.StringId})..." };
@@ -236,6 +305,10 @@ namespace NobleTitlesPlus
             }
             if (TitleBehavior.options.VerboseLog) Util.Log.Print(tr);
         }
+
+        /// <summary>
+        /// Adds all minor faction menbers titles 
+        /// </summary>
         private void AddTitlesToMinorFaction()
         {
             foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction && (!c.Leader?.IsHumanPlayerCharacter ?? true)))
@@ -262,6 +335,6 @@ namespace NobleTitlesPlus
         }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);
         private string GetHeroTrace(Hero h, TitleRank rank) =>
-            $" -> {rank}: {h.Name} [Fief Score: {(rank == TitleRank.King || rank == TitleRank.Duke || rank == TitleRank.Count || rank == TitleRank.Baron? this.GetFiefScore(h.Clan): 0)} / Renown: {h.Clan.Renown:F0}]";
+            $" -> {rank}: {h.Name} [Fief Score: {(rank == TitleRank.King || rank == TitleRank.Duke || rank == TitleRank.Count || rank == TitleRank.Baron ? this.GetFiefScore(h.Clan) : 0)} / Renown: {h.Clan.Renown:F0}]";
     }
 }

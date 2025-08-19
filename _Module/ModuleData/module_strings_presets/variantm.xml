@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+    <!-- default preset -->
+    <string id="ntp_mcm.preset_variantmodified" text="{=NTP.MCMVariantmodified}Variant Modified" />
+    
+    <string id="ntp_title_set.VARM_1M_default" text="{=NTP.VARM1M_default}King {NAME}" />
+    <string id="ntp_title_set.VARM_1F_default" text="{=NTP.VARM1F_default}Queen {NAME}" />
+    <string id="ntp_title_set.VARM_2M_default" text="{=NTP.VARM2M_default}Duke {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_2F_default" text="{=NTP.VARM2F_default}Duchess {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3M_default" text="{=NTP.VARM3M_default}Count {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3F_default" text="{=NTP.VARM3F_default}Countess {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4M_default" text="{=NTP.VARM4M_default}Baron {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4F_default" text="{=NTP.VARM4F_default}Baroness {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5M_default" text="{=NTP.VARM5M_default}Sir {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5F_default" text="{=NTP.VARM5F_default}Lady {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_crownM_default" text="{=NTP.VARMCrownM_default}Crown Prince {NAME}" />
+    <string id="ntp_title_set.VARM_crownF_default" text="{=NTP.VARMCrownF_default}Crown Princess {NAME}" />
+    <string id="ntp_title_set.VARM_royalM_default" text="{=NTP.VARMRoyalM_default}Prince {NAME}" />
+    <string id="ntp_title_set.VARM_royalF_default" text="{=NTP.VARMRoyalF_default}Princess {NAME}" />
+    <string id="ntp_title_set.VARM_0M_default" text="{=cc9FztqSx}{NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_0F_default" text="{=kv7mfNSWW}{NAME} {CLAN}" />
+    
+    <string id="ntp_title_set.VARM_MinorLM_default" text="{=NTP.VARMMinorLM_default}{NAME} of {CLAN_SHORT}" />
+    <string id="ntp_title_set.VARM_MinorLF_default" text="{=NTP.VARMMinorLF_default}{NAME} of {CLAN_SHORT}" />
+    <string id="ntp_title_set.VARM_MinorMM_default" text="{=NTP.VARMMinorMM_default}{NAME} of {CLAN_SHORT}" />
+    <string id="ntp_title_set.VARM_MinorMF_default" text="{=NTP.VARMMinorMF_default}{NAME} of {CLAN_SHORT}" />
+    
+    <string id="ntp_title_set.VARM_1M_aserai" text="{=NTP.VARM1M_aserai}Sultan {NAME}" />
+    <string id="ntp_title_set.VARM_1F_aserai" text="{=NTP.VARM1F_aserai}Sultana {NAME}" />
+    <string id="ntp_title_set.VARM_2M_aserai" text="{=NTP.VARM2M_aserai}Emir al-Umara {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_2F_aserai" text="{=NTP.VARM2F_aserai}Emira al-Umara {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3M_aserai" text="{=NTP.VARM3M_aserai}Emir Kabir {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3F_aserai" text="{=NTP.VARM3F_aserai}Emira Kabira {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4M_aserai" text="{=NTP.VARM4M_aserai}Emir {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4F_aserai" text="{=NTP.VARM4F_aserai}Emira {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5M_aserai" text="{=NTP.VARM5M_aserai}Sharif {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5F_aserai" text="{=NTP.VARM5F_aserai}Nabila {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_crownM_aserai" text="{=NTP.VARMCrownM_aserai}{NAME} Wali" />
+    <string id="ntp_title_set.VARM_crownF_aserai" text="{=NTP.VARMCrownF_aserai}{NAME} Wali" />
+    <string id="ntp_title_set.VARM_royalM_aserai" text="{=NTP.VARMRoyalM_aserai}{NAME} Sehzade" />
+    <string id="ntp_title_set.VARM_royalF_aserai" text="{=NTP.VARMRoyalF_aserai}{NAME} Sehzada" />
+    
+    <string id="ntp_title_set.VARM_1M_battania" text="{=NTP.VARM1M_battania}Ard Rí na Battanienn {NAME}" /> <!-- Ard Rí -->
+    <string id="ntp_title_set.VARM_1F_battania" text="{=NTP.VARM1F_battania}Ard Ríbhinn na Battanienn {NAME}" />
+    <string id="ntp_title_set.VARM_2M_battania" text="{=NTP.VARM2M_battania}Ri Ruirech {NAME} {CLAN}" /> <!--Rí ruirech -->
+    <string id="ntp_title_set.VARM_2F_battania" text="{=NTP.VARM2F_battania}Ríbhinn Ruirech {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3M_battania" text="{=NTP.VARM3M_battania}Rí buiden {NAME} {CLAN}" /> <!--Rí buiden -->
+    <string id="ntp_title_set.VARM_3F_battania" text="{=NTP.VARM3F_battania}Ríbhinn buiden {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4M_battania" text="{=NTP.VARM4M_battania}Mormaer {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4F_battania" text="{=NTP.VARM4F_battania}Banmormaer {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5M_battania" text="{=NTP.VARM5M_battania}Duniwassal {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5F_battania" text="{=NTP.VARM5F_battania}Beanuassal {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_crownM_battania" text="{=NTP.VARMCrownM_battania}High Crown Prince {NAME}" />
+    <string id="ntp_title_set.VARM_crownF_battania" text="{=NTP.VARMCrownF_battania}High Crown Princess {NAME}" />
+    <string id="ntp_title_set.VARM_royalM_battania" text="{=NTP.VARMRoyalM_battania}Flaith {NAME}" />
+    <string id="ntp_title_set.VARM_royalF_battania" text="{=NTP.VARMRoyalF_battania}Banflaith {NAME}" />
+    
+    <string id="ntp_title_set.VARM_1M_empire" text="{=NTP.VARM1M_empire}Basileus {NAME}" />
+    <string id="ntp_title_set.VARM_1F_empire" text="{=NTP.VARM1F_empire}Basilissa {NAME}" />
+    <string id="ntp_title_set.VARM_2M_empire" text="{=NTP.VARM2M_empire}Megas Archon {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_2F_empire" text="{=NTP.VARM2F_empire}Megas Archontissa {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3M_empire" text="{=NTP.VARM3M_empire}Exarch {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3F_empire" text="{=NTP.VARM3F_empire}Exarchontissa {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4M_empire" text="{=NTP.VARM4M_empire}Archon {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4F_empire" text="{=NTP.VARM4F_empire}Archontissa {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5M_empire" text="{=NTP.VARM5M_empire}Patrikios {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5F_empire" text="{=NTP.VARM5F_empire}Patrikia {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_crownM_empire" text="{=NTP.VARMCrownM_empire}Porphyrogennetos {NAME}" />
+    <string id="ntp_title_set.VARM_crownF_empire" text="{=NTP.VARMCrownF_empire}Porphyrogennete {NAME}" />
+    <string id="ntp_title_set.VARM_royalM_empire" text="{=NTP.VARMRoyalM_empire}Sebastos {NAME}" />
+    <string id="ntp_title_set.VARM_royalF_empire" text="{=NTP.VARMRoyalF_empire}Sebaste {NAME}" />
+    
+    <string id="ntp_title_set.VARM_1M_khuzait" text="{=NTP.VARM1M_khuzait}{NAME} Khan" />
+    <string id="ntp_title_set.VARM_1F_khuzait" text="{=NTP.VARM1F_khuzait}{NAME} Khatum" />
+    <string id="ntp_title_set.VARM_2M_khuzait" text="{=NTP.VARM2M_khuzait}{NAME} {CLAN} Atabeg" />
+    <string id="ntp_title_set.VARM_2F_khuzait" text="{=NTP.VARM2F_khuzait}{NAME} {CLAN} Annegegum" />
+    <string id="ntp_title_set.VARM_3M_khuzait" text="{=NTP.VARM3M_khuzait}{NAME} {CLAN} Sadapid-Beg" />
+    <string id="ntp_title_set.VARM_3F_khuzait" text="{=NTP.VARM3F_khuzait}{NAME} {CLAN} Sadapid-Begum" />
+    <string id="ntp_title_set.VARM_4M_khuzait" text="{=NTP.VARM4M_khuzait}{NAME} {CLAN} Beg" />
+    <string id="ntp_title_set.VARM_4F_khuzait" text="{=NTP.VARM4F_khuzait}{NAME} {CLAN} Begum" />
+    <string id="ntp_title_set.VARM_5M_khuzait" text="{=NTP.VARM5M_khuzait}{NAME} {CLAN} Baghatur" />
+    <string id="ntp_title_set.VARM_5F_khuzait" text="{=NTP.VARM5F_khuzait}{NAME} {CLAN} Bekhi" />
+    <string id="ntp_title_set.VARM_crownM_khuzait" text="{=NTP.VARMCrownM_khuzait}{NAME} Qhagan " />
+    <string id="ntp_title_set.VARM_crownF_khuzait" text="{=NTP.VARMCrownF_khuzait}{NAME} Qhagatun" />
+    <string id="ntp_title_set.VARM_royalM_khuzait" text="{=NTP.VARMRoyalM_khuzait}{NAME} Shad" />
+    <string id="ntp_title_set.VARM_royalF_khuzait" text="{=NTP.VARMRoyalF_khuzait}{NAME} Shadum" />
+    
+    
+    <string id="ntp_title_set.VARM_1M_sturgia" text="{=NTP.VARM1M_sturgia}Veliky Knyaz {NAME}" />
+    <string id="ntp_title_set.VARM_1F_sturgia" text="{=NTP.VARM1F_sturgia}Velikaya Knyazinya {NAME}" />
+    <string id="ntp_title_set.VARM_2M_sturgia" text="{=NTP.VARM2M_sturgia}Hertug {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_2F_sturgia" text="{=NTP.VARM2F_sturgia}Hertuginde {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3M_sturgia" text="{=NTP.VARM3M_sturgia}Jarl {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3F_sturgia" text="{=NTP.VARM3F_sturgia}Jarlinde {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4M_sturgia" text="{=NTP.VARM4M_sturgia}Knyaz {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4F_sturgia" text="{=NTP.VARM4F_sturgia}Knyazinya {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5M_sturgia" text="{=NTP.VARM5M_sturgia}Boyar {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5F_sturgia" text="{=NTP.VARM5F_sturgia}Boyarina {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_crownM_sturgia" text="{=NTP.VARMCrownM_sturgia}{NAME} Knyazevich" />
+    <string id="ntp_title_set.VARM_crownF_sturgia" text="{=NTP.VARMCrownF_sturgia}{NAME} Knyazevna" />
+    <string id="ntp_title_set.VARM_royalM_sturgia" text="{=NTP.VARMRoyalM_sturgia}Prins {NAME}" />
+    <string id="ntp_title_set.VARM_royalF_sturgia" text="{=NTP.VARMRoyalF_sturgia}Prinsessa {NAME}" />
+    
+    <string id="ntp_title_set.VARM_1M_vlandia" text="{=NTP.VARM1M_vlandia}Rex Vlandiae {NAME}" />
+    <string id="ntp_title_set.VARM_1F_vlandia" text="{=NTP.VARM1F_vlandia}Regna Vlandiae {NAME}" />
+    <string id="ntp_title_set.VARM_2M_vlandia" text="{=NTP.VARM2M_vlandia}Duc {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_2F_vlandia" text="{=NTP.VARM2F_vlandia}Duchess {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3M_vlandia" text="{=NTP.VARM3M_vlandia}Count {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3F_vlandia" text="{=NTP.VARM3F_vlandia}Countess {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4M_vlandia" text="{=NTP.VARM4M_vlandia}Baron {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4F_vlandia" text="{=NTP.VARM4F_vlandia}Baroness {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5M_vlandia" text="{=NTP.VARM5M_vlandia}Sieur {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5F_vlandia" text="{=NTP.VARM5F_vlandia}Dame {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_crownM_vlandia" text="{=NTP.VARMCrownM_vlandia}{NAME} {CLAN}, Prince of Rhodok" />
+    <string id="ntp_title_set.VARM_crownF_vlandia" text="{=NTP.VARMCrownF_vlandia}{NAME} {CLAN}, Princess of Rhodok" />
+    <string id="ntp_title_set.VARM_royalM_vlandia" text="{=NTP.VARMRoyalM_vlandia}Prince {NAME}" />
+    <string id="ntp_title_set.VARM_royalF_vlandia" text="{=NTP.VARMRoyalF_vlandia}Princess {NAME}" />
+    
+    <string id="ntp_title_set.VARM_1M_testuojin" text="{=NTP.VARM1M_testuojin}Mikado {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_1F_testuojin" text="{=NTP.VARM1F_testuojin}Jotei {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_2M_testuojin" text="{=NTP.VARM2M_testuojin}Shogun {NAME} {CLAN}-San" />
+    <string id="ntp_title_set.VARM_2F_testuojin" text="{=NTP.VARM2F_testuojin}Joro-Otoshiyori {NAME} {CLAN}-San" />
+    <string id="ntp_title_set.VARM_3M_testuojin" text="{=NTP.VARM3M_testuojin}Daimyo {NAME} {CLAN}-San" />
+    <string id="ntp_title_set.VARM_3F_testuojin" text="{=NTP.VARM3F_testuojin}Otosiyori {NAME} {CLAN}-San" />
+    <string id="ntp_title_set.VARM_4M_testuojin" text="{=NTP.VARM4M_testuojin}Myosyu {NAME} {CLAN}-San" />
+    <string id="ntp_title_set.VARM_4F_testuojin" text="{=NTP.VARM4F_testuojin}Myobu {NAME} {CLAN}-San" />
+    <string id="ntp_title_set.VARM_5M_testuojin" text="{=NTP.VARM5M_testuojin}Ason {NAME} {CLAN}-San" />
+    <string id="ntp_title_set.VARM_5F_testuojin" text="{=NTP.VARM5F_testuojin}Gozen {NAME} {CLAN}-San" />
+    <string id="ntp_title_set.VARM_crownM_testuojin" text="{=NTP.VARMCrownM_testuojin}{NAME} {CLAN} Oji" />
+    <string id="ntp_title_set.VARM_crownF_testuojin" text="{=NTP.VARMCrownF_testuojin}{NAME} {CLAN} Ojo" />
+    <string id="ntp_title_set.VARM_royalM_testuojin" text="{=NTP.VARMRoyalM_testuojin}{NAME} {CLAN} Miya" />
+    <string id="ntp_title_set.VARM_royalF_testuojin" text="{=NTP.VARMRoyalF_testuojin}{NAME} {CLAN} Miya" />
+    
+    <string id="ntp_title_set.VARM_1M_huaxia" text="{=NTP.VARM1M_huaxia}Huangdi {NAME}" />
+    <string id="ntp_title_set.VARM_1F_huaxia" text="{=NTP.VARM1F_huaxia}Huangdi {NAME}" />
+    <string id="ntp_title_set.VARM_2M_huaxia" text="{=NTP.VARM2M_huaxia}Junwang {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_2F_huaxia" text="{=NTP.VARM2F_huaxia}Junwang {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3M_huaxia" text="{=NTP.VARM3M_huaxia}Junwang {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_3F_huaxia" text="{=NTP.VARM3F_huaxia}Junwang {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4M_huaxia" text="{=NTP.VARM4M_huaxia}Junwang {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_4F_huaxia" text="{=NTP.VARM4F_huaxia}Junwang {NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5M_huaxia" text="{=NTP.VARM5M_huaxia}{NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_5F_huaxia" text="{=NTP.VARM5F_huaxia}{NAME} {CLAN}" />
+    <string id="ntp_title_set.VARM_crownM_huaxia" text="{=NTP.VARMCrownM_huaxia}Huangtaiji {NAME}" />
+    <string id="ntp_title_set.VARM_crownF_huaxia" text="{=NTP.VARMCrownF_huaxia}Huangtainu {NAME}" />
+    <string id="ntp_title_set.VARM_royalM_huaxia" text="{=NTP.VARMRoyalM_huaxia}Gongzi {NAME}" />
+    <string id="ntp_title_set.VARM_royalF_huaxia" text="{=NTP.VARMRoyalF_huaxia}Gongzhu {NAME}" />
+    
+    <string id="ntp_title_set.VARM_MinorLM_legion_of_the_betrayed" text="{=NTP.VARMMinorLM_legion_of_the_betrayed}Legatus {NAME}" />
+    <string id="ntp_title_set.VARM_MinorLF_legion_of_the_betrayed" text="{=NTP.VARMMinorLF_legion_of_the_betrayed}Legatus {NAME}" />
+    <string id="ntp_title_set.VARM_MinorMM_legion_of_the_betrayed" text="{=NTP.VARMMinorMM_legion_of_the_betrayed}Tribunus {NAME}" />
+    <string id="ntp_title_set.VARM_MinorMF_legion_of_the_betrayed" text="{=NTP.VARMMinorMF_legion_of_the_betrayed}Tribunus {NAME}" />
+    
+    <string id="ntp_title_set.VARM_MinorLM_karakhergit" text="{=Ip1SzCH0V}{NAME} Noyon " />
+    <string id="ntp_title_set.VARM_MinorLF_karakhergit" text="{=5lJq7aEfm}{NAME} Noyon" />
+    <string id="ntp_title_set.VARM_MinorMM_karakhergit" text="{=juG7M5ypA}{NAME} Tarqan" />
+    <string id="ntp_title_set.VARM_MinorMF_karakhergit" text="{=EptdGndj2}{NAME} Tarqan" />
+</strings>

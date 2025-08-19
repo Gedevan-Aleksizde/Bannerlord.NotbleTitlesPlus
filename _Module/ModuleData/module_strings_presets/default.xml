@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string id="ntp_mcm.preset_original" text="{=NTP.MCMOriginal}Zijistark's Original" />
+	<!-- default preset -->
+	<string id="ntp_title_set.DEF_1M_default" text="{=NTP.DEF1M_default}King {NAME}" />
+	<string id="ntp_title_set.DEF_1F_default" text="{=NTP.DEF1F_default}Queen {NAME}" />
+	<string id="ntp_title_set.DEF_2M_default" text="{=NTP.DEF2M_default}Baron {NAME}" />
+	<string id="ntp_title_set.DEF_2F_default" text="{=NTP.DEF2F_default}Baroness {NAME}" />
+	<string id="ntp_title_set.DEF_3M_default" text="{=NTP.DEF3M_default}Baron {NAME}" />
+	<string id="ntp_title_set.DEF_3F_default" text="{=NTP.DEF3F_default}Baroness {NAME}" />
+	<string id="ntp_title_set.DEF_4M_default" text="{=NTP.DEF4M_default}Baron {NAME}" />
+	<string id="ntp_title_set.DEF_4F_default" text="{=NTP.DEF4F_default}Baroness {NAME}" />
+	<string id="ntp_title_set.DEF_5M_default" text="{=NTP.DEF5M_default}{NAME}" />
+	<string id="ntp_title_set.DEF_5F_default" text="{=NTP.DEF5F_default}{NAME}" />
+	<string id="ntp_title_set.DEF_crownM_default" text="{=NTP.DEFCrownM_default}{NAME}" />
+	<string id="ntp_title_set.DEF_crownF_default" text="{=NTP.DEFCrownF_default}{NAME}" />
+	<string id="ntp_title_set.DEF_royalM_default" text="{=NTP.DEFRoyalM_default}{NAME}" />
+	<string id="ntp_title_set.DEF_royalF_default" text="{=NTP.DEFRoyalF_default}{NAME}" />	
+	<string id="ntp_title_set.DEF_0M_default" text="{=8qAnmzn7A}{NAME}" />
+	<string id="ntp_title_set.DEF_0F_default" text="{=WT2EeLJ6b}{NAME}" />
+	
+	<string id="ntp_title_set.DEF_MinorLM_default" text="{=NTP.DEFMinorLM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.DEF_MinorLF_default" text="{=NTP.DEFMinorLF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.DEF_MinorMM_default" text="{=NTP.DEFMinorMM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.DEF_MinorMF_default" text="{=NTP.DEFMinorMF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.DEF_MinorFallbackM_default" text="{=NTP.DEFMinorFallbackM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.DEF_MinorFallbackF_default" text="{=NTP.DEFMinorFallbackF_default}{NAME} of {CLAN_SHORT}" />
+	
+	<string id="ntp_title_set.DEF_1M_aserai" text="{=NTP.DEF1M_aserai}Sultan {NAME}" />
+	<string id="ntp_title_set.DEF_1F_aserai" text="{=NTP.DEF1F_aserai}Sultana {NAME}" />
+	<string id="ntp_title_set.DEF_2M_aserai" text="{=NTP.DEF2M_aserai}Emir {NAME}" />
+	<string id="ntp_title_set.DEF_2F_aserai" text="{=NTP.DEF2F_aserai}Emira {NAME}" />
+	<string id="ntp_title_set.DEF_3M_aserai" text="{=NTP.DEF3M_aserai}Emir {NAME}" />
+	<string id="ntp_title_set.DEF_3F_aserai" text="{=NTP.DEF3F_aserai}Emira {NAME}" />
+	<string id="ntp_title_set.DEF_4M_aserai" text="{=NTP.DEF4M_aserai}Emir {NAME}" />
+	<string id="ntp_title_set.DEF_4F_aserai" text="{=NTP.DEF4F_aserai}Emira {NAME}" />
+	<string id="ntp_title_set.DEF_5M_aserai" text="{=NTP.DEF5M_aserai}{NAME}" />
+	<string id="ntp_title_set.DEF_5F_aserai" text="{=NTP.DEF5F_aserai}{NAME}" />
+	<string id="ntp_title_set.DEF_crownM_aserai" text="{=NTP.DEFCrownM_aserai}{NAME}" />
+	<string id="ntp_title_set.DEF_crownF_aserai" text="{=NTP.DEFCrownF_aserai}{NAME}" />
+	
+	<string id="ntp_title_set.DEF_1M_battania" text="{=NTP.DEF1M_battania}High King {NAME}" />
+	<string id="ntp_title_set.DEF_1F_battania" text="{=NTP.DEF1F_battania}High Queen {NAME}" />
+	<string id="ntp_title_set.DEF_2M_battania" text="{=NTP.DEF2M_battania}Mormaer {NAME}" />
+	<string id="ntp_title_set.DEF_2F_battania" text="{=NTP.DEF2F_battania}Banmormaer {NAME}" />
+	<string id="ntp_title_set.DEF_3M_battania" text="{=NTP.DEF3M_battania}Mormaer {NAME}" />
+	<string id="ntp_title_set.DEF_3F_battania" text="{=NTP.DEF3F_battania}Banmormaer {NAME}" />
+	<string id="ntp_title_set.DEF_4M_battania" text="{=NTP.DEF4M_battania}Mormaer {NAME}" />
+	<string id="ntp_title_set.DEF_4F_battania" text="{=NTP.DEF4F_battania}Banmormaer {NAME}" />
+	<string id="ntp_title_set.DEF_5M_battania" text="{=NTP.DEF5M_battania}{NAME}" />
+	<string id="ntp_title_set.DEF_5F_battania" text="{=NTP.DEF5F_battania}{NAME}" />
+	<string id="ntp_title_set.DEF_crownM_battania" text="{=NTP.DEFCrownM_battania}{NAME}" />
+	<string id="ntp_title_set.DEF_crownF_battania" text="{=NTP.DEFCrownF_battania}{NAME}" />
+	
+	<string id="ntp_title_set.DEF_1M_empire" text="{=NTP.DEF1M_empire}Emperor {NAME}" />
+	<string id="ntp_title_set.DEF_1F_empire" text="{=NTP.DEF1F_empire}Empress {NAME}" />
+	<string id="ntp_title_set.DEF_2M_empire" text="{=NTP.DEF2M_empire}Archon {NAME}" />
+	<string id="ntp_title_set.DEF_2F_empire" text="{=NTP.DEF2F_empire}Archoness {NAME}" />
+	<string id="ntp_title_set.DEF_3M_empire" text="{=NTP.DEF3M_empire}Archon {NAME}" />
+	<string id="ntp_title_set.DEF_3F_empire" text="{=NTP.DEF3F_empire}Archoness {NAME}" />
+	<string id="ntp_title_set.DEF_4M_empire" text="{=NTP.DEF4M_empire}Archon {NAME}" />
+	<string id="ntp_title_set.DEF_4F_empire" text="{=NTP.DEF4F_empire}Archoness {NAME}" />
+	<string id="ntp_title_set.DEF_5M_empire" text="{=NTP.DEF5M_empire}{NAME}" />
+	<string id="ntp_title_set.DEF_5F_empire" text="{=NTP.DEF5F_empire}{NAME}" />
+	<string id="ntp_title_set.DEF_crownM_empire" text="{=NTP.DEFCrownM_empire}{NAME}" />
+	<string id="ntp_title_set.DEF_crownF_empire" text="{=NTP.DEFCrownF_empire}{NAME}" />
+	
+	<string id="ntp_title_set.DEF_1M_khuzait" text="{=NTP.DEF1M_khuzait}Khagan {NAME}" />
+	<string id="ntp_title_set.DEF_1F_khuzait" text="{=NTP.DEF1F_khuzait}Khatum {NAME}" />
+	<string id="ntp_title_set.DEF_2M_khuzait" text="{=NTP.DEF2M_khuzait}Bey {NAME}" />
+	<string id="ntp_title_set.DEF_2F_khuzait" text="{=NTP.DEF2F_khuzait}Begum {NAME}" />
+	<string id="ntp_title_set.DEF_3M_khuzait" text="{=NTP.DEF3M_khuzait}Bey {NAME}" />
+	<string id="ntp_title_set.DEF_3F_khuzait" text="{=NTP.DEF3F_khuzait}Begum {NAME}" />
+	<string id="ntp_title_set.DEF_4M_khuzait" text="{=NTP.DEF4M_khuzait}Bey {NAME}" />
+	<string id="ntp_title_set.DEF_4F_khuzait" text="{=NTP.DEF4F_khuzait}Begum {NAME}" />
+	<string id="ntp_title_set.DEF_5M_khuzait" text="{=NTP.DEF5M_khuzait}{NAME}" />
+	<string id="ntp_title_set.DEF_5F_khuzait" text="{=NTP.DEF5F_khuzait}{NAME}" />
+	<string id="ntp_title_set.DEF_crownM_khuzait" text="{=NTP.DEFCrownM_khuzait}{NAME}" />
+	<string id="ntp_title_set.DEF_crownF_khuzait" text="{=NTP.DEFCrownF_khuzait}{NAME}" />
+	
+	<string id="ntp_title_set.DEF_1M_sturgia" text="{=NTP.DEF1M_sturgia}Grand Prince {NAME}" />
+	<string id="ntp_title_set.DEF_1F_sturgia" text="{=NTP.DEF1F_sturgia}Grand Princess {NAME}" />
+	<string id="ntp_title_set.DEF_2M_sturgia" text="{=NTP.DEF2M_sturgia}Knyaz {NAME}" />
+	<string id="ntp_title_set.DEF_2F_sturgia" text="{=NTP.DEF2F_sturgia}Knyaginya {NAME}" />
+	<string id="ntp_title_set.DEF_3M_sturgia" text="{=NTP.DEF3M_sturgia}Knyaz {NAME}" />
+	<string id="ntp_title_set.DEF_3F_sturgia" text="{=NTP.DEF3F_sturgia}Knyaginya {NAME}" />
+	<string id="ntp_title_set.DEF_4M_sturgia" text="{=NTP.DEF4M_sturgia}Knyaz {NAME}" />
+	<string id="ntp_title_set.DEF_4F_sturgia" text="{=NTP.DEF4F_sturgia}Knyaginya {NAME}" />
+	<string id="ntp_title_set.DEF_5M_sturgia" text="{=NTP.DEF5M_strurgia}{NAME}" />
+	<string id="ntp_title_set.DEF_5F_sturgia" text="{=NTP.DEF5F_sturgia}{NAME}" />
+	<string id="ntp_title_set.DEF_crownM_sturgia" text="{=NTP.DEFCrownM_sturgia}{NAME}" />
+	<string id="ntp_title_set.DEF_crownF_sturgia" text="{=NTP.DEFCrownF_sturgia}{NAME}" />
+	
+	<string id="ntp_title_set.DEF_1M_vlandia" text="{=NTP.DEF1M_vlandia}King {NAME}" />
+	<string id="ntp_title_set.DEF_1F_vlandia" text="{=NTP.DEF1F_vlandia}Queen {NAME}" />
+	<string id="ntp_title_set.DEF_2M_vlandia" text="{=NTP.DEF2M_vlandia}Baron {NAME}" />
+	<string id="ntp_title_set.DEF_2F_vlandia" text="{=NTP.DEF2F_vlandia}Baroness {NAME}" />
+	<string id="ntp_title_set.DEF_3M_vlandia" text="{=NTP.DEF3M_vlandia}Baron {NAME}" />
+	<string id="ntp_title_set.DEF_3F_vlandia" text="{=NTP.DEF3F_vlandia}Baroness {NAME}" />
+	<string id="ntp_title_set.DEF_4M_vlandia" text="{=NTP.DEF4M_vlandia}Baron {NAME}" />
+	<string id="ntp_title_set.DEF_4F_vlandia" text="{=NTP.DEF4F_vlandia}Baroness {NAME}" />
+	<string id="ntp_title_set.DEF_5M_vlandia" text="{=NTP.DEF5M_vlandia}{NAME}" />
+	<string id="ntp_title_set.DEF_5F_vlandia" text="{=NTP.DEF5F_vlandia}{NAME}" />
+	<string id="ntp_title_set.DEF_crownM_vlandia" text="{=NTP.DEFCrownM_vlandia}{NAME}" />
+	<string id="ntp_title_set.DEF_crownF_vlandia" text="{=NTP.DEFCrownF_vlandia}{NAME}" />
+</strings>

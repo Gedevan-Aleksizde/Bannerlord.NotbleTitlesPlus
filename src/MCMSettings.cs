@@ -1,34 +1,33 @@
-﻿using MCM.Abstractions.Attributes.v2;
-using MCM.Abstractions.Attributes;
-using MCM.Abstractions.Base.Global;
-using System.Collections.Generic;
-using TaleWorlds.Localization;
-using System;
-using TaleWorlds.CampaignSystem;
-using NobleTitlesPlus.DB;
+﻿using MCM.Abstractions.Base;
 using MCM.Abstractions.FluentBuilder;
-using TaleWorlds.Core;
 using MCM.Common;
-using MCM.Abstractions.Base;
+using NobleTitlesPlus.DB;
+using System;
+using System.Collections.Generic;
 using System.Linq;
-using TaleWorlds.MountAndBlade.Diamond.Ranked;
-using Newtonsoft.Json.Linq;
 using System.Runtime.CompilerServices;
+using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
+using TaleWorlds.Localization;
 
-namespace NobleTitlesPlus.Settings
+namespace NobleTitlesPlus.MCMSettings
 {
     public record Options()
     {
         public bool VerboseLog { get; set; } = false;
         public bool FogOfWar { get; set; } = true;
         public bool Encyclopedia { get; set; } = false;
+        public bool ShowOnSettlementUI { get; set; } = true;
+        public bool ShowOnConversation { get; set; } = true;
+        public bool ShowOnMission { get; set; } = true;
+        public bool ShowOnPartyTooltip { get; set; } = true;
         public bool SpouseTitle { get; private set; } = true;
         public bool Tagging { get; set; } = false;
         public string FiefNameSeparator { get; set; } = ",";
         public string FiefNameSeparatorLast { get; set; } = "and";
         public int MaxFiefNames { get; set; } = 1;
-        public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(DB.Inheritance)).OfType<DB.Inheritance>().ToList().Select(x => GameTexts.FindText("str_ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
-    public TitleSet TitleSet { get; set; } = new();
+        public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(DB.Inheritance)).OfType<DB.Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
+        public TitleSet TitleSet { get; set; } = new();
     }
     internal static class RuntimeSettings
     {
@@ -58,14 +57,14 @@ namespace NobleTitlesPlus.Settings
             if (options.TitleSet.factions.ContainsKey("new_kingdom"))
             {
                 // TODO: how to identify player kingdom
-                string name = Kingdom.All.Where(k => k.StringId == "new_kingdom")?.First()?.Name?.ToString() ?? FindTextShortMCM("fallback_player");
+                string name = Kingdom.All.Where(k => k.StringId == "new_kingdom")?.First()?.Name?.ToString() ?? FindTextShortMCM("error_kingdom");
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder("new_kingdom", 4 + j, false)); ;
                 Util.Log.Print($">> [INFO] Category {name}(new_kingdom, faction) added to MCM options");
                 j++;
             }
             foreach (string kingdomId in options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
             {
-                string name = GameTexts.FindText("str_short_term_for_faction", kingdomId).ToString();
+                string name = Kingdom.All.Where(k => k.StringId == kingdomId)?.First()?.InformalName.ToString() ?? FindTextShortMCM("error_kingdom");
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(kingdomId, 4 + j, false)); ;
                 Util.Log.Print($">> [INFO] Category {name}({kingdomId}, faction) added to MCM options");
                 j++;
@@ -79,11 +78,15 @@ namespace NobleTitlesPlus.Settings
                 j++;
             }
             builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, new(), "DEF"));
-            foreach((string id, string name) presetName in new List<(string, string)>(){ ("ORI", "Original"), ("VAR", "Variant")}){
+            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant"), ("VARM", "VariantModified"), ("SHO", "Shokuho"), ("SHOM", "ShokuhoModified") })
+            {
                 builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, new(), presetName.id));
             }
             return builder;
 
+            /*
+             * general setting items
+             */
             void BuildGeneralGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddBool("fogOfWar", "{=yF9agd1M}Fog of War",
                     new ProxyRef<bool>(
@@ -91,23 +94,50 @@ namespace NobleTitlesPlus.Settings
                         value => options.FogOfWar = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("fow_hint")).SetOrder(0)
                     )
+                // TODO
+                /*
                 .AddBool("encyclopedia", "{=MxmOWsHj}Encyclopedia",
                     new ProxyRef<bool>(
                         () => options.Encyclopedia,
                         value => options.Encyclopedia = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("encyclo_hint")).SetOrder(1)
                     )
-                .AddBool("VerboseLog", FindTextShortMCM("verbose"),
-                new ProxyRef<bool>(
-                    () => options.VerboseLog,
-                    value => options.VerboseLog = value),
-                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(2)
-                )
+                .AddBool("showOnConversation", "{=LMkm6aToS}Show Titles On Conversation",
+                    new ProxyRef<bool>(
+                        () => options.ShowOnConversation,
+                        value => options.ShowOnConversation = value),
+                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_conversation_hint")).SetOrder(2)
+                    )
+                .AddBool("showOnMission", "{=0vnxDT91U}Show Titles On Mission Map",
+                    new ProxyRef<bool>(
+                        () => options.ShowOnMission,
+                        value => options.ShowOnMission = value),
+                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_mission_hint")).SetOrder(3)
+                    )
+                .AddBool("showOnSettlementUI", "{=SF9DCetBr}Show Titles On The Settlement UI",
+                    new ProxyRef<bool>(
+                        () => options.ShowOnSettlementUI,
+                        value => options.ShowOnSettlementUI = value),
+                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_settlement_hint")).SetOrder(4)
+                    )
+                .AddBool("showOnPartyTooltip", "{=B5O6vBo6Z}Show Titles On The Party Tooltip",
+                    new ProxyRef<bool>(
+                        () => options.ShowOnPartyTooltip,
+                        value => options.ShowOnPartyTooltip = value),
+                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_partytt_hint")).SetOrder(5)
+                    )
+                */
                 .AddDropdown("heir", FindTextShortMCM("heir"), 1,
                     new ProxyRef<Dropdown<TextObject>>(
                         () => options.Inheritance,
                         value => options.Inheritance = value),
-                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(4)
+                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(6)
+                )
+                .AddBool("VerboseLog", FindTextShortMCM("verbose"),
+                new ProxyRef<bool>(
+                    () => options.VerboseLog,
+                    value => options.VerboseLog = value),
+                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(7)
                 )
                 .SetGroupOrder(0);
             void BuildFormattingGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
@@ -139,29 +169,34 @@ namespace NobleTitlesPlus.Settings
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("size_hint")).SetOrder(3)
                     )
                 .SetGroupOrder(1);
+
+            /*
+             * each kingdom's title format entries
+             */
             Action<ISettingsPropertyGroupBuilder> GenerateKingdomGroupPropertiesBuilder(string id, int order, bool isCulture = true)
             {
                 void BuildFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
                 {
-                    foreach (string s in (string[]) Enum.GetNames(typeof(DB.Gender)))
+                    foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
                         bool isFemale = s == "F";
                         string genderLong = s == "F" ? "Female" : "Male";
-                        // for(int  rank = 1; rank < 6; rank++) // TODO: Why not working??
-                        foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
+                        // for(int  rank = 0; rank < 6; rank++) // TODO: Why not working??
+                        foreach (int rank in new int[] { 0, 1, 2, 3, 4, 5 })
                         {
                             builder
                                 .AddText(
                                     $"KingdomRank{rank}{s}_{id}", FindTextShortMCM($"title_{rank}{s}"),
                                     new ProxyRef<string>(
                                         () => options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, (TitleRank)rank, Category.Default),
-                                        value => {
-                                            if(isCulture) options.TitleSet.SetCultureTitle(value, id, isFemale, (TitleRank)rank);
+                                        value =>
+                                        {
+                                            if (isCulture) options.TitleSet.SetCultureTitle(value, id, isFemale, (TitleRank)rank);
                                             else options.TitleSet.SetFactionTitle(value, id, isFemale, (TitleRank)rank);
                                         }
                                     ),
                                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"{rank}{s}_hint"))
-                                    .SetOrder(2 + 2 * rank + (isFemale ? 0 : 1))
+                                    .SetOrder(rank == 0 ? 99 : 2 + 2 * rank + (isFemale ? 0 : 1))
                                     );
                         }
                         builder
@@ -193,12 +228,15 @@ namespace NobleTitlesPlus.Settings
                 }
                 return BuildFactionGroupProperties;
             }
+            /*
+             * each minor faction's title format entries
+             */
             Action<ISettingsPropertyGroupBuilder> GenerateMinorFactionGroupProperties(string clanStringId, int order)
             {
                 void BuildMinorFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
                 {
-                    if(TitleBehavior.options.VerboseLog) Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
-                    foreach (string g in (string[]) Enum.GetNames(typeof(DB.Gender)))
+                    if (TitleBehavior.options.VerboseLog) Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
+                    foreach (string g in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
                         bool isFemale = g == "F";
                         builder.AddText(
@@ -223,6 +261,12 @@ namespace NobleTitlesPlus.Settings
                 }
                 return BuildMinorFactionGroupProperties;
             }
+
+            ///
+            /// <summary>
+            /// set preset values
+            /// </summary>
+            ///
             void BuildPreset(ISettingsPresetBuilder builder, Options option, string preset)
             {
                 builder
@@ -253,12 +297,11 @@ namespace NobleTitlesPlus.Settings
                     // tried to get value from kingdoms, then get it from cultures when failed that
                     foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
-                        foreach (int rank in new int[] { 1, 2, 3, 4, 5 })
-                        // for (int rank = 1; rank < 6; rank++)  // TODO: why not working??
+                        foreach (int rank in new int[] { 0, 1, 2, 3, 4, 5 })
                         {
                             if (preset == "DEF")
                             {
-                                if(rank == 5)
+                                if (rank == 5)
                                 {
                                     builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", "{NAME}");
                                 }
@@ -273,7 +316,7 @@ namespace NobleTitlesPlus.Settings
                                     builder.SetPropertyValue($"KingdomRank{rank}{s}_{kingdomId}", Util.QuoteMultVarBitEasiler(TO));
                                 }
                             }
-                            else if(kingdomId != null) // TODO: is really needed?
+                            else if (kingdomId != null) // TODO: is really needed?
                             {
                                 if (GameTexts.TryGetText(moduleStrTitles, out TextObject TOKingdom, $"{preset}_{rank}{s}_{kingdomId ?? ""}"))
                                 {
@@ -287,7 +330,7 @@ namespace NobleTitlesPlus.Settings
                             else
                             {
                                 builder.SetPropertyValue($"KingdomRank{rank}{s}_{cultureId}", FindTitleTextString(preset, rank.ToString(), s, cultureId));
-                            }   
+                            }
                         }
                         builder.SetPropertyValue($"KingdomCrown{s}_{cultureId}", FindTitleTextString(preset, "crown", s, cultureId));
                         builder.SetPropertyValue($"KingdomRoyal{s}_{cultureId}", FindTitleTextString(preset, "royal", s, cultureId));
@@ -295,7 +338,7 @@ namespace NobleTitlesPlus.Settings
                 }
                 void FillMinorFactionPropertyValues(string preset, string factionId)
                 {
-                    foreach(string lm in new string[] { "L", "M" })
+                    foreach (string lm in new string[] { "L", "M" })
                     {
                         foreach (string s in (string[])Enum.GetNames(typeof(DB.Gender)))
                         {
@@ -305,16 +348,16 @@ namespace NobleTitlesPlus.Settings
                 }
             }
         }
-        public const string moduleStrTitles = "str_ntp_title_set";
+        public const string moduleStrTitles = "ntp_title_set";
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static string FindTextShortMCM(string variantId)
         {
-            return GameTexts.FindText("str_ntp_mcm", variantId).ToString();
+            return GameTexts.FindText("ntp_mcm", variantId).ToString();
         }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static string FindTitleTextString(string preset, string rank, string gender, string group)
         {
-            if(GameTexts.TryGetText(moduleStrTitles, out TextObject to, $"{preset}_{rank}{gender}_{group}"))
+            if (GameTexts.TryGetText(moduleStrTitles, out TextObject to, $"{preset}_{rank}{gender}_{group}"))
             {
                 return Util.QuoteMultVarBitEasiler(to);
             }

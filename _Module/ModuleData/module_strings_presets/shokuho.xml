@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string id="ntp_mcm.preset_shokuho" text="{=NTP.MCMShokuho}Shokuhō" />
+	<!-- Shokuho modified preset -->
+	<string id="ntp_title_set.SHO_1M_default" text="{=NTP.SHO1M_default}{NAME}, Daimyo of {PROVINCE_SHO} Province" />
+	<string id="ntp_title_set.SHO_1F_default" text="{=NTP.SHO1F_default}Daimyou-fujin {NAME}" />
+	<string id="ntp_title_set.SHO_2M_default" text="{=NTP.SHO2M_default}Karou {NAME}" /> <!-- means senior vassal  -->
+	<string id="ntp_title_set.SHO_2F_default" text="{=NTP.SHO2F_default}Karou-fujin {NAME}" />
+	<string id="ntp_title_set.SHO_3M_default" text="{=NTP.SHO3M_default}Karou {NAME}" />
+	<string id="ntp_title_set.SHO_3F_default" text="{=NTP.SHO3F_default}Karou-fujin {NAME}" />
+	<string id="ntp_title_set.SHO_4M_default" text="{=NTP.SHO4M_default}Joushu {NAME}" /> <!-- means "Lord Castellan" --> 
+	<string id="ntp_title_set.SHO_4F_default" text="{=NTP.SHO4F_default}Joushu-fujin {NAME}" />
+	<string id="ntp_title_set.SHO_5M_default" text="{=NTP.SHO5M_default}Gokenin {NAME}" />
+	<string id="ntp_title_set.SHO_5F_default" text="{=NTP.SHO5F_default}{NAME}" />
+	<string id="ntp_title_set.SHO_crownM_default" text="{=NTP.SHOCrownM_default}Shishi {NAME}" /> <!-- the heir son -->
+	<string id="ntp_title_set.SHO_crownF_default" text="{=NTP.SHOCrownF_default}Lady {NAME}" />
+	<string id="ntp_title_set.SHO_royalM_default" text="{=NTP.SHORoyalM_default}Jikisan {NAME}" />
+	<string id="ntp_title_set.SHO_royalF_default" text="{=NTP.SHORoyalF_default}Lady {NAME}" />
+	<string id="ntp_title_set.SHO_0M_default" text="{=JoYfc56DI}{NAME}" />
+	<string id="ntp_title_set.SHO_0F_default" text="{=87pLprAEk}{NAME}" />
+	
+	<string id="ntp_title_set.SHO_MinorLM_default" text="{=NTP.SHOMinorLM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.SHO_MinorLF_default" text="{=NTP.SHOMinorLF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.SHO_MinorMM_default" text="{=NTP.SHOMinorMM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.SHO_MinorMF_default" text="{=NTP.SHOMinorMF_default}{NAME} of {CLAN_SHORT}" />
+	
+	
+	<string id="ntp_title_set.SHO_1M_asakura" text="{=NTP.SHO1M_asakura}{NAME}, Deputy Protector of Echizen Province" /> <!-- Shugo, lierally "protector," is an Shogunate office that manages lessor samurais and law enforcement in the province -->
+	<string id="ntp_title_set.SHO_1M_ashikaga" text="{=NTP.SHO1M_ashikaga}Sēi-taishougun {NAME}" /> <!-- the formal title of Shogun, meaning "great general conquering eastern barbarians" -->
+	<string id="ntp_title_set.SHO_1M_hatakeyama" text="{=NTP.SHO1M_hatakeyama}{NAME}, Protector of Kī Province" />
+	<string id="ntp_title_set.SHO_1M_imagawa" text="{=NTP.SHO1M_imagawa}{NAME}, Protector of Tōtoumi and Suruga Provinces" />
+	<string id="ntp_title_set.SHO_1M_oda" text="{=NTP.SHO1M_oda}{NAME}, Deputy Protector of Owari Province" />
+	<string id="ntp_title_set.SHO_1M_otomo" text="{=NTP.SHO1M_otomo}{NAME}, Protector of Bungo Province" />
+	<string id="ntp_title_set.SHO_1M_satake" text="{=NTP.SHO1M_satake}{NAME}, Protector of Hitachi Province" />
+	<string id="ntp_title_set.SHO_1M_shimazu" text="{=NTP.SHO1M_shimazu}{NAME}, Protector of Satsuma Province" />
+	<string id="ntp_title_set.SHO_1M_takeda" text="{=NTP.SHO1M_takeda}{NAME}, Protector of Kai Province" />	
+	<string id="ntp_title_set.SHO_1M_uesugi" text="{=NTP.SHO1M_uesugi}Kantou-kanrei {NAME}" /> <!-- a regent or agent of Kubou, the Vice Shogun in Muromachi period -->
+	<string id="ntp_title_set.SHO_1M_utsunomiya" text="{=NTP.SHO1M_utsunomiya}{NAME}, Protector of Shimotsuke Province" />
+	<string id="ntp_title_set.SHO_1M_rokkaku" text="{=NTP.SHO1M_rokkaku}{NAME}, Protector of Oumi Province" />
+	<string id="ntp_title_set.SHO_1M_mori" text="{=NTP.SHO1M_mori}{NAME}, Vice Master of the Horse" />  <!-- Umanokami, a vice manager of Imperial horse stable -->
+	<string id="ntp_title_set.SHO_1M_ikko_shu" text="{=NTP.SHO1M_ikko_shu}High Priest {NAME}" /> <!-- Hossu, the chief priest of Honganji sect -->
+	<string id="ntp_title_set.SHO_1F_ikko_shu" text="{=NTP.SHO1F_ikko_shu}Lady {NAME}" />
+</strings>

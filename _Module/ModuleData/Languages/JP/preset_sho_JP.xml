@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<base>
+ 		<tags>
+  		<tag language="日本語" />
+ 	</tags>
+	<strings>
+		<!-- #region Shokuho -->
+		<string id="NTP.MCMShokuho" text="Shokuhō"/>
+		
+		<string id="NTP.SHO1M_default" text="{PROVINCE_SHO}の大名{NAME}" />
+		<string id="NTP.SHO1F_default" text="大名夫人{NAME}" />
+		<string id="NTP.SHO2M_default" text="家老{NAME}" />
+		<string id="NTP.SHO2F_default" text="家老夫人{NAME}" />
+		<string id="NTP.SHO3M_default" text="家老{NAME}" />
+		<string id="NTP.SHO3F_default" text="家老夫人{NAME}" />
+		<string id="NTP.SHO4M_default" text="城主{NAME}" />
+		<string id="NTP.SHO4F_default" text="城主夫人{NAME}" />
+		<string id="NTP.SHO5M_default" text="御家人{NAME}" />
+		<string id="NTP.SHO5F_default" text="{NAME}" />
+		<string id="NTP.SHOCrownM_default" text="嗣子{NAME}" />
+		<string id="NTP.SHOCrownF_default" text="{NAME}" />
+		<string id="NTP.SHORoyalM_default" text="直参{NAME}" />
+		<string id="NTP.SHORoyalF_default" text="{NAME}" />
+		<string id="JoYfc56DI" text="{NAME}" />
+		<string id="87pLprAEk" text="{NAME}" />
+		
+		<string id="NTP.SHOMinorLM_default" text="{CLAN_SHORT}の{NAME}" />
+		<string id="NTP.SHOMinorLF_default" text="{CLAN_SHORT}の{NAME}" />
+		<string id="NTP.SHOMinorMM_default" text="{CLAN_SHORT}の{NAME}" />
+		<string id="NTP.SHOMinorMF_default" text="{CLAN_SHORT}の{NAME}" />
+		
+		<string id="NTP.SHO1M_asakura" text="越前守護代{NAME}" /> 
+		<string id="NTP.SHO1M_ashikaga" text="征夷大將軍{NAME}" /> 
+		<string id="NTP.SHO1M_hatakeyama" text="紀伊守護{NAME}" /> 
+		<string id="NTP.SHO1M_imagawa" text="駿遠守護{NAME}" /> 
+		<string id="NTP.SHO1M_oda" text="尾張守{NAME}" /> 
+		<string id="NTP.SHO1M_otomo" text="豐後守護{NAME}" /> 
+		<string id="NTP.SHO1M_satake" text="常陸守護{NAME}" /> 
+		<string id="NTP.SHO1M_shimazu" text="薩摩守護{NAME}" /> 
+		<string id="NTP.SHO1M_takeda" text="甲斐守護{NAME}" /> 	
+		<string id="NTP.SHO1M_uesugi" text="關東管領{NAME}" /> 
+		<string id="NTP.SHO1M_utsunomiya" text="下野守護{NAME}" /> 
+		<string id="NTP.SHO1M_rokkaku" text="近江守護{NAME}" /> 
+		<string id="NTP.SHO1M_mori" text="右馬頭{NAME}" /> 
+		<string id="NTP.SHO1M_ikko_shu" text="法主{NAME}" /> 
+		<string id="NTP.SHO1F_ikko_shu" text="{NAME}夫人" /> 
+		<!-- #endregion -->
+	</strings>
+</base>

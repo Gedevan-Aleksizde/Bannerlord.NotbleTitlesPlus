@@ -1,16 +1,16 @@
-﻿using TaleWorlds.CampaignSystem;
-using TaleWorlds.Core;
-using TaleWorlds.Library;
-using TaleWorlds.MountAndBlade;
-using System.Reflection;
-using System.IO;
-using TaleWorlds.Localization;
+﻿using HarmonyLib;
 using MCM.Abstractions.Base.PerSave;
-using NobleTitlesPlus.Settings;
+using NobleTitlesPlus.MCMSettings;
 using System;
-using TaleWorlds.ModuleManager;
+using System.IO;
+using System.Reflection;
+using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
 using TaleWorlds.Engine;
-using HarmonyLib;
+using TaleWorlds.Library;
+using TaleWorlds.Localization;
+using TaleWorlds.ModuleManager;
+using TaleWorlds.MountAndBlade;
 
 namespace NobleTitlesPlus
 {
@@ -20,13 +20,12 @@ namespace NobleTitlesPlus
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
-            Util.EnableLog = true; // enable various debug logging
-            Util.EnableTracer = false; // enable code event tracing (requires enabled logging)
+            Util.EnableLog = true;
+            Util.EnableTracer = false;
             this.harmony = new(SubModule.HarmonyDomain);
         }
         protected override void OnBeforeInitialModuleScreenSetAsRoot()
         {
-            // Util.Log.Print($">> OnBeforeInitialModuleScreenSetAsRoot called");
             base.OnBeforeInitialModuleScreenSetAsRoot();
 
             if (!this.hasLoaded && !this.canceled)

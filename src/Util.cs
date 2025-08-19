@@ -6,7 +6,6 @@ using System.Runtime.CompilerServices;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
-using TaleWorlds.MountAndBlade;
 
 namespace NobleTitlesPlus
 {
@@ -17,17 +16,24 @@ namespace NobleTitlesPlus
             // why do i need such thing?????
             return to.SetTextVariable(variableName, "______MOCKPLACEHOLDER_____").ToString().Replace("______MOCKPLACEHOLDER_____", newPlaceholder);
         }
+        /// <summary>
+        /// Escape to evaluate braced variables
+        /// </summary>
+        /// <param name="to"></param>
+        /// <returns></returns>
         public static string QuoteMultVarBitEasiler(TextObject to)
         {
             return to.SetTextVariable("NAME", "______MOCKPLACEHOLDER1_____")
                 .SetTextVariable("CLAN", "______MOCKPLACEHOLDER2_____")
                 .SetTextVariable("FIEFS", "______MOCKPLACEHOLDER3_____")
                 .SetTextVariable("CLAN_SHORT", "______MOCKPLACEHOLDER4_____")
+                .SetTextVariable("PROVINCE_SHO", "______MOCKPLACEHOLDER5_____")
                 .ToString()
                 .Replace("______MOCKPLACEHOLDER1_____", "{NAME}")
                 .Replace("______MOCKPLACEHOLDER2_____", "{CLAN}")
                 .Replace("______MOCKPLACEHOLDER3_____", "{FIEF}")
-                .Replace("______MOCKPLACEHOLDER4_____", "{CLAN_SHORT}");
+                .Replace("______MOCKPLACEHOLDER4_____", "{CLAN_SHORT}")
+                .Replace("______MOCKPLACEHOLDER5_____", "{PROVINCE_SHO}");
         }
         internal static bool EnableLog
         {
@@ -42,7 +48,7 @@ namespace NobleTitlesPlus
         }
         public static TextObject FindTextWithDefaultVariation(string id, string variation, string? fallback = null)
         {
-            if(GameTexts.TryGetText(id, out TextObject to, variation))
+            if (GameTexts.TryGetText(id, out TextObject to, variation))
             {
                 return to;
             }
