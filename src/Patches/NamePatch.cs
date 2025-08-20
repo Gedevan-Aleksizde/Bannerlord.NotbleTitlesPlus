@@ -59,6 +59,21 @@ namespace NobleTitlesPlus.Patches
             __result = ReplaceName(__instance, ____name);
         }
     }
+    [HarmonyPatch(typeof(CharacterObject), nameof(CharacterObject.Name), MethodType.Getter)]
+    [HarmonyPatchCategory("NameChangerCore")]
+    internal class CONameChanger
+    {
+        [HarmonyPostfix]
+        private static void TWaho(CharacterObject __instance, ref TextObject __result)
+        {
+            if (__instance.IsHero)
+            {
+                __result = __instance.HeroObject.Name; // It's just overwritten as the original code. I'm afraid Bannerlord script is terrible messy.
+
+            }
+        }
+
+    }
     [HarmonyPatch(typeof(Hero), nameof(Hero.FirstName), MethodType.Getter)]
     [HarmonyPatchCategory("NameChangerCore")]
     internal class HeroFirstNameChanger
