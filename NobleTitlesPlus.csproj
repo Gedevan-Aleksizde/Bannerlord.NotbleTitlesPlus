@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>2.4.0</Version>
+    <Version>2.4.1</Version>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>x64</Platforms>
     <LangVersion>10.0</LangVersion>
@@ -73,7 +73,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="mkdir Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\submodule.xml Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\settings.json Releases\NobleTitlesPlus&#xD;&#xA;copy /y _module\titles.json Releases\NobleTitlesPlus&#xD;&#xA;mkdir Releases\NobleTitlesPlus\ModuleData&#xD;&#xA;xcopy /y /s _module\ModuleData\ Releases\NobleTitlesPlus\ModuleData&#xD;&#xA;mkdir Releases\NobleTitlesPlus\bin\Win64_Shipping_Client&#xD;&#xA;copy bin\x64\Debug\netstandard2.0\NobleTitlesPlus.dll Releases\NobleTitlesPlus\bin\Win64_Shipping_Client&#xD;&#xA;powershell.exe -command Compress-Archive -Force -Path Releases\NobleTitlesPlus -DestinationPath Releases\NobleTitlesPlus.zip" />
+    <Exec Command="mkdir Releases\$(TargetName)&#xD;&#xA;copy /y _module\submodule.xml Releases\$(ProjectName)&#xD;&#xA;copy /y _module\settings.json Releases\$(ProjectName)&#xD;&#xA;copy /y _module\titles.json Releases\$(ProjectName)&#xD;&#xA;mkdir Releases\$(TargetName)\ModuleData&#xD;&#xA;xcopy /y /s _module\ModuleData\ Releases\NobleTitlesPlus\ModuleData&#xD;&#xA;mkdir Releases\$(ProjectName)\bin\Win64_Shipping_Client&#xD;&#xA;copy &quot;$(TargetDir)$(TargetName).dll&quot; &quot;Releases\$(ProjectName)\bin\Win64_Shipping_Client\&quot;&#xD;&#xA;powershell.exe -command Compress-Archive -Force -Path Releases\$(ProjectName) -DestinationPath Releases\$(ProjectName).zip" />
   </Target>
 
 </Project>
