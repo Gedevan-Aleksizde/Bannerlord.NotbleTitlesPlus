@@ -16,6 +16,10 @@ namespace NobleTitlesPlus.Patches
     {
         public static TextObject ReplaceName(Hero hero, TextObject name)
         {
+            if (hero?.Clan is null)
+            {
+                return name;
+            }
             if (hero.IsLord && !hero.IsRebel)
             {
                 if (hero?.Clan?.StringId == null)
@@ -44,7 +48,7 @@ namespace NobleTitlesPlus.Patches
                 title = title.SetTextVariable("NAME", name)
                             .SetTextVariable("CLAN", hero?.Clan?.Name)
                             .SetTextVariable("CLAN_SHORT", hero?.Clan?.InformalName);
-                if (TitleBehavior.nomenclatura.ClanAttrs.TryGetValue(hero?.Clan, out (TextObject strFief, TextObject shokuhoProv, ClanNamePair clanNamesPair) fiefNames))
+                if (TitleBehavior.nomenclatura.ClanAttrs.TryGetValue(hero.Clan, out (TextObject strFief, TextObject shokuhoProv, ClanNamePair clanNamesPair) fiefNames))
                 {
                     title = title.SetTextVariable("FIEFS", fiefNames.strFief).SetTextVariable("PROVINCE_SHO", fiefNames.shokuhoProv);
                 }

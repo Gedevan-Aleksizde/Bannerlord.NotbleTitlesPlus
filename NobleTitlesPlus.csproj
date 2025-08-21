@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>2.4.1</Version>
+    <Version>2.4.2</Version>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>x64</Platforms>
     <LangVersion>10.0</LangVersion>
@@ -15,8 +15,6 @@
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Win64_Shipping_Client')">Win64_Shipping_Client</GameBinariesFolder>
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Gaming.Desktop.x64_Shipping_Client')">Gaming.Desktop.x64_Shipping_Client</GameBinariesFolder>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <AssemblyVersion>2.4.0</AssemblyVersion>
-    <FileVersion></FileVersion>
     <Company></Company>
     <Copyright>Skatagiri</Copyright>
   </PropertyGroup>
