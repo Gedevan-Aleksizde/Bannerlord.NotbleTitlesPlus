@@ -15,7 +15,7 @@
 		<string id="n8KgX5KAl" text="蠣崎" />
 		<string id="mqeRVL7R1" text="柿崎" />
 		<string id="NGOfCE9Ue" text="柴田" />
-		<string id="LmFpMDrMD" text="新発田" />
+		<string id="LmFpMDrMD" text="新發田" />
 		<string id="fbNnug0w5" text="朝倉" />
 		<string id="oXK2BXg2P" text="山崎" />
 		<string id="P0vbtKhHr" text="溝江" />
@@ -51,7 +51,7 @@
 		<string id="RFrcczBp2" text="仁科" />
 		<string id="iprN8Ccrm" text="小山田" />
 		<string id="hYSITlKjI" text="穴山" />
-		<string id="BKYPCQJGV" text="山形" />
+		<string id="BKYPCQJGV" text="山縣" />
 		<string id="qNQPTylek" text="春日" />
 		<string id="Q0DEHuqlz" text="今川" />
 		<string id="FKuPCVvQL" text="朝比奈" />
@@ -89,13 +89,13 @@
 		<string id="woc2lf9BH" text="芳賀" />
 		<string id="efopA1Mer" text="笠間" />
 		<string id="XUB4sMMWk" text="佐竹" />
-		<string id="xaYV2wYcq" text="江戸" />
+		<string id="xaYV2wYcq" text="江戶" />
 		<string id="8l6wptb7l" text="大掾" />
 		<string id="pasTLO39C" text="鹿島" />
 		<string id="CQzXRxYiW" text="那須" />
 		<string id="QJl8tFZnq" text="赤松" />
 		<string id="0vSk0Te5M" text="小寺" />
-		<string id="e9bfvB8D3" text="黒田" />
+		<string id="e9bfvB8D3" text="黑田" />
 		<string id="mcFt0Pw0r" text="別所" />
 		<string id="G4xO70yIj" text="松永" />
 		<string id="yU5lXRomY" text="筒井" />
@@ -122,7 +122,7 @@
 		<string id="w0B0TEhAt" text="北畠" />
 		<string id="G6PUAY7iq" text="嶋津" />
 		<string id="fqL6E2ARu" text="伊集院" />
-		<string id="QWtG2FfXh" text="本郷" />
+		<string id="QWtG2FfXh" text="本鄕" />
 		<string id="NRN2Cypde" text="種子島" />
 		<string id="PRChlIy9n" text="川上" />
 		<string id="4LKAXPbgr" text="上井" />
@@ -142,7 +142,7 @@
 		<string id="cWHPFyKDt" text="大友" />
 		<string id="9Oq2IN5b5" text="城井" />
 		<string id="geNcIsg75" text="蒲池" />
-		<string id="MHcgByB7g" text="戸次" />
+		<string id="MHcgByB7g" text="戶次" />
 		<string id="j4TUY3jCj" text="吉弘" />
 		<string id="p8YkX9ggV" text="高橋" />
 		<string id="naMr2rvCS" text="有馬" />
@@ -152,14 +152,14 @@
 		<string id="MS2JbxMOu" text="龍造寺" />
 		<string id="kQqSPXkZJ" text="松浦" />
 		<string id="0gjWAzh9Q" text="鍋島" />
-		<string id="oSGRVoxbr" text="西郷" />
+		<string id="oSGRVoxbr" text="西鄕" />
 		<string id="rngVV7Tt2" text="隈部" />
 		<string id="W2A9emZLG" text="西園寺" />
-		<string id="sAAUWUAkN" text="勧修寺" />
+		<string id="sAAUWUAkN" text="勸修寺" />
 		<string id="ZQawRsQEf" text="法華津" />
 		<string id="mlgN89wQa" text="一條" />
 		<string id="ae1lMcT2U" text="土居" />
-		<string id="FnRivPrRb" text="安芸" />
+		<string id="FnRivPrRb" text="安藝" />
 		<string id="MoNZD9Fel" text="津野" />
 		<string id="nmjhUVjoE" text="長宗我部" />
 		<string id="kbu6v8CZT" text="香宗我部" />
@@ -199,11 +199,11 @@
 		<string id="2bT3fADQP" text="仁賀保" />
 		<string id="SKvnmuZbK" text="安東" />
 		<string id="cSTcp5UX7" text="淺利" />
-		<string id="ipUEvMSYN" text="戸澤" />
+		<string id="ipUEvMSYN" text="戶澤" />
 		<string id="qNXmGOZau" text="南部" />
-		<string id="wdABBt8ua" text="七戸" />
-		<string id="GXNWPy5IS" text="八戸" />
-		<string id="BDPHjj6bc" text="九戸" />
+		<string id="wdABBt8ua" text="七戶" />
+		<string id="GXNWPy5IS" text="八戶" />
+		<string id="BDPHjj6bc" text="九戶" />
 		<string id="p6sdrqgNb" text="北" />
 		<string id="77aACcgAB" text="大浦" />
 		<string id="v9NZ7boqj" text="斯波" />
@@ -214,14 +214,14 @@
 		<string id="qzmx8BArT3" text="能登畠山氏" />
 		<string id="FgCVDLBuIW" text="三島村上氏" />
 		<string id="ibCMi5IZrG" text="足利古河公方家" />
-		<string id="zgDMscNWjp" text="足利将軍家" />
+		<string id="zgDMscNWjp" text="足利將軍家" />
 		<string id="SXG3Ym1M1A" text="信濃村上氏" />
-		<string id="a8LS6L1sZl" text="参河酒井氏" />
-		<string id="N96yvt05CL" text="土気酒井氏" />
+		<string id="a8LS6L1sZl" text="參河酒井氏" />
+		<string id="N96yvt05CL" text="土氣酒井氏" />
 		<string id="hFtLyQ2f4I" text="蠣崎氏" />
 		<string id="1qo6CgvyVP" text="柿崎氏" />
 		<string id="cUmTDcOHfs" text="柴田氏" />
-		<string id="noojCjn2Ge" text="新発田氏" />
+		<string id="noojCjn2Ge" text="新發田氏" />
 		<string id="dod9e7l7l3" text="朝倉氏" />
 		<string id="lekrKFi5i9" text="山崎氏" />
 		<string id="7nXNWTk86q" text="溝江氏" />
@@ -233,12 +233,12 @@
 		<string id="2cZMW874yY" text="七里氏" />
 		<string id="a0YZdOmF4f" text="長氏" />
 		<string id="hCBQWR6ES9" text="遊佐氏" />
-		<string id="AT5GMnou0P" text="温井氏" />
+		<string id="AT5GMnou0P" text="溫井氏" />
 		<string id="oeHyTiKkbO" text="前田氏" />
 		<string id="Y83JjX4z0Z" text="明智氏" />
 		<string id="zUT7xYUE8s" text="丹羽氏" />
 		<string id="YQAeGb8j95" text="池田氏" />
-		<string id="pSpiZp4Xj8" text="徳川氏" />
+		<string id="pSpiZp4Xj8" text="德川氏" />
 		<string id="IUhjYKHlnF" text="本多氏" />
 		<string id="aIwaoLRvrD" text="榊原氏" />
 		<string id="0TR3NZlB9p" text="井伊氏" />
@@ -257,7 +257,7 @@
 		<string id="rPN9t7iVZB" text="仁科氏" />
 		<string id="YWZaKVnDH8" text="小山田氏" />
 		<string id="N7dWZUFEt3" text="穴山氏" />
-		<string id="O4HEMihT1X" text="山形氏" />
+		<string id="O4HEMihT1X" text="山縣氏" />
 		<string id="WSdJb8tJ95" text="春日氏" />
 		<string id="hF8Ll9dOxt" text="今川氏" />
 		<string id="fzZasDo88g" text="朝比奈氏" />
@@ -295,13 +295,13 @@
 		<string id="LXIL9wMy14" text="芳賀氏" />
 		<string id="tNz9tnTUGn" text="笠間氏" />
 		<string id="RL6SY2aKn8" text="佐竹氏" />
-		<string id="YcEy7aOvcL" text="江戸氏" />
+		<string id="YcEy7aOvcL" text="江戶氏" />
 		<string id="apnxJosobS" text="大掾氏" />
 		<string id="ng8DeXJT4O" text="鹿嶋氏" />
 		<string id="bl93n6gJL7" text="那須氏" />
 		<string id="AimXmgpqfW" text="赤松氏" />
 		<string id="zpIJKRQERb" text="小寺氏" />
-		<string id="WGkvbb2jTt" text="黒田氏" />
+		<string id="WGkvbb2jTt" text="黑田氏" />
 		<string id="BypITVErub" text="別所氏" />
 		<string id="puY40Pus7S" text="松永氏" />
 		<string id="SLMHTfQWeO" text="筒井氏" />
@@ -319,15 +319,15 @@
 		<string id="6IAaaFyWqQ" text="藤堂氏" />
 		<string id="T1dOO66ZyW" text="磯野氏" />
 		<string id="4i1xoxx363" text="赤尾氏" />
-		<string id="6Y1HtngR2n" text="織田弾正忠家" />
+		<string id="6Y1HtngR2n" text="織田彈正忠家" />
 		<string id="vLbh1ezAEe" text="木下氏" />
 		<string id="1tICbIFYVD" text="佐久間氏" />
-		<string id="NJ3haBJwH5" text="滝川氏" />
+		<string id="NJ3haBJwH5" text="瀧川氏" />
 		<string id="zsh3x3Zczo" text="九鬼氏" />
 		<string id="qGdqXxOGE0" text="北畠氏" />
 		<string id="Ngl8nKcgEZ" text="嶋津氏" />
 		<string id="xS0cHB2UV9" text="伊集院氏" />
-		<string id="QXpwsZzNG1" text="本郷氏" />
+		<string id="QXpwsZzNG1" text="本鄕氏" />
 		<string id="HBJOmXIkff" text="種子島氏" />
 		<string id="yDK23rKljz" text="川上氏" />
 		<string id="pKFdQUq3dC" text="上井氏" />
@@ -347,7 +347,7 @@
 		<string id="bdwov4QUym" text="大友氏" />
 		<string id="GPQAo8beQH" text="城井氏" />
 		<string id="4Ksh304Yfd" text="蒲池氏" />
-		<string id="9sHFOLMpgk" text="戸次氏" />
+		<string id="9sHFOLMpgk" text="戶次氏" />
 		<string id="26KHwS52Z9" text="吉弘氏" />
 		<string id="414nXngXMi" text="高橋氏" />
 		<string id="8eNlWdw4mK" text="有馬氏" />
@@ -357,14 +357,14 @@
 		<string id="Zo7X2FzlkU" text="龍造寺氏" />
 		<string id="QhL8uOSyvM" text="松浦市" />
 		<string id="Q5DuFzr8T0" text="鍋島市" />
-		<string id="2BovOybIGv" text="西郷氏" />
+		<string id="2BovOybIGv" text="西鄕氏" />
 		<string id="GevMW74Esr" text="隈部氏" />
 		<string id="iCxxsHpWL7" text="伊豫西園寺氏" />
 		<string id="TVOZNudlH9" text="勧修寺氏" />
 		<string id="sIQkifbkpM" text="法華津氏" />
 		<string id="onWoHEdCT1" text="土佐一條氏" />
 		<string id="MNR3IYGdUv" text="土居氏" />
-		<string id="EHeHCD9YqW" text="安芸氏" />
+		<string id="EHeHCD9YqW" text="安藝氏" />
 		<string id="MUNkXlsD2L" text="津野氏" />
 		<string id="C0XSdxj5yE" text="長宗我部氏" />
 		<string id="Ub21gV6FLq" text="香宗我部氏" />
@@ -398,17 +398,17 @@
 		<string id="EYxKWUmwGG" text="氏家氏" />
 		<string id="1oRjkGhxci" text="鍋澤氏" />
 		<string id="ySy1w9yEI9" text="楯岡氏" />
-		<string id="4yUhcGdvln" text="大宝寺氏" />
+		<string id="4yUhcGdvln" text="大寶寺氏" />
 		<string id="2SIkIdxJK1" text="小野寺氏" />
 		<string id="BfzIB8Kf7y" text="鮭延氏" />
 		<string id="svf44wOCIe" text="仁賀保氏" />
 		<string id="rdVXPwojG4" text="安東氏" />
 		<string id="SuXKwvQt55" text="淺利氏" />
-		<string id="gBoi8fKKTl" text="戸澤氏" />
+		<string id="gBoi8fKKTl" text="戶澤氏" />
 		<string id="TvPPcygfdw" text="南部氏" />
-		<string id="T4NIBYh904" text="七戸氏" />
-		<string id="G2JfbKcfw9" text="八戸氏" />
-		<string id="r9AKnrbv5B" text="九戸氏" />
+		<string id="T4NIBYh904" text="七戶氏" />
+		<string id="G2JfbKcfw9" text="八戶氏" />
+		<string id="r9AKnrbv5B" text="九戶氏" />
 		<string id="ADmCb2G2wh" text="北氏" />
 		<string id="odV1sCSioU" text="大浦氏" />
 		<string id="PEclJ8porP" text="斯波氏" />
