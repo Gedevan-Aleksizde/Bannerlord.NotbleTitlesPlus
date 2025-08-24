@@ -79,6 +79,18 @@ namespace NobleTitlesPlus
         {
             if (update) this.UpdateAll();
         }
+        public TitleRank? FindHeroRankById(string id)
+        {
+            Hero hero = Hero.AllAliveHeroes.Where(x => x.StringId == id).First();
+            if (this.HeroRank.TryGetValue(hero, out var rank))
+            {
+                return rank;
+            }
+            else
+            {
+                return null;
+            }
+        }
         public void UpdateAll()
         {
             foreach (Kingdom k in Kingdom.All.Where(x => !x.IsEliminated))

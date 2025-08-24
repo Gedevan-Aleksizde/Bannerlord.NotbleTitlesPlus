@@ -6,6 +6,7 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Conversation;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Conversation;
 using TaleWorlds.CampaignSystem.ViewModelCollection.GameMenu.Overlay;
+using TaleWorlds.Core;
 using TaleWorlds.Localization;
 
 namespace NobleTitlesPlus.Patches
@@ -22,13 +23,13 @@ namespace NobleTitlesPlus.Patches
             }
             if (hero.IsLord && !hero.IsRebel)
             {
-                if (hero?.Clan?.StringId == null)
+                if (hero.Clan?.StringId == null)
                 {
-                    Util.Log.Print($">> [WARNING] Clan is null: when {name} (clan={hero?.Clan?.Name}) called");
+                    Util.Log.Print($">> [WARNING] Clan is null: when {name} (clan={hero.Clan?.Name}) called");
                 }
                 if (hero?.IsMinorFactionHero == null)
                 {
-                    Util.Log.Print($">> [WARNING] isMinorFactionHero is null: when {name} (clan={hero?.Clan?.Name}) called");
+                    Util.Log.Print($">> [WARNING] isMinorFactionHero is null: when {name} (clan={hero.Clan?.Name}) called");
                 }
                 TextObject title = new("{NAME}");
                 if (!hero.IsAlive)
@@ -46,8 +47,8 @@ namespace NobleTitlesPlus.Patches
                     title = TitleBehavior.options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
                 }
                 title = title.SetTextVariable("NAME", name)
-                            .SetTextVariable("CLAN", hero?.Clan?.Name)
-                            .SetTextVariable("CLAN_SHORT", hero?.Clan?.InformalName);
+                            .SetTextVariable("CLAN", hero.Clan?.Name)
+                            .SetTextVariable("CLAN_SHORT", hero.Clan?.InformalName);
                 if (TitleBehavior.nomenclatura.ClanAttrs.TryGetValue(hero.Clan, out (TextObject strFief, TextObject shokuhoProv, ClanNamePair clanNamesPair) fiefNames))
                 {
                     title = title.SetTextVariable("FIEFS", fiefNames.strFief).SetTextVariable("PROVINCE_SHO", fiefNames.shokuhoProv);
@@ -62,21 +63,6 @@ namespace NobleTitlesPlus.Patches
 
             __result = ReplaceName(__instance, ____name);
         }
-    }
-    [HarmonyPatch(typeof(CharacterObject), nameof(CharacterObject.Name), MethodType.Getter)]
-    [HarmonyPatchCategory("NameChangerCore")]
-    internal class CONameChanger
-    {
-        [HarmonyPostfix]
-        private static void TWaho(CharacterObject __instance, ref TextObject __result)
-        {
-            if (__instance.IsHero)
-            {
-                __result = __instance.HeroObject.Name; // It's just overwritten as the original code. I'm afraid Bannerlord script is terrible messy.
-
-            }
-        }
-
     }
     [HarmonyPatch(typeof(Hero), nameof(Hero.FirstName), MethodType.Getter)]
     [HarmonyPatchCategory("NameChangerCore")]
@@ -112,8 +98,40 @@ namespace NobleTitlesPlus.Patches
         }
     }
     /// <summary>
+    /// This just overwrites the same as the original code. I'm afraid Bannerlord's terrible messy script.
+    /// </summary>
+    [HarmonyPatch(typeof(CharacterObject), nameof(CharacterObject.Name), MethodType.Getter)]
+    [HarmonyPatchCategory("Why")]
+    internal class CharacterObjectNameChanger
+    {
+        [HarmonyPostfix]
+        private static void TWwf(CharacterObject __instance, ref TextObject __result)
+        {
+            if (__instance.IsHero)
+            {
+                __result = __instance.HeroObject.Name;
+
+            }
+        }
+
+    }
+    /// <summary>
+    /// This just overrides the original method with the same thing. I'm afraid Bannerlord's terrible messy script.
+    /// </summary>
+    [HarmonyPatch(typeof(Hero), nameof(Hero.EncyclopediaLinkWithName), MethodType.Getter)]
+    [HarmonyPatchCategory("Why")]
+    internal class WhyNeededModifyEncyclopediaLink
+    {
+        [HarmonyPrefix]
+        private static bool Override(Hero __instance, ref TextObject __result)
+        {
+            __result = HyperlinkTexts.GetHeroHyperlinkText(__instance.EncyclopediaLink, __instance.Name);
+            return false;
+        }
+    }
+    /// <summary>
     /// nameplate hover on the parties in the campaign map
-    /// FIXME: This patch does nothing, but the titles disappear from alternative party nameplate on the campaign map if erased this method. WHY??? UPDATE: now not working. WHY?????? 
+    /// TODO: This patch does nothing, but some names not changed without this void patching. WHY?????
     /// </summary>
     [HarmonyPatch(typeof(PartyNameplateVM), nameof(PartyNameplateVM.RefreshDynamicProperties))]
     [HarmonyPatchCategory("PartyPopUp")]
@@ -122,18 +140,6 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void ChangeTitle(PartyNameplateVM __instance)
         {
-            /*__instance.FullName = "TEST";
-            if (!(__instance.Party.IsCaravan || __instance.IsBehind) && __instance.IsVisibleOnMap)
-            {
-                if (__instance.IsArmy)
-                {
-                }
-                else
-                {
-                    __instance.FullName = "TEST";
-                }
-                // Util.Log.Print($"[TEST]party fullname={__instance.FullName}");
-            }*/
         }
     }
     /// <summary>
@@ -148,10 +154,8 @@ namespace NobleTitlesPlus.Patches
         {
             Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Name}");
             __result = TitleBehavior.options.TitleSet.GetMatchedTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
-            // __result = TitleBehavior.nomenclatura.GetKingTitle(__instance.Culture, Category.Default).MaleFormat;
         }
     }
-
     /* used by SettlementMenuOverlayVM.CharacterList and so on*/
     /// <summary>
     /// Shows titles on the nameplates at the top of the settlement panel
@@ -176,13 +180,4 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
-    /*[HarmonyPatch(typeof(EncyclopediaListItemVM), nameof(EncyclopediaListItemVM.Name), MethodType.Getter)]
-    internal class EncyclopediaName
-    {
-        [HarmonyPostfix]
-        private static void Rename(string __instance, ref string __result)
-        {
-            Util.Log.Print($"Ency-VM.Name={__result}");
-        }
-    }*/
 }
