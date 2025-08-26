@@ -78,73 +78,13 @@
 	<string id="ntp_mcm.CrownF_hint" text="{=NTP.MCMCrownFHint}The female succession's title format"/>
 	<string id="ntp_mcm.RoyalM_hint" text="{=NTP.MCMRoyalMHint}A male ruler clan menber's title"/>
 	<string id="ntp_mcm.RoyalF_hint" text="{=NTP.MCMRoyalFHint}A female ruler clan menber's title"/>
-	<string id="ntp_sho_prov.dewa" text="{=41b983B1}Dewa"/>
-	<string id="ntp_sho_prov.mutsu" text="{=53EA7489}Mutsu"/>
-	<string id="ntp_sho_prov.shimotsuke" text="{=5e63b676}Shimotsuke"/>
-	<string id="ntp_sho_prov.kouzuke" text="{=32c028f6}Kouzuke"/>
-	<string id="ntp_sho_prov.shinano" text="{=0c036123}Shinano"/>
-	<string id="ntp_sho_prov.hida" text="{=c0A99b0C}Mino"/>
-	<string id="ntp_sho_prov.oumi" text="{=3DcfeFBF}Oumi"/>
-	<string id="ntp_sho_prov.hitachi" text="{=f2F9D8a8}Hitachi"/>
-	<string id="ntp_sho_prov.shimousa" text="{=Fb984391}Shimousa"/>
-	<string id="ntp_sho_prov.kazusa" text="{=549dB29C}Kazusa"/>
-	<string id="ntp_sho_prov.anbou" text="{=FbF7FE46}Anbou"/>
-	<string id="ntp_sho_prov.musashi" text="{=7f07f046}Musashi"/>
-	<string id="ntp_sho_prov.sagami" text="{=906A337C}Sagami"/>
-	<string id="ntp_sho_prov.kai" text="{=554b16C7}Kai"/>
-	<string id="ntp_sho_prov.izu" text="{=3e3605AA}Izu"/>
-	<string id="ntp_sho_prov.tonoumi" text="{=4BEB8984}Tōtoumi"/>
-	<string id="ntp_sho_prov.suruga" text="{=D34A3758}Suruga"/>
-	<string id="ntp_sho_prov.mikawa" text="{=a8104Cd9}Mikawa"/>
-	<string id="ntp_sho_prov.owari" text="{=53F3Fc0f}Owari"/>
-	<string id="ntp_sho_prov.iga" text="{=9f152D27}Iga"/>
-	<string id="ntp_sho_prov.ise" text="{=Eb1b43f9}Ise"/>
-	<string id="ntp_sho_prov.shima" text="{=E5Bf8251}Shima"/>
-	<string id="ntp_sho_prov.yamato" text="{=8618eC5F}Yamato"/>
-	<string id="ntp_sho_prov.kawachi" text="{=3F51ce40}Kawachi"/>
-	<string id="ntp_sho_prov.izumi" text="{=8407707b}Izumi"/>
-	<string id="ntp_sho_prov.yamashiro" text="{=24d36908}Yamashiro"/>
-	<string id="ntp_sho_prov.settsu" text="{=213A9303}Settsu"/>
-	<string id="ntp_sho_prov.echigo" text="{=84863926}Echigo"/>
-	<string id="ntp_sho_prov.sado" text="{=4C9f8aA0}Sado"/>
-	<string id="ntp_sho_prov.etchu" text="{=d63a8F26}Etchū"/>
-	<string id="ntp_sho_prov.kaga" text="{=4F878aa5}Kaga"/>
-	<string id="ntp_sho_prov.noto" text="{=00672cBA}Noto"/>
-	<string id="ntp_sho_prov.echizen" text="{=41a25e90}Echizen"/>
-	<string id="ntp_sho_prov.wakasa" text="{=03891222}Wakasa"/>
-	<string id="ntp_sho_prov.ki" text="{=2AF6d6C5}Kī"/>
-	<string id="ntp_sho_prov.awaji" text="{=3996f905}Awaji"/>
-	<string id="ntp_sho_prov.awa" text="{=c276C68e}Awa"/>
-	<string id="ntp_sho_prov.sanuki" text="{=64b2F9b1}Sanuki"/>
-	<string id="ntp_sho_prov.tosa" text="{=C3ED5d0A}Tosa"/>
-	<string id="ntp_sho_prov.iyo" text="{=9fFC200D}Iyo"/>
-	<string id="ntp_sho_prov.harima" text="{=2a9798FB}Harima"/>
-	<string id="ntp_sho_prov.bizen" text="{=46EBa592}Bizen"/>
-	<string id="ntp_sho_prov.bitchu" text="{=096168ff}Bitchū"/>
-	<string id="ntp_sho_prov.bingo" text="{=1EF7cEA9}Bingo"/>
-	<string id="ntp_sho_prov.mimakaska" text="{=C78fd853}Mimasaka"/>
-	<string id="ntp_sho_prov.aki" text="{=5795Ff35}Aki"/>
-	<string id="ntp_sho_prov.suou" text="{=391249eC}Suou"/>
-	<string id="ntp_sho_prov.nagato" text="{=42F4109C}Nagato"/>
-	<string id="ntp_sho_prov.tanba" text="{=6461053f}Tanba"/>
-	<string id="ntp_sho_prov.tango" text="{=68bCD3EE}Tango"/>
-	<string id="ntp_sho_prov.tajima" text="{=f6F96E8C}Tajima"/>
-	<string id="ntp_sho_prov.inaba" text="{=c40080ff}Inaba"/>
-	<string id="ntp_sho_prov.houki" text="{=0465EaAB}Houki"/>
-	<string id="ntp_sho_prov.izumo" text="{=D93dEA4E}Izumo"/>
-	<string id="ntp_sho_prov.oki" text="{=0d7EAd6C}Oki"/>
-	<string id="ntp_sho_prov.iwami" text="{=a47F6Bd1}Iwami"/>
-	<string id="ntp_sho_prov.chikuzen" text="{=F9E37c22}Chikuzen"/>
-	<string id="ntp_sho_prov.chikugo" text="{=28c58309}Chikugo"/>
-	<string id="ntp_sho_prov.buzen" text="{=116e7113}Buzen"/>
-	<string id="ntp_sho_prov.bungo" text="{=9639B1b6}Bungo"/>
-	<string id="ntp_sho_prov.hizen" text="{=462450e3}Hizen"/>
-	<string id="ntp_sho_prov.higo" text="{=D90394ea}higo"/>
-	<string id="ntp_sho_prov.hyuga" text="{=2F6228aA}Hyūga"/>
-	<string id="ntp_sho_prov.osumi" text="{=3C7CeD22}Ōsumi"/>
-	<string id="ntp_sho_prov.satsuma" text="{=39d3a799}Satuma"/>
-	<string id="ntp_sho_prov.iki" text="{=151eC682}Iki"/>
-	<string id="ntp_sho_prov.tsushima" text="{=d2FE3713}Tsushima"/>
-	<string id="ntp_sho_prov.keichou" text="{=Qpr6E5Yt}Kyouto"/>
-	<string id="ntp_sho_prov.default" text="{=6EbDB187}Unlanded"/>
+	
+	<string id="ntp_mcm.kingdom_title_format" text="{=LLnutRN25a}Kingdom  Title Format" />
+	<string id="ntp_mcm.kingdom_title_format_hint" text="{=UFoIXjcKIT}In the vanilla, the kingdom names are shown in short or full form randomly. This option force the titles you choose. To non-English players: Due to the error by the vanilla, I asigned them with new localization ID. So, you need to translate them." />
+	<string id="ntp_mcm.kingdom_title_format_default" text="{=tlzTJxQE8c}Default" />
+	<string id="ntp_mcm.kingdom_title_format_short" text="{=FXJSqQP5O3}Short" />
+	<string id="ntp_mcm.kingdom_title_format_long" text="{=n1ZT0ApGAq}Long" />
+	
+	<string id="ntp_mcm.united_empire" text="{=S40p9P6Slm}Change the Imperial title when reunited" />
+	<string id="ntp_mcm.united_empire_hint" text="{=aRh2YvgeuG}If enabled, surviving Empire titles are overwrtten with the common Imperial title when the reunion is succeeded." />
 </strings>
