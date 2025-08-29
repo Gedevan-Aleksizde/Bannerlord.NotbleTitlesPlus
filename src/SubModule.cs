@@ -22,7 +22,7 @@ namespace NobleTitlesPlus
             base.OnSubModuleLoad();
             Util.EnableLog = true;
             Util.EnableTracer = false;
-            this.harmony = new(SubModule.HarmonyDomain);
+            harmony = new(SubModule.HarmonyDomain);
         }
         protected override void OnBeforeInitialModuleScreenSetAsRoot()
         {
@@ -50,7 +50,12 @@ namespace NobleTitlesPlus
                 var builder = RuntimeSettings.AddSettings(Options!, c.UniqueGameId);
                 settings = builder.BuildAsPerSave();
                 settings?.Register();
-                this.harmony?.PatchAll();
+                harmony?.PatchCategory("NameChangerCore");
+                harmony?.PatchCategory("Conversation");
+                harmony?.PatchCategory("PartyPopUp");
+                harmony?.PatchCategory("SettlementPanel");
+                harmony?.PatchCategory("Encyclopedia");
+                harmony?.PatchCategory("Why");
             }
             base.OnAfterGameInitializationFinished(game, starterObject);
         }
@@ -77,7 +82,7 @@ namespace NobleTitlesPlus
                 oldSettings?.Unregister();
                 settings = null;
                 Options = null;
-                this.harmony?.UnpatchAll();
+                harmony?.UnpatchAll();
             }
             else
             {
@@ -88,7 +93,7 @@ namespace NobleTitlesPlus
 
         private bool hasLoaded;
         private bool canceled;
-        private Harmony? harmony;
+        internal static Harmony? harmony;
         public static string ModVersion
         {
             get

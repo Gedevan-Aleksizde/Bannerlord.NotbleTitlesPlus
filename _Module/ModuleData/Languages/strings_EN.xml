@@ -86,5 +86,13 @@
 		<string id="NTP.MCMMinorFallbackF" text="Factionllback Female"/>
 		<string id="NTP.MCMMinorFallbackFHint" text="Title format of female hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
 		<string id="bWMiFgw5ac" text="Error 001: Kingdom Name Not Found"/>
+		
+		<string id="LLnutRN25a" text="Kingdom  Title Format" />
+		<string id="UFoIXjcKIT" text="In the vanilla, the kingdom names are shown in short or full form randomly. This option force the titles you choose. To non-English players: Due to the error by the vanilla, I asigned them with new localization ID. So, you need to translate them." />
+		<string id="tlzTJxQE8c" text="Default" />
+		<string id="FXJSqQP5O3" text="Abbreviated" />
+		<string id="n1ZT0ApGAq" text="Formal" />
+		<string id="S40p9P6Slm" text="Change the Imperial title when reunited" />
+		<string id="aRh2YvgeuG" text="If enabled, surviving Empire titles are overwrtten with the common Imperial title when the reunion is succeeded." />
  	</strings>
 </base>

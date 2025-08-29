@@ -317,6 +317,16 @@ namespace NobleTitlesPlus
             }
             if (TitleBehavior.options.VerboseLog) Util.Log.Print(tr);
         }
+        /// <summary>
+        /// when vanillamode
+        /// </summary>
+        public void OverwriteWithImperialFormats(Kingdom kingdom)
+        {
+            Util.Log.Print(">> [INFO] The Empire is reunited. The suriving faction inherit the Imperial titles.");
+            kingdom.ChangeKingdomName(GameTexts.FindText("str_faction_formal_name_for_culture", "empire"), GameTexts.FindText("str_faction_informal_name_for_culture", "empire"));
+            TitleBehavior.options.TitleSet.cultures.TryGetValue("empire", out TitleSet.FactionTitleSet fts);
+            TitleBehavior.options.TitleSet.factions.Add(kingdom.StringId, fts);
+        }
 
         /// <summary>
         /// Adds all minor faction menbers titles 

@@ -80,11 +80,12 @@
 	<string id="ntp_mcm.RoyalF_hint" text="{=NTP.MCMRoyalFHint}A female ruler clan menber's title"/>
 	
 	<string id="ntp_mcm.kingdom_title_format" text="{=LLnutRN25a}Kingdom  Title Format" />
-	<string id="ntp_mcm.kingdom_title_format_hint" text="{=UFoIXjcKIT}In the vanilla, the kingdom names are shown in short or full form randomly. This option force the titles you choose. To non-English players: Due to the error by the vanilla, I asigned them with new localization ID. So, you need to translate them." />
+	<string id="ntp_mcm.kingdom_title_format_hint" text="{=UFoIXjcKIT}In the vanilla, the kingdom names are shown in short or full form randomly. This option force the titles you choose." />
 	<string id="ntp_mcm.kingdom_title_format_default" text="{=tlzTJxQE8c}Default" />
-	<string id="ntp_mcm.kingdom_title_format_short" text="{=FXJSqQP5O3}Short" />
-	<string id="ntp_mcm.kingdom_title_format_long" text="{=n1ZT0ApGAq}Long" />
+	<string id="ntp_mcm.kingdom_title_format_abbreviated" text="{=FXJSqQP5O3}Abbreviated" />
+	<string id="ntp_mcm.kingdom_title_format_full" text="{=n1ZT0ApGAq}Formal" />
 	
 	<string id="ntp_mcm.united_empire" text="{=S40p9P6Slm}Change the Imperial title when reunited" />
 	<string id="ntp_mcm.united_empire_hint" text="{=aRh2YvgeuG}If enabled, surviving Empire titles are overwrtten with the common Imperial title when the reunion is succeeded." />
+	
 </strings>

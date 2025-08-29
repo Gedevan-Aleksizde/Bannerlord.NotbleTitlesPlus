@@ -86,5 +86,13 @@
 		<string id="NTP.MCMMinorFallbackF" text="女性用フォールバック"/>
 		<string id="NTP.MCMMinorFallbackFHint" text="何らかの理由で勢力に仕えていない女性ヒーローの称号形式です。「戦場の霧」を有効にしている際のデフォルトの表記にも使われます。"/>
 		<string id="bWMiFgw5ac" text="Error 001: 国名を取得できません"/>
+		
+		<string id="LLnutRN25a" text="国号の表記" />
+		<string id="UFoIXjcKIT" text="バニラでは、国家名の表記が表示箇所によって正式名称だったり略称だったり統一されていません。このオプションは、すべての表示箇所で表記を統一させられます。" />
+		<string id="tlzTJxQE8c" text="デフォルト" />
+		<string id="FXJSqQP5O3" text="略称" />
+		<string id="n1ZT0ApGAq" text="正式名称" />
+		<string id="S40p9P6Slm" text="帝国再統一を果たした時に称号も統一する" />
+		<string id="aRh2YvgeuG" text="有効にすると、三帝国が統一された際に、残った帝国勢力の称号が帝国文化のものに変更されます" />
  </strings>
 </base>

@@ -764,4 +764,10 @@ namespace NobleTitlesPlus.DB
         Adult,
         Elder
     }
+    public enum KingdomTitleFormat
+    {
+        Default,
+        Abbreviated,
+        Full
+    }
 }

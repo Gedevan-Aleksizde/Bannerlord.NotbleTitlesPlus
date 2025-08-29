@@ -26,7 +26,9 @@ namespace NobleTitlesPlus.MCMSettings
         public string FiefNameSeparator { get; set; } = ",";
         public string FiefNameSeparatorLast { get; set; } = "and";
         public int MaxFiefNames { get; set; } = 1;
-        public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(DB.Inheritance)).OfType<DB.Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
+        public Dropdown<TextObject> KingdomTitleFormat { get; set; } = new(Enum.GetValues(typeof(KingdomTitleFormat)).OfType<KingdomTitleFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"kingdom_title_format_{x.ToString().ToLower()}")), 1);
+        public bool UseUnitedTitle { get; set; } = false;
+        public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(Inheritance)).OfType<Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
         public TitleSet TitleSet { get; set; } = new();
     }
     internal static class RuntimeSettings
@@ -133,13 +135,48 @@ namespace NobleTitlesPlus.MCMSettings
                         value => options.Inheritance = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(6)
                 )
+                .AddDropdown("kingdom_title_format", FindTextShortMCM("kingdom_title_format"), 0,
+                new ProxyRef<Dropdown<TextObject>>(
+                    () => options.KingdomTitleFormat,
+                    value =>
+                    {
+                        options.KingdomTitleFormat = value;
+
+                        switch ((KingdomTitleFormat)value.SelectedIndex)
+                        {
+                            case KingdomTitleFormat.Abbreviated:
+                                Util.Log.Print("[DEBUG] Kingdom format is abbreviated");
+                                SubModule.harmony?.PatchCategory("KingdomAbbreviated");
+                                SubModule.harmony?.UnpatchCategory("KingdomFull");
+                                break;
+                            case KingdomTitleFormat.Full:
+                                Util.Log.Print("[DEBUG] Kingdom format is full");
+                                SubModule.harmony?.PatchCategory("KingdomFull");
+                                SubModule.harmony?.UnpatchCategory("KingdomAbbreviated");
+                                break;
+                            case KingdomTitleFormat.Default:
+                                Util.Log.Print("[DEBUG] Kingdom format is default");
+                                SubModule.harmony?.UnpatchCategory("KingdomFull");
+                                SubModule.harmony?.UnpatchCategory("KingdomAbbreviated");
+                                break;
+                        }
+                    }),
+                probBuilder => probBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("kingdom_title_format_hint")).SetOrder(7)
+                )
+                .AddBool("use_united_empire_title", FindTextShortMCM("united_empire"),
+                new ProxyRef<bool>(
+                    () => options.UseUnitedTitle,
+                    value => options.UseUnitedTitle = value),
+                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("united_empire")).SetOrder(8)
+                )
                 .AddBool("VerboseLog", FindTextShortMCM("verbose"),
                 new ProxyRef<bool>(
                     () => options.VerboseLog,
                     value => options.VerboseLog = value),
-                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(7)
+                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(9)
                 )
                 .SetGroupOrder(0);
+
             void BuildFormattingGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddBool(
                     "tagging", FindTextShortMCM("tagging"),
