@@ -33,7 +33,7 @@
 		<string id="NTP.SHOM1M_ashikaga" text="征夷大將軍{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_hatakeyama" text="紀伊守護{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_imagawa" text="駿遠守護{CLAN_SHORT}{NAME}" /> 
-		<string id="NTP.SHOM1M_oda" text="{CLAN_SHORT}尾張守{NAME}" /> 
+		<string id="NTP.SHOM1M_oda" text="尾張守護代{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_otomo" text="豐後守護{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_satake" text="常陸守護{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_shimazu" text="薩摩守護{CLAN_SHORT}{NAME}" /> 
@@ -41,7 +41,7 @@
 		<string id="NTP.SHOM1M_uesugi" text="關東管領{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_utsunomiya" text="下野守護{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_rokkaku" text="近江守護{CLAN_SHORT}{NAME}" /> 
-		<string id="NTP.SHOM1M_mori" text="{CLAN_SHORT}右馬頭{NAME}" /> 
+		<string id="NTP.SHOM1M_mori" text="右馬頭{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_ikko_shu" text="法主{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1F_ikko_shu" text="{CLAN_SHORT}{NAME}夫人" /> 
 	</strings>
