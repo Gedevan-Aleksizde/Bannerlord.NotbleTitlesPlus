@@ -123,7 +123,7 @@ namespace NobleTitlesPlus
         public const string Name = "NobleTitlePlus";
         public const string DisplayName = "Noble Titles Plus";
         public static readonly string modFolderName = Directory.GetParent(Assembly.GetExecutingAssembly().Location).Parent.Parent.Name;
-        public static readonly string HarmonyDomain = "com.skatagiri.bannerlord" + Name.ToLower();
+        public static readonly string HarmonyDomain = "com.skatagiri.bannerlord." + Name.ToLower();
         internal static readonly Color ImportantTextColor = Color.FromUint(0x00F16D26); // orange
         private FluentPerSaveSettings? settings;
         public Options? Options { get; private set; }
