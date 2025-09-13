@@ -9,8 +9,10 @@
 		<string id="NTP.Sys003" text="{DisplayName}のロード中にエラーが発生しました: 無効です!"/>
 		<string id="NTP.landless" text="無封地" />
 		<string id="NTP.MCMGGEN" text="全般"/>
+		<string id="NTP.MCMGShokuho" text="Shokuhō専用"/>
 		<string id="NTP.MCMyour" text="あなたの国" />
 		<string id="NTP.MCMGFOR" text="領地表示のフォーマット"/>
+		<string id="VHFbeS8l6f" text="高度な設定"/>
 		<string id="NTP.MCMGDEF" text="デフォルトの称号"/>
 		<string id="NTP.MCMGMinor" text="小規模勢力のデフォルトの称号"/>
 		<string id="NTP.MCMFOWHint" text="称号に戦場の霧要素を適用します。会ったことのないヒーローの称号は表示されません。"/>
@@ -25,6 +27,8 @@
 		<string id="s5BEIPDa7" text="キャンペーンマップ上の部隊ツールチップに表示される名前にフォーマットを適用します。" />
 		<string id="NTP.MCMVerbose" text="冗長なログ"/>
 		<string id="NTP.MCMVerboseHint" text="(デバッグ用) ログファイルにより多くの情報を出力します。"/>
+		<string id="z6ja8jheFp" text="Shokuhōのクラン名を修正する"/>
+		<string id="uv7HHkFM63" text="クラン名を、より判別しやすく混乱しづらい名称に修正します。この機能は Shokuhō との併用を想定しています。**この変更はセーブデータに影響し、後で戻すことはできません。**。"/>
 		<string id="NTP.MCMTag" text="タギング"/>
 		<string id="NTP.MCMTagHint" text="領地名の単語のタギングです。主に欧文ユーザーを想定した機能です。"/>
 		<string id="NTP.MCMSep" text="領地名の区切り文字"/>
@@ -41,6 +45,10 @@
 		<string id="NTP.MCMHeirElder" text="最年長"/>
 		<string id="NTP.MCMHeirAdult" text="成人"/>
 		<string id="NTP.MCMHeirHint" text="(WIP) 王位継承のルールです。 「長子相続」は君主の子息の最年長者を選びます。「成人」は後継者のうち、成人のみを選びます。「最年長」は君主のクランの中で最年長者を選びます。注: バナーロードのルール上、王位継承者が必ず王位を相続するとは限りません。 他のmodとのシナジーを想定した機能です。"/>
+		<string id="1QFAqlDCiT" text="公爵定員数の分母"/>
+		<string id="0PCRoAuCVu" text="各勢力の公爵の定員は「(君主以外のクランリーダーの数)/(このパラメータ) 」で決まります。デフォルトは「3」です。"/>
+		<string id="a4fLlIVtff" text="男爵のしきい値"/>
+		<string id="y1UkWUlP0W" text="領地スコアがこの値未満のクランリーダーの爵位が第4位つまり男爵相当に決定します。デフォルトは「3」です。"/>
 		<string id="NTP.MCMRank1M" text="王 (第1位)"/>
 		<string id="NTP.MCMRank1MHint" text="男性君主の称号形式です。"/>
 		<string id="NTP.MCMRank1F" text="女王 (第1位)"/>

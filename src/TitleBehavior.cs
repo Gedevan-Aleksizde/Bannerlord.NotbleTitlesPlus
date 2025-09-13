@@ -38,14 +38,14 @@ namespace NobleTitlesPlus
         {
             Util.Log.Print($">> [DEBUG] OnNewGameCreated: kingdom={Kingdom.All.Count}");
             options.TitleSet.Initialize();
-            nomenclatura.UpdateAll();
+            nomenclatura.UpdateAll(options.FixShokuhoClanName);
             if (options.VerboseLog) Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
         }
         private void OnGameLoaded(CampaignGameStarter starter)
         {
             Util.Log.Print($">> [DEBUG] OnGameLoaded: kingdom={Kingdom.All.Count}");
             if (options.VerboseLog) Util.Log.Print(">> [INFO] Loading campaign");
-            nomenclatura.UpdateAll();
+            nomenclatura.UpdateAll(options.FixShokuhoClanName);
             if (options.VerboseLog) Util.Log.Print($">> [INFO] Loading campaign on {SubModule.Name}");
         }
         private void OnSessionLaunched(CampaignGameStarter starter)
@@ -54,7 +54,12 @@ namespace NobleTitlesPlus
         }
         private void OnDailyTick()
         {
-            nomenclatura.UpdateAll();
+            IEnumerable<Kingdom> survivingImperial = Kingdom.All.Where(x => !x.IsEliminated && ImperialFactions.Contains(x.StringId));
+            if (survivingImperial.Count() == 1)
+            {
+                nomenclatura.OverwriteWithImperialFormats(survivingImperial.First());
+            }
+            nomenclatura.UpdateAll(options.FixShokuhoClanName);
         }
         public void UpdateArmyNames()
         {
@@ -67,17 +72,22 @@ namespace NobleTitlesPlus
                 }
             }
         }
+        public static readonly string[] ImperialFactions = { "empire_w", "empire_s", "empire" };
     }
     /// <summary>
     /// Cache for access the text faster
     /// </summary>
     class Nomenclatura
     {
+        public int thretholdBaron;
+        public int divisorDuke;
         public Dictionary<Hero, TitleRank> HeroRank { get; private set; } = new();
         public Dictionary<Clan, (TextObject FiefText, TextObject ShokuhoProvName, ClanNamePair ClanNames)> ClanAttrs { get; private set; } = new();
-        public Nomenclatura(bool update = false)
+        public Nomenclatura(int thretholdBaron = 3, int divisorDuke = 3, bool update = false)
         {
-            if (update) this.UpdateAll();
+            this.thretholdBaron = thretholdBaron;
+            this.divisorDuke = divisorDuke;
+            if (update) this.UpdateAll(false);
         }
         public TitleRank? FindHeroRankById(string id)
         {
@@ -91,7 +101,7 @@ namespace NobleTitlesPlus
                 return null;
             }
         }
-        public void UpdateAll()
+        public void UpdateAll(bool changeClanName)
         {
             foreach (Kingdom k in Kingdom.All.Where(x => !x.IsEliminated))
             {
@@ -100,7 +110,7 @@ namespace NobleTitlesPlus
             foreach (Clan c in Clan.All)
             {
                 this.UpdateFiefList(c);
-                this.UpdateClanName(c);
+                if (changeClanName) this.UpdateClanName(c);
             }
             this.AddTitlesToMinorFaction();
             this.RemoveTitleFromDead();
@@ -263,7 +273,7 @@ namespace NobleTitlesPlus
             foreach (Hero? h in vassals)
             {
                 // Are they a baron?
-                if (this.GetFiefScore(h.Clan) < 3)
+                if (this.GetFiefScore(h.Clan) < thretholdBaron)
                 {
                     ++nBarons;
                     this.HeroRank[h] = TitleRank.Baron;
@@ -279,7 +289,7 @@ namespace NobleTitlesPlus
             }
             // The allowed number of dukes is a third of the total non-baron noble vassals.
             int nBigVassals = vassals.Count - nBarons;
-            int nDukes = nBigVassals / 3; // Round down
+            int nDukes = nBigVassals / divisorDuke; // Round down
             int nCounts = nBigVassals - nDukes;
             int maxDukeIdx = vassals.Count - 1;
             int maxCountIdx = maxDukeIdx - nDukes;
@@ -318,11 +328,11 @@ namespace NobleTitlesPlus
             if (TitleBehavior.options.VerboseLog) Util.Log.Print(tr);
         }
         /// <summary>
-        /// when vanillamode
+        /// overwrite the single surviving Imperial faction with the united Imperial titles.
         /// </summary>
         public void OverwriteWithImperialFormats(Kingdom kingdom)
         {
-            Util.Log.Print(">> [INFO] The Empire is reunited. The suriving faction inherit the Imperial titles.");
+            Util.Log.Print(">> [INFO] The Empire is reunited. The suriving faction inherit legitimate Imperial titles.");
             kingdom.ChangeKingdomName(GameTexts.FindText("str_faction_formal_name_for_culture", "empire"), GameTexts.FindText("str_faction_informal_name_for_culture", "empire"));
             TitleBehavior.options.TitleSet.cultures.TryGetValue("empire", out TitleSet.FactionTitleSet fts);
             TitleBehavior.options.TitleSet.factions.Add(kingdom.StringId, fts);

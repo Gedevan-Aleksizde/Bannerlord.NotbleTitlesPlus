@@ -22,10 +22,13 @@ namespace NobleTitlesPlus.MCMSettings
         public bool ShowOnMission { get; set; } = true;
         public bool ShowOnPartyTooltip { get; set; } = true;
         public bool SpouseTitle { get; private set; } = true;
+        public bool FixShokuhoClanName { get; set; } = false;
         public bool Tagging { get; set; } = false;
         public string FiefNameSeparator { get; set; } = ",";
         public string FiefNameSeparatorLast { get; set; } = "and";
         public int MaxFiefNames { get; set; } = 1;
+        public int DivisorCapDuke { get; set; } = 3;
+        public int ThresholdBaron { get; set; } = 3;
         public Dropdown<TextObject> KingdomTitleFormat { get; set; } = new(Enum.GetValues(typeof(KingdomTitleFormat)).OfType<KingdomTitleFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"kingdom_title_format_{x.ToString().ToLower()}")), 1);
         public bool UseUnitedTitle { get; set; } = false;
         public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(Inheritance)).OfType<Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
@@ -34,7 +37,7 @@ namespace NobleTitlesPlus.MCMSettings
     internal static class RuntimeSettings
     {
         private const string settingsId = SubModule.Name;
-        private static string SettingsName => $"{SubModule.DisplayName} v{SubModule.ModVersion} (assembly: v{SubModule.AssemblyVersion})";
+        private static string SettingsName => $"{SubModule.DisplayName} v{SubModule.ModVersion}/{SubModule.AssemblyVersion}";
         internal static ISettingsBuilder AddSettings(Options options, string saveid)
         {
             Util.Log.Print($">> [INFO] AddSettings Called. kindoms={Kingdom.All.Count}");
@@ -44,8 +47,10 @@ namespace NobleTitlesPlus.MCMSettings
                 .SetSubFolder(saveid)
                 .CreateGroup(FindTextShortMCM("general_category"), BuildGeneralGroupProperties)
                 .CreateGroup(FindTextShortMCM("fief_category"), BuildFormattingGroupProperties)
-                .CreateGroup(FindTextShortMCM("culture_default"), GenerateKingdomGroupPropertiesBuilder("default", 2))
-                .CreateGroup(FindTextShortMCM("minor_default"), GenerateMinorFactionGroupProperties("default", 3));
+                .CreateGroup(FindTextShortMCM("shokuho_category"), BuildShokuhoGroupProperties)
+                .CreateGroup(FindTextShortMCM("advanced_category"), BuildAdvancedGroupProperties)
+                .CreateGroup(FindTextShortMCM("culture_default"), GenerateKingdomGroupPropertiesBuilder("default", 4))
+                .CreateGroup(FindTextShortMCM("minor_default"), GenerateMinorFactionGroupProperties("default", 5));
             ;
 
             int j = 0;
@@ -163,20 +168,7 @@ namespace NobleTitlesPlus.MCMSettings
                     }),
                 probBuilder => probBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("kingdom_title_format_hint")).SetOrder(7)
                 )
-                .AddBool("use_united_empire_title", FindTextShortMCM("united_empire"),
-                new ProxyRef<bool>(
-                    () => options.UseUnitedTitle,
-                    value => options.UseUnitedTitle = value),
-                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("united_empire")).SetOrder(8)
-                )
-                .AddBool("VerboseLog", FindTextShortMCM("verbose"),
-                new ProxyRef<bool>(
-                    () => options.VerboseLog,
-                    value => options.VerboseLog = value),
-                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(9)
-                )
                 .SetGroupOrder(0);
-
             void BuildFormattingGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddBool(
                     "tagging", FindTextShortMCM("tagging"),
@@ -206,6 +198,58 @@ namespace NobleTitlesPlus.MCMSettings
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("size_hint")).SetOrder(3)
                     )
                 .SetGroupOrder(1);
+
+            void BuildShokuhoGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
+                .AddBool("fix_shokuho_clan_name", FindTextShortMCM("fix_shokuho_clan_name"), new ProxyRef<bool>(
+                    () => options.FixShokuhoClanName,
+                    value =>
+                    {
+                        if (value)
+                        {
+                            TitleBehavior.nomenclatura.UpdateAll(true);
+                        }
+                        options.FixShokuhoClanName = value;
+                    }
+                    ),
+                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("fix_shokuho_clan_name_hint")).SetOrder(0)
+                ).SetGroupOrder(2); ;
+
+            void BuildAdvancedGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
+                .AddInteger(
+                "duke_cap_divisor", FindTextShortMCM("duke_cap_divisor"), 1, 10, new ProxyRef<int>(
+                    () => options.DivisorCapDuke,
+                    value =>
+                    {
+                        options.DivisorCapDuke = value;
+                        TitleBehavior.nomenclatura.divisorDuke = value;
+                    }
+                    ),
+                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("duke_cap_divisor_hint")).SetOrder(0)
+                )
+                .AddInteger(
+                "baron_threshold", FindTextShortMCM("baron_threshold"), 1, 10, new ProxyRef<int>(
+                    () => options.ThresholdBaron,
+                    value =>
+                    {
+                        options.ThresholdBaron = value;
+                        TitleBehavior.nomenclatura.thretholdBaron = value;
+                    }
+                    ),
+                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("baron_threshold_hint")).SetOrder(1)
+                )
+                 .AddBool("use_united_empire_title", FindTextShortMCM("united_empire"),
+                new ProxyRef<bool>(
+                    () => options.UseUnitedTitle,
+                    value => options.UseUnitedTitle = value),
+                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("united_empire_hint")).SetOrder(8)
+                )
+                .AddBool("VerboseLog", FindTextShortMCM("verbose"),
+                new ProxyRef<bool>(
+                    () => options.VerboseLog,
+                    value => options.VerboseLog = value),
+                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(9)
+                )
+                .SetGroupOrder(3);
 
             /*
              * each kingdom's title format entries
@@ -306,13 +350,16 @@ namespace NobleTitlesPlus.MCMSettings
             ///
             void BuildPreset(ISettingsPresetBuilder builder, Options option, string preset)
             {
+                Dropdown<TextObject> a = new(Enum.GetValues(typeof(KingdomTitleFormat)).OfType<KingdomTitleFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"kingdom_title_format_{x.ToString().ToLower()}")), (int)KingdomTitleFormat.Default);
                 builder
                     .SetPropertyValue("fogOfWar", true)
                     .SetPropertyValue("encyclopedia", false) // TODO
                     .SetPropertyValue("tagging", MBTextManager.ActiveTextLanguage != "日本語")
                     .SetPropertyValue("fiefNameSeparator", FindTextShortMCM("separator_value"))
                     .SetPropertyValue("fiefNameSeparatorLast", FindTextShortMCM("separator_last_value"))
-                    .SetPropertyValue("maxFiefName", 1);
+                    .SetPropertyValue("maxFiefName", 1)
+                    .SetPropertyValue("kingdom_title_format", a)
+                    .SetPropertyValue("fix_shokuho_clan_name", false);
                 FillFactionPropertyValues(preset, "default", "default");
                 FillMinorFactionPropertyValues(preset, "default");
                 foreach (String cultureId in Kingdom.All.Select(k => k.Culture.StringId).Distinct())

@@ -8,8 +8,10 @@
 		<string id="NTP.Sys002" text="{DisplayName} Loaded"/>
 		<string id="NTP.Sys003" text="Error loading {DisplayName}: Disabled!"/>
 		<string id="NTP.MCMGGEN" text="General"/>
+		<string id="NTP.MCMGShokuho" text="Shokuhō-specific"/>
 		<string id="NTP.MCMyour" text="Your Kingdom" />
 		<string id="NTP.MCMGFOR" text="Fief Display Format"/>
+		<string id="VHFbeS8l6f" text="Advansed"/>
 		<string id="NTP.MCMGDEF" text="Default Titles"/>
 		<string id="NTP.MCMGMinor" text="Minor Faction Default Titles"/>
 		<string id="NTP.MCMFOWHint" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
@@ -26,6 +28,8 @@
 		<string id="NTP.MCMVerboseHint" text="(For debugging) Output extra information to the log file"/>
 		<string id="NTP.MCMTag" text="Tagging"/>
 		<string id="NTP.MCMTagHint" text="Tagging fief names. Basically enabling recommended if you are European langauge user."/>
+		<string id="z6ja8jheFp" text="Fix Shokuho Clan Names"/>
+		<string id="uv7HHkFM63" text="Overwrite the clan names with more easily identifiable and less confusing names. This feature is assumed to use with the Shokuhō. **This change affect the save and can't restore.**"/>
 		<string id="NTP.MCMSep" text="Fief Name Separator"/>
 		<string id="NTP.MCMSepHint" text="Separator for Fief Names."/>
 		<string id="NTP.MCMSepLast" text="Fief Name Separator Last"/>
@@ -40,6 +44,10 @@
 		<string id="NTP.MCMHeirAdult" text="Adult"/>
 		<string id="NTP.MCMHeirElder" text="Elder"/>
 		<string id="NTP.MCMHeirHint" text="(WIP) Law of heir to the throne. Primogeniture: the ruler's oldest son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule."/>
+		<string id="1QFAqlDCiT" text="Duke Capacity Divisor"/>
+		<string id="0PCRoAuCVu" text="The number of dukes is determined as (number of clan leaders without king)/(this parameter). The default value is 3."/>
+		<string id="a4fLlIVtff" text="Baron Threshold"/>
+		<string id="y1UkWUlP0W" text="Each lord title is determined as the baron class (rank 4) when his/her fief score is less than this parameter. The default value is 3."/>
 		<string id="NTP.landless" text="Landless" />
 		<string id="NTP.MCMRank1M" text="King (Rank 1)"/>
 		<string id="NTP.MCMRank1MHint" text="Title format of the male monorch"/>
