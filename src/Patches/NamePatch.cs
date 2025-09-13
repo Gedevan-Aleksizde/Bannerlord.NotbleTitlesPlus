@@ -58,10 +58,10 @@ namespace NobleTitlesPlus.Patches
             return name;
         }
         [HarmonyPostfix]
-        private static void ReplaceNameFormat(Hero __instance, ref TextObject ____name, ref TextObject __result)
+        private static void ReplaceNameFormat(Hero __instance, ref TextObject ____name, ref TextObject ____firstName, ref TextObject __result)
         {
-
-            __result = ReplaceName(__instance, ____name);
+            if (__instance.IsWanderer) { return; }
+            __result = ReplaceName(__instance, ____firstName);
         }
     }
     [HarmonyPatch(typeof(Hero), nameof(Hero.FirstName), MethodType.Getter)]
@@ -71,6 +71,7 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void ReplaceFirstNameFormat(Hero __instance, ref TextObject ____firstName, TextObject __result)
         {
+            if (__instance.IsWanderer) { return; }
             __result = HeroNameChanger.ReplaceName(__instance, ____firstName);
         }
     }
