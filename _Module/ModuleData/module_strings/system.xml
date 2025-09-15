@@ -9,11 +9,6 @@
 	<string id="ntp_mcm.general" text="{=NTP.MCMGGEN}General"/>
 	<string id="ntp_mcm.fallback_player" text="{=NTP.MCMyour}Your Kingdom"/>
 	<string id="ntp_mcm.fow_hint" text="{=NTP.MCMFOWHint}Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
-	<string id="ntp_mcm.encyclo_hint" text="{=NTP.MCMencyclopediaHint}Current Inavailable"/>
-	<string id="ntp_mcm.show_conversation_hint" text="{=raU1kxa6E}Apply the title format to the top of conversation textbox."/>
-	<string id="ntp_mcm.show_mission_hint" text="{=oWD7Vn3fg}Apply the title format to the popup nameplate in the mission scene."/>
-	<string id="ntp_mcm.show_settlement_hint" text="{=5KdbtSaqn}Apply the title format to the names on the settlement Panel UI."/>
-	<string id="ntp_mcm.show_partytt_hint" text="{=s5BEIPDa7}Apply the title format to the names on the party tooltip in the campaign map."/>
 	<string id="ntp_mcm.verbose" text="{=NTP.MCMVerbose}Verbose Log"/>
 	<string id="ntp_mcm.verbose_hint" text="{=NTP.MCMVerboseHint}(For debugging) Output extra information to the log file"/>
 	<string id="ntp_mcm.fix_shokuho_clan_name" text="{=z6ja8jheFp}Fix Shokuho Clan Names"/>
@@ -88,13 +83,6 @@
 	<string id="ntp_mcm.CrownF_hint" text="{=NTP.MCMCrownFHint}The female succession's title format"/>
 	<string id="ntp_mcm.RoyalM_hint" text="{=NTP.MCMRoyalMHint}A male ruler clan menber's title"/>
 	<string id="ntp_mcm.RoyalF_hint" text="{=NTP.MCMRoyalFHint}A female ruler clan menber's title"/>
-	
-	<string id="ntp_mcm.kingdom_title_format" text="{=LLnutRN25a}Kingdom  Title Format" />
-	<string id="ntp_mcm.kingdom_title_format_hint" text="{=UFoIXjcKIT}In the vanilla, the kingdom names are shown in short or full form randomly. This option force the titles you choose." />
-	<string id="ntp_mcm.kingdom_title_format_default" text="{=tlzTJxQE8c}Default" />
-	<string id="ntp_mcm.kingdom_title_format_abbreviated" text="{=FXJSqQP5O3}Abbreviated" />
-	<string id="ntp_mcm.kingdom_title_format_full" text="{=n1ZT0ApGAq}Formal" />
-	
 	<string id="ntp_mcm.united_empire" text="{=S40p9P6Slm}Change the Imperial title when reunited" />
 	<string id="ntp_mcm.united_empire_hint" text="{=aRh2YvgeuG}If enabled, surviving Empire titles are overwrtten with the common Imperial title when the reunion is succeeded." />
 	

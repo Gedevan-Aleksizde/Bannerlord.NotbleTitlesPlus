@@ -15,15 +15,6 @@
 		<string id="NTP.MCMGDEF" text="Default Titles"/>
 		<string id="NTP.MCMGMinor" text="Minor Faction Default Titles"/>
 		<string id="NTP.MCMFOWHint" text="Enable Fog of War to titles; titles are not shown unless you have met the hero."/>
-		<string id="NTP.MCMencyclopediaHint" text="Current Inavailable"/>
-		<string id="=LMkm6aToS" text="Show Titles On Conversation" />
-		<string id="raU1kxa6E" text="Apply the title format to the top of conversation textbox." />
-		<string id="0vnxDT91U" text="Show Titles On Mission Map" />
-		<string id="oWD7Vn3fg" text="Apply the title format to the popup nameplate in the mission scene." />
-		<string id="SF9DCetBr" text="Show Titles On The Settlement UI" />
-		<string id="5KdbtSaqn" text="Apply the title format to the names on the settlement Panel UI." />
-		<string id="B5O6vBo6Z" text="Show Titles On The Party Tooltip" />
-		<string id="s5BEIPDa7" text="Apply the title format to the names on the party tooltip in the campaign map." />
 		<string id="NTP.MCMVerbose" text="Verbose Log"/>
 		<string id="NTP.MCMVerboseHint" text="(For debugging) Output extra information to the log file"/>
 		<string id="NTP.MCMTag" text="Tagging"/>
@@ -94,12 +85,6 @@
 		<string id="NTP.MCMMinorFallbackF" text="Factionllback Female"/>
 		<string id="NTP.MCMMinorFallbackFHint" text="Title format of female hero who doesn't serve for any reason. This format is also used for an unmet hero when enabling the fog of war."/>
 		<string id="bWMiFgw5ac" text="Error 001: Kingdom Name Not Found"/>
-		
-		<string id="LLnutRN25a" text="Kingdom  Title Format" />
-		<string id="UFoIXjcKIT" text="In the vanilla, the kingdom names are shown in short or full form randomly. This option force the titles you choose. To non-English players: Due to the error by the vanilla, I asigned them with new localization ID. So, you need to translate them." />
-		<string id="tlzTJxQE8c" text="Default" />
-		<string id="FXJSqQP5O3" text="Abbreviated" />
-		<string id="n1ZT0ApGAq" text="Formal" />
 		<string id="S40p9P6Slm" text="Change the Imperial title when reunited" />
 		<string id="aRh2YvgeuG" text="If enabled, surviving Empire titles are overwrtten with the common Imperial title when the reunion is succeeded." />
  	</strings>

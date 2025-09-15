@@ -52,12 +52,13 @@ namespace NobleTitlesPlus.MCMSettings
                 .CreateGroup(FindTextShortMCM("culture_default"), GenerateKingdomGroupPropertiesBuilder("default", 4))
                 .CreateGroup(FindTextShortMCM("minor_default"), GenerateMinorFactionGroupProperties("default", 5));
             ;
+            const int orderoffset = 6;
 
             int j = 0;
             foreach (string cultureId in options.TitleSet.cultures.Keys.Where(x => x != "default"))
             {
                 string name = GameTexts.FindText("str_faction_formal_name_for_culture", cultureId).ToString();
-                builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(cultureId, 4 + j)); ;
+                builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(cultureId, orderoffset + j)); ;
                 Util.Log.Print($">> [INFO] Category {name}({cultureId}, culture) added to MCM options");
                 j++;
             }
@@ -65,14 +66,14 @@ namespace NobleTitlesPlus.MCMSettings
             {
                 // TODO: how to identify player kingdom
                 string name = Kingdom.All.Where(k => k.StringId == "new_kingdom")?.First()?.Name?.ToString() ?? FindTextShortMCM("error_kingdom");
-                builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder("new_kingdom", 4 + j, false)); ;
+                builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder("new_kingdom", orderoffset + j, false)); ;
                 Util.Log.Print($">> [INFO] Category {name}(new_kingdom, faction) added to MCM options");
                 j++;
             }
             foreach (string kingdomId in options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
             {
                 string name = Kingdom.All.Where(k => k.StringId == kingdomId)?.First()?.InformalName.ToString() ?? FindTextShortMCM("error_kingdom");
-                builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(kingdomId, 4 + j, false)); ;
+                builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(kingdomId, orderoffset + j, false)); ;
                 Util.Log.Print($">> [INFO] Category {name}({kingdomId}, faction) added to MCM options");
                 j++;
             }
@@ -80,7 +81,7 @@ namespace NobleTitlesPlus.MCMSettings
             foreach (string clanId in options.TitleSet.minorFactions.Keys.Where(x => x != "default"))
             {
                 string name = clans.Where(c => c.StringId == clanId).First().Name.ToString(); // TODO
-                builder.CreateGroup(name, GenerateMinorFactionGroupProperties(clanId, 4 + j));
+                builder.CreateGroup(name, GenerateMinorFactionGroupProperties(clanId, orderoffset + j));
                 Util.Log.Print($">> [INFO] Category {name}({clanId}, minor faction) added to MCM options");
                 j++;
             }
@@ -102,71 +103,11 @@ namespace NobleTitlesPlus.MCMSettings
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("fow_hint")).SetOrder(0)
                     )
                 // TODO
-                /*
-                .AddBool("encyclopedia", "{=MxmOWsHj}Encyclopedia",
-                    new ProxyRef<bool>(
-                        () => options.Encyclopedia,
-                        value => options.Encyclopedia = value),
-                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("encyclo_hint")).SetOrder(1)
-                    )
-                .AddBool("showOnConversation", "{=LMkm6aToS}Show Titles On Conversation",
-                    new ProxyRef<bool>(
-                        () => options.ShowOnConversation,
-                        value => options.ShowOnConversation = value),
-                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_conversation_hint")).SetOrder(2)
-                    )
-                .AddBool("showOnMission", "{=0vnxDT91U}Show Titles On Mission Map",
-                    new ProxyRef<bool>(
-                        () => options.ShowOnMission,
-                        value => options.ShowOnMission = value),
-                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_mission_hint")).SetOrder(3)
-                    )
-                .AddBool("showOnSettlementUI", "{=SF9DCetBr}Show Titles On The Settlement UI",
-                    new ProxyRef<bool>(
-                        () => options.ShowOnSettlementUI,
-                        value => options.ShowOnSettlementUI = value),
-                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_settlement_hint")).SetOrder(4)
-                    )
-                .AddBool("showOnPartyTooltip", "{=B5O6vBo6Z}Show Titles On The Party Tooltip",
-                    new ProxyRef<bool>(
-                        () => options.ShowOnPartyTooltip,
-                        value => options.ShowOnPartyTooltip = value),
-                    propbuilder => propbuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("show_partytt_hint")).SetOrder(5)
-                    )
-                */
                 .AddDropdown("heir", FindTextShortMCM("heir"), 1,
                     new ProxyRef<Dropdown<TextObject>>(
                         () => options.Inheritance,
                         value => options.Inheritance = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(6)
-                )
-                .AddDropdown("kingdom_title_format", FindTextShortMCM("kingdom_title_format"), 0,
-                new ProxyRef<Dropdown<TextObject>>(
-                    () => options.KingdomTitleFormat,
-                    value =>
-                    {
-                        options.KingdomTitleFormat = value;
-
-                        switch ((KingdomTitleFormat)value.SelectedIndex)
-                        {
-                            case KingdomTitleFormat.Abbreviated:
-                                Util.Log.Print("[DEBUG] Kingdom format is abbreviated");
-                                SubModule.harmony?.PatchCategory("KingdomAbbreviated");
-                                SubModule.harmony?.UnpatchCategory("KingdomFull");
-                                break;
-                            case KingdomTitleFormat.Full:
-                                Util.Log.Print("[DEBUG] Kingdom format is full");
-                                SubModule.harmony?.PatchCategory("KingdomFull");
-                                SubModule.harmony?.UnpatchCategory("KingdomAbbreviated");
-                                break;
-                            case KingdomTitleFormat.Default:
-                                Util.Log.Print("[DEBUG] Kingdom format is default");
-                                SubModule.harmony?.UnpatchCategory("KingdomFull");
-                                SubModule.harmony?.UnpatchCategory("KingdomAbbreviated");
-                                break;
-                        }
-                    }),
-                probBuilder => probBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("kingdom_title_format_hint")).SetOrder(7)
                 )
                 .SetGroupOrder(0);
             void BuildFormattingGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
@@ -237,12 +178,51 @@ namespace NobleTitlesPlus.MCMSettings
                     ),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("baron_threshold_hint")).SetOrder(1)
                 )
-                 .AddBool("use_united_empire_title", FindTextShortMCM("united_empire"),
+                /*Canceled. the native implementation is too messy */
+                /*
+                .AddBool("encyclopedia", FindTextShortMCM("encyclo"),
+                    new ProxyRef<bool>(
+                        () => options.Encyclopedia,
+                        value => options.Encyclopedia = value),
+                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("encyclo_hint")).SetOrder(1)
+                    )
+                */
+                .AddBool("use_united_empire_title", FindTextShortMCM("united_empire"),
                 new ProxyRef<bool>(
                     () => options.UseUnitedTitle,
                     value => options.UseUnitedTitle = value),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("united_empire_hint")).SetOrder(8)
                 )
+                /*Canceled. the native implementation is too messy */
+                /*
+                .AddDropdown("kingdom_title_format", FindTextShortMCM("kingdom_title_format"), 0,
+                new ProxyRef<Dropdown<TextObject>>(
+                    () => options.KingdomTitleFormat,
+                    value =>
+                    {
+                        options.KingdomTitleFormat = value;
+
+                        switch ((KingdomTitleFormat)value.SelectedIndex)
+                        {
+                            case KingdomTitleFormat.Abbreviated:
+                                Util.Log.Print("[DEBUG] Kingdom format is abbreviated");
+                                SubModule.harmony?.PatchCategory("KingdomAbbreviated");
+                                SubModule.harmony?.UnpatchCategory("KingdomFull");
+                                break;
+                            case KingdomTitleFormat.Full:
+                                Util.Log.Print("[DEBUG] Kingdom format is full");
+                                SubModule.harmony?.PatchCategory("KingdomFull");
+                                SubModule.harmony?.UnpatchCategory("KingdomAbbreviated");
+                                break;
+                            case KingdomTitleFormat.Default:
+                                Util.Log.Print("[DEBUG] Kingdom format is default");
+                                SubModule.harmony?.UnpatchCategory("KingdomFull");
+                                SubModule.harmony?.UnpatchCategory("KingdomAbbreviated");
+                                break;
+                        }
+                    }),
+                probBuilder => probBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("kingdom_title_format_hint")).SetOrder(7)
+                ) */
                 .AddBool("VerboseLog", FindTextShortMCM("verbose"),
                 new ProxyRef<bool>(
                     () => options.VerboseLog,
