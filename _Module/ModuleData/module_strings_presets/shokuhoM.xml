@@ -36,7 +36,6 @@
 	<string id="ntp_title_set.SHOM_1M_uesugi" text="{=NTP.SHOM1M_uesugi}Kantou-kanrei {CLAN_SHORT} {NAME}" /> <!-- a regent or agent of Kantou-Kubou, the Vice Shogun in Muromachi period -->
 	<string id="ntp_title_set.SHOM_1M_utsunomiya" text="{=NTP.SHOM1M_utsunomiya}{CLAN_SHORT} {NAME}, Protector of Shimotsuke Province" />
 	<string id="ntp_title_set.SHOM_1M_rokkaku" text="{=NTP.SHOM1M_rokkaku}{CLAN_SHORT} {NAME}, Protector of Oumi Province" />
-	<string id="ntp_title_set.SHOM_1M_mori" text="{=NTP.SHOM1M_mori}{CLAN_SHORT} {NAME}, Vice Master of the Horse" />  <!-- Umanokami, a vice manager of Imperial horse stable. Note that Shogun is also conventionally appointed to the cief manager. -->
 	<string id="ntp_title_set.SHOM_1M_ikko_shu" text="{=NTP.SHOM1M_ikko_shu}High Priest {CLAN_SHORT} {NAME}" /> <!-- Hossu, the chief priest of Honganji sect -->
 	<string id="ntp_title_set.SHOM_1F_ikko_shu" text="{=NTP.SHOM1F_ikko_shu}Lady {CLAN_SHORT} {NAME}" />
 </strings>

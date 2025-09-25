@@ -41,7 +41,6 @@
 		<string id="NTP.SHO1M_uesugi" text="關東管領{NAME}" /> 
 		<string id="NTP.SHO1M_utsunomiya" text="下野守護{NAME}" /> 
 		<string id="NTP.SHO1M_rokkaku" text="近江守護{NAME}" /> 
-		<string id="NTP.SHO1M_mori" text="右馬頭{NAME}" /> 
 		<string id="NTP.SHO1M_ikko_shu" text="法主{NAME}" /> 
 		<string id="NTP.SHO1F_ikko_shu" text="{NAME}夫人" /> 
 		<!-- #endregion -->

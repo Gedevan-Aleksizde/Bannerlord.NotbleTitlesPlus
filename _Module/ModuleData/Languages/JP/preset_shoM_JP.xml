@@ -41,7 +41,6 @@
 		<string id="NTP.SHOM1M_uesugi" text="關東管領{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_utsunomiya" text="下野守護{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_rokkaku" text="近江守護{CLAN_SHORT}{NAME}" /> 
-		<string id="NTP.SHOM1M_mori" text="右馬頭{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1M_ikko_shu" text="法主{CLAN_SHORT}{NAME}" /> 
 		<string id="NTP.SHOM1F_ikko_shu" text="{CLAN_SHORT}{NAME}夫人" /> 
 	</strings>

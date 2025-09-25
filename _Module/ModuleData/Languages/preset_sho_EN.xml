@@ -40,7 +40,6 @@
 		<string id="NTP.SHO1M_uesugi" text="Kantou-kanrei {NAME}" /> 
 		<string id="NTP.SHO1M_utsunomiya" text="{NAME}, Protector of Shimotsuke Province" /> 
 		<string id="NTP.SHO1M_rokkaku" text="{NAME}, Protector of Oumi Province" /> 
-		<string id="NTP.SHO1M_mori" text="{NAME}, Vice Master of the Horse" /> 
 		<string id="NTP.SHO1M_ikko_shu" text="High Priest {NAME}" /> 
 		<string id="NTP.SHO1F_ikko_shu" text="Lady {NAME}" /> 
 	</strings>

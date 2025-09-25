@@ -41,7 +41,6 @@
 		<string id="NTP.SHOM1M_uesugi" text="Kantou-kanrei {CLAN_SHORT} {NAME}" /> 
 		<string id="NTP.SHOM1M_utsunomiya" text="{CLAN_SHORT} {NAME}, Protector of Shimotsuke Province" /> 
 		<string id="NTP.SHOM1M_rokkaku" text="{CLAN_SHORT} {NAME}, Protector of Oumi Province" /> 
-		<string id="NTP.SHOM1M_mori" text="{CLAN_SHORT} {NAME}, Vice Master of the Horse" /> 
 		<string id="NTP.SHOM1M_ikko_shu" text="High Priest {CLAN_SHORT} {NAME}" /> 
 		<string id="NTP.SHOM1F_ikko_shu" text="Lady {CLAN_SHORT} {NAME}" /> 
   </strings>
