@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using MCM.Abstractions.Base.PerSave;
+using MCM.Abstractions.FluentBuilder;
 using NobleTitlesPlus.MCMSettings;
 using System;
 using System.IO;
@@ -22,7 +23,6 @@ namespace NobleTitlesPlus
             base.OnSubModuleLoad();
             Util.EnableLog = true;
             Util.EnableTracer = false;
-            harmony = new(SubModule.HarmonyDomain);
         }
         protected override void OnBeforeInitialModuleScreenSetAsRoot()
         {
@@ -41,29 +41,12 @@ namespace NobleTitlesPlus
                         $"003 {new TextObject("{=NTP.Sys003}Error loading {DisplayName} : Disabled!").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})"
                         ));
         }
-        public override void OnAfterGameInitializationFinished(Game game, object starterObject)
-        {
-            Util.Log.Print($">> [DEBUG] OnAfterGameInitializationFinished: kingdom={Kingdom.All.Count}");
-            if (game.GameType is Campaign c)
-            {
-                System.Diagnostics.Debug.Assert(settings is null);
-                var builder = RuntimeSettings.AddSettings(Options!, c.UniqueGameId);
-                settings = builder.BuildAsPerSave();
-                settings?.Register();
-                harmony?.PatchCategory("NameChangerCore");
-                harmony?.PatchCategory("Conversation");
-                harmony?.PatchCategory("PartyPopUp");
-                harmony?.PatchCategory("SettlementPanel");
-                harmony?.PatchCategory("Encyclopedia");
-                harmony?.PatchCategory("Why");
-            }
-            base.OnAfterGameInitializationFinished(game, starterObject);
-        }
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
+            Util.Log.Print($">> [DEBUG] OnGameStart: kingdom={Kingdom.All.Count}");
             if (!this.canceled && game.GameType is Campaign)
             {
-                Options ??= new();
+                Options = new();
                 ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior(Options));
                 Util.Log.Print($">> [DEBUG] OnGameStart: kingdom={Kingdom.All.Count}");
             }
@@ -73,27 +56,66 @@ namespace NobleTitlesPlus
             }
             base.OnGameStart(game, starterObject);
         }
+        public override void OnGameLoaded(Game game, object initializerObject)
+        {
+            Util.Log.Print($">> [DEBUG] OnGameLoaded: kingdom={Kingdom.All.Count}");
+            base.OnGameLoaded(game, initializerObject);
+        }
+        public override void OnGameInitializationFinished(Game game)
+        {
+            Util.Log.Print($">> [DEBUG] OnGameInitializationFinished: kingdom={Kingdom.All.Count}");
+            if (game.GameType is Campaign c)
+            {
+                System.Diagnostics.Debug.Assert(settings is null);
+                settings?.Unregister();
+                ISettingsBuilder builder = RuntimeSettings.CreateSettings(Options!, c.UniqueGameId);
+                settings = builder.BuildAsPerSave();
+                settings?.Register();
+
+                harmony.PatchCategory("NameChangerCore");
+                harmony.PatchCategory("Conversation");
+                harmony.PatchCategory("PartyPopUp");
+                harmony.PatchCategory("SettlementPanel");
+                harmony.PatchCategory("Encyclopedia");
+                Util.Log.Print($">> [DEBUG] harmony patched");
+                harmony.PatchCategory("Why");
+            }
+            base.OnGameInitializationFinished(game);
+            Util.Log.Print($">> [DEBUG] OnGameInitializationFinished finished");
+        }
+        public override void OnAfterGameInitializationFinished(Game game, object starterObject)
+        {
+            Util.Log.Print($">> [DEBUG] OnAfterGameInitializationFinished: kingdom={Kingdom.All.Count}");
+            base.OnAfterGameInitializationFinished(game, starterObject);
+        }
         public override void OnGameEnd(Game game)
         {
+            Util.Log.Print($">> [DEBUG] OnGameEnd: kingdom={Kingdom.All.Count}");
             if (game.GameType is Campaign)
             {
-                Util.Log.Print($">> [DEBUG] OnGameEnd: kingdom={Kingdom.All.Count}");
                 var oldSettings = settings;
                 oldSettings?.Unregister();
+
                 settings = null;
-                Options = null;
-                harmony?.UnpatchAll();
+                Options = new();
             }
             else
             {
                 Util.Log.Print($">> [DEBUG] OnGameEnd: not Campaign");
             }
+            // harmony.UnpatchAll(); // why UnpatchAll doesn't unpatch all??
+            harmony.UnpatchCategory("NameChangerCore");
+            harmony.UnpatchCategory("Conversation");
+            harmony.UnpatchCategory("PartyPopUp");
+            harmony.UnpatchCategory("SettlementPanel");
+            harmony.UnpatchCategory("Encyclopedia");
+            Util.Log.Print($">> [DEBUG] harmony unpatched");
             base.OnGameEnd(game);
         }
 
         private bool hasLoaded;
         private bool canceled;
-        internal static Harmony? harmony;
+        internal static Harmony harmony = new(HarmonyDomain);
         public static string ModVersion
         {
             get
@@ -123,7 +145,7 @@ namespace NobleTitlesPlus
         public const string Name = "NobleTitlePlus";
         public const string DisplayName = "Noble Titles Plus";
         public static readonly string modFolderName = Directory.GetParent(Assembly.GetExecutingAssembly().Location).Parent.Parent.Name;
-        public static readonly string HarmonyDomain = "com.skatagiri.bannerlord." + Name.ToLower();
+        public const string HarmonyDomain = "com.skatagiri.bannerlord.NobleTitlePlus";
         internal static readonly Color ImportantTextColor = Color.FromUint(0x00F16D26); // orange
         private FluentPerSaveSettings? settings;
         public Options? Options { get; private set; }

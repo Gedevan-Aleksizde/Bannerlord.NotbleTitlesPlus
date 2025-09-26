@@ -162,7 +162,7 @@ namespace NobleTitlesPlus.DB
             foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
             {
                 this.minorFactions.Add(c.StringId, GlobalDefaultMinorFactionValue);
-                if (TitleBehavior.options.VerboseLog) Util.Log.Print($">> [DEBUG] Intialized title set  for minor faction {c.StringId}");
+                if (TitleBehavior.Options.VerboseLog) Util.Log.Print($">> [DEBUG] Intialized title set  for minor faction {c.StringId}");
             }
         }
         public void TmpDebug()
@@ -703,7 +703,7 @@ namespace NobleTitlesPlus.DB
                     string normalized;
                     if (string.IsNullOrWhiteSpace(titleFormat))
                     {
-                        if (TitleBehavior.options?.VerboseLog ?? true) Util.Log.Print($">> [DEBUG] Title format is blank");
+                        if (TitleBehavior.Options?.VerboseLog ?? true) Util.Log.Print($">> [DEBUG] Title format is blank");
                         normalized = "";
                     }
                     else

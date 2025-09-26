@@ -34,17 +34,17 @@ namespace NobleTitlesPlus.Patches
                 TextObject title = new("{NAME}");
                 if (!hero.IsAlive)
                 {
-                    title = TitleBehavior.options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
+                    title = TitleBehavior.Options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
                 }
-                else if ((hero.IsKnownToPlayer || !TitleBehavior.options.FogOfWar || hero.IsFactionLeader))
+                else if ((hero.IsKnownToPlayer || !TitleBehavior.Options.FogOfWar || hero.IsFactionLeader))
                 {
                     bool hasRank = TitleBehavior.nomenclatura.HeroRank.TryGetValue(hero, out TitleRank rank);
 
-                    title = TitleBehavior.options.TitleSet.GetMatchedTitle(hero, hasRank ? rank : TitleRank.None);
+                    title = TitleBehavior.Options.TitleSet.GetMatchedTitle(hero, hasRank ? rank : TitleRank.None);
                 }
                 else
                 {
-                    title = TitleBehavior.options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
+                    title = TitleBehavior.Options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
                 }
                 title = title.SetTextVariable("NAME", name)
                             .SetTextVariable("CLAN", hero.Clan?.Name)
@@ -153,8 +153,8 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
         {
-            Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Name}");
-            __result = TitleBehavior.options.TitleSet.GetMatchedTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
+            Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Culture.StringId}, {__instance.Name}");
+            __result = TitleBehavior.Options.TitleSet.GetMatchedTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
         }
     }
     /* used by SettlementMenuOverlayVM.CharacterList and so on*/
