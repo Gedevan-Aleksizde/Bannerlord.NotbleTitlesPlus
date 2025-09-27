@@ -26,11 +26,11 @@ namespace NobleTitlesPlus.Patches
             {
                 if (hero.Clan?.StringId == null)
                 {
-                    Util.Log.Print($">> [WARNING] Clan is null: when {name} (clan={hero.Clan?.Name}) called");
+                    Util.Log.Print($"Clan is null: when {name} (clan={hero.Clan?.Name}) called", LogCategory.Warning);
                 }
                 if (hero?.IsMinorFactionHero == null)
                 {
-                    Util.Log.Print($">> [WARNING] isMinorFactionHero is null: when {name} (clan={hero.Clan?.Name}) called");
+                    Util.Log.Print($"isMinorFactionHero is null: when {name} (clan={hero.Clan?.Name}) called", LogCategory.Warning);
                 }
                 TextObject title = new("{NAME}");
                 if (!hero.IsAlive)

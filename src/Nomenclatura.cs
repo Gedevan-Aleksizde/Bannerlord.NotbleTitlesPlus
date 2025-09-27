@@ -69,7 +69,7 @@ namespace NobleTitlesPlus
         {
             if (MCMRuntimeSettings.Instance is null)
             {
-                Util.Log.Print("[WARNING] MCM setting instance is null at UpdateFielFList.");
+                Util.Log.Print("MCM setting instance is null at UpdateFielFList.", LogCategory.Warning);
                 return;
             }
             // TODO: keeping TextObject causes replacing wrong name, very weird.
@@ -120,7 +120,7 @@ namespace NobleTitlesPlus
         {
             if (MCMRuntimeSettings.Instance is null)
             {
-                Util.Log.Print("[WARNING] MCM setting instance is null at UpdateClanName.");
+                Util.Log.Print("MCM setting instance is null at UpdateClanName.", LogCategory.Warning);
                 return;
             }
             TextObject shortName;
@@ -159,10 +159,10 @@ namespace NobleTitlesPlus
         {
             if (MCMRuntimeSettings.Instance is null)
             {
-                Util.Log.Print("[WARNING] MCM setting instance is null at AddTitlesToKingdomHeroes.");
+                Util.Log.Print("MCM setting instance is null at AddTitlesToKingdomHeroes.", LogCategory.Warning);
                 return;
             }
-            List<string> tr = new() { $">> [INFO] Adding noble titles to \"{kingdom.Name}\" (ID={kingdom.StringId}) (culture={kingdom.Culture.StringId})..." };
+            List<string> tr = new() { $"Adding noble titles to \"{kingdom.Name}\" (ID={kingdom.StringId}) (culture={kingdom.Culture.StringId})..." };
             // Common Nobles, not a Clan Leader
             List<Hero> commonNobles = kingdom.Clans
                 .Where(c =>
@@ -285,12 +285,12 @@ namespace NobleTitlesPlus
         {
             if (MCMRuntimeSettings.Instance is null)
             {
-                Util.Log.Print("[WARNING] MCM setting instance is null at OverwriteWithImperialFormats.");
+                Util.Log.Print("MCM setting instance is null at OverwriteWithImperialFormats.", LogCategory.Warning);
                 return;
             }
             else
             {
-                Util.Log.Print(">> [INFO] The Empire is reunited. The suriving faction inherit legitimate Imperial titles.");
+                Util.Log.Print("The Empire is reunited. The suriving faction inherit legitimate Imperial titles.", LogCategory.Info);
             }
             kingdom.ChangeKingdomName(GameTexts.FindText("str_faction_formal_name_for_culture", "empire"), GameTexts.FindText("str_faction_informal_name_for_culture", "empire"));
             MCMRuntimeSettings.Instance.Options.TitleSet.cultures.TryGetValue("empire", out TitleSet.FactionTitleSet fts);
@@ -304,7 +304,7 @@ namespace NobleTitlesPlus
         {
             foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction && (!c.Leader?.IsHumanPlayerCharacter ?? true)))
             {
-                List<string> tr = new() { $">> [INFO] Adding minor faction titles to {c.Name} ({c.StringId})..." };
+                List<string> tr = new() { $"Adding minor faction titles to {c.Name} ({c.StringId})..." };
                 foreach (Hero h in c.Heroes)
                 {
                     if (h.IsAlive)
@@ -321,7 +321,7 @@ namespace NobleTitlesPlus
                         }
                     }
                 }
-                if (MCMRuntimeSettings.Instance?.Options?.VerboseLog ?? true) Util.Log.Print(tr);
+                if (MCMRuntimeSettings.Instance?.Options?.VerboseLog ?? true) Util.Log.Print(tr, LogCategory.Info);
             }
         }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);

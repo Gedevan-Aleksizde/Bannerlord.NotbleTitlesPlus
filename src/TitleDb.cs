@@ -34,7 +34,6 @@ namespace NobleTitlesPlus.DB
             this.InitMinorFactionTitles(AssignMode.Assign);
             this.ReadJsonShokuhoCastleProvince();
             this.ReadJsonShokuhoClanNames();
-            // this.TmpDebug();
         }
         public void InitCultureTitles(AssignMode mode)
         {
@@ -170,25 +169,25 @@ namespace NobleTitlesPlus.DB
         {
             foreach (string keys in this.cultures.Keys)
             {
-                Util.Log.Print($"Calture key: {keys}");
+                Util.Log.Print($"Calture key: {keys}", LogCategory.Debug);
                 for (int i = 1; i <= 5; i++)
                 {
-                    Util.Log.Print($"King = ({this.cultures[keys].GetTitleRaw(true, (TitleRank)i)}, {this.cultures[keys].GetTitleRaw(false, (TitleRank)i)})");
+                    Util.Log.Print($"King = ({this.cultures[keys].GetTitleRaw(true, (TitleRank)i)}, {this.cultures[keys].GetTitleRaw(false, (TitleRank)i)})", LogCategory.Debug);
                 }
             }
             foreach (string keys in this.factions.Keys)
             {
-                Util.Log.Print($"Faction key: {keys}");
+                Util.Log.Print($"Faction key: {keys}", LogCategory.Debug);
                 for (int i = 1; i <= 5; i++)
                 {
-                    Util.Log.Print($"King = ({this.factions[keys].GetTitleRaw(true, (TitleRank)i)}, {this.factions[keys].GetTitleRaw(false, (TitleRank)i)})");
+                    Util.Log.Print($"King = ({this.factions[keys].GetTitleRaw(true, (TitleRank)i)}, {this.factions[keys].GetTitleRaw(false, (TitleRank)i)})", LogCategory.Debug);
                 }
             }
             foreach (string keys in this.minorFactions.Keys)
             {
-                Util.Log.Print($"Minor Factions key: {keys}");
-                Util.Log.Print($"Leader = ({this.minorFactions[keys].GetTitleRaw(true, TitleRank.King)}, {this.minorFactions[keys].GetTitleRaw(false, TitleRank.King)})");
-                Util.Log.Print($"Member = ({this.minorFactions[keys].GetTitleRaw(true, TitleRank.Noble)}, {this.minorFactions[keys].GetTitleRaw(false, TitleRank.Noble)})");
+                Util.Log.Print($"Minor Factions key: {keys}", LogCategory.Debug);
+                Util.Log.Print($"Leader = ({this.minorFactions[keys].GetTitleRaw(true, TitleRank.King)}, {this.minorFactions[keys].GetTitleRaw(false, TitleRank.King)})", LogCategory.Debug);
+                Util.Log.Print($"Member = ({this.minorFactions[keys].GetTitleRaw(true, TitleRank.Noble)}, {this.minorFactions[keys].GetTitleRaw(false, TitleRank.Noble)})", LogCategory.Debug);
             }
         }
 
@@ -200,13 +199,13 @@ namespace NobleTitlesPlus.DB
             }
             else if (append)
             {
-                Util.Log.Print($"[WARNING] Faction ID {id} not found! Now new culture entry added.");
+                Util.Log.Print($"Faction ID {id} not found! Now new culture entry added.", LogCategory.Warning);
                 this.factions.Add(id, BlankTitleSet);
                 this.factions[id].SetTitle(isFemale, rank, newTitle);
             }
             else
             {
-                Util.Log.Print($"[WARNING] Renaming the format failed! No faction entries asscociated with {id}!");
+                Util.Log.Print($"Renaming the format failed! No faction entries asscociated with {id}!", LogCategory.Warning);
             }
         }
         internal string GetMinorTitleRaw(string clanId, bool isFemale, TitleRank rank, string defaultFormat = "")
@@ -226,7 +225,7 @@ namespace NobleTitlesPlus.DB
             }
             else
             {
-                Util.Log.Print($"WARNING: irregular minor faction rank requested! ({rank})");
+                Util.Log.Print($"Irregular minor faction rank requested! ({rank})", LogCategory.Warning);
                 return defaultFormat;
             }
         }
@@ -268,7 +267,7 @@ namespace NobleTitlesPlus.DB
             }
             else
             {
-                Util.Log.Print($">> [WARNING] WRONG CATEGORY: {category}");
+                Util.Log.Print($"WRONG CATEGORY: {category}", LogCategory.Warning);
                 return "";
             }
         }
@@ -321,7 +320,7 @@ namespace NobleTitlesPlus.DB
                 }
                 else
                 {
-                    Util.Log.Print($"[WARNING] title format not found. Your preset has potentially errors. (culture id={cultureId}, faction ID={factionId}, rank={rank})");
+                    Util.Log.Print($"title format not found. Your preset has potentially errors. (culture id={cultureId}, faction ID={factionId}, rank={rank})", LogCategory.Warning);
                     return GlobalDefaultCultureValue.GetTitle(isFemale, rank);
                 }
             }
@@ -345,13 +344,13 @@ namespace NobleTitlesPlus.DB
                 }
                 else
                 {
-                    Util.Log.Print($"[WARNING] title format not found. Your preset has potentially errors. (culture id={cultureId}, faction ID={factionId}, rank={rank})");
+                    Util.Log.Print($"title format not found. Your preset has potentially errors. (culture id={cultureId}, faction ID={factionId}, rank={rank})", LogCategory.Warning);
                     return GlobalDefaultMinorFactionValue.GetTitle(isFemale, rank);
                 }
             }
             else
             {
-                Util.Log.Print($"[WARNIG] title not found when (isFemale={isFemale}, culture={cultureId}, faction={factionId}, rank={rank}, cat={category}");
+                Util.Log.Print($"title not found when (isFemale={isFemale}, culture={cultureId}, faction={factionId}, rank={rank}, cat={category}", LogCategory.Warning);
                 return new TextObject("{NAME}");
             }
         }
@@ -449,13 +448,13 @@ namespace NobleTitlesPlus.DB
             }
             else if (append)
             {
-                Util.Log.Print($"[WARNING] Culture ID {id} not found! Now new culture entry added.");
+                Util.Log.Print($"Culture ID {id} not found! Now new culture entry added.", LogCategory.Warning);
                 this.cultures.Add(id, GlobalDefaultCultureValue);
                 this.cultures[id].SetTitle(isFemale, rank, newTitle);
             }
             else
             {
-                Util.Log.Print($"[WARNING] Renaming the format failed! No culture entries asscociated with {id}!");
+                Util.Log.Print($"Renaming the format failed! No culture entries asscociated with {id}!", LogCategory.Warning);
             }
         }
         internal void SetMinorFactionTitle(string clanId, bool isFemale, TitleRank rank, string newTitle, bool append = false)
@@ -473,12 +472,12 @@ namespace NobleTitlesPlus.DB
                 }
                 else
                 {
-                    Util.Log.Print($">> [WARNING] No minor faction entries asscociated with {clanId}!");
+                    Util.Log.Print($"No minor faction entries asscociated with {clanId}!", LogCategory.Warning);
                 }
             }
             else
             {
-                Util.Log.Print($">> [WARNING] Irregular minor faction rank requested! ({rank})");
+                Util.Log.Print($"Irregular minor faction rank requested! ({rank})", LogCategory.Warning);
             }
         }
         internal void ReadJsonShokuhoCastleProvince(string? jsonPath = null)
@@ -716,12 +715,12 @@ namespace NobleTitlesPlus.DB
                         }
                         catch (Exception)
                         {
-                            Util.Log.Print($">> [WARNING] Title format {titleFormat} is invalid. It's a incorrect format! This format is inavailable.");
+                            Util.Log.Print($"Title format {titleFormat} is invalid. It's a incorrect format! This format is inavailable.", LogCategory.Warning);
                             normalized = "{NAME}";
                         }
                         if (!normalized.Contains("{NAME}"))
                         {
-                            Util.Log.Print($">> [WARNING] Title format {titleFormat} doesn't contain the name variable! This format is inavailable.");
+                            Util.Log.Print($"Title format {titleFormat} doesn't contain the name variable! This format is inavailable.", LogCategory.Warning);
                             normalized = "{NAME}";
                         }
                     }
