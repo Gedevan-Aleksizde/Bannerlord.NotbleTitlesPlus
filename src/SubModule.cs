@@ -31,11 +31,10 @@ namespace NobleTitlesPlus
         }
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
-            Util.Log.Print($">> [DEBUG] OnGameStart: kingdom={Kingdom.All.Count}");
             if (game.GameType is Campaign)
             {
                 ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior());
-                Util.Log.Print($">> [DEBUG] OnGameStart: kingdom={Kingdom.All.Count}");
+                Util.Log.Print($">> [DEBUG] OnGameStart: kingdoms={Kingdom.All.Count}");
             }
             else
             {
@@ -45,23 +44,36 @@ namespace NobleTitlesPlus
         }
         public override void OnGameLoaded(Game game, object initializerObject)
         {
-            Util.Log.Print($">> [DEBUG] OnGameLoaded: kingdom={Kingdom.All.Count}");
+            Util.Log.Print($">> [DEBUG] OnGameLoaded: kingdoms={Kingdom.All.Count}");
             base.OnGameLoaded(game, initializerObject);
         }
         public override void OnGameInitializationFinished(Game game)
         {
-            Util.Log.Print($">> [DEBUG] OnGameInitializationFinished: kingdom={Kingdom.All.Count}");
+            Util.Log.Print($">> [DEBUG] OnGameInitializationFinished: kingdoms={Kingdom.All.Count}");
+            base.OnGameInitializationFinished(game);
+        }
+        public override void OnAfterGameInitializationFinished(Game game, object starterObject)
+        {
+            // minor factions don't seem to be initialized when OnGameInitializationFinished. (why??) So we need initialize here.
+            Util.Log.Print($">> [DEBUG] OnAfterGameInitializationFinished: kingdoms={Kingdom.All.Count}");
             if (game.GameType is Campaign c)
             {
                 try
                 {
                     MCMRuntimeSettings.Instance = new(c.UniqueGameId);
-                    MCMRuntimeSettings.Instance.InitializeMCMSettings();
-
                 }
                 catch (Exception e)
                 {
-                    Util.Log.Print(e.Message);
+                    Util.Log.Print($"At Constructor: {e.Message}\nStackTrace:{e.StackTrace}");
+                    throw new(e.Message, e.InnerException);
+                }
+                try
+                {
+                    MCMRuntimeSettings.Instance.InitializeMCMSettings();
+                }
+                catch (Exception e)
+                {
+                    Util.Log.Print($"At InitizalizeMCMSettings: {e.Message}\nStackTrace:{e.StackTrace}");
                     throw new(e.Message, e.InnerException);
                 }
                 harmony.PatchCategory("NameChangerCore");
@@ -72,17 +84,11 @@ namespace NobleTitlesPlus
                 Util.Log.Print($">> [DEBUG] harmony patched");
                 harmony.PatchCategory("Why");
             }
-            base.OnGameInitializationFinished(game);
-            Util.Log.Print($">> [DEBUG] OnGameInitializationFinished finished");
-        }
-        public override void OnAfterGameInitializationFinished(Game game, object starterObject)
-        {
-            Util.Log.Print($">> [DEBUG] OnAfterGameInitializationFinished: kingdom={Kingdom.All.Count}");
             base.OnAfterGameInitializationFinished(game, starterObject);
         }
         public override void OnGameEnd(Game game)
         {
-            Util.Log.Print($">> [DEBUG] OnGameEnd: kingdom={Kingdom.All.Count}");
+            Util.Log.Print($">> [DEBUG] OnGameEnd: kingdoms={Kingdom.All.Count}");
             if (game.GameType is Campaign)
             {
                 MCMRuntimeSettings.Instance?.Clear();
