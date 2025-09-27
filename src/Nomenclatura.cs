@@ -19,7 +19,7 @@ namespace NobleTitlesPlus
         public Dictionary<Clan, (TextObject FiefText, TextObject ShokuhoProvName, ClanNamePair ClanNames)> ClanAttrs { get; private set; } = new();
         public Nomenclatura(bool update = false)
         {
-            if (update) this.UpdateAll(false);
+            if (update) this.UpdateAll();
         }
         public TitleRank? FindHeroRankById(string id)
         {
@@ -33,7 +33,7 @@ namespace NobleTitlesPlus
                 return null;
             }
         }
-        public void UpdateAll(bool changeClanName)
+        public void UpdateAll()
         {
             foreach (Kingdom k in Kingdom.All.Where(x => !x.IsEliminated))
             {
@@ -42,7 +42,6 @@ namespace NobleTitlesPlus
             foreach (Clan c in Clan.All)
             {
                 this.UpdateFiefList(c);
-                //if (changeClanName) this.UpdateClanName(c);
             }
             this.AddTitlesToMinorFaction();
             this.RemoveTitleFromDead();
@@ -322,18 +321,19 @@ namespace NobleTitlesPlus
         /// <summary>
         /// This function can be very heavy, so should be called only at the itinialization
         /// </summary>
-        public void UpdateAllHeroSuffix()
+        public void UpdateAllHeroSuffixNumber(SuffixNumberFormat suffixNumberFormat)
         {
+            if (suffixNumberFormat == SuffixNumberFormat.None) return;
+            Util.Log.Print("UpdateAllHeroSuffix is called", LogCategory.Info);
             foreach (Clan clan in Clan.All)
             {
                 Dictionary<string, int> nameCounter = new();
-                SuffixNumberFormat formatPreference = MCMRuntimeSettings.Instance?.Options.SuffixNumFormat ?? 0;
                 IEnumerable<Hero> heroes = clan.Heroes.OrderBy(x => x.BirthDay);
                 foreach (Hero hero in heroes)
                 {
                     if (nameCounter.TryGetValue(hero.FirstName.ToString(), out int value))
                     {
-                        int genNum = nameCounter[hero.FirstName.ToString()] + 1;
+                        int genNum = value + 1;
                         if (this.HeroProfiles.TryGetValue(hero, out HeroProfile hp))
                         {
                             hp.GenSuffixNum = genNum;
@@ -344,6 +344,7 @@ namespace NobleTitlesPlus
                         else
                         {
                             // TODO when this happens?
+                            Util.Log.Print($"Hero profile not found when calculating the suffix number. clan={clan.StringId}, id={hero.StringId}", LogCategory.Warning);
                         }
                     }
                     else
@@ -352,8 +353,13 @@ namespace NobleTitlesPlus
                         if (this.HeroProfiles.TryGetValue(hero, out HeroProfile hp))
                         {
                             hp.GenSuffixNum = 1;
-                            if (formatPreference == SuffixNumberFormat.All) hp.UpdateGunSuffixText();
+                            if (suffixNumberFormat == SuffixNumberFormat.All) hp.UpdateGunSuffixText();
                             this.HeroProfiles[hero] = hp;
+                        }
+                        else
+                        {
+                            // TODO when this happens?
+                            Util.Log.Print($"Hero profile not found when calculating the suffix number. clan={clan.StringId}, id={hero.StringId}", LogCategory.Warning);
                         }
                     }
                 }
@@ -372,9 +378,7 @@ namespace NobleTitlesPlus
                     hp.UpdateGunSuffixText();
                     this.HeroProfiles[hero] = hp;
                 }
-
             }
-
         }
         public void UpdateTitlerankInHeroProfiles(Hero hero, TitleRank titleRank)
         {
@@ -412,7 +416,7 @@ namespace NobleTitlesPlus
     public class HeroProfile
     {
         public TitleRank TitleRank { get; set; }
-        public int GenSuffixNum { get; set; }
+        public int GenSuffixNum { get; set; } = 1;
         public TextObject GenSuffixText { get; private set; } = new("");
         public HeroProfile(TitleRank titleRank, int? genSuffixNum = null)
         {
@@ -422,9 +426,11 @@ namespace NobleTitlesPlus
         public void UpdateGunSuffixText()
         {
             if (MCMRuntimeSettings.Instance.Options.SuffixNumFormat == SuffixNumberFormat.None) return;
-            if (this.GenSuffixNum <= 0 && this.GenSuffixNum > 20) return;
-            if (this.GenSuffixNum > 2)
-                this.GenSuffixText = GameTexts.FindText("ntp_suffx_num", this.GenSuffixNum.ToString());
+            if (this.GenSuffixNum <= 0 || 20 <= this.GenSuffixNum) return;
+            if (2 <= this.GenSuffixNum || MCMRuntimeSettings.Instance.Options.SuffixNumFormat == SuffixNumberFormat.All)
+            {
+                this.GenSuffixText = GameTexts.FindText("ntp_suffix_num", this.GenSuffixNum.ToString());
+            }
         }
         public const int MaxGenNum = 20;
     }

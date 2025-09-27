@@ -24,7 +24,6 @@ namespace NobleTitlesPlus.MCMSettings
         public bool ShowOnMission { get; set; } = true;
         public bool ShowOnPartyTooltip { get; set; } = true;
         public bool SpouseTitle { get; private set; } = true;
-        public bool FixShokuhoClanName { get; set; } = false;
         public bool Tagging { get; set; } = false;
         public string FiefNameSeparator { get; set; } = ",";
         public string FiefNameSeparatorLast { get; set; } = "and";
@@ -77,7 +76,10 @@ namespace NobleTitlesPlus.MCMSettings
         public void InitializeNomenclaturaOnGameStart()
         {
             if (this.Options.VerboseLog) Util.Log.Print($"InitializeNomenclaturaOnGameStart: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
-            Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
+            this.Nomenclatura.UpdateAll(); if (this.Options.SuffixNumFormat != SuffixNumberFormat.None)
+            {
+                this.Nomenclatura.UpdateAllHeroSuffixNumber(this.Options.SuffixNumFormat);
+            }
             if (this.Options.VerboseLog) Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
         }
         /// <summary>
@@ -94,7 +96,7 @@ namespace NobleTitlesPlus.MCMSettings
             {
                 Nomenclatura.OverwriteWithImperialFormats(survivingImperial.First());
             }
-            Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
+            Nomenclatura.UpdateAll();
         }
         private void ShokuhoButton()
         {
@@ -166,7 +168,7 @@ namespace NobleTitlesPlus.MCMSettings
                 j++;
             }
             builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, "DEF"));
-            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant"), ("VARM", "VariantModified"), ("SHO", "Shokuho"), ("SHOM", "ShokuhoModified") })
+            foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant"), ("VARM", "Variant2"), ("VAR3M", "Variant3"), ("SHO", "Shokuho"), ("SHOM", "ShokuhoModified") })
             {
                 builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, presetName.id));
             }

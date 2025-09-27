@@ -40,9 +40,9 @@ namespace NobleTitlesPlus.Patches
                 }
                 else if ((hero.IsKnownToPlayer || !MCMRuntimeSettings.Instance.Options.FogOfWar || hero.IsFactionLeader))
                 {
-                    bool hasRank = MCMRuntimeSettings.Instance.Nomenclatura.HeroProfiles.TryGetValue(hero, out HeroProfile np);
-                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, hasRank ? np.TitleRank : TitleRank.None);
-                    if (hasRank) { suffNumText = np.GenSuffixText; }
+                    bool hasRank = MCMRuntimeSettings.Instance.Nomenclatura.HeroProfiles.TryGetValue(hero, out HeroProfile hp);
+                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, hasRank ? hp.TitleRank : TitleRank.None);
+                    if (hasRank) { suffNumText = hp.GenSuffixText; }
                 }
                 else
                 {
