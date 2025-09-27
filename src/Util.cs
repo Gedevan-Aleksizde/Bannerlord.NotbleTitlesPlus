@@ -37,11 +37,12 @@ namespace NobleTitlesPlus
         }
         internal static bool EnableLog
         {
-            get => Log is Log; // Log, derived from LogBase, provides thread-safe logging
+            // TODO: what to do?
+            get => Log is Log;
             set
             {
                 if (Log is Log && !value)
-                    Log = new LogBase();
+                    Log = new Log(truncate: true);
                 else if (!(Log is Log) && value)
                     Log = new Log(truncate: true, logName: "debug");
             }
@@ -60,7 +61,7 @@ namespace NobleTitlesPlus
 
         internal static bool EnableTracer { get; set; } = false;
 
-        internal static LogBase Log = new(); // LogBase, parent of Log, implements do-nothing virtual output methods
+        internal static Log Log = new(true);
 
         internal static class EventTracer
         {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NobleTitlesPlus
 {
-    internal class Log : LogBase
+    internal class Log
     {
         private const string BeginMultiLine = @"=======================================================================================================================\";
         private const string EndMultiLine = @"=======================================================================================================================/";
@@ -18,7 +18,7 @@ namespace NobleTitlesPlus
         protected TextWriter Writer { get; set; }
         protected bool LastWasMultiline { get; set; } = false;
 
-        public override void Print(string line)
+        public void Print(string line)
         {
             if (Writer is null)
                 return;
@@ -27,8 +27,28 @@ namespace NobleTitlesPlus
             Writer.WriteLine(line);
             Writer.Flush();
         }
-
-        public override void Print(List<string> lines)
+        public void Print(string line, LogCategory category)
+        {
+            switch (category)
+            {
+                case LogCategory.Error:
+                    line = $">> [ERROR] {line}";
+                    break;
+                case LogCategory.Warning:
+                    line = $">> [WARNING] {line}";
+                    break;
+                case LogCategory.Info:
+                    line = $">> [INFO] {line}";
+                    break;
+                case LogCategory.Debug:
+                    line = $">> [DEBUG] {line}";
+                    break;
+                default:
+                    break;
+            }
+            Print(line);
+        }
+        public void Print(List<string> lines)
         {
             if (Writer is null || lines.Count == 0)
                 return;
@@ -50,7 +70,22 @@ namespace NobleTitlesPlus
             Writer.WriteLine(EndMultiLine);
             Writer.Flush();
         }
-
+        public void Print(List<string> lines, LogCategory category)
+        {
+            string prefix = category switch
+            {
+                LogCategory.Error => ">> [ERROR] ",
+                LogCategory.Warning => ">> [WARNING] ",
+                LogCategory.Info => ">> [INFO] ",
+                LogCategory.Debug => ">> [DEBUG] ",
+                _ => ""
+            };
+            for (int i = 0; i < lines.Count; i++)
+            {
+                lines[i] = prefix + lines[i];
+            }
+            Print(lines);
+        }
         public Log(bool truncate = false, string? logName = null)
         {
             string userDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Mount and Blade II Bannerlord");
@@ -109,5 +144,13 @@ namespace NobleTitlesPlus
                 // at least we tried.
             }
         }
+    }
+    public enum LogCategory
+    {
+        None,
+        Debug,
+        Info,
+        Warning,
+        Error
     }
 }
