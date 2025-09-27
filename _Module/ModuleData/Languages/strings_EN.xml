@@ -35,6 +35,11 @@
 		<string id="NTP.MCMHeirAdult" text="Adult"/>
 		<string id="NTP.MCMHeirElder" text="Elder"/>
 		<string id="NTP.MCMHeirHint" text="(WIP) Law of heir to the throne. Primogeniture: the ruler's oldest son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule."/>
+		<string id="jCuLgwIzKS" text="Enable Suffix Numbering" />
+		<string id="vnlOaeaVj1" text="Allow to Suffix a number to avoid confused with the same name clan members if enabled. NOTE: the number is not shown unless writing the `SUFF_NUM` macro in the format." />
+		<string id="xsKu20hh5G" text="None" />
+		<string id="Ec7eqYXES9" text="All" />
+		<string id="hZ5dC1kQgX" text="Until Second" />
 		<string id="1QFAqlDCiT" text="Duke Capacity Divisor"/>
 		<string id="0PCRoAuCVu" text="The number of dukes is determined as (number of clan leaders without king)/(this parameter). The default value is 3."/>
 		<string id="a4fLlIVtff" text="Baron Threshold"/>
@@ -87,5 +92,26 @@
 		<string id="bWMiFgw5ac" text="Error 001: Kingdom Name Not Found"/>
 		<string id="S40p9P6Slm" text="Change the Imperial title when reunited" />
 		<string id="aRh2YvgeuG" text="If enabled, surviving Empire titles are overwrtten with the common Imperial title when the reunion is succeeded." />
+
+			<string id="aIwostdeLa" text=" I" />
+			<string id="ZHZGGAkRj2" text=" II" />
+			<string id="LOobQwr97E" text=" III" />
+			<string id="EzSiKmugqd" text=" IV" />
+			<string id="eZs8aFhX2x" text=" V" />
+			<string id="DBmq0LThBH" text=" VI" />
+			<string id="YyS8uT9DfL" text=" VII" />
+			<string id="EZzDBknAI2" text=" VIII" />
+			<string id="pvaCECHgsu" text=" IX" />
+			<string id="jB3f5qBPye" text=" X" />
+			<string id="6lCOtAwa9X" text=" XI" />
+			<string id="XJ6h80yEl9" text=" XII" />
+			<string id="0faWXNXDk5" text=" XIII" />
+			<string id="HG2vJVARTy" text=" XIV" />
+			<string id="tGLLxkKSsD" text=" XV" />
+			<string id="lljvVnnoG5" text=" XVI" />
+			<string id="gtqTf9yFyI" text=" XVII" />
+			<string id="xmLCisPYWU" text=" XVIII" />
+			<string id="ZMF3TPDxpp" text=" XIX" />
+			<string id="OZXE1xlEJH" text=" XX" />
  	</strings>
 </base>

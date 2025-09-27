@@ -36,6 +36,11 @@
 		<string id="NTP.MCMHeirElder" text="最年長"/>
 		<string id="NTP.MCMHeirAdult" text="成人"/>
 		<string id="NTP.MCMHeirHint" text="(WIP) 王位継承のルールです。 「長子相続」は君主の子息の最年長者を選びます。「成人」は後継者のうち、成人のみを選びます。「最年長」は君主のクランの中で最年長者を選びます。注: バナーロードのルール上、王位継承者が必ず王位を相続するとは限りません。 他のmodとのシナジーを想定した機能です。"/>
+		<string id="jCuLgwIzKS" text="世代番号を使用する" />
+		<string id="vnlOaeaVj1" text="クラン内の名前の重複したNPCの混同を避けるため、世代を表す番号の使用を許可します。番号は SUFF_NUM マクロを使用した際に表示されます。" />
+		<string id="xsKu20hh5G" text="なし" />
+		<string id="Ec7eqYXES9" text="全て表示" />
+		<string id="hZ5dC1kQgX" text="2代目以降" />
 		<string id="1QFAqlDCiT" text="公爵定員数の分母"/>
 		<string id="0PCRoAuCVu" text="各勢力の公爵の定員は「(君主以外のクランリーダーの数)/(このパラメータ) 」で決まります。デフォルトは「3」です。"/>
 		<string id="a4fLlIVtff" text="男爵のしきい値"/>
@@ -87,5 +92,26 @@
 		<string id="bWMiFgw5ac" text="Error 001: 国名を取得できません"/>
 		<string id="S40p9P6Slm" text="帝国再統一を果たした時に称号も統一する" />
 		<string id="aRh2YvgeuG" text="有効にすると、三帝国が統一された際に、残った帝国勢力の称号が帝国文化のものに変更されます" />
+		
+		<string id="aIwostdeLa" text="I世" />
+		<string id="ZHZGGAkRj2" text="II世" />
+		<string id="LOobQwr97E" text="III世" />
+		<string id="EzSiKmugqd" text="IV世" />
+		<string id="eZs8aFhX2x" text="V世" />
+		<string id="DBmq0LThBH" text="VI世" />
+		<string id="YyS8uT9DfL" text="VII世" />
+		<string id="EZzDBknAI2" text="VIII世" />
+		<string id="pvaCECHgsu" text="IX世" />
+		<string id="jB3f5qBPye" text="X世" />
+		<string id="6lCOtAwa9X" text="XI世" />
+		<string id="XJ6h80yEl9" text="XII世" />
+		<string id="0faWXNXDk5" text="XIII世" />
+		<string id="HG2vJVARTy" text="XIV世" />
+		<string id="tGLLxkKSsD" text="XV世" />
+		<string id="lljvVnnoG5" text="XVI世" />
+		<string id="gtqTf9yFyI" text="XVII世" />
+		<string id="xmLCisPYWU" text="XVIII世" />
+		<string id="ZMF3TPDxpp" text="XIX世" />
+		<string id="OZXE1xlEJH" text="XX世" />
  </strings>
 </base>

@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <strings>
-  
   <string id="ntp_sho_prov.dewa" text="{=41b983B1}Dewa"/>
   <string id="ntp_sho_prov.mutsu" text="{=53EA7489}Mutsu"/>
   <string id="ntp_sho_prov.shimotsuke" text="{=5e63b676}Shimotsuke"/>

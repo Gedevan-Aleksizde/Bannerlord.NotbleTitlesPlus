@@ -28,12 +28,14 @@ namespace NobleTitlesPlus
                 .SetTextVariable("FIEFS", "______MOCKPLACEHOLDER3_____")
                 .SetTextVariable("CLAN_SHORT", "______MOCKPLACEHOLDER4_____")
                 .SetTextVariable("PROVINCE_SHO", "______MOCKPLACEHOLDER5_____")
+                .SetTextVariable("SUFF_NUM", "______MOCKPLACEHOLDER6_____")
                 .ToString()
                 .Replace("______MOCKPLACEHOLDER1_____", "{NAME}")
                 .Replace("______MOCKPLACEHOLDER2_____", "{CLAN}")
                 .Replace("______MOCKPLACEHOLDER3_____", "{FIEF}")
                 .Replace("______MOCKPLACEHOLDER4_____", "{CLAN_SHORT}")
-                .Replace("______MOCKPLACEHOLDER5_____", "{PROVINCE_SHO}");
+                .Replace("______MOCKPLACEHOLDER5_____", "{PROVINCE_SHO}")
+                .Replace("______MOCKPLACEHOLDER6_____", "{SUFF_NUM}");
         }
         internal static bool EnableLog
         {

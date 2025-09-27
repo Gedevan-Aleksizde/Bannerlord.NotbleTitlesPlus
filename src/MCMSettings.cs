@@ -31,6 +31,7 @@ namespace NobleTitlesPlus.MCMSettings
         public int DivisorCapDuke { get; set; } = 3;
         public int ThresholdBaron { get; set; } = 3;
         public Dropdown<TextObject> KingdomTitleFormat { get; set; } = new(Enum.GetValues(typeof(KingdomTitleFormat)).OfType<KingdomTitleFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"kingdom_title_format_{x.ToString().ToLower()}")), 1);
+        public Dropdown<TextObject> SuffixNumFormat = new(Enum.GetValues(typeof(SuffixNumberFormat)).OfType<SuffixNumberFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"suffix_number_format_{x.ToString().ToLower()}")), 1);
         public bool UseUnitedTitle { get; set; } = false;
         public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(Inheritance)).OfType<Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
         public TitleSet TitleSet { get; set; } = new();
@@ -42,7 +43,6 @@ namespace NobleTitlesPlus.MCMSettings
         public static readonly string[] ImperialFactions = { "empire_w", "empire_s", "empire" };
 
         private string saveId = "";
-        // private ISettingsBuilder _settingsBuilder;
         private FluentPerCampaignSettings? settings;
         public Options Options { get; private set; }
         public Nomenclatura Nomenclatura { get; private set; } = new();
@@ -73,16 +73,6 @@ namespace NobleTitlesPlus.MCMSettings
             if (this.Options.VerboseLog) Util.Log.Print($"InitializeNomenclaturaOnGameStart: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
             if (this.Options.VerboseLog) Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
-        }
-        /// <summary>
-        /// this should be called as soob as possible after the game loaded.
-        /// </summary>
-        public void UpdateNomenclaturaOnGameLoaded()
-        {
-            if (this.Options.VerboseLog) Util.Log.Print($"UpdateNomenclaturaOnGameLoaded: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
-            if (this.Options.VerboseLog) Util.Log.Print("Loading campaign", LogCategory.Info);
-            Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
-            if (this.Options.VerboseLog) Util.Log.Print($"Loading campaign on {SubModule.Name}", LogCategory.Info);
         }
         /// <summary>
         /// this should be called when quitting the game mode.
@@ -176,6 +166,12 @@ namespace NobleTitlesPlus.MCMSettings
                         value => this.Options.Inheritance = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(6)
                 )
+                .AddDropdown("suffix_num", FindTextShortMCM("suffix_num"), 0,
+                    new ProxyRef<Dropdown<TextObject>>(
+                        () => this.Options.SuffixNumFormat,
+                        value => this.Options.SuffixNumFormat = value),
+                    probBuilder => probBuilder.SetRequireRestart(true).SetHintText(FindTextShortMCM("suffix_num_hint")).SetOrder(7)
+                )
                 .SetGroupOrder(0);
             void BuildFormattingGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddBool(
@@ -229,7 +225,6 @@ namespace NobleTitlesPlus.MCMSettings
                     value =>
                     {
                         this.Options.DivisorCapDuke = value;
-                        this.Nomenclatura.divisorDuke = value;
                     }
                     ),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("duke_cap_divisor_hint")).SetOrder(0)
@@ -240,7 +235,6 @@ namespace NobleTitlesPlus.MCMSettings
                     value =>
                     {
                         this.Options.ThresholdBaron = value;
-                        this.Nomenclatura.thretholdBaron = value;
                     }
                     ),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("baron_threshold_hint")).SetOrder(1)
@@ -503,5 +497,11 @@ namespace NobleTitlesPlus.MCMSettings
         Default,
         Vanilla,
         Localization
+    }
+    public enum SuffixNumberFormat
+    {
+        None,
+        All,
+        UntilSecond
     }
 }

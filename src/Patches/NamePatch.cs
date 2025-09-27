@@ -33,15 +33,16 @@ namespace NobleTitlesPlus.Patches
                     Util.Log.Print($"isMinorFactionHero is null: when {name} (clan={hero.Clan?.Name}) called", LogCategory.Warning);
                 }
                 TextObject title = new("{NAME}");
+                TextObject suffNumText = new("");
                 if (!hero.IsAlive)
                 {
                     title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
                 }
                 else if ((hero.IsKnownToPlayer || !MCMRuntimeSettings.Instance.Options.FogOfWar || hero.IsFactionLeader))
                 {
-                    bool hasRank = MCMRuntimeSettings.Instance.Nomenclatura.HeroRank.TryGetValue(hero, out TitleRank rank);
-
-                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, hasRank ? rank : TitleRank.None);
+                    bool hasRank = MCMRuntimeSettings.Instance.Nomenclatura.HeroProfiles.TryGetValue(hero, out HeroProfile np);
+                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, hasRank ? np.TitleRank : TitleRank.None);
+                    if (hasRank) { suffNumText = np.GenSuffixText; }
                 }
                 else
                 {
@@ -49,7 +50,8 @@ namespace NobleTitlesPlus.Patches
                 }
                 title = title.SetTextVariable("NAME", name)
                             .SetTextVariable("CLAN", hero.Clan?.Name)
-                            .SetTextVariable("CLAN_SHORT", hero.Clan?.InformalName);
+                            .SetTextVariable("CLAN_SHORT", hero.Clan?.InformalName)
+                            .SetTextVariable("SUFF_NUM", suffNumText);
                 if (MCMRuntimeSettings.Instance.Nomenclatura.ClanAttrs.TryGetValue(hero.Clan, out (TextObject strFief, TextObject shokuhoProv, ClanNamePair clanNamesPair) fiefNames))
                 {
                     title = title.SetTextVariable("FIEFS", fiefNames.strFief).SetTextVariable("PROVINCE_SHO", fiefNames.shokuhoProv);

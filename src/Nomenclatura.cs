@@ -11,26 +11,22 @@ using TaleWorlds.Localization;
 namespace NobleTitlesPlus
 {
     /// <summary>
-    /// Cache for access the text faster
+    /// All NPC proflie Cache to access the text faster
     /// </summary>
     public class Nomenclatura
     {
-        public int thretholdBaron;
-        public int divisorDuke;
-        public Dictionary<Hero, TitleRank> HeroRank { get; private set; } = new();
+        public Dictionary<Hero, HeroProfile> HeroProfiles { get; private set; } = new();
         public Dictionary<Clan, (TextObject FiefText, TextObject ShokuhoProvName, ClanNamePair ClanNames)> ClanAttrs { get; private set; } = new();
-        public Nomenclatura(int thretholdBaron = 3, int divisorDuke = 3, bool update = false)
+        public Nomenclatura(bool update = false)
         {
-            this.thretholdBaron = thretholdBaron;
-            this.divisorDuke = divisorDuke;
             if (update) this.UpdateAll(false);
         }
         public TitleRank? FindHeroRankById(string id)
         {
             Hero hero = Hero.AllAliveHeroes.Where(x => x.StringId == id).First();
-            if (this.HeroRank.TryGetValue(hero, out var rank))
+            if (this.HeroProfiles.TryGetValue(hero, out var rank))
             {
-                return rank;
+                return rank.TitleRank;
             }
             else
             {
@@ -53,11 +49,11 @@ namespace NobleTitlesPlus
         }
         private void RemoveTitleFromDead()
         {
-            foreach (Hero h in this.HeroRank.Keys.ToArray())
+            foreach (Hero h in this.HeroProfiles.Keys.ToArray())
             {
                 if (h.IsDead)
                 {
-                    this.HeroRank.Remove(h);
+                    this.HeroProfiles.Remove(h);
                 }
             }
         }
@@ -175,7 +171,7 @@ namespace NobleTitlesPlus
                 .ToList();
             foreach (Hero h in commonNobles)
             {
-                this.HeroRank[h] = TitleRank.Noble;
+                this.HeroProfiles[h].TitleRank = TitleRank.Noble;
                 tr.Add(this.GetHeroTrace(h, TitleRank.Noble));
             }
             // Crown Prince/Princess
@@ -192,13 +188,13 @@ namespace NobleTitlesPlus
             };
             if (heirs.Count > 0)
             {
-                this.HeroRank[heirs.First()] = TitleRank.Prince;
+                this.HeroProfiles[heirs.First()].TitleRank = TitleRank.Prince;
                 tr.Add(this.GetHeroTrace(heirs.First(), TitleRank.Prince));
                 royals = royals.Where(h => h != heirs.First()).ToList();
             }
             foreach (Hero h in royals)
             {
-                this.HeroRank[h] = TitleRank.Royal;
+                this.HeroProfiles[h].TitleRank = TitleRank.Royal;
             }
             /* The vassals first...
              *
@@ -224,14 +220,14 @@ namespace NobleTitlesPlus
             foreach (Hero? h in vassals)
             {
                 // Are they a baron?
-                if (this.GetFiefScore(h.Clan) < thretholdBaron)
+                if (this.GetFiefScore(h.Clan) < (MCMRuntimeSettings.Instance?.Options?.ThresholdBaron ?? 3))
                 {
                     ++nBarons;
-                    this.HeroRank[h] = TitleRank.Baron;
+                    this.HeroProfiles[h].TitleRank = TitleRank.Baron;
                     tr.Add(this.GetHeroTrace(h, TitleRank.Baron));
                     if (MCMRuntimeSettings.Instance.Options.SpouseTitle && h.Spouse != null && h.Spouse.IsAlive)
                     {
-                        this.HeroRank[h.Spouse] = TitleRank.Baron;
+                        this.HeroProfiles[h.Spouse].TitleRank = TitleRank.Baron;
                         tr.Add(this.GetHeroTrace(h.Spouse, TitleRank.Baron));
                     }
                 }
@@ -240,43 +236,43 @@ namespace NobleTitlesPlus
             }
             // The allowed number of dukes is a third of the total non-baron noble vassals.
             int nBigVassals = vassals.Count - nBarons;
-            int nDukes = nBigVassals / divisorDuke; // Round down
+            int nDukes = nBigVassals / MCMRuntimeSettings.Instance?.Options?.DivisorCapDuke ?? 3; // Round down
             int nCounts = nBigVassals - nDukes;
             int maxDukeIdx = vassals.Count - 1;
             int maxCountIdx = maxDukeIdx - nDukes;
             int maxBaronIdx = maxCountIdx - nCounts;
             for (int i = maxCountIdx; i > maxBaronIdx; --i)
             {
-                this.HeroRank[vassals[i]] = TitleRank.Count;
+                this.HeroProfiles[vassals[i]].TitleRank = TitleRank.Count;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Count));
                 if (MCMRuntimeSettings.Instance.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
                 {
-                    this.HeroRank[vassals[i].Spouse] = TitleRank.Count;
+                    this.HeroProfiles[vassals[i].Spouse].TitleRank = TitleRank.Count;
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Count));
                 }
             }
             for (int i = maxDukeIdx; i > maxCountIdx; --i)
             {
-                this.HeroRank[vassals[i]] = TitleRank.Duke;
+                this.HeroProfiles[vassals[i]].TitleRank = TitleRank.Duke;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Duke));
                 if (MCMRuntimeSettings.Instance.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
                 {
-                    this.HeroRank[vassals[i].Spouse] = TitleRank.Duke;
+                    this.HeroProfiles[vassals[i].Spouse].TitleRank = TitleRank.Duke;
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Duke));
                 }
             }
             if (kingdom.Leader != null &&
                 !Kingdom.All.Where(k => k != kingdom).SelectMany(k => k.Lords).Where(h => h == kingdom.Leader).Any()) // fix for stale ruler status in defunct kingdoms
             {
-                this.HeroRank[kingdom.Leader] = TitleRank.King;
+                this.HeroProfiles[kingdom.Leader].TitleRank = TitleRank.King;
                 tr.Add(this.GetHeroTrace(kingdom.Leader, TitleRank.King));
                 if (kingdom.Leader.Spouse != null && kingdom.Leader.Spouse.IsAlive)
                 {
-                    this.HeroRank[kingdom.Leader.Spouse] = TitleRank.King;
+                    this.HeroProfiles[kingdom.Leader.Spouse].TitleRank = TitleRank.King;
                     tr.Add(this.GetHeroTrace(kingdom.Leader.Spouse, TitleRank.King));
                 }
             }
-            if (MCMRuntimeSettings.Instance.Options.VerboseLog) Util.Log.Print(tr);
+            if (MCMRuntimeSettings.Instance?.Options?.VerboseLog ?? true) Util.Log.Print(tr);
         }
         /// <summary>
         /// overwrite the single surviving Imperial faction with the united Imperial titles.
@@ -296,7 +292,6 @@ namespace NobleTitlesPlus
             MCMRuntimeSettings.Instance.Options.TitleSet.cultures.TryGetValue("empire", out TitleSet.FactionTitleSet fts);
             MCMRuntimeSettings.Instance.Options.TitleSet.factions.Add(kingdom.StringId, fts);
         }
-
         /// <summary>
         /// Adds all minor faction menbers titles 
         /// </summary>
@@ -311,12 +306,12 @@ namespace NobleTitlesPlus
                     {
                         if (h == h.Clan.Leader)
                         {
-                            this.HeroRank[h] = TitleRank.King;
+                            this.HeroProfiles[h].TitleRank = TitleRank.King;
                             tr.Add(this.GetHeroTrace(h, TitleRank.King));
                         }
                         else
                         {
-                            this.HeroRank[h] = TitleRank.Noble;
+                            this.HeroProfiles[h].TitleRank = TitleRank.Noble;
                             tr.Add(this.GetHeroTrace(h, TitleRank.Noble));
                         }
                     }
@@ -324,8 +319,79 @@ namespace NobleTitlesPlus
                 if (MCMRuntimeSettings.Instance?.Options?.VerboseLog ?? true) Util.Log.Print(tr, LogCategory.Info);
             }
         }
+        /// <summary>
+        /// This function can be very heavy, so should be called only at the itinialization
+        /// </summary>
+        public void SearchAllGenerationInfo()
+        {
+            // List<Hero> heroes = Hero.AllAliveHeroes;
+            // heroes = heroes.Concat(Hero.DeadOrDisabledHeroes).OrderBy(x => x.BirthDay).ToList();
+            foreach (Clan clan in Clan.All)
+            {
+                Dictionary<string, int> nameCounter = new();
+                SuffixNumberFormat formatPreference = (SuffixNumberFormat)(MCMRuntimeSettings.Instance?.Options.SuffixNumFormat.SelectedIndex ?? 0);
+                IEnumerable<Hero> heroes = clan.Heroes.OrderBy(x => x.BirthDay);
+                foreach (Hero hero in heroes)
+                {
+                    if (nameCounter.TryGetValue(hero.FirstName.ToString(), out int value))
+                    {
+                        int genNum = nameCounter[hero.FirstName.ToString()] + 1;
+                        if (this.HeroProfiles.TryGetValue(hero, out HeroProfile hp))
+                        {
+                            hp.GenSuffixNum = genNum;
+                            nameCounter[hero.FirstName.ToString()]++;
+                            hp.UpdateGunSuffixText();
+                            this.HeroProfiles[hero] = hp;
+                        }
+                        else
+                        {
+                            // TODO when this happens?
+                        }
+                    }
+                    else
+                    {
+                        nameCounter.Add(hero.FirstName.ToString(), 1);
+                        if (this.HeroProfiles.TryGetValue(hero, out HeroProfile hp))
+                        {
+                            hp.GenSuffixNum = 1;
+                            if (formatPreference == SuffixNumberFormat.All) hp.UpdateGunSuffixText();
+                            this.HeroProfiles[hero] = hp;
+                        }
+                    }
+                }
+            }
+        }
+        public void UpdateGenerationInfo(Hero hero)
+        {
+            if (hero.FirstName == null) return;
+            int maxNum = this.HeroProfiles.Keys.Where(x => x?.Clan == hero.Clan && x.FirstName.ToString() == hero.FirstName.ToString()).Where(x => this.HeroProfiles.ContainsKey(hero)).Select(x => this.HeroProfiles[x].GenSuffixNum).ToList().Max();
+            SuffixNumberFormat suffixFormat = (SuffixNumberFormat)(MCMRuntimeSettings.Instance?.Options?.SuffixNumFormat?.SelectedIndex ?? 0);
+            if (this.HeroProfiles.TryGetValue(hero, out HeroProfile hp))
+            {
+                hp.GenSuffixNum = maxNum + 1;
+                if (maxNum <= HeroProfile.MaxGenNum && suffixFormat == SuffixNumberFormat.All || maxNum >= 2)
+                {
+                    hp.UpdateGunSuffixText();
+                    this.HeroProfiles[hero] = hp;
+                }
+
+            }
+
+        }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);
         private string GetHeroTrace(Hero h, TitleRank rank) =>
             $" -> {rank}: {h.Name} [Fief Score: {(rank == TitleRank.King || rank == TitleRank.Duke || rank == TitleRank.Count || rank == TitleRank.Baron ? this.GetFiefScore(h.Clan) : 0)} / Renown: {h.Clan.Renown:F0}]";
+    }
+    public class HeroProfile
+    {
+        public TitleRank TitleRank { get; set; }
+        public int GenSuffixNum { get; set; } = 1;
+        public TextObject GenSuffixText { get; private set; } = new("");
+        public void UpdateGunSuffixText()
+        {
+            if (this.GenSuffixNum <= 0 && this.GenSuffixNum > 20) return;
+            this.GenSuffixText = GameTexts.FindText("ntp_suffx_num", this.GenSuffixNum.ToString());
+        }
+        public const int MaxGenNum = 20;
     }
 }
