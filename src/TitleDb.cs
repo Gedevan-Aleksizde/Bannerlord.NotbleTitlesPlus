@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using NobleTitlesPlus.json;
+using NobleTitlesPlus.MCMSettings;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -162,7 +163,7 @@ namespace NobleTitlesPlus.DB
             foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
             {
                 this.minorFactions.Add(c.StringId, GlobalDefaultMinorFactionValue);
-                if (TitleBehavior.Options.VerboseLog) Util.Log.Print($">> [DEBUG] Intialized title set  for minor faction {c.StringId}");
+                if (MCMRuntimeSettings.Instance?.Options?.VerboseLog ?? true) Util.Log.Print($">> [DEBUG] Intialized title set  for minor faction {c.StringId}");
             }
         }
         public void TmpDebug()
@@ -703,7 +704,7 @@ namespace NobleTitlesPlus.DB
                     string normalized;
                     if (string.IsNullOrWhiteSpace(titleFormat))
                     {
-                        if (TitleBehavior.Options?.VerboseLog ?? true) Util.Log.Print($">> [DEBUG] Title format is blank");
+                        if (MCMRuntimeSettings.Instance?.Options?.VerboseLog ?? true) Util.Log.Print($">> [DEBUG] Title format is blank");
                         normalized = "";
                     }
                     else

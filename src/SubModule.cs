@@ -1,6 +1,4 @@
 ﻿using HarmonyLib;
-using MCM.Abstractions.Base.PerSave;
-using MCM.Abstractions.FluentBuilder;
 using NobleTitlesPlus.MCMSettings;
 using System;
 using System.IO;
@@ -28,26 +26,15 @@ namespace NobleTitlesPlus
         {
             base.OnBeforeInitialModuleScreenSetAsRoot();
 
-            if (!this.hasLoaded && !this.canceled)
-            {
-                InformationManager.DisplayMessage(new InformationMessage(
+            InformationManager.DisplayMessage(new InformationMessage(
                     $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})", ImportantTextColor));
-                this.hasLoaded = true;
-            }
-
-            if (this.canceled)
-                InformationManager.DisplayMessage(
-                    new InformationMessage(
-                        $"003 {new TextObject("{=NTP.Sys003}Error loading {DisplayName} : Disabled!").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})"
-                        ));
         }
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
             Util.Log.Print($">> [DEBUG] OnGameStart: kingdom={Kingdom.All.Count}");
-            if (!this.canceled && game.GameType is Campaign)
+            if (game.GameType is Campaign)
             {
-                Options = new();
-                ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior(Options));
+                ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior());
                 Util.Log.Print($">> [DEBUG] OnGameStart: kingdom={Kingdom.All.Count}");
             }
             else
@@ -66,12 +53,17 @@ namespace NobleTitlesPlus
             Util.Log.Print($">> [DEBUG] OnGameInitializationFinished: kingdom={Kingdom.All.Count}");
             if (game.GameType is Campaign c)
             {
-                System.Diagnostics.Debug.Assert(settings is null);
-                settings?.Unregister();
-                ISettingsBuilder builder = RuntimeSettings.CreateSettings(Options!, c.UniqueGameId);
-                settings = builder.BuildAsPerSave();
-                settings?.Register();
+                try
+                {
+                    MCMRuntimeSettings.Instance = new(c.UniqueGameId);
+                    MCMRuntimeSettings.Instance.InitializeMCMSettings();
 
+                }
+                catch (Exception e)
+                {
+                    Util.Log.Print(e.Message);
+                    throw new(e.Message, e.InnerException);
+                }
                 harmony.PatchCategory("NameChangerCore");
                 harmony.PatchCategory("Conversation");
                 harmony.PatchCategory("PartyPopUp");
@@ -93,11 +85,7 @@ namespace NobleTitlesPlus
             Util.Log.Print($">> [DEBUG] OnGameEnd: kingdom={Kingdom.All.Count}");
             if (game.GameType is Campaign)
             {
-                var oldSettings = settings;
-                oldSettings?.Unregister();
-
-                settings = null;
-                Options = new();
+                MCMRuntimeSettings.Instance?.Clear();
             }
             else
             {
@@ -113,8 +101,6 @@ namespace NobleTitlesPlus
             base.OnGameEnd(game);
         }
 
-        private bool hasLoaded;
-        private bool canceled;
         internal static Harmony harmony = new(HarmonyDomain);
         public static string ModVersion
         {
@@ -141,13 +127,11 @@ namespace NobleTitlesPlus
                 return $"{SubModule.assemblyVersion.Major}.{SubModule.assemblyVersion.Minor}.{SubModule.assemblyVersion.Build}";
             }
         }
-        public static readonly Version assemblyVersion = typeof(RuntimeSettings).Assembly.GetName().Version;
+        public static readonly Version assemblyVersion = typeof(MCMRuntimeSettings).Assembly.GetName().Version;
         public const string Name = "NobleTitlePlus";
         public const string DisplayName = "Noble Titles Plus";
         public static readonly string modFolderName = Directory.GetParent(Assembly.GetExecutingAssembly().Location).Parent.Parent.Name;
         public const string HarmonyDomain = "com.skatagiri.bannerlord.NobleTitlePlus";
         internal static readonly Color ImportantTextColor = Color.FromUint(0x00F16D26); // orange
-        private FluentPerSaveSettings? settings;
-        public Options? Options { get; private set; }
     }
 }

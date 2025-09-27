@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using NobleTitlesPlus.DB;
 using NobleTitlesPlus.json;
+using NobleTitlesPlus.MCMSettings;
 using SandBox.ViewModelCollection.Nameplate;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Conversation;
@@ -34,22 +35,22 @@ namespace NobleTitlesPlus.Patches
                 TextObject title = new("{NAME}");
                 if (!hero.IsAlive)
                 {
-                    title = TitleBehavior.Options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
+                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
                 }
-                else if ((hero.IsKnownToPlayer || !TitleBehavior.Options.FogOfWar || hero.IsFactionLeader))
+                else if ((hero.IsKnownToPlayer || !MCMRuntimeSettings.Instance.Options.FogOfWar || hero.IsFactionLeader))
                 {
-                    bool hasRank = TitleBehavior.nomenclatura.HeroRank.TryGetValue(hero, out TitleRank rank);
+                    bool hasRank = MCMRuntimeSettings.Instance.Nomenclatura.HeroRank.TryGetValue(hero, out TitleRank rank);
 
-                    title = TitleBehavior.Options.TitleSet.GetMatchedTitle(hero, hasRank ? rank : TitleRank.None);
+                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, hasRank ? rank : TitleRank.None);
                 }
                 else
                 {
-                    title = TitleBehavior.Options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
+                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
                 }
                 title = title.SetTextVariable("NAME", name)
                             .SetTextVariable("CLAN", hero.Clan?.Name)
                             .SetTextVariable("CLAN_SHORT", hero.Clan?.InformalName);
-                if (TitleBehavior.nomenclatura.ClanAttrs.TryGetValue(hero.Clan, out (TextObject strFief, TextObject shokuhoProv, ClanNamePair clanNamesPair) fiefNames))
+                if (MCMRuntimeSettings.Instance.Nomenclatura.ClanAttrs.TryGetValue(hero.Clan, out (TextObject strFief, TextObject shokuhoProv, ClanNamePair clanNamesPair) fiefNames))
                 {
                     title = title.SetTextVariable("FIEFS", fiefNames.strFief).SetTextVariable("PROVINCE_SHO", fiefNames.shokuhoProv);
                 }
@@ -154,7 +155,7 @@ namespace NobleTitlesPlus.Patches
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
         {
             Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Culture.StringId}, {__instance.Name}");
-            __result = TitleBehavior.Options.TitleSet.GetMatchedTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
+            __result = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
         }
     }
     /* used by SettlementMenuOverlayVM.CharacterList and so on*/

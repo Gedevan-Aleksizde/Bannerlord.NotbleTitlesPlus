@@ -1,4 +1,5 @@
 ﻿using MCM.Abstractions.Base;
+using MCM.Abstractions.Base.PerCampaign;
 using MCM.Abstractions.FluentBuilder;
 using MCM.Common;
 using NobleTitlesPlus.DB;
@@ -34,14 +35,79 @@ namespace NobleTitlesPlus.MCMSettings
         public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(Inheritance)).OfType<Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
         public TitleSet TitleSet { get; set; } = new();
     }
-    internal static class RuntimeSettings
+    public class MCMRuntimeSettings
     {
         private const string settingsId = SubModule.Name;
         private static string SettingsName => $"{SubModule.DisplayName} v{SubModule.ModVersion}/{SubModule.AssemblyVersion}";
-        internal static ISettingsBuilder AddSettings(Options options, string saveid)
+        public static readonly string[] ImperialFactions = { "empire_w", "empire_s", "empire" };
+
+        private string saveId = "";
+        // private ISettingsBuilder _settingsBuilder;
+        private FluentPerCampaignSettings? settings;
+        public Options Options { get; private set; }
+        public Nomenclatura Nomenclatura { get; private set; } = new();
+        public static MCMRuntimeSettings? Instance;
+        public MCMRuntimeSettings(string saveId)
         {
-            Util.Log.Print($">> [INFO] AddSettings Called. kindoms={Kingdom.All.Count}");
-            var builder = BaseSettingsBuilder.Create(settingsId, SettingsName)
+            this.Options ??= new Options();
+            this.saveId = saveId;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void InitializeMCMSettings()
+        {
+            // Options should be constructed before creating settings, but should be initialized after the settings registered.
+            ISettingsBuilder builder = CreateSettingBuilder(this.saveId);
+            this.settings = builder.BuildAsPerCampaign();
+            this.settings.Register();
+            this.Options.TitleSet.Initialize();
+        }
+        /// <summary>
+        /// this should be called as soon after the game started.
+        /// nomenclatura should be updated after the Options.titleset is set
+        /// </summary>
+        public void InitializeNomenclaturaOnGameStart()
+        {
+            Util.Log.Print($">> [DEBUG] OnNewGameCreated: kingdom={Kingdom.All.Count}");
+            Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
+            if (this.Options.VerboseLog) Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
+        }
+        /// <summary>
+        /// this should be called as soob as possible after the game loaded.
+        /// </summary>
+        public void UpdateNomenclaturaOnGameLoaded()
+        {
+            Util.Log.Print($">> [DEBUG] OnGameLoaded: kingdom={Kingdom.All.Count}");
+            if (this.Options.VerboseLog) Util.Log.Print(">> [INFO] Loading campaign");
+            Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
+            if (this.Options.VerboseLog) Util.Log.Print($">> [INFO] Loading campaign on {SubModule.Name}");
+        }
+        /// <summary>
+        /// this should be called when quitting the game mode.
+        /// </summary>
+        public void Clear()
+        {
+            this.settings?.Unregister();
+        }
+        public void UpdateNomenclaturaOnDailyTick()
+        {
+            IEnumerable<Kingdom> survivingImperial = Kingdom.All.Where(x => !x.IsEliminated && ImperialFactions.Contains(x.StringId));
+            if (survivingImperial.Count() == 1)
+            {
+                Nomenclatura.OverwriteWithImperialFormats(survivingImperial.First());
+            }
+            Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
+        }
+        /// <summary>
+        /// crea a settings builder. This deeply depends on this.Options.TitleSet
+        /// </summary>
+        /// <param name="saveid"></param>
+        /// <returns></returns>
+        internal ISettingsBuilder CreateSettingBuilder(string saveid)
+        {
+            Util.Log.Print($">> [INFO] CreateSettings Called. kindoms={Kingdom.All.Count}");
+            ISettingsBuilder builder = BaseSettingsBuilder.Create(settingsId, SettingsName)
                 .SetFormat("json2")
                 .SetFolderName(settingsId)
                 .SetSubFolder(saveid)
@@ -53,16 +119,15 @@ namespace NobleTitlesPlus.MCMSettings
                 .CreateGroup(FindTextShortMCM("minor_default"), GenerateMinorFactionGroupProperties("default", 5));
             ;
             const int orderoffset = 6;
-
             int j = 0;
-            foreach (string cultureId in options.TitleSet.cultures.Keys.Where(x => x != "default"))
+            foreach (string cultureId in this.Options.TitleSet.cultures.Keys.Where(x => x != "default"))
             {
                 string name = GameTexts.FindText("str_faction_formal_name_for_culture", cultureId).ToString();
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(cultureId, orderoffset + j)); ;
                 Util.Log.Print($">> [INFO] Category {name}({cultureId}, culture) added to MCM options");
                 j++;
             }
-            if (options.TitleSet.factions.ContainsKey("new_kingdom"))
+            if (this.Options.TitleSet.factions.ContainsKey("new_kingdom"))
             {
                 // TODO: how to identify player kingdom
                 string name = Kingdom.All.Where(k => k.StringId == "new_kingdom")?.First()?.Name?.ToString() ?? FindTextShortMCM("error_kingdom");
@@ -70,7 +135,7 @@ namespace NobleTitlesPlus.MCMSettings
                 Util.Log.Print($">> [INFO] Category {name}(new_kingdom, faction) added to MCM options");
                 j++;
             }
-            foreach (string kingdomId in options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
+            foreach (string kingdomId in this.Options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
             {
                 string name = Kingdom.All.Where(k => k.StringId == kingdomId)?.First()?.InformalName.ToString() ?? FindTextShortMCM("error_kingdom");
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(kingdomId, orderoffset + j, false)); ;
@@ -78,18 +143,19 @@ namespace NobleTitlesPlus.MCMSettings
                 j++;
             }
             List<Clan> clans = Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter).ToList();
-            foreach (string clanId in options.TitleSet.minorFactions.Keys.Where(x => x != "default"))
+            foreach (string clanId in this.Options.TitleSet.minorFactions.Keys.Where(x => x != "default"))
             {
                 string name = clans.Where(c => c.StringId == clanId).First().Name.ToString(); // TODO
                 builder.CreateGroup(name, GenerateMinorFactionGroupProperties(clanId, orderoffset + j));
                 Util.Log.Print($">> [INFO] Category {name}({clanId}, minor faction) added to MCM options");
                 j++;
             }
-            builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, new(), "DEF"));
+            builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, "DEF"));
             foreach ((string id, string name) presetName in new List<(string, string)>() { ("ORI", "Original"), ("VAR", "Variant"), ("VARM", "VariantModified"), ("SHO", "Shokuho"), ("SHOM", "ShokuhoModified") })
             {
-                builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, new(), presetName.id));
+                builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, presetName.id));
             }
+            Util.Log.Print($">> [INFO] builder created");
             return builder;
 
             /*
@@ -98,15 +164,15 @@ namespace NobleTitlesPlus.MCMSettings
             void BuildGeneralGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddBool("fogOfWar", "{=yF9agd1M}Fog of War",
                     new ProxyRef<bool>(
-                        () => options.FogOfWar,
-                        value => options.FogOfWar = value),
+                        () => this.Options.FogOfWar,
+                        value => this.Options.FogOfWar = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("fow_hint")).SetOrder(0)
                     )
                 // TODO
                 .AddDropdown("heir", FindTextShortMCM("heir"), 1,
                     new ProxyRef<Dropdown<TextObject>>(
-                        () => options.Inheritance,
-                        value => options.Inheritance = value),
+                        () => this.Options.Inheritance,
+                        value => this.Options.Inheritance = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(6)
                 )
                 .SetGroupOrder(0);
@@ -114,42 +180,42 @@ namespace NobleTitlesPlus.MCMSettings
                 .AddBool(
                     "tagging", FindTextShortMCM("tagging"),
                     new ProxyRef<bool>(
-                        () => options.Tagging,
-                        value => options.Tagging = value),
+                        () => this.Options.Tagging,
+                        value => this.Options.Tagging = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("tagging_hint")).SetOrder(0)
                     )
                 .AddText("fiefNameSeparator", FindTextShortMCM("separator"),
                     new ProxyRef<string>(
-                        () => options.FiefNameSeparator,
-                        value => options.FiefNameSeparator = value
+                        () => this.Options.FiefNameSeparator,
+                        value => this.Options.FiefNameSeparator = value
                         ),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("separator_hint")).SetOrder(1)
                     )
                 .AddText("fiefNameSeparatorLast", FindTextShortMCM("separator_last"),
                     new ProxyRef<string>(
-                        () => options.FiefNameSeparatorLast,
-                        value => options.FiefNameSeparatorLast = value
+                        () => this.Options.FiefNameSeparatorLast,
+                        value => this.Options.FiefNameSeparatorLast = value
                         ),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("separator_last_hint")).SetOrder(2)
                     )
                 .AddInteger("maxFiefNames", FindTextShortMCM("size"), 0, 10,
                     new ProxyRef<int>(
-                        () => options.MaxFiefNames,
-                        value => options.MaxFiefNames = value),
+                        () => this.Options.MaxFiefNames,
+                        value => this.Options.MaxFiefNames = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("size_hint")).SetOrder(3)
                     )
                 .SetGroupOrder(1);
 
             void BuildShokuhoGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddBool("fix_shokuho_clan_name", FindTextShortMCM("fix_shokuho_clan_name"), new ProxyRef<bool>(
-                    () => options.FixShokuhoClanName,
+                    () => this.Options.FixShokuhoClanName,
                     value =>
                     {
                         if (value)
                         {
-                            TitleBehavior.nomenclatura.UpdateAll(true);
+                            this.Nomenclatura.UpdateAll(true);
                         }
-                        options.FixShokuhoClanName = value;
+                        this.Options.FixShokuhoClanName = value;
                     }
                     ),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("fix_shokuho_clan_name_hint")).SetOrder(0)
@@ -158,22 +224,22 @@ namespace NobleTitlesPlus.MCMSettings
             void BuildAdvancedGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddInteger(
                 "duke_cap_divisor", FindTextShortMCM("duke_cap_divisor"), 1, 10, new ProxyRef<int>(
-                    () => options.DivisorCapDuke,
+                    () => this.Options.DivisorCapDuke,
                     value =>
                     {
-                        options.DivisorCapDuke = value;
-                        TitleBehavior.nomenclatura.divisorDuke = value;
+                        this.Options.DivisorCapDuke = value;
+                        this.Nomenclatura.divisorDuke = value;
                     }
                     ),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("duke_cap_divisor_hint")).SetOrder(0)
                 )
                 .AddInteger(
                 "baron_threshold", FindTextShortMCM("baron_threshold"), 1, 10, new ProxyRef<int>(
-                    () => options.ThresholdBaron,
+                    () => this.Options.ThresholdBaron,
                     value =>
                     {
-                        options.ThresholdBaron = value;
-                        TitleBehavior.nomenclatura.thretholdBaron = value;
+                        this.Options.ThresholdBaron = value;
+                        this.Nomenclatura.thretholdBaron = value;
                     }
                     ),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("baron_threshold_hint")).SetOrder(1)
@@ -189,8 +255,8 @@ namespace NobleTitlesPlus.MCMSettings
                 */
                 .AddBool("use_united_empire_title", FindTextShortMCM("united_empire"),
                 new ProxyRef<bool>(
-                    () => options.UseUnitedTitle,
-                    value => options.UseUnitedTitle = value),
+                    () => this.Options.UseUnitedTitle,
+                    value => this.Options.UseUnitedTitle = value),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("united_empire_hint")).SetOrder(8)
                 )
                 /*Canceled. the native implementation is too messy */
@@ -225,8 +291,8 @@ namespace NobleTitlesPlus.MCMSettings
                 ) */
                 .AddBool("VerboseLog", FindTextShortMCM("verbose"),
                 new ProxyRef<bool>(
-                    () => options.VerboseLog,
-                    value => options.VerboseLog = value),
+                    () => this.Options.VerboseLog,
+                    value => this.Options.VerboseLog = value),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("verbose_hint")).SetOrder(9)
                 )
                 .SetGroupOrder(3);
@@ -249,11 +315,11 @@ namespace NobleTitlesPlus.MCMSettings
                                 .AddText(
                                     $"KingdomRank{rank}{s}_{id}", FindTextShortMCM($"title_{rank}{s}"),
                                     new ProxyRef<string>(
-                                        () => options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, (TitleRank)rank, Category.Default),
+                                        () => this.Options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, (TitleRank)rank, Category.Default),
                                         value =>
                                         {
-                                            if (isCulture) options.TitleSet.SetCultureTitle(value, id, isFemale, (TitleRank)rank);
-                                            else options.TitleSet.SetFactionTitle(value, id, isFemale, (TitleRank)rank);
+                                            if (isCulture) this.Options.TitleSet.SetCultureTitle(value, id, isFemale, (TitleRank)rank);
+                                            else this.Options.TitleSet.SetFactionTitle(value, id, isFemale, (TitleRank)rank);
                                         }
                                     ),
                                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"{rank}{s}_hint"))
@@ -263,11 +329,11 @@ namespace NobleTitlesPlus.MCMSettings
                         builder
                         .AddText($"KingdomRoyal{s}_{id}", FindTextShortMCM($"title_Royal{s}"),
                             new ProxyRef<string>(
-                                () => options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, TitleRank.Royal, Category.Default),
+                                () => this.Options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, TitleRank.Royal, Category.Default),
                                 value =>
                                 {
-                                    if (isCulture) options.TitleSet.SetCultureTitle(value, id, isFemale, TitleRank.Royal);
-                                    else options.TitleSet.SetFactionTitle(value, id, isFemale, TitleRank.Royal);
+                                    if (isCulture) this.Options.TitleSet.SetCultureTitle(value, id, isFemale, TitleRank.Royal);
+                                    else this.Options.TitleSet.SetFactionTitle(value, id, isFemale, TitleRank.Royal);
                                 }),
                             propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"Royal{s}_hint"))
                             .SetOrder(14 + (isFemale ? 0 : 1))
@@ -275,11 +341,11 @@ namespace NobleTitlesPlus.MCMSettings
                         builder
                         .AddText($"KingdomCrown{s}_{id}", FindTextShortMCM($"title_Crown{s}"),
                             new ProxyRef<string>(
-                                () => options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, TitleRank.Prince, Category.Default),
+                                () => this.Options.TitleSet.GetTitleRaw(isFemale, id, isCulture ? null : id, TitleRank.Prince, Category.Default),
                                 value =>
                                 {
-                                    if (isCulture) options.TitleSet.SetCultureTitle(value, id, isFemale, TitleRank.Prince);
-                                    else options.TitleSet.SetFactionTitle(value, id, isFemale, TitleRank.Prince);
+                                    if (isCulture) this.Options.TitleSet.SetCultureTitle(value, id, isFemale, TitleRank.Prince);
+                                    else this.Options.TitleSet.SetFactionTitle(value, id, isFemale, TitleRank.Prince);
                                 }),
                             propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"Crown{s}_hint"))
                             .SetOrder(16 + (isFemale ? 0 : 1))
@@ -296,23 +362,23 @@ namespace NobleTitlesPlus.MCMSettings
             {
                 void BuildMinorFactionGroupProperties(ISettingsPropertyGroupBuilder builder)
                 {
-                    if (TitleBehavior.options.VerboseLog) Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
+                    if (this.Options.VerboseLog) Util.Log.Print($">> [INFO] {clanStringId} group added on MCM");
                     foreach (string g in (string[])Enum.GetNames(typeof(DB.Gender)))
                     {
                         bool isFemale = g == "F";
                         builder.AddText(
                             $"MinorL{g}_{clanStringId}", FindTextShortMCM($"title_minorL{g}"),
                             new ProxyRef<string>(
-                                () => options.TitleSet.GetMinorTitleRaw(clanStringId, isFemale, TitleRank.King),
-                                value => options.TitleSet.SetMinorFactionTitle(clanStringId, isFemale, TitleRank.King, value)
+                                () => this.Options.TitleSet.GetMinorTitleRaw(clanStringId, isFemale, TitleRank.King),
+                                value => this.Options.TitleSet.SetMinorFactionTitle(clanStringId, isFemale, TitleRank.King, value)
                             ),
                             propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"minorL{g}_hint"))
                             .SetOrder(0 + (g == "F" ? 0 : 1))
                         );
                         builder.AddText($"MinorM{g}_{clanStringId}", FindTextShortMCM($"title_minorM{g}"),
                             new ProxyRef<string>(
-                                () => options.TitleSet.GetMinorTitleRaw(clanStringId, isFemale, TitleRank.Noble),
-                                value => options.TitleSet.SetMinorFactionTitle(clanStringId, isFemale, TitleRank.Noble, value)
+                                () => this.Options.TitleSet.GetMinorTitleRaw(clanStringId, isFemale, TitleRank.Noble),
+                                value => this.Options.TitleSet.SetMinorFactionTitle(clanStringId, isFemale, TitleRank.Noble, value)
                             ),
                             propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM($"minorM{g}_hint"))
                             .SetOrder(2 + (g == "F" ? 0 : 1))
@@ -328,9 +394,9 @@ namespace NobleTitlesPlus.MCMSettings
             /// set preset values
             /// </summary>
             ///
-            void BuildPreset(ISettingsPresetBuilder builder, Options option, string preset)
+            void BuildPreset(ISettingsPresetBuilder builder, string preset)
             {
-                Dropdown<TextObject> a = new(Enum.GetValues(typeof(KingdomTitleFormat)).OfType<KingdomTitleFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"kingdom_title_format_{x.ToString().ToLower()}")), (int)KingdomTitleFormat.Default);
+                Dropdown<TextObject> dropDownPreset = new(Enum.GetValues(typeof(KingdomTitleFormat)).OfType<KingdomTitleFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"kingdom_title_format_{x.ToString().ToLower()}")), (int)KingdomTitleFormat.Default);
                 builder
                     .SetPropertyValue("fogOfWar", true)
                     .SetPropertyValue("encyclopedia", false) // TODO
@@ -338,7 +404,7 @@ namespace NobleTitlesPlus.MCMSettings
                     .SetPropertyValue("fiefNameSeparator", FindTextShortMCM("separator_value"))
                     .SetPropertyValue("fiefNameSeparatorLast", FindTextShortMCM("separator_last_value"))
                     .SetPropertyValue("maxFiefName", 1)
-                    .SetPropertyValue("kingdom_title_format", a)
+                    .SetPropertyValue("kingdom_title_format", dropDownPreset)
                     .SetPropertyValue("fix_shokuho_clan_name", false);
                 FillFactionPropertyValues(preset, "default", "default");
                 FillMinorFactionPropertyValues(preset, "default");

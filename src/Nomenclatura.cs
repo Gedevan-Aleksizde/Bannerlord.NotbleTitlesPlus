@@ -1,5 +1,6 @@
 ﻿using NobleTitlesPlus.DB;
 using NobleTitlesPlus.json;
+using NobleTitlesPlus.MCMSettings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace NobleTitlesPlus
     /// <summary>
     /// Cache for access the text faster
     /// </summary>
-    class Nomenclatura
+    public class Nomenclatura
     {
         public int thretholdBaron;
         public int divisorDuke;
@@ -66,13 +67,18 @@ namespace NobleTitlesPlus
         /// <param name="clan"></param>
         public void UpdateFiefList(Clan clan)
         {
+            if (MCMRuntimeSettings.Instance is null)
+            {
+                Util.Log.Print("[WARNING] MCM setting instance is null at UpdateFielFList.");
+                return;
+            }
             // TODO: keeping TextObject causes replacing wrong name, very weird.
-            List<(string SettlementId, string Name)> fiefTupleList = clan.Fiefs.Take(TitleBehavior.Options.MaxFiefNames).Select(x => (SettlementId: x.Settlement.StringId, Name: x.Name.ToString())).ToList();
+            List<(string SettlementId, string Name)> fiefTupleList = clan.Fiefs.Take(MCMRuntimeSettings.Instance.Options.MaxFiefNames).Select(x => (SettlementId: x.Settlement.StringId, Name: x.Name.ToString())).ToList();
 
-            if (fiefTupleList.Count() <= 1 || TitleBehavior.Options.MaxFiefNames <= 1)
+            if (fiefTupleList.Count() <= 1 || MCMRuntimeSettings.Instance.Options.MaxFiefNames <= 1)
             {
                 (string SettlementId, string Name) = fiefTupleList.FirstOrDefault();
-                if (!TitleBehavior.Options.TitleSet.shokuhoCastleProvinceMap.TryGetValue(SettlementId ?? "", out string strProvId))
+                if (!MCMRuntimeSettings.Instance.Options.TitleSet.shokuhoCastleProvinceMap.TryGetValue(SettlementId ?? "", out string strProvId))
                 {
                     strProvId = "default";
                 }
@@ -83,11 +89,11 @@ namespace NobleTitlesPlus
             }
             else if (fiefTupleList.Count > 1)
             {
-                string sep = TitleBehavior.Options.FiefNameSeparator + " ";
-                string fiefs = string.Join(sep, fiefTupleList.Take(Math.Min(fiefTupleList.Count() - 1, TitleBehavior.Options.MaxFiefNames)).Select(x => x.Name).ToArray<string>());
-                string lastElement = string.Join(" ", new string[] { TitleBehavior.Options.FiefNameSeparatorLast, fiefTupleList.Last().Name });
+                string sep = MCMRuntimeSettings.Instance.Options.FiefNameSeparator + " ";
+                string fiefs = string.Join(sep, fiefTupleList.Take(Math.Min(fiefTupleList.Count() - 1, MCMRuntimeSettings.Instance.Options.MaxFiefNames)).Select(x => x.Name).ToArray<string>());
+                string lastElement = string.Join(" ", new string[] { MCMRuntimeSettings.Instance.Options.FiefNameSeparatorLast, fiefTupleList.Last().Name });
 
-                if (!TitleBehavior.Options.TitleSet.shokuhoCastleProvinceMap.TryGetValue(fiefTupleList.Last().SettlementId ?? "", out string strProvId))
+                if (!MCMRuntimeSettings.Instance.Options.TitleSet.shokuhoCastleProvinceMap.TryGetValue(fiefTupleList.Last().SettlementId ?? "", out string strProvId))
                 {
                     strProvId = "default";
                 }
@@ -112,9 +118,14 @@ namespace NobleTitlesPlus
         /// <param name=""></param>
         public void UpdateClanName(Clan clan)
         {
+            if (MCMRuntimeSettings.Instance is null)
+            {
+                Util.Log.Print("[WARNING] MCM setting instance is null at UpdateClanName.");
+                return;
+            }
             TextObject shortName;
             TextObject longName;
-            if (TitleBehavior.Options.TitleSet.shokuhoClanNames.TryGetValue(clan.StringId, out ClanNamePair namePair))
+            if (MCMRuntimeSettings.Instance.Options.TitleSet.shokuhoClanNames.TryGetValue(clan.StringId, out ClanNamePair namePair))
             {
                 if (namePair?.ClanShort is null || namePair?.ClanLong is null)
                 {
@@ -146,6 +157,11 @@ namespace NobleTitlesPlus
         /// <param name="kingdom"></param>
         private void AddTitlesToKingdomHeroes(Kingdom kingdom)
         {
+            if (MCMRuntimeSettings.Instance is null)
+            {
+                Util.Log.Print("[WARNING] MCM setting instance is null at AddTitlesToKingdomHeroes.");
+                return;
+            }
             List<string> tr = new() { $">> [INFO] Adding noble titles to \"{kingdom.Name}\" (ID={kingdom.StringId}) (culture={kingdom.Culture.StringId})..." };
             // Common Nobles, not a Clan Leader
             List<Hero> commonNobles = kingdom.Clans
@@ -164,10 +180,10 @@ namespace NobleTitlesPlus
             }
             // Crown Prince/Princess
             List<Hero> royals = kingdom.RulingClan.Heroes.Where(h => !h.IsFactionLeader && h != h.Clan.Leader.Spouse).ToList();
-            switch (TitleBehavior.Options.Inheritance.SelectedValue)
+            switch (MCMRuntimeSettings.Instance.Options.Inheritance.SelectedValue)
             {
             }
-            List<Hero> heirs = (DB.Inheritance)TitleBehavior.Options.Inheritance.SelectedIndex switch
+            List<Hero> heirs = (DB.Inheritance)MCMRuntimeSettings.Instance.Options.Inheritance.SelectedIndex switch
             {
                 Inheritance.Primogeniture => royals.Where(h => h.Father == kingdom.Leader || h.Mother == kingdom.Leader).OrderBy(h => -h.Age).ToList(),
                 Inheritance.Adult => royals.Where(h => (h.Father == kingdom.Leader || h.Mother == kingdom.Leader) && !h.IsChild).OrderBy(h => -h.Age).ToList(),
@@ -213,7 +229,7 @@ namespace NobleTitlesPlus
                     ++nBarons;
                     this.HeroRank[h] = TitleRank.Baron;
                     tr.Add(this.GetHeroTrace(h, TitleRank.Baron));
-                    if (TitleBehavior.Options.SpouseTitle && h.Spouse != null && h.Spouse.IsAlive)
+                    if (MCMRuntimeSettings.Instance.Options.SpouseTitle && h.Spouse != null && h.Spouse.IsAlive)
                     {
                         this.HeroRank[h.Spouse] = TitleRank.Baron;
                         tr.Add(this.GetHeroTrace(h.Spouse, TitleRank.Baron));
@@ -233,7 +249,7 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[vassals[i]] = TitleRank.Count;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Count));
-                if (TitleBehavior.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
+                if (MCMRuntimeSettings.Instance.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
                 {
                     this.HeroRank[vassals[i].Spouse] = TitleRank.Count;
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Count));
@@ -243,7 +259,7 @@ namespace NobleTitlesPlus
             {
                 this.HeroRank[vassals[i]] = TitleRank.Duke;
                 tr.Add(this.GetHeroTrace(vassals[i], TitleRank.Duke));
-                if (TitleBehavior.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
+                if (MCMRuntimeSettings.Instance.Options.SpouseTitle && vassals[i].Spouse != null && vassals[i].Spouse.IsAlive)
                 {
                     this.HeroRank[vassals[i].Spouse] = TitleRank.Duke;
                     tr.Add(this.GetHeroTrace(vassals[i].Spouse, TitleRank.Duke));
@@ -260,17 +276,25 @@ namespace NobleTitlesPlus
                     tr.Add(this.GetHeroTrace(kingdom.Leader.Spouse, TitleRank.King));
                 }
             }
-            if (TitleBehavior.Options.VerboseLog) Util.Log.Print(tr);
+            if (MCMRuntimeSettings.Instance.Options.VerboseLog) Util.Log.Print(tr);
         }
         /// <summary>
         /// overwrite the single surviving Imperial faction with the united Imperial titles.
         /// </summary>
         public void OverwriteWithImperialFormats(Kingdom kingdom)
         {
-            Util.Log.Print(">> [INFO] The Empire is reunited. The suriving faction inherit legitimate Imperial titles.");
+            if (MCMRuntimeSettings.Instance is null)
+            {
+                Util.Log.Print("[WARNING] MCM setting instance is null at OverwriteWithImperialFormats.");
+                return;
+            }
+            else
+            {
+                Util.Log.Print(">> [INFO] The Empire is reunited. The suriving faction inherit legitimate Imperial titles.");
+            }
             kingdom.ChangeKingdomName(GameTexts.FindText("str_faction_formal_name_for_culture", "empire"), GameTexts.FindText("str_faction_informal_name_for_culture", "empire"));
-            TitleBehavior.Options.TitleSet.cultures.TryGetValue("empire", out TitleSet.FactionTitleSet fts);
-            TitleBehavior.Options.TitleSet.factions.Add(kingdom.StringId, fts);
+            MCMRuntimeSettings.Instance.Options.TitleSet.cultures.TryGetValue("empire", out TitleSet.FactionTitleSet fts);
+            MCMRuntimeSettings.Instance.Options.TitleSet.factions.Add(kingdom.StringId, fts);
         }
 
         /// <summary>
@@ -297,7 +321,7 @@ namespace NobleTitlesPlus
                         }
                     }
                 }
-                if (TitleBehavior.Options.VerboseLog) Util.Log.Print(tr);
+                if (MCMRuntimeSettings.Instance?.Options?.VerboseLog ?? true) Util.Log.Print(tr);
             }
         }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);
