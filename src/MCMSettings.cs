@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using TaleWorlds.Localization;
 
 namespace NobleTitlesPlus.MCMSettings
@@ -30,11 +31,16 @@ namespace NobleTitlesPlus.MCMSettings
         public int MaxFiefNames { get; set; } = 1;
         public int DivisorCapDuke { get; set; } = 3;
         public int ThresholdBaron { get; set; } = 3;
-        public Dropdown<TextObject> KingdomTitleFormat { get; set; } = new(Enum.GetValues(typeof(KingdomTitleFormat)).OfType<KingdomTitleFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"kingdom_title_format_{x.ToString().ToLower()}")), 1);
-        public Dropdown<TextObject> SuffixNumFormat = new(Enum.GetValues(typeof(SuffixNumberFormat)).OfType<SuffixNumberFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"suffix_number_format_{x.ToString().ToLower()}")), 1);
-        public bool UseUnitedTitle { get; set; } = false;
-        public Dropdown<TextObject> Inheritance { get; set; } = new(Enum.GetValues(typeof(Inheritance)).OfType<Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
         public TitleSet TitleSet { get; set; } = new();
+
+        public KingdomTitleFormat TitleFormat => (KingdomTitleFormat)this._kingdomTitleFormat.SelectedIndex;
+        public Dropdown<TextObject> _kingdomTitleFormat = new(Enum.GetValues(typeof(KingdomTitleFormat)).OfType<KingdomTitleFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"kingdom_title_format_{x.ToString().ToLower()}")), 1);
+        public SuffixNumberFormat SuffixNumFormat => (SuffixNumberFormat)this._suffixNumFormat.SelectedIndex;
+        public Dropdown<TextObject> _suffixNumFormat = new(Enum.GetValues(typeof(SuffixNumberFormat)).OfType<SuffixNumberFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"suffix_number_format_{x.ToString().ToLower()}")), 1);
+        public bool UseUnitedTitle { get; set; } = false;
+        public Inheritance Inheritance => (Inheritance)this._inheritance.SelectedIndex;
+        public Dropdown<TextObject> _inheritance = new(Enum.GetValues(typeof(Inheritance)).OfType<Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
+
     }
     public class MCMRuntimeSettings
     {
@@ -89,6 +95,24 @@ namespace NobleTitlesPlus.MCMSettings
                 Nomenclatura.OverwriteWithImperialFormats(survivingImperial.First());
             }
             Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
+        }
+        private void ShokuhoButton()
+        {
+            InformationManager.ShowInquiry(
+                    new InquiryData(
+                        FindTextShortMCM("confirm").ToString(),
+                        FindTextShortMCM("confirm_body").ToString(),
+                        true, true,
+                        FindTextShortMCM("choose_proceed").ToString(),
+                        FindTextShortMCM("choose_cancel").ToString(),
+                        new Action(() =>
+                        {
+                            foreach (Clan c in Clan.All)
+                            {
+                                this.Nomenclatura.UpdateClanName(c);
+                            }
+                        }),
+                    null, null, 0f, null), true, false);
         }
         /// <summary>
         /// crea a settings builder. This deeply depends on this.Options.TitleSet
@@ -162,14 +186,14 @@ namespace NobleTitlesPlus.MCMSettings
                 // TODO
                 .AddDropdown("heir", FindTextShortMCM("heir"), 1,
                     new ProxyRef<Dropdown<TextObject>>(
-                        () => this.Options.Inheritance,
-                        value => this.Options.Inheritance = value),
+                        () => this.Options._inheritance,
+                        value => this.Options._inheritance = value),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("heir_hint")).SetOrder(6)
                 )
                 .AddDropdown("suffix_num", FindTextShortMCM("suffix_num"), 0,
                     new ProxyRef<Dropdown<TextObject>>(
-                        () => this.Options.SuffixNumFormat,
-                        value => this.Options.SuffixNumFormat = value),
+                        () => this.Options._suffixNumFormat,
+                        value => this.Options._suffixNumFormat = value),
                     probBuilder => probBuilder.SetRequireRestart(true).SetHintText(FindTextShortMCM("suffix_num_hint")).SetOrder(7)
                 )
                 .SetGroupOrder(0);
@@ -202,9 +226,8 @@ namespace NobleTitlesPlus.MCMSettings
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("size_hint")).SetOrder(3)
                     )
                 .SetGroupOrder(1);
-
             void BuildShokuhoGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
-                .AddBool("fix_shokuho_clan_name", FindTextShortMCM("fix_shokuho_clan_name"), new ProxyRef<bool>(
+                /*.AddBool("fix_shokuho_clan_name", FindTextShortMCM("fix_shokuho_clan_name"), new ProxyRef<bool>(
                     () => this.Options.FixShokuhoClanName,
                     value =>
                     {
@@ -216,7 +239,16 @@ namespace NobleTitlesPlus.MCMSettings
                     }
                     ),
                     propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("fix_shokuho_clan_name_hint")).SetOrder(0)
-                ).SetGroupOrder(2); ;
+                )*/
+                .AddButton("fix_shokuho_clan_name_button", FindTextShortMCM("fix_shokuho_clan_name"),
+                new ProxyRef<Action>(
+                    () => ShokuhoButton,
+                    null
+                    ),
+                FindTextShortMCM("shokuho_clan_name_content"),
+                propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("fix_shokuho_clan_name_hint")).SetOrder(1)
+                )
+                .SetGroupOrder(2); ;
 
             void BuildAdvancedGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
                 .AddInteger(

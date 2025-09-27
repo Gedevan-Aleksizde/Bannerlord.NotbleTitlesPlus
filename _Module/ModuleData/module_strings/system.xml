@@ -36,7 +36,13 @@
 	<string id="ntp_mcm.suffix_number_format_none" text="{=xsKu20hh5G}None" />
 	<string id="ntp_mcm.suffix_number_format_all" text="{=Ec7eqYXES9}All" />
 	<string id="ntp_mcm.suffix_number_format_untilsecond" text="{=hZ5dC1kQgX}Until Second" />
+	<string id="ntp_mcm.shokuho_clan_name_content" text="{=mKaVLFZlGA}Overwrite" />	
+	<string id="ntp_mcm.confirm" text="{=CmTniagIVc}Confirmation" />
+	<string id="ntp_mcm.confirm_body" text="{=lWdsNFoaIl}You can't undo this change after saving the campgign. Are you sure you want to proceed?" />
+	<string id="ntp_mcm.choose_proceed" text="{=qBmkfiIH11}Confirm" />
+	<string id="ntp_mcm.choose_cancel" text="{=2DD9ieGjtS}Cancel" />
 
+	
 	
 	<string id="ntp_mcm.duke_cap_divisor" text="{=1QFAqlDCiT}Duke Capacity Divisor"/>
 	<string id="ntp_mcm.duke_cap_divisor_hint" text="{=0PCRoAuCVu}The number of dukes is determined as (number of clan leaders without king)/(this parameter). The default value is 3."/>

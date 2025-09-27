@@ -92,6 +92,11 @@
 		<string id="bWMiFgw5ac" text="Error 001: Kingdom Name Not Found"/>
 		<string id="S40p9P6Slm" text="Change the Imperial title when reunited" />
 		<string id="aRh2YvgeuG" text="If enabled, surviving Empire titles are overwrtten with the common Imperial title when the reunion is succeeded." />
+		<string id="mKaVLFZlGA" text="Overwrite" />	
+		<string id="CmTniagIVc" text="Confirmation" />
+		<string id="lWdsNFoaIl" text="You can't undo this change after saving the campgign. Are you sure you want to proceed?" />
+		<string id="qBmkfiIH11" text="Confirm" />
+		<string id="2DD9ieGjtS" text="Cancel" />
 
 			<string id="aIwostdeLa" text=" I" />
 			<string id="ZHZGGAkRj2" text=" II" />

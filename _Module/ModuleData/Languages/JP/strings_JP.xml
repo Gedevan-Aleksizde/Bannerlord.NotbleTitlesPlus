@@ -92,6 +92,11 @@
 		<string id="bWMiFgw5ac" text="Error 001: 国名を取得できません"/>
 		<string id="S40p9P6Slm" text="帝国再統一を果たした時に称号も統一する" />
 		<string id="aRh2YvgeuG" text="有効にすると、三帝国が統一された際に、残った帝国勢力の称号が帝国文化のものに変更されます" />
+		<string id="mKaVLFZlGA" text="上書き" />	
+		<string id="CmTniagIVc" text="確認" />
+		<string id="lWdsNFoaIl" text="一旦セーブするとこの変更は戻せません。本当に続行しますか?" />
+		<string id="qBmkfiIH11" text="承諾" />
+		<string id="2DD9ieGjtS" text="やめる" />
 		
 		<string id="aIwostdeLa" text="I世" />
 		<string id="ZHZGGAkRj2" text="II世" />
