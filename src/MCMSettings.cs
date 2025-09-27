@@ -59,9 +59,10 @@ namespace NobleTitlesPlus.MCMSettings
         {
             // Options should be constructed before creating settings, but should be initialized after the settings registered.
             ISettingsBuilder builder = CreateSettingBuilder(this.saveId);
+            this.Options.TitleSet.Initialize();
             this.settings = builder.BuildAsPerCampaign();
             this.settings.Register();
-            this.Options.TitleSet.Initialize();
+            if (this.Options.VerboseLog) Util.Log.Print("MCM Settings are initlialized", LogCategory.Debug);
         }
         /// <summary>
         /// this should be called as soon after the game started.
@@ -69,7 +70,7 @@ namespace NobleTitlesPlus.MCMSettings
         /// </summary>
         public void InitializeNomenclaturaOnGameStart()
         {
-            Util.Log.Print($">> [DEBUG] OnNewGameCreated: kingdom={Kingdom.All.Count}");
+            if (this.Options.VerboseLog) Util.Log.Print($"InitializeNomenclaturaOnGameStart: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
             if (this.Options.VerboseLog) Util.Log.Print($">> [INFO] Starting new campaign on {SubModule.Name}");
         }
@@ -78,10 +79,10 @@ namespace NobleTitlesPlus.MCMSettings
         /// </summary>
         public void UpdateNomenclaturaOnGameLoaded()
         {
-            Util.Log.Print($">> [DEBUG] OnGameLoaded: kingdom={Kingdom.All.Count}");
-            if (this.Options.VerboseLog) Util.Log.Print(">> [INFO] Loading campaign");
+            if (this.Options.VerboseLog) Util.Log.Print($"UpdateNomenclaturaOnGameLoaded: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
+            if (this.Options.VerboseLog) Util.Log.Print("Loading campaign", LogCategory.Info);
             Nomenclatura.UpdateAll(this.Options.FixShokuhoClanName);
-            if (this.Options.VerboseLog) Util.Log.Print($">> [INFO] Loading campaign on {SubModule.Name}");
+            if (this.Options.VerboseLog) Util.Log.Print($"Loading campaign on {SubModule.Name}", LogCategory.Info);
         }
         /// <summary>
         /// this should be called when quitting the game mode.
@@ -106,7 +107,7 @@ namespace NobleTitlesPlus.MCMSettings
         /// <returns></returns>
         internal ISettingsBuilder CreateSettingBuilder(string saveid)
         {
-            Util.Log.Print($">> [INFO] CreateSettings Called. kindoms={Kingdom.All.Count}");
+            Util.Log.Print($"CreateSettings Called. kindoms={Kingdom.All.Count}", LogCategory.Info);
             ISettingsBuilder builder = BaseSettingsBuilder.Create(settingsId, SettingsName)
                 .SetFormat("json2")
                 .SetFolderName(settingsId)
@@ -124,7 +125,7 @@ namespace NobleTitlesPlus.MCMSettings
             {
                 string name = GameTexts.FindText("str_faction_formal_name_for_culture", cultureId).ToString();
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(cultureId, orderoffset + j)); ;
-                Util.Log.Print($">> [INFO] Category {name}({cultureId}, culture) added to MCM options");
+                Util.Log.Print($"Category {name}({cultureId}, culture) added to MCM options", LogCategory.Info);
                 j++;
             }
             if (this.Options.TitleSet.factions.ContainsKey("new_kingdom"))
@@ -132,14 +133,14 @@ namespace NobleTitlesPlus.MCMSettings
                 // TODO: how to identify player kingdom
                 string name = Kingdom.All.Where(k => k.StringId == "new_kingdom")?.First()?.Name?.ToString() ?? FindTextShortMCM("error_kingdom");
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder("new_kingdom", orderoffset + j, false)); ;
-                Util.Log.Print($">> [INFO] Category {name}(new_kingdom, faction) added to MCM options");
+                Util.Log.Print($"Category {name}(new_kingdom, faction) added to MCM options", LogCategory.Info);
                 j++;
             }
             foreach (string kingdomId in this.Options.TitleSet.factions.Keys.Where(x => x != "new_kingdom"))
             {
                 string name = Kingdom.All.Where(k => k.StringId == kingdomId)?.First()?.InformalName.ToString() ?? FindTextShortMCM("error_kingdom");
                 builder.CreateGroup(name, GenerateKingdomGroupPropertiesBuilder(kingdomId, orderoffset + j, false)); ;
-                Util.Log.Print($">> [INFO] Category {name}({kingdomId}, faction) added to MCM options");
+                Util.Log.Print($"Category {name}({kingdomId}, faction) added to MCM options", LogCategory.Info);
                 j++;
             }
             List<Clan> clans = Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter).ToList();
@@ -147,7 +148,7 @@ namespace NobleTitlesPlus.MCMSettings
             {
                 string name = clans.Where(c => c.StringId == clanId).First().Name.ToString(); // TODO
                 builder.CreateGroup(name, GenerateMinorFactionGroupProperties(clanId, orderoffset + j));
-                Util.Log.Print($">> [INFO] Category {name}({clanId}, minor faction) added to MCM options");
+                Util.Log.Print($"Category {name}({clanId}, minor faction) added to MCM options", LogCategory.Info);
                 j++;
             }
             builder.CreatePreset(BaseSettings.DefaultPresetId, BaseSettings.DefaultPresetName, builder => BuildPreset(builder, "DEF"));
@@ -155,7 +156,7 @@ namespace NobleTitlesPlus.MCMSettings
             {
                 builder.CreatePreset(presetName.name, FindTextShortMCM($"preset_{presetName.name.ToLower().Replace(" ", "_")}"), builder => BuildPreset(builder, presetName.id));
             }
-            Util.Log.Print($">> [INFO] builder created");
+            Util.Log.Print($"Builder created", LogCategory.Info);
             return builder;
 
             /*

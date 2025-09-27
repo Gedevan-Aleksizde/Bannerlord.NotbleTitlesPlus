@@ -34,28 +34,28 @@ namespace NobleTitlesPlus
             if (game.GameType is Campaign)
             {
                 ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior());
-                Util.Log.Print($">> [DEBUG] OnGameStart: kingdoms={Kingdom.All.Count}");
+                Util.Log.Print($"OnGameStart: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             }
             else
             {
-                Util.Log.Print($">> [DEBUG] OnGameStart: not Campaign");
+                Util.Log.Print($"OnGameStart: not Campaign", LogCategory.Debug);
             }
             base.OnGameStart(game, starterObject);
         }
         public override void OnGameLoaded(Game game, object initializerObject)
         {
-            Util.Log.Print($">> [DEBUG] OnGameLoaded: kingdoms={Kingdom.All.Count}");
+            Util.Log.Print($"OnGameLoaded: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             base.OnGameLoaded(game, initializerObject);
         }
         public override void OnGameInitializationFinished(Game game)
         {
-            Util.Log.Print($">> [DEBUG] OnGameInitializationFinished: kingdoms={Kingdom.All.Count}");
+            Util.Log.Print($"OnGameInitializationFinished: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             base.OnGameInitializationFinished(game);
         }
         public override void OnAfterGameInitializationFinished(Game game, object starterObject)
         {
             // minor factions don't seem to be initialized when OnGameInitializationFinished. (why??) So we need initialize here.
-            Util.Log.Print($">> [DEBUG] OnAfterGameInitializationFinished: kingdoms={Kingdom.All.Count}");
+            Util.Log.Print($"OnAfterGameInitializationFinished: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             if (game.GameType is Campaign c)
             {
                 try
@@ -73,29 +73,30 @@ namespace NobleTitlesPlus
                 }
                 catch (Exception e)
                 {
-                    Util.Log.Print($"At InitizalizeMCMSettings: {e.Message}\nStackTrace:{e.StackTrace}");
+                    Util.Log.Print($"OnAfterGameInitializationFinished: {e.Message}\nStackTrace:{e.StackTrace}", LogCategory.Error);
                     throw new(e.Message, e.InnerException);
                 }
+                MCMRuntimeSettings.Instance.InitializeNomenclaturaOnGameStart();
                 harmony.PatchCategory("NameChangerCore");
                 harmony.PatchCategory("Conversation");
                 harmony.PatchCategory("PartyPopUp");
                 harmony.PatchCategory("SettlementPanel");
                 harmony.PatchCategory("Encyclopedia");
-                Util.Log.Print($">> [DEBUG] harmony patched");
+                Util.Log.Print($"harmony patched", LogCategory.Debug);
                 harmony.PatchCategory("Why");
             }
             base.OnAfterGameInitializationFinished(game, starterObject);
         }
         public override void OnGameEnd(Game game)
         {
-            Util.Log.Print($">> [DEBUG] OnGameEnd: kingdoms={Kingdom.All.Count}");
+            Util.Log.Print($"At OnGameEnd: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             if (game.GameType is Campaign)
             {
                 MCMRuntimeSettings.Instance?.Clear();
             }
             else
             {
-                Util.Log.Print($">> [DEBUG] OnGameEnd: not Campaign");
+                Util.Log.Print($"OnGameEnd: not Campaign", LogCategory.Debug);
             }
             // harmony.UnpatchAll(); // why UnpatchAll doesn't unpatch all??
             harmony.UnpatchCategory("NameChangerCore");
@@ -103,7 +104,7 @@ namespace NobleTitlesPlus
             harmony.UnpatchCategory("PartyPopUp");
             harmony.UnpatchCategory("SettlementPanel");
             harmony.UnpatchCategory("Encyclopedia");
-            Util.Log.Print($">> [DEBUG] harmony unpatched");
+            Util.Log.Print($"harmony unpatched", LogCategory.Debug);
             base.OnGameEnd(game);
         }
 
