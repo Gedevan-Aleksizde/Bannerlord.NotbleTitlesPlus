@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base>
+    <tags>
+        <tag language="日本語" />
+    </tags>
+    <strings>
+        <!-- default preset -->
+        <string id="NTP.MCMVariant3" text="Variant with suffix number " />
+        
+        <string id="NTP.VAR3M1M_default" text="国王{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M1F_default" text="女王{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2M_default" text="公爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2F_default" text="女公爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3M_default" text="伯爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3F_default" text="女伯爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4M_default" text="男爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4F_default" text="女男爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5M_default" text="{NAME}{SUFF_NUM}卿" />
+        <string id="NTP.VAR3M5F_default" text="{NAME}{SUFF_NUM}女卿" />
+        <string id="NTP.VAR3MCrownM_default" text="王太子{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownF_default" text="王太女{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalM_default" text="親王{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalF_default" text="親王女{NAME}{SUFF_NUM}" />
+        <string id="1WSN53r51D" text="{NAME}{SUFF_NUM}" />
+        <string id="QvYEqU5WUB" text="{NAME}{SUFF_NUM}" />
+        
+        <string id="NTP.VAR3MMinorLM_default" text="{CLAN_SHORT}の{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MMinorLF_default" text="{CLAN_SHORT}の{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MMinorMM_default" text="{CLAN_SHORT}の{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MMinorMF_default" text="{CLAN_SHORT}の{NAME}{SUFF_NUM}" />
+        
+        <string id="NTP.VAR3M1M_aserai" text="スルタン゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M1F_aserai" text="スルタナ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2M_aserai" text="アミールアルウマラ{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2F_aserai" text="アミーラアルウマラ{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3M_aserai" text="アミールカビル゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3F_aserai" text="アミーラカビラ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4M_aserai" text="アミール゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4F_aserai" text="アミーラ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5M_aserai" text="シャリーフ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5F_aserai" text="ナビラ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownM_aserai" text="{NAME}゠ワリー{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownF_aserai" text="{NAME}゠ワリー{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalM_aserai" text="シェフザデ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalF_aserai" text="シェフザデ゠{NAME}{SUFF_NUM}" />
+        
+        <string id="NTP.VAR3M1M_battania" text="上王{NAME}{SUFF_NUM}" /> <!-- Ard Rí -->
+        <string id="NTP.VAR3M1F_battania" text="上女王{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2M_battania" text="藩王{NAME}{SUFF_NUM}" /> <!--Rí ruirech -->
+        <string id="NTP.VAR3M2F_battania" text="藩女王{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3M_battania" text="部族王{NAME}{SUFF_NUM}" /> <!--Rí buiden -->
+        <string id="NTP.VAR3M3F_battania" text="部族女王{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4M_battania" text="モーマー゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4F_battania" text="バンモーマー゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5M_battania" text="ドゥワニワサル゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5F_battania" text="バーヌワサル゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownM_battania" text="上王太子{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownF_battania" text="上王太子女{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalM_battania" text="フライス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalF_battania" text="バンフライス゠{NAME}{SUFF_NUM}" />
+        
+        <string id="NTP.VAR3M1M_empire" text="ヴァシレイオス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M1F_empire" text="ヴァシリッサ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2M_empire" text="メガスアルホン゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2F_empire" text="メガスアルホンティッサ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3M_empire" text="エクサルホス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3F_empire" text="エクサルホンティッサ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4M_empire" text="アルホン゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4F_empire" text="アルホンティッサ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5M_empire" text="パトリキオス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5F_empire" text="パトリキア゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownM_empire" text="ポルフィロゲネトス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownF_empire" text="ポルフィロゲネテー゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalM_empire" text="セバストス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalF_empire" text="セバステー゠{NAME}{SUFF_NUM}" />
+        
+        <string id="NTP.VAR3M1M_khuzait" text="{NAME}゠ハン{SUFF_NUM}" />
+        <string id="NTP.VAR3M1F_khuzait" text="{NAME}゠ハトゥン{SUFF_NUM}" />
+        <string id="NTP.VAR3M2M_khuzait" text="{NAME}゠アタベグ{SUFF_NUM}" />
+        <string id="NTP.VAR3M2F_khuzait" text="{NAME}゠アネベグム{SUFF_NUM}" />
+        <string id="NTP.VAR3M3M_khuzait" text="{NAME}゠シャダピッドベグ{SUFF_NUM}" />
+        <string id="NTP.VAR3M3F_khuzait" text="{NAME}゠シャダピッドベグム{SUFF_NUM}" />
+        <string id="NTP.VAR3M4M_khuzait" text="{NAME}゠ベグ{SUFF_NUM}" />
+        <string id="NTP.VAR3M4F_khuzait" text="{NAME}゠ベグム{SUFF_NUM}" />
+        <string id="NTP.VAR3M5M_khuzait" text="{NAME}゠バハトゥル{SUFF_NUM}" />
+        <string id="NTP.VAR3M5F_khuzait" text="{NAME}゠ベヒ{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownM_khuzait" text="{NAME}゠カガン{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownF_khuzait" text="{NAME}゠カガトゥン{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalM_khuzait" text="{NAME}゠シャド{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalF_khuzait" text="{NAME}゠シャドゥム{SUFF_NUM}" />
+        
+        
+        <string id="NTP.VAR3M1M_sturgia" text="大クニャージ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M1F_sturgia" text="大クニャジーニャ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2M_sturgia" text="ヘルトゥク゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2F_sturgia" text="ヘルトゥギンデ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3M_sturgia" text="ヤール゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3F_sturgia" text="ヤーリンデ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4M_sturgia" text="クニャージ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4F_sturgia" text="クニャジーニャ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5M_sturgia" text="ボヤール゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5F_sturgia" text="ボヤーリナ゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownM_sturgia" text="{NAME}゠クニャゼヴィチ{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownF_sturgia" text="{NAME}゠クニャゼヴヴナ{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalM_sturgia" text="プリンス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalF_sturgia" text="プリンセッサ゠{NAME}{SUFF_NUM}" />
+        
+        <string id="NTP.VAR3M1M_vlandia" text="ヴランディア王{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M1F_vlandia" text="ヴランディア女王{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2M_vlandia" text="公爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M2F_vlandia" text="女公爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3M_vlandia" text="伯爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M3F_vlandia" text="女伯爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4M_vlandia" text="男爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M4F_vlandia" text="女男爵{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5M_vlandia" text="卿{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3M5F_vlandia" text="女卿{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownM_vlandia" text="ロドック大公{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MCrownF_vlandia" text="ロドック女大公{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalM_vlandia" text="王子{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MRoyalF_vlandia" text="王女{NAME}{SUFF_NUM}" />
+        
+        <string id="NTP.VAR3M1M_testuojin" text="ミカド{NAME}" />
+        <string id="NTP.VAR3M1F_testuojin" text="ジョテイ{NAME}" />
+        <string id="NTP.VAR3M2M_testuojin" text="将軍{CLAN}{NAME}" />
+        <string id="NTP.VAR3M2F_testuojin" text="上臈御年寄{CLAN}{NAME}" />
+        <string id="NTP.VAR3M3M_testuojin" text="{CLAN}朝臣{NAME}" />
+        <string id="NTP.VAR3M3F_testuojin" text="{CLAN}朝臣女{NAME}" />
+        <string id="NTP.VAR3M4M_testuojin" text="{CLAN}宿儺{NAME}" />
+        <string id="NTP.VAR3M4F_testuojin" text="{CLAN}宿儺女{NAME}" />
+        <string id="NTP.VAR3M5M_testuojin" text="{CLAN}{NAME}臣" />
+        <string id="NTP.VAR3M5F_testuojin" text="{CLAN}{NAME}臣女" />
+        <string id="NTP.VAR3MCrownM_testuojin" text="皇子{NAME}" />
+        <string id="NTP.VAR3MCrownF_testuojin" text="皇女{NAME}" />
+        <string id="NTP.VAR3MRoyalM_testuojin" text="真人{NAME}" />
+        <string id="NTP.VAR3MRoyalF_testuojin" text="真人女{NAME}" />
+        
+        <string id="NTP.VAR3M1M_huaxia" text="皇帝{CLAN}{NAME}" />
+        <string id="NTP.VAR3M1F_huaxia" text="女皇{CLAN}{NAME}" />
+        <string id="NTP.VAR3M2M_huaxia" text="郡王{CLAN}{NAME}" />
+        <string id="NTP.VAR3M2F_huaxia" text="{FIEF}女郡王{CLAN}{NAME}" />
+        <string id="NTP.VAR3M3M_huaxia" text="{FIEF}国公{CLAN}{NAME}" />
+        <string id="NTP.VAR3M3F_huaxia" text="{FIEF}女国公{CLAN}{NAME}" />
+        <string id="NTP.VAR3M4M_huaxia" text="{FIEF}郡公{CLAN}{NAME}" />
+        <string id="NTP.VAR3M4F_huaxia" text="{FIEF}女郡公{CLAN}{NAME}" />
+        <string id="NTP.VAR3M5M_huaxia" text="卿{CLAN}{NAME}" />
+        <string id="NTP.VAR3M5F_huaxia" text="女卿{CLAN}{NAME}" />
+        <string id="NTP.VAR3MCrownM_huaxia" text="皇太子{CLAN}{NAME}" />
+        <string id="NTP.VAR3MCrownF_huaxia" text="皇太女{CLAN}{NAME}" />
+        <string id="NTP.VAR3MRoyalM_huaxia" text="公子{CLAN}{NAME}" />
+        <string id="NTP.VAR3MRoyalF_huaxia" text="公主{CLAN}{NAME}" />
+        
+        <string id="NTP.VAR3MMinorLM_legion_of_the_betrayed" text="レガートゥス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MMinorLF_legion_of_the_betrayed" text="レガートゥス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MMinorMM_legion_of_the_betrayed" text="トリブーヌス゠{NAME}{SUFF_NUM}" />
+        <string id="NTP.VAR3MMinorMF_legion_of_the_betrayed" text="トリブーヌス゠{NAME}{SUFF_NUM}" />
+        
+        <string id="L3SNPY960R" text="{NAME}゠ノヤン{SUFF_NUM}" />
+        <string id="vFfaqTpZSU" text="{NAME}゠ノヤン{SUFF_NUM}" />
+        <string id="vquBPlt5tb" text="{NAME}゠ノヤン{SUFF_NUM}" />
+        <string id="z4yLZOcjBH" text="{NAME}゠ノヤン{SUFF_NUM}" />
+    </strings>
+</base>

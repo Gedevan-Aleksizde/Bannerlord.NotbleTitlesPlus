@@ -5,7 +5,7 @@
  	</tags>
 	<strings>
 		<!-- Language-specific VARMault values. (My variant) They will be overriden by JSON file. -->
-		<string id="NTP.MCMVariantmodified" text="ヴァリアント 2"/>
+		<string id="NTP.MCMVariant2" text="ヴァリアント 2"/>
 		<string id="NTP.VARM1M_default" text="国王{NAME}" />
 		<string id="NTP.VARM1F_default" text="女王{NAME}" />
 		<string id="NTP.VARMCrownM_default" text="王太子{NAME}" />
@@ -23,8 +23,8 @@
 		<string id="cc9FztqSx" text="{NAME}゠{CLAN}" />
 		<string id="kv7mfNSWW" text="{NAME}゠{CLAN}" />
 
-		<string id="NTP.VARM1M_empire" text="バシレイオス゠{NAME}" />
-		<string id="NTP.VARM1F_empire" text="バシリッサ゠{NAME}" />
+		<string id="NTP.VARM1M_empire" text="ヴァシレイオス゠{NAME}" />
+		<string id="NTP.VARM1F_empire" text="ヴァシリッサ゠{NAME}" />
 		<string id="NTP.VARMCrownM_empire" text="ポルフィロゲネトス゠{NAME}" />
 		<string id="NTP.VARMCrownF_empire" text="ポルフィロゲネテー゠{NAME}" />
 		<string id="NTP.VARMRoyalM_empire" text="セバストス゠{NAME}" />
@@ -132,14 +132,16 @@
 		<string id="NTP.VARM1F_tetsojin" text="ジョテイ{NAME}{CLAN}" />
 		<string id="NTP.VARMCrownM_tetsojin" text="{NAME}{CLAN}皇子" />
 		<string id="NTP.VARMCrownF_tetsojin" text="{NAME}{CLAN}皇女" />
+		<string id="NTP.VARMRoyalM_testuojin" text="真人{NAME}" />
+		<string id="NTP.VARMRoyalF_testuojin" text="真人女{NAME}" />
 		<string id="NTP.VARM2M_tetsojin" text="将軍{CLAN}{NAME}" />
 		<string id="NTP.VARM2F_tetsojin" text="上臈御年寄{CLAN}{NAME}" />
-		<string id="NTP.VARM3M_tetsojin" text="大名{CLAN}{NAME}卿" />
-		<string id="NTP.VARM3F_tetsojin" text="御年寄{CLAN}{NAME}" />
-		<string id="NTP.VARM4M_tetsojin" text="名主{CLAN}{NAME}卿" />
-		<string id="NTP.VARM4F_tetsojin" text="命婦{CLAN}{NAME}" />
-		<string id="NTP.VARM5M_tetsojin" text="{CLAN}{NAME}朝臣" />
-		<string id="NTP.VARM5F_tetsojin" text="{CLAN}{NAME}御前" />
+		<string id="NTP.VARM3M_tetsojin" text="{CLAN}朝臣{NAME}" />
+		<string id="NTP.VARM3F_tetsojin" text="{CLAN}朝臣女{NAME}" />
+		<string id="NTP.VARM4M_tetsojin" text="{CLAN}宿儺{NAME}" />
+		<string id="NTP.VARM4F_tetsojin" text="{CLAN}宿儺女{NAME}" />
+		<string id="NTP.VARM5M_tetsojin" text="{CLAN}{NAME}臣" />
+		<string id="NTP.VARM5F_tetsojin" text="{CLAN}{NAME}臣女" />
 
 		<string id="NTP.VARMMinorLM_default" text="{CLAN_SHORT}の{NAME}" />
 		<string id="NTP.VARMMinorLF_default" text="{CLAN_SHORT}の{NAME}" />

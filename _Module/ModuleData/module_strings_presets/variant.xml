@@ -80,7 +80,7 @@
     <string id="ntp_title_set.VAR_4F_khuzait" text="{=NTP.VAR4F_khuzait}{NAME} Begum" />
     <string id="ntp_title_set.VAR_5M_khuzait" text="{=NTP.VAR5M_khuzait}{NAME} Baghatur" />
     <string id="ntp_title_set.VAR_5F_khuzait" text="{=NTP.VAR5F_khuzait}{NAME} Bekhi" />
-    <string id="ntp_title_set.VAR_crownM_khuzait" text="{=NTP.VARCrownM_khuzait}{NAME} Qhagan " />
+    <string id="ntp_title_set.VAR_crownM_khuzait" text="{=NTP.VARCrownM_khuzait}{NAME} Qhagan" />
     <string id="ntp_title_set.VAR_crownF_khuzait" text="{=NTP.VARCrownF_khuzait}{NAME} Qhagatun" />
     <string id="ntp_title_set.VAR_royalM_khuzait" text="{=NTP.VARRoyalM_khuzait}{NAME} Shad" />
     <string id="ntp_title_set.VAR_royalF_khuzait" text="{=NTP.VARRoyalF_khuzait}{NAME} Shadum" />
@@ -119,17 +119,17 @@
     <string id="ntp_title_set.VAR_1M_testuojin" text="{=NTP.VAR1M_testuojin}Mikado {NAME}" />
     <string id="ntp_title_set.VAR_1F_testuojin" text="{=NTP.VAR1F_testuojin}Jotei {NAME}" />
     <string id="ntp_title_set.VAR_2M_testuojin" text="{=NTP.VAR2M_testuojin}Shogun {CLAN}{NAME}-San" />
-    <string id="ntp_title_set.VAR_2F_testuojin" text="{=NTP.VAR2F_testuojin}Joro-Otoshiyori {CLAN}{NAME}-San" />
-    <string id="ntp_title_set.VAR_3M_testuojin" text="{=NTP.VAR3M_testuojin}Daimyo {CLAN}{NAME}-San" />
-    <string id="ntp_title_set.VAR_3F_testuojin" text="{=NTP.VAR3F_testuojin}Otosiyori {CLAN}{NAME}-San" />
-    <string id="ntp_title_set.VAR_4M_testuojin" text="{=NTP.VAR4M_testuojin}Myosyu {CLAN}{NAME}-San" />
-    <string id="ntp_title_set.VAR_4F_testuojin" text="{=NTP.VAR4F_testuojin}Myobu {CLAN}{NAME}-San" />
-    <string id="ntp_title_set.VAR_5M_testuojin" text="{=NTP.VAR5M_testuojin}Ason {CLAN}{NAME}-San" />
-    <string id="ntp_title_set.VAR_5F_testuojin" text="{=NTP.VAR5F_testuojin}Gozen {CLAN}{NAME}-San" />
+    <string id="ntp_title_set.VAR_2F_testuojin" text="{=NTP.VAR2F_testuojin}Joro-Otoshiyori {CLAN}{NAME}" />
+    <string id="ntp_title_set.VAR_3M_testuojin" text="{=NTP.VAR3M_testuojin}{CLAN}-ason {NAME}" />
+    <string id="ntp_title_set.VAR_3F_testuojin" text="{=NTP.VAR3F_testuojin}{CLAN}-ason-no-musume {NAME}" />
+    <string id="ntp_title_set.VAR_4M_testuojin" text="{=NTP.VAR4M_testuojin}{CLAN}-sukuna {NAME}" />
+    <string id="ntp_title_set.VAR_4F_testuojin" text="{=NTP.VAR4F_testuojin}{CLAN}-sukuna-no-musume {NAME}" />
+    <string id="ntp_title_set.VAR_5M_testuojin" text="{=NTP.VAR5M_testuojin}{CLAN} {NAME} Omi" />
+    <string id="ntp_title_set.VAR_5F_testuojin" text="{=NTP.VAR5F_testuojin}{CLAN} {NAME} Omi-no-musume" />
     <string id="ntp_title_set.VAR_crownM_testuojin" text="{=NTP.VARCrownM_testuojin}{NAME} Oji" />
     <string id="ntp_title_set.VAR_crownF_testuojin" text="{=NTP.VARCrownF_testuojin}{NAME} Ojo" />
-    <string id="ntp_title_set.VAR_royalM_testuojin" text="{=NTP.VARRoyalM_testuojin}{NAME} Miya" />
-    <string id="ntp_title_set.VAR_royalF_testuojin" text="{=NTP.VARRoyalF_testuojin}{NAME} Miya" />
+    <string id="ntp_title_set.VAR_royalM_testuojin" text="{=NTP.VARRoyalM_testuojin}{NAME} Mahito" />
+    <string id="ntp_title_set.VAR_royalF_testuojin" text="{=NTP.VARRoyalF_testuojin}{NAME} Mahito-no-musume" />
     
     <string id="ntp_title_set.VAR_1M_huaxia" text="{=NTP.VAR1M_huaxia}Huangdi {NAME}" />
     <string id="ntp_title_set.VAR_1F_huaxia" text="{=NTP.VAR1F_huaxia}Huangdi {NAME}" />
@@ -151,7 +151,7 @@
     <string id="ntp_title_set.VAR_MinorMM_legion_of_the_betrayed" text="{=NTP.VARMinorMM_legion_of_the_betrayed}Tribunus {NAME}" />
     <string id="ntp_title_set.VAR_MinorMF_legion_of_the_betrayed" text="{=NTP.VARMinorMF_legion_of_the_betrayed}Tribunus {NAME}" />
     
-    <string id="ntp_title_set.VAR_MinorLM_karakhergit" text="{=0jScsrwyR}{NAME} Noyon " />
+    <string id="ntp_title_set.VAR_MinorLM_karakhergit" text="{=0jScsrwyR}{NAME} Noyon" />
     <string id="ntp_title_set.VAR_MinorLF_karakhergit" text="{=nFuxKkjtj}{NAME} Noyon" />
     <string id="ntp_title_set.VAR_MinorMM_karakhergit" text="{=9Mpm8DCph}{NAME} Tarqan" />
     <string id="ntp_title_set.VAR_MinorMF_karakhergit" text="{=1HGM6q3EI}{NAME} Tarqan" />

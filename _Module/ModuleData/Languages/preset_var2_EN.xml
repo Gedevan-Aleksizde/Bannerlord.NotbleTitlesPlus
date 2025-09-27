@@ -5,7 +5,7 @@
 	</tags>
  	<strings>
 		<!-- Language-specific VARMault values. (My variant) They will be overriden by JSON file. -->
-		<string id="NTP.MCMVariantmodieifed" text="Variant Modified"/>
+		<string id="NTP.MCMVariant2" text="Variant 2"/>
 		<string id="NTP.VARM1M_default" text="King {NAME}" />
 		<string id="NTP.VARM1F_default" text="Queen {NAME}" />
 		<string id="NTP.VARMCrownM_default" text="Crown Prince {NAME}" />
@@ -117,16 +117,16 @@
 		<string id="NTP.VARM1F_tetsojin" text="Jotei {NAME} {CLAN}" /> <!-- JP: ジョテイ -->
 		<string id="NTP.VARMCrownM_tetsojin" text="{NAME} {CLAN} Oji" /> <!-- JP: 王子 -->
 		<string id="NTP.VARMCrownF_tetsojin" text="{NAME} {CLAN} Ojo" /> <!-- JP: 王女 -->
-		<string id="NTP.VARMRoyalM_tetsojin" text="{NAME} {CLAN} Miya" /> <!-- JP: 宮 -->
-		<string id="NTP.VARMRoyalF_tetsojin" text="{NAME} {CLAN} Miya" /> <!-- JP: 宮 -->
-		<string id="NTP.VARM2M_tetsojin" text="Shogun NAME} {CLAN}{-San" /> <!-- JP: 将軍 -->
-		<string id="NTP.VARM2F_tetsojin" text="Joro-Otoshiyori {NAME} {CLAN}-San" /> <!-- JP: 上臈御年寄 -->
-		<string id="NTP.VARM3M_tetsojin" text="Daimyo {NAME} {CLAN}-San" /> <!-- JP: 大名 -->
-		<string id="NTP.VARM3F_tetsojin" text="Otosiyori {NAME} {CLAN}-San" /> <!-- JP: 御年寄 -->
-		<string id="NTP.VARM4M_tetsojin" text="Myosyu {NAME} {CLAN}-San" /> <!-- JP: 明主 -->
-		<string id="NTP.VARM4F_tetsojin" text="Myobu {NAME} {CLAN}-San" /> <!-- JP: 命婦 -->
-		<string id="NTP.VARM5M_tetsojin" text="Ason {NAME} {CLAN}-San" /> <!-- JP: 朝臣 -->
-		<string id="NTP.VARM5F_tetsojin" text="Gozen {NAME} {CLAN}-San" /> <!-- JP: 御前 -->
+		<string id="NTP.VARMRoyalM_tetsojin" text="{NAME} Mahito" />
+		<string id="NTP.VARMRoyalF_tetsojin" text="{NAME} Mahito-no-musume" />
+		<string id="NTP.VARM2M_tetsojin" text="Shogun {CLAN} {NAME}" /> <!-- JP: 将軍 -->
+		<string id="NTP.VARM2F_tetsojin" text="Joro-Otoshiyori {CLAN} {NAME}" /> <!-- JP: 上臈御年寄 -->
+		<string id="NTP.VARM3M_tetsojin" text="{CLAN}-ason {NAME}" />
+		<string id="NTP.VARM3F_tetsojin" text="{CLAN}-ason-no-musume {NAME}" />
+		<string id="NTP.VARM4M_tetsojin" text="{CLAN}-sukuna {NAME}" />
+		<string id="NTP.VARM4F_tetsojin" text="{CLAN}-sukuna-no-musume {NAME}" />
+		<string id="NTP.VARM5M_tetsojin" text="{CLAN} {NAME} Omi" /> <!-- JP: 朝臣 -->
+		<string id="NTP.VARM5F_tetsojin" text="{CLAN} {NAME} Omi-no-musume" /> <!-- JP: 御前 -->
 
 		<string id="NTP.VARM1M_huaxia" text="Huangdi {NAME}" /> <!-- CN: 皇帝 -->
 		<string id="NTP.VARM1F_huaxia" text="Huangdi {NAME}" /> <!-- CN: 皇帝 -->

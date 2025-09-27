@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <strings>
     <!-- default preset -->
-    <string id="ntp_mcm.preset_variantmodified" text="{=NTP.MCMVariantmodified}Variant Modified" />
+    <string id="ntp_mcm.preset_variant2" text="{=NTP.MCMVariant2}Variant Modified" />
     
     <string id="ntp_title_set.VARM_1M_default" text="{=NTP.VARM1M_default}King {NAME}" />
     <string id="ntp_title_set.VARM_1F_default" text="{=NTP.VARM1F_default}Queen {NAME}" />
@@ -116,20 +116,20 @@
     <string id="ntp_title_set.VARM_royalM_vlandia" text="{=NTP.VARMRoyalM_vlandia}Prince {NAME}" />
     <string id="ntp_title_set.VARM_royalF_vlandia" text="{=NTP.VARMRoyalF_vlandia}Princess {NAME}" />
     
-    <string id="ntp_title_set.VARM_1M_testuojin" text="{=NTP.VARM1M_testuojin}Mikado {NAME} {CLAN}" />
-    <string id="ntp_title_set.VARM_1F_testuojin" text="{=NTP.VARM1F_testuojin}Jotei {NAME} {CLAN}" />
-    <string id="ntp_title_set.VARM_2M_testuojin" text="{=NTP.VARM2M_testuojin}Shogun {NAME} {CLAN}-San" />
-    <string id="ntp_title_set.VARM_2F_testuojin" text="{=NTP.VARM2F_testuojin}Joro-Otoshiyori {NAME} {CLAN}-San" />
-    <string id="ntp_title_set.VARM_3M_testuojin" text="{=NTP.VARM3M_testuojin}Daimyo {NAME} {CLAN}-San" />
-    <string id="ntp_title_set.VARM_3F_testuojin" text="{=NTP.VARM3F_testuojin}Otosiyori {NAME} {CLAN}-San" />
-    <string id="ntp_title_set.VARM_4M_testuojin" text="{=NTP.VARM4M_testuojin}Myosyu {NAME} {CLAN}-San" />
-    <string id="ntp_title_set.VARM_4F_testuojin" text="{=NTP.VARM4F_testuojin}Myobu {NAME} {CLAN}-San" />
-    <string id="ntp_title_set.VARM_5M_testuojin" text="{=NTP.VARM5M_testuojin}Ason {NAME} {CLAN}-San" />
-    <string id="ntp_title_set.VARM_5F_testuojin" text="{=NTP.VARM5F_testuojin}Gozen {NAME} {CLAN}-San" />
+    <string id="ntp_title_set.VARM_1M_testuojin" text="{=NTP.VARM1M_testuojin}Mikado {NAME}" />
+    <string id="ntp_title_set.VARM_1F_testuojin" text="{=NTP.VARM1F_testuojin}Jotei {NAME}" />
+    <string id="ntp_title_set.VARM_2M_testuojin" text="{=NTP.VARM2M_testuojin}Shogun {CLAN} {NAME}" />
+    <string id="ntp_title_set.VARM_2F_testuojin" text="{=NTP.VARM2F_testuojin}Joro-Otoshiyori {CLAN} {NAME}" />
+    <string id="ntp_title_set.VARM_3M_testuojin" text="{=NTP.VARM3M_testuojin}{CLAN}-ason {NAME}" />
+    <string id="ntp_title_set.VARM_3F_testuojin" text="{=NTP.VARM3F_testuojin}{CLAN}-ason-no-musume {NAME}" />
+    <string id="ntp_title_set.VARM_4M_testuojin" text="{=NTP.VARM4M_testuojin}{CLAN}-sukuna {NAME}" />
+    <string id="ntp_title_set.VARM_4F_testuojin" text="{=NTP.VARM4F_testuojin}{CLAN}-sukuna-no-musume {NAME}" />
+    <string id="ntp_title_set.VARM_5M_testuojin" text="{=NTP.VARM5M_testuojin}{CLAN} {NAME} Omi" />
+    <string id="ntp_title_set.VARM_5F_testuojin" text="{=NTP.VARM5F_testuojin}{CLAN} {NAME} Omi-no-musume" />
     <string id="ntp_title_set.VARM_crownM_testuojin" text="{=NTP.VARMCrownM_testuojin}{NAME} {CLAN} Oji" />
     <string id="ntp_title_set.VARM_crownF_testuojin" text="{=NTP.VARMCrownF_testuojin}{NAME} {CLAN} Ojo" />
-    <string id="ntp_title_set.VARM_royalM_testuojin" text="{=NTP.VARMRoyalM_testuojin}{NAME} {CLAN} Miya" />
-    <string id="ntp_title_set.VARM_royalF_testuojin" text="{=NTP.VARMRoyalF_testuojin}{NAME} {CLAN} Miya" />
+    <string id="ntp_title_set.VARM_royalM_testuojin" text="{=NTP.VARMRoyalM_testuojin}{NAME} {CLAN} Mahito" />
+    <string id="ntp_title_set.VARM_royalF_testuojin" text="{=NTP.VARMRoyalF_testuojin}{NAME} {CLAN} Mahito-no-musume" />
     
     <string id="ntp_title_set.VARM_1M_huaxia" text="{=NTP.VARM1M_huaxia}Huangdi {NAME}" />
     <string id="ntp_title_set.VARM_1F_huaxia" text="{=NTP.VARM1F_huaxia}Huangdi {NAME}" />

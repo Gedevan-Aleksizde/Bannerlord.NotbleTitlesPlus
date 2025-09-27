@@ -35,9 +35,9 @@
 		<string id="NTP.MCMHeirPrimoF" text="女系長子相続"/>
 		<string id="NTP.MCMHeirElder" text="最年長"/>
 		<string id="NTP.MCMHeirAdult" text="成人"/>
-		<string id="NTP.MCMHeirHint" text="(WIP) 王位継承のルールです。 「長子相続」は君主の子息の最年長者を選びます。「成人」は後継者のうち、成人のみを選びます。「最年長」は君主のクランの中で最年長者を選びます。注: バナーロードのルール上、王位継承者が必ず王位を相続するとは限りません。 他のmodとのシナジーを想定した機能です。"/>
+		<string id="NTP.MCMHeirHint" text="(開発中の機能) 王位継承のルールです。 「長子相続」は君主の子息の最年長者を選びます。「成人」は後継者のうち、成人のみを選びます。「最年長」は君主のクランの中で最年長者を選びます。注: バナーロードのルール上、王位継承者が必ず王位を相続するとは限りません。 他のmodとのシナジーを想定した機能です。"/>
 		<string id="jCuLgwIzKS" text="世代番号を使用する" />
-		<string id="vnlOaeaVj1" text="クラン内の名前の重複したNPCの混同を避けるため、世代を表す番号の使用を許可します。番号は SUFF_NUM マクロを使用した際に表示されます。" />
+		<string id="vnlOaeaVj1" text="(開発中の機能) クラン内の名前の重複したNPCの混同を避けるため、世代を表す番号の使用を許可します。番号は SUFF_NUM マクロを使用した際に表示されます。" />
 		<string id="xsKu20hh5G" text="なし" />
 		<string id="Ec7eqYXES9" text="全て表示" />
 		<string id="hZ5dC1kQgX" text="2代目以降" />

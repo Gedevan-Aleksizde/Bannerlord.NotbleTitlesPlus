@@ -32,7 +32,7 @@
 	<string id="ntp_mcm.heir_elder" text="{=NTP.MCMHeirElder}Elder"/>
 	<string id="ntp_mcm.heir_hint" text="{=NTP.MCMHeirHint}(WIP) Law of heir to the throne. Primogeniture: oldest the ruler's son/daughter; Adult; only adult issue; Elder: the eldest indivisual in all the ruler's clan member. Note: the heir apparant don't always inherit the throne because of the Bannerlord's vanilla rule. This option should be used with the other mods which change succession laws."/>
 	<string id="ntp_mcm.suffix_num" text="{=jCuLgwIzKS}Enable Suffix Numbering" />
-	<string id="ntp_mcm.suffix_num_hint" text="{=vnlOaeaVj1}Allow to Suffix a number to avoid confused with the same name clan members if enabled. NOTE: the number is not shown unless writing the `SUFF_NUM` macro in the format." />
+	<string id="ntp_mcm.suffix_num_hint" text="{=vnlOaeaVj1}(WIP) Allow to Suffix a number to avoid confused with the same name clan members if enabled. NOTE: the number is not shown unless writing the `SUFF_NUM` macro in the format." />
 	<string id="ntp_mcm.suffix_number_format_none" text="{=xsKu20hh5G}None" />
 	<string id="ntp_mcm.suffix_number_format_all" text="{=Ec7eqYXES9}All" />
 	<string id="ntp_mcm.suffix_number_format_untilsecond" text="{=hZ5dC1kQgX}Until Second" />

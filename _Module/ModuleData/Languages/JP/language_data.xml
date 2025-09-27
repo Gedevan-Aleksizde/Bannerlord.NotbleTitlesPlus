@@ -5,8 +5,9 @@
 	<LanguageFile xml_path="JP/shokuho_clans_JP.xml" />
 	<LanguageFile xml_path="JP/preset_default_JP.xml" />
 	<LanguageFile xml_path="JP/preset_orig_JP.xml" />
-	<LanguageFile xml_path="JP/preset_var_JP.xml" />
-	<LanguageFile xml_path="JP/preset_varm_JP.xml" />
+	<LanguageFile xml_path="JP/preset_var1_JP.xml" />
+	<LanguageFile xml_path="JP/preset_var2_JP.xml" />
+	<LanguageFile xml_path="JP/preset_var3_JP.xml" />
 	<LanguageFile xml_path="JP/preset_cek_JP.xml" />
 	<LanguageFile xml_path="JP/preset_bk_JP.xml" />
 	<LanguageFile xml_path="JP/preset_sho_JP.xml" />
