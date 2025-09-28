@@ -35,7 +35,7 @@ namespace NobleTitlesPlus.MCMSettings
         public KingdomTitleFormat TitleFormat => (KingdomTitleFormat)this._kingdomTitleFormat.SelectedIndex;
         public Dropdown<TextObject> _kingdomTitleFormat = new(Enum.GetValues(typeof(KingdomTitleFormat)).OfType<KingdomTitleFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"kingdom_title_format_{x.ToString().ToLower()}")), 1);
         public SuffixNumberFormat SuffixNumFormat => (SuffixNumberFormat)this._suffixNumFormat.SelectedIndex;
-        public Dropdown<TextObject> _suffixNumFormat = new(Enum.GetValues(typeof(SuffixNumberFormat)).OfType<SuffixNumberFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"suffix_number_format_{x.ToString().ToLower()}")), 1);
+        public Dropdown<TextObject> _suffixNumFormat = new(Enum.GetValues(typeof(SuffixNumberFormat)).OfType<SuffixNumberFormat>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"suffix_number_format_{x.ToString().ToLower()}")), 0);
         public bool UseUnitedTitle { get; set; } = false;
         public Inheritance Inheritance => (Inheritance)this._inheritance.SelectedIndex;
         public Dropdown<TextObject> _inheritance = new(Enum.GetValues(typeof(Inheritance)).OfType<Inheritance>().ToList().Select(x => GameTexts.FindText("ntp_mcm", $"heir_{x.ToString().ToLower()}")), 1);
