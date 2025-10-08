@@ -5,7 +5,7 @@
  	</tags>
 	<strings>
 		<!-- #region Shokuho -->
-		<string id="NTP.MCMShokuhomodified" text="Shokuhō Text Overhaul 併用専用"/>
+		<string id="NTP.MCMShokuhomodified" text="Shokuhō + Text Overhaul 用"/>
 
 		<string id="NTP.SHOM1M_default" text="{PROVINCE_SHO}の大名{CLAN_SHORT}{NAME}" />
 		<string id="NTP.SHOM1F_default" text="大名夫人{CLAN_SHORT}{NAME}" />

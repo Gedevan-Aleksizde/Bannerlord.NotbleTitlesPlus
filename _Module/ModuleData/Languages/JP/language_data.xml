@@ -12,4 +12,5 @@
 	<LanguageFile xml_path="JP/preset_bk_JP.xml" />
 	<LanguageFile xml_path="JP/preset_sho_JP.xml" />
 	<LanguageFile xml_path="JP/preset_shoM_JP.xml" />
+	<LanguageFile xml_path="JP/preset_shoS_JP.xml" />
 </LanguageData>

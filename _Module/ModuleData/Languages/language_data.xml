@@ -11,4 +11,5 @@
 	<LanguageFile xml_path="preset_bk_EN.xml" />
 	<LanguageFile xml_path="preset_sho_EN.xml" />
 	<LanguageFile xml_path="preset_shoM_EN.xml" />
+	<LanguageFile xml_path="preset_shoS_EN.xml" />
 </LanguageData>

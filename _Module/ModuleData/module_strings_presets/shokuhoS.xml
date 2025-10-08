@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string id="ntp_mcm.preset_shokuhosimplified" text="{=NTP.MCMShokuhosimplified}Shokuhō + Text Overhaul, Only Names" />
+	<!-- Shokuho simplified preset -->
+	<string id="ntp_title_set.SHOS_1M_default" text="{=NTP.SHOS1M_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_1F_default" text="{=NTP.SHOS1F_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_2M_default" text="{=NTP.SHOS2M_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_2F_default" text="{=NTP.SHOS2F_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_3M_default" text="{=NTP.SHOS3M_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_3F_default" text="{=NTP.SHOS3F_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_4M_default" text="{=NTP.SHOS4M_default}{CLAN_SHORT} {NAME}" /> 
+	<string id="ntp_title_set.SHOS_4F_default" text="{=NTP.SHOS4F_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_5M_default" text="{=NTP.SHOS5M_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_5F_default" text="{=NTP.SHOS5F_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_crownM_default" text="{=NTP.SHOSCrownM_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_crownF_default" text="{=NTP.SHOSCrownF_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_royalM_default" text="{=NTP.SHOSRoyalM_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_royalF_default" text="{=NTP.SHOSRoyalF_default}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_0M_default" text="{=PrSTI1KAKG}{CLAN_SHORT} {NAME}" />
+	<string id="ntp_title_set.SHOS_0F_default" text="{=wihSyJOyX8}{CLAN_SHORT} {NAME}" />
+	
+	<string id="ntp_title_set.SHOS_MinorLM_default" text="{=NTP.SHOSMinorLM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.SHOS_MinorLF_default" text="{=NTP.SHOSMinorLF_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.SHOS_MinorMM_default" text="{=NTP.SHOSMinorMM_default}{NAME} of {CLAN_SHORT}" />
+	<string id="ntp_title_set.SHOS_MinorMF_default" text="{=NTP.SHOSMinorMF_default}{NAME} of {CLAN_SHORT}" />
+</strings>
