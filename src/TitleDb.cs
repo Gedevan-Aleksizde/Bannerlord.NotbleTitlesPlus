@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
-using TaleWorlds.Library;
 using TaleWorlds.Localization;
+using TaleWorlds.ModuleManager;
 
 
 namespace NobleTitlesPlus.DB
@@ -482,12 +482,12 @@ namespace NobleTitlesPlus.DB
         }
         internal void ReadJsonShokuhoCastleProvince(string? jsonPath = null)
         {
-            string fp = jsonPath ?? System.IO.Path.Combine(BasePath.Name, "Modules", SubModule.modFolderName, "ModuleData/sho_castles.json");
+            string fp = jsonPath ?? System.IO.Path.Combine(ModuleHelper.GetModuleFullPath("NobleTitlesPlus"), "ModuleData/sho_castles.json");
             this.shokuhoCastleProvinceMap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(fp));
         }
         internal void ReadJsonShokuhoClanNames(string? jsonPath = null)
         {
-            string fp = jsonPath ?? System.IO.Path.Combine(BasePath.Name, "Modules", SubModule.modFolderName, "ModuleData/sho_clans.json");
+            string fp = jsonPath ?? System.IO.Path.Combine(ModuleHelper.GetModuleFullPath("NobleTitlesPlus"), "ModuleData/sho_clans.json");
             this.shokuhoClanNames = JsonConvert.DeserializeObject<Dictionary<string, ClanNamePair>>(File.ReadAllText(fp));
         }
         public Dictionary<string, string> shokuhoCastleProvinceMap = new();
