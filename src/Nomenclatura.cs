@@ -289,7 +289,14 @@ namespace NobleTitlesPlus
             }
             kingdom.ChangeKingdomName(GameTexts.FindText("str_faction_formal_name_for_culture", "empire"), GameTexts.FindText("str_faction_informal_name_for_culture", "empire"));
             MCMRuntimeSettings.Instance.Options.TitleSet.cultures.TryGetValue("empire", out TitleSet.FactionTitleSet fts);
-            MCMRuntimeSettings.Instance.Options.TitleSet.factions.Add(kingdom.StringId, fts);
+            if (MCMRuntimeSettings.Instance.Options.TitleSet.factions.ContainsKey(kingdom.StringId))
+            {
+                MCMRuntimeSettings.Instance.Options.TitleSet.factions[kingdom.StringId] = fts;
+            }
+            else
+            {
+                MCMRuntimeSettings.Instance.Options.TitleSet.factions.Add(kingdom.StringId, fts);
+            }
         }
         /// <summary>
         /// Adds all minor faction menbers titles 
