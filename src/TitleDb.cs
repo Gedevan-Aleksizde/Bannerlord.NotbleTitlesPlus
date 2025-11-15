@@ -271,12 +271,12 @@ namespace NobleTitlesPlus.DB
                 return "";
             }
         }
-        internal TextObject GetMatchedTitle(Hero hero, TitleRank rank)
+        internal TextObject GetMostMatchedTitle(Hero hero, TitleRank rank)
         {
             bool isMinorFaction = hero.IsMinorFactionHero && hero.Clan.StringId != "player_faction";
             string cultureId = isMinorFaction ? (hero?.Clan?.StringId ?? "default") : (hero?.Clan?.Kingdom?.Culture?.StringId ?? hero?.Clan?.Culture?.StringId ?? hero.Culture.StringId ?? "");
             string factionId = hero?.Clan?.Kingdom?.StringId ?? "";
-            return this.GetMatchedTitle(hero.IsFemale, cultureId, factionId, rank, isMinorFaction ? Category.MinorFaction : Category.Default);
+            return this.GetMostMatchedTitle(hero.IsFemale, cultureId, factionId, rank, isMinorFaction ? Category.MinorFaction : Category.Default);
         }
 
         /// <summary>
@@ -293,7 +293,7 @@ namespace NobleTitlesPlus.DB
         /// <param name="rank"></param>
         /// <param name="category"></param>
         /// <returns></returns>
-        internal TextObject GetMatchedTitle(bool isFemale, string cultureId, string? factionId, TitleRank rank, Category category)
+        internal TextObject GetMostMatchedTitle(bool isFemale, string cultureId, string? factionId, TitleRank rank, Category category)
         {
             // TODO: refactoring
             if (category == Category.Default)

@@ -36,17 +36,17 @@ namespace NobleTitlesPlus.Patches
                 TextObject suffNumText = new("");
                 if (!hero.IsAlive)
                 {
-                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
+                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMostMatchedTitle(hero, TitleRank.None);
                 }
                 else if ((hero.IsKnownToPlayer || !MCMRuntimeSettings.Instance.Options.FogOfWar || hero.IsFactionLeader))
                 {
                     bool hasRank = MCMRuntimeSettings.Instance.Nomenclatura.HeroProfiles.TryGetValue(hero, out HeroProfile hp);
-                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, hasRank ? hp.TitleRank : TitleRank.None);
+                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMostMatchedTitle(hero, hasRank ? hp.TitleRank : TitleRank.None);
                     if (hasRank) { suffNumText = hp.GenSuffixText; }
                 }
                 else
                 {
-                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(hero, TitleRank.None);
+                    title = MCMRuntimeSettings.Instance.Options.TitleSet.GetMostMatchedTitle(hero, TitleRank.None);
                 }
                 title = title.SetTextVariable("NAME", name)
                             .SetTextVariable("CLAN", hero.Clan?.Name)
@@ -157,7 +157,7 @@ namespace NobleTitlesPlus.Patches
         private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
         {
             Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Culture.StringId}, {__instance.Name}");
-            __result = MCMRuntimeSettings.Instance.Options.TitleSet.GetMatchedTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
+            __result = MCMRuntimeSettings.Instance.Options.TitleSet.GetMostMatchedTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
         }
     }
     /* used by SettlementMenuOverlayVM.CharacterList and so on*/
