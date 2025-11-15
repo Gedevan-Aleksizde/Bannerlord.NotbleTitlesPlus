@@ -303,12 +303,15 @@ namespace NobleTitlesPlus
         /// </summary>
         private void AddTitlesToMinorFaction()
         {
-            foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction && (!c.Leader?.IsHumanPlayerCharacter ?? true)))
+            foreach (Clan c in Clan.All.Where(c => !c.IsEliminated && c.IsMinorFaction))
             {
+                this.ShowClanDebugValues(c);
+                // player clan is a minor faction, but the player character hero is not a minor faction hero.
+                // I can't figure out how to use IsClanTypeMercenary.
                 List<string> tr = new() { $"Adding minor faction titles to {c.Name} ({c.StringId})..." };
                 foreach (Hero h in c.Heroes)
                 {
-                    if (h.IsAlive)
+                    if (h.IsAlive && (!h.IsHumanPlayerCharacter || c?.Kingdom == null)) // player clan is always a minor faction even when serving any kingdom.
                     {
                         if (h == h.Clan.Leader)
                         {
@@ -414,6 +417,14 @@ namespace NobleTitlesPlus
                 hpNew.UpdateGunSuffixText();
                 this.HeroProfiles.Add(hero, hpNew);
             }
+        }
+        /// <summary>
+        /// to inspect Bannerlord clan attribute in case disruptive updates
+        /// </summary>
+        /// <param name="clan"></param>
+        private void ShowClanDebugValues(Clan clan)
+        {
+            Util.Log.Print($"clan={clan.Name}, kingdom={clan?.Kingdom?.StringId}, rulingClan={clan?.Kingdom?.RulingClan.StringId}, isMinorFaction={clan.IsMinorFaction}, typeMerc={clan.IsClanTypeMercenary}, MercService={clan.IsUnderMercenaryService}, leader={clan?.Leader?.StringId}, isleaderalive={clan?.Leader?.IsAlive}, leaderIsLord={clan?.Leader?.IsLord}");
         }
         private int GetFiefScore(Clan clan) => clan.Fiefs.Sum(t => t.IsTown ? 3 : 1);
         private string GetHeroTrace(Hero h, TitleRank rank) =>
