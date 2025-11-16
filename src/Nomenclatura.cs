@@ -311,9 +311,9 @@ namespace NobleTitlesPlus
                 List<string> tr = new() { $"Adding minor faction titles to {c.Name} ({c.StringId})..." };
                 foreach (Hero h in c.Heroes)
                 {
-                    if (h.IsAlive && (!h.IsHumanPlayerCharacter || c?.Kingdom == null)) // player clan is always a minor faction even when serving any kingdom.
+                    if (h.IsAlive && IfMinorFactionHero(h)) // player clan is always a minor faction even when serving any kingdom.
                     {
-                        if (h == h.Clan.Leader)
+                        if (h.IsClanLeader)
                         {
                             this.UpdateTitlerankInHeroProfiles(h, TitleRank.King);
                             tr.Add(this.GetHeroTrace(h, TitleRank.King));
@@ -327,6 +327,10 @@ namespace NobleTitlesPlus
                 }
                 if (MCMRuntimeSettings.Instance?.Options?.VerboseLog ?? true) Util.Log.Print(tr, LogCategory.Info);
             }
+        }
+        public static bool IfMinorFactionHero(Hero hero)
+        {
+            return hero.IsMinorFactionHero || (hero.IsHumanPlayerCharacter && ((hero?.Clan?.IsUnderMercenaryService ?? false) || hero?.Clan?.Kingdom == null));
         }
         /// <summary>
         /// This function can be very heavy, so should be called only at the itinialization
