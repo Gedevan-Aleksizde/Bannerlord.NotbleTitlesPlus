@@ -2,19 +2,19 @@
 <Module xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
   <Id value="NobleTitlesPlus" />
   <Name value="Noble Titles Plus" />
-  <Version value="v3.3.3" />
+  <Version value="v3.4.0" />
   <DefaultModule value="false" />
   <ModuleCategory value="Singleplayer"/>
   <ModuleType value="Community" />
   <Url value="https://www.nexusmods.com/mountandblade2bannerlord/mods/5348" />
   <DependedModuleMetadatas>
-    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.3.*" />
-    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="5.9.*" optional="true" />
-    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v1.2.*" />
-    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v1.2.*" />
-    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v1.2.*" />
-    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="v1.2.*" />
-    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="v1.2.*" />
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.4.*" />
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="5.11.*" optional="true" />
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v1.3.*" />
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v1.3.*" />
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v1.3.*" />
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="v1.3.*" />
+    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="v1.3.*" />
     <DependedModuleMetadata id="Bannerlord.AlwaysShowTitles" incompatible="true" />
     <DependedModuleMetadata id="VassalTitles" incompatible="true" />
     <DependedModuleMetadata id="Bannerlord.CustomizableTitles" incompatible="true" />
