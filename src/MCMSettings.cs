@@ -229,19 +229,6 @@ namespace NobleTitlesPlus.MCMSettings
                     )
                 .SetGroupOrder(1);
             void BuildShokuhoGroupProperties(ISettingsPropertyGroupBuilder builder) => builder
-                /*.AddBool("fix_shokuho_clan_name", FindTextShortMCM("fix_shokuho_clan_name"), new ProxyRef<bool>(
-                    () => this.Options.FixShokuhoClanName,
-                    value =>
-                    {
-                        if (value)
-                        {
-                            this.Nomenclatura.UpdateAll(true);
-                        }
-                        this.Options.FixShokuhoClanName = value;
-                    }
-                    ),
-                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("fix_shokuho_clan_name_hint")).SetOrder(0)
-                )*/
                 .AddButton("fix_shokuho_clan_name_button", FindTextShortMCM("fix_shokuho_clan_name"),
                 new ProxyRef<Action>(
                     () => ShokuhoButton,
@@ -273,51 +260,12 @@ namespace NobleTitlesPlus.MCMSettings
                     ),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("baron_threshold_hint")).SetOrder(1)
                 )
-                /*Canceled. the native implementation is too messy */
-                /*
-                .AddBool("encyclopedia", FindTextShortMCM("encyclo"),
-                    new ProxyRef<bool>(
-                        () => options.Encyclopedia,
-                        value => options.Encyclopedia = value),
-                    propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("encyclo_hint")).SetOrder(1)
-                    )
-                */
                 .AddBool("use_united_empire_title", FindTextShortMCM("united_empire"),
                 new ProxyRef<bool>(
                     () => this.Options.UseUnitedTitle,
                     value => this.Options.UseUnitedTitle = value),
                 propBuilder => propBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("united_empire_hint")).SetOrder(8)
                 )
-                /*Canceled. the native implementation is too messy */
-                /*
-                .AddDropdown("kingdom_title_format", FindTextShortMCM("kingdom_title_format"), 0,
-                new ProxyRef<Dropdown<TextObject>>(
-                    () => options.KingdomTitleFormat,
-                    value =>
-                    {
-                        options.KingdomTitleFormat = value;
-
-                        switch ((KingdomTitleFormat)value.SelectedIndex)
-                        {
-                            case KingdomTitleFormat.Abbreviated:
-                                Util.Log.Print("[DEBUG] Kingdom format is abbreviated");
-                                SubModule.harmony?.PatchCategory("KingdomAbbreviated");
-                                SubModule.harmony?.UnpatchCategory("KingdomFull");
-                                break;
-                            case KingdomTitleFormat.Full:
-                                Util.Log.Print("[DEBUG] Kingdom format is full");
-                                SubModule.harmony?.PatchCategory("KingdomFull");
-                                SubModule.harmony?.UnpatchCategory("KingdomAbbreviated");
-                                break;
-                            case KingdomTitleFormat.Default:
-                                Util.Log.Print("[DEBUG] Kingdom format is default");
-                                SubModule.harmony?.UnpatchCategory("KingdomFull");
-                                SubModule.harmony?.UnpatchCategory("KingdomAbbreviated");
-                                break;
-                        }
-                    }),
-                probBuilder => probBuilder.SetRequireRestart(false).SetHintText(FindTextShortMCM("kingdom_title_format_hint")).SetOrder(7)
-                ) */
                 .AddBool("VerboseLog", FindTextShortMCM("verbose"),
                 new ProxyRef<bool>(
                     () => this.Options.VerboseLog,
