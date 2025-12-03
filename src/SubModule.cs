@@ -60,7 +60,6 @@ namespace NobleTitlesPlus
                 try
                 {
                     MCMRuntimeSettings.Instance = new(c.UniqueGameId);
-                    Util.Log.Print($"unique game id={c.UniqueGameId}");
                 }
                 catch (Exception e)
                 {
@@ -117,7 +116,6 @@ namespace NobleTitlesPlus
                 string ver;
                 try
                 {
-                    Util.Log.Print($"modversion={ModuleHelper.GetModuleFullPath("NobleTitlesPlus")}");
                     info.LoadWithFullPath(ModuleHelper.GetModuleFullPath("NobleTitlesPlus"));
                     ver = $"{info.Version.Major}.{info.Version.Minor}.{info.Version.Revision}";
                 }
