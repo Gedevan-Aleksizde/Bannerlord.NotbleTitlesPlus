@@ -5,7 +5,6 @@ using System.IO;
 using System.Reflection;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
-using TaleWorlds.Engine;
 using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using TaleWorlds.ModuleManager;
@@ -61,6 +60,7 @@ namespace NobleTitlesPlus
                 try
                 {
                     MCMRuntimeSettings.Instance = new(c.UniqueGameId);
+                    Util.Log.Print($"unique game id={c.UniqueGameId}");
                 }
                 catch (Exception e)
                 {
@@ -117,7 +117,8 @@ namespace NobleTitlesPlus
                 string ver;
                 try
                 {
-                    info.LoadWithFullPath(Utilities.GetFullModulePath("NobleTitlesPlus"));
+                    Util.Log.Print($"modversion={ModuleHelper.GetModuleFullPath("NobleTitlesPlus")}");
+                    info.LoadWithFullPath(ModuleHelper.GetModuleFullPath("NobleTitlesPlus"));
                     ver = $"{info.Version.Major}.{info.Version.Minor}.{info.Version.Revision}";
                 }
                 catch

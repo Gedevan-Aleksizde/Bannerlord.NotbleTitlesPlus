@@ -83,7 +83,7 @@ namespace NobleTitlesPlus.Patches
     [HarmonyPatchCategory("Conversation")]
     internal class ModifyTitleOnMissionConversationVM
     {
-        private static TextObject namePre = new();
+        private static TextObject namePre = new("");
         [HarmonyPrefix]
         private static void PrevesrveInitialAgentName(MissionConversationVM __instance, ref ConversationManager ____conversationManager)
         {

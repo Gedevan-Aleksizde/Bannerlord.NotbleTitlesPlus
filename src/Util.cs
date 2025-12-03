@@ -93,9 +93,9 @@ namespace NobleTitlesPlus
                     msg.AddRange(new List<string>
                     {
                         $"Campaign Time:      {CampaignTime.Now}",
-                        $"  Elapsed Years:    {Campaign.Current.CampaignStartTime.ElapsedYearsUntilNow:F3}",
-                        $"  Elapsed Days:     {Campaign.Current.CampaignStartTime.ElapsedDaysUntilNow:F2}",
-                        $"  Elapsed Hours:    {Campaign.Current.CampaignStartTime.ElapsedHoursUntilNow:F2}",
+                        $"  Elapsed Years:    {CampaignTime.Now.ElapsedYearsUntilNow:F3}",
+                        $"  Elapsed Days:     {CampaignTime.Now.ElapsedDaysUntilNow:F2}",
+                        $"  Elapsed Hours:    {CampaignTime.Now.ElapsedHoursUntilNow:F2}",
                     });
                 }
 

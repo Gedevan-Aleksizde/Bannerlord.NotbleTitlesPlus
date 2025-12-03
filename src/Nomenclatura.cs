@@ -166,7 +166,7 @@ namespace NobleTitlesPlus
                     c.Leader != null &&
                     c.Leader.IsAlive &&
                     c.Leader.IsLord)
-                .SelectMany(c => c.Lords.Where(h => h != c.Leader && h.IsAlive && !h.IsChild))
+                .SelectMany(c => c.AliveLords.Where(h => h != c.Leader && !h.IsChild))
                 .ToList();
             foreach (Hero h in commonNobles)
             {
@@ -261,7 +261,7 @@ namespace NobleTitlesPlus
                 }
             }
             if (kingdom.Leader != null &&
-                !Kingdom.All.Where(k => k != kingdom).SelectMany(k => k.Lords).Where(h => h == kingdom.Leader).Any()) // fix for stale ruler status in defunct kingdoms
+                !Kingdom.All.Where(k => k != kingdom).SelectMany(k => k.AliveLords).Where(h => h == kingdom.Leader).Any()) // fix for stale ruler status in defunct kingdoms
             {
                 this.UpdateTitlerankInHeroProfiles(kingdom.Leader, TitleRank.King);
                 tr.Add(this.GetHeroTrace(kingdom.Leader, TitleRank.King));

@@ -18,8 +18,8 @@ namespace NobleTitlesPlus.json
             this.ClanLong = name_long ?? new("");
         }
         [JsonProperty("name_short")]
-        public TextObject ClanShort { get; set; } = new();
+        public TextObject ClanShort { get; set; } = new("");
         [JsonProperty("name_long")]
-        public TextObject ClanLong { get; set; } = new();
+        public TextObject ClanLong { get; set; } = new("");
     }
 }
