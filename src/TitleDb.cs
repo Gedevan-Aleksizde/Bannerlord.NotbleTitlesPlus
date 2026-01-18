@@ -273,7 +273,8 @@ namespace NobleTitlesPlus.DB
         }
         internal TextObject GetMostMatchedTitle(Hero hero, TitleRank rank)
         {
-            bool isMinorFaction = hero.IsMinorFactionHero && hero.Clan.StringId != "player_faction";
+
+            bool isMinorFaction = Nomenclatura.IfMinorFactionHero(hero);
             string cultureId = isMinorFaction ? (hero?.Clan?.StringId ?? "default") : (hero?.Clan?.Kingdom?.Culture?.StringId ?? hero?.Clan?.Culture?.StringId ?? hero.Culture.StringId ?? "");
             string factionId = hero?.Clan?.Kingdom?.StringId ?? "";
             return this.GetMostMatchedTitle(hero.IsFemale, cultureId, factionId, rank, isMinorFaction ? Category.MinorFaction : Category.Default);
