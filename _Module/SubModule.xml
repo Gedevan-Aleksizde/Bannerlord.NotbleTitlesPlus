@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Module xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
   <Id value="NobleTitlesPlus" />
-  <Name value="Noble Titles Plus" />
+  <Name value="Noble Titles Plus (Dreams of Legends compatible)" />
   <Version value="v3.3.2" />
   <DefaultModule value="false" />
   <ModuleCategory value="Singleplayer"/>
