@@ -814,5 +814,45 @@
   "clan_namioka_1": {
     "name_long": "{=vooBcyACMC}Namioka-shi",
     "name_short": "{=jsYzXRJYp}Namioka"
+  },
+    "clan_takenaka_1":{
+    "name_long": "{=MPpopzSbAd}Takenaka-shi",
+    "name_short": "{=kD0YqCp2Hv}Takenaka"
+  },
+  "clan_andou_1": {
+    "name_long": "{=nGRxaerDsa}Mino-Andou-shi",
+    "name_short": "{=C61rribyhc}Andou"
+  },
+  "clan_owari_mori_1":{
+    "name_long": "{=5DQXs8MIqp}Owari-Mori-shi",
+    "name_short": "{=tk5BtBILoM}Mori"
+  },
+  "clan_inaba_1":{
+    "name_long": "{=3KtnOJh22U}Inada-shi",
+    "name_short": "{=3k8Al8LLki}Inada"
+  },
+  "clan_wakizaka_1":{
+    "name_long": "{=5BcWIySEsi}Wakizaka-shi",
+    "name_short": "{=J4Klh4TOrE}Wakizaka"
+  },
+  "clan_katagiri_1": {
+    "name_long": "{=huqdUzUd1Z}Katagiri-shi",
+    "name_short": "{=GvMk538ZyA}Katagiri"
+  },
+  "clan_torii_1": {
+    "name_long": "{=E5HAiU4kg7}Torī-shi",
+    "name_short": "{=j1Q0xYTLqa}Torī"
+  },
+  "clan_mino_kato_1": {
+    "name_long": "{=M8eBPAPVHq}Mino-Katou-shi",
+    "name_short": "{=5dm2qRknaZ}Katou"
+  },
+  "clan_shima_1": {
+    "name_long": "{=Lg560tOdgv}Shima-shi",
+    "name_short": "{=QiokoUFqf5}Shima"
+  },
+  "clan_higuchi_1": {
+    "name_long": "{=s2xoLQBNYZ}Higuchi-shi",
+    "name_short": "{=lZItjgZ5s1}Higuchi"
   }
 }
