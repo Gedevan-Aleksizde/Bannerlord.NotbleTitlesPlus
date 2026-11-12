@@ -21,13 +21,6 @@ namespace NobleTitlesPlus
             Util.EnableLog = true;
             Util.EnableTracer = false;
         }
-        protected override void OnBeforeInitialModuleScreenSetAsRoot()
-        {
-            base.OnBeforeInitialModuleScreenSetAsRoot();
-
-            InformationManager.DisplayMessage(new InformationMessage(
-                    $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})", ImportantTextColor));
-        }
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
             if (game.GameType is not Campaign)
@@ -103,6 +96,8 @@ namespace NobleTitlesPlus
                 harmony.PatchCategory("Encyclopedia");
                 Util.Log.Print($"harmony patched", LogCategory.Debug);
                 harmony.PatchCategory("Why");
+                InformationManager.DisplayMessage(new InformationMessage(
+                    $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})", ImportantTextColor));
             }
             base.OnAfterGameInitializationFinished(game, starterObject);
         }
