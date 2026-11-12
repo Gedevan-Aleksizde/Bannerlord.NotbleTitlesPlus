@@ -412,7 +412,7 @@
 		<string id="0CytYWw1L" text="Asonuma" />
 		<string id="vooBcyACMC" text="Namioka-shi" />
 		<string id="jsYzXRJYp" text="Namioka" />
-		<!-- added names by Dreams of Legends https://www.nexusmods.com/mountandblade2bannerlord/mods/9753 -->
+		<!-- #region extra clan names by Dreams of Legends https://www.nexusmods.com/mountandblade2bannerlord/mods/9753 -->
 		<string id="MPpopzSbAd" text="Takenaka-shi" />
 		<string id="kD0YqCp2Hv" text="Takenaka" />
 		<string id="nGRxaerDsa" text="Mino-Andou-shi" />
@@ -433,5 +433,8 @@
 		<string id="QiokoUFqf5" text="Shima" />
 		<string id="s2xoLQBNYZ" text="Higuchi-shi" />
 		<string id="lZItjgZ5s1" text="Higuchi" />
+		<string id="ZoeLbyfA0C" text="Echigo-Saitou-shi" />
+		<string id="uTRZPbBf8m" text="Saitou" />
+		<!-- #endregion -->
  	</strings>
 </base>

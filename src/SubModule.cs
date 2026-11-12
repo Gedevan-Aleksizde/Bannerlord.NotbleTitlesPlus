@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using NobleTitlesPlus.MCMSettings;
 using System;
 using System.IO;
@@ -30,29 +30,49 @@ namespace NobleTitlesPlus
         }
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
-            if (game.GameType is Campaign)
+            if (game.GameType is not Campaign)
             {
-                ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior());
-                Util.Log.Print($"OnGameStart: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
+                base.OnGameStart(game, starterObject);
+                return;
             }
-            else
-            {
-                Util.Log.Print($"OnGameStart: not Campaign", LogCategory.Debug);
-            }
+
+            ((CampaignGameStarter)starterObject).AddBehavior(new TitleBehavior());
+            Util.Log.Print($"OnGameStart: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             base.OnGameStart(game, starterObject);
         }
         public override void OnGameLoaded(Game game, object initializerObject)
         {
+            // Campaign data is unavailable in CustomBattle and other non-campaign games.
+            if (game.GameType is not Campaign)
+            {
+                base.OnGameLoaded(game, initializerObject);
+                return;
+            }
+
             Util.Log.Print($"OnGameLoaded: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             base.OnGameLoaded(game, initializerObject);
         }
         public override void OnGameInitializationFinished(Game game)
         {
+            // Campaign data is unavailable in CustomBattle and other non-campaign games.
+            if (game.GameType is not Campaign)
+            {
+                base.OnGameInitializationFinished(game);
+                return;
+            }
+
             Util.Log.Print($"OnGameInitializationFinished: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             base.OnGameInitializationFinished(game);
         }
         public override void OnAfterGameInitializationFinished(Game game, object starterObject)
         {
+            // Campaign data is unavailable in CustomBattle and other non-campaign games.
+            if (game.GameType is not Campaign)
+            {
+                base.OnAfterGameInitializationFinished(game, starterObject);
+                return;
+            }
+
             // minor factions don't seem to be initialized when OnGameInitializationFinished. (why??) So we need initialize here.
             Util.Log.Print($"OnAfterGameInitializationFinished: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             if (game.GameType is Campaign c)
@@ -88,21 +108,24 @@ namespace NobleTitlesPlus
         }
         public override void OnGameEnd(Game game)
         {
+            // Campaign data is unavailable in CustomBattle and other non-campaign games.
+            if (game.GameType is not Campaign)
+            {
+                base.OnGameEnd(game);
+                return;
+            }
+
             Util.Log.Print($"At OnGameEnd: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
-            if (game.GameType is Campaign)
-            {
-                MCMRuntimeSettings.Instance?.Clear();
-            }
-            else
-            {
-                Util.Log.Print($"OnGameEnd: not Campaign", LogCategory.Debug);
-            }
-            // harmony.UnpatchAll(); // why UnpatchAll doesn't unpatch all??
+            MCMRuntimeSettings.Instance?.Clear();
+            MCMRuntimeSettings.Instance = null;
             harmony.UnpatchCategory("NameChangerCore");
             harmony.UnpatchCategory("Conversation");
             harmony.UnpatchCategory("PartyPopUp");
             harmony.UnpatchCategory("SettlementPanel");
             harmony.UnpatchCategory("Encyclopedia");
+            harmony.UnpatchCategory("Why");
+            harmony.UnpatchCategory("KingdomAbbreviated");
+            harmony.UnpatchCategory("KingdomFull");
             Util.Log.Print($"harmony unpatched", LogCategory.Debug);
             base.OnGameEnd(game);
         }
