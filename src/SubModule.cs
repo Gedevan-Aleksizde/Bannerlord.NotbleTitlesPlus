@@ -116,17 +116,13 @@ namespace NobleTitlesPlus
                 return;
             }
 
-            Util.Log.Print($"At OnGameEnd: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
+            // Campaign objects may already be disposed when this callback runs.
+            Util.Log.Print("At OnGameEnd", LogCategory.Debug);
+            // Remove only our installed patches without resolving inactive patch targets.
+            harmony.UnpatchAll(HarmonyDomain);
+            // Keep settings available until all patches that use them are removed.
             MCMRuntimeSettings.Instance?.Clear();
             MCMRuntimeSettings.Instance = null;
-            harmony.UnpatchCategory("NameChangerCore");
-            harmony.UnpatchCategory("Conversation");
-            harmony.UnpatchCategory("PartyPopUp");
-            harmony.UnpatchCategory("SettlementPanel");
-            harmony.UnpatchCategory("Encyclopedia");
-            harmony.UnpatchCategory("Why");
-            harmony.UnpatchCategory("KingdomAbbreviated");
-            harmony.UnpatchCategory("KingdomFull");
             Util.Log.Print($"harmony unpatched", LogCategory.Debug);
             base.OnGameEnd(game);
         }
