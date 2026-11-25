@@ -18,11 +18,13 @@ namespace NobleTitlesPlus.MCMSettings
     {
         public bool VerboseLog { get; set; } = false;
         public bool FogOfWar { get; set; } = true;
-        public bool Encyclopedia { get; set; } = false;
+        public bool ShowOnEncyclopediaList { get; set; } = true;
+        public bool ShowOnEncyclopediaHero { get; set; } = true;
         public bool ShowOnSettlementUI { get; set; } = true;
         public bool ShowOnConversation { get; set; } = true;
-        public bool ShowOnMission { get; set; } = true;
         public bool ShowOnPartyTooltip { get; set; } = true;
+        public bool ShowOnHeroLinks { get; set; } = true;
+        public bool ShowOnOtherScreens { get; set; } = true;
         public bool SpouseTitle { get; private set; } = true;
         public bool Tagging { get; set; } = false;
         public string FiefNameSeparator { get; set; } = ",";
@@ -132,10 +134,11 @@ namespace NobleTitlesPlus.MCMSettings
                 .CreateGroup(FindTextShortMCM("fief_category"), BuildFormattingGroupProperties)
                 .CreateGroup(FindTextShortMCM("shokuho_category"), BuildShokuhoGroupProperties)
                 .CreateGroup(FindTextShortMCM("advanced_category"), BuildAdvancedGroupProperties)
-                .CreateGroup(FindTextShortMCM("culture_default"), GenerateKingdomGroupPropertiesBuilder("default", 4))
-                .CreateGroup(FindTextShortMCM("minor_default"), GenerateMinorFactionGroupProperties("default", 5));
+                .CreateGroup(FindTextShortMCM("display_category"), BuildDisplayGroupProperties)
+                .CreateGroup(FindTextShortMCM("culture_default"), GenerateKingdomGroupPropertiesBuilder("default", 5))
+                .CreateGroup(FindTextShortMCM("minor_default"), GenerateMinorFactionGroupProperties("default", 6));
             ;
-            const int orderoffset = 6;
+            const int orderoffset = 7;
             int j = 0;
             foreach (string cultureId in this.Options.TitleSet.cultures.Keys.Where(x => x != "default"))
             {
@@ -175,6 +178,21 @@ namespace NobleTitlesPlus.MCMSettings
             }
             Util.Log.Print($"Builder created", LogCategory.Info);
             return builder;
+
+            void BuildDisplayGroupProperties(ISettingsPropertyGroupBuilder group)
+            {
+                void Add(string id, Func<bool> get, Action<bool> set, int order) => group.AddBool(
+                    id, FindTextShortMCM(id), new ProxyRef<bool>(get, set),
+                    property => property.SetRequireRestart(false).SetHintText(FindTextShortMCM("display_hint")).SetOrder(order));
+                Add("display_hero_list", () => Options.ShowOnEncyclopediaList, value => Options.ShowOnEncyclopediaList = value, 0);
+                Add("display_hero_page", () => Options.ShowOnEncyclopediaHero, value => Options.ShowOnEncyclopediaHero = value, 1);
+                Add("display_conversation", () => Options.ShowOnConversation, value => Options.ShowOnConversation = value, 2);
+                Add("display_settlement", () => Options.ShowOnSettlementUI, value => Options.ShowOnSettlementUI = value, 3);
+                Add("display_map", () => Options.ShowOnPartyTooltip, value => Options.ShowOnPartyTooltip = value, 4);
+                Add("display_links", () => Options.ShowOnHeroLinks, value => Options.ShowOnHeroLinks = value, 5);
+                Add("display_other", () => Options.ShowOnOtherScreens, value => Options.ShowOnOtherScreens = value, 6);
+                group.SetGroupOrder(4);
+            }
 
             /*
              * general setting items

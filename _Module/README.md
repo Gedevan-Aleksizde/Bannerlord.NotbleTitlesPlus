@@ -15,6 +15,8 @@ Compared with the original, this mod added the following features.
 
 You can edit the titles by using Mod Configuration Menu (MCM). I also provided my new title preset. You can also edit the settings by JSON file in the MCM folder (usually at `Mount and Blade II Bannerlord\Configs\ModSettings` in the My Document folder)
 
+Use **Title Display Locations** in MCM to choose where Noble Titles Plus modifies names: **Encyclopedia List**, **Encyclopedia Details**, **Conversation Screen**, **Settlement Character List**, **Party Tooltips**, **Links in Text**, and **Other Screens**. Disable an option to use the game's original display. All seven options are enabled by default and saved per campaign. After changing a setting, reopen the relevant screen or tooltip; no game restart is needed.
+
 Note: Pressing the "e" key transits the other tab. But I can't fix this because it's an MCM issue.
 
 Note for those have installed the older versions: the former titles.json is unavailable until v2.0.x. You need to edit the titles manually if you created your titles. Sorry for the inconvenience!
@@ -128,6 +130,8 @@ Zijistark のオリジナルにはない機能を紹介します.
 ## MCM 対応
 
 全ての設定を Mod Configuration Menu (MCM) で管理できます. Zijistark のオリジナルの称号と, 私が独自に考えた称号のプリセットも用意されています. 詳細は画像を見てください.
+
+MCMで, 百科事典のヒーロー一覧・百科事典の詳細画面・会話画面m・集落の人物一覧・部隊ツールチップ・文中のリンク、そしてそれ以外の画面を個別に切り替えられます。初期値はすべて有効です。
 
 注: ただしMCMは現状文字入力の挙動がおかしいです (というかMB2本体がおかしい?). 入力しづらい場合はJSONファイルを直接編集することもできます. たいていはマイドキュメントの `Mount and Blade II Bannerlord\Configs\ModSettings` フォルダ以下のどこかにあります.
 

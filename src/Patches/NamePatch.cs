@@ -16,6 +16,8 @@ namespace NobleTitlesPlus.Patches
     [HarmonyPatchCategory("NameChangerCore")]
     internal class HeroNameChanger
     {
+        internal static bool CanReplaceName(Hero hero) => hero?.Clan != null && hero.IsLord && !hero.IsRebel && !hero.IsWanderer && !hero.IsNotable;
+
         public static TextObject ReplaceName(Hero hero, TextObject name)
         {
             if (hero?.Clan is null)
@@ -63,22 +65,8 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void ReplaceNameFormat(Hero __instance, ref TextObject ____name, ref TextObject ____firstName, ref TextObject __result)
         {
-            if (__instance.IsWanderer || __instance.IsNotable) { return; }
-            // Keep the original full name of special heroes created from non-lord templates.
-            if (__instance.Clan is null || !__instance.IsLord || __instance.IsRebel) { return; }
+            if (!NameDisplay.Enabled || !CanReplaceName(__instance)) { return; }
             __result = ReplaceName(__instance, ____firstName);
-        }
-    }
-    [HarmonyPatch(typeof(Hero), nameof(Hero.FirstName), MethodType.Getter)]
-    [HarmonyPatchCategory("NameChangerCore")]
-    internal class HeroFirstNameChanger
-    {
-        [HarmonyPostfix]
-        private static void ReplaceFirstNameFormat(Hero __instance, ref TextObject ____firstName, TextObject __result)
-        {
-            if (__instance.IsWanderer || __instance.IsNotable) { return; }
-            if (__instance.Clan is null || !__instance.IsLord || __instance.IsRebel) { return; }
-            __result = HeroNameChanger.ReplaceName(__instance, ____firstName);
         }
     }
     // fix the nameplate on the conversation UI
@@ -86,21 +74,12 @@ namespace NobleTitlesPlus.Patches
     [HarmonyPatchCategory("Conversation")]
     internal class ModifyTitleOnMissionConversationVM
     {
-        private static TextObject namePre = new("");
-        [HarmonyPrefix]
-        private static void PrevesrveInitialAgentName(MissionConversationVM __instance, ref ConversationManager ____conversationManager)
-        {
-            if (____conversationManager.OneToOneConversationCharacter?.IsHero ?? false)
-            {
-                namePre = ____conversationManager.OneToOneConversationHero.Name;
-            }
-        }
         [HarmonyPostfix]
         private static void EditOverNestedTitleFormatInConverastion(MissionConversationVM __instance, ref ConversationManager ____conversationManager)
         {
-            if (____conversationManager.OneToOneConversationCharacter?.IsHero ?? false)
+            if (NameDisplay.Enabled && (____conversationManager.OneToOneConversationCharacter?.IsHero ?? false))
             {
-                __instance.CurrentCharacterNameLbl = namePre.ToString();
+                __instance.CurrentCharacterNameLbl = ____conversationManager.OneToOneConversationHero.Name.ToString();
             }
         }
     }
@@ -132,7 +111,10 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPrefix]
         private static bool Override(Hero __instance, ref TextObject __result)
         {
-            __result = HyperlinkTexts.GetHeroHyperlinkText(__instance.EncyclopediaLink, __instance.Name);
+            using (NameDisplay.Enter(NameDisplayLocation.Links))
+            {
+                __result = HyperlinkTexts.GetHeroHyperlinkText(__instance.EncyclopediaLink, __instance.Name);
+            }
             return false;
         }
     }

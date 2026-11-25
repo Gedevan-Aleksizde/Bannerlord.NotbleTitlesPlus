@@ -96,6 +96,7 @@ namespace NobleTitlesPlus
                 harmony.PatchCategory("Encyclopedia");
                 Util.Log.Print($"harmony patched", LogCategory.Debug);
                 harmony.PatchCategory("Why");
+                harmony.PatchCategory("DisplayLocations");
                 InformationManager.DisplayMessage(new InformationMessage(
                     $"{new TextObject("{=NTP.Sys002}{DisplayName} Loaded").SetTextVariable("DisplayName", new TextObject(DisplayName))} (Assembly v{AssemblyVersion})", ImportantTextColor));
             }

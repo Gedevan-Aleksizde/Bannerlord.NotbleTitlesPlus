@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+  <string id="ntp_mcm.display_category" text="{=NTP.8f3a901b2c}Title Display Locations"/>
+  <string id="ntp_mcm.display_hero_list" text="{=NTP.19e7a4c630}Encyclopedia List"/>
+  <string id="ntp_mcm.display_hero_page" text="{=NTP.2b8d501ae4}Encyclopedia Details"/>
+  <string id="ntp_mcm.display_conversation" text="{=NTP.3c9e612bf5}Conversation Screen"/>
+  <string id="ntp_mcm.display_settlement" text="{=NTP.4daf723c06}Settlement Character List"/>
+  <string id="ntp_mcm.display_map" text="{=NTP.5eb0834d17}Party Tooltips"/>
+  <string id="ntp_mcm.display_links" text="{=NTP.6fc1945e28}Links in Text"/>
+  <string id="ntp_mcm.display_other" text="{=NTP.70d2a56f39}Other Screens"/>
+  <string id="ntp_mcm.display_hint" text="{=NTP.81e3b6704a}Choose where Noble Titles Plus modifies names. Disable an option to use the game's original display."/>
+</strings>
