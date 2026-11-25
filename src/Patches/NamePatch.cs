@@ -169,49 +169,4 @@ namespace NobleTitlesPlus.Patches
             }
         }
     }
-    [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.Name), MethodType.Getter)]
-    [HarmonyPatchCategory("KingdomAbbreviated")]
-    internal class KingdomName2Short
-    {
-        [HarmonyPrefix]
-        private static bool Override(Kingdom __instance, ref TextObject __result)
-        {
-            __result = __instance.InformalName;
-            return false;
-        }
-    }
-    [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.EncyclopediaTitle), MethodType.Getter)]
-    [HarmonyPatchCategory("KingdomAbbreviated")]
-    internal class KingdomTitle2Short
-    {
-        [HarmonyPrefix]
-        private static bool Override(Kingdom __instance, ref TextObject __result)
-        {
-            __result = __instance.InformalName;
-            return false;
-        }
-    }
-    [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.InformalName), MethodType.Getter)]
-    [HarmonyPatchCategory("KingdomFull")]
-    internal class KingdomInformalName2Full
-    {
-        [HarmonyPrefix]
-        private static bool Override(Kingdom __instance, ref TextObject __result)
-        {
-            __result = __instance.EncyclopediaTitle;
-            return false;
-        }
-    }
-    [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.Name), MethodType.Getter)]
-    [HarmonyPatchCategory("KingdomFull")]
-    internal class KingdomName2Full
-    {
-        [HarmonyPrefix]
-        private static bool Override(Kingdom __instance, ref TextObject __result)
-        {
-            __result = __instance.EncyclopediaTitle;
-            return false;
-        }
-    }
-
 }

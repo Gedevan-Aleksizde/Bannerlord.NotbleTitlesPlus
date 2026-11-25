@@ -5,7 +5,7 @@ Noble Titles Plus - Noble Titles and Styles Customization
 
 # What's this?
 
-This is a remake of Zijistark's [Noble Titles](https://www.nexusmods.com/mountandblade2bannerlord/mods/2089) for the Bannerlord >= v1.1.x. This mod has some extra features. If you don't know the original mod, please check it first.
+This is a remake of Zijistark's [Noble Titles](https://www.nexusmods.com/mountandblade2bannerlord/mods/2089) for Bannerlord **v1.5.7**. This version is built against Bannerlord.ReferenceAssemblies **1.5.7.125802**, MCM **5.13.1**, and Harmony **2.4.2**. It includes additional features described below.
 
 # New Features
 
