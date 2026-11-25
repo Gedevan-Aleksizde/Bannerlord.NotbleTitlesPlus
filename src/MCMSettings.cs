@@ -159,7 +159,8 @@ namespace NobleTitlesPlus.MCMSettings
                 Util.Log.Print($"Category {name}({kingdomId}, faction) added to MCM options", LogCategory.Info);
                 j++;
             }
-            List<Clan> clans = Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter).ToList();
+            // Some mods create minor-faction leaders after settings initialization.
+            List<Clan> clans = Clan.All.Where(c => c.IsMinorFaction && !(c.Leader?.IsHumanPlayerCharacter ?? false)).ToList();
             foreach (string clanId in this.Options.TitleSet.minorFactions.Keys.Where(x => x != "default"))
             {
                 string name = clans.Where(c => c.StringId == clanId).First().Name.ToString(); // TODO
@@ -389,7 +390,7 @@ namespace NobleTitlesPlus.MCMSettings
                 {
                     FillFactionPropertyValues(preset, cultureId, null);
                 }
-                foreach (String factionId in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter).Select(c => c.StringId))
+                foreach (String factionId in Clan.All.Where(c => c.IsMinorFaction && !(c.Leader?.IsHumanPlayerCharacter ?? false)).Select(c => c.StringId))
                 {
                     FillMinorFactionPropertyValues(preset, factionId);
                 }

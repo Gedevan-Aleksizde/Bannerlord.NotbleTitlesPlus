@@ -159,7 +159,7 @@ namespace NobleTitlesPlus.DB
         }
         public void AddAllMinorFactionTitles()
         {
-            foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !c.Leader.IsHumanPlayerCharacter))
+            foreach (Clan c in Clan.All.Where(c => c.IsMinorFaction && !(c.Leader?.IsHumanPlayerCharacter ?? false)))
             {
                 this.minorFactions.Add(c.StringId, GlobalDefaultMinorFactionValue);
                 if (MCMRuntimeSettings.Instance?.Options?.VerboseLog ?? true) Util.Log.Print($">> [DEBUG] Intialized title set  for minor faction {c.StringId}");

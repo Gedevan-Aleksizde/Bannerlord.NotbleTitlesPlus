@@ -64,6 +64,8 @@ namespace NobleTitlesPlus.Patches
         private static void ReplaceNameFormat(Hero __instance, ref TextObject ____name, ref TextObject ____firstName, ref TextObject __result)
         {
             if (__instance.IsWanderer || __instance.IsNotable) { return; }
+            // Keep the original full name of special heroes created from non-lord templates.
+            if (__instance.Clan is null || !__instance.IsLord || __instance.IsRebel) { return; }
             __result = ReplaceName(__instance, ____firstName);
         }
     }
@@ -75,6 +77,7 @@ namespace NobleTitlesPlus.Patches
         private static void ReplaceFirstNameFormat(Hero __instance, ref TextObject ____firstName, TextObject __result)
         {
             if (__instance.IsWanderer || __instance.IsNotable) { return; }
+            if (__instance.Clan is null || !__instance.IsLord || __instance.IsRebel) { return; }
             __result = HeroNameChanger.ReplaceName(__instance, ____firstName);
         }
     }
