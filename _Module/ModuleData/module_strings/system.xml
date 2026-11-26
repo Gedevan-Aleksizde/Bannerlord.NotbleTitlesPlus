@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <strings>
+	<string id="ntp_mcm.display_category" text="{=NTP.8f3a901b2c}Title Display Locations"/>
+	<string id="ntp_mcm.display_hero_list" text="{=NTP.19e7a4c630}Encyclopedia List"/>
+	<string id="ntp_mcm.display_hero_page" text="{=NTP.2b8d501ae4}Encyclopedia Details"/>
+	<string id="ntp_mcm.display_conversation" text="{=NTP.3c9e612bf5}Conversation Screen"/>
+	<string id="ntp_mcm.display_settlement" text="{=NTP.4daf723c06}Settlement Character List"/>
+	<string id="ntp_mcm.display_map" text="{=NTP.5eb0834d17}Party Tooltips"/>
+	<string id="ntp_mcm.display_links" text="{=NTP.6fc1945e28}Links in Text"/>
+	<string id="ntp_mcm.display_other" text="{=NTP.70d2a56f39}Other Screens"/>
+	<string id="ntp_mcm.display_hero_list_hint" text="{=NTP.94bb363cd6}Show titles in the encyclopedia's Heroes list."/>
+	<string id="ntp_mcm.display_hero_page_hint" text="{=NTP.68cde8f000}Show titles on hero pages and kingdom ruler names."/>
+	<string id="ntp_mcm.display_conversation_hint" text="{=NTP.587098d0ad}Show titles in the conversation speaker's name."/>
+	<string id="ntp_mcm.display_settlement_hint" text="{=NTP.d3a463848b}Show titles in settlement character lists."/>
+	<string id="ntp_mcm.display_map_hint" text="{=NTP.84e3ab8f92}Show titles on map party nameplates and tooltips."/>
+	<string id="ntp_mcm.display_links_hint" text="{=NTP.fa50a03321}Show titles in links to heroes within text."/>
+	<string id="ntp_mcm.display_other_hint" text="{=NTP.2132a3e247}Show titles outside the locations listed above."/>
 	<string id="ntp_mcm.general_category" text="{=NTP.MCMGGEN}General"/>
 	<string id="ntp_mcm.shokuho_category" text="{=NTP.MCMGShokuho}Shokuhō-specific"/>
 	<string id="ntp_mcm.fief_category" text="{=NTP.MCMGFOR}Fief Display Format"/>

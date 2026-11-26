@@ -131,20 +131,6 @@ namespace NobleTitlesPlus.Patches
         {
         }
     }
-    /// <summary>
-    /// TODO: is it possible to do patching GameTexts more clever?  
-    /// </summary>
-    [HarmonyPatch(typeof(Kingdom), nameof(Kingdom.EncyclopediaRulerTitle), MethodType.Getter)]
-    [HarmonyPatchCategory("Encyclopedia")]
-    internal class ModifyTitleOnKingdomEncyclopediaRuler
-    {
-        [HarmonyPostfix]
-        private static void StandardizeTitle(Kingdom __instance, ref TextObject __result)
-        {
-            Util.Log.Print($"Kingdom.EncyclopediaRulerTitle called: {__instance.Culture.StringId}, {__instance.Name}");
-            __result = MCMRuntimeSettings.Instance.Options.TitleSet.GetMostMatchedTitle(false, __instance.Culture.StringId, __instance.Name.ToString(), TitleRank.King, Category.Default);
-        }
-    }
     /* used by SettlementMenuOverlayVM.CharacterList and so on*/
     /// <summary>
     /// Shows titles on the nameplates at the top of the settlement panel

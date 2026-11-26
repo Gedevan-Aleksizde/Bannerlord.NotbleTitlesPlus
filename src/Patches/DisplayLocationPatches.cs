@@ -22,6 +22,11 @@ namespace NobleTitlesPlus.Patches
             locations.Clear();
             Add("TaleWorlds.CampaignSystem.ViewModelCollection.Encyclopedia.Pages.EncyclopediaHeroPageVM",
                 NameDisplayLocation.EncyclopediaHero, "Refresh", "RefreshValues", "GetName", "GetNavigationBarURL");
+            // In 1.5.7 the kingdom page constructs a HeroVM for its ruler here.
+            // Format that UI name under the encyclopedia setting, never the saved
+            // Kingdom.EncyclopediaRulerTitle property.
+            Add("TaleWorlds.CampaignSystem.ViewModelCollection.Encyclopedia.Pages.EncyclopediaFactionPageVM",
+                NameDisplayLocation.EncyclopediaHero, "Refresh", "RefreshValues");
             Add("TaleWorlds.CampaignSystem.ViewModelCollection.Conversation.MissionConversationVM",
                 NameDisplayLocation.Conversation, "Refresh");
             Add("TaleWorlds.CampaignSystem.ViewModelCollection.GameMenu.Overlay.GameMenuPartyItemVM",
@@ -91,8 +96,8 @@ namespace NobleTitlesPlus.Patches
         }
     }
 
-    // Names cached by the engine must bind the owner again in the current display scope.
-    // Copy the TextObject so a map-only choice never changes the saved/cached name.
+    // Army.Name is a saved property: SaveSystem must see the same object during
+    // reference collection and member serialization. Render copies only inside UI scopes.
     [HarmonyPatch(typeof(Army), nameof(Army.Name), MethodType.Getter)]
     [HarmonyPatchCategory("DisplayLocations")]
     internal static class ArmyDisplayName
@@ -100,6 +105,7 @@ namespace NobleTitlesPlus.Patches
         [HarmonyPostfix]
         private static void Format(Army __instance, ref TextObject __result)
         {
+            if (NameDisplay.Current != NameDisplayLocation.Map) return;
             var owner = __instance.ArmyOwner ?? __instance.LeaderParty?.Owner;
             if (owner != null && __result != null)
                 __result = __result.CopyTextObject().SetTextVariable("LEADER_NAME", owner.Name);

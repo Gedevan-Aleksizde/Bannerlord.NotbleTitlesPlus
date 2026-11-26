@@ -70,6 +70,7 @@ namespace NobleTitlesPlus
             Util.Log.Print($"OnAfterGameInitializationFinished: kingdoms={Kingdom.All.Count}", LogCategory.Debug);
             if (game.GameType is Campaign c)
             {
+                SaveNameRecovery.RestoreMissingArmyNames();
                 try
                 {
                     MCMRuntimeSettings.Instance = new(c.UniqueGameId);
@@ -93,7 +94,6 @@ namespace NobleTitlesPlus
                 harmony.PatchCategory("Conversation");
                 harmony.PatchCategory("PartyPopUp");
                 harmony.PatchCategory("SettlementPanel");
-                harmony.PatchCategory("Encyclopedia");
                 Util.Log.Print($"harmony patched", LogCategory.Debug);
                 harmony.PatchCategory("Why");
                 harmony.PatchCategory("DisplayLocations");

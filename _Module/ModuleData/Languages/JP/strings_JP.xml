@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <base>
- <tags>
-  <tag language="日本語"/>
- </tags>
- <strings>
-        <string id="NTP.8f3a901b2c" text="称号の表示箇所"/>
-        <string id="NTP.19e7a4c630" text="百科事典の一覧"/>
-        <string id="NTP.2b8d501ae4" text="百科事典の詳細画面"/>
-        <string id="NTP.3c9e612bf5" text="会話画面"/>
-        <string id="NTP.4daf723c06" text="集落の人物一覧"/>
-        <string id="NTP.5eb0834d17" text="部隊ツールチップ"/>
-        <string id="NTP.6fc1945e28" text="文中のリンク"/>
-        <string id="NTP.70d2a56f39" text="そ以外の箇所"/>
-        <string id="NTP.81e3b6704a" text="Noble Titles Plusの名前変更を適用する箇所を設定します。「無効」にするとゲーム本来の表示を使います。"/>
+	<tags>
+		<tag language="日本語"/>
+	</tags>
+	<strings>
+		<string id="NTP.8f3a901b2c" text="称号の表示箇所"/>
+		<string id="NTP.19e7a4c630" text="百科事典の一覧"/>
+		<string id="NTP.2b8d501ae4" text="百科事典の詳細画面"/>
+		<string id="NTP.3c9e612bf5" text="会話画面"/>
+		<string id="NTP.4daf723c06" text="集落の人物一覧"/>
+		<string id="NTP.5eb0834d17" text="部隊ツールチップ"/>
+		<string id="NTP.6fc1945e28" text="文中のリンク"/>
+		<string id="NTP.70d2a56f39" text="それ以外の箇所"/>
+		<string id="NTP.94bb363cd6" text="百科事典の人物一覧に称号を表示します。"/>
+		<string id="NTP.68cde8f000" text="百科事典の詳細画面に称号を表示します。"/>
+		<string id="NTP.587098d0ad" text="会話画面で相手の名前に称号を表示します。"/>
+		<string id="NTP.d3a463848b" text="街や城の人物一覧に称号を表示します。"/>
+		<string id="NTP.84e3ab8f92" text="部隊ツールチップに称号を表示します。"/>
+		<string id="NTP.fa50a03321" text="文中の人物名のリンクに称号を表示します。"/>
+		<string id="NTP.2132a3e247" text="個別項目に含まれない箇所で称号を表示します。"/>
 		<!--<string id="NTP.Sys001" text="Noble Titles Plus"/>-->
 		<string id="NTP.Sys002" text="{DisplayName}が読み込まれました"/>
 		<string id="NTP.Sys003" text="{DisplayName}のロード中にエラーが発生しました: 無効です!"/>
@@ -127,5 +133,5 @@
 		<string id="xmLCisPYWU" text="XVIII世" />
 		<string id="ZMF3TPDxpp" text="XIX世" />
 		<string id="OZXE1xlEJH" text="XX世" />
- </strings>
+	</strings>
 </base>

@@ -183,7 +183,7 @@ namespace NobleTitlesPlus.MCMSettings
             {
                 void Add(string id, Func<bool> get, Action<bool> set, int order) => group.AddBool(
                     id, FindTextShortMCM(id), new ProxyRef<bool>(get, set),
-                    property => property.SetRequireRestart(false).SetHintText(FindTextShortMCM("display_hint")).SetOrder(order));
+                    property => property.SetRequireRestart(false).SetHintText(FindTextShortMCM(id + "_hint")).SetOrder(order));
                 Add("display_hero_list", () => Options.ShowOnEncyclopediaList, value => Options.ShowOnEncyclopediaList = value, 0);
                 Add("display_hero_page", () => Options.ShowOnEncyclopediaHero, value => Options.ShowOnEncyclopediaHero = value, 1);
                 Add("display_conversation", () => Options.ShowOnConversation, value => Options.ShowOnConversation = value, 2);

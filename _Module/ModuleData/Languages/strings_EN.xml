@@ -5,6 +5,21 @@
 	</tags>
 	<strings>	
 		<!--<string id="NTP.Sys001" text="Noble Titles Plus"/>-->
+		<string id="NTP.8f3a901b2c" text="Title Display Locations"/>
+		<string id="NTP.19e7a4c630" text="Encyclopedia List"/>
+		<string id="NTP.2b8d501ae4" text="Encyclopedia Details"/>
+		<string id="NTP.3c9e612bf5" text="Conversation Screen"/>
+		<string id="NTP.4daf723c06" text="Settlement Character List"/>
+		<string id="NTP.5eb0834d17" text="Party Tooltips"/>
+		<string id="NTP.6fc1945e28" text="Links in Text"/>
+		<string id="NTP.70d2a56f39" text="Other Screens"/>
+		<string id="NTP.94bb363cd6" text="Show titles in the encyclopedia's Heroes list."/>
+		<string id="NTP.68cde8f000" text="Show titles on hero pages and kingdom ruler names."/>
+		<string id="NTP.587098d0ad" text="Show titles in the conversation speaker's name."/>
+		<string id="NTP.d3a463848b" text="Show titles in settlement character lists."/>
+		<string id="NTP.84e3ab8f92" text="Show titles on map party nameplates and tooltips."/>
+		<string id="NTP.fa50a03321" text="Show titles in links to heroes within text."/>
+		<string id="NTP.2132a3e247" text="Show titles outside the locations listed above."/>
 		<string id="NTP.Sys002" text="{DisplayName} Loaded"/>
 		<string id="NTP.Sys003" text="Error loading {DisplayName}: Disabled!"/>
 		<string id="NTP.MCMGGEN" text="General"/>
@@ -97,26 +112,25 @@
 		<string id="lWdsNFoaIl" text="You can't undo this change after saving the campgign. Are you sure you want to proceed?" />
 		<string id="qBmkfiIH11" text="Confirm" />
 		<string id="2DD9ieGjtS" text="Cancel" />
-
-			<string id="aIwostdeLa" text=" I" />
-			<string id="ZHZGGAkRj2" text=" II" />
-			<string id="LOobQwr97E" text=" III" />
-			<string id="EzSiKmugqd" text=" IV" />
-			<string id="eZs8aFhX2x" text=" V" />
-			<string id="DBmq0LThBH" text=" VI" />
-			<string id="YyS8uT9DfL" text=" VII" />
-			<string id="EZzDBknAI2" text=" VIII" />
-			<string id="pvaCECHgsu" text=" IX" />
-			<string id="jB3f5qBPye" text=" X" />
-			<string id="6lCOtAwa9X" text=" XI" />
-			<string id="XJ6h80yEl9" text=" XII" />
-			<string id="0faWXNXDk5" text=" XIII" />
-			<string id="HG2vJVARTy" text=" XIV" />
-			<string id="tGLLxkKSsD" text=" XV" />
-			<string id="lljvVnnoG5" text=" XVI" />
-			<string id="gtqTf9yFyI" text=" XVII" />
-			<string id="xmLCisPYWU" text=" XVIII" />
-			<string id="ZMF3TPDxpp" text=" XIX" />
-			<string id="OZXE1xlEJH" text=" XX" />
- 	</strings>
+		<string id="aIwostdeLa" text=" I" />
+		<string id="ZHZGGAkRj2" text=" II" />
+		<string id="LOobQwr97E" text=" III" />
+		<string id="EzSiKmugqd" text=" IV" />
+		<string id="eZs8aFhX2x" text=" V" />
+		<string id="DBmq0LThBH" text=" VI" />
+		<string id="YyS8uT9DfL" text=" VII" />
+		<string id="EZzDBknAI2" text=" VIII" />
+		<string id="pvaCECHgsu" text=" IX" />
+		<string id="jB3f5qBPye" text=" X" />
+		<string id="6lCOtAwa9X" text=" XI" />
+		<string id="XJ6h80yEl9" text=" XII" />
+		<string id="0faWXNXDk5" text=" XIII" />
+		<string id="HG2vJVARTy" text=" XIV" />
+		<string id="tGLLxkKSsD" text=" XV" />
+		<string id="lljvVnnoG5" text=" XVI" />
+		<string id="gtqTf9yFyI" text=" XVII" />
+		<string id="xmLCisPYWU" text=" XVIII" />
+		<string id="ZMF3TPDxpp" text=" XIX" />
+		<string id="OZXE1xlEJH" text=" XX" />
+	</strings>
 </base>
